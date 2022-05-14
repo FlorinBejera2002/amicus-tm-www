@@ -21,6 +21,11 @@ export const TopBar = () =>
                 </Link></Button>
 
             <Button color="inherit">
+                <Link href="/blog">
+                    <a>Blog</a>
+                </Link></Button>
+
+            <Button color="inherit">
                 <Link href="/about">
                     <a>About Us</a>
                 </Link></Button>
