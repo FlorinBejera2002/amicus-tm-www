@@ -1,7 +1,9 @@
 import type { NextPage } from 'next'
-import { BlogPosts, BlogPost, fetchBlosPosts } from '../lib/cms-api'
+import { BlogPosts, BlogPost, fetchBlogPosts } from '../lib/cms-api'
 import Image from 'next/image'
 import DateFormatter from '../components/DateFormatter'
+import CircularProgress from '@mui/material/CircularProgress';
+import Box from '@mui/material/Box';
 
 type Props = {
   posts: BlogPosts
@@ -13,10 +15,17 @@ const Blog: NextPage<Props> = ({ posts }) => {
       <h3 className="mb-8 text-6xl md:text-7xl font-bold tracking-tighter leading-tight">
         More Stories
       </h3>
-      <div
-        className="grid grid-cols-1 md:grid-cols-2 md:gap-x-16 lg:gap-x-32 gap-y-20 md:gap-y-32 mb-32">
-        {posts.posts.map((post) => <BlogPost post={post} key={post.id} />)}
-      </div>
+
+      {!posts ?
+        (<Box sx={{ display: 'flex' }}>
+          <CircularProgress />
+        </Box>)
+        :
+        (<div
+          className="grid grid-cols-1 md:grid-cols-2 md:gap-x-16 lg:gap-x-32 gap-y-20 md:gap-y-32 mb-32">
+          {posts?.posts.map((post) => <BlogPost post={post} key={post.id} />)}
+        </div>)
+      }
     </div>
 
   )
@@ -25,7 +34,6 @@ const Blog: NextPage<Props> = ({ posts }) => {
 
 const BlogPost = ({ post }: { post: BlogPost }) => {
   const toSrc = (post: BlogPost) => process.env.NEXT_PUBLIC_CMS + '/' + post.images[0].path
-
 
   return (
     <div>
@@ -48,7 +56,7 @@ const BlogPost = ({ post }: { post: BlogPost }) => {
 }
 
 export async function getStaticProps() {
-  const posts = await fetchBlosPosts()
+  const posts = await fetchBlogPosts()
 
   // Props returned will be passed to the page component
   return { props: { posts } }

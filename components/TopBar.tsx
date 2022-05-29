@@ -16,11 +16,6 @@ export const TopBar = () =>
             </Button>
 
             <Button color="inherit">
-                <Link href="/posts">
-                    <a>Posts</a>
-                </Link></Button>
-
-            <Button color="inherit">
                 <Link href="/blog">
                     <a>Blog</a>
                 </Link></Button>

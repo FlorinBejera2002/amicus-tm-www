@@ -1,4 +1,4 @@
-export async function fetchBlosPosts() {
+export async function fetchBlogPosts() {
   // Call an external API endpoint to get posts
   const res = await fetch(process.env.CMS_HOST + '/posts?type=article')
   const data = await res.json()
