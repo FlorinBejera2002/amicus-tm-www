@@ -1,14 +1,12 @@
 import '../styles/globals.css'
-import type { AppProps } from 'next/app'
 import { createTheme, ThemeProvider } from '@mui/material'
-import { TopBar } from '../components/TopBar'
+import type { AppProps } from 'next/app'
 import Head from 'next/head'
-import { Footer } from '../components/Footer'
 
 const ariseTheme = createTheme({
   palette: {
     primary: {
-      main: '#2B2D42',
+      main: '#EDF2F4',
     },
     secondary: {
       main: '#8D99AE',
@@ -26,19 +24,16 @@ const ariseTheme = createTheme({
   },
 })
 
-function MyApp({ Component, pageProps }: AppProps) {
+const MyApp = ({ Component, pageProps }: AppProps) => {
   return (
     <ThemeProvider theme={ariseTheme}>
       <Head>
         <title>Arise For Christ</title>
-        <meta name="description" content="Arise For Christ Website" />
-        <link rel="icon" href="/small_logo.svg" />
+        <meta content="Arise For Christ Website" name="description" />
+        <link href="/small_logo.svg" rel="icon" />
       </Head>
 
-      <TopBar />
       <Component {...pageProps} />
-      <Footer />
-      
     </ThemeProvider>
   )
 }

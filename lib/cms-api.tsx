@@ -1,12 +1,8 @@
-export async function fetchBlogPosts() {
-  // Call an external API endpoint to get posts
-  const res = await fetch(process.env.CMS_HOST + '/posts?type=article')
-  const data = await res.json()
+// URLs
+export const CMS_URL = process.env.NEXT_PUBLIC_CMS
 
-  return data as BlogPosts
-}
-
-export type BlogPosts = {
+// Types
+export type BlogPostResponse = {
   totalCount: number
   posts: BlogPost[]
 }
@@ -23,4 +19,68 @@ export type BlogPost = {
 export type ImageRef = {
   imageId: number
   path: string
+}
+
+export enum Status {
+  InProgress = 'InProgress',
+  Complete = 'Complete',
+}
+
+export enum EvangelismCategory {
+  Counseling = 'Counseling',
+  SpiritualReconciliation = 'SpiritualReconciliation',
+  EvangelismRequest = 'EvangelismRequest',
+}
+
+export type EvangelismRequest = {
+  id: number
+  name: string
+  email?: string
+  mobile?: string
+  address?: string
+  age?: number
+  occupation?: string
+  otherdetails?: string
+  religion?: string
+  category?: EvangelismCategory
+  status?: Status
+  creation_date?: string
+}
+
+// Apis
+export const fetchBlogPosts = async () => {
+  try {
+    const response = await fetch(CMS_URL + '/posts?type=article')
+    const blogPostResponse: BlogPostResponse = await response.json()
+
+    return blogPostResponse
+  } catch (error) {
+    console.error(error)
+    alert('Something happened while trying to get the posts')
+  }
+}
+
+export const createER = async () => {
+  try {
+    await fetch(CMS_URL + '/evangelism-requests', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
+      },
+      body: JSON.stringify({
+        name: 'test',
+        email: 'test@gmail.com',
+        mobile: '1234567891',
+        address: 'test',
+        age: '123',
+        occupation: 'test',
+        religion: 'test',
+        otherdetails: 'test',
+      }),
+    })
+  } catch (error) {
+    console.error(error)
+    alert('Something happened while trying to push your data')
+  }
 }
