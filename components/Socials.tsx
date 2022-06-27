@@ -12,7 +12,7 @@ export const Socials = () => (
 
 const Container = styled.div`
   display: flex;
-  margin-top: 3rem;
+  margin-top: 5rem;
 `
 
 const Link = styled.span`

@@ -22,15 +22,15 @@ export const Header = () => (
         </Button>
       </Link>
 
-      <Button color="inherit">
-        <Href>Blog</Href>
-      </Button>
-
       <Link duration={1000} offset={50} smooth={true} to="About">
         <Button color="inherit">
           <Href>Despre Noi</Href>
         </Button>
       </Link>
+
+      <Button color="inherit">
+        <Href>Blog</Href>
+      </Button>
 
       <Link duration={1000} offset={50} smooth={true} to="Contact">
         <Button color="inherit">
@@ -66,6 +66,7 @@ const ImageWrapper = styled(Box)`
 
 const Href = styled.div`
   text-transform: capitalize;
+  font-weight: bold;
 
   -webkit-transition: all 0.5s;
   transition: all 0.5s;

@@ -1,6 +1,6 @@
 import Image, { ImageLoaderProps } from 'next/image'
 
-import { BlogPost } from '../lib/cms-api'
+import { BlogPost } from '../pages/api/cms-api'
 
 import DateFormatter from './DateFormatter'
 

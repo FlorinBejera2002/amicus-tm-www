@@ -3,7 +3,8 @@ import CircularProgress from '@mui/material/CircularProgress'
 import type { NextPage } from 'next'
 
 import { Post } from '../components/Post'
-import { BlogPostResponse, fetchBlogPosts } from '../lib/cms-api'
+
+import { BlogPostResponse, fetchBlogPosts } from './api/cms-api'
 
 export const getStaticProps = async () => {
   const blogPostResponse = await fetchBlogPosts()

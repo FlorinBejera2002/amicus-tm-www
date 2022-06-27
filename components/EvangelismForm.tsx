@@ -1,6 +1,6 @@
 import { FormEvent } from 'react'
 
-import { createER } from '../lib/cms-api'
+import { createER } from '../pages/api/cms-api'
 
 export const EvangelismForm = () => {
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
