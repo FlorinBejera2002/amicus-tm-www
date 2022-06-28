@@ -1,47 +1,53 @@
 import styled from '@emotion/styled'
 import { Box, Button } from '@mui/material'
 import Image from 'next/image'
+import React, { useState } from 'react'
 import { Link, animateScroll as scroll } from 'react-scroll'
 
-export const Header = () => (
-  <Container>
-    <Menu>
-      <ImageWrapper sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}>
-        <Link duration={1000} offset={50} smooth={true} to="test1">
+import { EvangelismForm } from './EvangelismForm'
+
+export const Header = () => {
+  const [openDialog, setOpenDialog] = useState(false)
+
+  const handleOpen = () => {
+    setOpenDialog(true)
+  }
+  const handleClose = () => {
+    setOpenDialog(false)
+  }
+
+  return (
+    <Container>
+      <Menu>
+        <ImageWrapper onClick={() => scroll.scrollToTop()} sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}>
           <Image alt="Logo" height={20} src="/logo_white.png" width={100} />
-        </Link>
-      </ImageWrapper>
+        </ImageWrapper>
 
-      <Button color="inherit" onClick={() => scroll.scrollToTop()}>
-        <Href>Acasă</Href>
-      </Button>
+        <Href onClick={() => scroll.scrollToTop()}>Acasă</Href>
 
-      <Link duration={1000} offset={50} smooth={true} to="Vision">
-        <Button color="inherit">
+        <Link duration={1000} offset={50} smooth={true} to="Vision">
           <Href>Viziunea</Href>
-        </Button>
-      </Link>
+        </Link>
 
-      <Link duration={1000} offset={50} smooth={true} to="About">
-        <Button color="inherit">
+        <Link duration={1000} offset={50} smooth={true} to="About">
           <Href>Despre Noi</Href>
-        </Button>
-      </Link>
+        </Link>
 
-      <Button color="inherit">
         <Href>Blog</Href>
-      </Button>
 
-      <Link duration={1000} offset={50} smooth={true} to="Contact">
-        <Button color="inherit">
+        <Link duration={1000} offset={50} smooth={true} to="Contact">
           <Href>Contact</Href>
-        </Button>
-      </Link>
-    </Menu>
+        </Link>
+      </Menu>
 
-    <StyledButton variant="outlined">Creează Cerere</StyledButton>
-  </Container>
-)
+      <StyledButton onClick={handleOpen} variant="outlined">
+        Creează Cerere
+      </StyledButton>
+
+      <EvangelismForm handleClose={handleClose} open={openDialog} />
+    </Container>
+  )
+}
 
 const Container = styled.div`
   display: flex;
@@ -67,6 +73,8 @@ const ImageWrapper = styled(Box)`
 const Href = styled.div`
   text-transform: capitalize;
   font-weight: bold;
+  padding: 0 1rem;
+  cursor: pointer;
 
   -webkit-transition: all 0.5s;
   transition: all 0.5s;

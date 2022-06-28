@@ -33,7 +33,6 @@ export enum EvangelismCategory {
 }
 
 export type EvangelismRequest = {
-  id: number
   name: string
   email?: string
   mobile?: string
@@ -44,7 +43,6 @@ export type EvangelismRequest = {
   religion?: string
   category?: EvangelismCategory
   status?: Status
-  creation_date?: string
 }
 
 // Apis
@@ -60,7 +58,7 @@ export const fetchBlogPosts = async () => {
   }
 }
 
-export const createER = async () => {
+export const createER = async (er: EvangelismRequest) => {
   try {
     await fetch(CMS_URL + '/evangelism-requests', {
       method: 'POST',
@@ -68,19 +66,9 @@ export const createER = async () => {
         'Content-Type': 'application/json',
         Accept: 'application/json',
       },
-      body: JSON.stringify({
-        name: 'test',
-        email: 'test@gmail.com',
-        mobile: '1234567891',
-        address: 'test',
-        age: '123',
-        occupation: 'test',
-        religion: 'test',
-        otherdetails: 'test',
-      }),
+      body: JSON.stringify(er),
     })
   } catch (error) {
     console.error(error)
-    alert('Something happened while trying to push your data')
   }
 }

@@ -35,5 +35,5 @@ const Span = styled.span`
   color: #edf2f4;
   font-size: 0.8rem;
   margin: 0rem 1rem;
-  opacity: 0.1;
+  opacity: 0.3;
 `

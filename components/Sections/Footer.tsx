@@ -52,7 +52,7 @@ export const Footer = () => (
 
 const Container = styled.div`
   display: flex;
-  padding-top: 16rem;
+  padding-top: 10rem;
   padding-bottom: 10rem;
   background: black;
   height: 100vh;
