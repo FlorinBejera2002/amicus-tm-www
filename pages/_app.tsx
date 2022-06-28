@@ -30,7 +30,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
       <Head>
         <title>Arise For Christ</title>
         <meta content="Arise For Christ Website" name="description" />
-        <link href="/small_logo.svg" rel="icon" />
+        <link href="/tab_logo.ico" rel="icon" />
       </Head>
 
       <Component {...pageProps} />
