@@ -7,7 +7,7 @@ import { Link, animateScroll as scroll } from 'react-scroll'
 
 import { EvangelismForm } from './EvangelismForm'
 
-export const Header = () => {
+export const HeaderBlog = () => {
   const [openDialog, setOpenDialog] = useState(false)
 
   const handleOpen = () => {
@@ -24,23 +24,13 @@ export const Header = () => {
           <Image alt="Logo" height={20} src="/logo_white.png" width={100} />
         </ImageWrapper>
 
-        <Href onClick={() => scroll.scrollToTop()}>Acasă</Href>
-
-        <Link duration={1000} offset={50} smooth={true} to="Vision">
-          <Href>Viziunea</Href>
-        </Link>
-
-        <Link duration={1000} offset={50} smooth={true} to="About">
-          <Href>Despre Noi</Href>
-        </Link>
+        <LinkNext href="/">
+          <Href>Acasă</Href>
+        </LinkNext>
 
         <LinkNext href="/blog">
           <Href>Blog</Href>
         </LinkNext>
-
-        <Link duration={1000} offset={50} smooth={true} to="Contact">
-          <Href>Contact</Href>
-        </Link>
       </Menu>
 
       <StyledButton onClick={handleOpen} variant="outlined">

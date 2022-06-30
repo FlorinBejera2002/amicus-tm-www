@@ -3,7 +3,7 @@ import { CSSProperties } from 'react'
 
 interface Props {
   children: JSX.Element
-  style: CSSProperties
+  style?: CSSProperties
 }
 
 export const Topbar = ({ children, style }: Props) => (
