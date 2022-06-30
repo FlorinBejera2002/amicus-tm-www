@@ -59,7 +59,7 @@ export const fetchBlogPosts = async () => {
 }
 
 export const createER = async (er: EvangelismRequest) => {
-  return await fetch('' + '/evangelism-requests', {
+  return await fetch(CMS_URL + '/evangelism-requests', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
