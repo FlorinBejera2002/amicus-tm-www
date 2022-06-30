@@ -1,0 +1,82 @@
+{
+    "header": {
+        "home": "Home",
+        "vision": "Vision",
+        "about_us": "About Us",
+        "blog": "Blog",
+        "contact": "Contact"
+    },
+    "button": {
+        "er_request": "Evanghelism Request",
+        "contact_us": "Contact Us"
+    },
+    "hero": {
+        "question1": "Do you care for the salvation of your loved ones?",
+        "question2": "Do you need support in prayer?",
+        "question3": "Do you want to encourage someone?"
+    },
+    "form": {
+        "title": "Evanghelism Request",
+        "subtitle": "Help us bring people to Christ",
+        "name": "name",
+        "email": "email",
+        "mobile": "mobile",
+        "address": "address",
+        "age": "age",
+        "occupation": "occupation",
+        "religion": "religion",
+        "details": "details",
+        "cancel": "CANCEL",
+        "send": "SEND",
+        "invalid_mobile": "Mobile number not valid",
+        "invalid_email": "Email not valid",
+        "successful_submission": "Evanghelism request sent with success!",
+        "failed_submission": "Failed to send evanghelism request! Please contact us via email."
+    },
+    "section": {
+        "vision": "VISION",
+        "about_us": "ABOUT US",
+        "contact": "GET IN TOUCH"
+    },
+    "vision": {
+        "title": "Personal evangelism process steps applied to the local church.",
+        "description": "Arise for Christ is based on a personal evangelism project that requires the involvement of Christians for salvation of their family and friends.",
+        "step1_title": "Contacting the pastor",
+        "step2_title": "Process presentation",
+        "step3_title": "Collecting the evangelism requests",
+        "step4_title": "Prayer",
+        "step5_title": "Approaching the unbeliever",
+        "step6_title": "Visiting the unbeliever",
+        "step7_title": "Church attending invitation",
+        "step8_title": "Regular report",
+        "step1_description": "Arise for Christ mission will contact the local pastor in order to plan the personal evangelism process presentation in the local church.",
+        "step2_description": "Personal evangelism process will be presented in local church in order to encourage the involvement of its members in this process.",
+        "step3_description": "The local church members can fill evangelism requests for their unsaved loved ones through ariseforchrist.com platform or by filling an evangelism card available in the local church.",
+        "step4_description": "Prayer support is essential for the personal evangelism process to succeed.a) Prayer for the unbelievers who are to be evangelized; b) Prayer for forming new personal evangelism local groups; c) Prayer for the thriving of personal evangelism ministry developed by Arise for Christ in collaboration with the local churches.",
+        "step5_description": "The local church collaborators or personal evangelism groups will contact the unbelievers from their locality or neighbourhood. Arise for Christ will contact the unbelievers from other regions through the local collaborators.",
+        "step6_description": "The unbeliever will be visited with the purpose of building a relationship and sharing the Gospel.",
+        "step7_description": "After building a relationship with the unbeliever, he is invited to attend a local church meeting. The evangelism process continues, guiding his steps towards his transformation and discipleship.",
+        "step8_description": "Arise for Christ will work closely with those responsible for the local church personal evangelism process and with the person who made the evangelism request, regularly reporting the progress."
+    },
+    "about_us": {
+        "statement1": "Acts correctly.",
+        "statement2": "Influences through his actions.",
+        "statement3": "Develops strong relationships.",
+        "statement4": "Changes the world around him.",
+        "statement5": "Spreads the values of the Kingdom.",
+        "statement6": "Brings glory to God.",
+        "title": "Arise For Christ",
+        "description": "is a Christian mission that aims to stir up Christians to action, connect them and connect churches and Christian organizations for the purpose of increasing efficiency of witnessing the Gospel and spreading God’s Kingdom. Prin intermediul portalului ariseforchrist.com și folosind interconectarea prin rețele de socializare, creștinii vor putea comunica mai ușor, se pot uni și încuraja pentru a acționa împreună pentru Hristos. Ne unim eforturile și cunoștințele pentru a mărturisi Evanghelia și pentru extinderea Împărăției lui Dumnezeu în toată lumea, începând din România."
+    },
+    "contact": {
+        "title": "Contact us and get involved in personal evangelism projects.",
+        "subtitle": "Be challenged by a new christian action every day. Where there is no challenge, there is no change.",
+        "email": "email",
+        "phone": "phone",
+        "social": "social"
+    },
+    "blog": {
+        "title": "Blog",
+        "read_more": "read more..."
+    }
+}

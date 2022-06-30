@@ -4,6 +4,7 @@ import HandshakeIcon from '@mui/icons-material/Handshake'
 import SendIcon from '@mui/icons-material/Send'
 import LoadingButton from '@mui/lab/LoadingButton'
 import {
+  AlertColor,
   Button,
   Dialog,
   DialogActions,
@@ -13,6 +14,8 @@ import {
   TextField,
   Typography,
 } from '@mui/material'
+import { useTranslation } from 'next-i18next'
+import React, { Dispatch, SetStateAction } from 'react'
 import { FormEvent, useState } from 'react'
 
 import { createER, EvangelismCategory, EvangelismRequest, Status } from '../pages/api/cms-api'
@@ -59,21 +62,25 @@ const BootstrapDialogTitle = (props: DialogTitleProps) => {
 interface Props {
   open: boolean
   handleClose: () => void
+  setSnackBarMessage: Dispatch<SetStateAction<string>>
+  setSnackBarType: Dispatch<SetStateAction<AlertColor>>
+  setShowSnackBar: Dispatch<SetStateAction<boolean>>
 }
 
-export const EvangelismForm = ({ open, handleClose }: Props) => {
+export const EvangelismForm = (props: Props) => {
+  const { t } = useTranslation('common')
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
 
   const areInputsValid = (er: EvangelismRequest): boolean => {
     if (er?.email && !validateEmail(er?.email)) {
-      setError('Email-ul nu este valid')
+      setError(t('form.invalid_email'))
 
       return false
     }
 
     if (er?.mobile && !validateMobile(er?.mobile)) {
-      setError('Numărul de telefon nu este valid')
+      setError(t('form.invalid_mobile'))
 
       return false
     }
@@ -82,38 +89,50 @@ export const EvangelismForm = ({ open, handleClose }: Props) => {
   }
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
-    event.preventDefault()
-    setError('')
-    const target = event.target as HTMLFormElement
-    const elements = target.elements
+    try {
+      event.preventDefault()
+      setError('')
+      const target = event.target as HTMLFormElement
+      const elements = target.elements
 
-    const name = (elements.namedItem('name') as HTMLInputElement).value
-    const email = (elements.namedItem('email') as HTMLInputElement).value
-    const mobile = (elements.namedItem('mobile') as HTMLInputElement).value
-    const address = (elements.namedItem('address') as HTMLInputElement).value
-    const age = (elements.namedItem('age') as HTMLInputElement).value
-    const occupation = (elements.namedItem('occupation') as HTMLInputElement).value
-    const religion = (elements.namedItem('religion') as HTMLInputElement).value
-    const details = (elements.namedItem('details') as HTMLInputElement).value
+      const name = (elements.namedItem('name') as HTMLInputElement).value
+      const email = (elements.namedItem('email') as HTMLInputElement).value
+      const mobile = (elements.namedItem('mobile') as HTMLInputElement).value
+      const address = (elements.namedItem('address') as HTMLInputElement).value
+      const age = (elements.namedItem('age') as HTMLInputElement).value
+      const occupation = (elements.namedItem('occupation') as HTMLInputElement).value
+      const religion = (elements.namedItem('religion') as HTMLInputElement).value
+      const details = (elements.namedItem('details') as HTMLInputElement).value
 
-    const er: EvangelismRequest = {
-      name,
-      email,
-      mobile,
-      address,
-      age: +age,
-      occupation,
-      religion,
-      otherdetails: details,
-      category: EvangelismCategory.EvangelismRequest,
-      status: Status.InProgress,
+      const er: EvangelismRequest = {
+        name,
+        email,
+        mobile,
+        address,
+        age: +age,
+        occupation,
+        religion,
+        otherdetails: details,
+        category: EvangelismCategory.EvangelismRequest,
+        status: Status.InProgress,
+      }
+
+      if (!areInputsValid(er)) return
+      setLoading(true)
+      const response = await createER(er)
+
+      if (!response.ok) {
+        console.error('Response:', response)
+        throw Error('Response not ok.')
+      }
+
+      props.handleClose()
+    } catch (error) {
+      console.error(error)
+      props.setSnackBarMessage(t('form.failed_submission'))
+      props.setSnackBarType('error')
     }
-
-    if (!areInputsValid(er)) return
-
-    setLoading(true)
-    await createER(er)
-    handleClose()
+    props.setShowSnackBar(true)
     setLoading(false)
   }
 
@@ -121,36 +140,51 @@ export const EvangelismForm = ({ open, handleClose }: Props) => {
     <DialogStyled
       aria-labelledby="customized-dialog-title"
       onClose={() => {
-        handleClose()
+        props.handleClose()
         setError('')
       }}
-      open={open}
+      open={props.open}
     >
       <BootstrapDialogTitle
         id="customized-dialog-title"
         onClose={() => {
-          handleClose()
+          props.handleClose()
           setError('')
         }}
       >
-        Cerere de evanghelizare
+        {t('form.title')}
       </BootstrapDialogTitle>
       <form onSubmit={handleSubmit}>
         <DialogContent>
           <Description>
             <HandshakeIcon />
-            Ajută-ne să ajutăm pe alții
+            {t('form.subtitle')}
           </Description>
 
           <Content>
             <Left>
-              <TextField color="error" id="name" label="nume" required size="small" type="text" variant="outlined" />
-              <TextField color="error" id="prenume" label="prenume" size="small" type="text" variant="outlined" />
-              <TextField color="error" id="email" label="email" required size="small" type="text" variant="outlined" />
+              <TextField
+                color="error"
+                id="name"
+                label={t('form.name')}
+                required
+                size="small"
+                type="text"
+                variant="outlined"
+              />
+              <TextField
+                color="error"
+                id="email"
+                label={t('form.email')}
+                required
+                size="small"
+                type="text"
+                variant="outlined"
+              />
               <TextField
                 color="error"
                 id="mobile"
-                label="telefon"
+                label={t('form.mobile')}
                 required
                 size="small"
                 type="tel"
@@ -159,17 +193,40 @@ export const EvangelismForm = ({ open, handleClose }: Props) => {
             </Left>
 
             <Right>
-              <TextField color="error" id="address" label="adresă" size="small" type="text" variant="outlined" />
-              <TextField color="error" id="age" label="vârstă" size="small" type="number" variant="outlined" />
-              <TextField color="error" id="occupation" label="ocupație" size="small" type="text" variant="outlined" />
-              <TextField color="error" id="religion" label="religie" size="small" type="text" variant="outlined" />
+              <TextField
+                color="error"
+                id="address"
+                label={t('form.address')}
+                size="small"
+                type="text"
+                variant="outlined"
+              />
+              <TextField color="error" id="age" label={t('form.age')} size="small" type="number" variant="outlined" />
+              <TextField
+                color="error"
+                id="occupation"
+                label={t('form.occupation')}
+                size="small"
+                type="text"
+                variant="outlined"
+              />
             </Right>
           </Content>
 
           <TextField
+            className="mb-2"
+            color="error"
+            id="religion"
+            label={t('form.religion')}
+            size="small"
+            type="text"
+            variant="outlined"
+          />
+
+          <TextField
             color="error"
             id="details"
-            label="detalii"
+            label={t('form.details')}
             multiline
             rows={4}
             size="small"
@@ -188,7 +245,7 @@ export const EvangelismForm = ({ open, handleClose }: Props) => {
               setError('')
             }}
           >
-            Renunță
+            {t('form.cancel', 'cancel')}
           </Button>
 
           <LoadingButton
@@ -198,7 +255,7 @@ export const EvangelismForm = ({ open, handleClose }: Props) => {
             type="submit"
             variant="contained"
           >
-            Trimite
+            {t('form.send', 'send')}
           </LoadingButton>
         </DialogActions>
       </form>

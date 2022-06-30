@@ -2,43 +2,50 @@ import styled from '@emotion/styled'
 import Box from '@mui/material/Box'
 import CircularProgress from '@mui/material/CircularProgress'
 import type { NextPage } from 'next'
+import { useTranslation } from 'next-i18next'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import Fade from 'react-reveal/Fade'
 
-import { HeaderBlog } from '../components/HeaderBlog'
+import { Header } from '../components/Header'
 import { Post } from '../components/Post'
 
 import { BlogPostResponse, fetchBlogPosts } from './api/cms-api'
 
-export const getStaticProps = async () => {
+interface StaticPropsType {
+  locale: string
+}
+export const getStaticProps = async (props: StaticPropsType) => {
   const blogPostResponse = await fetchBlogPosts()
+  const translations = await serverSideTranslations(props.locale, ['common'])
 
-  return { props: blogPostResponse }
+  return { props: { postResponse: blogPostResponse, ...translations } }
 }
 
-type Props = BlogPostResponse
+type Props = { postResponse: BlogPostResponse }
 
 const Blog: NextPage<Props> = (props) => {
-  console.log('***props:', props)
+  const { t } = useTranslation('common')
+  const posts = props.postResponse?.posts
 
   return (
     <Container>
       <HeaderWrapper>
-        <HeaderBlog />
+        <Header />
       </HeaderWrapper>
       <Fade bottom>
         <Message>
-          <Heading>Blog</Heading>
+          <Heading>{t('blog.title')}</Heading>
         </Message>
       </Fade>
 
       <Content>
-        {!props.posts ? (
+        {!posts ? (
           <Box sx={{ display: 'flex' }}>
             <CircularProgress />
           </Box>
         ) : (
           <PostsContainer>
-            {props.posts?.map((post) => (
+            {posts?.map((post) => (
               <Post key={post.id} post={post} />
             ))}
           </PostsContainer>

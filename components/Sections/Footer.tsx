@@ -1,61 +1,66 @@
 import styled from '@emotion/styled'
 import { Button } from '@mui/material'
+import { useTranslation } from 'next-i18next'
 
-export const Footer = () => (
-  <Container>
-    <Left>
-      <Heading>IA LEGĂTURA</Heading>
+export const Footer = () => {
+  const { t } = useTranslation('common')
 
-      <Message>
-        Have an idea or a concept that really excite you? Let's turn that idea into reality. Shoot me a message.
-      </Message>
+  return (
+    <Container>
+      <Left>
+        <SectionTag>{t('section.contact')}</SectionTag>
 
-      <StyledButton>Contactează-ne</StyledButton>
+        <Heading>
+          <div>{t('contact.title')}</div>
+          <div className="mt-10">{t('contact.subtitle')}</div>
+        </Heading>
 
-      <Copyright>© Copyright AriseForChrist 2022</Copyright>
-    </Left>
+        <StyledButton href="mailto:info@ariseforchrist.com">{t('button.contact_us')}</StyledButton>
 
-    <Right>
-      <SocialItemContainer>
-        <Title>Email</Title>
-        <LabelWrapper>
-          <Label>info@ariseforchrist.com</Label>
-        </LabelWrapper>
-      </SocialItemContainer>
+        <Copyright>© Copyright AriseForChrist 2022</Copyright>
+      </Left>
 
-      <SocialItemContainer>
-        <Title>Phone</Title>
-        <LabelWrapper>
-          <Label>+197 543 2345</Label>
-        </LabelWrapper>
-      </SocialItemContainer>
+      <Right>
+        <SocialItemContainer>
+          <Title>{t('button.email')}</Title>
+          <LabelWrapper>
+            <Label>info@ariseforchrist.com</Label>
+          </LabelWrapper>
+        </SocialItemContainer>
 
-      <SocialItemContainer>
-        <Title>Social</Title>
-        <LabelWrapper>
-          <Label>
-            <Link onClick={() => window.open('https://www.facebook.com/AriseForChristRomania/', '_blank')}>
-              Facebook
-            </Link>
-          </Label>
-          <Label>
-            <Link onClick={() => window.open('https://www.instagram.com/p/CfL2FveIMpn/', '_blank')}>Instagram</Link>
-          </Label>
-          <Label>
-            <Link onClick={() => window.open('https://www.youtube.com/c/Ariseforchrist/', '_blank')}>Youtube</Link>
-          </Label>
-        </LabelWrapper>
-      </SocialItemContainer>
-    </Right>
-  </Container>
-)
+        <SocialItemContainer>
+          <Title>Phone</Title>
+          <LabelWrapper>
+            <Label>+100 100 1000</Label>
+          </LabelWrapper>
+        </SocialItemContainer>
+
+        <SocialItemContainer>
+          <Title>{t('button.social')}</Title>
+          <LabelWrapper>
+            <Label>
+              <Link onClick={() => window.open('https://www.facebook.com/AriseForChristRomania/', '_blank')}>
+                Facebook
+              </Link>
+            </Label>
+            <Label>
+              <Link onClick={() => window.open('https://www.instagram.com/p/CfL2FveIMpn/', '_blank')}>Instagram</Link>
+            </Label>
+            <Label>
+              <Link onClick={() => window.open('https://www.youtube.com/c/Ariseforchrist/', '_blank')}>Youtube</Link>
+            </Label>
+          </LabelWrapper>
+        </SocialItemContainer>
+      </Right>
+    </Container>
+  )
+}
 
 const Container = styled.div`
   display: flex;
   padding-top: 10rem;
-  padding-bottom: 10rem;
+  padding-bottom: 1rem;
   background: black;
-  height: 100vh;
 `
 
 const Left = styled.div`
@@ -72,13 +77,14 @@ const Right = styled.div`
   padding: 5rem 10rem;
 `
 
-const Heading = styled.div`
+const SectionTag = styled.div`
   color: #e9302e;
   font-size: 1rem;
   padding-bottom: 3rem;
+  letter-spacing: 0.4rem;
 `
 
-const Message = styled.div`
+const Heading = styled.div`
   color: #edf2f4;
   font-size: 2.5rem;
   font-weight: bold;
@@ -99,7 +105,7 @@ const StyledButton = styled(Button)`
 `
 
 const SocialItemContainer = styled.div`
-  margin-bottom: 4rem;
+  margin-top: 6rem;
 `
 
 const Title = styled.div`

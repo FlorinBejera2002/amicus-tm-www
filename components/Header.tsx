@@ -1,14 +1,42 @@
 import styled from '@emotion/styled'
-import { Box, Button } from '@mui/material'
+import { AlertColor, Box, Button, Snackbar } from '@mui/material'
+import MuiAlert, { AlertProps } from '@mui/material/Alert'
+import { useTranslation } from 'next-i18next'
 import Image from 'next/image'
 import LinkNext from 'next/link'
-import React, { useState } from 'react'
+import { useRouter } from 'next/router'
+import React, { forwardRef, useState } from 'react'
 import { Link, animateScroll as scroll } from 'react-scroll'
 
 import { EvangelismForm } from './EvangelismForm'
 
+const Alert = forwardRef<HTMLDivElement, AlertProps>(function Alert(props, ref) {
+  return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />
+})
+
 export const Header = () => {
+  const router = useRouter()
+  const onBlogPage = router.pathname.includes('/blog')
+  const { t } = useTranslation('common')
   const [openDialog, setOpenDialog] = useState(false)
+
+  //snackbar
+  const [showSnackBar, setShowSnackBar] = useState<boolean>(false)
+  const [snackBarMessage, setSnackBarMessage] = useState<string>(t('form.successful_submission'))
+  const [snackBarType, setSnackBarType] = useState<AlertColor>('success')
+
+  const handleCloseSnackBar = (event?: React.SyntheticEvent | Event, reason?: string) => {
+    if (reason === 'clickaway') {
+      return
+    }
+
+    setShowSnackBar(false)
+  }
+
+  const handleLocaleChange = () =>
+    router.push(router.route, router.asPath, {
+      locale: router.locale === 'en' ? 'ro' : 'en',
+    })
 
   const handleOpen = () => {
     setOpenDialog(true)
@@ -17,37 +45,69 @@ export const Header = () => {
     setOpenDialog(false)
   }
 
+  const onClickHome = () => {
+    if (onBlogPage) {
+      router.push('/')
+    } else {
+      scroll.scrollToTop()
+    }
+  }
+
   return (
     <Container>
       <Menu>
-        <ImageWrapper onClick={() => scroll.scrollToTop()} sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}>
+        <ImageWrapper onClick={onClickHome} sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}>
           <Image alt="Logo" height={20} src="/logo_white.png" width={100} />
         </ImageWrapper>
 
-        <Href onClick={() => scroll.scrollToTop()}>Acasă</Href>
+        <Href onClick={onClickHome}>{t('header.home')}</Href>
 
-        <Link duration={1000} offset={50} smooth={true} to="Vision">
-          <Href>Viziunea</Href>
-        </Link>
+        {!onBlogPage && (
+          <div className="flex">
+            <Link duration={1000} offset={50} smooth={true} to="Vision">
+              <Href>{t('header.vision')}</Href>
+            </Link>
 
-        <Link duration={1000} offset={50} smooth={true} to="About">
-          <Href>Despre Noi</Href>
-        </Link>
+            <Link duration={1000} offset={50} smooth={true} to="About">
+              <Href>{t('header.about_us')}</Href>
+            </Link>
+          </div>
+        )}
 
         <LinkNext href="/blog">
-          <Href>Blog</Href>
+          <Href>{t('header.blog')}</Href>
         </LinkNext>
 
-        <Link duration={1000} offset={50} smooth={true} to="Contact">
-          <Href>Contact</Href>
-        </Link>
+        {!onBlogPage && (
+          <Link duration={1000} offset={50} smooth={true} to="Contact">
+            <Href>{t('header.contact')}</Href>
+          </Link>
+        )}
       </Menu>
 
-      <StyledButton onClick={handleOpen} variant="outlined">
-        Creează Cerere
-      </StyledButton>
+      <div className="flex items-center">
+        <Href className="mr-7" onClick={handleLocaleChange}>
+          en/ro
+        </Href>
 
-      <EvangelismForm handleClose={handleClose} open={openDialog} />
+        <StyledButton onClick={handleOpen} variant="outlined">
+          {t('button.er_request')}
+        </StyledButton>
+      </div>
+
+      <EvangelismForm
+        handleClose={handleClose}
+        open={openDialog}
+        setShowSnackBar={setShowSnackBar}
+        setSnackBarMessage={setSnackBarMessage}
+        setSnackBarType={setSnackBarType}
+      />
+
+      <Snackbar autoHideDuration={6000} onClose={handleCloseSnackBar} open={showSnackBar}>
+        <Alert onClose={handleCloseSnackBar} severity={snackBarType} sx={{ width: '100%' }}>
+          {snackBarMessage}
+        </Alert>
+      </Snackbar>
     </Container>
   )
 }
@@ -74,7 +134,6 @@ const ImageWrapper = styled(Box)`
 `
 
 const Href = styled.div`
-  text-transform: capitalize;
   font-weight: bold;
   padding: 0 1rem;
   cursor: pointer;

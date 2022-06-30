@@ -1,5 +1,7 @@
 import styled from '@emotion/styled'
+import { AppBar } from '@mui/material'
 import type { NextPage } from 'next'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { useCallback, useEffect, useState } from 'react'
 import { Element } from 'react-scroll'
 
@@ -8,8 +10,16 @@ import { About } from '../components/Sections/About'
 import { Footer } from '../components/Sections/Footer'
 import { Home } from '../components/Sections/Home'
 import { Vision } from '../components/Sections/Vision'
-import { Topbar } from '../components/Topbar'
 // import heroBackground from '../public/hero_background.jpeg'
+
+interface Props {
+  locale: string
+}
+export const getStaticProps = async (props: Props) => ({
+  props: {
+    ...(await serverSideTranslations(props.locale, ['common'])),
+  },
+})
 
 const HomePage: NextPage = () => {
   const [showTopbar, setShowTopbar] = useState(false)
@@ -38,15 +48,18 @@ const HomePage: NextPage = () => {
 
   return (
     <Container>
-      <Topbar
-        style={{
+      <AppBar
+        position="fixed"
+        sx={{
+          zIndex: (theme) => theme.zIndex.drawer + 1,
+          backgroundColor: '#000',
           visibility: showTopbar ? 'visible' : 'hidden',
           opacity: showTopbar ? 1 : 0,
           transition: 'opacity 0.3s linear',
         }}
       >
         <Header />
-      </Topbar>
+      </AppBar>
 
       <Home />
 

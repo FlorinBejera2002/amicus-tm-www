@@ -1,8 +1,6 @@
 import styled from '@emotion/styled'
-import MoreVertIcon from '@mui/icons-material/MoreVert'
-import NewspaperIcon from '@mui/icons-material/Newspaper'
-import { Avatar, Box, Button, Card, CardActions, CardContent, CardHeader, IconButton, Typography } from '@mui/material'
-import { red } from '@mui/material/colors'
+import { Card, CardContent, Typography } from '@mui/material'
+import { useTranslation } from 'next-i18next'
 import Image, { ImageLoaderProps } from 'next/image'
 import { useState } from 'react'
 
@@ -15,6 +13,7 @@ interface Props {
 }
 
 export const Post = (props: Props) => {
+  const { t } = useTranslation('common')
   const post = props.post
   const [showContent, setShowContent] = useState(false)
   const myLoader = ({ src }: ImageLoaderProps) => `https://cms-backend.ariseforchrist.com/${src}`
@@ -37,7 +36,7 @@ export const Post = (props: Props) => {
             <DateFormatter dateString={post.creation_date} />
           </Date>
 
-          <Link onClick={() => setShowContent((prev) => !prev)}>citește articolul...</Link>
+          <Link onClick={() => setShowContent((prev) => !prev)}>{t('blog.read_more')}</Link>
         </CardContent>
       </Content>
 

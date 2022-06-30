@@ -1,10 +1,14 @@
 import styled from '@emotion/styled'
+import { useTranslation } from 'next-i18next'
 import Fade from 'react-reveal/Fade'
 
 import { Header } from '../Header'
 import { Socials } from '../Socials'
 
 export const Home = () => {
+  const bla = useTranslation('common')
+  const { t } = bla
+
   return (
     <Container>
       <Fade>
@@ -18,7 +22,8 @@ export const Home = () => {
           <div>
             <Line />
             <Heading>
-              Dorești mântuirea cuiva drag?<Red> Ai nevoie de sprijin în rugăciune? </Red>Vrei să încurajezi pe cineva?
+              {t('hero.question1')}
+              <Red> {t('hero.question2')}</Red> {t('hero.question3')}
             </Heading>
 
             <Socials />

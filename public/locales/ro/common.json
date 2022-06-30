@@ -1,0 +1,82 @@
+{
+    "header": {
+        "home": "Acasă",
+        "vision": "Viziunea",
+        "about_us": "Despre Noi",
+        "blog": "Blog",
+        "contact": "Contact"
+    },
+    "button": {
+        "er_request": "Cerere Evanghelizare",
+        "contact_us": "Contactează-ne"
+    },
+    "hero": {
+        "question1": "Dorești mântuirea cuiva drag?",
+        "question2": "Ai nevoie de sprijin în rugăciune?",
+        "question3": "Vrei să încurajezi pe cineva?"
+    },
+    "form": {
+        "title": "Cerere de Evanghelizare",
+        "subtitle": "Ajută-ne să aducem oameni la Christos",
+        "name": "nume",
+        "email": "email",
+        "mobile": "telefon",
+        "address": "adresă",
+        "age": "vârstă",
+        "occupation": "ocupație",
+        "religion": "religie",
+        "details": "detalii",
+        "cancel": "RENUNȚĂ",
+        "send": "TRIMITE",
+        "invalid_mobile": "Numărul de telefon este invalid",
+        "invalid_email": "Email-ul este invalid",
+        "successful_submission": "Cererea de evanghelizare a fost trimisă cu succes!",
+        "failed_submission": "Nu s-a reușit trimiterea datelor de evanghelizare! Vă rugăm contactați-ne prin email."
+    },
+    "section": {
+        "vision": "VIZIUNEA",
+        "about_us": "DESPRE NOI",
+        "contact": "CONTACT"
+    },
+    "vision": {
+        "title": "Pașii lucrării de evanghelizare personală aplicați la biserica locală.",
+        "description": "Arise for Christ are la bază un proiect de evanghelizare personală care presupune implicarea creștinilor pentru mântuirea prietenilor tăi și a celor dragi",
+        "step1_title": "Contactarea pastorului",
+        "step2_title": "Prezentarea lucrării",
+        "step3_title": "Colectarea solicitărilor de evanghelizare",
+        "step4_title": "Rugăciune",
+        "step5_title": "Contactarea persoanei nemântuite",
+        "step6_title": "Vizitarea persoanei nemântuite",
+        "step7_title": "Invitație la Biserică",
+        "step8_title": "Raport periodic",
+        "step1_description": "Organizația Arise for Christ va contacta pastorul local și va planifica prezentarea lucrării în biserica locală.",
+        "step2_description": "Se va prezenta lucrarea în biserica locală cu scopul motivării membrilor acesteia pentru a se implica în procesul de Evanghelizare personală.",
+        "step3_description": "Membrii bisericii locale vor putea completa solicitări de evanghelizare pentru persoanele dragi lor, nemântuite, prin intermediul platformei ariseforchrist.com sau a cardurilor de evanghelizare disponibile în biserica locală.",
+        "step4_description": "Sprijinul în rugăciune este esențial pentru ca lucrarea de evanghelizare personală să își atingă scopul. a) Rugăciune pentru persoanele nemântuite care urmează să fie evanghelizate; b) Rugăciune pentru formarea de noi grupuri locale de evanghelizare personală; c) Rugăciune pentru propășirea lucrării de evanghelizare personală desfășurată de Arise for Christ în colaborare cu bisericile locale.",
+        "step5_description": "Biserica locală va contacta persoanele nemântuite aflate în localitatea sa sau în împrejurimi, prin intermediul colaboratorilor sau a grupurilor de evanghelizare personală. Arise for Christ va contacta persoanele nemântuite aflate la distanță prin intermediul colaboratorilor locali.",
+        "step6_description": "Cel nemântuit va fi vizitat cu scopul stabilirii unei relații și împărtășirii Evangheliei.",
+        "step7_description": "Ulterior dezvoltării unei relații cu cel nemântuit, acesta este invitat la biserica locală. Procesul de evanghelizare va continua cu asistarea în vederea transformării și ucenicizării acestuia.",
+        "step8_description": "Arise for Christ va lucra îndeaproape cu cei responsabili de procesul de evanghelizare personală din biserica locală și cu cel care a făcut solicitarea, raportând periodic progresul."
+    },
+    "about_us": {
+        "statement1": "Acționează corect.",
+        "statement2": "Influențează prin fapte.",
+        "statement3": "Dezvoltă relații puternice.",
+        "statement4": "Schimbă lumea în jurul său.",
+        "statement5": "Răspândește valorile Împărăției.",
+        "statement6": "Îi aduce slavă lui Dumnezeu.",
+        "title": "Arise For Christ",
+        "description": "este o misiune creștină care își propune mobilizarea creștinilor la acțiune, conectarea lor, a bisericilor și a organizațiilor creștine cu scopul de a fi mai eficienți în mărturisirea Evangheliei și extinderea Împărăției lui Dumnezeu. Prin intermediul portalului ariseforchrist.com și folosind interconectarea prin rețele de socializare, creștinii vor putea comunica mai ușor, se pot uni și încuraja pentru a acționa împreună pentru Hristos. Ne unim eforturile și cunoștințele pentru a mărturisi Evanghelia și pentru extinderea Împărăției lui Dumnezeu în toată lumea, începând din România."
+    },
+    "contact": {
+        "title": "Contactează-ne și implică-te alături de noi în lucrarea de evanghelizare personală.",
+        "subtitle": "Lasă-te provocat de o nouă acțiune creștină în fiecare zi. Unde nu există provocare, nu există schimbare.",
+        "email": "email",
+        "phone": "telefon",
+        "social": "social",
+        "blog": {
+            "title": "Blog",
+            "read_more": "citește articolul..."
+        }
+    }
+}

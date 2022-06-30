@@ -1,34 +1,40 @@
 import styled from '@emotion/styled'
+import { Typography } from '@mui/material'
+import { useTranslation } from 'next-i18next'
 import Image from 'next/image'
 
-import profile from '../../public/profile-pic.jpg'
+import about_us from '../../public/about_us.jpg'
 
-export const About = () => (
-  <Container>
-    <Heading>DESPRE NOI</Heading>
+export const About = () => {
+  const { t } = useTranslation('common')
 
-    <Content>
-      <Left>
-        <Message>
-          Have an idea or a concept that really excite you? Let's turn that idea into reality. Shoot me a message.
-        </Message>
+  return (
+    <Container>
+      <SectionTag>{t('section.about_us')}</SectionTag>
 
-        <Header>Profile</Header>
+      <Content>
+        <Left>
+          <Heading>
+            <div>{t('about_us.statement1')}</div>
+            <div>{t('about_us.statement2')}</div>
+            <div>{t('about_us.statement3')}</div>
+            <div>{t('about_us.statement4')}</div>
+            <div>{t('about_us.statement5')}</div>
+            <div>{t('about_us.statement6')}</div>
+          </Heading>
 
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, distinctio dolorem nostrum aliquam
-          obcaecati quibusdam ex minima repudiandae rem accusamus pariatur repellat ab. Laborum porro aliquid at,
-          dignissimos inventore iure. Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, distinctio
-          dolorem nostrum aliquam obcaecati quibusdam ex minima repudiandae rem accusamus pariatur repellat ab. Laborum
-          porro aliquid at, dignissimos inventore iure.
-        </p>
-      </Left>
-      <Right>
-        <Image alt="picture" src={profile} />
-      </Right>
-    </Content>
-  </Container>
-)
+          <Header>{t('about_us.title')}</Header>
+          <Typography component="div" gutterBottom>
+            {t('about_us.description')}
+          </Typography>
+        </Left>
+        <Right>
+          <Image alt="about_us" src={about_us} style={{ filter: 'opacity(50%)' }} />
+        </Right>
+      </Content>
+    </Container>
+  )
+}
 
 const Container = styled.div`
   display: flex;
@@ -40,16 +46,43 @@ const Container = styled.div`
   background: #e0e0e0;
 `
 
-const Heading = styled.div`
+const SectionTag = styled.div`
   color: #e9302e;
   font-size: 1rem;
   padding-bottom: 3rem;
+  letter-spacing: 0.4rem;
 `
 
-const Message = styled.div`
+const Heading = styled.div`
+  display: flex;
+  flex-direction: column;
   font-size: 2.5rem;
   font-weight: bold;
   padding-bottom: 6rem;
+
+  @media (max-width: 1900px) {
+    font-size: 2.2rem;
+  }
+
+  @media (max-width: 1500px) {
+    font-size: 1.5rem;
+  }
+
+  @media (max-width: 1000px) {
+    font-size: 1.2rem;
+  }
+
+  @media (max-width: 600px) {
+    font-size: 1rem;
+  }
+
+  @media (max-width: 400px) {
+    font-size: 0.8rem;
+  }
+
+  @media (max-width: 360px) {
+    font-size: 0.5rem;
+  }
 `
 
 const Content = styled.div`
@@ -68,4 +101,6 @@ const Right = styled.div`
 const Header = styled.div`
   font-size: 2rem;
   padding-bottom: 1rem;
+  font-weight: 900;
+  color: #ec4e4d;
 `

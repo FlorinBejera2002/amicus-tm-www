@@ -59,16 +59,12 @@ export const fetchBlogPosts = async () => {
 }
 
 export const createER = async (er: EvangelismRequest) => {
-  try {
-    await fetch(CMS_URL + '/evangelism-requests', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        Accept: 'application/json',
-      },
-      body: JSON.stringify(er),
-    })
-  } catch (error) {
-    console.error(error)
-  }
+  return await fetch('' + '/evangelism-requests', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      Accept: 'application/json',
+    },
+    body: JSON.stringify(er),
+  })
 }
