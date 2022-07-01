@@ -20,16 +20,18 @@ export const Vision = () => {
       <SectionTag>{t('section.vision')}</SectionTag>
 
       <Heading>
-        <div className="flex items-center justify-center pr-28">
-          <Image alt="arise logo" src={ariseImg} />
+        <div className="flex w-9/12 flex-col items-center justify-center pt-5">
+          <Image alt="arise logo" height={100} layout="fixed" src={ariseImg} width={150} />
+
+          {/* <div className="px-2 pt-5 text-center text-sm">{t('vision.description')}</div> */}
         </div>
 
-        <Message>{t('vision.title')}</Message>
+        <div className="flex justify-center text-center">
+          <Message>{t('vision.title')}</Message>
+        </div>
       </Heading>
 
       <Content>
-        <h3>{t('vision.description')}</h3>
-
         <Row>
           <Left>
             <StepHeader>{t('vision.step1_title')}</StepHeader>
@@ -125,10 +127,7 @@ export const Vision = () => {
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  padding-top: 10rem;
-  padding-bottom: 10rem;
-  padding-left: 15rem;
-  padding-right: 15rem;
+  padding: 10rem 12rem;
   background: #edf2f4;
 `
 

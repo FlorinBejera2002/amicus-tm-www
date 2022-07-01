@@ -1,65 +1,70 @@
 import styled from '@emotion/styled'
 import { useTranslation } from 'next-i18next'
+import Image from 'next/image'
 import Fade from 'react-reveal/Fade'
 
+import heroBackground from '../../public/hero_background.jpeg'
 import { Header } from '../Header'
 import { Socials } from '../Socials'
 
 export const Home = () => {
-  const bla = useTranslation('common')
-  const { t } = bla
+  const { t } = useTranslation('common')
 
   return (
-    <Container>
-      <Fade>
-        <HeaderWrapper>
-          <Header />
-        </HeaderWrapper>
-      </Fade>
+    <div>
+      <HeaderWrapper>
+        <Header />
+      </HeaderWrapper>
 
-      <Fade bottom>
-        <Message>
-          <div>
+      <Container>
+        <Content>
+          <Fade bottom>
             <Line />
-            <Heading>
+
+            <Hero>
               {t('hero.question1')}
               <Red> {t('hero.question2')}</Red> {t('hero.question3')}
-            </Heading>
+            </Hero>
 
             <Socials />
-          </div>
+          </Fade>
 
-          {/* <ImageWrapper> */}
-          {/* <Image alt="hero_background" objectFit="cover" placeholder="blur" src={heroBackground} /> */}
-          {/* </ImageWrapper> */}
-        </Message>
-      </Fade>
-    </Container>
+          <ImageWrapper>
+            <Image
+              alt="hero_background"
+              height={900}
+              layout="fixed"
+              placeholder="blur"
+              src={heroBackground}
+              width={500}
+            />
+          </ImageWrapper>
+        </Content>
+      </Container>
+    </div>
   )
 }
 
-const Container = styled.div`
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-  background-color: transparent;
+const ImageWrapper = styled.div`
+  position: absolute;
+  top: -4rem;
+  right: 18rem;
+  border-radius: 190px;
+  z-index: -1;
 `
 
-const Message = styled.div`
-  display: flex;
-  align-items: center;
-  margin: 0rem 4rem;
-  padding-top: 15rem;
-  padding-left: 5rem;
-  max-width: 45%;
+const Container = styled.div`
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  background-color: #000;
+  z-index: -2;
+`
 
-  @media (max-width: 1500px) {
-    max-width: 55%;
-  }
-
-  @media (max-width: 1000px) {
-    max-width: 65%;
-  }
+const Content = styled.div`
+  padding: 15rem 12rem 0rem;
+  background-color: transparent;
+  position: relative;
 `
 
 const Line = styled.div`
@@ -69,40 +74,36 @@ const Line = styled.div`
   margin-bottom: 1rem;
 `
 
-const Heading = styled.div`
+const Hero = styled.div`
   color: #edf2f4;
-  font-size: 3.8rem;
+  max-width: 55%;
+  font-size: 3rem;
   line-height: 1.257;
   padding-right: 3.2rem;
   margin-top: 0;
+  z-index: 99;
 
   @media (max-width: 1900px) {
-    font-size: 3.8rem;
+    font-size: 2.8rem;
   }
 
   @media (max-width: 1500px) {
-    font-size: 3.2rem;
+    font-size: 2.5rem;
   }
 
   @media (max-width: 1000px) {
-    font-size: 2.6rem;
-  }
-
-  @media (max-width: 600px) {
     font-size: 2rem;
   }
 
-  @media (max-width: 400px) {
-    font-size: 1.5rem;
-  }
-
-  @media (max-width: 360px) {
-    font-size: 1rem;
+  @media (max-width: 600px) {
+    font-size: 1.8rem;
   }
 `
 
 const HeaderWrapper = styled.div`
   padding-top: 2.5rem;
+  z-index: 0;
+  background-color: #000;
 `
 
 const Red = styled.span`

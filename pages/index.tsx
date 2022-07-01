@@ -1,8 +1,9 @@
-import styled from '@emotion/styled'
 import { AppBar } from '@mui/material'
 import type { NextPage } from 'next'
+import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { useCallback, useEffect, useState } from 'react'
+import CookieConsent from 'react-cookie-consent'
 import { Element } from 'react-scroll'
 
 import { Header } from '../components/Header'
@@ -10,7 +11,6 @@ import { About } from '../components/Sections/About'
 import { Footer } from '../components/Sections/Footer'
 import { Home } from '../components/Sections/Home'
 import { Vision } from '../components/Sections/Vision'
-// import heroBackground from '../public/hero_background.jpeg'
 
 interface Props {
   locale: string
@@ -22,6 +22,7 @@ export const getStaticProps = async (props: Props) => ({
 })
 
 const HomePage: NextPage = () => {
+  const { t } = useTranslation()
   const [showTopbar, setShowTopbar] = useState(false)
   const [lastScrollY, setLastScrollY] = useState(0)
 
@@ -47,7 +48,7 @@ const HomePage: NextPage = () => {
   }, [controlNavbar, lastScrollY])
 
   return (
-    <Container>
+    <div>
       <AppBar
         position="fixed"
         sx={{
@@ -74,21 +75,18 @@ const HomePage: NextPage = () => {
       <Element name="Contact">
         <Footer />
       </Element>
-    </Container>
+
+      <CookieConsent
+        buttonText={t('button.agree')}
+        cookieName="AriseCookieCookie"
+        expires={150}
+        location="bottom"
+        style={{ background: '#101119' }}
+      >
+        {t('gdpr.explanation')}
+      </CookieConsent>
+    </div>
   )
 }
-
-const Container = styled.div`
-  background-color: #000;
-`
-
-// const ImageWrapper = styled.div`
-//   height: 800px;
-//   width: 800px;
-//   position: absolute;
-//   left: 600px;
-//   top: 100px;
-//   z-index: -1;
-// `
 
 export default HomePage

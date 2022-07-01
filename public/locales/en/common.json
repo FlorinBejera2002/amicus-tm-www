@@ -8,7 +8,8 @@
     },
     "button": {
         "er_request": "Evanghelism Request",
-        "contact_us": "Contact Us"
+        "contact_us": "Contact Us",
+        "agree": "I Agree"
     },
     "hero": {
         "question1": "Do you care for the salvation of your loved ones?",
@@ -78,5 +79,8 @@
     "blog": {
         "title": "Blog",
         "read_more": "read more..."
+    },
+    "gdpr":{
+        "explanation": "This website does not store any cookies with your personal information. It will, however, store the data that you explicitly submit using the form inside this website. By accepting this form, you hereby consent that ariseforchrist can process your personal data for the purpose of contact. You may withdraw your consent and data at any time by contacting info@ariseforchrist.com."
     }
 }

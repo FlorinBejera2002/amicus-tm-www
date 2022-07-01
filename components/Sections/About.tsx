@@ -39,10 +39,7 @@ export const About = () => {
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  padding-top: 10rem;
-  padding-bottom: 10rem;
-  padding-left: 15rem;
-  padding-right: 15rem;
+  padding: 10rem 12rem;
   background: #e0e0e0;
 `
 
