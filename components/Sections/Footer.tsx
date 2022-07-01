@@ -22,21 +22,21 @@ export const Footer = () => {
 
       <Right>
         <SocialItemContainer>
-          <Title>{t('button.email')}</Title>
+          <Title>{t('contact.email')}</Title>
           <LabelWrapper>
             <Label>info@ariseforchrist.com</Label>
           </LabelWrapper>
         </SocialItemContainer>
 
         <SocialItemContainer>
-          <Title>Phone</Title>
+          <Title>{t('contact.phone')}</Title>
           <LabelWrapper>
             <Label>+100 100 1000</Label>
           </LabelWrapper>
         </SocialItemContainer>
 
         <SocialItemContainer>
-          <Title>{t('button.social')}</Title>
+          <Title>{t('contact.social')}</Title>
           <LabelWrapper>
             <Label>
               <Link onClick={() => window.open('https://www.facebook.com/AriseForChristRomania/', '_blank')}>
@@ -112,6 +112,7 @@ const Title = styled.div`
   font-size: 1.2rem;
   line-height: 1.333;
   color: #6d6c73;
+  text-transform: capitalize;
 `
 
 const LabelWrapper = styled.div`

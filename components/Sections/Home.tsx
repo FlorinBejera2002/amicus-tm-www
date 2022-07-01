@@ -12,28 +12,31 @@ export const Home = () => {
 
   return (
     <div>
-      <HeaderWrapper>
-        <Header />
-      </HeaderWrapper>
-
       <Container>
+        <HeaderWrapper>
+          <Header />
+        </HeaderWrapper>
+
         <Content>
           <Fade bottom>
-            <Line />
+            <div>
+              <Line />
 
-            <Hero>
-              {t('hero.question1')}
-              <Red> {t('hero.question2')}</Red> {t('hero.question3')}
-            </Hero>
+              <Hero>
+                {t('hero.question1')}
+                <Red> {t('hero.question2')}</Red> {t('hero.question3')}
+              </Hero>
 
-            <Socials />
+              <Socials />
+            </div>
           </Fade>
 
           <ImageWrapper>
             <Image
               alt="hero_background"
-              height={900}
+              height={750}
               layout="fixed"
+              objectFit="contain"
               placeholder="blur"
               src={heroBackground}
               width={500}
@@ -46,23 +49,29 @@ export const Home = () => {
 }
 
 const ImageWrapper = styled.div`
-  position: absolute;
-  top: -4rem;
-  right: 18rem;
   border-radius: 190px;
-  z-index: -1;
+
+  @media (max-width: 1200px) {
+    display: none;
+  }
 `
 
 const Container = styled.div`
+  display: flex;
+  flex-direction: column;
   height: 100vh;
-  overflow: hidden;
   position: relative;
   background-color: #000;
-  z-index: -2;
 `
 
 const Content = styled.div`
-  padding: 15rem 12rem 0rem;
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0rem 5rem;
   background-color: transparent;
   position: relative;
 `
@@ -76,12 +85,11 @@ const Line = styled.div`
 
 const Hero = styled.div`
   color: #edf2f4;
-  max-width: 55%;
   font-size: 3rem;
   line-height: 1.257;
-  padding-right: 3.2rem;
+  min-width: 500px;
+  max-width: 800px;
   margin-top: 0;
-  z-index: 99;
 
   @media (max-width: 1900px) {
     font-size: 2.8rem;
@@ -102,7 +110,7 @@ const Hero = styled.div`
 
 const HeaderWrapper = styled.div`
   padding-top: 2.5rem;
-  z-index: 0;
+  /* z-index: 0; */
   background-color: #000;
 `
 

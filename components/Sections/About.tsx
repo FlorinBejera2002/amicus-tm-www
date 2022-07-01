@@ -2,6 +2,7 @@ import styled from '@emotion/styled'
 import { Typography } from '@mui/material'
 import { useTranslation } from 'next-i18next'
 import Image from 'next/image'
+import Fade from 'react-reveal/Fade'
 
 import about_us from '../../public/about_us.jpg'
 
@@ -14,23 +15,28 @@ export const About = () => {
 
       <Content>
         <Left>
-          <Heading>
-            <div>{t('about_us.statement1')}</div>
-            <div>{t('about_us.statement2')}</div>
-            <div>{t('about_us.statement3')}</div>
-            <div>{t('about_us.statement4')}</div>
-            <div>{t('about_us.statement5')}</div>
-            <div>{t('about_us.statement6')}</div>
-          </Heading>
+          <Fade bottom>
+            <Heading>
+              <div>{t('about_us.statement1')}</div>
+              <div>{t('about_us.statement2')}</div>
+              <div>{t('about_us.statement3')}</div>
+              <div>{t('about_us.statement4')}</div>
+              <div>{t('about_us.statement5')}</div>
+              <div>{t('about_us.statement6')}</div>
+            </Heading>
 
-          <Header>{t('about_us.title')}</Header>
-          <Typography component="div" gutterBottom>
-            {t('about_us.description')}
-          </Typography>
+            <Header>{t('about_us.title')}</Header>
+            <Typography component="div" gutterBottom>
+              {t('about_us.description')}
+            </Typography>
+          </Fade>
         </Left>
-        <Right>
-          <Image alt="about_us" src={about_us} style={{ filter: 'opacity(50%)' }} />
-        </Right>
+
+        <Fade right>
+          <Right>
+            <Image alt="about_us" src={about_us} style={{ filter: 'opacity(50%)' }} />
+          </Right>
+        </Fade>
       </Content>
     </Container>
   )
