@@ -31,7 +31,8 @@ export const Footer = () => {
         <SocialItemContainer>
           <Title>{t('contact.phone')}</Title>
           <LabelWrapper>
-            <Label>+100 100 1000</Label>
+            <Label>+0721 804 560</Label>
+            <Label>0356 175 148</Label>
           </LabelWrapper>
         </SocialItemContainer>
 
