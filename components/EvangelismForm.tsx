@@ -214,11 +214,11 @@ export const EvangelismForm = (props: Props) => {
           </Content>
 
           <TextField
-            className="mb-2"
             color="error"
             id="religion"
             label={t('form.religion')}
             size="small"
+            style={{ marginBottom: '0.5rem' }}
             type="text"
             variant="outlined"
           />
@@ -241,7 +241,7 @@ export const EvangelismForm = (props: Props) => {
             autoFocus
             color="error"
             onClick={() => {
-              handleClose()
+              props.handleClose()
               setError('')
             }}
           >
