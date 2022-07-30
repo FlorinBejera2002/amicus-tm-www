@@ -31,7 +31,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
       <Head>
         <title>Arise For Christ</title>
         <meta content="Arise For Christ Website" name="description" />
-        <link href="/tab_logo.ico" rel="icon" />
+        <link href="/logo_tab.svg" rel="icon" />
       </Head>
 
       <Component {...pageProps} />

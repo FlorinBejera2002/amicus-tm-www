@@ -57,7 +57,7 @@ export const Header = () => {
     <Container>
       <Menu>
         <ImageWrapper onClick={onClickHome} sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}>
-          <Image alt="Logo" height={20} src="/logo_white.png" width={100} />
+          <Image alt="Logo" height={28} src="/logo_horizontal_white.png" width={100} />
         </ImageWrapper>
 
         <Href onClick={onClickHome}>{t('header.home')}</Href>

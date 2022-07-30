@@ -3,16 +3,6 @@ import { useTranslation } from 'next-i18next'
 import Image from 'next/image'
 import Fade from 'react-reveal/Fade'
 
-import ariseImg from '../../public/logo_vertical.jpg'
-import step1 from '../../public/step1.jpg'
-import step2 from '../../public/step2.jpg'
-import step3 from '../../public/step3.jpg'
-import step4 from '../../public/step4.jpg'
-import step5 from '../../public/step5.jpg'
-import step6 from '../../public/step6.jpg'
-import step7 from '../../public/step7.jpg'
-import step8 from '../../public/step8.jpg'
-
 export const Vision = () => {
   const { t } = useTranslation('common')
 
@@ -23,9 +13,7 @@ export const Vision = () => {
       <Heading>
         <Fade left>
           <div className="flex w-9/12 flex-col items-center justify-center pt-5">
-            <Image alt="arise logo" height={100} layout="fixed" src={ariseImg} width={150} />
-
-            {/* <div className="px-2 pt-5 text-center text-sm">{t('vision.description')}</div> */}
+            <Image alt="arise logo" height={150} layout="fixed" src="/logo.svg" width={150} />
           </div>
         </Fade>
 
@@ -45,7 +33,7 @@ export const Vision = () => {
             </Left>
             <VerticalLine />
             <Right>
-              <Image alt="step1" height={300} src={step1} width={500} />
+              <Image alt="step1" height={300} src="/step1.jpg" width={500} />
             </Right>
           </Row>
         </Fade>
@@ -53,7 +41,7 @@ export const Vision = () => {
         <Fade bottom>
           <Row>
             <Left>
-              <Image alt="step2" height={300} src={step2} width={500} />
+              <Image alt="step2" height={300} src="/step2.jpg" width={500} />
             </Left>
             <VerticalLine />
             <Right>
@@ -71,7 +59,7 @@ export const Vision = () => {
             </Left>
             <VerticalLine />
             <Right>
-              <Image alt="step3" height={300} src={step3} width={500} />
+              <Image alt="step3" height={300} src="/step3.jpg" width={500} />
             </Right>
           </Row>
         </Fade>
@@ -79,7 +67,7 @@ export const Vision = () => {
         <Fade bottom>
           <Row>
             <Left>
-              <Image alt="step4" height={300} src={step4} width={500} />
+              <Image alt="step4" height={300} src="/step4.jpg" width={500} />
             </Left>
             <VerticalLine />
             <Right>
@@ -97,7 +85,7 @@ export const Vision = () => {
             </Left>
             <VerticalLine />
             <Right>
-              <Image alt="step5" height={300} src={step5} width={500} />
+              <Image alt="step5" height={300} src="/step5.jpg" width={500} />
             </Right>
           </Row>
         </Fade>
@@ -105,7 +93,7 @@ export const Vision = () => {
         <Fade bottom>
           <Row>
             <Left>
-              <Image alt="step6" height={300} src={step6} width={500} />
+              <Image alt="step6" height={300} src="/step6.jpg" width={500} />
             </Left>
             <VerticalLine />
             <Right>
@@ -123,7 +111,7 @@ export const Vision = () => {
             </Left>
             <VerticalLine />
             <Right>
-              <Image alt="step7" height={300} src={step7} width={500} />
+              <Image alt="step7" height={300} src="/step7.jpg" width={500} />
             </Right>
           </Row>
         </Fade>
@@ -131,7 +119,7 @@ export const Vision = () => {
         <Fade bottom>
           <Row>
             <Left>
-              <Image alt="step8" height={300} src={step8} width={500} />
+              <Image alt="step8" height={300} src="/step8.jpg" width={500} />
             </Left>
             <VerticalLine />
             <Right>
