@@ -1,6 +1,9 @@
 import styled from '@emotion/styled'
+import { Button } from '@mui/material'
 import { useTranslation } from 'next-i18next'
 import Image from 'next/image'
+import { useRouter } from 'next/router'
+import { useMediaQuery } from 'react-responsive'
 import Fade from 'react-reveal/Fade'
 
 import heroBackground from '../../public/hero_background.jpeg'
@@ -9,6 +12,8 @@ import { Socials } from '../Socials'
 
 export const Home = () => {
   const { t } = useTranslation('common')
+  const router = useRouter()
+  const isMobile = useMediaQuery({ query: `(max-width: 760px)` })
 
   return (
     <div>
@@ -28,6 +33,16 @@ export const Home = () => {
               <Socials />
             </div>
           </Fade>
+
+          {isMobile && (
+            <Fade bottom>
+              <div style={{ display: 'flex', justifyContent: 'center', marginTop: '10rem' }}>
+                <StyledButton onClick={() => router.push('evangelism_form')} variant="outlined">
+                  {t('button.er_request')}
+                </StyledButton>
+              </div>
+            </Fade>
+          )}
 
           <ImageWrapper>
             <Image
@@ -78,7 +93,7 @@ const Content = styled.div`
 
   @media (max-width: 390px) {
     display: block;
-    margin-top: 12rem;
+    margin-top: 7rem;
     max-width: 350px;
     padding: 0rem 0.5rem;
   }
@@ -123,4 +138,15 @@ const Hero = styled.div`
 
 const Red = styled.span`
   color: #ec4e4d;
+`
+
+const StyledButton = styled(Button)`
+  border-radius: 0px;
+  padding: 0.5rem 1.5rem;
+  border: 2px solid #edf2f4;
+
+  :hover {
+    background-color: #e9302e;
+    border: 2px solid #e9302e;
+  }
 `

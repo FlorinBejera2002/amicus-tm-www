@@ -1,24 +1,15 @@
 import styled from '@emotion/styled'
-import CloseIcon from '@mui/icons-material/Close'
-import HandshakeIcon from '@mui/icons-material/Handshake'
-import SendIcon from '@mui/icons-material/Send'
-import LoadingButton from '@mui/lab/LoadingButton'
-import {
-  AlertColor,
-  Button,
-  Dialog,
-  DialogActions,
-  DialogContent,
-  DialogTitle,
-  IconButton,
-  TextField,
-  Typography,
-} from '@mui/material'
+import { LoadingButton } from '@mui/lab'
+import { TextField, Alert, AlertColor, Snackbar, Typography } from '@mui/material'
+import { NextPage } from 'next'
 import { useTranslation } from 'next-i18next'
-import React, { Dispatch, SetStateAction } from 'react'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import { useRouter } from 'next/router'
 import { FormEvent, useState } from 'react'
 
-import { createER, EvangelismCategory, EvangelismRequest, Status } from '../pages/api/cms-api'
+import { Header } from '../components/Header'
+
+import { EvangelismRequest, EvangelismCategory, Status, createER } from './api/cms-api'
 
 export const validateEmail = (email: string): boolean =>
   !!String(email)
@@ -29,48 +20,33 @@ export const validateEmail = (email: string): boolean =>
 
 export const validateMobile = (mobile: string): boolean => String(mobile).length >= 10
 
-export interface DialogTitleProps {
-  id: string
-  children?: React.ReactNode
-  onClose: () => void
-}
-
-const BootstrapDialogTitle = (props: DialogTitleProps) => {
-  const { children, onClose, ...other } = props
-
-  return (
-    <DialogTitle sx={{ m: 0, p: 2 }} {...other}>
-      {children}
-      {onClose ? (
-        <IconButton
-          aria-label="close"
-          onClick={onClose}
-          sx={{
-            position: 'absolute',
-            right: 8,
-            top: 8,
-            color: (theme) => theme.palette.grey[500],
-          }}
-        >
-          <CloseIcon />
-        </IconButton>
-      ) : null}
-    </DialogTitle>
-  )
-}
-
 interface Props {
-  open: boolean
-  handleClose: () => void
-  setSnackBarMessage: Dispatch<SetStateAction<string>>
-  setSnackBarType: Dispatch<SetStateAction<AlertColor>>
-  setShowSnackBar: Dispatch<SetStateAction<boolean>>
+  locale: string
 }
+export const getStaticProps = async (props: Props) => ({
+  props: {
+    ...(await serverSideTranslations(props.locale, ['common'])),
+  },
+})
 
-export const EvangelismForm = (props: Props) => {
+const EvangelismForm: NextPage = () => {
   const { t } = useTranslation('common')
+  const router = useRouter()
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
+
+  //snackbar
+  const [showSnackBar, setShowSnackBar] = useState<boolean>(false)
+  const [snackBarMessage, setSnackBarMessage] = useState<string>(t('form.successful_submission'))
+  const [snackBarType, setSnackBarType] = useState<AlertColor>('success')
+
+  const handleCloseSnackBar = (event?: React.SyntheticEvent | Event, reason?: string) => {
+    if (reason === 'clickaway') {
+      return
+    }
+
+    setShowSnackBar(false)
+  }
 
   const areInputsValid = (er: EvangelismRequest): boolean => {
     if (er?.email && !validateEmail(er?.email)) {
@@ -124,43 +100,27 @@ export const EvangelismForm = (props: Props) => {
       if (!response.ok) {
         console.error('Response:', response)
         throw Error('Response not ok.')
+      } else {
+        setTimeout(() => router.push('/'), 2000)
       }
-
-      props.handleClose()
     } catch (error) {
       console.error(error)
-      props.setSnackBarMessage(t('form.failed_submission'))
-      props.setSnackBarType('error')
+      setSnackBarMessage(t('form.failed_submission'))
+      setSnackBarType('error')
     }
-    props.setShowSnackBar(true)
+    setShowSnackBar(true)
     setLoading(false)
   }
 
   return (
-    <DialogStyled
-      aria-labelledby="customized-dialog-title"
-      onClose={() => {
-        props.handleClose()
-        setError('')
-      }}
-      open={props.open}
-    >
-      <BootstrapDialogTitle
-        id="customized-dialog-title"
-        onClose={() => {
-          props.handleClose()
-          setError('')
-        }}
-      >
-        {t('form.title')}
-      </BootstrapDialogTitle>
-      <form onSubmit={handleSubmit}>
-        <DialogContent>
-          <Description>
-            <HandshakeIcon />
-            {t('form.subtitle')}
-          </Description>
+    <div>
+      <Header />
 
+      <Container>
+        <SectionTag>{t('form.title')}</SectionTag>
+        <Title>{t('form.subtitle')}</Title>
+
+        <form onSubmit={handleSubmit}>
           <Content>
             <Left>
               <TextField
@@ -172,6 +132,7 @@ export const EvangelismForm = (props: Props) => {
                 type="text"
                 variant="outlined"
               />
+
               <TextField
                 color="error"
                 id="email"
@@ -181,6 +142,7 @@ export const EvangelismForm = (props: Props) => {
                 type="text"
                 variant="outlined"
               />
+
               <TextField
                 color="error"
                 id="mobile"
@@ -188,6 +150,16 @@ export const EvangelismForm = (props: Props) => {
                 required
                 size="small"
                 type="tel"
+                variant="outlined"
+              />
+
+              <TextField
+                color="error"
+                id="religion"
+                label={t('form.religion')}
+                size="small"
+                style={{ marginBottom: '0.5rem' }}
+                type="text"
                 variant="outlined"
               />
             </Left>
@@ -201,7 +173,9 @@ export const EvangelismForm = (props: Props) => {
                 type="text"
                 variant="outlined"
               />
+
               <TextField color="error" id="age" label={t('form.age')} size="small" type="number" variant="outlined" />
+
               <TextField
                 color="error"
                 id="occupation"
@@ -210,82 +184,70 @@ export const EvangelismForm = (props: Props) => {
                 type="text"
                 variant="outlined"
               />
+
+              <TextField
+                color="error"
+                id="details"
+                label={t('form.details')}
+                multiline
+                rows={4}
+                size="small"
+                type="text"
+                variant="outlined"
+              />
             </Right>
           </Content>
 
-          <TextField
-            color="error"
-            id="religion"
-            label={t('form.religion')}
-            size="small"
-            style={{ marginBottom: '0.5rem' }}
-            type="text"
-            variant="outlined"
-          />
-
-          <TextField
-            color="error"
-            id="details"
-            label={t('form.details')}
-            multiline
-            rows={4}
-            size="small"
-            type="text"
-            variant="outlined"
-          />
-
           {error && <ErrorLabel color="error">{error}</ErrorLabel>}
-        </DialogContent>
-        <DialogActions>
-          <Button
-            autoFocus
-            color="error"
-            onClick={() => {
-              props.handleClose()
-              setError('')
-            }}
-          >
-            {t('form.cancel', 'cancel')}
-          </Button>
+          <div style={{ display: 'flex', justifyContent: 'center', paddingTop: '4rem' }}>
+            <LoadingButton
+              color="secondary"
+              loading={loading}
+              loadingPosition="end"
+              sx={{ padding: '0.5rem 3rem' }}
+              type="submit"
+              variant="outlined"
+            >
+              {t('form.send', 'send')}
+            </LoadingButton>
+          </div>
+        </form>
 
-          <LoadingButton
-            endIcon={<SendIcon />}
-            loading={loading}
-            loadingPosition="end"
-            type="submit"
-            variant="contained"
-          >
-            {t('form.send', 'send')}
-          </LoadingButton>
-        </DialogActions>
-      </form>
-    </DialogStyled>
+        <Snackbar autoHideDuration={6000} onClose={handleCloseSnackBar} open={showSnackBar}>
+          <Alert onClose={handleCloseSnackBar} severity={snackBarType} sx={{ width: '100%' }}>
+            {snackBarMessage}
+          </Alert>
+        </Snackbar>
+      </Container>
+    </div>
   )
 }
 
-const DialogStyled = styled(Dialog)`
-  .MuiDialogContent-root {
-    display: flex;
-    flex-direction: column;
-    padding: 0.8rem 2rem 1rem;
-    width: 33em;
-  }
+export default EvangelismForm
 
-  .MuiDialogActions-root {
-    padding-bottom: 1rem;
-    padding-right: 1rem;
+const Container = styled.div`
+  background-color: #edf2f4;
+  height: 100%;
+  padding: 5rem 12rem;
+
+  @media (max-width: 390px) {
+    padding: 4rem 2rem;
   }
 `
 
 const Content = styled.div`
   display: flex;
+
+  @media (max-width: 390px) {
+    display: block;
+  }
 `
 
 const Left = styled.div`
   flex: 1;
   display: flex;
   flex-direction: column;
-  margin-right: 0.2rem;
+  margin: 0rem 0.2rem;
 
   > div {
     margin-bottom: 0.5rem;
@@ -296,18 +258,25 @@ const Right = styled.div`
   flex: 1;
   display: flex;
   flex-direction: column;
-  margin-left: 0.2rem;
+  margin: 0rem 0.2rem;
 
   > div {
     margin-bottom: 0.5rem;
   }
 `
 
-const Description = styled.div`
-  display: flex;
+const Title = styled.div`
   padding-bottom: 1.5rem;
+  font-size: 1rem;
 `
 
 const ErrorLabel = styled(Typography)`
   padding-top: 1rem;
+`
+
+const SectionTag = styled.div`
+  color: #e9302e;
+  font-size: 1rem;
+  padding-bottom: 3rem;
+  letter-spacing: 0.4rem;
 `

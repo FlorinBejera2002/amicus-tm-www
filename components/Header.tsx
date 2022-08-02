@@ -2,60 +2,34 @@ import styled from '@emotion/styled'
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft'
 import CloseIcon from '@mui/icons-material/Close'
 import MenuIcon from '@mui/icons-material/Menu'
-import { AlertColor, Box, Button, Snackbar } from '@mui/material'
-import MuiAlert, { AlertProps } from '@mui/material/Alert'
+import { Box, Button } from '@mui/material'
 import { useTranslation } from 'next-i18next'
 import Image from 'next/image'
 import LinkNext from 'next/link'
 import { useRouter } from 'next/router'
-import React, { forwardRef, useState } from 'react'
+import React, { useState } from 'react'
 import { useMediaQuery } from 'react-responsive'
 import { Link, animateScroll as scroll } from 'react-scroll'
-
-import { EvangelismForm } from './EvangelismForm'
-
-const Alert = forwardRef<HTMLDivElement, AlertProps>(function Alert(props, ref) {
-  return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />
-})
 
 export const Header = () => {
   const router = useRouter()
   const onBlogPage = router.pathname.includes('/blog')
+  const onEvangelismFormPage = router.pathname.includes('/evangelism_form')
+  const onHomePage = !onBlogPage && !onEvangelismFormPage
   const { t } = useTranslation('common')
-  const [openDialog, setOpenDialog] = useState(false)
   const isMobile = useMediaQuery({ query: `(max-width: 760px)` })
   const [showMenu, setShowMenu] = useState(false)
-
-  //snackbar
-  const [showSnackBar, setShowSnackBar] = useState<boolean>(false)
-  const [snackBarMessage, setSnackBarMessage] = useState<string>(t('form.successful_submission'))
-  const [snackBarType, setSnackBarType] = useState<AlertColor>('success')
-
-  const handleCloseSnackBar = (event?: React.SyntheticEvent | Event, reason?: string) => {
-    if (reason === 'clickaway') {
-      return
-    }
-
-    setShowSnackBar(false)
-  }
 
   const handleLocaleChange = () =>
     router.push(router.route, router.asPath, {
       locale: router.locale === 'en' ? 'ro' : 'en',
     })
 
-  const handleOpen = () => {
-    setOpenDialog(true)
-  }
-  const handleClose = () => {
-    setOpenDialog(false)
-  }
-
   const onClickHome = () => {
-    if (onBlogPage) {
-      router.push('/')
-    } else {
+    if (onHomePage) {
       scroll.scrollToTop()
+    } else {
+      router.push('/')
     }
   }
 
@@ -68,14 +42,14 @@ export const Header = () => {
       <div>
         <Container>
           <div onClick={onClickHome} style={{ display: 'flex' }}>
-            {onBlogPage && <ChevronLeftIcon htmlColor="white" sx={{ marginRight: '0.5rem' }} />}
+            {!onHomePage && <ChevronLeftIcon htmlColor="white" sx={{ marginRight: '0.5rem' }} />}
 
             <ImageWrapperMobile>
               <Image alt="Logo" height={19} src="/logo_horizontal_white.png" width={70} />
             </ImageWrapperMobile>
           </div>
 
-          <MenuIcon htmlColor="white" onClick={() => setShowMenu(true)} />
+          {onHomePage && <MenuIcon htmlColor="white" onClick={() => setShowMenu(true)} />}
         </Container>
 
         <Overlay showMenu={showMenu}>
@@ -110,7 +84,7 @@ export const Header = () => {
 
         <Href onClick={onClickHome}>{t('header.home')}</Href>
 
-        {!onBlogPage && (
+        {onHomePage && (
           <div className="flex">
             <Link duration={1000} offset={50} smooth={true} to="Vision">
               <Href>{t('header.vision')}</Href>
@@ -126,7 +100,7 @@ export const Header = () => {
           <Href>{t('header.blog')}</Href>
         </LinkNext>
 
-        {!onBlogPage && (
+        {onHomePage && (
           <Link duration={1000} offset={50} smooth={true} to="Contact">
             <Href>{t('header.contact')}</Href>
           </Link>
@@ -138,24 +112,10 @@ export const Header = () => {
           en/ro
         </Href>
 
-        <StyledButton onClick={handleOpen} variant="outlined">
+        <StyledButton onClick={() => router.push('evangelism_form')} variant="outlined">
           {t('button.er_request')}
         </StyledButton>
       </div>
-
-      <EvangelismForm
-        handleClose={handleClose}
-        open={openDialog}
-        setShowSnackBar={setShowSnackBar}
-        setSnackBarMessage={setSnackBarMessage}
-        setSnackBarType={setSnackBarType}
-      />
-
-      <Snackbar autoHideDuration={6000} onClose={handleCloseSnackBar} open={showSnackBar}>
-        <Alert onClose={handleCloseSnackBar} severity={snackBarType} sx={{ width: '100%' }}>
-          {snackBarMessage}
-        </Alert>
-      </Snackbar>
     </Container>
   )
 }
