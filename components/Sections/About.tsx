@@ -46,7 +46,7 @@ const Container = styled.div`
   padding: 10rem 12rem;
   background: #e0e0e0;
 
-  @media (max-width: 390px) {
+  @media (max-width: 760px) {
     padding: 4rem 2rem;
     font-size: 1.5rem;
   }
@@ -78,11 +78,7 @@ const Heading = styled.div`
     font-size: 1.2rem;
   }
 
-  @media (max-width: 600px) {
-    font-size: 1rem;
-  }
-
-  @media (max-width: 390px) {
+  @media (max-width: 760px) {
     font-size: 1rem;
     padding-bottom: 4rem;
     align-items: center;
@@ -101,7 +97,7 @@ const Right = styled.div`
   flex: 1;
   padding-left: 7rem;
 
-  @media (max-width: 390px) {
+  @media (max-width: 760px) {
     display: none;
   }
 `
@@ -112,12 +108,12 @@ const Header = styled.div`
   font-weight: 900;
   color: #ec4e4d;
 
-  @media (max-width: 390px) {
+  @media (max-width: 760px) {
     font-size: 1.5rem;
   }
 `
 const Description = styled(Typography)`
-  @media (max-width: 390px) {
+  @media (max-width: 760px) {
     font-size: 0.8rem;
   }
 `

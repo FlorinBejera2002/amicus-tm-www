@@ -63,7 +63,7 @@ const Container = styled.div`
   padding: 0 10rem;
   background-color: #000;
 
-  @media (max-width: 390px) {
+  @media (max-width: 760px) {
     padding: 2rem 2rem;
   }
 `
@@ -84,7 +84,7 @@ const Message = styled.div`
     max-width: 65%;
   }
 
-  @media (max-width: 390px) {
+  @media (max-width: 760px) {
     padding: 0 2rem;
     margin: 0rem;
     padding-left: 0rem;
@@ -111,11 +111,7 @@ const Heading = styled.div`
     font-size: 2.6rem;
   }
 
-  @media (max-width: 600px) {
-    font-size: 2rem;
-  }
-
-  @media (max-width: 390px) {
+  @media (max-width: 760px) {
     font-size: 3rem;
   }
 `
@@ -124,7 +120,7 @@ const Content = styled.div`
   display: flex;
   margin: 8rem 0rem;
 
-  @media (max-width: 390px) {
+  @media (max-width: 760px) {
     margin-top: 4rem;
   }
 `

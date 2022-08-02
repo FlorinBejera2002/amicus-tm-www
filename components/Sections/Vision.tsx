@@ -139,7 +139,7 @@ const Container = styled.div`
   padding: 10rem 12rem;
   background: #edf2f4;
 
-  @media (max-width: 390px) {
+  @media (max-width: 760px) {
     padding: 4rem 2rem;
     font-size: 1.5rem;
   }
@@ -156,7 +156,7 @@ const Message = styled.div`
   font-size: 2.5rem;
   font-weight: bold;
 
-  @media (max-width: 390px) {
+  @media (max-width: 760px) {
     font-size: 1rem;
     margin-top: 2rem;
   }
@@ -179,7 +179,7 @@ const Left = styled.div`
   flex-direction: column;
   padding: 2rem 7rem;
 
-  @media (max-width: 390px) {
+  @media (max-width: 760px) {
     padding: 1rem;
     font-size: 0.8rem;
   }
@@ -193,7 +193,7 @@ const Right = styled.div`
   text-align: end;
   padding: 2rem 7rem;
 
-  @media (max-width: 390px) {
+  @media (max-width: 760px) {
     padding: 1rem;
     font-size: 0.8rem;
   }
@@ -204,7 +204,7 @@ const VerticalLine = styled.div`
   border-radius: 4px;
   height: 15rem;
 
-  @media (max-width: 390px) {
+  @media (max-width: 760px) {
     display: none;
   }
 `
@@ -225,15 +225,7 @@ const Heading = styled.div`
     font-size: 2.6rem;
   }
 
-  @media (max-width: 600px) {
-    font-size: 2rem;
-  }
-
-  @media (max-width: 400px) {
-    font-size: 1.5rem;
-  }
-
-  @media (max-width: 390px) {
+  @media (max-width: 760px) {
     flex-direction: column;
     align-items: center;
   }
@@ -243,7 +235,7 @@ const StepHeader = styled.div`
   font-size: 1.5rem;
   font-weight: 500;
 
-  @media (max-width: 390px) {
+  @media (max-width: 760px) {
     font-size: 1rem;
   }
 `

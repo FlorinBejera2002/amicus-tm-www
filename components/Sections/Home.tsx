@@ -76,7 +76,7 @@ const Container = styled.div`
   position: relative;
   background-color: #000;
 
-  @media (max-width: 390px) {
+  @media (max-width: 760px) {
     overflow-wrap: break-word;
   }
 `
@@ -91,7 +91,7 @@ const Content = styled.div`
   padding: 0rem 5rem;
   background-color: transparent;
 
-  @media (max-width: 390px) {
+  @media (max-width: 760px) {
     display: block;
     margin-top: 7rem;
     max-width: 350px;
@@ -126,11 +126,7 @@ const Hero = styled.div`
     font-size: 2rem;
   }
 
-  @media (max-width: 600px) {
-    font-size: 1.8rem;
-  }
-
-  @media (max-width: 390px) {
+  @media (max-width: 760px) {
     display: inline;
     font-size: 1.5rem;
   }

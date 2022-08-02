@@ -14,7 +14,7 @@ const Container = styled.div`
   display: flex;
   margin-top: 5rem;
 
-  @media (max-width: 390px) {
+  @media (max-width: 760px) {
     margin-top: 1rem;
   }
 `

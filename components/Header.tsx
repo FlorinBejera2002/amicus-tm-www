@@ -127,7 +127,7 @@ const Container = styled.div`
   color: #666666;
   padding: 3.5rem 5rem 1.5rem 5rem;
 
-  @media (max-width: 390px) {
+  @media (max-width: 760px) {
     align-items: flex-start;
     padding: 2rem 2rem 1.5rem 2rem;
   }
@@ -145,7 +145,7 @@ const ImageWrapper = styled(Box)`
   margin-right: 3rem;
   cursor: pointer;
 
-  @media (max-width: 390px) {
+  @media (max-width: 760px) {
     display: none;
   }
 `

@@ -71,7 +71,7 @@ const Container = styled.div`
   padding-bottom: 1rem;
   background: black;
 
-  @media (max-width: 390px) {
+  @media (max-width: 760px) {
     padding: 4rem 2rem;
     flex-direction: column;
   }
@@ -83,7 +83,7 @@ const Left = styled.div`
   flex-direction: column;
   padding: 5rem 10rem;
 
-  @media (max-width: 390px) {
+  @media (max-width: 760px) {
     padding: 0rem;
   }
 `
@@ -94,7 +94,7 @@ const Right = styled.div`
   flex-direction: column;
   padding: 5rem 10rem;
 
-  @media (max-width: 390px) {
+  @media (max-width: 760px) {
     padding: 0rem;
   }
 `
@@ -112,7 +112,7 @@ const Heading = styled.div`
   font-weight: bold;
   padding-bottom: 6rem;
 
-  @media (max-width: 390px) {
+  @media (max-width: 760px) {
     font-size: 1rem;
     padding-bottom: 3rem;
   }
@@ -134,7 +134,7 @@ const StyledButton = styled(Button)`
 const SocialItemContainer = styled.div`
   margin-top: 6rem;
 
-  @media (max-width: 390px) {
+  @media (max-width: 760px) {
     margin-top: 1rem;
   }
 `
@@ -145,7 +145,7 @@ const Title = styled.div`
   color: #6d6c73;
   text-transform: capitalize;
 
-  @media (max-width: 390px) {
+  @media (max-width: 760px) {
     font-size: 0.8rem;
   }
 `
@@ -160,7 +160,7 @@ const Label = styled.div`
   font-size: 1.8rem;
   font-weight: 300;
 
-  @media (max-width: 390px) {
+  @media (max-width: 760px) {
     font-size: 0.8rem;
   }
 `
@@ -182,7 +182,7 @@ const Copyright = styled.div`
   padding-top: 6rem;
   color: #6d6c73;
 
-  @media (max-width: 390px) {
+  @media (max-width: 760px) {
     padding-top: 3rem;
   }
 `
@@ -190,7 +190,7 @@ const Copyright = styled.div`
 const DesktopAction = styled.div`
   display: block;
 
-  @media (max-width: 390px) {
+  @media (max-width: 760px) {
     display: none;
   }
 `
@@ -199,7 +199,7 @@ const MobileContact = styled.div`
   display: none;
   margin-top: 6rem;
 
-  @media (max-width: 390px) {
+  @media (max-width: 760px) {
     display: block;
   }
 `

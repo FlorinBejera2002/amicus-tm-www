@@ -230,7 +230,7 @@ const Container = styled.div`
   height: 100%;
   padding: 5rem 12rem;
 
-  @media (max-width: 390px) {
+  @media (max-width: 760px) {
     padding: 4rem 2rem;
   }
 `
@@ -238,7 +238,7 @@ const Container = styled.div`
 const Content = styled.div`
   display: flex;
 
-  @media (max-width: 390px) {
+  @media (max-width: 760px) {
     display: block;
   }
 `
