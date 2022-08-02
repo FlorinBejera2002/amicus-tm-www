@@ -26,9 +26,7 @@ export const About = () => {
             </Heading>
 
             <Header>{t('about_us.title')}</Header>
-            <Description component="div" gutterBottom>
-              {t('about_us.description')}
-            </Description>
+            <Description gutterBottom>{t('about_us.description')}</Description>
           </Fade>
         </Left>
 
