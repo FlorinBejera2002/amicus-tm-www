@@ -28,30 +28,31 @@ const Blog: NextPage<Props> = (props) => {
   const posts = props.postResponse?.posts
 
   return (
-    <Container>
-      <HeaderWrapper>
-        <Header />
-      </HeaderWrapper>
-      <Fade bottom>
-        <Message>
-          <Heading>{t('blog.title')}</Heading>
-        </Message>
-      </Fade>
+    <div>
+      <Header />
 
-      <Content>
-        {!posts ? (
-          <Box sx={{ display: 'flex' }}>
-            <CircularProgress />
-          </Box>
-        ) : (
-          <PostsContainer>
-            {posts?.map((post) => (
-              <Post key={post.id} post={post} />
-            ))}
-          </PostsContainer>
-        )}
-      </Content>
-    </Container>
+      <Container>
+        <Fade bottom>
+          <Message>
+            <Heading>{t('blog.title')}</Heading>
+          </Message>
+        </Fade>
+
+        <Content>
+          {!posts ? (
+            <Box sx={{ display: 'flex' }}>
+              <CircularProgress />
+            </Box>
+          ) : (
+            <PostsContainer>
+              {posts?.map((post) => (
+                <Post key={post.id} post={post} />
+              ))}
+            </PostsContainer>
+          )}
+        </Content>
+      </Container>
+    </div>
   )
 }
 
@@ -63,12 +64,8 @@ const Container = styled.div`
   background-color: #000;
 
   @media (max-width: 390px) {
-    padding: 0 2rem;
+    padding: 2rem 2rem;
   }
-`
-
-const HeaderWrapper = styled.div`
-  padding-top: 2.5rem;
 `
 
 const Message = styled.div`
@@ -118,18 +115,18 @@ const Heading = styled.div`
     font-size: 2rem;
   }
 
-  @media (max-width: 400px) {
-    font-size: 1.5rem;
-  }
-
   @media (max-width: 390px) {
-    font-size: 2rem;
+    font-size: 3rem;
   }
 `
 
 const Content = styled.div`
   display: flex;
   margin: 8rem 0rem;
+
+  @media (max-width: 390px) {
+    margin-top: 4rem;
+  }
 `
 
 const PostsContainer = styled.div`

@@ -4,6 +4,7 @@ import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { useCallback, useEffect, useState } from 'react'
 import CookieConsent from 'react-cookie-consent'
+import { useMediaQuery } from 'react-responsive'
 import { Element } from 'react-scroll'
 
 import { Header } from '../components/Header'
@@ -26,6 +27,7 @@ const HomePage: NextPage = () => {
   const { t } = useTranslation()
   const [showTopbar, setShowTopbar] = useState(false)
   const [lastScrollY, setLastScrollY] = useState(0)
+  const isMobile = useMediaQuery({ query: `(max-width: 760px)` })
 
   const controlNavbar = useCallback(() => {
     if (typeof window !== 'undefined') {
@@ -50,18 +52,20 @@ const HomePage: NextPage = () => {
 
   return (
     <SplashScreen>
-      <AppBar
-        position="fixed"
-        sx={{
-          zIndex: (theme) => theme.zIndex.drawer + 1,
-          backgroundColor: '#000',
-          visibility: showTopbar ? 'visible' : 'hidden',
-          opacity: showTopbar ? 1 : 0,
-          transition: 'opacity 0.3s linear',
-        }}
-      >
-        <Header />
-      </AppBar>
+      {!isMobile && (
+        <AppBar
+          position="fixed"
+          sx={{
+            zIndex: (theme) => theme.zIndex.drawer + 1,
+            backgroundColor: '#000',
+            visibility: showTopbar ? 'visible' : 'hidden',
+            opacity: showTopbar ? 1 : 0,
+            transition: 'opacity 0.3s linear',
+          }}
+        >
+          <Header />
+        </AppBar>
+      )}
 
       <Home />
 

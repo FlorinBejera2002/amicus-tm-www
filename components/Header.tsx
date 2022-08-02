@@ -1,4 +1,7 @@
 import styled from '@emotion/styled'
+import ChevronLeftIcon from '@mui/icons-material/ChevronLeft'
+import CloseIcon from '@mui/icons-material/Close'
+import MenuIcon from '@mui/icons-material/Menu'
 import { AlertColor, Box, Button, Snackbar } from '@mui/material'
 import MuiAlert, { AlertProps } from '@mui/material/Alert'
 import { useTranslation } from 'next-i18next'
@@ -6,6 +9,7 @@ import Image from 'next/image'
 import LinkNext from 'next/link'
 import { useRouter } from 'next/router'
 import React, { forwardRef, useState } from 'react'
+import { useMediaQuery } from 'react-responsive'
 import { Link, animateScroll as scroll } from 'react-scroll'
 
 import { EvangelismForm } from './EvangelismForm'
@@ -19,6 +23,8 @@ export const Header = () => {
   const onBlogPage = router.pathname.includes('/blog')
   const { t } = useTranslation('common')
   const [openDialog, setOpenDialog] = useState(false)
+  const isMobile = useMediaQuery({ query: `(max-width: 760px)` })
+  const [showMenu, setShowMenu] = useState(false)
 
   //snackbar
   const [showSnackBar, setShowSnackBar] = useState<boolean>(false)
@@ -51,6 +57,48 @@ export const Header = () => {
     } else {
       scroll.scrollToTop()
     }
+  }
+
+  const hideMenu = () => {
+    setShowMenu(false)
+  }
+
+  if (isMobile) {
+    return (
+      <div>
+        <Container>
+          <div onClick={onClickHome} style={{ display: 'flex' }}>
+            {onBlogPage && <ChevronLeftIcon htmlColor="white" sx={{ marginRight: '0.5rem' }} />}
+
+            <ImageWrapperMobile>
+              <Image alt="Logo" height={19} src="/logo_horizontal_white.png" width={70} />
+            </ImageWrapperMobile>
+          </div>
+
+          <MenuIcon htmlColor="white" onClick={() => setShowMenu(true)} />
+        </Container>
+
+        <Overlay showMenu={showMenu}>
+          <CloseIcon htmlColor="white" onClick={hideMenu} sx={{ position: 'absolute', top: 30, right: 30 }} />
+
+          <Link duration={1000} offset={50} onClick={hideMenu} smooth={true} to="Vision">
+            <Href>{t('header.vision')}</Href>
+          </Link>
+
+          <Link duration={1000} offset={50} onClick={hideMenu} smooth={true} to="About">
+            <Href>{t('header.about_us')}</Href>
+          </Link>
+
+          <LinkNext href="/blog" onClick={hideMenu}>
+            <Href>{t('header.blog')}</Href>
+          </LinkNext>
+
+          <Link duration={1000} offset={50} onClick={hideMenu} smooth={true} to="Contact">
+            <Href>{t('header.contact')}</Href>
+          </Link>
+        </Overlay>
+      </div>
+    )
   }
 
   return (
@@ -117,10 +165,11 @@ const Container = styled.div`
   justify-content: space-between;
   align-items: center;
   color: #666666;
-  padding: 1.5rem 5rem 1.5rem 5rem;
+  padding: 3.5rem 5rem 1.5rem 5rem;
 
   @media (max-width: 390px) {
-    display: none;
+    align-items: flex-start;
+    padding: 2rem 2rem 1.5rem 2rem;
   }
 `
 
@@ -135,6 +184,14 @@ const ImageWrapper = styled(Box)`
   justify-content: center;
   margin-right: 3rem;
   cursor: pointer;
+
+  @media (max-width: 390px) {
+    display: none;
+  }
+`
+
+const ImageWrapperMobile = styled(Box)`
+  display: flex;
 `
 
 const Href = styled.div`
@@ -159,4 +216,21 @@ const StyledButton = styled(Button)`
     background-color: #e9302e;
     border: 2px solid #e9302e;
   }
+`
+
+const Overlay = styled.div<{ showMenu: boolean }>`
+  display: ${({ showMenu }) => (showMenu ? 'flex' : 'none')};
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 100%;
+  background: #000;
+  color: #fff;
+  gap: 4rem;
+  font-size: 2rem;
 `

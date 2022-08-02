@@ -13,9 +13,7 @@ export const Home = () => {
   return (
     <div>
       <Container>
-        <HeaderWrapper>
-          <Header />
-        </HeaderWrapper>
+        <Header />
 
         <Content>
           <Fade bottom>
@@ -121,12 +119,6 @@ const Hero = styled.div`
     display: inline;
     font-size: 1.5rem;
   }
-`
-
-const HeaderWrapper = styled.div`
-  padding-top: 2.5rem;
-  /* z-index: 0; */
-  background-color: #000;
 `
 
 const Red = styled.span`
