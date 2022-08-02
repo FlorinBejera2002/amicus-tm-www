@@ -49,7 +49,15 @@ export const Header = () => {
             </ImageWrapperMobile>
           </div>
 
-          {onHomePage && <MenuIcon htmlColor="white" onClick={() => setShowMenu(true)} />}
+          {onHomePage && (
+            <div style={{ display: 'flex' }}>
+              <Href className="mr-3" onClick={handleLocaleChange}>
+                en/ro
+              </Href>
+
+              <MenuIcon htmlColor="white" onClick={() => setShowMenu(true)} />
+            </div>
+          )}
         </Container>
 
         <Overlay showMenu={showMenu}>
