@@ -57,11 +57,19 @@ const Container = styled(Card)`
 
 const Content = styled.div`
   display: flex;
+
+  @media (max-width: 390px) {
+    flex-direction: column;
+  }
 `
 
 const DescriptionWrapper = styled.div`
   padding: 2rem;
   color: #fff;
+
+  @media (max-width: 390px) {
+    font-size: 0.8rem;
+  }
 `
 
 const Title = styled(Typography)`

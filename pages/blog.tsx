@@ -61,6 +61,10 @@ const Container = styled.div`
   overflow: hidden;
   padding: 0 10rem;
   background-color: #000;
+
+  @media (max-width: 390px) {
+    padding: 0 2rem;
+  }
 `
 
 const HeaderWrapper = styled.div`
@@ -81,6 +85,12 @@ const Message = styled.div`
 
   @media (max-width: 1000px) {
     max-width: 65%;
+  }
+
+  @media (max-width: 390px) {
+    padding: 0 2rem;
+    margin: 0rem;
+    padding-left: 0rem;
   }
 `
 
@@ -112,8 +122,8 @@ const Heading = styled.div`
     font-size: 1.5rem;
   }
 
-  @media (max-width: 360px) {
-    font-size: 1rem;
+  @media (max-width: 390px) {
+    font-size: 2rem;
   }
 `
 

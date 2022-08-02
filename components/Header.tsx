@@ -118,6 +118,10 @@ const Container = styled.div`
   align-items: center;
   color: #666666;
   padding: 1.5rem 5rem 1.5rem 5rem;
+
+  @media (max-width: 390px) {
+    display: none;
+  }
 `
 
 const Menu = styled.div`

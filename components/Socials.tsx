@@ -13,6 +13,10 @@ export const Socials = () => (
 const Container = styled.div`
   display: flex;
   margin-top: 5rem;
+
+  @media (max-width: 390px) {
+    margin-top: 1rem;
+  }
 `
 
 const Link = styled.span`

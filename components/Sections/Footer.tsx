@@ -15,9 +15,11 @@ export const Footer = () => {
           <div className="mt-10">{t('contact.subtitle')}</div>
         </Heading>
 
-        <StyledButton href="mailto:info@ariseforchrist.com">{t('button.contact_us')}</StyledButton>
+        <DesktopAction>
+          <StyledButton href="mailto:info@ariseforchrist.com">{t('button.contact_us')}</StyledButton>
 
-        <Copyright>© Copyright AriseForChrist 2022</Copyright>
+          <Copyright>© Copyright AriseForChrist 2022</Copyright>
+        </DesktopAction>
       </Left>
 
       <Right>
@@ -53,6 +55,12 @@ export const Footer = () => {
           </LabelWrapper>
         </SocialItemContainer>
       </Right>
+
+      <MobileContact>
+        <StyledButton href="mailto:info@ariseforchrist.com">{t('button.contact_us')}</StyledButton>
+
+        <Copyright>© Copyright AriseForChrist 2022</Copyright>
+      </MobileContact>
     </Container>
   )
 }
@@ -62,6 +70,11 @@ const Container = styled.div`
   padding-top: 10rem;
   padding-bottom: 1rem;
   background: black;
+
+  @media (max-width: 390px) {
+    padding: 4rem 2rem;
+    flex-direction: column;
+  }
 `
 
 const Left = styled.div`
@@ -69,6 +82,10 @@ const Left = styled.div`
   display: flex;
   flex-direction: column;
   padding: 5rem 10rem;
+
+  @media (max-width: 390px) {
+    padding: 0rem;
+  }
 `
 
 const Right = styled.div`
@@ -76,6 +93,10 @@ const Right = styled.div`
   display: flex;
   flex-direction: column;
   padding: 5rem 10rem;
+
+  @media (max-width: 390px) {
+    padding: 0rem;
+  }
 `
 
 const SectionTag = styled.div`
@@ -90,6 +111,11 @@ const Heading = styled.div`
   font-size: 2.5rem;
   font-weight: bold;
   padding-bottom: 6rem;
+
+  @media (max-width: 390px) {
+    font-size: 1rem;
+    padding-bottom: 3rem;
+  }
 `
 
 const StyledButton = styled(Button)`
@@ -107,6 +133,10 @@ const StyledButton = styled(Button)`
 
 const SocialItemContainer = styled.div`
   margin-top: 6rem;
+
+  @media (max-width: 390px) {
+    margin-top: 1rem;
+  }
 `
 
 const Title = styled.div`
@@ -114,6 +144,10 @@ const Title = styled.div`
   line-height: 1.333;
   color: #6d6c73;
   text-transform: capitalize;
+
+  @media (max-width: 390px) {
+    font-size: 0.8rem;
+  }
 `
 
 const LabelWrapper = styled.div`
@@ -125,6 +159,10 @@ const Label = styled.div`
   color: #edf2f4;
   font-size: 1.8rem;
   font-weight: 300;
+
+  @media (max-width: 390px) {
+    font-size: 0.8rem;
+  }
 `
 
 const Link = styled.span`
@@ -139,8 +177,29 @@ const Link = styled.span`
   }
 `
 
-const Copyright = styled.span`
+const Copyright = styled.div`
   color: #edf2f4;
   padding-top: 6rem;
   color: #6d6c73;
+
+  @media (max-width: 390px) {
+    padding-top: 3rem;
+  }
+`
+
+const DesktopAction = styled.div`
+  display: block;
+
+  @media (max-width: 390px) {
+    display: none;
+  }
+`
+
+const MobileContact = styled.div`
+  display: none;
+  margin-top: 6rem;
+
+  @media (max-width: 390px) {
+    display: block;
+  }
 `

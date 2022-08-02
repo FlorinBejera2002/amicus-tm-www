@@ -138,6 +138,11 @@ const Container = styled.div`
   flex-direction: column;
   padding: 10rem 12rem;
   background: #edf2f4;
+
+  @media (max-width: 390px) {
+    padding: 4rem 2rem;
+    font-size: 1.5rem;
+  }
 `
 
 const SectionTag = styled.div`
@@ -150,6 +155,11 @@ const SectionTag = styled.div`
 const Message = styled.div`
   font-size: 2.5rem;
   font-weight: bold;
+
+  @media (max-width: 390px) {
+    font-size: 1rem;
+    margin-top: 2rem;
+  }
 `
 
 const Content = styled.div`
@@ -168,6 +178,11 @@ const Left = styled.div`
   display: flex;
   flex-direction: column;
   padding: 2rem 7rem;
+
+  @media (max-width: 390px) {
+    padding: 1rem;
+    font-size: 0.8rem;
+  }
 `
 
 const Right = styled.div`
@@ -176,14 +191,22 @@ const Right = styled.div`
   flex-direction: column;
   align-items: flex-end;
   text-align: end;
-  padding: 5rem;
   padding: 2rem 7rem;
+
+  @media (max-width: 390px) {
+    padding: 1rem;
+    font-size: 0.8rem;
+  }
 `
 
 const VerticalLine = styled.div`
   border-left: 3px solid #e9302e;
   border-radius: 4px;
   height: 15rem;
+
+  @media (max-width: 390px) {
+    display: none;
+  }
 `
 
 const Heading = styled.div`
@@ -210,12 +233,17 @@ const Heading = styled.div`
     font-size: 1.5rem;
   }
 
-  @media (max-width: 360px) {
-    font-size: 1rem;
+  @media (max-width: 390px) {
+    flex-direction: column;
+    align-items: center;
   }
 `
 
 const StepHeader = styled.div`
   font-size: 1.5rem;
   font-weight: 500;
+
+  @media (max-width: 390px) {
+    font-size: 1rem;
+  }
 `

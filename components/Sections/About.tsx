@@ -26,9 +26,9 @@ export const About = () => {
             </Heading>
 
             <Header>{t('about_us.title')}</Header>
-            <Typography component="div" gutterBottom>
+            <Description component="div" gutterBottom>
               {t('about_us.description')}
-            </Typography>
+            </Description>
           </Fade>
         </Left>
 
@@ -47,6 +47,11 @@ const Container = styled.div`
   flex-direction: column;
   padding: 10rem 12rem;
   background: #e0e0e0;
+
+  @media (max-width: 390px) {
+    padding: 4rem 2rem;
+    font-size: 1.5rem;
+  }
 `
 
 const SectionTag = styled.div`
@@ -79,12 +84,10 @@ const Heading = styled.div`
     font-size: 1rem;
   }
 
-  @media (max-width: 400px) {
-    font-size: 0.8rem;
-  }
-
-  @media (max-width: 360px) {
-    font-size: 0.5rem;
+  @media (max-width: 390px) {
+    font-size: 1rem;
+    padding-bottom: 4rem;
+    align-items: center;
   }
 `
 
@@ -99,6 +102,10 @@ const Left = styled.div`
 const Right = styled.div`
   flex: 1;
   padding-left: 7rem;
+
+  @media (max-width: 390px) {
+    display: none;
+  }
 `
 
 const Header = styled.div`
@@ -106,4 +113,13 @@ const Header = styled.div`
   padding-bottom: 1rem;
   font-weight: 900;
   color: #ec4e4d;
+
+  @media (max-width: 390px) {
+    font-size: 1.5rem;
+  }
+`
+const Description = styled(Typography)`
+  @media (max-width: 390px) {
+    font-size: 0.8rem;
+  }
 `

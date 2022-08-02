@@ -31,6 +31,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
       <Head>
         <title>Arise For Christ</title>
         <meta content="Arise For Christ Website" name="description" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
         <link href="/logo_tab.svg" rel="icon" />
       </Head>
 

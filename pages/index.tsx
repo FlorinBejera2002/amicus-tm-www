@@ -11,6 +11,7 @@ import { About } from '../components/Sections/About'
 import { Footer } from '../components/Sections/Footer'
 import { Home } from '../components/Sections/Home'
 import { Vision } from '../components/Sections/Vision'
+import SplashScreen from '../components/SplashScreen'
 
 interface Props {
   locale: string
@@ -48,7 +49,7 @@ const HomePage: NextPage = () => {
   }, [controlNavbar, lastScrollY])
 
   return (
-    <div>
+    <SplashScreen>
       <AppBar
         position="fixed"
         sx={{
@@ -85,7 +86,7 @@ const HomePage: NextPage = () => {
       >
         {t('gdpr.explanation')}
       </CookieConsent>
-    </div>
+    </SplashScreen>
   )
 }
 
