@@ -72,7 +72,7 @@ const ImageWrapper = styled.div`
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
   background-color: #000;
 
