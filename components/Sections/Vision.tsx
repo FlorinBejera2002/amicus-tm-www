@@ -1,10 +1,12 @@
 import styled from '@emotion/styled'
 import { useTranslation } from 'next-i18next'
 import Image from 'next/image'
+import { useMediaQuery } from 'react-responsive'
 import Fade from 'react-reveal/Fade'
 
 export const Vision = () => {
   const { t } = useTranslation('common')
+  const isMobile = useMediaQuery({ query: `(max-width: 760px)` })
 
   return (
     <Container>
@@ -39,16 +41,28 @@ export const Vision = () => {
         </Fade>
 
         <Fade bottom>
-          <Row>
-            <Left>
-              <Image alt="step2" height={300} src="/step2.jpg" width={500} />
-            </Left>
-            <VerticalLine />
-            <Right>
-              <StepHeader>{t('vision.step2_title')}</StepHeader>
-              {t('vision.step2_description')}
-            </Right>
-          </Row>
+          {isMobile ? (
+            <Row>
+              <Left>
+                <StepHeader>{t('vision.step2_title')}</StepHeader>
+                {t('vision.step2_description')}
+              </Left>
+              <Right>
+                <Image alt="step2" height={300} src="/step2.jpg" width={500} />
+              </Right>
+            </Row>
+          ) : (
+            <Row>
+              <Left>
+                <Image alt="step2" height={300} src="/step2.jpg" width={500} />
+              </Left>
+              <VerticalLine />
+              <Right>
+                <StepHeader>{t('vision.step2_title')}</StepHeader>
+                {t('vision.step2_description')}
+              </Right>
+            </Row>
+          )}
         </Fade>
 
         <Fade bottom>
@@ -65,16 +79,28 @@ export const Vision = () => {
         </Fade>
 
         <Fade bottom>
-          <Row>
-            <Left>
-              <Image alt="step4" height={300} src="/step4.jpg" width={500} />
-            </Left>
-            <VerticalLine />
-            <Right>
-              <StepHeader>{t('vision.step4_title')}</StepHeader>
-              {t('vision.step4_description')}
-            </Right>
-          </Row>
+          {isMobile ? (
+            <Row>
+              <Left>
+                <StepHeader>{t('vision.step4_title')}</StepHeader>
+                {t('vision.step4_description')}
+              </Left>
+              <Right>
+                <Image alt="step4" height={300} src="/step4.jpg" width={500} />
+              </Right>
+            </Row>
+          ) : (
+            <Row>
+              <Left>
+                <Image alt="step4" height={300} src="/step4.jpg" width={500} />
+              </Left>
+              <VerticalLine />
+              <Right>
+                <StepHeader>{t('vision.step4_title')}</StepHeader>
+                {t('vision.step4_description')}
+              </Right>
+            </Row>
+          )}
         </Fade>
 
         <Fade bottom>
@@ -91,16 +117,28 @@ export const Vision = () => {
         </Fade>
 
         <Fade bottom>
-          <Row>
-            <Left>
-              <Image alt="step6" height={300} src="/step6.jpg" width={500} />
-            </Left>
-            <VerticalLine />
-            <Right>
-              <StepHeader>{t('vision.step6_title')}</StepHeader>
-              {t('vision.step6_description')}
-            </Right>
-          </Row>
+          {isMobile ? (
+            <Row>
+              <Left>
+                <StepHeader>{t('vision.step6_title')}</StepHeader>
+                {t('vision.step6_description')}
+              </Left>
+              <Right>
+                <Image alt="step6" height={300} src="/step6.jpg" width={500} />
+              </Right>
+            </Row>
+          ) : (
+            <Row>
+              <Left>
+                <Image alt="step6" height={300} src="/step6.jpg" width={500} />
+              </Left>
+              <VerticalLine />
+              <Right>
+                <StepHeader>{t('vision.step6_title')}</StepHeader>
+                {t('vision.step6_description')}
+              </Right>
+            </Row>
+          )}
         </Fade>
 
         <Fade bottom>
@@ -117,16 +155,28 @@ export const Vision = () => {
         </Fade>
 
         <Fade bottom>
-          <Row>
-            <Left>
-              <Image alt="step8" height={300} src="/step8.jpg" width={500} />
-            </Left>
-            <VerticalLine />
-            <Right>
-              <StepHeader>{t('vision.step8_title')}</StepHeader>
-              {t('vision.step8_description')}
-            </Right>
-          </Row>
+          {isMobile ? (
+            <Row id="last_row">
+              <Left>
+                <StepHeader>{t('vision.step8_title')}</StepHeader>
+                {t('vision.step8_description')}
+              </Left>
+              <Right>
+                <Image alt="step8" height={300} src="/step8.jpg" width={500} />
+              </Right>
+            </Row>
+          ) : (
+            <Row>
+              <Left>
+                <Image alt="step8" height={300} src="/step8.jpg" width={500} />
+              </Left>
+              <VerticalLine />
+              <Right>
+                <StepHeader>{t('vision.step8_title')}</StepHeader>
+                {t('vision.step8_description')}
+              </Right>
+            </Row>
+          )}
         </Fade>
       </Content>
     </Container>
@@ -165,12 +215,22 @@ const Message = styled.div`
 const Content = styled.div`
   display: flex;
   flex-direction: column;
+
+  #last_row {
+    border-bottom: none;
+  }
 `
 
 const Row = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media (max-width: 760px) {
+    flex-direction: column;
+    border-bottom: 1px solid #e9302e;
+    padding-bottom: 30px;
+  }
 `
 
 const Left = styled.div`
@@ -181,6 +241,7 @@ const Left = styled.div`
 
   @media (max-width: 760px) {
     padding: 1rem;
+    margin-top: 2rem;
     font-size: 0.8rem;
   }
 `
@@ -196,6 +257,8 @@ const Right = styled.div`
   @media (max-width: 760px) {
     padding: 1rem;
     font-size: 0.8rem;
+    align-items: flex-start;
+    text-align: start;
   }
 `
 

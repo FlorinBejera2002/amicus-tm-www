@@ -81,7 +81,6 @@ const Heading = styled.div`
   @media (max-width: 760px) {
     font-size: 1rem;
     padding-bottom: 4rem;
-    align-items: center;
   }
 `
 
