@@ -237,6 +237,7 @@ const Left = styled.div`
   flex: 1;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   padding: 2rem 7rem;
 
   @media (max-width: 760px) {
