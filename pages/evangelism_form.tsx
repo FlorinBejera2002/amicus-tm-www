@@ -49,6 +49,18 @@ const EvangelismForm: NextPage = () => {
   }
 
   const areInputsValid = (er: EvangelismRequest): boolean => {
+    if (er?.applicantEmail && !validateEmail(er?.applicantEmail)) {
+      setError(t('form.invalid_email'))
+
+      return false
+    }
+
+    if (er?.applicantMobile && !validateMobile(er?.applicantMobile)) {
+      setError(t('form.invalid_mobile'))
+
+      return false
+    }
+
     if (er?.email && !validateEmail(er?.email)) {
       setError(t('form.invalid_email'))
 
@@ -71,6 +83,10 @@ const EvangelismForm: NextPage = () => {
       const target = event.target as HTMLFormElement
       const elements = target.elements
 
+      const applicantName = (elements.namedItem('applicantName') as HTMLInputElement).value
+      const applicantEmail = (elements.namedItem('applicantEmail') as HTMLInputElement).value
+      const applicantMobile = (elements.namedItem('applicantMobile') as HTMLInputElement).value
+
       const name = (elements.namedItem('name') as HTMLInputElement).value
       const email = (elements.namedItem('email') as HTMLInputElement).value
       const mobile = (elements.namedItem('mobile') as HTMLInputElement).value
@@ -81,6 +97,9 @@ const EvangelismForm: NextPage = () => {
       const details = (elements.namedItem('details') as HTMLInputElement).value
 
       const er: EvangelismRequest = {
+        applicantName,
+        applicantEmail,
+        applicantMobile,
         name,
         email,
         mobile,
@@ -121,6 +140,42 @@ const EvangelismForm: NextPage = () => {
         <Title>{t('form.subtitle')}</Title>
 
         <form onSubmit={handleSubmit}>
+          <Heading variant="h6">{t('form.applicant_person')}</Heading>
+          <Content style={{ marginBottom: '3rem' }}>
+            <Left>
+              <TextField
+                color="error"
+                id="applicantName"
+                label={t('form.name')}
+                required
+                size="small"
+                type="text"
+                variant="outlined"
+              />
+
+              <TextField
+                color="error"
+                id="applicantEmail"
+                label={t('form.email')}
+                required
+                size="small"
+                type="text"
+                variant="outlined"
+              />
+            </Left>
+            <Right>
+              <TextField
+                color="error"
+                id="applicantMobile"
+                label={t('form.mobile')}
+                size="small"
+                type="text"
+                variant="outlined"
+              />
+            </Right>
+          </Content>
+
+          <Heading variant="h6">{t('form.target_person')}</Heading>
           <Content>
             <Left>
               <TextField
@@ -279,4 +334,12 @@ const SectionTag = styled.div`
   font-size: 1rem;
   padding-bottom: 3rem;
   letter-spacing: 0.4rem;
+`
+
+const Heading = styled(Typography)`
+  margin-bottom: 10px;
+
+  @media (max-width: 760px) {
+    font-size: 16px;
+  }
 `

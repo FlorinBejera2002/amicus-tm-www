@@ -32,7 +32,9 @@
         "invalid_mobile": "Numărul de telefon este invalid",
         "invalid_email": "Email-ul este invalid",
         "successful_submission": "Cererea de evanghelizare a fost trimisă cu succes!",
-        "failed_submission": "Nu s-a reușit trimiterea datelor de evanghelizare! Vă rugăm contactați-ne prin email."
+        "failed_submission": "Nu s-a reușit trimiterea datelor de evanghelizare! Vă rugăm contactați-ne prin email.",
+        "applicant_person": "Cine face cererea?",
+        "target_person": "Pe cine ai dori să aduci la Christos?"
     },
     "section": {
         "vision": "VIZIUNEA",

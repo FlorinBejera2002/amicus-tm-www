@@ -33,6 +33,13 @@ export enum EvangelismCategory {
 }
 
 export type EvangelismRequest = {
+  // person in charge of the case
+  assigneeName?: string
+  // person who submitted the request
+  applicantName?: string
+  applicantEmail?: string
+  applicantMobile?: string
+  // person targeted for evangelism
   name: string
   email?: string
   mobile?: string

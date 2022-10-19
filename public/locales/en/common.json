@@ -32,7 +32,9 @@
         "invalid_mobile": "Mobile number not valid",
         "invalid_email": "Email not valid",
         "successful_submission": "Evanghelism request sent with success!",
-        "failed_submission": "Failed to send evanghelism request! Please contact us via email."
+        "failed_submission": "Failed to send evanghelism request! Please contact us via email.",
+        "applicant_person": "Who is making the request?",
+        "target_person": "Who would you like to get closer to God?"
     },
     "section": {
         "vision": "VISION",
