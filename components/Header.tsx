@@ -11,7 +11,11 @@ import React, { useState } from 'react'
 import { useMediaQuery } from 'react-responsive'
 import { Link, animateScroll as scroll } from 'react-scroll'
 
-export const Header = () => {
+interface Props {
+  isFadingHeader?: boolean
+}
+
+export const Header = (props: Props) => {
   const router = useRouter()
   const onBlogPage = router.pathname.includes('/blog')
   const onEvangelismFormPage = router.pathname.includes('/evangelism_form')
@@ -84,7 +88,7 @@ export const Header = () => {
   }
 
   return (
-    <Container>
+    <Container $isFadingHeader={props.isFadingHeader}>
       <Menu>
         <ImageWrapper onClick={onClickHome} sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}>
           <Image alt="Logo" height={28} src="/logo_horizontal_white.png" width={100} />
@@ -128,12 +132,12 @@ export const Header = () => {
   )
 }
 
-const Container = styled.div`
+const Container = styled.div<{ $isFadingHeader?: boolean }>`
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: #666666;
-  padding: 3.5rem 5rem 1.5rem 5rem;
+  padding: ${({ $isFadingHeader }) => ($isFadingHeader ? '1.5rem 5rem' : '3.5rem 5rem 1.5rem 5rem')};
 
   @media (max-width: 760px) {
     align-items: flex-start;

@@ -63,7 +63,7 @@ const HomePage: NextPage = () => {
             transition: 'opacity 0.3s linear',
           }}
         >
-          <Header />
+          <Header isFadingHeader={true} />
         </AppBar>
       )}
 
