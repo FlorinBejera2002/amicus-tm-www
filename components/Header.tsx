@@ -183,7 +183,7 @@ const Href = styled.div<{ $highlight?: boolean }>`
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 
-  color: ${({ $highlight }) => $highlight && '#ec4e4d'};
+  color: ${({ $highlight }) => $highlight && '#e3cd58'};
 
   :hover {
     color: #edf2f4;
