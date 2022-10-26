@@ -76,9 +76,9 @@ export const Header = (props: Props) => {
             <Href>{t('header.about_us')}</Href>
           </Link>
 
-          {/* <LinkNext href="/actone_draft">
+          <LinkNext href="/actone">
             <Href $highlight={true}>{t('header.actone')}</Href>
-          </LinkNext> */}
+          </LinkNext>
 
           <LinkNext href="/blog" onClick={hideMenu}>
             <Href>{t('header.blog')}</Href>
@@ -113,9 +113,9 @@ export const Header = (props: Props) => {
           </div>
         )}
 
-        {/* <LinkNext href="/actone_draft">
+        <LinkNext href="/actone">
           <Href $highlight={true}>{t('header.actone')}</Href>
-        </LinkNext> */}
+        </LinkNext>
 
         <LinkNext href="/blog">
           <Href>{t('header.blog')}</Href>
