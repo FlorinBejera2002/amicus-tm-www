@@ -199,6 +199,10 @@ const ActOne: NextPage = () => {
                       <b>{t('actone.heading_registration_4')}</b>
                     </Yellow>
                     {t('actone.heading_registration_5')}
+                    <a href="mailto:info@ariseforchrist.com" style={{ textDecoration: 'underline' }}>
+                      {t('actone.heading_registration_6')}
+                    </a>
+                    {t('actone.heading_registration_7')}
                   </div>
 
                   <ButtonWrapper>
