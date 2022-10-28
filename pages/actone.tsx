@@ -1,6 +1,7 @@
 import styled from '@emotion/styled'
 import CloudDownloadIcon from '@mui/icons-material/CloudDownload'
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight'
+import { Tooltip } from '@mui/material'
 import Button from '@mui/material/Button'
 import type { NextPage } from 'next'
 import { useTranslation } from 'next-i18next'
@@ -24,6 +25,28 @@ export const getStaticProps = async (props: Props) => ({
 
 const ActOne: NextPage = () => {
   const { t } = useTranslation('common')
+  const detailedCosts = [
+    { label: t('actone.tooltip_costs_development_costs'), value: '$10.000' },
+    { label: t('actone.tooltip_costs_production_equipment'), value: '$172.000' },
+    { label: t('actone.tooltip_costs_production_staff'), value: '$30.000' },
+    { label: t('actone.tooltip_costs_show_editing'), value: '$10.000' },
+    { label: t('actone.tooltip_costs_evangelistic_events'), value: '$30.000' },
+    { label: t('actone.tooltip_costs_publicity'), value: '$1.500' },
+    { label: t('actone.tooltip_costs_administrative_staff'), value: '$15.000' },
+    { label: t('actone.tooltip_costs_general_expenses'), value: '$40.000' },
+    { label: t('actone.tooltip_costs_food_and_accommodation'), value: '$30.000' },
+    { label: t('actone.tooltip_costs_travel'), value: '$43.500' },
+  ]
+  const getCostsTooltip = () => (
+    <div>
+      {detailedCosts.map((cost) => (
+        <CostItem key={cost.label}>
+          <div>{cost.label}</div>
+          <div style={{ marginLeft: '1rem' }}>{cost.value}</div>
+        </CostItem>
+      ))}
+    </div>
+  )
 
   return (
     <Background>
@@ -69,8 +92,6 @@ const ActOne: NextPage = () => {
                   {t('actone.heading_trip_like_p1')}
                   <Break />
                   {t('actone.heading_trip_like_p2')}
-                  <Break />
-                  {t('actone.heading_trip_like_p3')}
                 </div>
               </TextBlock>
             </Fade>
@@ -115,6 +136,7 @@ const ActOne: NextPage = () => {
                     {t('actone.heading_activities_item9')}
                   </li>
                 </ol>
+                <div>{t('actone.heading_activities_p1')}</div>
               </TextBlock>
             </Fade>
             <Fade bottom>
@@ -167,9 +189,11 @@ const ActOne: NextPage = () => {
                 <Heading>{t('actone.heading_costs')}</Heading>
                 <div>
                   {t('actone.heading_costs_p1')}
-                  <Yellow>
-                    <b>{t('actone.heading_costs_total')}</b>
-                  </Yellow>
+                  <Tooltip title={getCostsTooltip()}>
+                    <Yellow>
+                      <b>{t('actone.heading_costs_total')}</b>
+                    </Yellow>
+                  </Tooltip>
                   {t('actone.heading_costs_p2')}
                   <Break />
                   {t('actone.heading_costs_p3')}
@@ -181,6 +205,8 @@ const ActOne: NextPage = () => {
                   {t('actone.heading_costs_p5')}
                   <Break />
                   {t('actone.heading_costs_p6')}
+                  <Break />
+                  {t('actone.heading_costs_p')}
                 </div>
               </TextBlock>
             </Fade>
@@ -349,4 +375,10 @@ const ButtonWrapper = styled.div`
 
 const ImageWrapper = styled.div`
   cursor: pointer;
+  grid-template-columns: auto auto;
+`
+
+const CostItem = styled.div`
+  display: flex;
+  justify-content: space-between;
 `
