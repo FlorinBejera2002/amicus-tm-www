@@ -190,15 +190,15 @@ const ActOne: NextPage = () => {
                 <div>
                   {t('actone.heading_costs_p1')}
                   <Tooltip title={getCostsTooltip()}>
-                    <Yellow>
-                      <b>{t('actone.heading_costs_total')}</b>
-                    </Yellow>
+                    <YellowHighlight>
+                      <b>$382.000</b>
+                    </YellowHighlight>
                   </Tooltip>
                   {t('actone.heading_costs_p2')}
                   <Break />
                   {t('actone.heading_costs_p3')}
                   <Yellow>
-                    <b>{t('actone.heading_costs_total_per_individual')}</b>
+                    <b>$7500</b>
                   </Yellow>
                   {t('actone.heading_costs_p4')}
                   <Break />
@@ -206,7 +206,7 @@ const ActOne: NextPage = () => {
                   <Break />
                   {t('actone.heading_costs_p6')}
                   <Break />
-                  {t('actone.heading_costs_p')}
+                  {t('actone.heading_costs_p7')}
                 </div>
               </TextBlock>
             </Fade>
@@ -348,6 +348,12 @@ const TextBlock = styled.div`
 
 const Yellow = styled.span`
   color: #e3cd58;
+`
+
+const YellowHighlight = styled.span`
+  background-color: #e3cd58;
+  border-radius: 0.2rem;
+  color: #1d1c2e;
 `
 
 const Break = styled.div`
