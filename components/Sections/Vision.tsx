@@ -10,23 +10,23 @@ export const Vision = () => {
 
   return (
     <Container>
-      <SectionTag>{t('section.vision')}</SectionTag>
-
-      <Heading>
-        <Fade left>
-          <div className="flex w-9/12 flex-col items-center justify-center pt-5">
-            <Image alt="arise logo" height={150} layout="fixed" src="/logo.svg" width={150} />
-          </div>
-        </Fade>
-
-        <Fade bottom>
-          <div className="flex justify-center text-center">
-            <Message>{t('vision.title')}</Message>
-          </div>
-        </Fade>
-      </Heading>
-
       <Content>
+        <SectionTag>{t('section.vision')}</SectionTag>
+
+        <Heading>
+          <Fade left>
+            <div className="flex w-9/12 flex-col items-center justify-center pt-5">
+              <Image alt="arise logo" height={150} layout="fixed" src="/logo.svg" width={150} />
+            </div>
+          </Fade>
+
+          <Fade bottom>
+            <div className="flex justify-center text-center">
+              <Message>{t('vision.title')}</Message>
+            </div>
+          </Fade>
+        </Heading>
+
         <Fade bottom>
           <Row>
             <Left>
@@ -185,13 +185,23 @@ export const Vision = () => {
 
 const Container = styled.div`
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   padding: 10rem 12rem;
   background: #edf2f4;
 
   @media (max-width: 760px) {
     padding: 4rem 2rem;
     font-size: 1.5rem;
+  }
+`
+
+const Content = styled.div`
+  display: flex;
+  flex-direction: column;
+  max-width: 1600px;
+
+  #last_row {
+    border-bottom: none;
   }
 `
 
@@ -209,15 +219,6 @@ const Message = styled.div`
   @media (max-width: 760px) {
     font-size: 1rem;
     margin-top: 2rem;
-  }
-`
-
-const Content = styled.div`
-  display: flex;
-  flex-direction: column;
-
-  #last_row {
-    border-bottom: none;
   }
 `
 
