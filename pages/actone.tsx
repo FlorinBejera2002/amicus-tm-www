@@ -287,11 +287,10 @@ const ActOne: NextPage = (props: any) => {
                 <VideoWrapper>
                   <iframe
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
                     frameBorder="0"
                     height="500"
                     src="https://www.youtube.com/embed/t6CQ5Ddp5GU"
-                    title="YouTube video player"
+                    title="AriseForChrist Youtube"
                     width="889"
                   ></iframe>
                 </VideoWrapper>
@@ -402,7 +401,6 @@ const ButtonWrapper = styled.div`
 
 const ImageWrapper = styled.div`
   cursor: pointer;
-  grid-template-columns: auto auto;
 `
 
 const CostItem = styled.div`
@@ -414,5 +412,24 @@ const VideoWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 5rem;
+  margin-top: 2rem;
+
+  @media (max-width: 1000px) {
+    iframe {
+      height: 315px;
+      width: 560px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    iframe {
+      width: 380px;
+    }
+  }
+
+  @media (max-width: 390px) {
+    iframe {
+      width: 300px;
+    }
+  }
 `
