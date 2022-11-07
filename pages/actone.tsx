@@ -4,7 +4,7 @@ import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight'
 import { Tooltip } from '@mui/material'
 import Button from '@mui/material/Button'
 import type { NextPage } from 'next'
-import { useTranslation } from 'next-i18next'
+import { useTranslation, ini } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import Image from 'next/image'
 import Fade from 'react-reveal/Fade'
@@ -23,8 +23,10 @@ export const getStaticProps = async (props: Props) => ({
   },
 })
 
-const ActOne: NextPage = () => {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const ActOne: NextPage = (props: any) => {
   const { t } = useTranslation('common')
+  const currentLanguage = props?._nextI18Next?.initialLocale || 'en'
   const detailedCosts = [
     { label: t('actone.tooltip_costs_development_costs'), value: '$10.000' },
     { label: t('actone.tooltip_costs_production_equipment'), value: '$172.000' },
@@ -85,6 +87,7 @@ const ActOne: NextPage = () => {
                 </div>
               </TextBlock>
             </Fade>
+
             <Fade bottom>
               <TextBlock>
                 <Heading>{t('actone.heading_trip_like')}</Heading>
@@ -95,6 +98,7 @@ const ActOne: NextPage = () => {
                 </div>
               </TextBlock>
             </Fade>
+
             <Fade bottom>
               <TextBlock>
                 <Heading>{t('actone.heading_activities')}</Heading>
@@ -139,6 +143,7 @@ const ActOne: NextPage = () => {
                 <div>{t('actone.heading_activities_p1')}</div>
               </TextBlock>
             </Fade>
+
             <Fade bottom>
               <TextBlock>
                 <Heading>{t('actone.heading_profile')}</Heading>
@@ -276,6 +281,22 @@ const ActOne: NextPage = () => {
                 </div>
               </TextBlock>
             </Fade>
+
+            {currentLanguage === 'en' && (
+              <Fade>
+                <VideoWrapper>
+                  <iframe
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    frameBorder="0"
+                    height="500"
+                    src="https://www.youtube.com/embed/t6CQ5Ddp5GU"
+                    title="YouTube video player"
+                    width="889"
+                  ></iframe>
+                </VideoWrapper>
+              </Fade>
+            )}
           </Content>
         </MaxWidth>
       </Container>
@@ -387,4 +408,11 @@ const ImageWrapper = styled.div`
 const CostItem = styled.div`
   display: flex;
   justify-content: space-between;
+`
+
+const VideoWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
 `
