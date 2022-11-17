@@ -33,6 +33,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
         <meta content="Arise For Christ Website" name="description" />
         <meta content="width=device-width, initial-scale=1.0" name="viewport" />
         <link href="/logo_tab.svg" rel="icon" />
+        <script async src="https://cdn.splitbee.io/sb.js"></script>
       </Head>
 
       <Component {...pageProps} />
