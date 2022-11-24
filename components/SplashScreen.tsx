@@ -1,59 +1,46 @@
 import styled from '@emotion/styled'
 import Image from 'next/image'
-import React, { useState, useEffect, useCallback } from 'react'
+import React from 'react'
 
-const ANIMATION_DURATION = 500
-
-interface Props {
-  children: React.ReactNode
-}
-
-export default ({ children }: Props) => {
-  const [showLoading, setShowLoading] = useState(true)
-  const [splashOpacity, setSplashOpacity] = useState(1)
-  const [logoOpacity, setLogoOpacity] = useState(1)
-
-  const wait = (time: number) => new Promise<void>((resolve) => setTimeout(() => resolve(), time))
-
-  const animate = useCallback(async () => {
-    await wait(ANIMATION_DURATION * 2)
-    setLogoOpacity(0)
-    await wait(ANIMATION_DURATION)
-    setSplashOpacity(0)
-    await wait(ANIMATION_DURATION)
-    setShowLoading(false)
-  }, [])
-
-  useEffect(() => {
-    animate()
-  }, [animate])
-
-  if (showLoading) {
-    return (
-      <Splash opacity={splashOpacity}>
-        <Logo alt="Logo" height={28} opacity={logoOpacity} src="/logo_red.svg" width={100} />
-      </Splash>
-    )
+export const getStaticProps = async () => {
+  return {
+    props: {},
   }
-
-  return <>{children}</>
 }
 
-const Splash = styled.div<{ opacity: number }>`
-  z-index: 2;
+export default () => {
+  return (
+    <Overlay>
+      <Center>
+        <Logo height={120} src="/logo_red.svg" width={100} />
+      </Center>
+    </Overlay>
+  )
+}
+
+const Overlay = styled.div`
+  background: #000;
+  display: flex;
+  height: 100%;
+  z-index: 1;
   position: absolute;
   top: 0;
   right: 0;
   left: 0;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  opacity: ${({ opacity }) => opacity};
-  transition: opacity ${ANIMATION_DURATION}ms ease-in-out;
-  background: #000;
+  right: 0;
+
+  animation: disappear 1s forwards;
+  animation-delay: 2s;
 `
 
-const Logo = styled(Image)<{ opacity: number }>`
-  transition: opacity ${ANIMATION_DURATION}ms ease-in-out;
-  opacity: ${({ opacity }) => opacity};
+const Center = styled.div`
+  display: grid;
+  height: 100vh;
+  width: 100vw;
+  place-items: center center;
+`
+
+const Logo = styled(Image)`
+  animation: disappear 0.7s forwards;
+  animation-delay: 1s;
 `

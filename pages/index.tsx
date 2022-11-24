@@ -51,7 +51,9 @@ const HomePage: NextPage = () => {
   }, [controlNavbar, lastScrollY])
 
   return (
-    <SplashScreen>
+    <>
+      <SplashScreen />
+
       {!isMobile && (
         <AppBar
           position="fixed"
@@ -90,7 +92,7 @@ const HomePage: NextPage = () => {
       >
         {t('gdpr.explanation')}
       </CookieConsent>
-    </SplashScreen>
+    </>
   )
 }
 
