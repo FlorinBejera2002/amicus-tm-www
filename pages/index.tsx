@@ -88,7 +88,7 @@ const HomePage: NextPage = () => {
         cookieName="AriseCookieCookie"
         expires={150}
         location="bottom"
-        style={{ background: '#101119' }}
+        style={{ background: '#101119', zIndex: 0 }}
       >
         {t('gdpr.explanation')}
       </CookieConsent>
