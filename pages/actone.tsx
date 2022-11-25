@@ -203,7 +203,7 @@ const ActOne: NextPage = (props: any) => {
                   <Break />
                   {t('actone.heading_costs_p3')}
                   <Yellow>
-                    <b>$7500</b>
+                    <b>$2500</b>
                   </Yellow>
                   {t('actone.heading_costs_p4')}
                   <Break />
