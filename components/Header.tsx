@@ -19,8 +19,7 @@ export const Header = (props: Props) => {
   const router = useRouter()
   const onBlogPage = router.pathname.includes('/blog')
   const onEvangelismFormPage = router.pathname.includes('/evangelism_form')
-  const onActOnePage = router.pathname.includes('/actone')
-  const onHomePage = !onBlogPage && !onEvangelismFormPage && !onActOnePage
+  const onHomePage = !onBlogPage && !onEvangelismFormPage
   const { t } = useTranslation('common')
   const isMobile = useMediaQuery({ query: `(max-width: 760px)` })
   const [showMenu, setShowMenu] = useState(false)
@@ -76,10 +75,6 @@ export const Header = (props: Props) => {
             <Href>{t('header.about_us')}</Href>
           </Link>
 
-          <LinkNext href="/actone">
-            <Href $highlight={true}>{t('header.actone')}</Href>
-          </LinkNext>
-
           <LinkNext href="/blog" onClick={hideMenu}>
             <Href>{t('header.blog')}</Href>
           </LinkNext>
@@ -112,10 +107,6 @@ export const Header = (props: Props) => {
             </Link>
           </div>
         )}
-
-        <LinkNext href="/actone">
-          <Href $highlight={true}>{t('header.actone')}</Href>
-        </LinkNext>
 
         <LinkNext href="/blog">
           <Href>{t('header.blog')}</Href>

@@ -4,6 +4,7 @@ import { useTranslation } from 'next-i18next'
 
 export const Footer = () => {
   const { t } = useTranslation('common')
+  const date = new Date().getFullYear()
 
   return (
     <Container>
@@ -18,7 +19,7 @@ export const Footer = () => {
         <DesktopAction>
           <StyledButton href="mailto:info@ariseforchrist.com">{t('button.contact_us')}</StyledButton>
 
-          <Copyright>© Copyright AriseForChrist 2022</Copyright>
+          <Copyright>© Copyright AriseForChrist {date}</Copyright>
         </DesktopAction>
       </Left>
 
@@ -59,7 +60,7 @@ export const Footer = () => {
       <MobileContact>
         <StyledButton href="mailto:info@ariseforchrist.com">{t('button.contact_us')}</StyledButton>
 
-        <Copyright>© Copyright AriseForChrist 2022</Copyright>
+        <Copyright>© Copyright AriseForChrist {date}</Copyright>
       </MobileContact>
     </Container>
   )
