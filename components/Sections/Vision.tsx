@@ -12,21 +12,104 @@ export const Vision = () => {
     <Container>
       <Content>
         <SectionTag>{t('section.vision')}</SectionTag>
-
         <Heading>
-          <Fade left>
-            <div className="flex w-9/12 flex-col items-center justify-center pt-5">
+          <Fade top>
+            <div className="flex justify-center pt-5">
               <Image alt="arise logo" height={150} layout="fixed" src="/logo.svg" width={150} />
             </div>
           </Fade>
+        </Heading>
 
+        <SubHeading>
+          <Fade bottom>
+            <div className="flex flex-col justify-center text-center">
+              <Message>{t('vision.presentation_title')}</Message>
+            </div>
+          </Fade>
+        </SubHeading>
+
+        <Fade bottom>
+          <Description>
+            {t('vision.presentation_p1_1')}
+            <b>{t('vision.presentation_p1_2')}</b>
+            {t('vision.presentation_p1_3')}
+            <b>{t('vision.presentation_p1_4')}</b>
+            {t('vision.presentation_p1_5')}
+          </Description>
+
+          <Description className="pt-5">{t('vision.presentation_p2')}</Description>
+
+          <Description className="pt-5">
+            {t('vision.presentation_p3_1')}
+            <u>
+              <b>{t('vision.presentation_p3_2')}</b>
+            </u>{' '}
+            <u>
+              <b>{t('vision.presentation_p3_3')}</b>
+            </u>{' '}
+            <u>
+              <b>{t('vision.presentation_p3_4')}</b>
+            </u>
+          </Description>
+        </Fade>
+
+        <SubHeading>
+          <Fade bottom>
+            <Description className="flex justify-center text-center">
+              <Message>{t('vision.projects_title')}</Message>
+            </Description>
+          </Fade>
+        </SubHeading>
+
+        <Fade bottom>
+          <Description className="pt-5">
+            {t('vision.projects_p1_1')}
+            <u>
+              <b>{t('vision.projects_p1_2')}</b>
+            </u>{' '}
+            {t('vision.projects_p1_3')}
+          </Description>
+
+          <Description className="pt-5">
+            <u>
+              <b>{t('vision.projects_p2_1')}</b>
+            </u>{' '}
+            {t('vision.projects_p2_2')}
+          </Description>
+
+          <Description className="pt-5">
+            <u>
+              <b>{t('vision.projects_p3_1')}</b>
+            </u>{' '}
+            {t('vision.projects_p3_2')}
+            <u>{t('vision.projects_p3_3')}</u> {t('vision.projects_p3_4')}
+            <u>{t('vision.projects_p3_5')}</u>
+            <Description className="pt-5">
+              {t('vision.projects_p3_6')}
+              <u>
+                <b>{t('vision.projects_p3_7')}</b>
+              </u>{' '}
+              {t('vision.projects_p3_8')}
+            </Description>
+          </Description>
+
+          <Description className="pt-5">
+            <u>
+              <b>{t('vision.projects_p4_1')}</b>
+            </u>{' '}
+            {t('vision.projects_p4_2')}
+          </Description>
+
+          <Description className="pt-5">{t('vision.projects_p5')}</Description>
+        </Fade>
+
+        <SubHeading>
           <Fade bottom>
             <div className="flex justify-center text-center">
               <Message>{t('vision.title')}</Message>
             </div>
           </Fade>
-        </Heading>
-
+        </SubHeading>
         <Fade bottom>
           <Row>
             <Left>
@@ -39,7 +122,6 @@ export const Vision = () => {
             </Right>
           </Row>
         </Fade>
-
         <Fade bottom>
           {isMobile ? (
             <Row>
@@ -64,7 +146,6 @@ export const Vision = () => {
             </Row>
           )}
         </Fade>
-
         <Fade bottom>
           <Row>
             <Left>
@@ -77,7 +158,6 @@ export const Vision = () => {
             </Right>
           </Row>
         </Fade>
-
         <Fade bottom>
           {isMobile ? (
             <Row>
@@ -102,7 +182,6 @@ export const Vision = () => {
             </Row>
           )}
         </Fade>
-
         <Fade bottom>
           <Row>
             <Left>
@@ -115,7 +194,6 @@ export const Vision = () => {
             </Right>
           </Row>
         </Fade>
-
         <Fade bottom>
           {isMobile ? (
             <Row>
@@ -140,7 +218,6 @@ export const Vision = () => {
             </Row>
           )}
         </Fade>
-
         <Fade bottom>
           <Row>
             <Left>
@@ -153,7 +230,6 @@ export const Vision = () => {
             </Right>
           </Row>
         </Fade>
-
         <Fade bottom>
           {isMobile ? (
             <Row id="last_row">
@@ -213,11 +289,12 @@ const SectionTag = styled.div`
 `
 
 const Message = styled.div`
-  font-size: 2.5rem;
-  font-weight: bold;
+  font-size: 2rem;
+  font-weight: 900;
+  color: #ec4e4d;
 
   @media (max-width: 760px) {
-    font-size: 1rem;
+    font-size: 1.2rem;
     margin-top: 2rem;
   }
 `
@@ -239,12 +316,12 @@ const Left = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 2rem 7rem;
+  padding: 2rem 7rem 2rem 0rem;
 
   @media (max-width: 760px) {
-    padding: 1rem;
     margin-top: 2rem;
     font-size: 0.8rem;
+    padding: 1rem 0rem 1rem 3rem;
   }
 `
 
@@ -254,13 +331,13 @@ const Right = styled.div`
   flex-direction: column;
   align-items: flex-end;
   text-align: end;
-  padding: 2rem 7rem;
+  padding: 2rem 0rem 2rem 7rem;
 
   @media (max-width: 760px) {
-    padding: 1rem;
     font-size: 0.8rem;
     align-items: flex-start;
     text-align: start;
+    padding: 1rem 0rem 1rem 3rem;
   }
 `
 
@@ -276,7 +353,8 @@ const VerticalLine = styled.div`
 
 const Heading = styled.div`
   display: flex;
-  padding-bottom: 5rem;
+  padding-bottom: 1rem;
+  justify-content: center;
 
   @media (max-width: 1900px) {
     font-size: 3.8rem;
@@ -293,6 +371,36 @@ const Heading = styled.div`
   @media (max-width: 760px) {
     flex-direction: column;
     align-items: center;
+  }
+`
+
+const SubHeading = styled.div`
+  display: flex;
+  padding-top: 10rem;
+  padding-bottom: 3rem;
+  justify-content: center;
+
+  @media (max-width: 1900px) {
+    font-size: 3.8rem;
+  }
+
+  @media (max-width: 1500px) {
+    font-size: 3.2rem;
+  }
+
+  @media (max-width: 1000px) {
+    font-size: 2.6rem;
+  }
+
+  @media (max-width: 760px) {
+    flex-direction: column;
+    align-items: center;
+  }
+`
+
+const Description = styled.div`
+  @media (max-width: 760px) {
+    font-size: 0.8rem;
   }
 `
 

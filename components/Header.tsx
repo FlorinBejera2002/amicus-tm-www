@@ -7,7 +7,7 @@ import { useTranslation } from 'next-i18next'
 import Image from 'next/image'
 import LinkNext from 'next/link'
 import { useRouter } from 'next/router'
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { useMediaQuery } from 'react-responsive'
 import { Link, animateScroll as scroll } from 'react-scroll'
 
