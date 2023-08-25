@@ -3,6 +3,7 @@ import { createTheme, ThemeProvider } from '@mui/material'
 import { appWithTranslation } from 'next-i18next'
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
+import Script from 'next/script'
 
 const ariseTheme = createTheme({
   palette: {
@@ -33,7 +34,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
         <meta content="Arise For Christ Website" name="description" />
         <meta content="width=device-width, initial-scale=1.0" name="viewport" />
         <link href="/logo_tab.svg" rel="icon" />
-        <script async src="https://cdn.splitbee.io/sb.js"></script>
+        <Script async src="https://cdn.splitbee.io/sb.js"></Script>
       </Head>
 
       <Component {...pageProps} />

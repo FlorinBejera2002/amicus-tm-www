@@ -1,6 +1,5 @@
 import styled from '@emotion/styled'
 import Image from 'next/image'
-import React from 'react'
 
 export const getStaticProps = async () => {
   return {
@@ -12,17 +11,17 @@ export default () => {
   return (
     <Overlay>
       <Center>
-        <Logo height={120} src="/logo_red.svg" width={100} />
+        <Logo height={120} src="/logo_tab.svg" width={100} />
       </Center>
     </Overlay>
   )
 }
 
 const Overlay = styled.div`
-  background: #000;
+  background: #fff;
   display: flex;
   height: 100%;
-  z-index: 1;
+  z-index: 2;
   position: absolute;
   top: 0;
   right: 0;

@@ -49,7 +49,7 @@ export const Header = (props: Props) => {
             {!onHomePage && <ChevronLeftIcon htmlColor="white" sx={{ marginRight: '0.5rem' }} />}
 
             <ImageWrapperMobile>
-              <Image alt="Logo" height={19} src="/logo_horizontal_white.png" width={70} />
+              <Image alt="Logo" height={28} src="/logo_horizontal_black.png" width={100} />
             </ImageWrapperMobile>
           </div>
 
@@ -59,7 +59,7 @@ export const Header = (props: Props) => {
                 en/ro
               </Href>
 
-              <MenuIcon htmlColor="white" onClick={() => setShowMenu(true)} />
+              <MenuIcon htmlColor="#000" onClick={() => setShowMenu(true)} style={{ zIndex: 1 }} />
             </div>
           )}
         </Container>
@@ -91,7 +91,7 @@ export const Header = (props: Props) => {
     <Container $isFadingHeader={props.isFadingHeader}>
       <Menu>
         <ImageWrapper onClick={onClickHome} sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}>
-          <Image alt="Logo" height={28} src="/logo_horizontal_white.png" width={100} />
+          <Image alt="Logo" height={42} src="/logo_horizontal_black.png" width={150} />
         </ImageWrapper>
 
         <Href onClick={onClickHome}>{t('header.home')}</Href>
@@ -133,6 +133,7 @@ export const Header = (props: Props) => {
 }
 
 const Container = styled.div<{ $isFadingHeader?: boolean }>`
+  z-index: 1;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -167,6 +168,7 @@ const ImageWrapperMobile = styled(Box)`
 `
 
 const Href = styled.div<{ $highlight?: boolean }>`
+  z-index: 1;
   font-weight: bold;
   padding: 0 1rem;
   cursor: pointer;
@@ -177,16 +179,18 @@ const Href = styled.div<{ $highlight?: boolean }>`
   color: ${({ $highlight }) => $highlight && '#e3cd58'};
 
   :hover {
-    color: #edf2f4;
+    color: #e9302e;
   }
 `
 
 const StyledButton = styled(Button)`
   border-radius: 0px;
   padding: 0.5rem 1.5rem;
-  border: 2px solid #edf2f4;
+  border: 2px solid #000;
+  color: #000;
 
   :hover {
+    color: #fff;
     background-color: #e9302e;
     border: 2px solid #e9302e;
   }

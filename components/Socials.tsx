@@ -20,8 +20,8 @@ const Container = styled.div`
 `
 
 const Link = styled.span`
-  color: #edf2f4;
-  font-weight: 200;
+  color: #000;
+  font-weight: 400;
   cursor: pointer;
 
   -webkit-transition: all 0.5s;
@@ -36,7 +36,7 @@ const Span = styled.span`
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #edf2f4;
+  color: #000;
   font-size: 0.8rem;
   margin: 0rem 1rem;
   opacity: 0.3;

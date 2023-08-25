@@ -1,10 +1,12 @@
 import styled from '@emotion/styled'
 import { Button } from '@mui/material'
 import { useTranslation } from 'next-i18next'
+import { useMediaQuery } from 'react-responsive'
 
 export const Footer = () => {
   const { t } = useTranslation('common')
   const date = new Date().getFullYear()
+  const isMobile = useMediaQuery({ query: `(max-width: 760px)` })
 
   return (
     <Container>
@@ -57,11 +59,13 @@ export const Footer = () => {
         </SocialItemContainer>
       </Right>
 
-      <MobileContact>
-        <StyledButton href="mailto:info@ariseforchrist.com">{t('button.contact_us')}</StyledButton>
+      {isMobile && (
+        <MobileContact>
+          <StyledButton href="mailto:info@ariseforchrist.com">{t('button.contact_us')}</StyledButton>
 
-        <Copyright>© Copyright AriseForChrist {date}</Copyright>
-      </MobileContact>
+          <Copyright>© Copyright AriseForChrist {date}</Copyright>
+        </MobileContact>
+      )}
     </Container>
   )
 }
@@ -198,7 +202,7 @@ const DesktopAction = styled.div`
 
 const MobileContact = styled.div`
   display: none;
-  margin-top: 6rem;
+  margin-top: 4rem;
 
   @media (max-width: 760px) {
     display: block;

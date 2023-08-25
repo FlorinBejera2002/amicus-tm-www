@@ -19,7 +19,6 @@ export const Vision = () => {
             </div>
           </Fade>
         </Heading>
-
         <SubHeading>
           <Fade bottom>
             <div className="flex flex-col justify-center text-center">
@@ -27,7 +26,6 @@ export const Vision = () => {
             </div>
           </Fade>
         </SubHeading>
-
         <Fade bottom>
           <Description>
             {t('vision.presentation_p1_1')}
@@ -52,7 +50,6 @@ export const Vision = () => {
             </u>
           </Description>
         </Fade>
-
         <SubHeading>
           <Fade bottom>
             <Description className="flex justify-center text-center">
@@ -60,7 +57,6 @@ export const Vision = () => {
             </Description>
           </Fade>
         </SubHeading>
-
         <Fade bottom>
           <Description className="pt-5">
             {t('vision.projects_p1_1')}
@@ -102,7 +98,6 @@ export const Vision = () => {
 
           <Description className="pt-5">{t('vision.projects_p5')}</Description>
         </Fade>
-
         <SubHeading>
           <Fade bottom>
             <div className="flex justify-center text-center">
@@ -263,7 +258,7 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   padding: 10rem 12rem;
-  background: #edf2f4;
+  background: #fff;
 
   @media (max-width: 760px) {
     padding: 4rem 2rem;
