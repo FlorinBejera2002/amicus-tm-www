@@ -120,7 +120,7 @@ const EvangelismForm: NextPage = () => {
         console.error('Response:', response)
         throw Error('Response not ok.')
       } else {
-        setTimeout(() => router.push('/'), 2000)
+        router.push('/')
       }
     } catch (error) {
       console.error(error)
