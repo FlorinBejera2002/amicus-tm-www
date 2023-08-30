@@ -8,7 +8,7 @@
         "actone": "Act One"
     },
     "button": {
-        "er_request": "Evanghelism Request",
+        "er_request": "Evangelism Request",
         "contact_us": "Contact Us",
         "agree": "I Agree"
     },
@@ -18,7 +18,7 @@
         "question3": "Do you want to encourage someone?"
     },
     "form": {
-        "title": "Evanghelism Request",
+        "title": "Evangelism Request",
         "subtitle": "Help us bring people to Christ",
         "name": "name",
         "email": "email",
@@ -32,8 +32,8 @@
         "send": "SEND",
         "invalid_mobile": "Mobile number not valid",
         "invalid_email": "Email not valid",
-        "successful_submission": "Evanghelism request sent with success!",
-        "failed_submission": "Failed to send evanghelism request! Please contact us via email.",
+        "successful_submission": "Evangelism request sent with success!",
+        "failed_submission": "Failed to send evangelism request! Please contact us via email.",
         "applicant_person": "Who is making the request?",
         "target_person": "Who would you like to get closer to God?"
     },
@@ -69,12 +69,12 @@
         "presentation_p1_5": "„For of Him and through Him and to Him are all things, to whom be glory forever. Amen.",
         "presentation_p2": "Arise for Christ is a christian mission that operates for the Kingdom of God. Our goal is to mobilize christians for personal evangelization and the restoration of those who have fallen away from faith.",
         "presentation_p3_1": "Our projects are: ",
-        "presentation_p3_2": "personal evanghelism,",
+        "presentation_p3_2": "personal evangelism,",
         "presentation_p3_3": "restoring those who have fallen away from faith,",
         "presentation_p3_4": "biblical counseling and multimedia projects.",
         "projects_title": "Projects",
         "projects_p1_1": "Through ",
-        "projects_p1_2": "personal evanghelism",
+        "projects_p1_2": "personal evangelism",
         "projects_p1_3": "we aim to connect with the unchurched individuals within the families of believers. Every believer has someone unchurched in their family or vicinity, and we are all responsible for connecting them with the Gospel! The person for whom the request is made enters the process of evangelization, with the ultimate goal of their salvation.",
         "projects_p2_1": "Restoring those who have fallen away from faith.",
         "projects_p2_2": "They are sought for the purpose of their spiritual recovery and rehabilitation. We apply the same plan as in personal evangelization, but the approaches vary from case to case.",
