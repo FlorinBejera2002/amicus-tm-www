@@ -1,5 +1,6 @@
 import '../styles/globals.css'
 import { createTheme, ThemeProvider } from '@mui/material'
+import { Analytics } from '@vercel/analytics/react'
 import { appWithTranslation } from 'next-i18next'
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
@@ -38,6 +39,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
       </Head>
 
       <Component {...pageProps} />
+      <Analytics />
     </ThemeProvider>
   )
 }
