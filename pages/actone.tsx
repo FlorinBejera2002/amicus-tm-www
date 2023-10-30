@@ -7,7 +7,6 @@ import type { NextPage } from 'next'
 import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import Image from 'next/image'
-import Fade from 'react-reveal/Fade'
 import { Link, Element } from 'react-scroll'
 
 import { Header } from '../components/Header'
@@ -57,244 +56,226 @@ const ActOne: NextPage = (props: any) => {
       <Container>
         <MaxWidth>
           <HeroSection>
-            <Fade>
-              <Link duration={1000} offset={-50} smooth={true} to="Registration">
-                <ImageWrapper>
-                  <Image
-                    alt="hero_background"
-                    height={500}
-                    objectFit="contain"
-                    placeholder="blur"
-                    src={heroBackground}
-                    width={889}
-                  />
-                </ImageWrapper>
-              </Link>
-            </Fade>
+            <Link duration={1000} offset={-50} smooth={true} to="Registration">
+              <ImageWrapper>
+                <Image
+                  alt="hero_background"
+                  height={500}
+                  objectFit="contain"
+                  placeholder="blur"
+                  src={heroBackground}
+                  width={889}
+                />
+              </ImageWrapper>
+            </Link>
           </HeroSection>
 
           <Content>
-            <Fade bottom>
-              <TextBlock>
-                <Heading>{t('actone.heading_be_part')}</Heading>
-                <div>
-                  <Yellow>
-                    <b>{t('actone.arise_for_christ_romania')}</b>
-                  </Yellow>{' '}
-                  {t('actone.heading_be_part_p1')}
-                  <Break />
-                  {t('actone.heading_be_part_p2')}
-                </div>
-              </TextBlock>
-            </Fade>
+            <TextBlock>
+              <Heading>{t('actone.heading_be_part')}</Heading>
+              <div>
+                <Yellow>
+                  <b>{t('actone.arise_for_christ_romania')}</b>
+                </Yellow>{' '}
+                {t('actone.heading_be_part_p1')}
+                <Break />
+                {t('actone.heading_be_part_p2')}
+              </div>
+            </TextBlock>
 
-            <Fade bottom>
-              <TextBlock>
-                <Heading>{t('actone.heading_trip_like')}</Heading>
-                <div>
-                  {t('actone.heading_trip_like_p1')}
-                  <Break />
-                  {t('actone.heading_trip_like_p2')}
-                </div>
-              </TextBlock>
-            </Fade>
+            <TextBlock>
+              <Heading>{t('actone.heading_trip_like')}</Heading>
+              <div>
+                {t('actone.heading_trip_like_p1')}
+                <Break />
+                {t('actone.heading_trip_like_p2')}
+              </div>
+            </TextBlock>
 
-            <Fade bottom>
-              <TextBlock>
-                <Heading>{t('actone.heading_activities')}</Heading>
-                <ol style={{ paddingLeft: '1rem' }}>
-                  <li>
-                    <RightArrow />
-                    {t('actone.heading_activities_item1')}
-                  </li>
-                  <li>
-                    <RightArrow />
-                    {t('actone.heading_activities_item2')}
-                  </li>
-                  <li>
-                    <RightArrow />
-                    {t('actone.heading_activities_item3')}
-                  </li>
-                  <li>
-                    <RightArrow />
-                    {t('actone.heading_activities_item4')}
-                  </li>
-                  <li>
-                    <RightArrow />
-                    {t('actone.heading_activities_item5')}
-                  </li>
-                  <li>
-                    <RightArrow />
-                    {t('actone.heading_activities_item6')}
-                  </li>
-                  <li>
-                    <RightArrow />
-                    {t('actone.heading_activities_item7')}
-                  </li>
-                  <li>
-                    <RightArrow />
-                    {t('actone.heading_activities_item8')}
-                  </li>
-                  <li>
-                    <RightArrow />
-                    {t('actone.heading_activities_item9')}
-                  </li>
-                </ol>
-                <div>{t('actone.heading_activities_p1')}</div>
-              </TextBlock>
-            </Fade>
+            <TextBlock>
+              <Heading>{t('actone.heading_activities')}</Heading>
+              <ol style={{ paddingLeft: '1rem' }}>
+                <li>
+                  <RightArrow />
+                  {t('actone.heading_activities_item1')}
+                </li>
+                <li>
+                  <RightArrow />
+                  {t('actone.heading_activities_item2')}
+                </li>
+                <li>
+                  <RightArrow />
+                  {t('actone.heading_activities_item3')}
+                </li>
+                <li>
+                  <RightArrow />
+                  {t('actone.heading_activities_item4')}
+                </li>
+                <li>
+                  <RightArrow />
+                  {t('actone.heading_activities_item5')}
+                </li>
+                <li>
+                  <RightArrow />
+                  {t('actone.heading_activities_item6')}
+                </li>
+                <li>
+                  <RightArrow />
+                  {t('actone.heading_activities_item7')}
+                </li>
+                <li>
+                  <RightArrow />
+                  {t('actone.heading_activities_item8')}
+                </li>
+                <li>
+                  <RightArrow />
+                  {t('actone.heading_activities_item9')}
+                </li>
+              </ol>
+              <div>{t('actone.heading_activities_p1')}</div>
+            </TextBlock>
 
-            <Fade bottom>
-              <TextBlock>
-                <Heading>{t('actone.heading_profile')}</Heading>
-                <div>{t('actone.heading_profile_subheading')}</div>
-                <ol style={{ paddingLeft: '1rem' }}>
-                  <li>
-                    <RightArrow />
-                    {t('actone.heading_profile_item1')}
-                  </li>
-                  <li>
-                    <RightArrow />
-                    {t('actone.heading_profile_item2')}
-                  </li>
-                  <li>
-                    <RightArrow />
-                    {t('actone.heading_profile_item3')}
-                  </li>
-                  <li>
-                    <RightArrow />
-                    {t('actone.heading_profile_item4')}
-                  </li>
-                  <li>
-                    <RightArrow />
-                    {t('actone.heading_profile_item5')}
-                  </li>
-                  <li>
-                    <RightArrow />
-                    {t('actone.heading_profile_item6')}
-                  </li>
-                  <li>
-                    <RightArrow />
-                    {t('actone.heading_profile_item7')}
-                  </li>
-                  <li>
-                    <RightArrow />
-                    {t('actone.heading_profile_item8')}
-                  </li>
-                  <li>
-                    <RightArrow />
-                    {t('actone.heading_profile_item9')}
-                  </li>
-                </ol>
-              </TextBlock>
-            </Fade>
+            <TextBlock>
+              <Heading>{t('actone.heading_profile')}</Heading>
+              <div>{t('actone.heading_profile_subheading')}</div>
+              <ol style={{ paddingLeft: '1rem' }}>
+                <li>
+                  <RightArrow />
+                  {t('actone.heading_profile_item1')}
+                </li>
+                <li>
+                  <RightArrow />
+                  {t('actone.heading_profile_item2')}
+                </li>
+                <li>
+                  <RightArrow />
+                  {t('actone.heading_profile_item3')}
+                </li>
+                <li>
+                  <RightArrow />
+                  {t('actone.heading_profile_item4')}
+                </li>
+                <li>
+                  <RightArrow />
+                  {t('actone.heading_profile_item5')}
+                </li>
+                <li>
+                  <RightArrow />
+                  {t('actone.heading_profile_item6')}
+                </li>
+                <li>
+                  <RightArrow />
+                  {t('actone.heading_profile_item7')}
+                </li>
+                <li>
+                  <RightArrow />
+                  {t('actone.heading_profile_item8')}
+                </li>
+                <li>
+                  <RightArrow />
+                  {t('actone.heading_profile_item9')}
+                </li>
+              </ol>
+            </TextBlock>
 
-            <Fade bottom>
-              <TextBlock>
-                <Heading>{t('actone.heading_costs')}</Heading>
-                <div>
-                  {t('actone.heading_costs_p1')}
-                  <Tooltip title={getCostsTooltip()}>
-                    <YellowHighlight>
-                      <b>$382.000</b>
-                    </YellowHighlight>
-                  </Tooltip>
-                  {t('actone.heading_costs_p2')}
-                  <Break />
-                  {t('actone.heading_costs_p3')}
-                  <Yellow>
-                    <b>$2500</b>
-                  </Yellow>
-                  {t('actone.heading_costs_p4')}
-                  <Break />
-                  {t('actone.heading_costs_p5')}
-                  <Break />
-                  {t('actone.heading_costs_p6')}
-                  <Break />
-                  {t('actone.heading_costs_p7')}
-                </div>
-              </TextBlock>
-            </Fade>
+            <TextBlock>
+              <Heading>{t('actone.heading_costs')}</Heading>
+              <div>
+                {t('actone.heading_costs_p1')}
+                <Tooltip title={getCostsTooltip()}>
+                  <YellowHighlight>
+                    <b>$382.000</b>
+                  </YellowHighlight>
+                </Tooltip>
+                {t('actone.heading_costs_p2')}
+                <Break />
+                {t('actone.heading_costs_p3')}
+                <Yellow>
+                  <b>$2500</b>
+                </Yellow>
+                {t('actone.heading_costs_p4')}
+                <Break />
+                {t('actone.heading_costs_p5')}
+                <Break />
+                {t('actone.heading_costs_p6')}
+                <Break />
+                {t('actone.heading_costs_p7')}
+              </div>
+            </TextBlock>
 
             <Element name="Registration">
-              <Fade bottom>
-                <TextBlock style={{ border: '1px lightgrey dashed', borderRadius: '1rem', padding: '1rem' }}>
-                  <Heading>{t('actone.heading_registration')}</Heading>
-                  <div>
-                    {t('actone.heading_registration_1')}
-                    <Yellow>
-                      <b>{t('actone.heading_registration_2')}</b>
-                    </Yellow>
-                    {t('actone.heading_registration_3')}
-                    <Yellow>
-                      <b>{t('actone.heading_registration_4')}</b>
-                    </Yellow>
-                    {t('actone.heading_registration_5')}
-                    <a href="mailto:info@ariseforchrist.com" style={{ textDecoration: 'underline' }}>
-                      {t('actone.heading_registration_6')}
-                    </a>
-                    {t('actone.heading_registration_7')}
-                  </div>
+              <TextBlock style={{ border: '1px lightgrey dashed', borderRadius: '1rem', padding: '1rem' }}>
+                <Heading>{t('actone.heading_registration')}</Heading>
+                <div>
+                  {t('actone.heading_registration_1')}
+                  <Yellow>
+                    <b>{t('actone.heading_registration_2')}</b>
+                  </Yellow>
+                  {t('actone.heading_registration_3')}
+                  <Yellow>
+                    <b>{t('actone.heading_registration_4')}</b>
+                  </Yellow>
+                  {t('actone.heading_registration_5')}
+                  <a href="mailto:info@ariseforchrist.com" style={{ textDecoration: 'underline' }}>
+                    {t('actone.heading_registration_6')}
+                  </a>
+                  {t('actone.heading_registration_7')}
+                </div>
 
-                  <ButtonWrapper>
-                    <Button
-                      onClick={() =>
-                        window.open('https://www.ariseforchrist.com/public/docs/actone_application_form.pdf', '_blank')
-                      }
-                      startIcon={<CloudDownloadIcon />}
-                      style={{
-                        backgroundColor: '#e3cd58',
-                        borderRadius: '1rem',
-                        color: '#1d1c2e',
-                        marginRight: '1rem',
-                      }}
-                      variant="contained"
-                    >
-                      application form
-                    </Button>
+                <ButtonWrapper>
+                  <Button
+                    onClick={() =>
+                      window.open('https://www.ariseforchrist.com/public/docs/actone_application_form.pdf', '_blank')
+                    }
+                    startIcon={<CloudDownloadIcon />}
+                    style={{
+                      backgroundColor: '#e3cd58',
+                      borderRadius: '1rem',
+                      color: '#1d1c2e',
+                      marginRight: '1rem',
+                    }}
+                    variant="contained"
+                  >
+                    application form
+                  </Button>
 
-                    <Button
-                      onClick={() =>
-                        window.open(
-                          'https://www.ariseforchrist.com/public/docs/actone_pastor_recommendation.pdf',
-                          '_blank',
-                        )
-                      }
-                      startIcon={<CloudDownloadIcon />}
-                      style={{ backgroundColor: '#e3cd58', borderRadius: '1rem', color: '#1d1c2e' }}
-                      variant="contained"
-                    >
-                      pastoral recommendation
-                    </Button>
-                  </ButtonWrapper>
-                </TextBlock>
-              </Fade>
+                  <Button
+                    onClick={() =>
+                      window.open(
+                        'https://www.ariseforchrist.com/public/docs/actone_pastor_recommendation.pdf',
+                        '_blank',
+                      )
+                    }
+                    startIcon={<CloudDownloadIcon />}
+                    style={{ backgroundColor: '#e3cd58', borderRadius: '1rem', color: '#1d1c2e' }}
+                    variant="contained"
+                  >
+                    pastoral recommendation
+                  </Button>
+                </ButtonWrapper>
+              </TextBlock>
             </Element>
 
-            <Fade bottom>
-              <TextBlock>
-                <Heading>{t('actone.heading_why')}</Heading>
-                <div>
-                  {t('actone.heading_why_p1')}
-                  <Break />
-                  {t('actone.heading_why_p2')}
-                </div>
-              </TextBlock>
-            </Fade>
+            <TextBlock>
+              <Heading>{t('actone.heading_why')}</Heading>
+              <div>
+                {t('actone.heading_why_p1')}
+                <Break />
+                {t('actone.heading_why_p2')}
+              </div>
+            </TextBlock>
 
             {currentLanguage === 'en' && (
-              <Fade>
-                <VideoWrapper>
-                  <iframe
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    frameBorder="0"
-                    height="500"
-                    src="https://www.youtube.com/embed/t6CQ5Ddp5GU"
-                    title="AriseForChrist Youtube"
-                    width="889"
-                  ></iframe>
-                </VideoWrapper>
-              </Fade>
+              <VideoWrapper>
+                <iframe
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  frameBorder="0"
+                  height="500"
+                  src="https://www.youtube.com/embed/t6CQ5Ddp5GU"
+                  title="AriseForChrist Youtube"
+                  width="889"
+                ></iframe>
+              </VideoWrapper>
             )}
           </Content>
         </MaxWidth>

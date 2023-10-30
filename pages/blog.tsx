@@ -4,7 +4,6 @@ import CircularProgress from '@mui/material/CircularProgress'
 import type { NextPage } from 'next'
 import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
-import Fade from 'react-reveal/Fade'
 
 import { Header } from '../components/Header'
 import { Post } from '../components/Post'
@@ -32,11 +31,9 @@ const Blog: NextPage<Props> = (props) => {
       <Header />
 
       <Container>
-        <Fade bottom>
-          <Message>
-            <Heading>{t('blog.title')}</Heading>
-          </Message>
-        </Fade>
+        <Message>
+          <Heading>{t('blog.title')}</Heading>
+        </Message>
 
         <Content>
           {!posts ? (

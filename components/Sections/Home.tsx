@@ -4,7 +4,6 @@ import { useTranslation } from 'next-i18next'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
 import { useMediaQuery } from 'react-responsive'
-import Fade from 'react-reveal/Fade'
 
 import heroBackground from '../../public/hero_background.jpeg'
 import { Header } from '../Header'
@@ -29,26 +28,22 @@ export const Home = () => {
       <Header />
 
       <Content>
-        <Fade bottom>
-          <div>
-            <Hero>
-              <div>{t('hero.question1')}</div>
-              <div> {t('hero.question2')}</div>
-              <div>{t('hero.question3')}</div>
-            </Hero>
+        <div>
+          <Hero>
+            <div>{t('hero.question1')}</div>
+            <div> {t('hero.question2')}</div>
+            <div>{t('hero.question3')}</div>
+          </Hero>
 
-            <Socials />
-          </div>
-        </Fade>
+          <Socials />
+        </div>
 
         {isMobile && (
-          <Fade bottom>
-            <div style={{ display: 'flex', justifyContent: 'center', marginTop: '10rem' }}>
-              <StyledButton onClick={() => router.push('evangelism_form')} variant="outlined">
-                {t('button.er_request')}
-              </StyledButton>
-            </div>
-          </Fade>
+          <div style={{ display: 'flex', justifyContent: 'center', marginTop: '10rem' }}>
+            <StyledButton onClick={() => router.push('evangelism_form')} variant="outlined">
+              {t('button.er_request')}
+            </StyledButton>
+          </div>
         )}
       </Content>
     </Container>
@@ -70,12 +65,12 @@ const Container = styled.div`
 const Content = styled.div`
   display: flex;
   flex: 1;
+  z-index: 1;
   align-items: center;
   width: 100%;
   margin: 0 auto;
   padding: 0rem 8rem;
   background-color: transparent;
-  /* background-color: red; */
 
   @media (max-width: 760px) {
     display: block;

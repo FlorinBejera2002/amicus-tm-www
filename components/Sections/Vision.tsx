@@ -2,7 +2,6 @@ import styled from '@emotion/styled'
 import { useTranslation } from 'next-i18next'
 import Image from 'next/image'
 import { useMediaQuery } from 'react-responsive'
-import Fade from 'react-reveal/Fade'
 
 export const Vision = () => {
   const { t } = useTranslation('common')
@@ -13,242 +12,214 @@ export const Vision = () => {
       <Content>
         <SectionTag>{t('section.vision')}</SectionTag>
         <Heading>
-          <Fade top>
-            <div className="flex justify-center pt-5">
-              <Image alt="arise logo" height={150} layout="fixed" src="/logo.svg" width={150} />
-            </div>
-          </Fade>
+          <div className="flex justify-center pt-5">
+            <Image alt="arise logo" height={150} layout="fixed" src="/logo.svg" width={150} />
+          </div>
         </Heading>
         <SubHeading>
-          <Fade bottom>
-            <div className="flex flex-col justify-center text-center">
-              <Message>{t('vision.presentation_title')}</Message>
-            </div>
-          </Fade>
+          <div className="flex flex-col justify-center text-center">
+            <Message>{t('vision.presentation_title')}</Message>
+          </div>
         </SubHeading>
-        <Fade bottom>
-          <Description>
-            {t('vision.presentation_p1_1')}
-            <b>{t('vision.presentation_p1_2')}</b>
-            {t('vision.presentation_p1_3')}
-            <b>{t('vision.presentation_p1_4')}</b>
-            {t('vision.presentation_p1_5')}
-          </Description>
+        <Description>
+          {t('vision.presentation_p1_1')}
+          <b>{t('vision.presentation_p1_2')}</b>
+          {t('vision.presentation_p1_3')}
+          <b>{t('vision.presentation_p1_4')}</b>
+          {t('vision.presentation_p1_5')}
+        </Description>
 
-          <Description className="pt-5">{t('vision.presentation_p2')}</Description>
+        <Description className="pt-5">{t('vision.presentation_p2')}</Description>
 
-          <Description className="pt-5">
-            {t('vision.presentation_p3_1')}
-            <u>
-              <b>{t('vision.presentation_p3_2')}</b>
-            </u>{' '}
-            <u>
-              <b>{t('vision.presentation_p3_3')}</b>
-            </u>{' '}
-            <u>
-              <b>{t('vision.presentation_p3_4')}</b>
-            </u>
-          </Description>
-        </Fade>
+        <Description className="pt-5">
+          {t('vision.presentation_p3_1')}
+          <u>
+            <b>{t('vision.presentation_p3_2')}</b>
+          </u>{' '}
+          <u>
+            <b>{t('vision.presentation_p3_3')}</b>
+          </u>{' '}
+          <u>
+            <b>{t('vision.presentation_p3_4')}</b>
+          </u>
+        </Description>
         <SubHeading>
-          <Fade bottom>
-            <Description className="flex justify-center text-center">
-              <Message>{t('vision.projects_title')}</Message>
-            </Description>
-          </Fade>
+          <Description className="flex justify-center text-center">
+            <Message>{t('vision.projects_title')}</Message>
+          </Description>
         </SubHeading>
-        <Fade bottom>
-          <Description className="pt-5">
-            {t('vision.projects_p1_1')}
-            <u>
-              <b>{t('vision.projects_p1_2')}</b>
-            </u>{' '}
-            {t('vision.projects_p1_3')}
-          </Description>
+        <Description className="pt-5">
+          {t('vision.projects_p1_1')}
+          <u>
+            <b>{t('vision.projects_p1_2')}</b>
+          </u>{' '}
+          {t('vision.projects_p1_3')}
+        </Description>
 
-          <Description className="pt-5">
-            <u>
-              <b>{t('vision.projects_p2_1')}</b>
-            </u>{' '}
-            {t('vision.projects_p2_2')}
-          </Description>
+        <Description className="pt-5">
+          <u>
+            <b>{t('vision.projects_p2_1')}</b>
+          </u>{' '}
+          {t('vision.projects_p2_2')}
+        </Description>
 
+        <Description className="pt-5">
+          <u>
+            <b>{t('vision.projects_p3_1')}</b>
+          </u>{' '}
+          {t('vision.projects_p3_2')}
+          <u>{t('vision.projects_p3_3')}</u> {t('vision.projects_p3_4')}
+          <u>{t('vision.projects_p3_5')}</u>
           <Description className="pt-5">
+            {t('vision.projects_p3_6')}
             <u>
-              <b>{t('vision.projects_p3_1')}</b>
+              <b>{t('vision.projects_p3_7')}</b>
             </u>{' '}
-            {t('vision.projects_p3_2')}
-            <u>{t('vision.projects_p3_3')}</u> {t('vision.projects_p3_4')}
-            <u>{t('vision.projects_p3_5')}</u>
-            <Description className="pt-5">
-              {t('vision.projects_p3_6')}
-              <u>
-                <b>{t('vision.projects_p3_7')}</b>
-              </u>{' '}
-              {t('vision.projects_p3_8')}
-            </Description>
+            {t('vision.projects_p3_8')}
           </Description>
+        </Description>
 
-          <Description className="pt-5">
-            <u>
-              <b>{t('vision.projects_p4_1')}</b>
-            </u>{' '}
-            {t('vision.projects_p4_2')}
-          </Description>
+        <Description className="pt-5">
+          <u>
+            <b>{t('vision.projects_p4_1')}</b>
+          </u>{' '}
+          {t('vision.projects_p4_2')}
+        </Description>
 
-          <Description className="pt-5">{t('vision.projects_p5')}</Description>
-        </Fade>
+        <Description className="pt-5">{t('vision.projects_p5')}</Description>
         <SubHeading>
-          <Fade bottom>
-            <div className="flex justify-center text-center">
-              <Message>{t('vision.title')}</Message>
-            </div>
-          </Fade>
+          <div className="flex justify-center text-center">
+            <Message>{t('vision.title')}</Message>
+          </div>
         </SubHeading>
-        <Fade bottom>
+        <Row>
+          <Left>
+            <StepHeader>{t('vision.step1_title')}</StepHeader>
+            {t('vision.step1_description')}
+          </Left>
+          <VerticalLine />
+          <Right>
+            <Image alt="step1" height={300} src="/step1.jpg" width={500} />
+          </Right>
+        </Row>
+        {isMobile ? (
           <Row>
             <Left>
-              <StepHeader>{t('vision.step1_title')}</StepHeader>
-              {t('vision.step1_description')}
+              <StepHeader>{t('vision.step2_title')}</StepHeader>
+              {t('vision.step2_description')}
+            </Left>
+            <Right>
+              <Image alt="step2" height={300} src="/step2.jpg" width={500} />
+            </Right>
+          </Row>
+        ) : (
+          <Row>
+            <Left>
+              <Image alt="step2" height={300} src="/step2.jpg" width={500} />
             </Left>
             <VerticalLine />
             <Right>
-              <Image alt="step1" height={300} src="/step1.jpg" width={500} />
+              <StepHeader>{t('vision.step2_title')}</StepHeader>
+              {t('vision.step2_description')}
             </Right>
           </Row>
-        </Fade>
-        <Fade bottom>
-          {isMobile ? (
-            <Row>
-              <Left>
-                <StepHeader>{t('vision.step2_title')}</StepHeader>
-                {t('vision.step2_description')}
-              </Left>
-              <Right>
-                <Image alt="step2" height={300} src="/step2.jpg" width={500} />
-              </Right>
-            </Row>
-          ) : (
-            <Row>
-              <Left>
-                <Image alt="step2" height={300} src="/step2.jpg" width={500} />
-              </Left>
-              <VerticalLine />
-              <Right>
-                <StepHeader>{t('vision.step2_title')}</StepHeader>
-                {t('vision.step2_description')}
-              </Right>
-            </Row>
-          )}
-        </Fade>
-        <Fade bottom>
+        )}
+        <Row>
+          <Left>
+            <StepHeader>{t('vision.step3_title')}</StepHeader>
+            {t('vision.step3_description')}
+          </Left>
+          <VerticalLine />
+          <Right>
+            <Image alt="step3" height={300} src="/step3.jpg" width={500} />
+          </Right>
+        </Row>
+        {isMobile ? (
           <Row>
             <Left>
-              <StepHeader>{t('vision.step3_title')}</StepHeader>
-              {t('vision.step3_description')}
+              <StepHeader>{t('vision.step4_title')}</StepHeader>
+              {t('vision.step4_description')}
+            </Left>
+            <Right>
+              <Image alt="step4" height={300} src="/step4.jpg" width={500} />
+            </Right>
+          </Row>
+        ) : (
+          <Row>
+            <Left>
+              <Image alt="step4" height={300} src="/step4.jpg" width={500} />
             </Left>
             <VerticalLine />
             <Right>
-              <Image alt="step3" height={300} src="/step3.jpg" width={500} />
+              <StepHeader>{t('vision.step4_title')}</StepHeader>
+              {t('vision.step4_description')}
             </Right>
           </Row>
-        </Fade>
-        <Fade bottom>
-          {isMobile ? (
-            <Row>
-              <Left>
-                <StepHeader>{t('vision.step4_title')}</StepHeader>
-                {t('vision.step4_description')}
-              </Left>
-              <Right>
-                <Image alt="step4" height={300} src="/step4.jpg" width={500} />
-              </Right>
-            </Row>
-          ) : (
-            <Row>
-              <Left>
-                <Image alt="step4" height={300} src="/step4.jpg" width={500} />
-              </Left>
-              <VerticalLine />
-              <Right>
-                <StepHeader>{t('vision.step4_title')}</StepHeader>
-                {t('vision.step4_description')}
-              </Right>
-            </Row>
-          )}
-        </Fade>
-        <Fade bottom>
+        )}
+        <Row>
+          <Left>
+            <StepHeader>{t('vision.step5_title')}</StepHeader>
+            {t('vision.step5_description')}
+          </Left>
+          <VerticalLine />
+          <Right>
+            <Image alt="step5" height={300} src="/step5.jpg" width={500} />
+          </Right>
+        </Row>
+        {isMobile ? (
           <Row>
             <Left>
-              <StepHeader>{t('vision.step5_title')}</StepHeader>
-              {t('vision.step5_description')}
+              <StepHeader>{t('vision.step6_title')}</StepHeader>
+              {t('vision.step6_description')}
+            </Left>
+            <Right>
+              <Image alt="step6" height={300} src="/step6.jpg" width={500} />
+            </Right>
+          </Row>
+        ) : (
+          <Row>
+            <Left>
+              <Image alt="step6" height={300} src="/step6.jpg" width={500} />
             </Left>
             <VerticalLine />
             <Right>
-              <Image alt="step5" height={300} src="/step5.jpg" width={500} />
+              <StepHeader>{t('vision.step6_title')}</StepHeader>
+              {t('vision.step6_description')}
             </Right>
           </Row>
-        </Fade>
-        <Fade bottom>
-          {isMobile ? (
-            <Row>
-              <Left>
-                <StepHeader>{t('vision.step6_title')}</StepHeader>
-                {t('vision.step6_description')}
-              </Left>
-              <Right>
-                <Image alt="step6" height={300} src="/step6.jpg" width={500} />
-              </Right>
-            </Row>
-          ) : (
-            <Row>
-              <Left>
-                <Image alt="step6" height={300} src="/step6.jpg" width={500} />
-              </Left>
-              <VerticalLine />
-              <Right>
-                <StepHeader>{t('vision.step6_title')}</StepHeader>
-                {t('vision.step6_description')}
-              </Right>
-            </Row>
-          )}
-        </Fade>
-        <Fade bottom>
+        )}
+        <Row>
+          <Left>
+            <StepHeader>{t('vision.step7_title')}</StepHeader>
+            {t('vision.step7_description')}
+          </Left>
+          <VerticalLine />
+          <Right>
+            <Image alt="step7" height={300} src="/step7.jpg" width={500} />
+          </Right>
+        </Row>
+        {isMobile ? (
+          <Row id="last_row">
+            <Left>
+              <StepHeader>{t('vision.step8_title')}</StepHeader>
+              {t('vision.step8_description')}
+            </Left>
+            <Right>
+              <Image alt="step8" height={300} src="/step8.jpg" width={500} />
+            </Right>
+          </Row>
+        ) : (
           <Row>
             <Left>
-              <StepHeader>{t('vision.step7_title')}</StepHeader>
-              {t('vision.step7_description')}
+              <Image alt="step8" height={300} src="/step8.jpg" width={500} />
             </Left>
             <VerticalLine />
             <Right>
-              <Image alt="step7" height={300} src="/step7.jpg" width={500} />
+              <StepHeader>{t('vision.step8_title')}</StepHeader>
+              {t('vision.step8_description')}
             </Right>
           </Row>
-        </Fade>
-        <Fade bottom>
-          {isMobile ? (
-            <Row id="last_row">
-              <Left>
-                <StepHeader>{t('vision.step8_title')}</StepHeader>
-                {t('vision.step8_description')}
-              </Left>
-              <Right>
-                <Image alt="step8" height={300} src="/step8.jpg" width={500} />
-              </Right>
-            </Row>
-          ) : (
-            <Row>
-              <Left>
-                <Image alt="step8" height={300} src="/step8.jpg" width={500} />
-              </Left>
-              <VerticalLine />
-              <Right>
-                <StepHeader>{t('vision.step8_title')}</StepHeader>
-                {t('vision.step8_description')}
-              </Right>
-            </Row>
-          )}
-        </Fade>
+        )}
       </Content>
     </Container>
   )
