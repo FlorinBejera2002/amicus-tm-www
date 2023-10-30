@@ -1,4 +1,5 @@
 import { AppBar } from '@mui/material'
+import splitbee from '@splitbee/web'
 import type { NextPage } from 'next'
 import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
@@ -13,6 +14,8 @@ import { Footer } from '../components/Sections/Footer'
 import { Home } from '../components/Sections/Home'
 import { Vision } from '../components/Sections/Vision'
 import SplashScreen from '../components/SplashScreen'
+
+splitbee.init()
 
 interface Props {
   locale: string
