@@ -40,7 +40,7 @@ export type EvangelismRequest = {
   applicantEmail?: string
   applicantMobile?: string
   // person targeted for evangelism
-  name: string
+  name?: string
   email?: string
   mobile?: string
   address?: string

@@ -2,7 +2,7 @@ import styled from '@emotion/styled'
 import { LoadingButton } from '@mui/lab'
 import { TextField, Alert, AlertColor, Snackbar, Typography } from '@mui/material'
 import { NextPage } from 'next'
-import { useTranslation } from 'next-i18next'
+import { useTranslation, Trans } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { useRouter } from 'next/router'
 import { FormEvent, useState } from 'react'
@@ -86,27 +86,12 @@ const EvangelismForm: NextPage = () => {
       const applicantName = (elements.namedItem('applicantName') as HTMLInputElement).value
       const applicantEmail = (elements.namedItem('applicantEmail') as HTMLInputElement).value
       const applicantMobile = (elements.namedItem('applicantMobile') as HTMLInputElement).value
-
-      const name = (elements.namedItem('name') as HTMLInputElement).value
-      const email = (elements.namedItem('email') as HTMLInputElement).value
-      const mobile = (elements.namedItem('mobile') as HTMLInputElement).value
-      const address = (elements.namedItem('address') as HTMLInputElement).value
-      const age = (elements.namedItem('age') as HTMLInputElement).value
-      const occupation = (elements.namedItem('occupation') as HTMLInputElement).value
-      const religion = (elements.namedItem('religion') as HTMLInputElement).value
       const details = (elements.namedItem('details') as HTMLInputElement).value
 
       const er: EvangelismRequest = {
         applicantName,
         applicantEmail,
         applicantMobile,
-        name,
-        email,
-        mobile,
-        address,
-        age: +age,
-        occupation,
-        religion,
         otherdetails: details,
         category: EvangelismCategory.EvangelismRequest,
         status: Status.InProgress,
@@ -137,11 +122,13 @@ const EvangelismForm: NextPage = () => {
 
       <Container>
         <SectionTag>{t('form.title')}</SectionTag>
-        <Title>{t('form.subtitle')}</Title>
+        <Title>
+          <Trans components={{ br: <br /> }} i18nKey="form.subtitle" />
+        </Title>
 
         <form onSubmit={handleSubmit}>
           <Heading variant="h6">{t('form.applicant_person')}</Heading>
-          <Content style={{ marginBottom: '3rem' }}>
+          <Content>
             <Left>
               <TextField
                 color="error"
@@ -175,71 +162,8 @@ const EvangelismForm: NextPage = () => {
             </Right>
           </Content>
 
-          <Heading variant="h6">{t('form.target_person')}</Heading>
           <Content>
-            <Left>
-              <TextField
-                color="error"
-                id="name"
-                label={t('form.name')}
-                required
-                size="small"
-                type="text"
-                variant="outlined"
-              />
-
-              <TextField
-                color="error"
-                id="email"
-                label={t('form.email')}
-                required
-                size="small"
-                type="text"
-                variant="outlined"
-              />
-
-              <TextField
-                color="error"
-                id="mobile"
-                label={t('form.mobile')}
-                required
-                size="small"
-                type="tel"
-                variant="outlined"
-              />
-
-              <TextField
-                color="error"
-                id="religion"
-                label={t('form.religion')}
-                size="small"
-                style={{ marginBottom: '0.5rem' }}
-                type="text"
-                variant="outlined"
-              />
-            </Left>
-
             <Right>
-              <TextField
-                color="error"
-                id="address"
-                label={t('form.address')}
-                size="small"
-                type="text"
-                variant="outlined"
-              />
-
-              <TextField color="error" id="age" label={t('form.age')} size="small" type="number" variant="outlined" />
-
-              <TextField
-                color="error"
-                id="occupation"
-                label={t('form.occupation')}
-                size="small"
-                type="text"
-                variant="outlined"
-              />
-
               <TextField
                 color="error"
                 id="details"
