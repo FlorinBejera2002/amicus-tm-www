@@ -5,18 +5,18 @@ import Elements from "../elements/page";
 import Portfolio from "../portfolio/page";
 
 // css
-import "../css/theme.css";
-import "../css/theme-shop.css";
-import "../css/theme-blog.css";
-import "../css/skin-creative-agency-2.css";
-import "../css/simple-line-icons.min.css";
-import "../css/owl.theme.default.min.css";
-import "../css/owl.carousel.min.css";
-import "../css/magnific-popup.min.css";
-import "../css/demo-creative-agency-2.css";
-import "../css/custom.css";
-import "../css/bootstrap.min.css";
-import "../css/animate.compat.css";
+// import "../css/theme.css";
+// import "../css/theme-shop.css";
+// import "../css/theme-blog.css";
+// import "../css/skin-creative-agency-2.css";
+// import "../css/simple-line-icons.min.css";
+// import "../css/owl.theme.default.min.css";
+// import "../css/owl.carousel.min.css";
+// import "../css/magnific-popup.min.css";
+// import "../css/demo-creative-agency-2.css";
+// import "../css/custom.css";
+// import "../css/bootstrap.min.css";
+// import "../css/animate.compat.css";
 
 export default function Nav() {
   return (

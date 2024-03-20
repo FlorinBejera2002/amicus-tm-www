@@ -1,4 +1,4 @@
-import "../css/theme.css";
+
 
 export default function Portfolio() {
   return (
