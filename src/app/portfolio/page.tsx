@@ -1,7 +1,4 @@
-import React from "react";
-import "../../../css/theme.css";
-
-
+import "../css/theme.css";
 
 export default function Portfolio() {
   return (

@@ -18568,7 +18568,7 @@ html.dark section.section-custom-map section.section {
   background: rgba(var(--dark--100), 0.8);
 }
 
-html.dark .home-concept {
+/* html.dark .home-concept {
   background-image: url(../public/img/home/home-concept-dark.png);
 }
 
@@ -18586,7 +18586,7 @@ html.dark .home-concept .sun {
 
 html.dark .home-concept .cloud {
   background-image: url(../public/img/home/home-concept-icons-dark.png);
-}
+} */
 
 html.dark .page-header {
   border-bottom-color: var(--dark-100);
@@ -18741,9 +18741,9 @@ html.dark .progress {
   background: var(--dark--200);
 }
 
-html.dark .arrow {
+/* html.dark .arrow {
   background-image: url(../public/img/arrows-dark.png);
-}
+} */
 
 html.dark .thumbnail,
 html.dark .img-thumbnail,

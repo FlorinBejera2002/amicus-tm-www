@@ -1,17 +1,26 @@
+import Image from "next/image";
+import Link from "next/link";
+
 import Elements from "../elements/page";
 import Portfolio from "../portfolio/page";
-import Link from "next/link";
-import Image from "next/image";
-import "../../css/theme.css";
+
+// css
+import "../css/theme.css";
+import "../css/theme-shop.css";
+import "../css/theme-blog.css";
+import "../css/skin-creative-agency-2.css";
+import "../css/simple-line-icons.min.css";
+import "../css/owl.theme.default.min.css";
+import "../css/owl.carousel.min.css";
+import "../css/magnific-popup.min.css";
+import "../css/demo-creative-agency-2.css";
+import "../css/custom.css";
+import "../css/bootstrap.min.css";
+import "../css/animate.compat.css";
 
 export default function Nav() {
   return (
-    <header
-      id="header"
-      className="header-transparent"
-      data-plugin-options="{'stickyScrollUp': true, 'stickyEnabled': true, 'stickyEnableOnBoxed': true, 
-      'stickyEnableOnMobile': false, 'stickyChangeLogo': true, 'stickyStartAt': 1, 'stickyHeaderContainerHeight': 72}"
-    >
+    <header className="header-transparent" id="header">
       <div className="header-body border-top-0 bg-quaternary box-shadow-none h-auto">
         <div className="header-container container p-static">
           <div className="header-row py-3">
@@ -82,8 +91,8 @@ export default function Nav() {
 
                   <button
                     className="btn header-btn-collapse-nav text-dark"
-                    data-bs-toggle="collapse"
                     data-bs-target=".header-nav-main nav"
+                    data-bs-toggle="collapse"
                   >
                     <i className="fas fa-bars"></i>
                   </button>
