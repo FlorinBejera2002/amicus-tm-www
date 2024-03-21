@@ -1,22 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
+import horizontalLogo from "../../../public/logo_horizontal_white.png";
 
 import Elements from "../elements/page";
 import Portfolio from "../portfolio/page";
-
-// css
-// import "../css/theme.css";
-// import "../css/theme-shop.css";
-// import "../css/theme-blog.css";
-// import "../css/skin-creative-agency-2.css";
-// import "../css/simple-line-icons.min.css";
-// import "../css/owl.theme.default.min.css";
-// import "../css/owl.carousel.min.css";
-// import "../css/magnific-popup.min.css";
-// import "../css/demo-creative-agency-2.css";
-// import "../css/custom.css";
-// import "../css/bootstrap.min.css";
-// import "../css/animate.compat.css";
 
 export default function Nav() {
   return (
@@ -31,9 +18,9 @@ export default function Nav() {
                     <Image
                       alt="arise for christ logo"
                       className="object-contain"
-                      height={130}
-                      src="/img/logo_horizontal_white.png"
-                      width={130}
+                      height={40}
+                      src={horizontalLogo}
+                      width={140}
                     />
                   </Link>
                 </div>
@@ -89,11 +76,7 @@ export default function Nav() {
                     </span>
                   </a>
 
-                  <button
-                    className="btn header-btn-collapse-nav text-dark"
-                    data-bs-target=".header-nav-main nav"
-                    data-bs-toggle="collapse"
-                  >
+                  <button className="btn header-btn-collapse-nav text-dark">
                     <i className="fas fa-bars"></i>
                   </button>
                 </div>
