@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import step1 from "../../../public/img/demos/creative-agency-2/concept/concept-1.jpg";
+import step1 from "../../../../public/logo_horizontal_black.png";
 
 export default function PersonalEvangelism() {
   return (
@@ -19,14 +19,15 @@ export default function PersonalEvangelism() {
                     <Image
                       alt="Arise photo"
                       className="p-relative"
-                      height={100}
+                      height={50}
                       src={step1}
-                      width={100}
+                      width={150}
                       loading="lazy"
                     />
                   </div>
                 </div>
               </div>
+
               <div className="p-2 flex-fill">
                 <div
                   className="custom-el-3 bg-color-primary custom-border-radius-2 mx-auto appear-animation"
@@ -44,9 +45,9 @@ export default function PersonalEvangelism() {
                     <Image
                       alt="Arise photo"
                       className="p-relative"
-                      height={100}
+                      height={50}
                       src={step1}
-                      width={100}
+                      width={150}
                       loading="lazy"
                     />
                   </div>
@@ -71,9 +72,9 @@ export default function PersonalEvangelism() {
                     <Image
                       alt="Arise photo"
                       className="p-relative"
-                      height={100}
+                      height={50}
                       src={step1}
-                      width={100}
+                      width={150}
                       loading="lazy"
                     />
                   </div>
@@ -93,7 +94,7 @@ export default function PersonalEvangelism() {
               className="text-4-5 line-height-7 text-dark pb-1 mb-4 mb-lg-2 mb-xl-4 appear-animation"
               data-appear-animation="fadeInUpShorter"
               data-appear-animation-delay="500"
-                                                    >
+            >
               Cras a elit sit amet leo accumsan volutpat. Suspendisse
               hendreriast ehicula leo, vel efficitur felis ultrices non. Cras a
               elit sit amet leo acun volutpat. Suspendisse hendrerit vehicula
@@ -104,11 +105,11 @@ export default function PersonalEvangelism() {
               className="d-block appear-animation"
               data-appear-animation="fadeInUpShorter"
               data-appear-animation-delay="100"
-             >
+            >
               <div
                 className="toggle toggle-minimal toggle-dark"
                 data-plugin-toggle
-                                    >
+              >
                 <section className="toggle">
                   <a className="toggle-title text-dark text-4">What We Do</a>
                   <div className="toggle-content">

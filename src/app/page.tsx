@@ -1,7 +1,9 @@
 import Image from "next/image";
 import arrowUpLight from "../../public/img/demos/creative-agency-2/svg/arrow-up-light.svg";
 // import servicesOne from "../../public/img/demos/creative-agency-2/services/services-1.jpg";
-import PersonalEvangelism from "./personalEvangelism/personalEvangelism";
+import PersonalEvangelism from "./components/sections/personalEvangelism";
+import About from "./components/sections/about";
+import Numbers from "./components/sections/numbers";
 
 export default function Home() {
   return (
@@ -178,6 +180,8 @@ export default function Home() {
         </div>
       </section>
       <PersonalEvangelism />
+      <About />
+      <Numbers />
     </div>
   );
 }
