@@ -1,26 +1,24 @@
 import React from "react";
-import horizontalLogo from "../../../public/logo_horizontal_black.png";
-import arrowUpLight from "../../../public/img/demos/creative-agency-2/svg/arrow-up-light.svg";
+import horizontalLogo from "../../../../public/logo_horizontal_white.png";
+import arrowUpLight from "../../../../public/img/demos/creative-agency-2/svg/arrow-up-light.svg";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Footer() {
   return (
     <footer id="footer" className="p-relative bg-dark border-top-0">
       <div className="container pt-5 pb-3">
         <div className="row py-5">
-          <div className="col-lg-6 mt-5 pt-3">
-            <a
-              href="demo-creative-agency-2.html"
-              className="text-decoration-none"
-            >
-              <img
-                src="img/demos/creative-agency-2/logo-light.png"
-                width="123"
-                height="32"
-                className="img-fluid mb-5"
-                alt="Porto"
-              />
-            </a>
+          <div className="col-lg-6 mt-5 pt-3  gap-4">
+                  <Link href="/">
+                    <Image
+                      alt="arise for christ logo"
+                      className="object-contain"
+                      height={40}
+                      src={horizontalLogo}
+                      width={140}
+                    />
+                  </Link>
             <ul className="list list-unstyled">
               <li className="d-flex align-items-center mb-4">
                 <a

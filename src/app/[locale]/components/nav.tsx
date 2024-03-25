@@ -1,6 +1,8 @@
+"use client"
+
 import Image from "next/image";
 import Link from "next/link";
-import horizontalLogo from "../../../public/logo_horizontal_white.png";
+import horizontalLogo from "../../../../public/logo_horizontal_white.png";
 
 import Elements from "../elements/page";
 import Portfolio from "../portfolio/page";
