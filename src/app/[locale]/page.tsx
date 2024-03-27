@@ -10,6 +10,7 @@ import { FaTiktok } from "react-icons/fa";
 import { FaSpotify } from "react-icons/fa6";
 import Link from "next/link";
 import Animation from "./components/sections/animation";
+import StepsEvangelization from "./components/sections/steps-evangelization";
 
 export default function Home() {
   const t = useTranslations("hero");
@@ -98,8 +99,10 @@ export default function Home() {
         </div>
       </section>
       <Animation />
-      <PersonalEvangelism />
       <About />
+      <StepsEvangelization />
+      <PersonalEvangelism />
+
       <Numbers />
     </div>
   );
