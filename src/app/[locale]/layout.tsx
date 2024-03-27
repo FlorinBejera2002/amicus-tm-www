@@ -16,6 +16,7 @@ import "./css/demo-creative-agency-2.css";
 import "./css/custom.css";
 import "./css/bootstrap.min.css";
 import "./css/animate.compat.css";
+import "./globals.css"
 
 const inter = Inter({ subsets: ["latin"] });
 

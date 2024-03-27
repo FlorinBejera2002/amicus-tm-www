@@ -3,78 +3,53 @@ import horizontalLogo from "../../../../public/logo_horizontal_white.png";
 import arrowUpLight from "../../../../public/img/demos/creative-agency-2/svg/arrow-up-light.svg";
 import Image from "next/image";
 import Link from "next/link";
+import Socials from "./socials";
+import Animation from "./sections/animation";
 
 export default function Footer() {
   return (
-    <footer id="footer" className="p-relative bg-dark border-top-0">
-      <div className="container pt-5 pb-3">
+    <footer id="footer" className="p-relative  border-top-0">
+      <div className="container pt-5 pb-3 border-bottom">
         <div className="row py-5">
-          <div className="col-lg-6 mt-5 pt-3  gap-4">
-                  <Link href="/">
-                    <Image
-                      alt="arise for christ logo"
-                      className="object-contain"
-                      height={40}
-                      src={horizontalLogo}
-                      width={140}
-                    />
-                  </Link>
-            <ul className="list list-unstyled">
+          <div className="col-lg-6 mt-5 pt-3 gap-4">
+            <Link href="/">
+              <Image
+                alt="arise for christ logo"
+                className="object-contain"
+                height={40}
+                src={horizontalLogo}
+                width={140}
+              />
+            </Link>
+            <ul className="list list-unstyled pt-4">
               <li className="d-flex align-items-center mb-4">
                 <a
-                  href="mailto:porto@creative-agency-2.com"
+                  href="mailto:info@ariseforchrist.com"
                   className="d-inline-flex align-items-center text-decoration-none text-color-light text-color-hover-primary font-weight-semibold text-4-5"
                 >
-                  porto@domain.com
+                  info@ariseforchrist.com
                 </a>
               </li>
-              <li className="d-flex align-items-center mb-4">
-                <a
-                  href="tel:8001234567"
-                  className="d-inline-flex align-items-center text-decoration-none text-color-light text-color-hover-primary font-weight-semibold text-4-5"
-                >
-                  800-123-4567
-                </a>
-              </li>
-            </ul>
-            <ul className="social-icons social-icons-clean social-icons-medium mb-5">
-              <li className="social-icons-facebook">
-                <a
-                  href="http://www.facebook.com/"
-                  target="_blank"
-                  title="Facebook"
-                >
-                  <i className="fab fa-facebook-f text-color-light"></i>
-                </a>
-              </li>
-              <li className="social-icons-twitter">
-                <a
-                  href="http://www.twitter.com/"
-                  target="_blank"
-                  title="Twitter"
-                >
-                  <i className="fab fa-twitter text-color-light"></i>
-                </a>
-              </li>
-              <li className="social-icons-instagram">
-                <a
-                  href="http://www.instagram.com/"
-                  target="_blank"
-                  title="Instagram"
-                >
-                  <i className="fab fa-instagram text-color-light"></i>
-                </a>
-              </li>
-              <li className="social-icons-linkedin">
-                <a
-                  href="http://www.linkedin.com/"
-                  target="_blank"
-                  title="Linkedin"
-                >
-                  <i className="fab fa-linkedin text-color-light"></i>
-                </a>
+              <li className="d-blok align-items-center mb-4">
+                <div className="pb-3">
+                  <a
+                    href="tel:+0721 804 560"
+                    className=" align-items-center text-decoration-none text-color-light text-color-hover-primary font-weight-semibold text-4-5 "
+                  >
+                    +0721 804 560
+                  </a>
+                </div>
+                <div>
+                  <a
+                    href="tel:0356 175 148"
+                    className=" align-items-center text-decoration-none text-color-light text-color-hover-primary font-weight-semibold text-4-5"
+                  >
+                    0356 175 148
+                  </a>
+                </div>
               </li>
             </ul>
+            <Socials />
           </div>
           <div className="col-lg-6 mt-lg-5 pt-lg-3">
             <div className="row mb-5-5">
@@ -231,7 +206,7 @@ export default function Footer() {
           <div className="row">
             <div className="col-lg-6 mt-4">
               <p className="text-start text-3-5 font-weight-semi-bold text-light mb-0">
-                Porto © 2024. All Rights Reserved.
+                © Copyright AriseForChrist
               </p>
             </div>
             <div className="col-lg-6 text-lg-end mt-4">
@@ -248,47 +223,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="p-absolute custom-el-1 custom-el-pos-1">
-        <div
-          className="appear-animation"
-          data-appear-animation="fadeInUpShorter"
-          data-appear-animation-delay="0"
-        >
-          <Image
-            className="img-fluid"
-            alt="arise for christ logo"
-            height={50}
-            src={arrowUpLight}
-            width={150}
-          />
-        </div>
-        <div
-          className="appear-animation"
-          data-appear-animation="fadeInUpShorter"
-          data-appear-animation-delay="100"
-        >
-          <Image
-            alt="arise for christ logo"
-            className="img-fluid"
-            height={50}
-            src={arrowUpLight}
-            width={150}
-          />
-        </div>
-        <div
-          className="appear-animation"
-          data-appear-animation="fadeInUpShorter"
-          data-appear-animation-delay="200"
-        >
-          <Image
-            alt="arise for christ logo"
-            className="img-fluid"
-            height={50}
-            src={arrowUpLight}
-            width={150}
-          />
-        </div>
-      </div>
+     <Animation/>
     </footer>
   );
 }

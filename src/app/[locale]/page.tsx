@@ -1,9 +1,15 @@
-import Image from "next/image";
-import arrowUpLight from "../../../public/img/demos/creative-agency-2/svg/arrow-up-light.svg";
-import PersonalEvangelism from "./components/sections/personalEvangelism";
+import PersonalEvangelism from "./components/sections/personal-evangelism";
 import About from "./components/sections/about";
 import Numbers from "./components/sections/numbers";
-import { useTranslations } from "next-intl"
+import { useTranslations } from "next-intl";
+import CustomHeroBg from "./components/sections/custom-hero-bg";
+import { FaFacebookF } from "react-icons/fa6";
+import { FaInstagram } from "react-icons/fa6";
+import { FaYoutube } from "react-icons/fa";
+import { FaTiktok } from "react-icons/fa";
+import { FaSpotify } from "react-icons/fa6";
+import Link from "next/link";
+import Animation from "./components/sections/animation";
 
 export default function Home() {
   const t = useTranslations("hero");
@@ -16,66 +22,15 @@ export default function Home() {
         <div className="custom-hero-heading">
           <strong>{t("title-hero")}</strong>
         </div>
-        <div className="custom-hero-bg">
-          <svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
-            <defs>
-              <radialGradient
-                id="Gradient1"
-                cx="50%"
-                cy="50%"
-                fx="0.441602%"
-                fy="50%"
-                r=".5"
-              >
-                <animate
-                  attributeName="fx"
-                  dur="34s"
-                  values="0%;3%;0%"
-                  repeatCount="indefinite"
-                ></animate>
-                <stop offset="0%" stop-color="rgba(251, 193, 5, 1)"></stop>
-                <stop offset="100%" stop-color="rgba(251, 193, 5, 0)"></stop>
-              </radialGradient>
-            </defs>
-            <rect
-              x="13.744%"
-              y="1.18473%"
-              width="100%"
-              height="100%"
-              fill="url(#Gradient1)"
-              transform="rotate(334.41 50 50)"
-            >
-              <animate
-                attributeName="x"
-                dur="20s"
-                values="25%;0%;25%"
-                repeatCount="indefinite"
-              ></animate>
-              <animate
-                attributeName="y"
-                dur="21s"
-                values="0%;25%;0%"
-                repeatCount="indefinite"
-              ></animate>
-              <animateTransform
-                attributeName="transform"
-                type="rotate"
-                from="0 50 50"
-                to="360 50 50"
-                dur="7s"
-                repeatCount="indefinite"
-              ></animateTransform>
-            </rect>
-          </svg>
-        </div>
+        <CustomHeroBg />
         <div className="container p-relative z-index-3">
           <div className="row min-vh-100 align-items-center">
-            <div className="col-lg-8 text-center text-lg-start">
+            <div className="col-lg-10 text-center text-lg-start">
               <h3
                 className="text-color-light font-weight-bold custom-hero-font-1 pb-2 mb-4 appear-animation "
                 data-appear-animation="fadeInUpShorter"
                 data-appear-animation-delay="200"
-                >
+              >
                 {t("question1")} <br />
                 {t("question2")} <br />
                 {t("question3")}
@@ -85,94 +40,64 @@ export default function Home() {
                 data-appear-animation="fadeInUpShorter"
                 data-appear-animation-delay="300"
               >
-                <a
-                  href="#"
-                  className="btn btn-modern btn-primary text-capitalize text-dark text-3 px-2 py-1 anim-hover-translate-top-5px transition-2ms"
-                >
-                  Learn More{" "}
-                  <i className="fas fa-arrow-right rotate-l-45 ms-2"></i>
-                </a>
+                <div className="d-flex gap-2">
+                  <Link
+                    className="d-fex"
+                    href="https://www.facebook.com/AriseForChristRomania/"
+                    target="blank"
+                  >
+                    <span className="d-flex justify-center items-center gap-2 hover:decoration-none hover:text-blue-900  text-gray-400">
+                      <FaFacebookF className="w-3 h-3" />
+                      <span className="hover:outline-none">facebook</span>
+                    </span>
+                  </Link>
+                  /
+                  <Link
+                    href="https://www.instagram.com/p/CfL2FveIMpn/"
+                    target="blank"
+                  >
+                    <span className="d-flex justify-center items-center gap-2  hover:text-[#7B0166]  text-gray-400">
+                      <FaInstagram className="w-3 h-3  " />
+                      <span>instagram</span>
+                    </span>
+                  </Link>
+                  /
+                  <Link
+                    href="https://www.youtube.com/c/Ariseforchrist/"
+                    target="blank"
+                  >
+                    <span className="d-flex justify-center items-center gap-2    hover:text-red-500  text-gray-400 ">
+                      <FaYoutube className="w-3 h-3" />
+                      <span>youtube</span>
+                    </span>
+                  </Link>
+                  /
+                  <Link
+                    href="https://www.tiktok.com/@ariseforchrist/"
+                    target="blank"
+                  >
+                    <span className="d-flex justify-center items-center gap-2    hover:text-black  text-gray-400 ">
+                      <FaTiktok className="w-3 h-3" />
+                      <span>tiktok</span>
+                    </span>
+                  </Link>
+                  /
+                  <Link
+                    href="https://open.spotify.com/show/3284C4Oox7JSflk1AOlgav"
+                    target="blank"
+                  >
+                    <span className="d-flex justify-center items-center gap-2    hover:text-green-500  text-gray-400 ">
+                      <FaSpotify className="w-3 h-3" />
+                      <span>spotify</span>
+                    </span>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <div className="p-absolute custom-el-1 custom-el-pos-1">
-          <div
-            className="appear-animation"
-            data-appear-animation="fadeInUpShorter"
-            data-appear-animation-delay="0"
-          >
-            <Image
-              alt="arrowUpLight"
-              className="object-contain"
-              src={arrowUpLight}
-              width={140}
-            />
-          </div>
-          <div
-            className="appear-animation"
-            data-appear-animation="fadeInUpShorter"
-            data-appear-animation-delay="100"
-          >
-            <Image
-              alt="arrowUpLight"
-              className="object-contain"
-              src={arrowUpLight}
-              width={140}
-            />
-          </div>
-          <div
-            className="appear-animation"
-            data-appear-animation="fadeInUpShorter"
-            data-appear-animation-delay="200"
-          >
-            <Image
-              alt="arrowUpLight"
-              className="object-contain"
-              src={arrowUpLight}
-              width={140}
-            />
-          </div>
-        </div>
-        <div className="p-absolute custom-el-2 custom-el-pos-2">
-          <div
-            className="appear-animation"
-            data-appear-animation="fadeInUpShorter"
-            data-appear-animation-delay="0"
-          >
-            <Image
-              alt="arrowUpLight"
-              className="object-contain"
-              src={arrowUpLight}
-              width={70}
-            />
-          </div>
-          <div
-            className="appear-animation"
-            data-appear-animation="fadeInUpShorter"
-            data-appear-animation-delay="100"
-          >
-            <Image
-              alt="arrowUpLight"
-              className="object-contain"
-              src={arrowUpLight}
-              width={70}
-            />
-          </div>
-          <div
-            className="appear-animation"
-            data-appear-animation="fadeInUpShorter"
-            data-appear-animation-delay="200"
-          >
-            <Image
-              alt="arrowUpLight"
-              className="object-contain"
-              src={arrowUpLight}
-              width={70}
-            />
-          </div>
-        </div>
       </section>
+      <Animation />
       <PersonalEvangelism />
       <About />
       <Numbers />

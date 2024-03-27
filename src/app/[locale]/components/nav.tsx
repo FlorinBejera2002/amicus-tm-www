@@ -1,4 +1,4 @@
-"use client"
+
 
 import Image from "next/image";
 import Link from "next/link";
@@ -35,11 +35,11 @@ export default function Nav() {
                     className="header-nav-main header-nav-main-square header-nav-main-dropdown-no-borders header-nav-main-text-capitalize 
                        header-nav-main-arrows header-nav-main-full-width-mega-menu header-nav-main-mega-menu-bg-hover 
                        header-nav-main-mega-menu-bg-hover-dark header-nav-main-effect-5"
-                  >
+                      >
                     <nav className="collapse">
                       <ul className="nav nav-pills" id="mainNav">
                         <li>
-                          <a className="nav-link" href="/">
+                          <a className="nav-link " href="/">
                             Home
                           </a>
                         </li>
