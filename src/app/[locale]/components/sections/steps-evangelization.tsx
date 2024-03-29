@@ -1,15 +1,15 @@
 import React from "react";
 import Image from "next/image";
-import horizontalLogo from "../../../../../public/logo_horizontal_black.png";
+import LucianBalanescu from "../../../../../public/img/Podcast-Lucian-Balanescu.png";
 
 export default function StepsEvangelization() {
   return (
-    <section className="   m-20  bg-slate-50  relative  ">
-      <div className="container d-flex justify-center gap-16 pt-20">
+    <section className="  bg-slate-50" id="concept">
+      <div className="container d-flex justify-center gap-16  bg-color-light p-relative z-index-2 py-1 mt-3">
         <div>
           <Image
             className=""
-            src={horizontalLogo}
+            src={LucianBalanescu}
             alt="Stps for Evangelisation"
             width={400}
             height={400}

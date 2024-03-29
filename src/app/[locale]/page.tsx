@@ -12,6 +12,7 @@ import Link from "next/link";
 import Animation from "./components/sections/animation";
 import StepsEvangelization from "./components/sections/steps-evangelization";
 import { EmblaCarousel } from "./components/sections/embla-carousel";
+import Team from "./components/sections/team";
 
 export default function Home() {
   const t = useTranslations("hero");
@@ -103,8 +104,8 @@ export default function Home() {
       <EmblaCarousel />
       <About />
       <StepsEvangelization />
-      <PersonalEvangelism />
-
+      {/* <PersonalEvangelism /> */}
+      <Team />
       <Numbers />
     </div>
   );
