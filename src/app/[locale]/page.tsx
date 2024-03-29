@@ -11,6 +11,7 @@ import { FaSpotify } from "react-icons/fa6";
 import Link from "next/link";
 import Animation from "./components/sections/animation";
 import StepsEvangelization from "./components/sections/steps-evangelization";
+import { EmblaCarousel } from "./components/sections/embla-carousel";
 
 export default function Home() {
   const t = useTranslations("hero");
@@ -99,6 +100,7 @@ export default function Home() {
         </div>
       </section>
       <Animation />
+      <EmblaCarousel />
       <About />
       <StepsEvangelization />
       <PersonalEvangelism />
