@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+
 import horizontalLogo from "../../../../../public/logo_horizontal_black.png";
 
 export default function About() {

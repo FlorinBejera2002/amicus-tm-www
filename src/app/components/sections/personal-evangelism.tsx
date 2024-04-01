@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 
-import step1 from "../../../../../public/logo_horizontal_black.png";
+import step1 from "../../../../../../public/logo_horizontal_black.png";
 
 export default function PersonalEvangelism() {
   return (

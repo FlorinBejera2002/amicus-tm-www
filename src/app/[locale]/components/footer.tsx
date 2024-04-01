@@ -1,8 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-
 import horizontalLogo from "../../../../public/logo_horizontal_white.png";
-
 import Animation from "./sections/animation";
 import Socials from "./socials";
 
