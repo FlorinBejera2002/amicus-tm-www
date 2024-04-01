@@ -1,6 +1,7 @@
-import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import React from "react";
+
 import horizontalLogo from "../../../../../public/logo_horizontal_black.png";
 
 export default function Presentation() {
@@ -12,8 +13,8 @@ export default function Presentation() {
             <div className="row border-top">
               <div className="col-lg-2 order-3 order-lg-0 py-4 border-end ps-0 pe-0 pe-lg-4 m-0 text-start">
                 <a
-                  href="#"
                   className="btn btn-modern btn-dark w-100 font-weight-semibold text-capitalize text-3 py-3 anim-hover-translate-top-5px transition-2ms mb-5 mb-lg-0"
+                  href="#"
                 >
                   <span className="px-4 d-block ws-nowrap">
                     View Online{" "}
@@ -45,9 +46,9 @@ export default function Presentation() {
                     alt="arise for christ logo"
                     className="img-fluid my-lg-4"
                     height={40}
+                    loading="lazy"
                     src={horizontalLogo}
                     width={140}
-                    loading="lazy"
                   />
                 </Link>
               </div>
@@ -55,8 +56,8 @@ export default function Presentation() {
             <div className="row border-top">
               <div className="col-lg-2 order-3 order-lg-0 py-4 border-end ps-0 pe-0 pe-lg-4 m-0 text-start">
                 <a
-                  href="#"
                   className="btn btn-modern btn-dark w-100 font-weight-semibold text-capitalize text-3 py-3 anim-hover-translate-top-5px transition-2ms mb-5 mb-lg-0"
+                  href="#"
                 >
                   <span className="px-4 d-block ws-nowrap">
                     View Online{" "}
@@ -88,9 +89,9 @@ export default function Presentation() {
                     alt="arise for christ logo"
                     className="img-fluid my-lg-4"
                     height={40}
+                    loading="lazy"
                     src={horizontalLogo}
                     width={140}
-                    loading="lazy"
                   />
                 </Link>
               </div>
@@ -98,8 +99,8 @@ export default function Presentation() {
             <div className="row border-top border-bottom">
               <div className="col-lg-2 order-3 order-lg-0 py-4 border-end ps-0 pe-0 pe-lg-4 m-0 text-start">
                 <a
-                  href="#"
                   className="btn btn-modern btn-dark w-100 font-weight-semibold text-capitalize text-3 py-3 anim-hover-translate-top-5px transition-2ms mb-5 mb-lg-0"
+                  href="#"
                 >
                   <span className="px-4 d-block ws-nowrap">
                     View Online{" "}
@@ -132,9 +133,9 @@ export default function Presentation() {
                     alt="arise for christ logo"
                     className="img-fluid my-lg-4"
                     height={40}
+                    loading="lazy"
                     src={horizontalLogo}
                     width={140}
-                    loading="lazy"
                   />
                 </Link>
               </div>

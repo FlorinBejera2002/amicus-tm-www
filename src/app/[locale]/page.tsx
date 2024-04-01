@@ -1,26 +1,27 @@
-import PersonalEvangelism from "./components/sections/personal-evangelism";
-import About from "./components/sections/about";
-import Numbers from "./components/sections/numbers";
+import Link from "next/link";
 import { useTranslations } from "next-intl";
-import CustomHeroBg from "./components/sections/custom-hero-bg";
-import { FaFacebookF } from "react-icons/fa6";
-import { FaInstagram } from "react-icons/fa6";
 import { FaYoutube } from "react-icons/fa";
 import { FaTiktok } from "react-icons/fa";
+import { FaFacebookF } from "react-icons/fa6";
+import { FaInstagram } from "react-icons/fa6";
 import { FaSpotify } from "react-icons/fa6";
-import Link from "next/link";
+
+import About from "./components/sections/about";
 import Animation from "./components/sections/animation";
-import StepsEvangelization from "./components/sections/steps-evangelization";
+import CustomHeroBg from "./components/sections/custom-hero-bg";
 import { EmblaCarousel } from "./components/sections/embla-carousel";
+import Numbers from "./components/sections/numbers";
+import StepsEvangelization from "./components/sections/steps-evangelization";
 import Team from "./components/sections/team";
 
 export default function Home() {
   const t = useTranslations("hero");
+
   return (
-    <div role="main" className="main">
+    <div className="main" role="main">
       <section
-        id="home"
         className="p-relative border-0 bg-quaternary overflow-hidden m-0 p-0"
+        id="home"
       >
         <div className="custom-hero-heading">
           <strong>{t("title-hero")}</strong>

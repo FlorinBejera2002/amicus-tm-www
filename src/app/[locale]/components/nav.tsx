@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import horizontalLogo from "../../../../public/logo_horizontal_white.png";
 
+import horizontalLogo from "../../../../public/logo_horizontal_white.png";
 import Elements from "../elements/page";
 import Portfolio from "../portfolio/page";
 
@@ -33,7 +33,7 @@ export default function Nav() {
                     className="header-nav-main header-nav-main-square header-nav-main-dropdown-no-borders header-nav-main-text-capitalize 
                        header-nav-main-arrows header-nav-main-full-width-mega-menu header-nav-main-mega-menu-bg-hover 
                        header-nav-main-mega-menu-bg-hover-dark header-nav-main-effect-5"
-                      >
+                  >
                     <nav className="collapse">
                       <ul className="nav nav-pills" id="mainNav">
                         <li>

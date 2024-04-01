@@ -1,6 +1,7 @@
-import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import React from "react";
+
 import AdrianCovaci from "../../../../../public/img/team/Adrian-Covaci.png";
 
 export default function Team() {
@@ -15,11 +16,11 @@ export default function Team() {
             <div className="w-48 h-80 bg-gradient-to-t from-gray-800 to-transparent rounded-xl gap-1 flex flex-col justify-center  items-center">
               <Link href="https://www.youtube.com/watch?v=XhQIeYzccUI">
                 <Image
+                  alt=""
                   className="border-b-2 pb-2 border-gray-600"
+                  height={150}
                   src={AdrianCovaci}
                   width={150}
-                  height={150}
-                  alt=""
                 />
               </Link>
               <b className="text-gray-400">Avram Sabou</b>
@@ -28,11 +29,11 @@ export default function Team() {
             <div className="w-48 h-80 bg-gradient-to-t from-gray-800 to-transparent rounded-xl gap-1 flex flex-col justify-center  items-center">
               <Link href="https://www.youtube.com/watch?v=XhQIeYzccUI">
                 <Image
+                  alt=""
                   className="border-b-2 pb-2 border-gray-600"
+                  height={150}
                   src={AdrianCovaci}
                   width={150}
-                  height={150}
-                  alt=""
                 />
               </Link>
               <b className="text-gray-400">Avram Sabou</b>
@@ -41,11 +42,11 @@ export default function Team() {
             <div className="w-48 h-80 bg-gradient-to-t from-gray-800 to-transparent rounded-xl gap-1 flex flex-col justify-center  items-center">
               <Link href="https://www.youtube.com/watch?v=XhQIeYzccUI">
                 <Image
+                  alt=""
                   className="border-b-2 pb-2 border-gray-600"
+                  height={150}
                   src={AdrianCovaci}
                   width={150}
-                  height={150}
-                  alt=""
                 />
               </Link>
               <b className="text-gray-400">Avram Sabou</b>
@@ -54,11 +55,11 @@ export default function Team() {
             <div className="w-48 h-80 bg-gradient-to-t from-gray-800 to-transparent rounded-xl gap-1 flex flex-col justify-center  items-center">
               <Link href="https://www.youtube.com/watch?v=XhQIeYzccUI">
                 <Image
+                  alt=""
                   className="border-b-2 pb-2 border-gray-600"
+                  height={150}
                   src={AdrianCovaci}
                   width={150}
-                  height={150}
-                  alt=""
                 />
               </Link>
               <b className="text-gray-400">Avram Sabou</b>
@@ -67,11 +68,11 @@ export default function Team() {
             <div className="w-48 h-80 bg-gradient-to-t from-gray-800 to-transparent rounded-xl gap-1 flex flex-col justify-center  items-center">
               <Link href="https://www.youtube.com/watch?v=XhQIeYzccUI">
                 <Image
+                  alt=""
                   className="border-b-2 pb-2 border-gray-600"
+                  height={150}
                   src={AdrianCovaci}
                   width={150}
-                  height={150}
-                  alt=""
                 />
               </Link>
               <b className="text-gray-400">Avram Sabou</b>
@@ -80,11 +81,11 @@ export default function Team() {
             <div className="w-48 h-80 bg-gradient-to-t from-gray-800 to-transparent rounded-xl gap-1 flex flex-col justify-center  items-center">
               <Link href="https://www.youtube.com/watch?v=XhQIeYzccUI">
                 <Image
+                  alt=""
                   className="border-b-2 pb-2 border-gray-600"
+                  height={150}
                   src={AdrianCovaci}
                   width={150}
-                  height={150}
-                  alt=""
                 />
               </Link>
               <b className="text-gray-400">Avram Sabou</b>

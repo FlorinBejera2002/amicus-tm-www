@@ -3,5 +3,5 @@ export default function NotFound() {
     <div>
       <h1>Something went wrong!</h1>
     </div>
-  )
+  );
 }

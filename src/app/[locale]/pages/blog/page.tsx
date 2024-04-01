@@ -13,17 +13,17 @@
 
 // const BlogPage = async () => {
 //   const posts = await fetchBlogs();
-  
+
 //   return { posts && posts.map((post, idx) => {
 //     const url = `${URL}/posts/${post.slug}`;
 
-//     return <BlogPost 
-//              key={idx} 
-//              url={url} 
-//              title={post.title} 
+//     return <BlogPost
+//              key={idx}
+//              url={url}
+//              title={post.title}
 //              content={post.content}
 //            />
-//     }); 
+//     });
 //   };
 // };
 

@@ -1,5 +1,6 @@
-import React from "react";
 import Image from "next/image";
+import React from "react";
+
 import horizontalLogo from "../../../../../public/logo_horizontal_black.png";
 
 export default function About() {
@@ -22,12 +23,12 @@ export default function About() {
         className="appear-animation"
         data-appear-animation="fadeIn"
         data-appear-animation-delay="350"
-        >
+      >
         <div
           className="marquee custom-marquee-1 pt-4 d-flex"
+          data-duplicated="true"
           data-duration="40000"
           data-gap="10"
-          data-duplicated="true"
           data-startVisible="true"
         >
           <span className="d-flex align-items-center" data-clone-element="2">
@@ -88,7 +89,6 @@ export default function About() {
           </span>
         </div>
       </div>
-      
     </section>
   );
 }

@@ -1,5 +1,6 @@
-import React from "react";
 import Image from "next/image";
+import React from "react";
+
 import step1 from "../../../../../public/logo_horizontal_black.png";
 
 export default function PersonalEvangelism() {
@@ -20,9 +21,9 @@ export default function PersonalEvangelism() {
                       alt="Arise photo"
                       className="p-relative"
                       height={50}
+                      loading="lazy"
                       src={step1}
                       width={150}
-                      loading="lazy"
                     />
                   </div>
                 </div>
@@ -46,9 +47,9 @@ export default function PersonalEvangelism() {
                       alt="Arise photo"
                       className="p-relative"
                       height={50}
+                      loading="lazy"
                       src={step1}
                       width={150}
-                      loading="lazy"
                     />
                   </div>
                 </div>
@@ -73,9 +74,9 @@ export default function PersonalEvangelism() {
                       alt="Arise photo"
                       className="p-relative"
                       height={50}
+                      loading="lazy"
                       src={step1}
                       width={150}
-                      loading="lazy"
                     />
                   </div>
                 </div>
@@ -189,8 +190,8 @@ export default function PersonalEvangelism() {
               data-appear-animation-delay="300"
             >
               <a
-                href="#"
                 className="btn btn-modern btn-primary text-capitalize text-dark text-3 px-2 py-1 anim-hover-translate-top-5px transition-2ms"
+                href="#"
               >
                 Learn More{" "}
                 <i className="fas fa-arrow-right rotate-l-45 ms-2"></i>

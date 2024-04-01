@@ -1,8 +1,8 @@
+import Link from "next/link";
 import React from "react";
+import { FaYoutube } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa6";
-import { FaYoutube } from "react-icons/fa";
-import Link from "next/link";
 
 export default function Socials() {
   return (
