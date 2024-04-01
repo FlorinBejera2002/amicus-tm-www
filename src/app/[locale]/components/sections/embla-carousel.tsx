@@ -24,7 +24,7 @@ export const EmblaCarousel = () => {
     <div className="overflow-hidden" ref={emblaRef}>
       <div className="flex h-96 pt-10 align-middle">
         <div
-          className="flex  gap-14 6 min-w-0 w-25 pt-10  justify-center border-t"
+          className="6  w-25 flex min-w-0 justify-center gap-14  border-t pt-10"
           style={{ flex: "100% 0 0" }}
         >
           <Link href="https://www.youtube.com/watch?v=XhQIeYzccUI">
@@ -42,10 +42,10 @@ export const EmblaCarousel = () => {
               style={{ textDecoration: "none" }}
             >
               <h1 className="pb-1">
-                46 PODCAST Lucian Bălănescu "Tot timpul ne căsătorim cu persoana
-                nepotrivită"
+                #46 PODCAST Lucian Bălănescu &quot;Tot timpul ne căsătorim cu
+                persoana nepotrivită&quot;
               </h1>
-              <p className="text-gray-500 text-sm">
+              <p className="text-sm text-gray-500">
                 27 K de vizionări • acum 1 an
               </p>
             </Link>
@@ -63,22 +63,22 @@ export const EmblaCarousel = () => {
                   src={LogoYouTube}
                   width={25}
                 />
-                <p className="text-gray-500 text-sm">Arise for Chist</p>
+                <p className="text-sm text-gray-500">Arise for Chist</p>
               </Link>
             </div>
-            <p className="text-gray-500 pt-3 text-xs pb-1">
+            <p className="pb-1 pt-3 text-xs text-gray-500">
               Episodul 46 | Podcast Arise for Christ “Tot timpul ne căsătorim cu
               persoana nepotrivită❗️” ...
             </p>
 
-            <b className="text-gray-500 text-xs w-5 h-5  rounded-1 flex items-center  justify-center bg-gray-200">
+            <b className="rounded-1 flex h-5 w-5  items-center justify-center bg-gray-200  text-xs text-gray-500">
               4K
             </b>
           </div>
         </div>
 
         <div
-          className="flex  gap-14 6 min-w-0 w-25 pt-10  justify-center border-t"
+          className="6  w-25 flex min-w-0 justify-center gap-14  border-t pt-10"
           style={{ flex: "100% 0 0" }}
         >
           <Link href="https://www.youtube.com/watch?v=VputJkB5E8g">
@@ -98,7 +98,7 @@ export const EmblaCarousel = () => {
               <h1 className="pb-1">
                 84 CE NU AM REUȘIT SĂ-I MAI CITESC FETIȚEI MELE - IONUȚ PRODAN
               </h1>
-              <p className="text-gray-500 text-sm">
+              <p className="text-sm text-gray-500">
                 7,5 K de vizionări • acum 8 zile
               </p>
             </Link>
@@ -116,22 +116,22 @@ export const EmblaCarousel = () => {
                   src={LogoYouTube}
                   width={25}
                 />
-                <p className="text-gray-500 text-sm">Arise for Chist</p>
+                <p className="text-sm text-gray-500">Arise for Chist</p>
               </Link>
             </div>
-            <p className="text-gray-500 pt-3 text-xs pb-1">
+            <p className="pb-1 pt-3 text-xs text-gray-500">
               Sezonul 3 episodul84 În episodul nostru special, ne întâlnim cu
               Ionuț Prodan, un om cu o poveste de viață ....
             </p>
 
-            <b className="text-gray-500 text-xs w-5 h-5  rounded-1 flex items-center  justify-center bg-gray-200">
+            <b className="rounded-1 flex h-5 w-5  items-center justify-center bg-gray-200  text-xs text-gray-500">
               4K
             </b>
           </div>
         </div>
 
         <div
-          className="flex  gap-14 6 min-w-0 w-25 pt-10  justify-center border-t"
+          className="6  w-25 flex min-w-0 justify-center gap-14  border-t pt-10"
           style={{ flex: "100% 0 0" }}
         >
           <Link href="https://www.youtube.com/watch?v=n8AgQqQjejU">
@@ -149,9 +149,10 @@ export const EmblaCarousel = () => {
               style={{ textDecoration: "none" }}
             >
               <h1 className="pb-1">
-                27 PODCAST Călin Onițiu "Provocările părinților de adolescenți"
+                27 PODCAST Călin Onițiu &quot;Provocările părinților de
+                adolescenți&quot;
               </h1>
-              <p className="text-gray-500 text-sm">
+              <p className="text-sm text-gray-500">
                 13 K de vizionări • acum 1 an
               </p>
             </Link>
@@ -169,15 +170,15 @@ export const EmblaCarousel = () => {
                   src={LogoYouTube}
                   width={25}
                 />
-                <p className="text-gray-500 text-sm">Arise for Chist</p>
+                <p className="text-sm text-gray-500">Arise for Chist</p>
               </Link>
             </div>
-            <p className="text-gray-500 pt-3 text-xs pb-1">
+            <p className="pb-1 pt-3 text-xs text-gray-500">
               Sezonul 3 episodul84 În episodul nostru special, ne întâlnim cu
               Ionuț Prodan, un om cu o poveste de viață ....
             </p>
 
-            <b className="text-gray-500 text-xs w-5 h-5  rounded-1 flex items-center  justify-center bg-gray-200">
+            <b className="rounded-1 flex h-5 w-5  items-center justify-center bg-gray-200  text-xs text-gray-500">
               4K
             </b>
           </div>
