@@ -338,5 +338,5 @@ export default function Portfolio() {
         </li>
       </ul>
     </li>
-  );
+  )
 }

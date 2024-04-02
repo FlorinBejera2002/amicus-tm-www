@@ -1,22 +1,21 @@
-import Link from "next/link";
-import { useTranslations } from "next-intl";
-import { FaYoutube } from "react-icons/fa";
-import { FaTiktok } from "react-icons/fa";
-import { FaFacebookF } from "react-icons/fa6";
-import { FaInstagram } from "react-icons/fa6";
-import { FaSpotify } from "react-icons/fa6";
+import Team from './components/sections/team'
+import PersonalEvangelism from './components/sections/personal-evangelism'
+import Numbers from './components/sections/numbers'
+import { EmblaCarousel } from './components/sections/embla-carousel'
+import CustomHeroBg from './components/sections/custom-hero-bg'
+import Animation from './components/sections/animation'
+import About from './components/sections/about'
 
-import About from "./components/sections/about";
-import Animation from "./components/sections/animation";
-import CustomHeroBg from "./components/sections/custom-hero-bg";
-import { EmblaCarousel } from "./components/sections/embla-carousel";
-import Numbers from "./components/sections/numbers";
-import StepsEvangelization from "./components/sections/steps-evangelization";
-import Team from "./components/sections/team";
-import PersonalEvangelism from "./components/sections/personal-evangelism";
+import { FaFacebookF } from 'react-icons/fa6'
+import { FaInstagram } from 'react-icons/fa6'
+import { FaSpotify } from 'react-icons/fa6'
+import { FaYoutube } from 'react-icons/fa'
+import { FaTiktok } from 'react-icons/fa'
+import { useTranslations } from 'next-intl'
+import Link from 'next/link'
 
 export default function Home() {
-  const t = useTranslations("hero");
+  const t = useTranslations('hero')
 
   return (
     <div className="main" role="main">
@@ -25,7 +24,7 @@ export default function Home() {
         id="home"
       >
         <div className="custom-hero-heading">
-          <strong>{t("title-hero")}</strong>
+          <strong>{t('title-hero')}</strong>
         </div>
         <CustomHeroBg />
         <div className="container p-relative z-index-3">
@@ -36,9 +35,9 @@ export default function Home() {
                 data-appear-animation="fadeInUpShorter"
                 data-appear-animation-delay="200"
               >
-                {t("question1")} <br />
-                {t("question2")} <br />
-                {t("question3")}
+                {t('question1')} <br />
+                {t('question2')} <br />
+                {t('question3')}
               </h3>
               <div
                 className="d-block appear-animation"
@@ -110,5 +109,5 @@ export default function Home() {
       <PersonalEvangelism />
       <Numbers />
     </div>
-  );
+  )
 }

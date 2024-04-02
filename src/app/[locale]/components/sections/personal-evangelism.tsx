@@ -1,15 +1,17 @@
-import Image from "next/image";
-import React from "react";
-import { useTranslations } from "next-intl";
+import React from 'react'
 
-import step1 from "../../../../../public/img/step1.jpg";
-import step2 from "../../../../../public/img/step2.jpeg";
-import step3 from "../../../../../public/img/step3.jpeg";
-import step4 from "../../../../../public/img/step4.jpeg";
-import step5 from "../../../../../public/img/step5.jpeg";
+import { useTranslations } from 'next-intl'
+import Image from 'next/image'
+
+import step5 from '../../../../../public/img/step5.jpeg'
+import step4 from '../../../../../public/img/step4.jpeg'
+import step3 from '../../../../../public/img/step3.jpeg'
+import step2 from '../../../../../public/img/step2.jpeg'
+import step1 from '../../../../../public/img/step1.jpg'
 
 export default function PersonalEvangelism() {
-  const t = useTranslations("vision");
+  const t = useTranslations('vision')
+
   return (
     <section id="concept">
       <div className="container bg-color-light p-relative z-index-2 py-1 mt-3">
@@ -107,85 +109,85 @@ export default function PersonalEvangelism() {
             >
               <div
                 className="toggle toggle-minimal toggle-dark"
-                data-plugin-toggle
+                data-plugin-toggle={true}
               >
                 <section className="toggle">
                   <details className="open:bg-white border-b  open:ring-1 open:ring-black/5 open:shadow-lg p-3 rounded-lg transform-gpu delay-75 duration-100 ease-in-out ">
                     <summary className="leading-5 text-slate-900 dark:text-white font-semibold select-none">
-                      {t("step1_title")}
+                      {t('step1_title')}
                     </summary>
                     <div className="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-400">
-                      <p>{t("step1_description")}</p>
+                      <p>{t('step1_description')}</p>
                     </div>
                   </details>
                 </section>
                 <section className="toggle">
                   <details className="open:bg-white border-b  open:ring-1 open:ring-black/5 open:shadow-lg p-3 rounded-lg transform-gpu delay-75 duration-100 ease-in-out ">
                     <summary className="leading-6 text-slate-900 dark:text-white font-semibold select-none">
-                      {t("step2_title")}
+                      {t('step2_title')}
                     </summary>
                     <div className="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-400">
-                      <p>{t("step2_description")}</p>
+                      <p>{t('step2_description')}</p>
                     </div>
                   </details>
                 </section>
                 <section className="toggle">
                   <details className="open:bg-white border-b  open:ring-1 open:ring-black/5 open:shadow-lg p-3 rounded-lg transform-gpu delay-75 duration-100 ease-in-out ">
                     <summary className="leading-6 text-slate-900 dark:text-white font-semibold select-none">
-                      {t("step3_title")}
+                      {t('step3_title')}
                     </summary>
                     <div className="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-400">
-                      <p>{t("step3_description")}</p>
+                      <p>{t('step3_description')}</p>
                     </div>
                   </details>
                 </section>
                 <section className="toggle">
                   <details className="open:bg-white border-b  open:ring-1 open:ring-black/5 open:shadow-lg p-3 rounded-lg transform-gpu delay-75 duration-100 ease-in-out ">
                     <summary className="leading-6 text-slate-900 dark:text-white font-semibold select-none">
-                      {t("step4_title")}
+                      {t('step4_title')}
                     </summary>
                     <div className="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-400">
-                      <p>{t("step4_description")}</p>
+                      <p>{t('step4_description')}</p>
                     </div>
                   </details>
                 </section>
                 <section className="toggle">
                   <details className="open:bg-white border-b  open:ring-1 open:ring-black/5 open:shadow-lg p-3 rounded-lg transform-gpu delay-75 duration-100 ease-in-out ">
                     <summary className="leading-6 text-slate-900 dark:text-white font-semibold select-none">
-                      {t("step5_title")}
+                      {t('step5_title')}
                     </summary>
                     <div className="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-400">
-                      <p>{t("step5_description")}</p>
+                      <p>{t('step5_description')}</p>
                     </div>
                   </details>
                 </section>
                 <section className="toggle">
                   <details className="open:bg-white border-b  open:ring-1 open:ring-black/5 open:shadow-lg p-3 rounded-lg transform-gpu delay-75 duration-100 ease-in-out ">
                     <summary className="leading-6 text-slate-900 dark:text-white font-semibold select-none">
-                      {t("step6_title")}
+                      {t('step6_title')}
                     </summary>
                     <div className="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-400">
-                      <p>{t("step6_description")}</p>
+                      <p>{t('step6_description')}</p>
                     </div>
                   </details>
                 </section>
                 <section className="toggle">
                   <details className="open:bg-white border-b  open:ring-1 open:ring-black/5 open:shadow-lg p-3 rounded-lg transform-gpu delay-75 duration-100 ease-in-out ">
                     <summary className="leading-6 text-slate-900 dark:text-white font-semibold select-none">
-                      {t("step7_title")}
+                      {t('step7_title')}
                     </summary>
                     <div className="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-400">
-                      <p>{t("step7_description")}</p>
+                      <p>{t('step7_description')}</p>
                     </div>
                   </details>
                 </section>
                 <section className="toggle">
                   <details className="open:bg-white border-b  open:ring-1 open:ring-black/5 open:shadow-lg p-3 rounded-lg transform-gpu delay-75 duration-100 ease-in-out ">
                     <summary className="leading-6 text-slate-900 dark:text-white font-semibold select-none">
-                      {t("step8_title")}
+                      {t('step8_title')}
                     </summary>
                     <div className="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-400">
-                      <p>{t("step8_description")}</p>
+                      <p>{t('step8_description')}</p>
                     </div>
                   </details>
                 </section>
@@ -195,5 +197,5 @@ export default function PersonalEvangelism() {
         </div>
       </div>
     </section>
-  );
+  )
 }

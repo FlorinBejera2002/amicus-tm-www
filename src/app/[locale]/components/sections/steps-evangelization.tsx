@@ -1,7 +1,8 @@
-import Image from "next/image";
-import React from "react";
+import React from 'react'
 
-import LucianBalanescu from "../../../../../public/img/Podcast-Lucian-Balanescu.png";
+import Image from 'next/image'
+
+import LucianBalanescu from '../../../../../public/img/Podcast-Lucian-Balanescu.png'
 
 export default function StepsEvangelization() {
   return (
@@ -33,5 +34,5 @@ export default function StepsEvangelization() {
         </div>
       </div>
     </section>
-  );
+  )
 }

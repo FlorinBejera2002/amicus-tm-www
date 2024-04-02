@@ -1,8 +1,9 @@
-import Image from "next/image";
-import Link from "next/link";
-import React from "react";
+import React from 'react'
 
-import horizontalLogo from "../../../../../public/logo_horizontal_black.png";
+import Link from 'next/link'
+import Image from 'next/image'
+
+import horizontalLogo from '../../../../../public/logo_horizontal_black.png'
 
 export default function Presentation() {
   return (
@@ -17,7 +18,7 @@ export default function Presentation() {
                   href="#"
                 >
                   <span className="px-4 d-block ws-nowrap">
-                    View Online{" "}
+                    View Online{' '}
                     <i className="fas fa-arrow-right rotate-l-45 ms-2"></i>
                   </span>
                 </a>
@@ -37,7 +38,7 @@ export default function Presentation() {
                 >
                   Cras a elit sit amet leo accumsan volutpat. Suspendisse
                   hendreriast ehicula leo, vel efficitur felis ultrices non.
-                  Cras a elit sit amet leo acun volutpat. Suspendisse hendrerit.{" "}
+                  Cras a elit sit amet leo acun volutpat. Suspendisse hendrerit.{' '}
                 </p>
               </div>
               <div className="col-lg-4 p-0 ps-lg-4">
@@ -60,7 +61,7 @@ export default function Presentation() {
                   href="#"
                 >
                   <span className="px-4 d-block ws-nowrap">
-                    View Online{" "}
+                    View Online{' '}
                     <i className="fas fa-arrow-right rotate-l-45 ms-2"></i>
                   </span>
                 </a>
@@ -80,7 +81,7 @@ export default function Presentation() {
                 >
                   Cras a elit sit amet leo accumsan volutpat. Suspendisse
                   hendreriast ehicula leo, vel efficitur felis ultrices non.
-                  Cras a elit siel efficitur fel.{" "}
+                  Cras a elit siel efficitur fel.{' '}
                 </p>
               </div>
               <div className="col-lg-4 p-0 ps-lg-4">
@@ -103,7 +104,7 @@ export default function Presentation() {
                   href="#"
                 >
                   <span className="px-4 d-block ws-nowrap">
-                    View Online{" "}
+                    View Online{' '}
                     <i className="fas fa-arrow-right rotate-l-45 ms-2"></i>
                   </span>
                 </a>
@@ -124,7 +125,7 @@ export default function Presentation() {
                   Cras a elit sit amet leo accumsan volutpat. Suspendisse
                   hendreriast ehicula leo, vel efficitur felis ultrices non.
                   Cras a elit sit amet leo acun volutpehicula leo, vel efficitur
-                  fel.{" "}
+                  fel.{' '}
                 </p>
               </div>
               <div className="col-lg-4 p-0 ps-lg-4">
@@ -144,5 +145,5 @@ export default function Presentation() {
         </div>
       </div>
     </div>
-  );
+  )
 }

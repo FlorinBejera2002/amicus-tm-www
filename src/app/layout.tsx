@@ -1,5 +1,7 @@
+import { ReactNode } from 'react'
+
 export default function RootLayout({
-  children,
-}: Readonly<{ children: React.ReactNode }>) {
-  return children;
+  children
+}: Readonly<{ children: ReactNode }>) {
+  return children
 }

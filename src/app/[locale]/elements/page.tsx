@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 export default function Elements() {
   return (
@@ -32,7 +32,7 @@ export default function Elements() {
                       className="dropdown-item"
                       href="elements-animations.html"
                     >
-                      Animations{" "}
+                      Animations{' '}
                       <span className="tip tip-dark p-relative bottom-2">
                         hot
                       </span>
@@ -155,7 +155,7 @@ export default function Elements() {
                       className="dropdown-item"
                       href="elements-image-frames.html"
                     >
-                      Image Frames{" "}
+                      Image Frames{' '}
                       <span className="tip tip-dark p-relative bottom-2">
                         hot
                       </span>
@@ -357,5 +357,5 @@ export default function Elements() {
         </li>
       </ul>
     </li>
-  );
+  )
 }

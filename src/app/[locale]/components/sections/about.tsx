@@ -1,6 +1,8 @@
-import Image from "next/image";
-import React from "react";
-import horizontalLogo from "../../../../../public/logo_horizontal_black.png";
+import React from 'react'
+
+import Image from 'next/image'
+
+import horizontalLogo from '../../../../../public/logo_horizontal_black.png'
 
 export default function About() {
   return (
@@ -89,5 +91,5 @@ export default function About() {
         </div>
       </div>
     </section>
-  );
+  )
 }

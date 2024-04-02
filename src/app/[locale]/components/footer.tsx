@@ -1,8 +1,10 @@
-import Image from "next/image";
-import Link from "next/link";
-import horizontalLogo from "../../../../public/logo_horizontal_white.png";
-import Animation from "./sections/animation";
-import Socials from "./socials";
+import Socials from './socials'
+import Animation from './sections/animation'
+
+import Link from 'next/link'
+import Image from 'next/image'
+
+import horizontalLogo from '../../../../public/logo_horizontal_white.png'
 
 export default function Footer() {
   return (
@@ -223,5 +225,5 @@ export default function Footer() {
       </div>
       <Animation />
     </footer>
-  );
+  )
 }

@@ -1,16 +1,18 @@
-"use client";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Image from "next/image";
-import Link from "next/link";
-import { useState } from "react";
+'use client'
+import { useState } from 'react'
 
-import horizontalLogo from "../../../../public/logo_horizontal_white.png";
-import Elements from "../elements/page";
-import Portfolio from "../portfolio/page";
+import Portfolio from '../portfolio/page'
+import Elements from '../elements/page'
+
+import Link from 'next/link'
+import Image from 'next/image'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBars } from '@fortawesome/free-solid-svg-icons'
+
+import horizontalLogo from '../../../../public/logo_horizontal_white.png'
 
 export default function Nav() {
-  const [navbar, setNavBar] = useState(false);
+  const [navbar, setNavBar] = useState(false)
 
   return (
     <header className="header-transparent" id="header">
@@ -163,5 +165,5 @@ export default function Nav() {
         </div>
       )}
     </header>
-  );
+  )
 }

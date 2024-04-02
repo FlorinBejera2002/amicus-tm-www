@@ -1,7 +1,6 @@
-import Image from "next/image";
-import React from "react";
+import Image from 'next/image'
 
-import step1 from "../../../../../../public/logo_horizontal_black.png";
+import step1 from '../../../../../../public/logo_horizontal_black.png'
 
 export default function PersonalEvangelism() {
   return (
@@ -34,7 +33,7 @@ export default function PersonalEvangelism() {
                   className="custom-el-3 bg-color-primary custom-border-radius-2 mx-auto appear-animation"
                   data-appear-animation="zoomIn"
                   data-appear-animation-delay="200"
-                ></div>
+                />
               </div>
               <div className="p-2 flex-fill">
                 <div
@@ -61,7 +60,7 @@ export default function PersonalEvangelism() {
                   className="custom-el-3 custom-el-3-pos-2 bg-color-dark custom-border-radius-4 ms-auto appear-animation"
                   data-appear-animation="zoomIn"
                   data-appear-animation-delay="400"
-                ></div>
+                />
               </div>
               <div className="p-2 flex-fill">
                 <div
@@ -98,7 +97,7 @@ export default function PersonalEvangelism() {
             >
               <div
                 className="toggle toggle-minimal toggle-dark"
-                data-plugin-toggle
+                data-plugin-toggle={true}
               >
                 <section className="toggle">
                   <details className="open:bg-white border-b  open:ring-1 open:ring-black/5 open:shadow-lg p-6 rounded-lg transform-gpu delay-75 duration-100 ease-in-out ">
@@ -109,7 +108,7 @@ export default function PersonalEvangelism() {
                       <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Curabitur pellentesque neque eget diam posuere porta.
-                        Quisque ut nulla at nunc <a href="#">vehicula</a>{" "}
+                        Quisque ut nulla at nunc <a href="#">vehicula</a>{' '}
                         lacinia. Proin adipiscing porta tellus, ut feugiat nibh
                         adipiscing sit amet. In eu justo a felis faucibus ornare
                         vel id metus. Vestibulum ante ipsum primis in faucibus
@@ -117,8 +116,8 @@ export default function PersonalEvangelism() {
                         libero ligula. Fusce eget metus lorem, ac viverra leo.
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Curabitur pellentesque neque eget diam posuere porta.
-                        Quisque ut nulla at nunc <a href="#">vehicula</a>{" "}
-                        lacinia.{" "}
+                        Quisque ut nulla at nunc <a href="#">vehicula</a>{' '}
+                        lacinia.{' '}
                       </p>
                     </div>
                   </details>
@@ -193,7 +192,7 @@ export default function PersonalEvangelism() {
                 className="btn btn-modern btn-primary text-capitalize text-dark text-3 px-2 py-1 anim-hover-translate-top-5px transition-2ms"
                 href="#"
               >
-                Learn More{" "}
+                Learn More{' '}
                 <i className="fas fa-arrow-right rotate-l-45 ms-2"></i>
               </a>
             </div>
@@ -201,5 +200,5 @@ export default function PersonalEvangelism() {
         </div>
       </div>
     </section>
-  );
+  )
 }

@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 export default function Numbers() {
   return (
@@ -93,5 +93,5 @@ export default function Numbers() {
         </div>
       </div>
     </section>
-  );
+  )
 }

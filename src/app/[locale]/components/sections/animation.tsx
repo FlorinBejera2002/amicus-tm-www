@@ -1,7 +1,8 @@
-import Image from "next/image";
-import React from "react";
+import React from 'react'
 
-import arrowUpLight from "../../../../../public/img/demos/creative-agency-2/svg/arrow-up-light.svg";
+import Image from 'next/image'
+
+import arrowUpLight from '../../../../../public/img/demos/creative-agency-2/svg/arrow-up-light.svg'
 
 export default function Animation() {
   return (
@@ -83,5 +84,5 @@ export default function Animation() {
         </div>
       </div>
     </>
-  );
+  )
 }

@@ -1,5 +1,3 @@
-import React from "react";
-
 const CustomHeroBg = () => {
   return (
     <div className="custom-hero-bg loaded">
@@ -18,7 +16,7 @@ const CustomHeroBg = () => {
               dur="34s"
               repeatCount="indefinite"
               values="0%;3%;0%"
-            ></animate>
+            />
             <stop offset="0%" stopColor="rgba(251, 193, 5, 1)"></stop>
             <stop offset="100%" stopColor="rgba(251, 193, 5, 0)"></stop>
           </radialGradient>
@@ -36,13 +34,13 @@ const CustomHeroBg = () => {
             dur="20s"
             repeatCount="indefinite"
             values="25%;0%;25%"
-          ></animate>
+          />
           <animate
             attributeName="y"
             dur="21s"
             repeatCount="indefinite"
             values="0%;25%;0%"
-          ></animate>
+          />
           <animateTransform
             attributeName="transform"
             dur="7s"
@@ -50,11 +48,11 @@ const CustomHeroBg = () => {
             repeatCount="indefinite"
             to="360 50 50"
             type="rotate"
-          ></animateTransform>
+          />
         </rect>
       </svg>
     </div>
-  );
-};
+  )
+}
 
-export default CustomHeroBg;
+export default CustomHeroBg
