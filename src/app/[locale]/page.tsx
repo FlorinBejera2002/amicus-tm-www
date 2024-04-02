@@ -105,7 +105,7 @@ export default function Home() {
       <Animation />
       <EmblaCarousel />
       <About />
-      <StepsEvangelization />
+      {/* <StepsEvangelization /> */}
       <Team />
       <PersonalEvangelism />
       <Numbers />

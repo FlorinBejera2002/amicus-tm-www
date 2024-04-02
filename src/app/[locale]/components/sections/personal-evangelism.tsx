@@ -2,7 +2,11 @@ import Image from "next/image";
 import React from "react";
 import { useTranslations } from "next-intl";
 
-import step1 from "../../../../../public/img/step1.jpeg";
+import step1 from "../../../../../public/img/step1.jpg";
+import step2 from "../../../../../public/img/step2.jpeg";
+import step3 from "../../../../../public/img/step3.jpeg";
+import step4 from "../../../../../public/img/step4.jpeg";
+import step5 from "../../../../../public/img/step5.jpeg";
 
 export default function PersonalEvangelism() {
   const t = useTranslations("vision");
@@ -18,16 +22,12 @@ export default function PersonalEvangelism() {
                   data-appear-animation="zoomIn"
                   data-appear-animation-delay="100"
                 >
-                  <div className="custom-el-3-img">
-                    <Image
-                      alt="Arise photo"
-                      className="p-relative"
-                      height={500}
-                      loading="lazy"
-                      src={step1}
-                      width={500}
-                    />
-                  </div>
+                  <Image
+                    alt="Arise photo"
+                    className="custom-el-3-img p-relative size-full"
+                    loading="lazy"
+                    src={step1}
+                  />
                 </div>
               </div>
 
@@ -36,8 +36,16 @@ export default function PersonalEvangelism() {
                   className="custom-el-3 bg-color-primary custom-border-radius-2 mx-auto appear-animation"
                   data-appear-animation="zoomIn"
                   data-appear-animation-delay="200"
-                ></div>
+                >
+                  <Image
+                    alt="Arise photo"
+                    className="p-relative size-full"
+                    loading="lazy"
+                    src={step2}
+                  />
+                </div>
               </div>
+
               <div className="p-2 flex-fill">
                 <div
                   className="custom-el-3 custom-el-3-pos-1 bg-color-dark custom-border-radius-3 mx-auto appear-animation"
@@ -47,11 +55,9 @@ export default function PersonalEvangelism() {
                   <div className="custom-el-3-img">
                     <Image
                       alt="Arise photo"
-                      className="p-relative"
-                      height={50}
+                      className="p-relative size-full"
                       loading="lazy"
-                      src={step1}
-                      width={150}
+                      src={step3}
                     />
                   </div>
                 </div>
@@ -63,8 +69,18 @@ export default function PersonalEvangelism() {
                   className="custom-el-3 custom-el-3-pos-2 bg-color-dark custom-border-radius-4 ms-auto appear-animation"
                   data-appear-animation="zoomIn"
                   data-appear-animation-delay="400"
-                ></div>
+                >
+                  <div className="custom-el-3-img">
+                    <Image
+                      alt="Arise photo"
+                      className="p-relative size-full"
+                      loading="lazy"
+                      src={step4}
+                    />
+                  </div>
+                </div>
               </div>
+
               <div className="p-2 flex-fill">
                 <div
                   className="custom-el-3 bg-color-tertiary custom-border-radius-5 me-auto appear-animation"
@@ -74,11 +90,9 @@ export default function PersonalEvangelism() {
                   <div className="custom-el-3-img">
                     <Image
                       alt="Arise photo"
-                      className="p-relative"
-                      height={50}
+                      className="p-relative size-full"
                       loading="lazy"
-                      src={step1}
-                      width={150}
+                      src={step5}
                     />
                   </div>
                 </div>
@@ -97,15 +111,11 @@ export default function PersonalEvangelism() {
               >
                 <section className="toggle">
                   <details className="open:bg-white border-b  open:ring-1 open:ring-black/5 open:shadow-lg p-3 rounded-lg transform-gpu delay-75 duration-100 ease-in-out ">
-                    <summary className="leading-6 text-slate-900 dark:text-white font-semibold select-none">
+                    <summary className="leading-5 text-slate-900 dark:text-white font-semibold select-none">
                       {t("step1_title")}
                     </summary>
                     <div className="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-400">
-                      <p>
-                        Arise for Christ mission will contact the local pastor
-                        in order to plan the personal evangelism process
-                        presentation in the local church.
-                      </p>
+                      <p>{t("step1_description")}</p>
                     </div>
                   </details>
                 </section>
@@ -115,7 +125,7 @@ export default function PersonalEvangelism() {
                       {t("step2_title")}
                     </summary>
                     <div className="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-400">
-                      <p></p>
+                      <p>{t("step2_description")}</p>
                     </div>
                   </details>
                 </section>
@@ -125,11 +135,7 @@ export default function PersonalEvangelism() {
                       {t("step3_title")}
                     </summary>
                     <div className="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-400">
-                      <p>
-                        Arise for Christ mission will contact the local pastor
-                        in order to plan the personal evangelism process
-                        presentation in the local church.
-                      </p>
+                      <p>{t("step3_description")}</p>
                     </div>
                   </details>
                 </section>
@@ -139,11 +145,7 @@ export default function PersonalEvangelism() {
                       {t("step4_title")}
                     </summary>
                     <div className="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-400">
-                      <p>
-                        Arise for Christ mission will contact the local pastor
-                        in order to plan the personal evangelism process
-                        presentation in the local church.
-                      </p>
+                      <p>{t("step4_description")}</p>
                     </div>
                   </details>
                 </section>
@@ -153,11 +155,7 @@ export default function PersonalEvangelism() {
                       {t("step5_title")}
                     </summary>
                     <div className="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-400">
-                      <p>
-                        Arise for Christ mission will contact the local pastor
-                        in order to plan the personal evangelism process
-                        presentation in the local church.
-                      </p>
+                      <p>{t("step5_description")}</p>
                     </div>
                   </details>
                 </section>
@@ -167,11 +165,7 @@ export default function PersonalEvangelism() {
                       {t("step6_title")}
                     </summary>
                     <div className="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-400">
-                      <p>
-                        Arise for Christ mission will contact the local pastor
-                        in order to plan the personal evangelism process
-                        presentation in the local church.
-                      </p>
+                      <p>{t("step6_description")}</p>
                     </div>
                   </details>
                 </section>
@@ -181,11 +175,7 @@ export default function PersonalEvangelism() {
                       {t("step7_title")}
                     </summary>
                     <div className="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-400">
-                      <p>
-                        Arise for Christ mission will contact the local pastor
-                        in order to plan the personal evangelism process
-                        presentation in the local church.
-                      </p>
+                      <p>{t("step7_description")}</p>
                     </div>
                   </details>
                 </section>
@@ -195,11 +185,7 @@ export default function PersonalEvangelism() {
                       {t("step8_title")}
                     </summary>
                     <div className="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-400">
-                      <p>
-                        Arise for Christ mission will contact the local pastor
-                        in order to plan the personal evangelism process
-                        presentation in the local church.
-                      </p>
+                      <p>{t("step8_description")}</p>
                     </div>
                   </details>
                 </section>
