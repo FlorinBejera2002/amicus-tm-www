@@ -38,13 +38,11 @@ export default function Nav() {
                   <div
                     className="header-nav-main header-nav-main-square header-nav-main-dropdown-no-borders header-nav-main-text-capitalize 
                     header-nav-main-arrows header-nav-main-full-width-mega-menu header-nav-main-mega-menu-bg-hover 
-                    header-nav-main-mega-menu-bg-hover-dark header-nav-main-effect-5"
-                       >
+                    header-nav-main-mega-menu-bg-hover-dark header-nav-main-effect-5 hidden"
+                  >
                     <nav className=" closed ">
-
                       <ul className="nav nav-pills" id="mainNav">
                         <li>
-                          
                           <Link className="nav-link" href="/">
                             Home
                           </Link>
@@ -68,8 +66,8 @@ export default function Nav() {
                           </Link>
                         </li>
                         <Portfolio />
-                      <Elements />
-                        </ul>
+                        <Elements />
+                      </ul>
                     </nav>
                   </div>
                   <Link
@@ -103,7 +101,7 @@ export default function Nav() {
           className="header-nav-main header-nav-main-square header-nav-main-dropdown-no-borders header-nav-main-text-capitalize 
         header-nav-main-arrows header-nav-main-full-width-mega-menu header-nav-main-mega-menu-bg-hover 
         header-nav-main-mega-menu-bg-hover-dark header-nav-main-effect-5 display-none"
-          >
+        >
           <nav className="collapse show">
             <ul className="nav nav-pills">
               <li>
@@ -148,7 +146,7 @@ export default function Nav() {
                   href="/portfolio"
                   onClick={() => setNavBar(!navbar)}
                 >
-                  Blog
+                  Portfolio
                 </Link>
               </li>
               <li>
@@ -157,7 +155,7 @@ export default function Nav() {
                   href="/elements"
                   onClick={() => setNavBar(!navbar)}
                 >
-                  Blog
+                  Elements
                 </Link>
               </li>
             </ul>

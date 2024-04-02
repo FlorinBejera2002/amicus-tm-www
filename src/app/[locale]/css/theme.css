@@ -1670,6 +1670,7 @@ html:not(.sticky-header-active)
 
   html #header.header-transparent .header-nav-main nav {
     padding: 0 30px;
+    visibility: visible;
   }
 
   html.sticky-header-active #header.header-transparent .header-nav-main nav {
