@@ -3,8 +3,12 @@ import Link from "next/link";
 import React from "react";
 import { useTranslations } from "next-intl";
 
-import AdrianCovaci from "../../../../../public/img/team/Adrian-Covaci.png";
+import AdrianCovaci from "../../../../../public/img/team/adi.png";
 import AvramSabou from "../../../../../public/img/team/Avram.png";
+import Simona from "../../../../../public/img/team/simo.png";
+import Chris from "../../../../../public/img/team/chris potra.png";
+import Andrei from "../../../../../public/img/team/andrei bir.png";
+import Dana from "../../../../../public/img/team/dana potra.png";
 
 export default function Team() {
   const t = useTranslations("team");
@@ -22,7 +26,7 @@ export default function Team() {
                   alt=""
                   className="border-b-2 pb-2 border-gray-600"
                   height={150}
-                  src={AdrianCovaci}
+                  src={Chris}
                   width={150}
                 />
               </Link>
@@ -35,7 +39,7 @@ export default function Team() {
                   alt=""
                   className="border-b-2 pb-2 border-gray-600"
                   height={150}
-                  src={AdrianCovaci}
+                  src={Dana}
                   width={150}
                 />
               </Link>
@@ -74,7 +78,7 @@ export default function Team() {
                   alt=""
                   className="border-b-2 pb-2 border-gray-600"
                   height={150}
-                  src={AdrianCovaci}
+                  src={Andrei}
                   width={150}
                 />
               </Link>
@@ -87,7 +91,7 @@ export default function Team() {
                   alt=""
                   className="border-b-2 pb-2 border-gray-600"
                   height={150}
-                  src={AdrianCovaci}
+                  src={Simona}
                   width={150}
                 />
               </Link>

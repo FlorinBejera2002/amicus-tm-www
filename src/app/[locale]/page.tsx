@@ -50,50 +50,50 @@ export default function Home() {
                     href="https://www.facebook.com/AriseForChristRomania/"
                     target="blank"
                   >
-                    <span className="d-flex justify-center items-center gap-2 hover:decoration-none hover:text-blue-900  text-gray-400">
+                    <div className="d-flex justify-center items-center gap-2 hover:decoration-none hover:text-blue-900  text-gray-400">
                       <FaFacebookF className="w-3 h-3" />
-                      <span className="hover:outline-none">facebook</span>
-                    </span>
+                      <div className="hover:outline-none">facebook</div>
+                    </div>
                   </Link>
                   /
                   <Link
                     href="https://www.instagram.com/p/CfL2FveIMpn/"
                     target="blank"
                   >
-                    <span className="d-flex justify-center items-center gap-2  hover:text-[#7B0166]  text-gray-400">
+                    <div className="d-flex justify-center items-center gap-2  hover:text-[#7B0166]  text-gray-400">
                       <FaInstagram className="w-3 h-3  " />
-                      <span>instagram</span>
-                    </span>
+                      <div>instagram</div>
+                    </div>
                   </Link>
                   /
                   <Link
                     href="https://www.youtube.com/c/Ariseforchrist/"
                     target="blank"
                   >
-                    <span className="d-flex justify-center items-center gap-2    hover:text-red-500  text-gray-400 ">
+                    <div className="d-flex justify-center items-center gap-2    hover:text-red-500  text-gray-400 ">
                       <FaYoutube className="w-3 h-3" />
-                      <span>youtube</span>
-                    </span>
+                      <div>youtube</div>
+                    </div>
                   </Link>
                   /
                   <Link
                     href="https://www.tiktok.com/@ariseforchrist/"
                     target="blank"
                   >
-                    <span className="d-flex justify-center items-center gap-2    hover:text-black  text-gray-400 ">
+                    <div className="d-flex justify-center items-center gap-2    hover:text-black  text-gray-400 ">
                       <FaTiktok className="w-3 h-3" />
-                      <span>tiktok</span>
-                    </span>
+                      <div>tiktok</div>
+                    </div>
                   </Link>
                   /
                   <Link
                     href="https://open.spotify.com/show/3284C4Oox7JSflk1AOlgav"
                     target="blank"
                   >
-                    <span className="d-flex justify-center items-center gap-2    hover:text-green-500  text-gray-400 ">
+                    <div className="d-flex justify-center items-center gap-2    hover:text-green-500  text-gray-400 ">
                       <FaSpotify className="w-3 h-3" />
-                      <span>spotify</span>
-                    </span>
+                      <div>spotify</div>
+                    </div>
                   </Link>
                 </div>
               </div>
