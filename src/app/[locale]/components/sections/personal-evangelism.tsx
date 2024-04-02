@@ -1,9 +1,11 @@
 import Image from "next/image";
 import React from "react";
+import { useTranslations } from "next-intl";
 
-import step1 from "../../../../../public/logo_horizontal_black.png";
+import step1 from "../../../../../public/img/step1.jpeg";
 
 export default function PersonalEvangelism() {
+  const t = useTranslations("vision");
   return (
     <section id="concept">
       <div className="container bg-color-light p-relative z-index-2 py-1 mt-3">
@@ -20,10 +22,10 @@ export default function PersonalEvangelism() {
                     <Image
                       alt="Arise photo"
                       className="p-relative"
-                      height={50}
+                      height={500}
                       loading="lazy"
                       src={step1}
-                      width={150}
+                      width={500}
                     />
                   </div>
                 </div>
@@ -84,13 +86,6 @@ export default function PersonalEvangelism() {
             </div>
           </div>
           <div className="col-lg-6">
-            <h3
-              className="text-9 text-xl-11 line-height-3 text-transform-none font-weight-semibold mb-4 mb-lg-3 mb-xl-4 appear-animation"
-              data-appear-animation="fadeInUpShorter"
-              data-appear-animation-delay="250"
-            >
-              Innovation to transform your organization.
-            </h3>
             <div
               className="d-block appear-animation"
               data-appear-animation="fadeInUpShorter"
@@ -101,101 +96,114 @@ export default function PersonalEvangelism() {
                 data-plugin-toggle
               >
                 <section className="toggle">
-                  <details className="open:bg-white border-b  open:ring-1 open:ring-black/5 open:shadow-lg p-6 rounded-lg transform-gpu delay-75 duration-100 ease-in-out ">
+                  <details className="open:bg-white border-b  open:ring-1 open:ring-black/5 open:shadow-lg p-3 rounded-lg transform-gpu delay-75 duration-100 ease-in-out ">
                     <summary className="leading-6 text-slate-900 dark:text-white font-semibold select-none">
-                      What We Do
+                      {t("step1_title")}
                     </summary>
                     <div className="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-400">
                       <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Curabitur pellentesque neque eget diam posuere porta.
-                        Quisque ut nulla at nunc <a href="#">vehicula</a>{" "}
-                        lacinia. Proin adipiscing porta tellus, ut feugiat nibh
-                        adipiscing sit amet. In eu justo a felis faucibus ornare
-                        vel id metus. Vestibulum ante ipsum primis in faucibus
-                        orci luctus et ultrices posuere cubilia Curae; In eu
-                        libero ligula. Fusce eget metus lorem, ac viverra leo.
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Curabitur pellentesque neque eget diam posuere porta.
-                        Quisque ut nulla at nunc <a href="#">vehicula</a>{" "}
-                        lacinia.{" "}
+                        Arise for Christ mission will contact the local pastor
+                        in order to plan the personal evangelism process
+                        presentation in the local church.
                       </p>
                     </div>
                   </details>
                 </section>
                 <section className="toggle">
-                  <details className="open:bg-white border-b  open:ring-1 open:ring-black/5 open:shadow-lg p-6 rounded-lg transform-gpu delay-75 duration-100 ease-in-out ">
+                  <details className="open:bg-white border-b  open:ring-1 open:ring-black/5 open:shadow-lg p-3 rounded-lg transform-gpu delay-75 duration-100 ease-in-out ">
                     <summary className="leading-6 text-slate-900 dark:text-white font-semibold select-none">
-                      Pro Experience
+                      {t("step2_title")}
+                    </summary>
+                    <div className="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-400">
+                      <p></p>
+                    </div>
+                  </details>
+                </section>
+                <section className="toggle">
+                  <details className="open:bg-white border-b  open:ring-1 open:ring-black/5 open:shadow-lg p-3 rounded-lg transform-gpu delay-75 duration-100 ease-in-out ">
+                    <summary className="leading-6 text-slate-900 dark:text-white font-semibold select-none">
+                      {t("step3_title")}
                     </summary>
                     <div className="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-400">
                       <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Curabitur eget leo at velit imperdiet varius. In eu
-                        ipsum vitae velit congue iaculis vitae at risus. Nullam
-                        tortor nunc, bibendum vitae semper a, volutpat eget
-                        massa. Lorem ipsum dolor sit amet, consectetur
-                        adipiscing elit. Integer fringilla, orci sit amet
-                        posuere auctor, orci eros pellentesque odio, nec
-                        pellentesque erat ligula nec massa. Aenean consequat
-                        lorem ut felis ullamcorper posuere gravida tellus
-                        faucibus. Maecenas dolor elit, pulvinar eu vehicula eu,
-                        consequat et lacus. Duis et purus ipsum. In auctor
-                        mattis ipsum id molestie. Donec risus nulla, fringilla a
-                        rhoncus vitae, semper a massa. Vivamus ullamcorper, enim
-                        sit amet consequat laoreet, tortor tortor dictum urna,
-                        ut egestas urna ipsum nec libero. Nulla justo leo,
-                        molestie vel tempor nec, egestas at massa. Aenean
-                        pulvinar, felis porttitor iaculis pulvinar, odio orci
-                        sodales odio, ac pulvinar felis quam sit.
+                        Arise for Christ mission will contact the local pastor
+                        in order to plan the personal evangelism process
+                        presentation in the local church.
                       </p>
                     </div>
                   </details>
                 </section>
                 <section className="toggle">
-                  <details className="open:bg-white border-b  open:ring-1 open:ring-black/5 open:shadow-lg p-6 rounded-lg transform-gpu delay-75 duration-100 ease-in-out ">
+                  <details className="open:bg-white border-b  open:ring-1 open:ring-black/5 open:shadow-lg p-3 rounded-lg transform-gpu delay-75 duration-100 ease-in-out ">
                     <summary className="leading-6 text-slate-900 dark:text-white font-semibold select-none">
-                      Partners and Investors
+                      {t("step4_title")}
                     </summary>
                     <div className="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-400">
                       <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Curabitur eget leo at velit imperdiet varius. In eu
-                        ipsum vitae velit congue iaculis vitae at risus. Nullam
-                        tortor nunc, bibendum vitae semper a, volutpat eget
-                        massa. Lorem ipsum dolor sit amet, consectetur
-                        adipiscing elit. Integer fringilla, orci sit amet
-                        posuere auctor, orci eros pellentesque odio, nec
-                        pellentesque erat ligula nec massa. Aenean consequat
-                        lorem ut felis ullamcorper posuere gravida tellus
-                        faucibus. Maecenas dolor elit, pulvinar eu vehicula eu,
-                        consequat et lacus. Duis et purus ipsum. In auctor
-                        mattis ipsum id molestie. Donec risus nulla, fringilla a
-                        rhoncus vitae, semper a massa. Vivamus ullamcorper, enim
-                        sit amet consequat laoreet, tortor tortor dictum urna,
-                        ut egestas urna ipsum nec libero. Nulla justo leo,
-                        molestie vel tempor nec, egestas at massa. Aenean
-                        pulvinar, felis porttitor iaculis pulvinar, odio orci
-                        sodales odio, ac pulvinar felis quam sit.
+                        Arise for Christ mission will contact the local pastor
+                        in order to plan the personal evangelism process
+                        presentation in the local church.
+                      </p>
+                    </div>
+                  </details>
+                </section>
+                <section className="toggle">
+                  <details className="open:bg-white border-b  open:ring-1 open:ring-black/5 open:shadow-lg p-3 rounded-lg transform-gpu delay-75 duration-100 ease-in-out ">
+                    <summary className="leading-6 text-slate-900 dark:text-white font-semibold select-none">
+                      {t("step5_title")}
+                    </summary>
+                    <div className="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-400">
+                      <p>
+                        Arise for Christ mission will contact the local pastor
+                        in order to plan the personal evangelism process
+                        presentation in the local church.
+                      </p>
+                    </div>
+                  </details>
+                </section>
+                <section className="toggle">
+                  <details className="open:bg-white border-b  open:ring-1 open:ring-black/5 open:shadow-lg p-3 rounded-lg transform-gpu delay-75 duration-100 ease-in-out ">
+                    <summary className="leading-6 text-slate-900 dark:text-white font-semibold select-none">
+                      {t("step6_title")}
+                    </summary>
+                    <div className="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-400">
+                      <p>
+                        Arise for Christ mission will contact the local pastor
+                        in order to plan the personal evangelism process
+                        presentation in the local church.
+                      </p>
+                    </div>
+                  </details>
+                </section>
+                <section className="toggle">
+                  <details className="open:bg-white border-b  open:ring-1 open:ring-black/5 open:shadow-lg p-3 rounded-lg transform-gpu delay-75 duration-100 ease-in-out ">
+                    <summary className="leading-6 text-slate-900 dark:text-white font-semibold select-none">
+                      {t("step7_title")}
+                    </summary>
+                    <div className="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-400">
+                      <p>
+                        Arise for Christ mission will contact the local pastor
+                        in order to plan the personal evangelism process
+                        presentation in the local church.
+                      </p>
+                    </div>
+                  </details>
+                </section>
+                <section className="toggle">
+                  <details className="open:bg-white border-b  open:ring-1 open:ring-black/5 open:shadow-lg p-3 rounded-lg transform-gpu delay-75 duration-100 ease-in-out ">
+                    <summary className="leading-6 text-slate-900 dark:text-white font-semibold select-none">
+                      {t("step8_title")}
+                    </summary>
+                    <div className="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-400">
+                      <p>
+                        Arise for Christ mission will contact the local pastor
+                        in order to plan the personal evangelism process
+                        presentation in the local church.
                       </p>
                     </div>
                   </details>
                 </section>
               </div>
-            </div>
-
-            <div
-              className="d-block appear-animation pt-4"
-              data-appear-animation="fadeInUpShorter"
-              data-appear-animation-delay="300"
-            >
-              <a
-                className="btn btn-modern btn-primary text-capitalize text-dark text-3 px-2 py-1 anim-hover-translate-top-5px transition-2ms"
-                href="#"
-              >
-                Learn More{" "}
-                <i className="fas fa-arrow-right rotate-l-45 ms-2"></i>
-              </a>
             </div>
           </div>
         </div>

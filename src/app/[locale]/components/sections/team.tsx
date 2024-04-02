@@ -19,21 +19,43 @@ export default function Team() {
           <h1 className="items-center flex justify-center text-5xl text-gray-600 py-6">
             {t("title-a4c")}
           </h1>
+
           <div className="py-5 flex gap-4 justify-center">
-            <div className="w-52 h-80 bg-gradient-to-t from-gray-800 to-transparent rounded-xl gap-1 flex flex-col justify-center  items-center">
-              <Link href="https://www.youtube.com/watch?v=XhQIeYzccUI">
-                <Image
-                  alt=""
-                  className="border-b-2 pb-2 border-gray-600"
-                  height={150}
-                  src={Chris}
-                  width={150}
-                />
-              </Link>
+            <div
+              className="cursor-pointer relative overflow-hidden w-52 h-80 bg-gradient-to-t from-gray-800 to-transparent rounded-xl gap-1 flex flex-col justify-center  items-center   hover:scale-110 hover:bg-indigo-900 duration-300  "
+              style={{
+                transition: "transform 250ms cubic-bezier(0.4, 0, 0.2, 1);",
+              }}
+            >
+              <div
+                className="hover:translate-y-0 "
+                style={{
+                  display: "flex",
+                  justifyContent: "space-evenly",
+                  alignItems: "center",
+                  position: "absolute",
+                  background: "rgba(33, 150, 243, 0.9)",
+                  transform: " translateY(102%)",
+                  transition: " transform 250ms linear",
+                  opacity: "0.5",
+                }}
+              >
+                <p className="">
+                  Fondator al misiunii Arise for Christ și coordonator în
+                  Statele Unite.
+                </p>
+              </div>
+              <Image
+                alt=""
+                className="border-b-2 pb-2 border-gray-600"
+                height={150}
+                src={Chris}
+                width={150}
+              />
               <b className="text-gray-400">Christian Potra</b>
               <p className="text-gray-600">{t("christian-potra")}</p>
             </div>
-            <div className="w-52 h-80 bg-gradient-to-t from-gray-800 to-transparent rounded-xl gap-1 flex flex-col justify-center  items-center">
+            <div className="w-52 h-80 bg-gradient-to-t from-gray-800 to-transparent rounded-xl gap-1 flex flex-col justify-center  items-center  hover:-translate-y-1 hover:scale-110 hover:bg-indigo-900 duration-300 ">
               <Link href="https://www.youtube.com/watch?v=XhQIeYzccUI">
                 <Image
                   alt=""
@@ -46,7 +68,7 @@ export default function Team() {
               <b className="text-gray-400">Dana Potra</b>
               <p className="text-gray-600">{t("dana-potra")}</p>
             </div>
-            <div className="w-52 h-80 bg-gradient-to-t from-gray-800 to-transparent rounded-xl gap-1 flex flex-col justify-center  items-center">
+            <div className="w-52 h-80 bg-gradient-to-t from-gray-800 to-transparent rounded-xl gap-1 flex flex-col justify-center  items-center  hover:-translate-y-1 hover:scale-110 hover:bg-indigo-900 duration-300 ">
               <Link href="https://www.youtube.com/watch?v=XhQIeYzccUI">
                 <Image
                   alt=""
@@ -59,7 +81,7 @@ export default function Team() {
               <b className="text-gray-400">Avram Sabou</b>
               <p className="text-gray-600">{t("avram-sabou")}</p>
             </div>
-            <div className="w-52 h-80 bg-gradient-to-t from-gray-800 to-transparent rounded-xl gap-1 flex flex-col justify-center  items-center">
+            <div className="w-52 h-80 bg-gradient-to-t from-gray-800 to-transparent rounded-xl gap-1 flex flex-col justify-center  items-center  hover:-translate-y-1 hover:scale-110 hover:bg-indigo-900 duration-300 ">
               <Link href="https://www.youtube.com/watch?v=XhQIeYzccUI">
                 <Image
                   alt=""
@@ -72,7 +94,7 @@ export default function Team() {
               <b className="text-gray-400">Adi Kovaci</b>
               <p className="text-gray-600">{t("adi-kovaci")}</p>
             </div>
-            <div className="w-52 h-80 bg-gradient-to-t from-gray-800 to-transparent rounded-xl gap-1 flex flex-col justify-center  items-center">
+            <div className="w-52 h-80 bg-gradient-to-t from-gray-800 to-transparent rounded-xl gap-1 flex flex-col justify-center  items-center  hover:-translate-y-1 hover:scale-110 hover:bg-indigo-900 duration-300 ">
               <Link href="https://www.youtube.com/watch?v=XhQIeYzccUI">
                 <Image
                   alt=""
@@ -85,7 +107,7 @@ export default function Team() {
               <b className="text-gray-400">Andrei Birtea</b>
               <p className="text-gray-600">{t("andrei-birtea")}</p>
             </div>
-            <div className="w-52 h-80 bg-gradient-to-t from-gray-800 to-transparent rounded-xl gap-1 flex flex-col justify-center  items-center">
+            <div className="w-52 h-80 bg-gradient-to-t from-gray-800 to-transparent rounded-xl gap-1 flex flex-col justify-center  items-center  hover:-translate-y-1 hover:scale-110 hover:bg-indigo-900 duration-300 ">
               <Link href="https://www.youtube.com/watch?v=XhQIeYzccUI">
                 <Image
                   alt=""
