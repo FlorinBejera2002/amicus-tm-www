@@ -37,41 +37,43 @@ export default function Nav() {
                 <div className="header-nav header-nav-links header-nav-dropdowns-dark header-nav-light-text order-2 order-lg-1">
                   <div
                     className="header-nav-main header-nav-main-square header-nav-main-dropdown-no-borders header-nav-main-text-capitalize 
-                       header-nav-main-arrows header-nav-main-full-width-mega-menu header-nav-main-mega-menu-bg-hover 
-                       header-nav-main-mega-menu-bg-hover-dark header-nav-main-effect-5"
-                  >
-                    <nav className=" closed collapse">
+                    header-nav-main-arrows header-nav-main-full-width-mega-menu header-nav-main-mega-menu-bg-hover 
+                    header-nav-main-mega-menu-bg-hover-dark header-nav-main-effect-5"
+                       >
+                    <nav className=" closed ">
+
                       <ul className="nav nav-pills" id="mainNav">
                         <li>
-                          <a className="nav-link" href="/">
+                          
+                          <Link className="nav-link" href="/">
                             Home
-                          </a>
+                          </Link>
                         </li>
 
                         <li>
-                          <a className="nav-link" href="/about">
+                          <Link className="nav-link" href="/about">
                             About Us
-                          </a>
+                          </Link>
                         </li>
 
                         <li>
-                          <a className="nav-link" href="/services">
+                          <Link className="nav-link" href="/services">
                             Services
-                          </a>
+                          </Link>
                         </li>
 
                         <li>
-                          <a className="nav-link" href="/blog">
+                          <Link className="nav-link" href="/blog">
                             Blog
-                          </a>
+                          </Link>
                         </li>
                         <Portfolio />
-                        <Elements />
-                      </ul>
+                      <Elements />
+                        </ul>
                     </nav>
                   </div>
-                  <a
-                    className="btn btn-primary font-weight-semibold text-3 py-lg-3 btn-gradient text-quaternary
+                  <Link
+                    className=" btn btn-primary font-weight-semibold text-3 py-lg-3 btn-gradient text-quaternary
                        anim-hover-translate-top-5px transition-2ms ms-4"
                     href="demo-creative-agency-2-contact-us.html"
                     target="_blank"
@@ -79,7 +81,7 @@ export default function Nav() {
                     <span className="px-lg-4 d-block ws-nowrap">
                       Contact Us
                     </span>
-                  </a>
+                  </Link>
                   <button
                     className="btn header-btn-collapse-nav text-dark"
                     data-bs-target=".header-nav-main nav"
@@ -101,7 +103,7 @@ export default function Nav() {
           className="header-nav-main header-nav-main-square header-nav-main-dropdown-no-borders header-nav-main-text-capitalize 
         header-nav-main-arrows header-nav-main-full-width-mega-menu header-nav-main-mega-menu-bg-hover 
         header-nav-main-mega-menu-bg-hover-dark header-nav-main-effect-5 display-none"
-        >
+          >
           <nav className="collapse show">
             <ul className="nav nav-pills">
               <li>
@@ -135,6 +137,24 @@ export default function Nav() {
                 <Link
                   className="nav-link"
                   href="/blog"
+                  onClick={() => setNavBar(!navbar)}
+                >
+                  Blog
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="nav-link"
+                  href="/portfolio"
+                  onClick={() => setNavBar(!navbar)}
+                >
+                  Blog
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="nav-link"
+                  href="/elements"
                   onClick={() => setNavBar(!navbar)}
                 >
                   Blog

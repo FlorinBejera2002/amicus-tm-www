@@ -1,19 +1,22 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { useTranslations } from "next-intl";
 
 import AdrianCovaci from "../../../../../public/img/team/Adrian-Covaci.png";
+import AvramSabou from "../../../../../public/img/team/Avram.png";
 
 export default function Team() {
+  const t = useTranslations("team");
   return (
     <div className="bg-color-dark p-relative z-index-1 custom-section-1 bg-position-center bg-size-cover lazyload">
       <div className="container py-4">
         <div className="row align-items-center ">
           <h1 className="items-center flex justify-center text-5xl text-gray-600 py-6">
-            Arise for Christ Team Timișoara 📍
+            {t("title-a4c")}
           </h1>
-          <div className="py-5 flex gap-5">
-            <div className="w-48 h-80 bg-gradient-to-t from-gray-800 to-transparent rounded-xl gap-1 flex flex-col justify-center  items-center">
+          <div className="py-5 flex gap-4 justify-center">
+            <div className="w-52 h-80 bg-gradient-to-t from-gray-800 to-transparent rounded-xl gap-1 flex flex-col justify-center  items-center">
               <Link href="https://www.youtube.com/watch?v=XhQIeYzccUI">
                 <Image
                   alt=""
@@ -23,10 +26,10 @@ export default function Team() {
                   width={150}
                 />
               </Link>
-              <b className="text-gray-400">Avram Sabou</b>
-              <p className="text-gray-600">Mission President</p>
+              <b className="text-gray-400">Christian Potra</b>
+              <p className="text-gray-600">{t("christian-potra")}</p>
             </div>
-            <div className="w-48 h-80 bg-gradient-to-t from-gray-800 to-transparent rounded-xl gap-1 flex flex-col justify-center  items-center">
+            <div className="w-52 h-80 bg-gradient-to-t from-gray-800 to-transparent rounded-xl gap-1 flex flex-col justify-center  items-center">
               <Link href="https://www.youtube.com/watch?v=XhQIeYzccUI">
                 <Image
                   alt=""
@@ -36,23 +39,23 @@ export default function Team() {
                   width={150}
                 />
               </Link>
-              <b className="text-gray-400">Avram Sabou</b>
-              <p className="text-gray-600">Mission President</p>
+              <b className="text-gray-400">Dana Potra</b>
+              <p className="text-gray-600">{t("dana-potra")}</p>
             </div>
-            <div className="w-48 h-80 bg-gradient-to-t from-gray-800 to-transparent rounded-xl gap-1 flex flex-col justify-center  items-center">
+            <div className="w-52 h-80 bg-gradient-to-t from-gray-800 to-transparent rounded-xl gap-1 flex flex-col justify-center  items-center">
               <Link href="https://www.youtube.com/watch?v=XhQIeYzccUI">
                 <Image
                   alt=""
                   className="border-b-2 pb-2 border-gray-600"
                   height={150}
-                  src={AdrianCovaci}
+                  src={AvramSabou}
                   width={150}
                 />
               </Link>
               <b className="text-gray-400">Avram Sabou</b>
-              <p className="text-gray-600">Mission President</p>
+              <p className="text-gray-600">{t("avram-sabou")}</p>
             </div>
-            <div className="w-48 h-80 bg-gradient-to-t from-gray-800 to-transparent rounded-xl gap-1 flex flex-col justify-center  items-center">
+            <div className="w-52 h-80 bg-gradient-to-t from-gray-800 to-transparent rounded-xl gap-1 flex flex-col justify-center  items-center">
               <Link href="https://www.youtube.com/watch?v=XhQIeYzccUI">
                 <Image
                   alt=""
@@ -62,10 +65,10 @@ export default function Team() {
                   width={150}
                 />
               </Link>
-              <b className="text-gray-400">Avram Sabou</b>
-              <p className="text-gray-600">Mission President</p>
+              <b className="text-gray-400">Adi Kovaci</b>
+              <p className="text-gray-600">{t("adi-kovaci")}</p>
             </div>
-            <div className="w-48 h-80 bg-gradient-to-t from-gray-800 to-transparent rounded-xl gap-1 flex flex-col justify-center  items-center">
+            <div className="w-52 h-80 bg-gradient-to-t from-gray-800 to-transparent rounded-xl gap-1 flex flex-col justify-center  items-center">
               <Link href="https://www.youtube.com/watch?v=XhQIeYzccUI">
                 <Image
                   alt=""
@@ -75,10 +78,10 @@ export default function Team() {
                   width={150}
                 />
               </Link>
-              <b className="text-gray-400">Avram Sabou</b>
-              <p className="text-gray-600">Mission President</p>
+              <b className="text-gray-400">Andrei Birtea</b>
+              <p className="text-gray-600">{t("andrei-birtea")}</p>
             </div>
-            <div className="w-48 h-80 bg-gradient-to-t from-gray-800 to-transparent rounded-xl gap-1 flex flex-col justify-center  items-center">
+            <div className="w-52 h-80 bg-gradient-to-t from-gray-800 to-transparent rounded-xl gap-1 flex flex-col justify-center  items-center">
               <Link href="https://www.youtube.com/watch?v=XhQIeYzccUI">
                 <Image
                   alt=""
@@ -88,8 +91,8 @@ export default function Team() {
                   width={150}
                 />
               </Link>
-              <b className="text-gray-400">Avram Sabou</b>
-              <p className="text-gray-600">Mission President</p>
+              <b className="text-gray-400">Simona Birtea </b>
+              <p className="text-gray-600">{t("simona-birtea")}</p>
             </div>
           </div>
         </div>
