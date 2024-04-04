@@ -52,7 +52,7 @@ export default function Home() {
                     target="blank"
                   >
                     <div className="d-flex justify-center items-center gap-2 hover:text-blue-900  text-gray-400">
-                      <FaFacebookF className="w-3 h-3" />
+                      <FaFacebookF className="w-5 h-5" />
                       <div>facebook</div>
                     </div>
                   </Link>
@@ -63,7 +63,7 @@ export default function Home() {
                     target="blank"
                   >
                     <div className="d-flex justify-center items-center gap-2 hover:text-[#7B0166] text-gray-400">
-                      <FaInstagram className="w-3 h-3  " />
+                      <FaInstagram className="w-5 h-5  " />
                       <div>instagram</div>
                     </div>
                   </Link>
@@ -74,7 +74,7 @@ export default function Home() {
                     target="blank"
                   >
                     <div className="d-flex justify-center items-center gap-2 hover:text-red-500 text-gray-400 ">
-                      <FaYoutube className="w-3 h-3" />
+                      <FaYoutube className="w-5 h-5" />
                       <div>youtube</div>
                     </div>
                   </Link>
@@ -85,7 +85,7 @@ export default function Home() {
                     target="blank"
                   >
                     <div className="d-flex justify-center items-center gap-2 hover:text-[#2AC4CA] text-gray-400 ">
-                      <FaTiktok className="w-3 h-3" />
+                      <FaTiktok className="w-5 h-5" />
                       <div>tiktok</div>
                     </div>
                   </Link>
@@ -96,7 +96,7 @@ export default function Home() {
                     target="blank"
                   >
                     <div className="d-flex justify-center items-center gap-2 hover:text-green-500 text-gray-400 ">
-                      <FaSpotify className="w-3 h-3" />
+                      <FaSpotify className="w-5 h-5" />
                       <div>spotify</div>
                     </div>
                   </Link>
