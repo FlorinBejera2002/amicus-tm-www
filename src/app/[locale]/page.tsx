@@ -41,25 +41,25 @@ export default function Home() {
                 {t('question3')}
               </h3>
               <div
-                className="d-block appear-animation"
+                className="d-block appear-animation text-xl"
                 data-appear-animation="fadeInUpShorter"
                 data-appear-animation-delay="300"
               >
-                <div className="d-flex gap-2">
+                <div className="d-flex gap-4">
                   <Link
+                    className="text-decoration-none pointer"
                     href="https://www.facebook.com/AriseForChristRomania/"
-                    style={{ textDecoration: 'none' }}
                     target="blank"
                   >
-                    <div className="d-flex justify-center items-center gap-2 hover:decoration-none hover:text-blue-900  text-gray-400">
+                    <div className="d-flex justify-center items-center gap-2 hover:text-blue-900  text-gray-400">
                       <FaFacebookF className="w-3 h-3" />
                       <div>facebook</div>
                     </div>
                   </Link>
-                  /
+
                   <Link
+                    className="text-decoration-none pointer"
                     href="https://www.instagram.com/p/CfL2FveIMpn/"
-                    style={{ textDecoration: 'none' }}
                     target="blank"
                   >
                     <div className="d-flex justify-center items-center gap-2 hover:text-[#7B0166] text-gray-400">
@@ -67,10 +67,10 @@ export default function Home() {
                       <div>instagram</div>
                     </div>
                   </Link>
-                  /
+
                   <Link
+                    className="text-decoration-none pointer"
                     href="https://www.youtube.com/c/Ariseforchrist/"
-                    style={{ textDecoration: 'none' }}
                     target="blank"
                   >
                     <div className="d-flex justify-center items-center gap-2 hover:text-red-500 text-gray-400 ">
@@ -78,21 +78,21 @@ export default function Home() {
                       <div>youtube</div>
                     </div>
                   </Link>
-                  /
+
                   <Link
+                    className="text-decoration-none pointer"
                     href="https://www.tiktok.com/@ariseforchrist/"
-                    style={{ textDecoration: 'none' }}
                     target="blank"
                   >
-                    <div className="d-flex justify-center items-center gap-2 hover:text-black text-gray-400 ">
+                    <div className="d-flex justify-center items-center gap-2 hover:text-[#2AC4CA] text-gray-400 ">
                       <FaTiktok className="w-3 h-3" />
                       <div>tiktok</div>
                     </div>
                   </Link>
-                  /
+
                   <Link
+                    className="text-decoration-none pointer"
                     href="https://open.spotify.com/show/3284C4Oox7JSflk1AOlgav"
-                    style={{ textDecoration: 'none' }}
                     target="blank"
                   >
                     <div className="d-flex justify-center items-center gap-2 hover:text-green-500 text-gray-400 ">

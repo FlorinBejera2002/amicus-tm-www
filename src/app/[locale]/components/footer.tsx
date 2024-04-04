@@ -15,12 +15,13 @@ export default function Footer() {
             <Link href="/">
               <Image
                 alt="arise for christ logo"
-                className="object-contain"
+                className="object-contain pb-6"
                 height={40}
                 src={horizontalLogo}
                 width={140}
               />
             </Link>
+
             <ul className="list list-unstyled pt-4">
               <li className="d-flex align-items-center mb-4">
                 <Link
@@ -30,22 +31,14 @@ export default function Footer() {
                   info@ariseforchrist.com
                 </Link>
               </li>
+
               <li className="d-blok align-items-center mb-4">
-                <div className="pb-3">
-                  <Link
-                    className=" align-items-center text-decoration-none text-color-light text-color-hover-primary font-weight-semibold text-4-5 "
-                    href="tel:+0721 804 560"
-                  >
-                    +0721 804 560
-                  </Link>
+                <div className="pb-3 align-items-center text-decoration-none text-color-light text-color-hover-primary font-weight-semibold text-4-5">
+                  +40-721-804-560
                 </div>
-                <div>
-                  <Link
-                    className=" align-items-center text-decoration-none text-color-light text-color-hover-primary font-weight-semibold text-4-5"
-                    href="tel:0356 175 148"
-                  >
-                    0356 175 148
-                  </Link>
+
+                <div className=" align-items-center text-decoration-none text-color-light text-color-hover-primary font-weight-semibold text-4-5">
+                  0356-175-148
                 </div>
               </li>
             </ul>
@@ -58,10 +51,11 @@ export default function Footer() {
                 <h4 className="text-color-light font-weight-bold mb-3">
                   Company
                 </h4>
-                <ul className="list list-unstyled text-3-5">
+
+                <ul className="flex flex-col list list-unstyled text-3-5 gap-[13px]">
                   <li>
                     <Link
-                      className="text-color-grey text-color-hover-primary"
+                      className="text-color-grey text-color-hover-primary text-decoration-none"
                       href="https://www.youtube.com/@Ariseforchrist"
                     >
                       Home
@@ -69,7 +63,7 @@ export default function Footer() {
                   </li>
                   <li>
                     <Link
-                      className="text-color-grey text-color-hover-primary"
+                      className="text-color-grey text-color-hover-primary text-decoration-none"
                       href="https://www.youtube.com/@Ariseforchrist"
                     >
                       About Us
@@ -77,7 +71,7 @@ export default function Footer() {
                   </li>
                   <li>
                     <Link
-                      className="text-color-grey text-color-hover-primary"
+                      className="text-color-grey text-color-hover-primary text-decoration-none"
                       href="https://www.youtube.com/@Ariseforchrist"
                     >
                       Services
@@ -85,14 +79,15 @@ export default function Footer() {
                   </li>
                 </ul>
               </div>
+
               <div className="col-md-4 mb-4 mb-lg-0">
                 <h4 className="text-color-light font-weight-bold mb-3">
                   Solutions
                 </h4>
-                <ul className="list list-unstyled text-3-5">
+                <ul className="flex flex-col list list-unstyled text-3-5 gap-[13px]">
                   <li>
                     <Link
-                      className="text-color-grey text-color-hover-primary"
+                      className="text-color-grey text-color-hover-primary text-decoration-none"
                       href="https://www.youtube.com/@Ariseforchrist"
                     >
                       Brand Development
@@ -100,7 +95,7 @@ export default function Footer() {
                   </li>
                   <li>
                     <Link
-                      className="text-color-grey text-color-hover-primary"
+                      className="text-color-grey text-color-hover-primary text-decoration-none"
                       href="https://www.youtube.com/@Ariseforchrist"
                     >
                       Graphic Design
@@ -108,7 +103,7 @@ export default function Footer() {
                   </li>
                   <li>
                     <Link
-                      className="text-color-grey text-color-hover-primary"
+                      className="text-color-grey text-color-hover-primary text-decoration-none"
                       href="https://www.youtube.com/@Ariseforchrist"
                     >
                       UX Design
@@ -116,14 +111,15 @@ export default function Footer() {
                   </li>
                 </ul>
               </div>
+
               <div className="col-md-4 mb-4 mb-lg-0">
                 <h4 className="text-color-light font-weight-bold mb-3">
                   Resources
                 </h4>
-                <ul className="list list-unstyled text-3-5">
+                <ul className="flex flex-col list list-unstyled text-3-5 gap-[13px]">
                   <li>
                     <Link
-                      className="text-color-grey text-color-hover-primary"
+                      className="text-color-grey text-color-hover-primary text-decoration-none"
                       href="https://www.youtube.com/@Ariseforchrist"
                     >
                       Terms
@@ -131,7 +127,7 @@ export default function Footer() {
                   </li>
                   <li>
                     <Link
-                      className="text-color-grey text-color-hover-primary"
+                      className="text-color-grey text-color-hover-primary text-decoration-none"
                       href="https://www.youtube.com/@Ariseforchrist"
                     >
                       Blog
@@ -139,7 +135,7 @@ export default function Footer() {
                   </li>
                   <li>
                     <Link
-                      className="text-color-grey text-color-hover-primary"
+                      className="text-color-grey text-color-hover-primary text-decoration-none"
                       href="https://www.youtube.com/@Ariseforchrist"
                     >
                       Contact
@@ -148,59 +144,37 @@ export default function Footer() {
                 </ul>
               </div>
             </div>
-            <div className="row">
-              <div className="col">
-                <h4 className="text-color-light font-weight-bold mb-3">Blog</h4>
-                <Link href="https://www.youtube.com/@Ariseforchrist">
-                  <span className="badge bg-dark--100 font-weight-normal text-2 badge-md anim-hover-translate-top-5px transition-2ms me-2 mb-2">
-                    Web Design
-                  </span>
-                </Link>
-                <Link href="https://www.youtube.com/@Ariseforchrist">
-                  <span className="badge bg-dark--100 font-weight-normal text-2 badge-md anim-hover-translate-top-5px transition-2ms me-2 mb-2">
-                    CMS
-                  </span>
-                </Link>
-                <Link href="https://www.youtube.com/@Ariseforchrist">
-                  <span className="badge bg-dark--100 font-weight-normal text-2 badge-md anim-hover-translate-top-5px transition-2ms me-2 mb-2">
-                    SEO
-                  </span>
-                </Link>
-                <Link href="https://www.youtube.com/@Ariseforchrist">
-                  <span className="badge bg-dark--100 font-weight-normal text-2 badge-md anim-hover-translate-top-5px transition-2ms me-2 mb-2">
-                    User Experience (UX) Design
-                  </span>
-                </Link>
-                <Link href="https://www.youtube.com/@Ariseforchrist">
-                  <span className="badge bg-dark--100 font-weight-normal text-2 badge-md anim-hover-translate-top-5px transition-2ms me-2 mb-2">
-                    Social Media Marketing
-                  </span>
-                </Link>
-                <Link href="https://www.youtube.com/@Ariseforchrist">
-                  <span className="badge bg-dark--100 font-weight-normal text-2 badge-md anim-hover-translate-top-5px transition-2ms me-2 mb-2">
-                    Website Development
-                  </span>
-                </Link>
-                <Link href="https://www.youtube.com/@Ariseforchrist">
-                  <span className="badge bg-dark--100 font-weight-normal text-2 badge-md anim-hover-translate-top-5px transition-2ms me-2 mb-2">
-                    E-commerce Strategies
-                  </span>
-                </Link>
-                <Link href="https://www.youtube.com/@Ariseforchrist">
-                  <span className="badge bg-dark--100 font-weight-normal text-2 badge-md anim-hover-translate-top-5px transition-2ms me-2 mb-2">
-                    Mobile Applications
-                  </span>
-                </Link>
-                <Link href="https://www.youtube.com/@Ariseforchrist">
-                  <span className="badge bg-dark--100 font-weight-normal text-2 badge-md anim-hover-translate-top-5px transition-2ms me-2 mb-2">
-                    Website Maintenance
-                  </span>
-                </Link>
+
+            <h4 className="text-color-light font-extrabold mb-3 text-lg">
+              Blog
+            </h4>
+            <div className="flex flex-wrap text-white text-xs gap-2.5">
+              <div className="bg-[#1F1F1F] py-1.5 px-3">Web Design</div>
+              <div className="bg-[#1F1F1F] py-1.5 px-3">CMS</div>
+              <div className="bg-[#1F1F1F] py-1.5 px-3">SEO</div>
+              <div className="bg-[#1F1F1F] py-1.5 px-3">
+                User Experience (UX) Design
+              </div>
+              <div className="bg-[#1F1F1F] py-1.5 px-3">
+                Social Media Marketing
+              </div>
+              <div className="bg-[#1F1F1F] py-1.5 px-3">
+                Website Development
+              </div>
+              <div className="bg-[#1F1F1F] py-1.5 px-3">
+                E-commerce Strategies
+              </div>
+              <div className="bg-[#1F1F1F] py-1.5 px-3">
+                Mobile Applications
+              </div>
+              <div className="bg-[#1F1F1F] py-1.5 px-3">
+                Website Maintenance
               </div>
             </div>
           </div>
         </div>
       </div>
+
       <div className="footer-copyright bg-transparent">
         <div className="container pb-5">
           <hr className="bg-color-light opacity-1" />
