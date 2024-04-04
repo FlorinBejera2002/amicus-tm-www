@@ -8,7 +8,7 @@ import horizontalLogo from '../../../../public/logo_horizontal_white.png'
 
 export default function Footer() {
   return (
-    <footer className="p-relative  border-top-0" id="footer">
+    <footer className="p-relative  border-top-0 font-poppins" id="footer">
       <div className="container pt-5 pb-3 border-bottom">
         <div className="row py-5">
           <div className="col-lg-6 mt-5 pt-3 gap-4">
@@ -48,7 +48,7 @@ export default function Footer() {
           <div className="col-lg-6 mt-lg-5 pt-lg-3">
             <div className="row mb-5-5">
               <div className="col-md-4 mb-4 mb-lg-0">
-                <h4 className="text-color-light font-weight-bold mb-3">
+                <h4 className="text-color-light font-weight-bold mb-3 ">
                   Company
                 </h4>
 
@@ -61,6 +61,7 @@ export default function Footer() {
                       Home
                     </Link>
                   </li>
+
                   <li>
                     <Link
                       className="text-color-grey text-color-hover-primary text-decoration-none"
@@ -69,6 +70,7 @@ export default function Footer() {
                       About Us
                     </Link>
                   </li>
+
                   <li>
                     <Link
                       className="text-color-grey text-color-hover-primary text-decoration-none"
@@ -93,6 +95,7 @@ export default function Footer() {
                       Brand Development
                     </Link>
                   </li>
+
                   <li>
                     <Link
                       className="text-color-grey text-color-hover-primary text-decoration-none"
@@ -101,6 +104,7 @@ export default function Footer() {
                       Graphic Design
                     </Link>
                   </li>
+
                   <li>
                     <Link
                       className="text-color-grey text-color-hover-primary text-decoration-none"
@@ -116,6 +120,7 @@ export default function Footer() {
                 <h4 className="text-color-light font-weight-bold mb-3">
                   Resources
                 </h4>
+
                 <ul className="flex flex-col list list-unstyled text-3-5 gap-[13px]">
                   <li>
                     <Link
@@ -125,6 +130,7 @@ export default function Footer() {
                       Terms
                     </Link>
                   </li>
+
                   <li>
                     <Link
                       className="text-color-grey text-color-hover-primary text-decoration-none"
@@ -133,6 +139,7 @@ export default function Footer() {
                       Blog
                     </Link>
                   </li>
+
                   <li>
                     <Link
                       className="text-color-grey text-color-hover-primary text-decoration-none"

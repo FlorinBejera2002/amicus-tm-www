@@ -20641,7 +20641,7 @@ p.drop-caps.drop-caps-style-2:first-letter {
 
 /* Default Font Style */
 .default-font {
-	font-family: "Poppins", Arial, sans-serif !important;
+	font-family: "Poppins", Arial, sans-serif;
 }
 
 /* Alternative Font Style */

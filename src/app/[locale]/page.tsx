@@ -19,7 +19,7 @@ export default function Home() {
   const t = useTranslations('hero')
 
   return (
-    <div className="main" role="main">
+    <div className="main font-poppins" role="main">
       <section
         className="p-relative border-0 bg-quaternary overflow-hidden m-0 p-0"
         id="home"
