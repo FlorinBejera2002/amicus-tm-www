@@ -49,6 +49,7 @@ export default function Footer() {
                 </div>
               </li>
             </ul>
+
             <Socials />
           </div>
           <div className="col-lg-6 mt-lg-5 pt-lg-3">

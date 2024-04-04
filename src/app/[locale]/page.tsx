@@ -62,7 +62,7 @@ export default function Home() {
                     style={{ textDecoration: 'none' }}
                     target="blank"
                   >
-                    <div className="d-flex justify-center items-center gap-2  hover:text-[#7B0166]  text-gray-400">
+                    <div className="d-flex justify-center items-center gap-2 hover:text-[#7B0166] text-gray-400">
                       <FaInstagram className="w-3 h-3  " />
                       <div>instagram</div>
                     </div>
@@ -73,7 +73,7 @@ export default function Home() {
                     style={{ textDecoration: 'none' }}
                     target="blank"
                   >
-                    <div className="d-flex justify-center items-center gap-2    hover:text-red-500  text-gray-400 ">
+                    <div className="d-flex justify-center items-center gap-2 hover:text-red-500 text-gray-400 ">
                       <FaYoutube className="w-3 h-3" />
                       <div>youtube</div>
                     </div>
@@ -84,7 +84,7 @@ export default function Home() {
                     style={{ textDecoration: 'none' }}
                     target="blank"
                   >
-                    <div className="d-flex justify-center items-center gap-2    hover:text-black  text-gray-400 ">
+                    <div className="d-flex justify-center items-center gap-2 hover:text-black text-gray-400 ">
                       <FaTiktok className="w-3 h-3" />
                       <div>tiktok</div>
                     </div>
@@ -95,7 +95,7 @@ export default function Home() {
                     style={{ textDecoration: 'none' }}
                     target="blank"
                   >
-                    <div className="d-flex justify-center items-center gap-2    hover:text-green-500  text-gray-400 ">
+                    <div className="d-flex justify-center items-center gap-2 hover:text-green-500 text-gray-400 ">
                       <FaSpotify className="w-3 h-3" />
                       <div>spotify</div>
                     </div>
