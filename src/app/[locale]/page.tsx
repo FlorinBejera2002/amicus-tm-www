@@ -24,7 +24,7 @@ export default function Home() {
         className="p-relative border-0 bg-quaternary overflow-hidden m-0 p-0"
         id="home"
       >
-        <div className="custom-hero-heading">
+        <div className="custom-hero-heading text-white">
           <strong>{t('title-hero')}</strong>
         </div>
         <CustomHeroBg />

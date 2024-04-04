@@ -28,7 +28,7 @@ export default function Nav() {
                       className="object-contain"
                       height={40}
                       src={horizontalLogo}
-                      width={140}
+                      width={150}
                     />
                   </Link>
                 </div>
