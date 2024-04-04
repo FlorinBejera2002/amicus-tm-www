@@ -1,4 +1,3 @@
-
 import { PiNumberCircleOneFill } from 'react-icons/pi'
 import Image from 'next/image'
 

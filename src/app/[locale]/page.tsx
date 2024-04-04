@@ -1,4 +1,5 @@
 import Team from './components/sections/team'
+import StepsEvangelization from './components/sections/steps-evangelization'
 import PersonalEvangelism from './components/sections/personal-evangelism'
 import Numbers from './components/sections/numbers'
 import { EmblaCarousel } from './components/sections/embla-carousel'
@@ -44,19 +45,22 @@ export default function Home() {
                 data-appear-animation="fadeInUpShorter"
                 data-appear-animation-delay="300"
               >
-                <div className="d-flex gap-2">
+                <div className="d-flex gap-2  no-underline">
                   <Link
-                    className="d-fex"
+                    className="d-fex "
                     href="https://www.facebook.com/AriseForChristRomania/"
                     target="blank"
                   >
                     <div className="d-flex justify-center items-center gap-2 hover:decoration-none hover:text-blue-900  text-gray-400">
                       <FaFacebookF className="w-3 h-3" />
-                      <div className="hover:outline-none">facebook</div>
+                      <div className="outline-none hover:outline-none ">
+                        facebook
+                      </div>
                     </div>
                   </Link>
                   /
                   <Link
+                    className="outline-none no-underline"
                     href="https://www.instagram.com/p/CfL2FveIMpn/"
                     target="blank"
                   >
@@ -102,9 +106,9 @@ export default function Home() {
         </div>
       </section>
       <Animation />
+      <StepsEvangelization />
       <EmblaCarousel />
       <About />
-      {/* <StepsEvangelization /> */}
       <Team />
       <PersonalEvangelism />
       <Numbers />
