@@ -1,5 +1,3 @@
-import React from 'react'
-
 import { FaFacebookF } from 'react-icons/fa6'
 import { FaInstagram } from 'react-icons/fa6'
 import { FaYoutube } from 'react-icons/fa'

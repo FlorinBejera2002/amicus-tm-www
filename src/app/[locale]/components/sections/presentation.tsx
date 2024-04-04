@@ -1,5 +1,3 @@
-import React from 'react'
-
 import Link from 'next/link'
 import Image from 'next/image'
 
@@ -13,15 +11,15 @@ export default function Presentation() {
           <div className="col text-center custom-projects-1">
             <div className="row border-top">
               <div className="col-lg-2 order-3 order-lg-0 py-4 border-end ps-0 pe-0 pe-lg-4 m-0 text-start">
-                <a
+                <Link
                   className="btn btn-modern btn-dark w-100 font-weight-semibold text-capitalize text-3 py-3 anim-hover-translate-top-5px transition-2ms mb-5 mb-lg-0"
-                  href="#"
+                  href="https://www.youtube.com/@Ariseforchrist"
                 >
                   <span className="px-4 d-block ws-nowrap">
                     View Online{' '}
                     <i className="fas fa-arrow-right rotate-l-45 ms-2"></i>
                   </span>
-                </a>
+                </Link>
               </div>
               <div className="col-lg-6 py-4 border-end px-0 px-lg-4 m-0 text-start">
                 <h3
@@ -42,7 +40,7 @@ export default function Presentation() {
                 </p>
               </div>
               <div className="col-lg-4 p-0 ps-lg-4">
-                <Link href="#">
+                <Link href="https://www.youtube.com/@Ariseforchrist">
                   <Image
                     alt="arise for christ logo"
                     className="img-fluid my-lg-4"
@@ -56,15 +54,15 @@ export default function Presentation() {
             </div>
             <div className="row border-top">
               <div className="col-lg-2 order-3 order-lg-0 py-4 border-end ps-0 pe-0 pe-lg-4 m-0 text-start">
-                <a
+                <Link
                   className="btn btn-modern btn-dark w-100 font-weight-semibold text-capitalize text-3 py-3 anim-hover-translate-top-5px transition-2ms mb-5 mb-lg-0"
-                  href="#"
+                  href="https://www.youtube.com/@Ariseforchrist"
                 >
                   <span className="px-4 d-block ws-nowrap">
                     View Online{' '}
                     <i className="fas fa-arrow-right rotate-l-45 ms-2"></i>
                   </span>
-                </a>
+                </Link>
               </div>
               <div className="col-lg-6 py-4 border-end px-0 px-lg-4 m-0 text-start">
                 <h3
@@ -85,7 +83,7 @@ export default function Presentation() {
                 </p>
               </div>
               <div className="col-lg-4 p-0 ps-lg-4">
-                <Link href="#">
+                <Link href="https://www.youtube.com/@Ariseforchrist">
                   <Image
                     alt="arise for christ logo"
                     className="img-fluid my-lg-4"
@@ -99,15 +97,15 @@ export default function Presentation() {
             </div>
             <div className="row border-top border-bottom">
               <div className="col-lg-2 order-3 order-lg-0 py-4 border-end ps-0 pe-0 pe-lg-4 m-0 text-start">
-                <a
+                <Link
                   className="btn btn-modern btn-dark w-100 font-weight-semibold text-capitalize text-3 py-3 anim-hover-translate-top-5px transition-2ms mb-5 mb-lg-0"
-                  href="#"
+                  href="https://www.youtube.com/@Ariseforchrist"
                 >
                   <span className="px-4 d-block ws-nowrap">
                     View Online{' '}
                     <i className="fas fa-arrow-right rotate-l-45 ms-2"></i>
                   </span>
-                </a>
+                </Link>
               </div>
               <div className="col-lg-6 py-4 border-end px-0 px-lg-4 m-0 text-start">
                 <h3
@@ -129,7 +127,7 @@ export default function Presentation() {
                 </p>
               </div>
               <div className="col-lg-4 p-0 ps-lg-4">
-                <Link href="#">
+                <Link href="https://www.youtube.com/@Ariseforchrist">
                   <Image
                     alt="arise for christ logo"
                     className="img-fluid my-lg-4"

@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import Image from 'next/image'
 
 import step1 from '../../../../../../public/logo_horizontal_black.png'
@@ -108,7 +109,10 @@ export default function PersonalEvangelism() {
                       <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Curabitur pellentesque neque eget diam posuere porta.
-                        Quisque ut nulla at nunc <a href="#">vehicula</a>{' '}
+                        Quisque ut nulla at nunc{' '}
+                        <Link href="https://www.youtube.com/@Ariseforchrist">
+                          vehicula
+                        </Link>{' '}
                         lacinia. Proin adipiscing porta tellus, ut feugiat nibh
                         adipiscing sit amet. In eu justo a felis faucibus ornare
                         vel id metus. Vestibulum ante ipsum primis in faucibus
@@ -116,7 +120,10 @@ export default function PersonalEvangelism() {
                         libero ligula. Fusce eget metus lorem, ac viverra leo.
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Curabitur pellentesque neque eget diam posuere porta.
-                        Quisque ut nulla at nunc <a href="#">vehicula</a>{' '}
+                        Quisque ut nulla at nunc{' '}
+                        <Link href="https://www.youtube.com/@Ariseforchrist">
+                          vehicula
+                        </Link>{' '}
                         lacinia.{' '}
                       </p>
                     </div>
@@ -188,13 +195,13 @@ export default function PersonalEvangelism() {
               data-appear-animation="fadeInUpShorter"
               data-appear-animation-delay="300"
             >
-              <a
+              <Link
                 className="btn btn-modern btn-primary text-capitalize text-dark text-3 px-2 py-1 anim-hover-translate-top-5px transition-2ms"
-                href="#"
+                href="https://www.youtube.com/@Ariseforchrist"
               >
                 Learn More{' '}
                 <i className="fas fa-arrow-right rotate-l-45 ms-2"></i>
-              </a>
+              </Link>
             </div>
           </div>
         </div>

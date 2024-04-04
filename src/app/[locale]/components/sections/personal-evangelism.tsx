@@ -1,5 +1,3 @@
-import React from 'react'
-
 import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 
@@ -15,7 +13,10 @@ export default function PersonalEvangelism() {
   return (
     <section id="concept">
       <div className="container bg-color-light p-relative z-index-2 py-1 mt-3">
-        <div className="row py-5 my-5">
+        <div className="row py-3 my-3">
+          <h1 className="font-bold flex justify-center pb-4 text-7">
+            {t('presentation_title')}
+          </h1>
           <div className="col-lg-6 text-center">
             <div className="d-flex mb-3">
               <div className="p-2 flex-fill">
@@ -28,24 +29,20 @@ export default function PersonalEvangelism() {
                     alt="Arise photo"
                     className="custom-el-3-img p-relative size-full"
                     loading="lazy"
-                    src={step1}
+                    src={step5}
                   />
                 </div>
               </div>
 
               <div className="p-2 flex-fill">
-                <div
+                <Image
+                  alt="Arise photo"
                   className="custom-el-3 bg-color-primary custom-border-radius-2 mx-auto appear-animation"
                   data-appear-animation="zoomIn"
                   data-appear-animation-delay="200"
-                >
-                  <Image
-                    alt="Arise photo"
-                    className="p-relative size-full"
-                    loading="lazy"
-                    src={step2}
-                  />
-                </div>
+                  loading="lazy"
+                  src={step2}
+                />
               </div>
 
               <div className="p-2 flex-fill">
@@ -54,14 +51,12 @@ export default function PersonalEvangelism() {
                   data-appear-animation="zoomIn"
                   data-appear-animation-delay="300"
                 >
-                  <div className="custom-el-3-img">
-                    <Image
-                      alt="Arise photo"
-                      className="p-relative size-full"
-                      loading="lazy"
-                      src={step3}
-                    />
-                  </div>
+                  <Image
+                    alt="Arise photo"
+                    className="custom-el-3-img p-relative size-full"
+                    loading="lazy"
+                    src={step1}
+                  />
                 </div>
               </div>
             </div>
@@ -72,14 +67,12 @@ export default function PersonalEvangelism() {
                   data-appear-animation="zoomIn"
                   data-appear-animation-delay="400"
                 >
-                  <div className="custom-el-3-img">
-                    <Image
-                      alt="Arise photo"
-                      className="p-relative size-full"
-                      loading="lazy"
-                      src={step4}
-                    />
-                  </div>
+                  <Image
+                    alt="Arise photo"
+                    className="custom-el-3-img p-relative size-full"
+                    loading="lazy"
+                    src={step3}
+                  />
                 </div>
               </div>
 
@@ -89,14 +82,12 @@ export default function PersonalEvangelism() {
                   data-appear-animation="zoomIn"
                   data-appear-animation-delay="500"
                 >
-                  <div className="custom-el-3-img">
-                    <Image
-                      alt="Arise photo"
-                      className="p-relative size-full"
-                      loading="lazy"
-                      src={step5}
-                    />
-                  </div>
+                  <Image
+                    alt="Arise photo"
+                    className=" custom-el-3-img p-relative size-full"
+                    loading="lazy"
+                    src={step4}
+                  />
                 </div>
               </div>
             </div>
@@ -112,7 +103,7 @@ export default function PersonalEvangelism() {
                 data-plugin-toggle={true}
               >
                 <section className="toggle">
-                  <details className="open:bg-white border-b  open:ring-1 open:ring-black/5 open:shadow-lg p-3 rounded-lg transform-gpu delay-75 duration-100 ease-in-out ">
+                  <details className=" border-b  p-3 rounded-lg transform-gpu delay-75 duration-100 ease-in-out ">
                     <summary className="leading-5 text-slate-900 dark:text-white font-semibold select-none">
                       {t('step1_title')}
                     </summary>
@@ -122,7 +113,7 @@ export default function PersonalEvangelism() {
                   </details>
                 </section>
                 <section className="toggle">
-                  <details className="open:bg-white border-b  open:ring-1 open:ring-black/5 open:shadow-lg p-3 rounded-lg transform-gpu delay-75 duration-100 ease-in-out ">
+                  <details className=" border-b  p-3 rounded-lg transform-gpu delay-75 duration-100 ease-in-out ">
                     <summary className="leading-6 text-slate-900 dark:text-white font-semibold select-none">
                       {t('step2_title')}
                     </summary>
@@ -132,7 +123,7 @@ export default function PersonalEvangelism() {
                   </details>
                 </section>
                 <section className="toggle">
-                  <details className="open:bg-white border-b  open:ring-1 open:ring-black/5 open:shadow-lg p-3 rounded-lg transform-gpu delay-75 duration-100 ease-in-out ">
+                  <details className=" border-b  p-3 rounded-lg transform-gpu delay-75 duration-100 ease-in-out ">
                     <summary className="leading-6 text-slate-900 dark:text-white font-semibold select-none">
                       {t('step3_title')}
                     </summary>
@@ -142,7 +133,7 @@ export default function PersonalEvangelism() {
                   </details>
                 </section>
                 <section className="toggle">
-                  <details className="open:bg-white border-b  open:ring-1 open:ring-black/5 open:shadow-lg p-3 rounded-lg transform-gpu delay-75 duration-100 ease-in-out ">
+                  <details className=" border-b  p-3 rounded-lg transform-gpu delay-75 duration-100 ease-in-out ">
                     <summary className="leading-6 text-slate-900 dark:text-white font-semibold select-none">
                       {t('step4_title')}
                     </summary>
@@ -152,7 +143,7 @@ export default function PersonalEvangelism() {
                   </details>
                 </section>
                 <section className="toggle">
-                  <details className="open:bg-white border-b  open:ring-1 open:ring-black/5 open:shadow-lg p-3 rounded-lg transform-gpu delay-75 duration-100 ease-in-out ">
+                  <details className=" border-b  p-3 rounded-lg transform-gpu delay-75 duration-100 ease-in-out ">
                     <summary className="leading-6 text-slate-900 dark:text-white font-semibold select-none">
                       {t('step5_title')}
                     </summary>
@@ -162,7 +153,7 @@ export default function PersonalEvangelism() {
                   </details>
                 </section>
                 <section className="toggle">
-                  <details className="open:bg-white border-b  open:ring-1 open:ring-black/5 open:shadow-lg p-3 rounded-lg transform-gpu delay-75 duration-100 ease-in-out ">
+                  <details className=" border-b  p-3 rounded-lg transform-gpu delay-75 duration-100 ease-in-out ">
                     <summary className="leading-6 text-slate-900 dark:text-white font-semibold select-none">
                       {t('step6_title')}
                     </summary>
@@ -172,7 +163,7 @@ export default function PersonalEvangelism() {
                   </details>
                 </section>
                 <section className="toggle">
-                  <details className="open:bg-white border-b  open:ring-1 open:ring-black/5 open:shadow-lg p-3 rounded-lg transform-gpu delay-75 duration-100 ease-in-out ">
+                  <details className=" border-b  p-3 rounded-lg transform-gpu delay-75 duration-100 ease-in-out ">
                     <summary className="leading-6 text-slate-900 dark:text-white font-semibold select-none">
                       {t('step7_title')}
                     </summary>
@@ -182,7 +173,7 @@ export default function PersonalEvangelism() {
                   </details>
                 </section>
                 <section className="toggle">
-                  <details className="open:bg-white border-b  open:ring-1 open:ring-black/5 open:shadow-lg p-3 rounded-lg transform-gpu delay-75 duration-100 ease-in-out ">
+                  <details className=" border-b  p-3 rounded-lg transform-gpu delay-75 duration-100 ease-in-out ">
                     <summary className="leading-6 text-slate-900 dark:text-white font-semibold select-none">
                       {t('step8_title')}
                     </summary>

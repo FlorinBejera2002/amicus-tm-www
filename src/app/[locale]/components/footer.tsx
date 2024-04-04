@@ -23,29 +23,29 @@ export default function Footer() {
             </Link>
             <ul className="list list-unstyled pt-4">
               <li className="d-flex align-items-center mb-4">
-                <a
+                <Link
                   className="d-inline-flex align-items-center text-decoration-none text-color-light text-color-hover-primary font-weight-semibold text-4-5"
                   href="mailto:info@ariseforchrist.com"
                 >
                   info@ariseforchrist.com
-                </a>
+                </Link>
               </li>
               <li className="d-blok align-items-center mb-4">
                 <div className="pb-3">
-                  <a
+                  <Link
                     className=" align-items-center text-decoration-none text-color-light text-color-hover-primary font-weight-semibold text-4-5 "
                     href="tel:+0721 804 560"
                   >
                     +0721 804 560
-                  </a>
+                  </Link>
                 </div>
                 <div>
-                  <a
+                  <Link
                     className=" align-items-center text-decoration-none text-color-light text-color-hover-primary font-weight-semibold text-4-5"
                     href="tel:0356 175 148"
                   >
                     0356 175 148
-                  </a>
+                  </Link>
                 </div>
               </li>
             </ul>
@@ -59,28 +59,28 @@ export default function Footer() {
                 </h4>
                 <ul className="list list-unstyled text-3-5">
                   <li>
-                    <a
+                    <Link
                       className="text-color-grey text-color-hover-primary"
-                      href="#"
+                      href="https://www.youtube.com/@Ariseforchrist"
                     >
                       Home
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
+                    <Link
                       className="text-color-grey text-color-hover-primary"
-                      href="#"
+                      href="https://www.youtube.com/@Ariseforchrist"
                     >
                       About Us
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
+                    <Link
                       className="text-color-grey text-color-hover-primary"
-                      href="#"
+                      href="https://www.youtube.com/@Ariseforchrist"
                     >
                       Services
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -90,28 +90,28 @@ export default function Footer() {
                 </h4>
                 <ul className="list list-unstyled text-3-5">
                   <li>
-                    <a
+                    <Link
                       className="text-color-grey text-color-hover-primary"
-                      href="#"
+                      href="https://www.youtube.com/@Ariseforchrist"
                     >
                       Brand Development
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
+                    <Link
                       className="text-color-grey text-color-hover-primary"
-                      href="#"
+                      href="https://www.youtube.com/@Ariseforchrist"
                     >
                       Graphic Design
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
+                    <Link
                       className="text-color-grey text-color-hover-primary"
-                      href="#"
+                      href="https://www.youtube.com/@Ariseforchrist"
                     >
                       UX Design
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -121,28 +121,28 @@ export default function Footer() {
                 </h4>
                 <ul className="list list-unstyled text-3-5">
                   <li>
-                    <a
+                    <Link
                       className="text-color-grey text-color-hover-primary"
-                      href="#"
+                      href="https://www.youtube.com/@Ariseforchrist"
                     >
                       Terms
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
+                    <Link
                       className="text-color-grey text-color-hover-primary"
-                      href="#"
+                      href="https://www.youtube.com/@Ariseforchrist"
                     >
                       Blog
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
+                    <Link
                       className="text-color-grey text-color-hover-primary"
-                      href="#"
+                      href="https://www.youtube.com/@Ariseforchrist"
                     >
                       Contact
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -150,51 +150,51 @@ export default function Footer() {
             <div className="row">
               <div className="col">
                 <h4 className="text-color-light font-weight-bold mb-3">Blog</h4>
-                <a href="#">
+                <Link href="https://www.youtube.com/@Ariseforchrist">
                   <span className="badge bg-dark--100 font-weight-normal text-2 badge-md anim-hover-translate-top-5px transition-2ms me-2 mb-2">
                     Web Design
                   </span>
-                </a>
-                <a href="#">
+                </Link>
+                <Link href="https://www.youtube.com/@Ariseforchrist">
                   <span className="badge bg-dark--100 font-weight-normal text-2 badge-md anim-hover-translate-top-5px transition-2ms me-2 mb-2">
                     CMS
                   </span>
-                </a>
-                <a href="#">
+                </Link>
+                <Link href="https://www.youtube.com/@Ariseforchrist">
                   <span className="badge bg-dark--100 font-weight-normal text-2 badge-md anim-hover-translate-top-5px transition-2ms me-2 mb-2">
                     SEO
                   </span>
-                </a>
-                <a href="#">
+                </Link>
+                <Link href="https://www.youtube.com/@Ariseforchrist">
                   <span className="badge bg-dark--100 font-weight-normal text-2 badge-md anim-hover-translate-top-5px transition-2ms me-2 mb-2">
                     User Experience (UX) Design
                   </span>
-                </a>
-                <a href="#">
+                </Link>
+                <Link href="https://www.youtube.com/@Ariseforchrist">
                   <span className="badge bg-dark--100 font-weight-normal text-2 badge-md anim-hover-translate-top-5px transition-2ms me-2 mb-2">
                     Social Media Marketing
                   </span>
-                </a>
-                <a href="#">
+                </Link>
+                <Link href="https://www.youtube.com/@Ariseforchrist">
                   <span className="badge bg-dark--100 font-weight-normal text-2 badge-md anim-hover-translate-top-5px transition-2ms me-2 mb-2">
                     Website Development
                   </span>
-                </a>
-                <a href="#">
+                </Link>
+                <Link href="https://www.youtube.com/@Ariseforchrist">
                   <span className="badge bg-dark--100 font-weight-normal text-2 badge-md anim-hover-translate-top-5px transition-2ms me-2 mb-2">
                     E-commerce Strategies
                   </span>
-                </a>
-                <a href="#">
+                </Link>
+                <Link href="https://www.youtube.com/@Ariseforchrist">
                   <span className="badge bg-dark--100 font-weight-normal text-2 badge-md anim-hover-translate-top-5px transition-2ms me-2 mb-2">
                     Mobile Applications
                   </span>
-                </a>
-                <a href="#">
+                </Link>
+                <Link href="https://www.youtube.com/@Ariseforchrist">
                   <span className="badge bg-dark--100 font-weight-normal text-2 badge-md anim-hover-translate-top-5px transition-2ms me-2 mb-2">
                     Website Maintenance
                   </span>
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -210,15 +210,18 @@ export default function Footer() {
               </p>
             </div>
             <div className="col-lg-6 text-lg-end mt-4">
-              <a className="text-color-grey text-color-hover-primary" href="#">
+              <Link
+                className="text-color-grey text-color-hover-primary"
+                href="https://www.youtube.com/@Ariseforchrist"
+              >
                 Privacy Policy
-              </a>
-              <a
+              </Link>
+              <Link
                 className="text-color-grey text-color-hover-primary ms-3"
-                href="#"
+                href="https://www.youtube.com/@Ariseforchrist"
               >
                 Terms of Use
-              </a>
+              </Link>
             </div>
           </div>
         </div>

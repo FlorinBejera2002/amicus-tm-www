@@ -1,5 +1,5 @@
-import React from 'react'
 
+import { PiNumberCircleOneFill } from 'react-icons/pi'
 import Image from 'next/image'
 
 import LucianBalanescu from '../../../../../public/img/Podcast-Lucian-Balanescu.png'
@@ -22,8 +22,8 @@ export default function StepsEvangelization() {
             <b>Pasii de evanghelizare:</b>
           </h1>
           <div className="">
-            <b className="text-7xl  p-5">1</b>
             <button> Button</button>
+            <PiNumberCircleOneFill />
           </div>
           <div className="">
             <b className="text-7xl  p-5">2</b>

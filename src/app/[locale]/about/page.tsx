@@ -92,7 +92,7 @@ const About = () => {
               >
                 <a
                   className="btn btn-modern btn-primary text-capitalize text-dark text-3 px-2 py-1 anim-hover-translate-top-5px transition-2ms"
-                  href="#"
+                  href="https://www.youtube.com/@Ariseforchrist"
                 >
                   Learn More{' '}
                   <i className="fas fa-arrow-right rotate-l-45 ms-2"></i>
