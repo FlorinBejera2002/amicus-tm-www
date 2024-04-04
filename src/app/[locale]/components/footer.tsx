@@ -191,18 +191,12 @@ export default function Footer() {
               </p>
             </div>
             <div className="col-lg-6 text-lg-end mt-4">
-              <Link
-                className="text-color-grey text-color-hover-primary"
-                href="https://www.youtube.com/@Ariseforchrist"
-              >
+              <span className="text-color-grey text-color-hover-primary cursor-pointer">
                 Privacy Policy
-              </Link>
-              <Link
-                className="text-color-grey text-color-hover-primary ms-3"
-                href="https://www.youtube.com/@Ariseforchrist"
-              >
+              </span>
+              <span className="text-color-grey text-color-hover-primary ms-3 cursor-pointer">
                 Terms of Use
-              </Link>
+              </span>
             </div>
           </div>
         </div>

@@ -7562,7 +7562,7 @@ fieldset:disabled .btn {
 }
 .border-bottom {
   border-bottom: var(--bs-border-width) var(--bs-border-style)
-    var(--bs-border-color) !important;
+    rgb(51, 50, 50) !important;
 }
 .border-bottom-0 {
   border-bottom: 0 !important;

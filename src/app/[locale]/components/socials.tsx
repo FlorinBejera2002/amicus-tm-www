@@ -15,7 +15,7 @@ export default function Socials() {
         </Link>
       </div>
 
-      <div className="d-flex justify-center items-center w-8 h-8 rounded-full hover:bg-blue-900">
+      <div className="d-flex justify-center items-center w-8 h-8 rounded-full hover:bg-[#7B0166]">
         <Link href="https://www.instagram.com/p/CfL2FveIMpn/" target="blank">
           <FaInstagram className="w-4 h-4" color="#fff" />
         </Link>
