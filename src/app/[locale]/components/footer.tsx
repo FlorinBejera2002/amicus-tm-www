@@ -149,25 +149,31 @@ export default function Footer() {
               Blog
             </h4>
             <div className="flex flex-wrap text-white text-xs gap-2.5">
-              <div className="bg-[#1F1F1F] py-1.5 px-3">Web Design</div>
-              <div className="bg-[#1F1F1F] py-1.5 px-3">CMS</div>
-              <div className="bg-[#1F1F1F] py-1.5 px-3">SEO</div>
-              <div className="bg-[#1F1F1F] py-1.5 px-3">
+              <div className="bg-dark--100 py-1.5 px-3 transform hover:-translate-y-1 transition-transform duration-200">
+                Web Design
+              </div>
+              <div className="bg-dark--100 py-1.5 px-3 transform hover:-translate-y-1 transition-transform duration-200">
+                CMS
+              </div>
+              <div className="bg-dark--100 py-1.5 px-3 transform hover:-translate-y-1 transition-transform duration-200">
+                SEO
+              </div>
+              <div className="bg-dark--100 py-1.5 px-3 transform hover:-translate-y-1 transition-transform duration-200">
                 User Experience (UX) Design
               </div>
-              <div className="bg-[#1F1F1F] py-1.5 px-3">
+              <div className="bg-dark--100 py-1.5 px-3 transform hover:-translate-y-1 transition-transform duration-200">
                 Social Media Marketing
               </div>
-              <div className="bg-[#1F1F1F] py-1.5 px-3">
+              <div className="bg-dark--100 py-1.5 px-3 transform hover:-translate-y-1 transition-transform duration-200">
                 Website Development
               </div>
-              <div className="bg-[#1F1F1F] py-1.5 px-3">
+              <div className="bg-dark--100 py-1.5 px-3 transform hover:-translate-y-1 transition-transform duration-200">
                 E-commerce Strategies
               </div>
-              <div className="bg-[#1F1F1F] py-1.5 px-3">
+              <div className="bg-dark--100 py-1.5 px-3 transform hover:-translate-y-1 transition-transform duration-200">
                 Mobile Applications
               </div>
-              <div className="bg-[#1F1F1F] py-1.5 px-3">
+              <div className="bg-dark--100 py-1.5 px-3 transform hover:-translate-y-1 transition-transform duration-200">
                 Website Maintenance
               </div>
             </div>
