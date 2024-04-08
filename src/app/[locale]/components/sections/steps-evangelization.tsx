@@ -31,14 +31,6 @@ export default function StepsEvangelization() {
             header="Scanează codul QR"
             numberImage={<PiNumberCircleOneFill className="w-24 h-24" />}
           />
-
-          {/* <StepEvangelization
-            description="Dorești"
-            header="Completează o"
-            numberImage={<PiNumberCircleTwoFill className="w-24 h-24" />}
-            styles="justify-end"
-          /> */}
-
           <div className="flex  justify-end flex-wrap items-center gap-3">
             <PiNumberCircleTwoFill className="w-24 h-24" />
             <div>
@@ -51,16 +43,13 @@ export default function StepsEvangelization() {
               </p>
             </div>
           </div>
-          <div className="flex justify-center flex-wrap items-center gap-3 pl-24">
-            <PiNumberCircleThreeFill className="w-24 h-24" />
-            <div>
-              <b>3. Noi îl vom contacta</b>
-              <p className="flex flex-wrap">
-                Noi vom prelua această cerere pentru a face un plan de
-                evanghelizare!
-              </p>
-            </div>
-          </div>
+          <StepEvangelization
+            description=" Noi vom prelua această cerere pentru a face un plan de
+            evanghelizare!"
+            header="Noi îl vom contacta"
+            numberImage={<PiNumberCircleThreeFill className="w-24 h-24" />}
+            styles="justify-center"
+          />
         </div>
       </div>
     </section>
