@@ -1,5 +1,3 @@
-import React from 'react'
-
 import Image from 'next/image'
 
 import horizontalLogo from '../../../../../public/logo_horizontal_black.png'

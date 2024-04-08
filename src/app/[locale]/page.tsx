@@ -1,11 +1,8 @@
 import Team from './components/sections/team'
 import StepsEvangelization from './components/sections/steps-evangelization'
 import PersonalEvangelism from './components/sections/personal-evangelism'
-import Numbers from './components/sections/numbers'
-import { EmblaCarousel } from './components/sections/embla-carousel'
 import CustomHeroBg from './components/sections/custom-hero-bg'
 import Animation from './components/sections/animation'
-import About from './components/sections/about'
 
 import { FaFacebookF } from 'react-icons/fa6'
 import { FaInstagram } from 'react-icons/fa6'
@@ -108,11 +105,10 @@ export default function Home() {
       </section>
       <Animation />
       <StepsEvangelization />
-      <EmblaCarousel />
-      <About />
+      {/* <EmblaCarousel /> */}
+      {/* <About /> */}
       <Team />
       <PersonalEvangelism />
-      <Numbers />
     </div>
   )
 }
