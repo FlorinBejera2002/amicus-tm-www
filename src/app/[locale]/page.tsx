@@ -48,7 +48,7 @@ export default function Home() {
                     href="https://www.facebook.com/AriseForChristRomania/"
                     target="blank"
                   >
-                    <div className="d-flex justify-center items-center gap-2 hover:text-blue-900  text-gray-400">
+                    <div className="d-flex justify-center items-center gap-2 hover:text-blue-900 text-gray-400">
                       <FaFacebookF className="w-5 h-5" />
                       <div>facebook</div>
                     </div>

@@ -4,6 +4,7 @@ import { useState } from 'react'
 import Portfolio from '../portfolio/page'
 import Elements from '../elements/page'
 
+import { usePathname, useRouter } from 'next/navigation'
 import Link from 'next/link'
 import Image from 'next/image'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -13,6 +14,15 @@ import horizontalLogo from '../../../../public/logo_horizontal_white.png'
 
 export default function Nav() {
   const [navbar, setNavBar] = useState(false)
+  const router = useRouter()
+  const pathname = usePathname()
+
+  const handleLocaleChange = () =>
+    router.push(
+      pathname.includes('/en')
+        ? pathname.replace('/en', '/ro')
+        : pathname.replace('/ro', '/en')
+    )
 
   return (
     <header className="header-transparent" id="header">
@@ -63,7 +73,7 @@ export default function Nav() {
                         </li>
 
                         <li>
-                          <Link className="nav-link" href="/blog">
+                          <Link className="nav-link" href="//blog">
                             Blog
                           </Link>
                         </li>
@@ -82,6 +92,12 @@ export default function Nav() {
                       Contact Us
                     </span>
                   </Link>
+                  <button
+                    className="ml-12 cursor-pointer duration-500 hover:text-[#e3ae04] text-white "
+                    onClick={handleLocaleChange}
+                  >
+                    en/ro
+                  </button>
                   <button
                     className="btn header-btn-collapse-nav text-dark"
                     data-bs-target=".header-nav-main nav"
@@ -108,9 +124,9 @@ export default function Nav() {
             <ul className="nav nav-pills">
               <li>
                 <Link
-                  className="nav-link"
+                  className="nav-link "
                   href="/"
-                  onClick={() => setNavBar(!navbar)}
+                  // onClick={() => setNavBar(!navbar)}
                 >
                   Home
                 </Link>
@@ -119,7 +135,7 @@ export default function Nav() {
                 <Link
                   className="nav-link"
                   href="/about"
-                  onClick={() => setNavBar(!navbar)}
+                  // onClick={() => setNavBar(!navbar)}
                 >
                   About Us
                 </Link>
@@ -128,7 +144,7 @@ export default function Nav() {
                 <Link
                   className="nav-link"
                   href="/services"
-                  onClick={() => setNavBar(!navbar)}
+                  // onClick={() => setNavBar(!navbar)}
                 >
                   Services
                 </Link>
@@ -137,7 +153,7 @@ export default function Nav() {
                 <Link
                   className="nav-link"
                   href="/blog"
-                  onClick={() => setNavBar(!navbar)}
+                  // onClick={() => setNavBar(!navbar)}
                 >
                   Blog
                 </Link>
@@ -146,7 +162,7 @@ export default function Nav() {
                 <Link
                   className="nav-link"
                   href="/portfolio"
-                  onClick={() => setNavBar(!navbar)}
+                  // onClick={() => setNavBar(!navbar)}
                 >
                   Portfolio
                 </Link>
@@ -155,7 +171,7 @@ export default function Nav() {
                 <Link
                   className="nav-link"
                   href="/elements"
-                  onClick={() => setNavBar(!navbar)}
+                  // onClick={() => setNavBar(!navbar)}
                 >
                   Elements
                 </Link>
