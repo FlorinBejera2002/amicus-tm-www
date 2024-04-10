@@ -82,16 +82,18 @@ export default function Nav() {
                       </ul>
                     </nav>
                   </div>
-                  <Link
-                    className=" btn btn-primary font-weight-semibold text-3 py-lg-3 btn-gradient text-quaternary
-                       anim-hover-translate-top-5px transition-2ms ms-4"
-                    href="demo-creative-agency-2-contact-us.html"
-                    target="_blank"
-                  >
-                    <span className="px-lg-4 d-block ws-nowrap">
-                      Contact Us
-                    </span>
+                  <Link href="?modal=true">
+                    <button
+                      className="btn btn-primary font-weight-semibold text-3 py-lg-3 btn-gradient text-quaternary
+                      anim-hover-translate-top-5px transition-2ms ms-4"
+                      type="button"
+                    >
+                      <span className="px-lg-4 d-block ws-nowrap">
+                        Evangelism Request
+                      </span>
+                    </button>
                   </Link>
+
                   <button
                     className="ml-12 cursor-pointer duration-500 hover:text-[#e3ae04] text-white "
                     onClick={handleLocaleChange}
