@@ -19,7 +19,6 @@ import Nav from './components/nav'
 import Footer from './components/footer'
 
 import { NextIntlClientProvider, useMessages } from 'next-intl'
-import pick from 'lodash/pick'
 
 // const inter = Inter({ subsets: ["latin"] });
 
@@ -35,12 +34,7 @@ export default function RootLayout({ children, params: { locale } }: any) {
   return (
     <html lang={locale}>
       <body>
-        <NextIntlClientProvider
-          messages={
-            // … and provide the relevant messages
-            pick(messages, 'ClientCounter')
-          }
-        >
+        <NextIntlClientProvider locale={locale} messages={messages}>
           <Nav />
           {children}
           <ModalEvangelism />
