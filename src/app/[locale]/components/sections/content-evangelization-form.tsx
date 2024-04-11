@@ -7,7 +7,7 @@ export default function ContentEvangelizationForm() {
     <div>
       <div className="flex flex-col items-center">
         <h1>{t('title')}</h1>
-        <br />
+        <p>{t('subtitle')}</p>
       </div>
     </div>
   )

@@ -162,9 +162,10 @@
     "occupation": "occupation",
     "religion": "religion",
     "send": "SEND",
-    "subtitle": "Welcome to the Evangelism Form, where we invite you to embark on a meaningful exploration of faith and draw closer to God&apos;s grace. This form aims to create a connection with individuals seeking salvation, spiritual growth and a deeper understanding of their relationship with the Divine. <br /><br />Please provide your details below to join us on this transformative experience. Rest assured, your information will be handled with the utmost confidentiality and will only be used for communication related to this spiritual journey.",
+    "subtitle": "Welcome to the Evangelism Form, where we invite you to embark on a meaningful exploration of faith and draw closer to God&apos;s grace. This form aims to create a connection with individuals seeking salvation, spiritual growth and a deeper understanding of their relationship with the Divine.",
     "successful_submission": "Evangelism request sent with success!",
     "target_person": "Who would you like to get closer to God?",
+    "text": "Please provide your details below to join us on this transformative experience. Rest assured, your information will be handled with the utmost confidentiality and will only be used for communication related to this spiritual journey.",
     "title": "Evangelism Request"
   },
   "gdpr": {
