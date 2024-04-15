@@ -82,7 +82,7 @@ export default function Nav() {
                       </ul>
                     </nav>
                   </div>
-                  <Link href="?modal=true">
+                  <Link href="?ev-req-form=open">
                     <button
                       className="btn btn-primary font-weight-semibold text-3 py-lg-3 btn-gradient text-quaternary
                       anim-hover-translate-top-5px transition-2ms ms-4"
