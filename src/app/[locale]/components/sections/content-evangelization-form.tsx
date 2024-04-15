@@ -12,25 +12,26 @@ export default function ContentEvangelizationForm() {
         <p className="text-sm">{t('subtitle')}</p>
         <p className="text-sm">{t('text')}</p>
         <form className="flex flex-col gap-3">
-          <div className="flex w-4/5">
-            <div className=" flex-col gap-3 w-1/2 ">
+          <div className="flex">
+            <div className=" flex gap-3 w-full   ">
               <TextField
-                id="outlined-basic"
+                fullWidth={true}
+                id="fullWidth"
                 label={t('name')}
-                variant="outlined"
+                variant="standard"
               />
               <TextField
-                id="outlined-basic"
+                fullWidth={true}
+                id="fullWidth"
                 label={t('email')}
-                variant="outlined"
+                variant="standard"
               />
-            </div>
-            <div className="w-1/2">
+
               <TextField
-                className=""
-                id="outlined-basic"
+                fullWidth={true}
+                id="fullWidth"
                 label={t('mobile')}
-                variant="outlined"
+                variant="standard"
               />
             </div>
           </div>
@@ -38,24 +39,27 @@ export default function ContentEvangelizationForm() {
           <div>
             <TextField
               color="error"
-              id="details"
+              fullWidth={true}
+              id="fullWidth"
               label={t('details')}
               multiline={true}
               rows={2}
               size="small"
               type="text"
-              variant="outlined"
+              variant="standard"
             />
           </div>
-          <LoadingButton
-            color="secondary"
-            loadingPosition="end"
-            sx={{ padding: '0.5rem 3rem' }}
-            type="submit"
-            variant="outlined"
-          >
-            {t('send')}
-          </LoadingButton>
+          <div className="flex justify-center items-center">
+            <div className="bg-[#e3ae04] rounded-md flex justify-center items-center py-1 my-4 w-44 hover:shadow-2xl hover:-translate-y-1 hover:scale-105 hover:bg-[#e3ae04] duration-700">
+              <LoadingButton
+                className="text-black font-bold"
+                loadingPosition="end"
+                type="submit"
+              >
+                {t('send')}
+              </LoadingButton>
+            </div>
+          </div>
         </form>
       </div>
     </div>
