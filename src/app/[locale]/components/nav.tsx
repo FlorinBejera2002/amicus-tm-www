@@ -4,6 +4,7 @@ import { useState } from 'react'
 import Portfolio from '../portfolio/page'
 import Elements from '../elements/page'
 
+import { useTranslations } from 'next-intl'
 import { usePathname, useRouter } from 'next/navigation'
 import Link from 'next/link'
 import Image from 'next/image'
@@ -16,6 +17,8 @@ export default function Nav() {
   const [navbar, setNavBar] = useState(false)
   const router = useRouter()
   const pathname = usePathname()
+  const t = useTranslations('header')
+  const currentPathName = usePathname()
 
   const handleLocaleChange = () =>
     router.push(
@@ -56,25 +59,34 @@ export default function Nav() {
                       <ul className="nav nav-pills" id="mainNav">
                         <li>
                           <Link className="nav-link" href="/">
-                            Home
+                            {t('home')}
                           </Link>
                         </li>
 
                         <li>
-                          <Link className="nav-link" href="/about">
-                            About Us
+                          <Link
+                            className="nav-link"
+                            href={`${currentPathName}/about`}
+                          >
+                            {t('about_us')}
                           </Link>
                         </li>
 
                         <li>
-                          <Link className="nav-link" href="/services">
+                          <Link
+                            className="nav-link"
+                            href={`${currentPathName}/services`}
+                          >
                             Services
                           </Link>
                         </li>
 
                         <li>
-                          <Link className="nav-link" href="//blog">
-                            Blog
+                          <Link
+                            className="nav-link"
+                            href={`${currentPathName}/blog`}
+                          >
+                            {t('blog')}
                           </Link>
                         </li>
                         <Portfolio />

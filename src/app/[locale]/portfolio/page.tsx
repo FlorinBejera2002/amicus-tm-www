@@ -1,11 +1,14 @@
+import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 
 export default function Portfolio() {
+  const currentPathName = usePathname()
+
   return (
     <li className="dropdown">
       <Link
         className="dropdown-item dropdown-toggle"
-        href="https://www.youtube.com/@Ariseforchrist"
+        href={`${currentPathName}/services`}
       >
         Portfolio
       </Link>

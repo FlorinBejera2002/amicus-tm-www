@@ -1,11 +1,17 @@
-import React from 'react'
+import { usePathname } from 'next/navigation'
+import Link from 'next/link'
 
 export default function Elements() {
+  const currentPathName = usePathname()
+
   return (
     <li className="dropdown dropdown-mega text-white">
-      <a className="dropdown-item dropdown-toggle" href="elements.html">
+      <Link
+        className="dropdown-item dropdown-toggle"
+        href={`${currentPathName}/elements`}
+      >
         Elements
-      </a>
+      </Link>
 
       <ul className="dropdown-menu mt-0">
         <li>
