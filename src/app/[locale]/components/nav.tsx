@@ -18,7 +18,6 @@ export default function Nav() {
   const router = useRouter()
   const pathname = usePathname()
   const t = useTranslations('header')
-  const currentPathName = usePathname()
 
   const handleLocaleChange = () =>
     router.push(
@@ -26,6 +25,8 @@ export default function Nav() {
         ? pathname.replace('/en', '/ro')
         : pathname.replace('/ro', '/en')
     )
+
+  const language = pathname.split('/')[1]
 
   return (
     <header className="header-transparent" id="header">
@@ -66,7 +67,7 @@ export default function Nav() {
                         <li>
                           <Link
                             className="nav-link"
-                            href={`${currentPathName}/about`}
+                            href={`/${language}/about`}
                           >
                             {t('about_us')}
                           </Link>
@@ -75,17 +76,14 @@ export default function Nav() {
                         <li>
                           <Link
                             className="nav-link"
-                            href={`${currentPathName}/services`}
+                            href={`/${language}/services`}
                           >
                             Services
                           </Link>
                         </li>
 
                         <li>
-                          <Link
-                            className="nav-link"
-                            href={`${currentPathName}/blog`}
-                          >
+                          <Link className="nav-link" href={`/${language}/blog`}>
                             {t('blog')}
                           </Link>
                         </li>
@@ -149,7 +147,7 @@ export default function Nav() {
                 <Link
                   className="nav-link"
                   href="/about"
-                  // onClick={() => setNavBar(!navbar)}
+                  onClick={() => setNavBar(!navbar)}
                 >
                   About Us
                 </Link>

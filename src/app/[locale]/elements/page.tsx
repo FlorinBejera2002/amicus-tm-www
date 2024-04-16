@@ -2,13 +2,14 @@ import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 
 export default function Elements() {
-  const currentPathName = usePathname()
+  const pathname = usePathname()
+  const language = pathname.split('/')[1]
 
   return (
     <li className="dropdown dropdown-mega text-white">
       <Link
         className="dropdown-item dropdown-toggle"
-        href={`${currentPathName}/elements`}
+        href={`/${language}/elements`}
       >
         Elements
       </Link>

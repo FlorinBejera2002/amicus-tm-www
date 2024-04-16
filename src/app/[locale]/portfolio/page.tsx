@@ -2,13 +2,14 @@ import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 
 export default function Portfolio() {
-  const currentPathName = usePathname()
+  const pathname = usePathname()
+  const language = pathname.split('/')[1]
 
   return (
     <li className="dropdown">
       <Link
         className="dropdown-item dropdown-toggle"
-        href={`${currentPathName}/services`}
+        href={`/${language}/services`}
       >
         Portfolio
       </Link>
