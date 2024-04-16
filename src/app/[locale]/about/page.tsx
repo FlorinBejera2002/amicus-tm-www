@@ -137,13 +137,11 @@ export default function Nav() {
           <nav className="collapse show">
             <ul className="nav nav-pills">
               <li>
-                {/* TODO: Put setState back if needed. Deleted becuase of formatting issues */}
                 <Link className="nav-link " href="/">
                   Home
                 </Link>
               </li>
               <li>
-                {/* TODO: Put setState back if needed. Deleted becuase of formatting issues */}
                 <Link
                   className="nav-link"
                   href="/about"
@@ -152,19 +150,16 @@ export default function Nav() {
                   About Us
                 </Link>
               </li>
-              {/* TODO: Put setState back if needed. Deleted becuase of formatting issues */}
               <li>
                 <Link className="nav-link" href="/services">
                   Services
                 </Link>
               </li>
-              {/* TODO: Put setState back if needed. Deleted becuase of formatting issues */}
               <li>
                 <Link className="nav-link" href="/blog">
                   Blog
                 </Link>
               </li>
-              {/* TODO: Put setState back if needed. Deleted becuase of formatting issues */}
               <li>
                 <Link className="nav-link" href="/portfolio">
                   Portfolio
