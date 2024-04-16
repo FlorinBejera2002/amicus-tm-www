@@ -169,7 +169,6 @@ export default function Nav() {
                 <Link
                   className="nav-link"
                   href="/elements"
-                  // onClick={() => setNavBar(!navbar)}
                 >
                   Elements
                 </Link>
