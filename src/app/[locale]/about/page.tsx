@@ -24,7 +24,7 @@ const About = () => {
                   dur="34s"
                   repeatCount="indefinite"
                   values="0%;3%;0%"
-                ></animate>
+                />
                 <stop offset="0%" stopColor="rgba(251, 193, 5, 1)"></stop>
                 <stop offset="100%" stopColor="rgba(251, 193, 5, 0)"></stop>
               </radialGradient>
@@ -42,21 +42,21 @@ const About = () => {
                 dur="20s"
                 repeatCount="indefinite"
                 values="25%;0%;25%"
-              ></animate>
+              />
               <animate
                 attributeName="y"
                 dur="21s"
                 repeatCount="indefinite"
                 values="0%;25%;0%"
-              ></animate>
-              <animateTransform
+              />
+              {/* <animateTransform
                 attributeName="transform"
                 dur="7s"
                 from="0 50 50"
                 repeatCount="indefinite"
                 to="360 50 50"
                 type="rotate"
-              ></animateTransform>
+              ></animateTransform> */}
             </rect>
           </svg>
         </div>
@@ -89,6 +89,7 @@ const About = () => {
             data-appear-animation-delay="0"
           >
             <img
+              alt=""
               src="img/demos/creative-agency-2/svg/arrow-up-light.svg"
               width="140"
             />
@@ -99,6 +100,7 @@ const About = () => {
             data-appear-animation-delay="100"
           >
             <img
+              alt=""
               src="img/demos/creative-agency-2/svg/arrow-up-light.svg"
               width="140"
             />
@@ -109,6 +111,7 @@ const About = () => {
             data-appear-animation-delay="200"
           >
             <img
+              alt=""
               src="img/demos/creative-agency-2/svg/arrow-up-light.svg"
               width="140"
             />
@@ -154,7 +157,7 @@ const About = () => {
               <div className="d-block">
                 <div
                   className="toggle toggle-minimal toggle-dark"
-                  data-plugin-toggle
+                  data-plugin-toggle={true}
                 >
                   <section className="toggle">
                     <a className="toggle-title text-dark text-4">What We Do</a>
@@ -241,7 +244,7 @@ const About = () => {
                   className="btn btn-modern btn-primary text-capitalize text-dark text-3 anim-hover-translate-top-5px transition-2ms px-2 py-1"
                   href="#"
                 >
-                  Let's Talk
+                  Lets Talk
                   <i className="fas fa-arrow-right rotate-l-45 ms-2"></i>
                 </a>
               </div>
@@ -338,7 +341,10 @@ const About = () => {
         </div>
       </div>
     </div>
+    // eslint-disable-next-line prettier/prettier
   );
+  // eslint-disable-next-line prettier/prettier
 };
 
+// eslint-disable-next-line prettier/prettier
 export default About;
