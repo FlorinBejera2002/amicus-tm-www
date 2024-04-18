@@ -5,8 +5,14 @@
 // import arrowUpLight from "../../../../public/img/demos/creative-agency-2/svg/arrow-up-light.svg";
 
 import CustomHeroBg from '../components/sections/custom-hero-bg'
+import Animation from '../components/sections/animation'
+
+import { useTranslations } from 'next-intl'
 
 const About = () => {
+  const t = useTranslations('header')
+  const ta = useTranslations('about_us')
+
   return (
     <div className="main" role="main">
       <section className="page-header p-relative bg-quaternary m-0 overflow-hidden border-0 p-0">
@@ -21,18 +27,20 @@ const About = () => {
                       className="text-color-primary text-decoration-none"
                       href="demo-law-firm-2.html"
                     >
-                      HOME
+                      {t('home')}
                     </a>
                   </li>
-                  <li className="text-color-primary active">ABOUT US</li>
+                  <li className="text-color-primary active">{t('about_us')}</li>
                 </ul>
                 <h1 className="text-color-light font-weight-bold text-10">
-                  About Us
+                  {t('about_us')}
                 </h1>
               </div>
             </div>
           </div>
         </div>
+        <Animation />
+
         <div className="p-absolute custom-el-1 custom-el-pos-5">
           <div
             className="appear-animation"
@@ -75,10 +83,11 @@ const About = () => {
           <div className="row px-lg-3">
             <div className="col">
               <p className="text-4-5 line-height-7 text-dark mb-lg-2 mb-xl-4 mb-4 pb-1">
-                Cras a elit sit amet leo accumsan volutpat. Suspendisse
-                hendreriast ehicula leo, vel efficitur felis ultrices non. Cras
-                a elit sit amet leo acun volutpat. Suspendisse hendrerit
-                vehicula leo, vel efficitur fel.
+                {ta('description_p1_1')}
+                {ta('description_p1_2')}
+                {ta('description_p1_3')}
+                {ta('description_p1_4')}
+                {ta('description_p1_5')}
               </p>
             </div>
           </div>
@@ -92,18 +101,12 @@ const About = () => {
             </div>
             <div className="col-lg-6 ps-lg-4">
               <p className="text-4 line-height-7">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                dictum eleifend eros a pharetra. Cras aliquam vestibulum
-                vehicula. Sed sed lectus risus. Vestibulum maximus ac purus in
-                euismod. In venenatis tellus ante, id porta risus semper quis.
-                Aenean vel posuere urna, sit amet placerat massa. Quisque
-                efficitur interdum libero, sed dictum lorem euismod sed.
+                {ta('description_p2_1')}
+                {ta('description_p2_2')}
+                {ta('description_p2_3')}
               </p>
 
-              <p className="text-4 line-height-7">
-                Aenean vel posuere urna, sit amet placerat massa. Quisque
-                efficitur interdum libero, sed dictum lorem euismod sed.
-              </p>
+              <p className="text-4 line-height-7">{ta('description_p3_1')}</p>
 
               <div className="d-block">
                 <div
@@ -111,75 +114,79 @@ const About = () => {
                   data-plugin-toggle={true}
                 >
                   <section className="toggle">
-                    <a className="toggle-title text-dark text-4">What We Do</a>
+                    <a className="toggle-title text-dark text-4">
+                      <strong>{ta('description_p4_0')}</strong>
+                    </a>
                     <div className="toggle-content">
                       <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Curabitur pellentesque neque eget diam posuere porta.
-                        Quisque ut nulla at nunc
-                        <a href="#">vehicula</a> lacinia. Proin adipiscing porta
-                        tellus, ut feugiat nibh adipiscing sit amet. In eu justo
-                        a felis faucibus ornare vel id metus. Vestibulum ante
-                        ipsum primis in faucibus orci luctus et ultrices posuere
-                        cubilia Curae; In eu libero ligula. Fusce eget metus
-                        lorem, ac viverra leo. Lorem ipsum dolor sit amet,
-                        consectetur adipiscing elit. Curabitur pellentesque
-                        neque eget diam posuere porta. Quisque ut nulla at nunc
-                        <a href="#">vehicula</a> lacinia.
+                        {ta('description_p4_1')}
+                        {ta('description_p4_2')}
+                        {ta('description_p4_3')} <br />
+                        <strong> {ta('description_p5_1')}</strong>
+                        {ta('description_p5_2')}
+                        {ta('description_p5_3')} <br />
+                        <strong> {ta('description_p6_1')}</strong>
+                        {ta('description_p6_2')}
+                        {ta('description_p6_3')}
+                        {ta('description_p6_4')} <br />
+                        <strong> {ta('description_p7_1')}</strong>
+                        {ta('description_p7_2')} <br />
+                        <strong> {ta('description_p8_1')}</strong>
+                        {ta('description_p8_2')}
                       </p>
                     </div>
                   </section>
                   <section className="toggle">
                     <a className="toggle-title text-dark text-4">
-                      Pro Experience
+                      <strong> {ta('principals_p1_0')}</strong>
                     </a>
                     <div className="toggle-content">
                       <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Curabitur eget leo at velit imperdiet varius. In eu
-                        ipsum vitae velit congue iaculis vitae at risus. Nullam
-                        tortor nunc, bibendum vitae semper a, volutpat eget
-                        massa. Lorem ipsum dolor sit amet, consectetur
-                        adipiscing elit. Integer fringilla, orci sit amet
-                        posuere auctor, orci eros pellentesque odio, nec
-                        pellentesque erat ligula nec massa. Aenean consequat
-                        lorem ut felis ullamcorper posuere gravida tellus
-                        faucibus. Maecenas dolor elit, pulvinar eu vehicula eu,
-                        consequat et lacus. Duis et purus ipsum. In auctor
-                        mattis ipsum id molestie. Donec risus nulla, fringilla a
-                        rhoncus vitae, semper a massa. Vivamus ullamcorper, enim
-                        sit amet consequat laoreet, tortor tortor dictum urna,
-                        ut egestas urna ipsum nec libero. Nulla justo leo,
-                        molestie vel tempor nec, egestas at massa. Aenean
-                        pulvinar, felis porttitor iaculis pulvinar, odio orci
-                        sodales odio, ac pulvinar felis quam sit.
+                        {ta('principals_p1_1')}
+                        <strong> {ta('principals_p1_2')}</strong>
+                        {ta('principals_p1_3')}
+                        <strong> {ta('principals_p1_4')}</strong>
+                        <strong> {ta('principals_p1_5')}</strong>
+                        {ta('principals_p1_6')}
+                        <strong> {ta('principals_p1_7')}</strong>
+                        {ta('principals_p1_8')}
+                        {ta('principals_p1_9')}
+                      </p>
+                      <p>
+                        <strong> {ta('principals_p2_1')}</strong> <br />
+                        {ta('principals_p2_2')}
+                      </p>
+                      <p>
+                        <strong> {ta('principals_p3_1')}</strong> <br />
+                        {ta('principals_p3_2')}
+                      </p>
+                      <p>
+                        <strong> {ta('principals_p4_1')}</strong> <br />
+                        {ta('principals_p4_2')}
+                      </p>
+                      <p>
+                        <strong> {ta('principals_p5_1')}</strong> <br />
+                        {ta('principals_p5_2')}
                       </p>
                     </div>
                   </section>
                   <section className="toggle">
                     <a className="toggle-title text-dark text-4">
-                      Partners and Investors
+                      <strong> {ta('principals_p6_1')}</strong> <br />
                     </a>
                     <div className="toggle-content">
                       <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Curabitur eget leo at velit imperdiet varius. In eu
-                        ipsum vitae velit congue iaculis vitae at risus. Nullam
-                        tortor nunc, bibendum vitae semper a, volutpat eget
-                        massa. Lorem ipsum dolor sit amet, consectetur
-                        adipiscing elit. Integer fringilla, orci sit amet
-                        posuere auctor, orci eros pellentesque odio, nec
-                        pellentesque erat ligula nec massa. Aenean consequat
-                        lorem ut felis ullamcorper posuere gravida tellus
-                        faucibus. Maecenas dolor elit, pulvinar eu vehicula eu,
-                        consequat et lacus. Duis et purus ipsum. In auctor
-                        mattis ipsum id molestie. Donec risus nulla, fringilla a
-                        rhoncus vitae, semper a massa. Vivamus ullamcorper, enim
-                        sit amet consequat laoreet, tortor tortor dictum urna,
-                        ut egestas urna ipsum nec libero. Nulla justo leo,
-                        molestie vel tempor nec, egestas at massa. Aenean
-                        pulvinar, felis porttitor iaculis pulvinar, odio orci
-                        sodales odio, ac pulvinar felis quam sit.
+                        {ta('principals_p6_2')} <br />
+                        {ta('principals_p6_3')} <br />
+                        {ta('principals_p6_4')} <br />
+                        {ta('principals_p6_5')} <br />
+                        {ta('principals_p6_6')} <br />
+                        {ta('principals_p6_7')} <br />
+                        {ta('principals_p6_8')} <br />
+                        {ta('principals_p6_9')} <br />
+                        {ta('principals_p6_10')} <br />
+                        {ta('principals_p6_11')} <br />
+                        {ta('principals_p6_12')} <br />
                       </p>
                     </div>
                   </section>
