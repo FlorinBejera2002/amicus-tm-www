@@ -1,182 +1,251 @@
-'use client'
-import { useState } from 'react'
+import CustomHeroBg from '../components/sections/custom-hero-bg'
+import Animation from '../components/sections/animation'
 
-// import Portfolio from '../portfolio/page'
-// import Elements from '../elements/page'
-
-import Projects from '../projects/page'
-
+import { ImArrowUpRight2 } from 'react-icons/im'
+import { FaAngleRight } from 'react-icons/fa'
 import { useTranslations } from 'next-intl'
-import { usePathname, useRouter } from 'next/navigation'
 import Link from 'next/link'
 import Image from 'next/image'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars } from '@fortawesome/free-solid-svg-icons'
 
-import horizontalLogo from '../../../../public/logo_horizontal_white.png'
+import step5 from '../../../../public/img/step5.jpeg'
+import step4 from '../../../../public/img/step4.jpeg'
+import step3 from '../../../../public/img/step3.jpeg'
+import step2 from '../../../../public/img/step2.jpeg'
+import step1 from '../../../../public/img/step1.jpg'
 
-export default function Nav() {
-  const [navbar, setNavBar] = useState(false)
-  const router = useRouter()
-  const pathname = usePathname()
-  const t = useTranslations('header')
-
-  const handleLocaleChange = () =>
-    router.push(
-      pathname.includes('/en')
-        ? pathname.replace('/en', '/ro')
-        : pathname.replace('/ro', '/en')
-    )
-
-  const language = pathname.split('/')[1]
+const About = () => {
+  const t = useTranslations()
+  const text = [
+    t('about_us.principals_p6_2'),
+    t('about_us.principals_p6_3'),
+    t('about_us.principals_p6_4'),
+    t('about_us.principals_p6_5'),
+    t('about_us.principals_p6_6'),
+    t('about_us.principals_p6_7'),
+    t('about_us.principals_p6_8'),
+    t('about_us.principals_p6_9'),
+    t('about_us.principals_p6_10'),
+    t('about_us.principals_p6_11'),
+    t('about_us.principals_p6_12')
+  ].join('\n\n')
 
   return (
-    <header className="header-transparent" id="header">
-      <div className="header-body border-top-0 bg-quaternary box-shadow-none h-auto">
-        <div className="header-container container p-static">
-          <div className="header-row py-3">
-            <div className="header-column">
-              <div className="header-row">
-                <div className="header-logo">
-                  <Link href="/">
-                    <Image
-                      alt="arise for christ logo"
-                      className="object-contain"
-                      height={40}
-                      src={horizontalLogo}
-                      width={150}
-                    />
-                  </Link>
-                </div>
-              </div>
-            </div>
-            <div className="header-column justify-content-end">
-              <div className="header-row">
-                <div className="header-nav header-nav-links header-nav-dropdowns-dark header-nav-light-text order-2 order-lg-1">
-                  <div
-                    className="header-nav-main header-nav-main-square header-nav-main-dropdown-no-borders header-nav-main-text-capitalize 
-                    header-nav-main-arrows header-nav-main-full-width-mega-menu header-nav-main-mega-menu-bg-hover 
-                    header-nav-main-mega-menu-bg-hover-dark header-nav-main-effect-5 hidden"
-                  >
-                    <nav className=" closed ">
-                      <ul className="nav nav-pills" id="mainNav">
-                        <li>
-                          <Link className="nav-link" href="/">
-                            {t('home')}
-                          </Link>
-                        </li>
-
-                        <li>
-                          <Link
-                            className="nav-link"
-                            href={`/${language}/about`}
-                          >
-                            {t('about_us')}
-                          </Link>
-                        </li>
-
-                        <li>
-                          <Link
-                            className="nav-link"
-                            href={`/${language}/services`}
-                          >
-                            Services
-                          </Link>
-                        </li>
-
-                        <li>
-                          <Link className="nav-link" href={`/${language}/blog`}>
-                            {t('blog')}
-                          </Link>
-                        </li>
-                        <Projects />
-                        {/* <Elements /> */}
-                      </ul>
-                    </nav>
-                  </div>
-                  <Link href="?ev-req-form=open">
-                    <button
-                      className="btn btn-primary font-weight-semibold text-3 py-lg-3 btn-gradient text-quaternary
-                      anim-hover-translate-top-5px transition-2ms ms-4"
-                      type="button"
+    <div className="main" role="main">
+      <section className="page-header p-relative bg-quaternary m-0 overflow-hidden border-0 p-0">
+        <CustomHeroBg />
+        <div className="container">
+          <div className="row align-items-center my-5 pb-4 pt-5">
+            <div className="col my-5 pb-5 text-center">
+              <div className="py-4">
+                <ul className="breadcrumb d-flex justify-content-center text-4-5 font-weight-medium mb-2">
+                  <li className="z-[1]">
+                    <Link
+                      className="text-color-primary text-decoration-none"
+                      href="/"
                     >
-                      <span className="px-lg-4 d-block ws-nowrap">
-                        Evangelism Request
-                      </span>
-                    </button>
-                  </Link>
-
-                  <button
-                    className="ml-12 cursor-pointer duration-500 hover:text-[#e3ae04] text-white "
-                    onClick={handleLocaleChange}
-                  >
-                    en/ro
-                  </button>
-                  <button
-                    className="btn header-btn-collapse-nav text-dark"
-                    data-bs-target=".header-nav-main nav"
-                    data-bs-toggle="collapse"
-                    onClick={() => setNavBar(!navbar)}
-                  >
-                    <i className="fas fa-bars">
-                      <FontAwesomeIcon icon={faBars} />
-                    </i>
-                  </button>
-                </div>
+                      {t('header.home')}
+                    </Link>
+                  </li>
+                  <FaAngleRight className="text-color-primary mt-0.5 z-[1]" />
+                  <li className="text-color-primary active z-[1]">
+                    {t('header.about_us')}
+                  </li>
+                </ul>
+                <h1 className="text-color-light font-weight-bold text-10">
+                  {t('header.about_us')}
+                </h1>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      {navbar && (
-        <div
-          className="header-nav-main header-nav-main-square header-nav-main-dropdown-no-borders header-nav-main-text-capitalize 
-        header-nav-main-arrows header-nav-main-full-width-mega-menu header-nav-main-mega-menu-bg-hover 
-        header-nav-main-mega-menu-bg-hover-dark header-nav-main-effect-5 display-none"
-        >
-          <nav className="collapse show">
-            <ul className="nav nav-pills">
-              <li>
-                <Link className="nav-link " href="/">
-                  Home
-                </Link>
-              </li>
-              <li>
+        <Animation />
+      </section>
+
+      <div className="custom-page-content p-relative z-index-2">
+        <div className="custom-padding-top-1 custom-padding-bottom-1 px-lg-5 bg-light container">
+          <div className="row px-lg-3">
+            <div className="col">
+              <p className="text-4-5 line-height-7 text-dark mb-lg-2 mb-xl-4 mb-4 pb-1">
+                {t('about_us.description_p1_1')}
+              </p>
+            </div>
+          </div>
+          <div className="row px-lg-3 py-4">
+            <div className="col-lg-6 text-center">
+              <div className="d-flex mb-3">
+                <div className="p-2 flex-fill">
+                  <div
+                    className="custom-el-3 bg-color-tertiary custom-border-radius-1 mx-auto appear-animation"
+                    data-appear-animation="zoomIn"
+                    data-appear-animation-delay="100"
+                  >
+                    <Image
+                      alt="Arise photo"
+                      className="custom-el-3-img p-relative size-full"
+                      src={step5}
+                    />
+                  </div>
+                </div>
+
+                <div className="p-2 flex-fill">
+                  <Image
+                    alt="Arise photo"
+                    className="custom-el-3 bg-color-primary custom-border-radius-2 mx-auto appear-animation"
+                    data-appear-animation="zoomIn"
+                    data-appear-animation-delay="200"
+                    src={step2}
+                  />
+                </div>
+
+                <div className="p-2 flex-fill">
+                  <div
+                    className="custom-el-3 custom-el-3-pos-1 bg-color-dark custom-border-radius-3 mx-auto appear-animation"
+                    data-appear-animation="zoomIn"
+                    data-appear-animation-delay="300"
+                  >
+                    <Image
+                      alt="Arise photo"
+                      className="custom-el-3-img p-relative size-full"
+                      src={step1}
+                    />
+                  </div>
+                </div>
+              </div>
+              <div className="d-flex mb-3 custom-el-4-pos">
+                <div className="p-2 flex-fill">
+                  <div
+                    className="custom-el-3 custom-el-3-pos-2 bg-color-dark custom-border-radius-4 ms-auto appear-animation"
+                    data-appear-animation="zoomIn"
+                    data-appear-animation-delay="400"
+                  >
+                    <Image
+                      alt="Arise photo"
+                      className="custom-el-3-img p-relative size-full"
+                      src={step3}
+                    />
+                  </div>
+                </div>
+
+                <div className="p-2 flex-fill">
+                  <div
+                    className="custom-el-3 bg-color-tertiary custom-border-radius-5 me-auto appear-animation"
+                    data-appear-animation="zoomIn"
+                    data-appear-animation-delay="500"
+                  >
+                    <Image
+                      alt="Arise photo"
+                      className=" custom-el-3-img p-relative size-full"
+                      src={step4}
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="col-lg-6 ps-lg-4">
+              <p className="text-4-5 line-height-7">
+                {t('about_us.description_p1_6')}
+              </p>
+
+              <div className="d-block text-4-5">
+                <div className="d-block appear-animation pt-4 appear-animation-visible">
+                  <div
+                    className="toggle toggle-minimal toggle-dark"
+                    data-plugin-toggle={true}
+                  >
+                    <section className="toggle">
+                      <details className="py-1 rounded-lg overflow-hidden">
+                        <summary className=" border-b pb-4 border-gray-400 leading-3 text-slate-900 dark:text-black font-semibold select-none  ">
+                          {t('about_us.description_p4_0')}
+                        </summary>
+                        <div className=" mt-3 text-base leading-6 text-slate-600">
+                          <p className="text-xl mb-4">
+                            {t('about_us.description_p4_1')}
+
+                            <span className="font-semibold block mt-8">
+                              {t('about_us.description_p5_1')}
+                            </span>
+                            {` ${t('about_us.description_p5_2')}`}
+
+                            <span className="font-semibold block mt-8">
+                              {t('about_us.description_p6_1')}
+                            </span>
+                            {` ${t('about_us.description_p6_2')}`}
+
+                            <span className="font-semibold block mt-8">
+                              {t('about_us.description_p7_1')}
+                            </span>
+                            {` ${t('about_us.description_p7_2')}`}
+
+                            <span className="font-semibold block mt-8">
+                              {t('about_us.description_p8_1')}
+                            </span>
+                            {` ${t('about_us.description_p8_2')}`}
+                          </p>
+                        </div>
+                      </details>
+                    </section>
+                    <section className="toggle">
+                      <details className="py-3 rounded-lg transform-gpu delay-75 duration-100 ease-in-out ">
+                        <summary className="border-b pb-4 border-gray-400 leading-6 text-slate-900 dark:text-black font-semibold select-none">
+                          {t('about_us.principals_p1_0')}
+                        </summary>
+                        <div className="mt-3 text-base leading-6 text-slate-600">
+                          <p className="text-xl mb-4">
+                            {`${t('about_us.principals_p1_1')} `}
+                            <span className="font-semibold block mt-8">
+                              {t('about_us.principals_p2_1')}
+                            </span>
+                            {` ${t('about_us.principals_p2_2')}`}
+                            <span className="font-semibold block mt-8">{`${t('about_us.principals_p3_1')}`}</span>
+                            {` ${t('about_us.principals_p3_2')}`}
+                            <span className="font-semibold block mt-8">{`${t('about_us.principals_p4_1')}`}</span>
+                            {` ${t('about_us.principals_p4_2')}`}
+                            <span className="font-semibold block mt-8">{`${t('about_us.principals_p5_1')}`}</span>
+                            {` ${t('about_us.principals_p5_2')}`}
+                          </p>
+                        </div>
+                      </details>
+                    </section>
+                    <section className="toggle">
+                      <details className="py-1 rounded-lg transform-gpu delay-75 duration-100 ease-in-out ">
+                        <summary className="border-b pb-4 border-gray-400 leading-6 text-slate-900 dark:text-black font-semibold select-none">
+                          {t('about_us.principals_p6_1')}
+                        </summary>
+                        <div className="mt-3 text-base leading-6 text-slate-600">
+                          <p className="text-xl mb-4 whitespace-pre-line">
+                            {text}
+                          </p>
+                        </div>
+                      </details>
+                    </section>
+                  </div>
+                </div>
+              </div>
+
+              <div className="appear-animation pt-4 flex items-center">
                 <Link
-                  className="nav-link"
-                  href="/about"
-                  onClick={() => setNavBar(!navbar)}
+                  className="btn btn-modern btn-primary text-capitalize text-dark text-3 anim-hover-translate-top-5px transition-3ms py-1 pr-30 flex items-center font-semibold"
+                  href="#"
                 >
-                  About Us
+                  {t('button.contact_us')}
+                  <ImArrowUpRight2 className="ml-2" />
                 </Link>
-              </li>
-              <li>
-                <Link className="nav-link" href="/services">
-                  Services
-                </Link>
-              </li>
-              <li>
-                <Link className="nav-link" href="/blog">
-                  Blog
-                </Link>
-              </li>
-              <li>
-                <Link className="nav-link" href="/portfolio">
-                  Portfolio
-                </Link>
-              </li>
-              {/* <li>
-                <Link
-                  className="nav-link"
-                  href="/elements"
-                >
-                  Elements
-                </Link>
-              </li> */}
-            </ul>
-          </nav>
+              </div>
+            </div>
+          </div>
+
+          <div className="row px-lg-3 py-5">
+            <div className="col">
+              <p className="text-4-5 line-height-7">
+                {t('about_us.description_p3_1')}
+              </p>
+            </div>
+          </div>
         </div>
-      )}
-    </header>
+      </div>
+    </div>
   )
 }
+
+export default About

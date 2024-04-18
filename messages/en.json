@@ -136,7 +136,6 @@
     "age": "age",
     "applicant_person": "Who is making the request?",
     "cancel": "CANCEL",
-    "checkbox_text": "By checking the box, you consent to the processing of your personal data for the purpose of receiving periodic communications from us.",
     "details": "details",
     "email": "email",
     "failed_submission": "Failed to send evangelism request! Please contact us via email.",
@@ -147,10 +146,10 @@
     "occupation": "occupation",
     "religion": "religion",
     "send": "SEND",
-    "subtitle": "We invite you to embark on a meaningful journey into the realm of faith and discover divine grace. The purpose of this form is to establish a connection with those seeking salvation, spiritual growth, and a deeper understanding of their relationship with the Divine.",
+    "subtitle": "Welcome to the Evangelism Form, where we invite you to embark on a meaningful exploration of faith and draw closer to God&apos;s grace. This form aims to create a connection with individuals seeking salvation, spiritual growth and a deeper understanding of their relationship with the Divine.",
     "successful_submission": "Evangelism request sent with success!",
     "target_person": "Who would you like to get closer to God?",
-    "text": "Join our transformative experience by providing your details below. We guarantee confidentiality and usage solely for communication related to this spiritual journey.",
+    "text": "Please provide your details below to join us on this transformative experience. Rest assured, your information will be handled with the utmost confidentiality and will only be used for communication related to this spiritual journey.",
     "title": "Evangelism Request"
   },
   "gdpr": {
