@@ -18,7 +18,7 @@ import imageEpisod1 from '../../../../../public/image-episod1.jpg'
 
 export default function EpisodesSection() {
   return (
-    <>
+    <div className="flex flex-col justify-center items-center">
       <div className=" w-screen px-96 flex flex-col justify-center items-center ">
         <h4 className="text-lg text-white">
           Fiecare episod poate fi accesat prin intermediul link-urilor de mai
@@ -102,7 +102,7 @@ export default function EpisodesSection() {
           />
         </div>
       </div>
-      <div className="flex flex-col justify-center items-center mb-24 py-7 mx-96 border-t border-b border-white">
+      <div className="w-[57rem] flex flex-col justify-center items-center mb-24 py-7 border-t border-b border-white">
         <p className="text-lg text-white">
           `Câmpurile sunt bogate pentru seceriş, dar secerătorii sunt puţini.
           <br />
@@ -111,6 +111,6 @@ export default function EpisodesSection() {
         </p>
         <p className="text-lg text-white">Luca 10:2</p>
       </div>
-    </>
+    </div>
   )
 }

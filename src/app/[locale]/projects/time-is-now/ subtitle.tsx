@@ -30,7 +30,7 @@ export default function Subtitle() {
           />
         </div>
       </div>
-      <div className="mb-24 pb-44 pt-24 flex flex-col justify-center items-center">
+      <div className="mb-2 pb-32 pt-24 flex flex-col justify-center items-center">
         <h3 className="text-white">TIMPUL ESTE ACUM</h3>
         <p className="text-white text-xs">un serial de Arise for Christ</p>
         <div className="border-y w-64 border-yellow-600 py-4 flex flex-col gap-1 justify-center items-center">
