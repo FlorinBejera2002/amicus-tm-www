@@ -1,7 +1,7 @@
 'use client'
 import { useState } from 'react'
 
-import Portfolio from '../portfolio/page'
+import Projects from '../projects/page'
 import Elements from '../elements/page'
 
 import { useTranslations } from 'next-intl'
@@ -87,7 +87,7 @@ export default function Nav() {
                             {t('blog')}
                           </Link>
                         </li>
-                        <Portfolio />
+                        <Projects />
                         <Elements />
                       </ul>
                     </nav>

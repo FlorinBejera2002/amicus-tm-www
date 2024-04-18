@@ -1,7 +1,7 @@
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 
-export default function Portfolio() {
+export default function Projects() {
   const pathname = usePathname()
   const language = pathname.split('/')[1]
 
@@ -9,124 +9,18 @@ export default function Portfolio() {
     <li className="dropdown">
       <Link
         className="dropdown-item dropdown-toggle"
-        href={`/${language}/services`}
+        href={`/${language}/projects`}
       >
-        Portfolio
+        Projects
       </Link>
       <ul className="dropdown-menu">
         <li className="dropdown-submenu">
           <Link
             className="dropdown-item"
-            href="https://www.youtube.com/@Ariseforchrist"
+            href={`/${language}/projects/time-is-now`}
           >
-            Single Project
+            Mision Project
           </Link>
-          <ul className="dropdown-menu">
-            <li>
-              <Link
-                className="dropdown-item"
-                href="https://www.youtube.com/@Ariseforchrist"
-              >
-                Wide Slider
-              </Link>
-            </li>
-            <li>
-              <Link
-                className="dropdown-item"
-                href="https://www.youtube.com/@Ariseforchrist"
-              >
-                Small Slider
-              </Link>
-            </li>
-            <li>
-              <Link
-                className="dropdown-item"
-                href="https://www.youtube.com/@Ariseforchrist"
-              >
-                Full Width Slider
-              </Link>
-            </li>
-            <li>
-              <Link
-                className="dropdown-item"
-                href="https://www.youtube.com/@Ariseforchrist"
-              >
-                Gallery
-              </Link>
-            </li>
-            <li>
-              <Link
-                className="dropdown-item"
-                href="https://www.youtube.com/@Ariseforchrist"
-              >
-                Carousel
-              </Link>
-            </li>
-            <li>
-              <Link
-                className="dropdown-item"
-                href="https://www.youtube.com/@Ariseforchrist"
-              >
-                Medias
-              </Link>
-            </li>
-            <li>
-              <Link
-                className="dropdown-item"
-                href="https://www.youtube.com/@Ariseforchrist"
-              >
-                Full Width Video
-              </Link>
-            </li>
-            <li>
-              <Link
-                className="dropdown-item"
-                href="https://www.youtube.com/@Ariseforchrist"
-              >
-                Masonry Images
-              </Link>
-            </li>
-            <li>
-              <Link
-                className="dropdown-item"
-                href="https://www.youtube.com/@Ariseforchrist"
-              >
-                Left Sidebar
-              </Link>
-            </li>
-            <li>
-              <Link
-                className="dropdown-item"
-                href="https://www.youtube.com/@Ariseforchrist"
-              >
-                Right Sidebar
-              </Link>
-            </li>
-            <li>
-              <Link
-                className="dropdown-item"
-                href="https://www.youtube.com/@Ariseforchrist"
-              >
-                Left and Right Sidebars
-              </Link>
-            </li>
-            <li>
-              <Link
-                className="dropdown-item"
-                href="https://www.youtube.com/@Ariseforchrist"
-              >
-                Sticky Sidebar
-              </Link>
-            </li>
-            <li>
-              <Link
-                className="dropdown-item"
-                href="https://www.youtube.com/@Ariseforchrist"
-              >
-                Extended
-              </Link>
-            </li>
-          </ul>
         </li>
 
         <li className="dropdown-submenu">
