@@ -1,3 +1,4 @@
+import YoutubeMiniFeed from './components/sections/youtube-mini-feed'
 import Team from './components/sections/team'
 import StepsEvangelization from './components/sections/steps-evangelization'
 import PersonalEvangelism from './components/sections/personal-evangelism'
@@ -28,6 +29,7 @@ export default function Home() {
         <div className="container p-relative z-index-3">
           <div className="row min-vh-100 align-items-center">
             <div className="col-lg-10 text-center text-lg-start">
+              <YoutubeMiniFeed />
               <h3
                 className="text-color-light font-weight-bold custom-hero-font-1 pb-2 mb-4 appear-animation "
                 data-appear-animation="fadeInUpShorter"
@@ -104,6 +106,7 @@ export default function Home() {
         </div>
       </section>
       <Animation />
+
       <StepsEvangelization />
       {/* <EmblaCarousel /> */}
       {/* <About /> */}
