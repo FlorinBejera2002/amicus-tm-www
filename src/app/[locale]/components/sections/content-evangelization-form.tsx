@@ -9,21 +9,25 @@ export default function ContentEvangelizationForm() {
         <h1 className="text-xl ">{t('title')}</h1>
         <p className="text-sm">{t('subtitle')}</p>
         <p className="text-sm">{t('text')}</p>
-        <form className="pt-4 flex flex-col gap-4">
+        <form
+          action="https://app.us22.list-manage.com/subscribe/post?u=41ac89857e074d884af936f25&amp;id=cc995c9835&amp;f_id=00c8c4e1f0"
+          className="pt-4 flex flex-col gap-4"
+          method="post"
+        >
           <div className="flex">
             <div className=" flex gap-3 w-full   ">
               <div className="relative z-0 w-full group">
                 <input
                   className="block px-0 p-1 w-full text-sm text-gray-900 bg-transparent border-b border-gray-500 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-yellow-500 peer"
-                  id="floating_email"
-                  name="floating_email"
+                  id="name"
+                  name="name"
                   placeholder=" "
                   required={true}
-                  type="email"
+                  type="name"
                 />
                 <label
                   className="peer-focus:font-medium absolute text-sm text-black dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-yellow-500 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
-                  htmlFor="floating_email"
+                  htmlFor="name"
                 >
                   {t('name')}
                 </label>
@@ -49,15 +53,15 @@ export default function ContentEvangelizationForm() {
               <div className="relative z-0 w-full group">
                 <input
                   className="block px-0 w-full p-1 text-sm text-gray-900 bg-transparent border-b border-gray-500 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-yellow-500 peer"
-                  id="floating_email"
-                  name="floating_email"
+                  id="phone"
+                  name="phone"
                   placeholder=" "
                   required={true}
-                  type="email"
+                  type="phone"
                 />
                 <label
                   className="peer-focus:font-medium absolute text-sm text-black dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-yellow-500 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
-                  htmlFor="floating_email"
+                  htmlFor="phone"
                 >
                   {t('mobile')}
                 </label>
@@ -68,14 +72,14 @@ export default function ContentEvangelizationForm() {
           <div className="relative z-0 w-full group">
             <textarea
               className="resize-none block px-0 w-full p-1 text-sm text-gray-900 bg-transparent border-b border-gray-500 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-yellow-500 peer"
-              id="floating_email"
+              id="details"
               name="det"
               placeholder=" "
               rows={2}
             />
             <label
               className="peer-focus:font-medium absolute text-sm text-black dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-yellow-500 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
-              htmlFor="floating_email"
+              htmlFor="details"
             >
               {t('details')}
             </label>
