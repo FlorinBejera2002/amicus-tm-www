@@ -1,12 +1,17 @@
+'use client'
 // import Numbers from "../components/sections/numbers";
 
 // import Image from "next/image";
 
-// import arrowUpLight from "../../../../public/img/demos/creative-agency-2/svg/arrow-up-light.svg";
+import React from 'react'
 
 import CustomHeroBg from '../components/sections/custom-hero-bg'
 import Animation from '../components/sections/animation'
+// import arrowUpLight from "../../../../public/img/demos/creative-agency-2/svg/arrow-up-light.svg";
+import Acordion from '../components/sections/acordion'
 
+import { ImArrowUpRight2 } from 'react-icons/im'
+import { FaAngleRight } from 'react-icons/fa'
 import { useTranslations } from 'next-intl'
 
 const About = () => {
@@ -25,11 +30,12 @@ const About = () => {
                   <li>
                     <a
                       className="text-color-primary text-decoration-none"
-                      href="demo-law-firm-2.html"
+                      href="/"
                     >
                       {t('home')}
                     </a>
                   </li>
+                  <FaAngleRight />
                   <li className="text-color-primary active">{t('about_us')}</li>
                 </ul>
                 <h1 className="text-color-light font-weight-bold text-10">
@@ -108,89 +114,32 @@ const About = () => {
 
               <p className="text-4 line-height-7">{ta('description_p3_1')}</p>
 
-              <div className="d-block">
-                <div
-                  className="toggle toggle-minimal toggle-dark"
-                  data-plugin-toggle={true}
-                >
-                  <section className="toggle">
-                    <a className="toggle-title text-dark text-4">
-                      <strong>{ta('description_p4_0')}</strong>
-                    </a>
-                    <div className="toggle-content">
-                      <p>
-                        {ta('description_p4_1')}
-                        {ta('description_p4_2')}
-                        {ta('description_p4_3')} <br />
-                        <strong> {ta('description_p5_1')}</strong>
-                        {ta('description_p5_2')}
-                        {ta('description_p5_3')} <br />
-                        <strong> {ta('description_p6_1')}</strong>
-                        {ta('description_p6_2')}
-                        {ta('description_p6_3')}
-                        {ta('description_p6_4')} <br />
-                        <strong> {ta('description_p7_1')}</strong>
-                        {ta('description_p7_2')} <br />
-                        <strong> {ta('description_p8_1')}</strong>
-                        {ta('description_p8_2')}
-                      </p>
-                    </div>
-                  </section>
-                  <section className="toggle">
-                    <a className="toggle-title text-dark text-4">
-                      <strong> {ta('principals_p1_0')}</strong>
-                    </a>
-                    <div className="toggle-content">
-                      <p>
-                        {ta('principals_p1_1')}
-                        <strong> {ta('principals_p1_2')}</strong>
-                        {ta('principals_p1_3')}
-                        <strong> {ta('principals_p1_4')}</strong>
-                        <strong> {ta('principals_p1_5')}</strong>
-                        {ta('principals_p1_6')}
-                        <strong> {ta('principals_p1_7')}</strong>
-                        {ta('principals_p1_8')}
-                        {ta('principals_p1_9')}
-                      </p>
-                      <p>
-                        <strong> {ta('principals_p2_1')}</strong> <br />
-                        {ta('principals_p2_2')}
-                      </p>
-                      <p>
-                        <strong> {ta('principals_p3_1')}</strong> <br />
-                        {ta('principals_p3_2')}
-                      </p>
-                      <p>
-                        <strong> {ta('principals_p4_1')}</strong> <br />
-                        {ta('principals_p4_2')}
-                      </p>
-                      <p>
-                        <strong> {ta('principals_p5_1')}</strong> <br />
-                        {ta('principals_p5_2')}
-                      </p>
-                    </div>
-                  </section>
-                  <section className="toggle">
-                    <a className="toggle-title text-dark text-4">
-                      <strong> {ta('principals_p6_1')}</strong> <br />
-                    </a>
-                    <div className="toggle-content">
-                      <p>
-                        {ta('principals_p6_2')} <br />
-                        {ta('principals_p6_3')} <br />
-                        {ta('principals_p6_4')} <br />
-                        {ta('principals_p6_5')} <br />
-                        {ta('principals_p6_6')} <br />
-                        {ta('principals_p6_7')} <br />
-                        {ta('principals_p6_8')} <br />
-                        {ta('principals_p6_9')} <br />
-                        {ta('principals_p6_10')} <br />
-                        {ta('principals_p6_11')} <br />
-                        {ta('principals_p6_12')} <br />
-                      </p>
-                    </div>
-                  </section>
-                </div>
+              <div className="d-block pt-4">
+                <Acordion
+                  content={`${ta('description_p4_1')} ${ta('description_p4_2')} ${ta('description_p4_3')} 
+                  ${ta('description_p5_1')} ${ta('description_p5_2')} ${ta('description_p5_3')} 
+                  ${ta('description_p6_1')} ${ta('description_p6_2')} ${ta('description_p6_3')} ${ta('description_p6_4')} 
+                  ${ta('description_p7_1')} ${ta('description_p7_2')} 
+                  ${ta('description_p8_1')} ${ta('description_p8_2')}`}
+                  title={ta('description_p4_0')}
+                />
+                <Acordion
+                  content={`${ta('principals_p1_1')} ${ta('principals_p1_2')} ${ta('principals_p1_3')} 
+                  ${ta('principals_p1_4')} ${ta('principals_p1_5')} ${ta('principals_p1_6')} 
+                  ${ta('principals_p1_7')} ${ta('principals_p1_8')} ${ta('principals_p1_9')} 
+                  ${ta('principals_p2_1')} ${ta('principals_p2_2')} 
+                  ${ta('principals_p3_1')} ${ta('principals_p3_2')} 
+                  ${ta('principals_p4_1')} ${ta('principals_p4_2')} 
+                  ${ta('principals_p5_1')} ${ta('principals_p5_2')}`}
+                  title={ta('principals_p1_0')}
+                />
+                <Acordion
+                  content={`${ta('principals_p6_2')} ${ta('principals_p6_3')} ${ta('principals_p6_4')} 
+                  ${ta('principals_p6_5')} ${ta('principals_p6_6')} ${ta('principals_p6_7')} 
+                  ${ta('principals_p6_8')} ${ta('principals_p6_9')} ${ta('principals_p6_10')} 
+                  ${ta('principals_p6_11')} ${ta('principals_p6_12')}`}
+                  title={ta('principals_p6_1')}
+                />
               </div>
 
               <div
@@ -199,11 +148,15 @@ const About = () => {
                 data-appear-animation-delay="300"
               >
                 <a
-                  className="btn btn-modern btn-primary text-capitalize text-dark text-3 anim-hover-translate-top-5px transition-2ms px-2 py-1"
+                  className="btn btn-modern btn-primary text-capitalize text-dark text-3 anim-hover-translate-top-5px transition-3ms px-2 py-1"
                   href="#"
+                  style={{
+                    alignItems: 'center',
+                    display: 'flex'
+                  }}
                 >
-                  Lets Talk
-                  <i className="fas fa-arrow-right rotate-l-45 ms-2"></i>
+                  <span style={{ marginRight: '7px' }}>Lets Talk</span>
+                  <ImArrowUpRight2 />
                 </a>
               </div>
             </div>
