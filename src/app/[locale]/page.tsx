@@ -29,7 +29,6 @@ export default function Home() {
         <div className="container p-relative z-index-3">
           <div className="row min-vh-100 align-items-center">
             <div className="col-lg-10 text-center text-lg-start">
-              <YoutubeMiniFeed />
               <h3
                 className="text-color-light font-weight-bold custom-hero-font-1 pb-2 mb-4 appear-animation "
                 data-appear-animation="fadeInUpShorter"
@@ -106,7 +105,7 @@ export default function Home() {
         </div>
       </section>
       <Animation />
-
+      <YoutubeMiniFeed />
       <StepsEvangelization />
       {/* <EmblaCarousel /> */}
       {/* <About /> */}
