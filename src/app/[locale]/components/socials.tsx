@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 export default function Socials() {
   return (
-    <div className="d-flex gap-2">
+    <div className="d-flex gap-2 flex-wrap w-screen">
       <div className="d-flex justify-center items-center w-8 h-8 rounded-full hover:bg-blue-900">
         <Link
           href="https://www.facebook.com/AriseForChristRomania/"

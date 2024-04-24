@@ -2,7 +2,7 @@ export default function YoutubeMiniFeed() {
   return (
     <div className="custom-grid-1">
       <div
-        className="flex gap-2 bg-color-light relative pt-2 pb-5 z-index-3 container"
+        className="flex gap-2 bg-color-light relative pt-2 pb-5 z-index-3 container flex-wrap"
         id="numbers"
       >
         <iframe

@@ -19,7 +19,7 @@ export default function Home() {
   return (
     <div className="main font-poppins" role="main">
       <section
-        className="p-relative border-0 bg-quaternary overflow-hidden m-0 p-0"
+        className="p-relative border-0 bg-quaternary overflow-hidden px-2"
         id="home"
       >
         <div className="custom-hero-heading text-white">
@@ -30,7 +30,7 @@ export default function Home() {
           <div className="row min-vh-100 align-items-center">
             <div className="col-lg-10 text-center text-lg-start">
               <h3
-                className="text-color-light font-weight-bold custom-hero-font-1 pb-2 mb-4 appear-animation "
+                className="text-color-light font-weight-bold custom-hero-font-1 pb-2 mb-4 appear-animation mx-2"
                 data-appear-animation="fadeInUpShorter"
                 data-appear-animation-delay="200"
               >
@@ -43,7 +43,7 @@ export default function Home() {
                 data-appear-animation="fadeInUpShorter"
                 data-appear-animation-delay="300"
               >
-                <div className="d-flex gap-4">
+                <div className="d-flex gap-4 flex-wrap justify-center">
                   <Link
                     className="text-decoration-none pointer"
                     href="https://www.facebook.com/AriseForChristRomania/"
