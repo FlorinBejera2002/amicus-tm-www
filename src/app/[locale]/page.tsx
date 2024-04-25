@@ -17,7 +17,7 @@ export default function Home() {
   const t = useTranslations('hero')
 
   return (
-    <div className="main font-poppins" role="main">
+    <div className="main" role="main">
       <section
         className="p-relative border-0 bg-quaternary overflow-hidden px-2"
         id="home"
@@ -30,12 +30,14 @@ export default function Home() {
           <div className="row min-vh-100 align-items-center">
             <div className="col-lg-10 text-center text-lg-start">
               <h3
-                className="text-color-light font-weight-bold custom-hero-font-1 pb-2 mb-4 appear-animation mx-2"
+                className="text-color-light font-weight-bold custom-hero-font-1 pb-2 mb-4 appear-animation text-wrap"
                 data-appear-animation="fadeInUpShorter"
                 data-appear-animation-delay="200"
               >
-                {t('question1')} <br />
-                {t('question2')} <br />
+                {t('question1')}
+                <br />
+                {t('question2')}
+                <br />
                 {t('question3')}
               </h3>
               <div
