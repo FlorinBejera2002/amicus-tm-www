@@ -142,27 +142,37 @@ const About = () => {
                 />
               </div> */}
               <div className="d-block pt-4">
-                <div
-                  className="d-block appear-animation"
-                  data-appear-animation="fadeInUpShorter"
-                  data-appear-animation-delay="100"
-                >
+                <div className="d-block appear-animation pt-4 appear-animation-visible">
                   <div
                     className="toggle toggle-minimal toggle-dark"
                     data-plugin-toggle={true}
                   >
                     <section className="toggle">
-                      <details className=" border-b  p-3 rounded-lg transform-gpu delay-75 duration-100 ease-in-out ">
+                      <details className=" border-b  p-3 rounded-lg overflow-hidden">
                         <summary className="leading-3 text-slate-900 dark:text-black font-semibold select-none">
                           {ta('description_p4_0')}
                         </summary>
                         <div className="mt-3 text-sm leading-6 text-slate-600">
                           <p>
-                            {`${ta('description_p4_1')} ${ta('description_p4_2')} ${ta('description_p4_3')} 
-                            ${ta('description_p5_1')} ${ta('description_p5_2')} ${ta('description_p5_3')} 
-                            ${ta('description_p6_1')} ${ta('description_p6_2')} ${ta('description_p6_3')} ${ta('description_p6_4')} 
-                            ${ta('description_p7_1')} ${ta('description_p7_2')} 
-                            ${ta('description_p8_1')} ${ta('description_p8_2')}`}
+                            <br />
+                            <strong>{`${ta('description_p4_1')}`}</strong>
+                            {`${ta('description_p4_2')} ${ta('description_p4_3')}`}
+                            <br />
+                            <br />
+                            <strong>{`${ta('description_p5_1')}`}</strong>
+                            {`${ta('description_p5_2')} ${ta('description_p5_3')}`}
+                            <br />
+                            <br />
+                            <strong>{`${ta('description_p6_1')}`}</strong>
+                            {`${ta('description_p6_2')} ${ta('description_p6_3')} ${ta('description_p6_4')}`}
+                            <br />
+                            <br />
+                            <strong>{`${ta('description_p7_1')}`}</strong>
+                            {`${ta('description_p7_2')}`}
+                            <br />
+                            <br />
+                            <strong>{`${ta('description_p8_1')}`}</strong>
+                            {`${ta('description_p8_2')}`}
                           </p>
                         </div>
                       </details>
@@ -174,13 +184,31 @@ const About = () => {
                         </summary>
                         <div className="mt-3 text-sm leading-6 text-slate-600">
                           <p>
-                            {`${ta('principals_p1_1')} ${ta('principals_p1_2')} ${ta('principals_p1_3')} 
-                            ${ta('principals_p1_4')} ${ta('principals_p1_5')} ${ta('principals_p1_6')} 
-                            ${ta('principals_p1_7')} ${ta('principals_p1_8')} ${ta('principals_p1_9')} 
-                            ${ta('principals_p2_1')} ${ta('principals_p2_2')} 
-                            ${ta('principals_p3_1')} ${ta('principals_p3_2')} 
-                            ${ta('principals_p4_1')} ${ta('principals_p4_2')} 
-                            ${ta('principals_p5_1')} ${ta('principals_p5_2')}`}
+                            {`${ta('principals_p1_1')} `}
+                            <strong>{`${ta('principals_p1_2')}`}</strong>
+                            {` ${ta('principals_p1_3')} `}
+                            <strong>{`${ta('principals_p1_4')}`}</strong>
+                            {` ${ta('principals_p1_5')} ${ta('principals_p1_6')} ${ta('principals_p1_7')} ${ta('principals_p1_8')} ${ta('principals_p1_9')}`}
+                            <br />
+                            <br />
+                            <strong>{`${ta('principals_p2_1')}`}</strong>
+                            <br />
+                            {` ${ta('principals_p2_2')}`}
+                            <br />
+                            <br />
+                            <strong>{`${ta('principals_p3_1')}`}</strong>
+                            <br />
+                            {` ${ta('principals_p3_2')}`}
+                            <br />
+                            <br />
+                            <strong>{`${ta('principals_p4_1')}`}</strong>
+                            <br />
+                            {` ${ta('principals_p4_2')}`}
+                            <br />
+                            <br />
+                            <strong>{`${ta('principals_p5_1')}`}</strong>
+                            <br />
+                            {` ${ta('principals_p5_2')}`}
                           </p>
                         </div>
                       </details>
@@ -192,10 +220,27 @@ const About = () => {
                         </summary>
                         <div className="mt-3 text-sm leading-6 text-slate-600">
                           <p>
-                            {`${ta('principals_p6_2')} ${ta('principals_p6_3')} ${ta('principals_p6_4')} 
-                            ${ta('principals_p6_5')} ${ta('principals_p6_6')} ${ta('principals_p6_7')} 
-                            ${ta('principals_p6_8')} ${ta('principals_p6_9')} ${ta('principals_p6_10')} 
-                            ${ta('principals_p6_11')} ${ta('principals_p6_12')}`}
+                            {`${ta('principals_p6_2')}`}
+                            <br /> <br />
+                            {`${ta('principals_p6_3')}`}
+                            <br /> <br />
+                            {`${ta('principals_p6_4')}`}
+                            <br /> <br />
+                            {`${ta('principals_p6_5')}`}
+                            <br /> <br />
+                            {`${ta('principals_p6_6')}`}
+                            <br /> <br />
+                            {`${ta('principals_p6_7')}`}
+                            <br /> <br />
+                            {`${ta('principals_p6_8')}`}
+                            <br /> <br />
+                            {`${ta('principals_p6_9')}`}
+                            <br /> <br />
+                            {`${ta('principals_p6_10')}`}
+                            <br /> <br />
+                            {`${ta('principals_p6_11')}`}
+                            <br /> <br />
+                            {`${ta('principals_p6_12')}`}
                           </p>
                         </div>
                       </details>
@@ -204,20 +249,12 @@ const About = () => {
                 </div>
               </div>
 
-              <div
-                className="d-block appear-animation pt-4"
-                data-appear-animation="fadeInUpShorter"
-                data-appear-animation-delay="300"
-              >
+              <div className="d-block appear-animation pt-4 flex items-center">
                 <a
                   className="btn btn-modern btn-primary text-capitalize text-dark text-3 anim-hover-translate-top-5px transition-3ms px-2 py-1"
                   href="#"
-                  style={{
-                    alignItems: 'center',
-                    display: 'flex'
-                  }}
                 >
-                  <span style={{ marginRight: '7px' }}>Lets Talk</span>
+                  Lets Talk
                   <ImArrowUpRight2 />
                 </a>
               </div>
