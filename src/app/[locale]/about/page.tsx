@@ -10,6 +10,7 @@ import Animation from '../components/sections/animation'
 import { ImArrowUpRight2 } from 'react-icons/im'
 import { FaAngleRight } from 'react-icons/fa'
 import { useTranslations } from 'next-intl'
+import Link from 'next/link'
 import Image from 'next/image'
 
 import step5 from '../../../../public/img/step5.jpeg'
@@ -27,16 +28,18 @@ const About = () => {
             <div className="col my-5 pb-5 text-center">
               <div className="py-4">
                 <ul className="breadcrumb d-flex justify-content-center text-4-5 font-weight-medium mb-2">
-                  <li>
-                    <a
+                  <li className="z-[1]">
+                    <Link
                       className="text-color-primary text-decoration-none"
                       href="/"
                     >
                       {t('home')}
-                    </a>
+                    </Link>
                   </li>
-                  <FaAngleRight />
-                  <li className="text-color-primary active">{t('about_us')}</li>
+                  <FaAngleRight className="text-color-primary mt-0.5 z-[1]" />
+                  <li className="text-color-primary active z-[1]">
+                    {t('about_us')}
+                  </li>
                 </ul>
                 <h1 className="text-color-light font-weight-bold text-10">
                   {t('about_us')}
