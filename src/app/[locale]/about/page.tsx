@@ -22,6 +22,7 @@ import step1 from '../../../../public/img/step1.jpg'
 const About = () => {
   const t = useTranslations('header')
   const ta = useTranslations('about_us')
+  const tc = useTranslations('button')
 
   return (
     <div className="main" role="main">
@@ -182,12 +183,11 @@ const About = () => {
             </div>
             <div className="col-lg-6 ps-lg-4">
               <p className="text-4-5 line-height-7">
+                {ta('description_p1_6')}
                 {ta('description_p2_1')}
                 {ta('description_p2_2')}
                 {ta('description_p2_3')}
               </p>
-
-              <p className="text-4-5 line-height-7">{ta('description_p3_1')}</p>
 
               <div className="d-block text-4-5">
                 <div className="d-block appear-animation pt-4 appear-animation-visible">
@@ -261,7 +261,7 @@ const About = () => {
                       </details>
                     </section>
                     <section className="toggle">
-                      <details className="py-3 rounded-lg transform-gpu delay-75 duration-100 ease-in-out ">
+                      <details className="py-1 rounded-lg transform-gpu delay-75 duration-100 ease-in-out ">
                         <summary className="border-b pb-4 border-gray-400 leading-6 text-slate-900 dark:text-black font-semibold select-none">
                           {ta('principals_p6_1')}
                         </summary>
@@ -301,7 +301,7 @@ const About = () => {
                   className="btn btn-modern btn-primary text-capitalize text-dark text-3 anim-hover-translate-top-5px transition-3ms py-1 pr-30 flex items-center font-semibold"
                   href="#"
                 >
-                  Lets Talk
+                  {tc('contact_us')}
                   <ImArrowUpRight2 className="ml-2" />
                 </Link>
               </div>
@@ -310,14 +310,7 @@ const About = () => {
 
           <div className="row px-lg-3 py-5">
             <div className="col">
-              <p className="text-4 line-height-7">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                dictum eleifend eros a pharetra. Cras aliquam vestibulum
-                vehicula. Sed sed lectus risus. Vestibulum maximus ac purus in
-                euismod. In venenatis tellus ante, id porta risus semper quis.
-                Aenean vel posuere urna, sit amet placerat massa. Quisque
-                efficitur interdum libero, sed dictum lorem euismod sed.
-              </p>
+              <p className="text-4-5 line-height-7">{ta('description_p3_1')}</p>
             </div>
           </div>
 
@@ -398,10 +391,7 @@ const About = () => {
         </div>
       </div>
     </div>
-    // eslint-disable-next-line prettier/prettier
-  );
-  // eslint-disable-next-line prettier/prettier
-};
+  )
+}
 
-// eslint-disable-next-line prettier/prettier
-export default About;
+export default About
