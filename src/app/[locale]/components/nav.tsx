@@ -1,8 +1,10 @@
 'use client'
 import { useState } from 'react'
 
+// import Portfolio from '../portfolio/page'
+// import Elements from '../elements/page'
+
 import Projects from '../projects/page'
-import Elements from '../elements/page'
 
 import { useTranslations } from 'next-intl'
 import { usePathname, useRouter } from 'next/navigation'
@@ -88,7 +90,7 @@ export default function Nav() {
                           </Link>
                         </li>
                         <Projects />
-                        <Elements />
+                        {/* <Elements /> */}
                       </ul>
                     </nav>
                   </div>
@@ -179,7 +181,7 @@ export default function Nav() {
                   Portfolio
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link
                   className="nav-link"
                   href="/elements"
@@ -187,7 +189,7 @@ export default function Nav() {
                 >
                   Elements
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </nav>
         </div>
