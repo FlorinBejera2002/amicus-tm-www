@@ -105,13 +105,6 @@ const About = () => {
             </div>
           </div>
           <div className="row px-lg-3 py-4">
-            {/* <div className="col-lg-6 mb-lg-0 mb-5">
-              <Image
-                alt="Arise photo"
-                className="img-fluid custom-border-radius-1"
-                src={step5}
-              />
-            </div> */}
             <div className="col-lg-6 text-center">
               <div className="d-flex mb-3">
                 <div className="p-2 flex-fill">
@@ -303,14 +296,14 @@ const About = () => {
                 </div>
               </div>
 
-              <div className="d-block appear-animation pt-4 flex items-center">
-                <a
-                  className="btn btn-modern btn-primary text-capitalize text-dark text-3 anim-hover-translate-top-5px transition-3ms px-2 py-1"
+              <div className="appear-animation pt-4 flex items-center">
+                <Link
+                  className="btn btn-modern btn-primary text-capitalize text-dark text-3 anim-hover-translate-top-5px transition-3ms py-1 pr-30 flex items-center font-semibold"
                   href="#"
                 >
                   Lets Talk
-                  <ImArrowUpRight2 />
-                </a>
+                  <ImArrowUpRight2 className="ml-2" />
+                </Link>
               </div>
             </div>
           </div>
