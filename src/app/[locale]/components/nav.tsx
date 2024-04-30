@@ -127,39 +127,55 @@ export default function Nav() {
       </div>
       {navbar && (
         <div
-          className="header-nav-main header-nav-main-square header-nav-main-dropdown-no-borders header-nav-main-text-capitalize 
-        header-nav-main-arrows header-nav-main-full-width-mega-menu header-nav-main-mega-menu-bg-hover 
+          className="header-nav-main header-nav-main-square header-nav-main-dropdown-no-borders header-nav-main-text-capitalize
+        header-nav-main-arrows header-nav-main-full-width-mega-menu header-nav-main-mega-menu-bg-hover
         header-nav-main-mega-menu-bg-hover-dark header-nav-main-effect-5 display-none"
         >
           <nav className="collapse show">
             <ul className="nav nav-pills">
               <li>
-                <Link className="nav-link " href="/">
-                  Home
+                <Link
+                  className="nav-link"
+                  href="/"
+                  onClick={() => setNavBar(!navbar)}
+                >
+                  {t('home')}
                 </Link>
               </li>
               <li>
                 <Link
                   className="nav-link"
-                  href="/about"
+                  href={`/${language}/about`}
                   onClick={() => setNavBar(!navbar)}
                 >
-                  About Us
+                  {t('about_us')}
                 </Link>
               </li>
               <li>
-                <Link className="nav-link" href="/services">
-                  Services
+                <Link
+                  className="nav-link"
+                  href={`/${language}/vision`}
+                  onClick={() => setNavBar(!navbar)}
+                >
+                  {t('vision')}
                 </Link>
               </li>
               <li>
-                <Link className="nav-link" href="/blog">
-                  Blog
+                <Link
+                  className="nav-link"
+                  href={`/${language}/blog`}
+                  onClick={() => setNavBar(!navbar)}
+                >
+                  {t('blog')}
                 </Link>
               </li>
               <li>
-                <Link className="nav-link" href="/portfolio">
-                  Portfolio
+                <Link
+                  className="nav-link"
+                  href={`/${language}/projects`}
+                  onClick={() => setNavBar(!navbar)}
+                >
+                  {t('project')}
                 </Link>
               </li>
             </ul>
