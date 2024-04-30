@@ -17,6 +17,7 @@ export default function Nav() {
   const router = useRouter()
   const pathname = usePathname()
   const t = useTranslations('header')
+  const tc = useTranslations('form')
 
   const handleLocaleChange = () =>
     router.push(
@@ -97,7 +98,7 @@ export default function Nav() {
                       type="button"
                     >
                       <span className="px-lg-4 d-block ws-nowrap">
-                        Evangelism Request
+                        {tc('title')}
                       </span>
                     </button>
                   </Link>

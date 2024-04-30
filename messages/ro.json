@@ -163,7 +163,9 @@
     "blog": "Blog",
     "contact": "Contact",
     "home": "Acasă",
-    "vision": "Viziunea"
+    "vision": "Viziunea",
+    "project": "Proiecte",
+    "project_": "Proiectul de misiune"
   },
   "hero": {
     "question1": "Dorești mântuirea cuiva drag?",

@@ -163,7 +163,9 @@
     "blog": "Blog",
     "contact": "Contact",
     "home": "Home",
-    "vision": "Vision"
+    "vision": "Vision",
+    "project": "Projects",
+    "project_": "Mision Project"
   },
   "hero": {
     "question1": "Do you care for the salvation of your loved ones?",
