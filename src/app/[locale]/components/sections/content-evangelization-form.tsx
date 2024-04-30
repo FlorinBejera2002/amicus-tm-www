@@ -2,6 +2,7 @@
 import MailchimpSubscribe from 'react-mailchimp-subscribe'
 import React, { useState } from 'react'
 
+import { stringify } from 'querystring'
 import { useTranslations } from 'next-intl'
 import { useRouter } from 'next/navigation'
 
@@ -13,6 +14,7 @@ const ContentEvangelizationForm = () => {
   const t = useTranslations('form')
   const [isChecked, setIsChecked] = useState(false)
   const router = useRouter()
+  const [successMessage, setSuccessMessage] = useState(stringify)
 
   const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setIsChecked(event.target.checked)
@@ -24,16 +26,26 @@ const ContentEvangelizationForm = () => {
   return (
     <MailchimpSubscribe
       render={({ subscribe }: any) => {
-        function handleSubmit(event: any) {
+        const handleSubmit = async (event: any) => {
+          event.preventDefault()
           const email = event.target.email.value
 
-          if (isChecked) {
-            event.preventDefault()
-            subscribe({ EMAIL: email })
-            router.push('/')
-          } else {
-            event.preventDefault()
-            router.push('/')
+          try {
+            if (isChecked) {
+              await subscribe({ EMAIL: email })
+              setSuccessMessage('Formularul a fost trimis cu succes!')
+              setTimeout(() => {
+                setSuccessMessage('Formularul a fost trimis cu succes!')
+                router.push('/')
+              }, 3000)
+            } else {
+              router.push('/')
+            }
+          } catch (error) {
+            console.error(
+              'A apărut o eroare la trimiterea formularului:',
+              error
+            )
           }
         }
 
@@ -132,20 +144,11 @@ const ContentEvangelizationForm = () => {
                 </div>
               </div>
             </form>
-            <div className=" relative mb-10 flex justify-center w-full">
-              <div
-                className="size-5 text-green-800 absolute hidden"
-                id="success"
-              >
-                Your Message Successfully Sent!
+            {successMessage && (
+              <div className="success-message p-5 absolute flex justify-center items-center bg-green-700 h-24 rounded-xl bottom-5 right-5">
+                {successMessage}
               </div>
-              <div
-                className="size-5 text-green-800 absolute hidden"
-                id="danger"
-              >
-                Feilds Can not be Empty!
-              </div>
-            </div>
+            )}
           </div>
         )
       }}
