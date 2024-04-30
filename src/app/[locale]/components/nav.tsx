@@ -1,9 +1,6 @@
 'use client'
 import { useState } from 'react'
 
-// import Portfolio from '../portfolio/page'
-// import Elements from '../elements/page'
-
 import Projects from '../projects/page'
 
 import { useTranslations } from 'next-intl'
@@ -78,9 +75,9 @@ export default function Nav() {
                         <li>
                           <Link
                             className="nav-link"
-                            href={`/${language}/services`}
+                            href={`/${language}/vision`}
                           >
-                            Services
+                            {t('vision')}
                           </Link>
                         </li>
 
@@ -90,7 +87,6 @@ export default function Nav() {
                           </Link>
                         </li>
                         <Projects />
-                        {/* <Elements /> */}
                       </ul>
                     </nav>
                   </div>
@@ -165,15 +161,6 @@ export default function Nav() {
                   Portfolio
                 </Link>
               </li>
-              {/* <li>
-                <Link
-                  className="nav-link"
-                  href="/elements"
-                  // onClick={() => setNavBar(!navbar)}
-                >
-                  Elements
-                </Link>
-              </li> */}
             </ul>
           </nav>
         </div>
