@@ -3,12 +3,11 @@ import { useState } from 'react'
 
 import Projects from '../projects/page'
 
+import { FaBars } from 'react-icons/fa'
 import { useTranslations } from 'next-intl'
 import { usePathname, useRouter } from 'next/navigation'
 import Link from 'next/link'
 import Image from 'next/image'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars } from '@fortawesome/free-solid-svg-icons'
 
 import horizontalLogo from '../../../../public/logo_horizontal_white.png'
 
@@ -116,7 +115,7 @@ export default function Nav() {
                     onClick={() => setNavBar(!navbar)}
                   >
                     <i className="fas fa-bars">
-                      <FontAwesomeIcon icon={faBars} />
+                      <FaBars />
                     </i>
                   </button>
                 </div>
@@ -172,7 +171,7 @@ export default function Nav() {
               <li>
                 <Link
                   className="nav-link"
-                  href={`/${language}/projects`}
+                  href="#"
                   onClick={() => setNavBar(!navbar)}
                 >
                   {t('project')}

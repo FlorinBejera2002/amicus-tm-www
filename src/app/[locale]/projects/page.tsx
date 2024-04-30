@@ -10,10 +10,7 @@ export default function Projects() {
 
   return (
     <li className="dropdown">
-      <Link
-        className="dropdown-item dropdown-toggle"
-        href={`/${language}/projects`}
-      >
+      <Link className="dropdown-item dropdown-toggle" href="#">
         {t('project')}
       </Link>
       <ul className="dropdown-menu">
