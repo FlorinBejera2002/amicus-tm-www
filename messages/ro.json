@@ -153,6 +153,7 @@
     "age": "vârstă",
     "applicant_person": "Cine face cererea?",
     "cancel": "RENUNȚĂ",
+    "checkbox_text": "Prin bifarea casutei îți dai acordul pentru prelucrarea datelor tale personale în scopul primirii comunicărilor periodice din partea noastră.",
     "details": "detalii",
     "email": "email",
     "failed_submission": "Nu s-a reușit trimiterea datelor de evanghelizare! Vă rugăm contactați-ne prin email.",
@@ -163,10 +164,10 @@
     "occupation": "ocupație",
     "religion": "religie",
     "send": "TRIMITE",
-    "subtitle": "Bine ați venit la Formularul de Evanghelizare, unde vă invităm să începeți o explorare semnificativă a credinței și să vă apropiați de harul lui Dumnezeu. Acest formular își propune să creeze o legătură cu persoanele care caută salvare, creștere spirituală și o înțelegere mai profundă a relației lor cu Divinul.",
+    "subtitle": "Vă invităm să inițiați o călătorie semnificativă în lumea credinței și să descoperiți harul divin. Scopul acestui formular este să stabilească o legătură cu cei în căutare de salvare, evoluție spirituală și o înțelegere mai profundă a legăturii lor cu Divinitatea.",
     "successful_submission": "Cererea de evanghelizare a fost trimisă cu succes!",
     "target_person": "Pe cine ai dori să aduci la Christos?",
-    "text": "Vă rugăm să furnizați detaliile dumneavoastră mai jos pentru a vă alătura acestei experiențe transformaționale. Vă asigurăm că informațiile dumneavoastră vor fi tratate cu cea mai mare confidențialitate și vor fi utilizate numai în scopul comunicării legate de această călătorie spirituală.",
+    "text": "Alăturați-vă experienței noastre transformaționale furnizând detaliile dumneavoastră mai jos. Vă garantăm confidențialitatea și utilizarea exclusivă în scopul comunicării legate de această călătorie spirituală.",
     "title": "Cerere de Evanghelizare"
   },
   "gdpr": {

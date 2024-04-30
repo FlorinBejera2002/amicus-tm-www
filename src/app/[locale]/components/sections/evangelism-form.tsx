@@ -1,6 +1,6 @@
 'use client'
 
-import FormEvangelism from './form-evangelism'
+import ContentEvangelizationForm from './content-evangelization-form'
 
 import { AiOutlineClose } from 'react-icons/ai'
 import { usePathname, useSearchParams } from 'next/navigation'
@@ -15,7 +15,7 @@ function Modal() {
     <>
       {modal && (
         <dialog className="fixed left-0 top-0 w-full h-full bg-black bg-opacity-50 z-50 overflow-auto backdrop-blur flex justify-center items-center ">
-          <div className="bg-gradient-to-t bg-white m-auto p-8 relative rounded-md w-1/2 h-1/2">
+          <div className="bg-gradient-to-t bg-white m-auto p-16 relative rounded-md w-[65em] h-[32em]">
             <Link href={pathname}>
               <button
                 className="flex justify-end absolute right-10 top-10"
@@ -24,7 +24,7 @@ function Modal() {
                 <AiOutlineClose className="fill-black w-7 h-7" />
               </button>
             </Link>
-            <FormEvangelism />
+            <ContentEvangelizationForm />
           </div>
         </dialog>
       )}
