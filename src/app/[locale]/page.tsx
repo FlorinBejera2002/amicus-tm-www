@@ -3,6 +3,7 @@ import Team from './components/sections/team'
 import StepsEvangelization from './components/sections/steps-evangelization'
 import PersonalEvangelism from './components/sections/personal-evangelism'
 import CustomHeroBg from './components/sections/custom-hero-bg'
+import CookieConsents from './components/sections/cookies-consent'
 import Animation from './components/sections/animation'
 
 import { FaFacebookF } from 'react-icons/fa6'
@@ -18,6 +19,8 @@ export default function Home() {
 
   return (
     <div className="main" role="main">
+      <CookieConsents />
+
       <section
         className="p-relative border-0 bg-quaternary overflow-hidden px-2"
         id="home"
