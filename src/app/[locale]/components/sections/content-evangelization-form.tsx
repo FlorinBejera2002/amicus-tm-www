@@ -127,7 +127,7 @@ const ContentEvangelizationForm = () => {
 
               <div className="flex justify-center items-center">
                 <button
-                  className="bg-[#e3ae04] rounded-md w-44 hover:shadow-2xl hover:-translate-2 hover:scale-105 hover:bg-[#e3ae04] duration-700 text-black font-bold py-1 size-9 flex justify-center items-center"
+                  className="bg-[#e3ae04] rounded-md px-20 hover:shadow-2xl hover:-translate-2 hover:scale-105 hover:bg-[#e3ae04] duration-700 text-black font-bold py-1 size-9 flex justify-center items-center"
                   type="submit"
                 >
                   {t('send')}
