@@ -3,7 +3,7 @@ import Team from './components/sections/team'
 import StepsEvangelization from './components/sections/steps-evangelization'
 import PersonalEvangelism from './components/sections/personal-evangelism'
 import CustomHeroBg from './components/sections/custom-hero-bg'
-import CookieConsents from './components/sections/cookie-consents'
+import CookieConsents from './components/sections/cookies-consent'
 import Animation from './components/sections/animation'
 
 import { FaFacebookF } from 'react-icons/fa6'
