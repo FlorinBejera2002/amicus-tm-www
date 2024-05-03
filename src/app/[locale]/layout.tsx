@@ -14,7 +14,7 @@ import './css/demo-creative-agency-2.css'
 import './css/custom.css'
 import './css/bootstrap.min.css'
 import './css/animate.compat.css'
-import ModalEvangelism from './components/sections/evangelism-form'
+import Modal from './components/sections/evangelism-form'
 import Nav from './components/nav'
 import Footer from './components/footer'
 
@@ -41,7 +41,7 @@ export default function RootLayout({ children, params: { locale } }: any) {
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Nav />
           {children}
-          <ModalEvangelism />
+          <Modal />
           <Footer />
         </NextIntlClientProvider>
       </body>
