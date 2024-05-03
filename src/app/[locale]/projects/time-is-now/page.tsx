@@ -1,7 +1,7 @@
 import TrailerSection from './trailer-section'
+import Subtitle from './subtitle'
 import HeroSection from './hero-section'
 import EpisodesSection from './episodes-section'
-import Subtitle from './ subtitle'
 
 export default function TimeIsNow() {
   return (

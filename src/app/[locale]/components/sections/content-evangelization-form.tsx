@@ -115,16 +115,18 @@ const ContentEvangelizationForm = () => {
                   {t('details')}
                 </label>
               </div>
-              <label className="flex gap-2 ">
+              <div className="flex gap-2">
                 <input
                   checked={isChecked}
                   className="flex w-5 h-5"
+                  id="consent"
                   onChange={handleCheckboxChange}
                   type="checkbox"
                 />
-                <span className="text-sm">{t('checkbox_text')}</span>
-              </label>
-
+                <label className="text-sm" htmlFor="consent">
+                  {t('checkbox_text')}
+                </label>
+              </div>
               <div className="flex justify-center items-center">
                 <button
                   className="bg-[#e3ae04] rounded-md px-20 hover:shadow-2xl hover:-translate-2 hover:scale-105 hover:bg-[#e3ae04] duration-700 text-black font-bold py-1 size-9 flex justify-center items-center"
