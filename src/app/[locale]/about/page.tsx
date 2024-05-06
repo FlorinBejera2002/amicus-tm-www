@@ -60,10 +60,6 @@ const About = () => {
             <div className="col">
               <p className="text-4-5 line-height-7 text-dark mb-lg-2 mb-xl-4 mb-4 pb-1">
                 {ta('description_p1_1')}
-                {ta('description_p1_2')}
-                {ta('description_p1_3')}
-                {ta('description_p1_4')}
-                {ta('description_p1_5')}
               </p>
             </div>
           </div>
@@ -144,12 +140,7 @@ const About = () => {
               </div>
             </div>
             <div className="col-lg-6 ps-lg-4">
-              <p className="text-4-5 line-height-7">
-                {ta('description_p1_6')}
-                {ta('description_p2_1')}
-                {ta('description_p2_2')}
-                {ta('description_p2_3')}
-              </p>
+              <p className="text-4-5 line-height-7">{ta('description_p1_6')}</p>
 
               <div className="d-block text-4-5">
                 <div className="d-block appear-animation pt-4 appear-animation-visible">
@@ -163,25 +154,35 @@ const About = () => {
                           {ta('description_p4_0')}
                         </summary>
                         <div className=" mt-3 text-base leading-6 text-slate-600">
-                          <p>
-                            <strong>{`${ta('description_p4_1')}`}</strong>
-                            {`${ta('description_p4_2')} ${ta('description_p4_3')}`}
-                            <br />
-                            <br />
-                            <strong>{`${ta('description_p5_1')}`}</strong>
-                            {`${ta('description_p5_2')} ${ta('description_p5_3')}`}
-                            <br />
-                            <br />
-                            <strong>{`${ta('description_p6_1')}`}</strong>
-                            {`${ta('description_p6_2')} ${ta('description_p6_3')} ${ta('description_p6_4')}`}
-                            <br />
-                            <br />
-                            <strong>{`${ta('description_p7_1')}`}</strong>
-                            {`${ta('description_p7_2')}`}
-                            <br />
-                            <br />
-                            <strong>{`${ta('description_p8_1')}`}</strong>
-                            {`${ta('description_p8_2')}`}
+                          <p className="text-xl mb-4">
+                            <span className="font-semibold">
+                              {ta('description_p4_1')}
+                            </span>
+                            {` ${ta('description_p4_2')} ${ta('description_p4_3')}`}
+                          </p>
+                          <p className="text-xl mb-4">
+                            <span className="font-semibold">
+                              {ta('description_p5_1')}
+                            </span>
+                            {` ${ta('description_p5_2')} ${ta('description_p5_3')}`}
+                          </p>
+                          <p className="text-xl mb-4">
+                            <span className="font-semibold">
+                              {ta('description_p6_1')}
+                            </span>
+                            {` ${ta('description_p6_2')} ${ta('description_p6_3')} ${ta('description_p6_4')}`}
+                          </p>
+                          <p className="text-xl mb-4">
+                            <span className="font-semibold">
+                              {ta('description_p7_1')}
+                            </span>
+                            {` ${ta('description_p7_2')}`}
+                          </p>
+                          <p className="text-xl mb-4">
+                            <span className="font-semibold">
+                              {ta('description_p8_1')}
+                            </span>
+                            {` ${ta('description_p8_2')}`}
                           </p>
                         </div>
                       </details>
