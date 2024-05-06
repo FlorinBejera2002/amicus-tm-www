@@ -52,42 +52,6 @@ const About = () => {
           </div>
         </div>
         <Animation />
-
-        <div className="p-absolute custom-el-1 custom-el-pos-5">
-          <div
-            className="appear-animation"
-            data-appear-animation="fadeInUpShorter"
-            data-appear-animation-delay="0"
-          >
-            <img
-              alt=""
-              src="img/demos/creative-agency-2/svg/arrow-up-light.svg"
-              width="140"
-            />
-          </div>
-          <div
-            className="appear-animation"
-            data-appear-animation="fadeInUpShorter"
-            data-appear-animation-delay="100"
-          >
-            <img
-              alt=""
-              src="img/demos/creative-agency-2/svg/arrow-up-light.svg"
-              width="140"
-            />
-          </div>
-          <div
-            className="appear-animation"
-            data-appear-animation="fadeInUpShorter"
-            data-appear-animation-delay="200"
-          >
-            <img
-              alt=""
-              src="img/demos/creative-agency-2/svg/arrow-up-light.svg"
-              width="140"
-            />
-          </div>
-        </div>
       </section>
 
       <div className="custom-page-content p-relative z-index-2">
