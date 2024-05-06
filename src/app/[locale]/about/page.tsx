@@ -1,11 +1,9 @@
 'use client'
-// import Numbers from "../components/sections/numbers";
 
 import React from 'react'
 
 import CustomHeroBg from '../components/sections/custom-hero-bg'
 import Animation from '../components/sections/animation'
-// import arrowUpLight from "../../../../public/img/demos/creative-agency-2/svg/arrow-up-light.svg";
 
 import { ImArrowUpRight2 } from 'react-icons/im'
 import { FaAngleRight } from 'react-icons/fa'
@@ -311,81 +309,6 @@ const About = () => {
           <div className="row px-lg-3 py-5">
             <div className="col">
               <p className="text-4-5 line-height-7">{ta('description_p3_1')}</p>
-            </div>
-          </div>
-
-          <div className="row px-lg-3">
-            <div className="col-md-6 col-lg-4 mb-4">
-              <div className="card border-radius-0 bg-color-dark border-0">
-                <div className="card-body">
-                  <h4 className="card-title custom-font-size-1 font-weight-semi-bold text-light mb-1">
-                    345+
-                  </h4>
-                  <p className="text-4-5 line-height-7 text-light mb-0 mt-5 pb-0">
-                    Cras a elit sit amet leo accumsan volutpat.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-6 col-lg-4 mb-4">
-              <div className="card border-radius-0 bg-color-dark border-0">
-                <div className="card-body">
-                  <h4 className="card-title custom-font-size-1 font-weight-semi-bold text-light mb-1">
-                    1000+
-                  </h4>
-                  <p className="text-4-5 line-height-7 text-light mb-0 mt-5 pb-0">
-                    A crasa elit sit amet leo accumsan volutpat.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-6 col-lg-4 mb-4">
-              <div className="card border-radius-0 bg-color-dark border-0">
-                <div className="card-body">
-                  <h4 className="card-title custom-font-size-1 font-weight-semi-bold text-light mb-1">
-                    123+
-                  </h4>
-                  <p className="text-4-5 line-height-7 text-light mb-0 mt-5 pb-0">
-                    Elit cras a elit sit amet leo accumsan volutpat.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-6 col-lg-4 mb-4">
-              <div className="card border-radius-0 bg-color-dark border-0">
-                <div className="card-body">
-                  <h4 className="card-title custom-font-size-1 font-weight-semi-bold text-light mb-1">
-                    15+
-                  </h4>
-                  <p className="text-4-5 line-height-7 text-light mb-0 mt-5 pb-0">
-                    Sit cras a elit sit amet leo accumsan volutpat.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-6 col-lg-4 mb-4">
-              <div className="card border-radius-0 bg-color-dark border-0">
-                <div className="card-body">
-                  <h4 className="card-title custom-font-size-1 font-weight-semi-bold text-light mb-1">
-                    45+
-                  </h4>
-                  <p className="text-4-5 line-height-7 text-light mb-0 mt-5 pb-0">
-                    Lorem a elit sit amet leo accumsan volutpat.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-6 col-lg-4 mb-4">
-              <div className="card border-radius-0 bg-color-dark border-0">
-                <div className="card-body">
-                  <h4 className="card-title custom-font-size-1 font-weight-semi-bold text-light mb-1">
-                    345+
-                  </h4>
-                  <p className="text-4-5 line-height-7 text-light mb-0 mt-5 pb-0">
-                    Cras a elit sit amet leo accumsan volutpat.
-                  </p>
-                </div>
-              </div>
             </div>
           </div>
         </div>
