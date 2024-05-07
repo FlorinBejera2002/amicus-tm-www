@@ -1,20 +1,8 @@
 {
   "about_us": {
-<<<<<<< HEAD
     "description_p1_1": "Arise for Christ este o misiune creștină care își propune mobilizarea creștinilor la acțiune, conectarea lor, și a organizațiilor creștine cu scopul de a fi mai eficienți în mărturisirea Evangheliei și extinderea Împărăției lui Dumnezeu. Prin intermediul portalului ariseforchrist.com și folosind interconectarea prin rețele de socializare, creștinii vor putea comunica mai ușor, se pot uni și încuraja pentru a acționa împreună pentru Hristos.",
     "description_p1_6": "Ne unim eforturile și cunoștințele pentru a fi martori ai Evangheliei și pentru a extinde Împărăția lui Dumnezeu la nivel mondial, începând din România. Îndeplinirea dorinței lui Dumnezeu (1 Timotei 2:4) este misiunea asociației noastre, motivată de dragostea lui Dumnezeu pentru noi, iar noi, la rândul nostru, facem acest lucru pentru oameni (1 Ioan 3:16).",
     "description_p2_1": "Să împlinim dorința lui Dumnezeu (1 Timotei 2:4) este Misiunea asociației noastre, motivați de dragostea Lui Dumnezeu pentru noi iar noi la rândul nostru să o facem pentru oameni (1 Ioan 3:16).",
-=======
-    "description_p1_1": "Arise for Christ este o misiune creștină care își propune mobilizarea creștinilor ",
-    "description_p1_2": "la acțiune, conectarea lor, ",
-    "description_p1_3": "și a organizațiilor creștine cu scopul de a fi mai eficienți în mărturisirea Evangheliei și extinderea Împărăției lui Dumnezeu. Prin intermediul portalului ",
-    "description_p1_4": "ariseforchrist.com ",
-    "description_p1_5": "și folosind interconectarea prin rețele de socializare, creștinii vor putea comunica mai ușor, se pot uni și încuraja pentru a acționa împreună pentru Hristos. Ne unim eforturile și cunoștințele pentru a mărturisi Evanghelia și pentru extinderea Împărăției lui Dumnezeu în toată lumea, începând din România.",
-    "description_p1_6": "Ne unim eforturile și cunoștințele pentru a mărturisi Evanghelia și pentru extinderea Împărăției lui Dumnezeu în toată lumea, începând din România. ",
-    "description_p2_1": "Să împlinim dorința lui Dumnezeu (1 Timotei 2:4) este ",
-    "description_p2_2": "Misiunea  ",
-    "description_p2_3": "asociației noastre, motivați de dragostea Lui Dumnezeu pentru noi iar noi la rândul nostru să o facem pentru oameni (1 Ioan 3:16).",
->>>>>>> 8ae2494 (feat: Deleted the icons from accordions and change the text for the button and translate it)
     "description_p3_1": "Aspirăm să vedem o mișcare crescândă a creștinilor care să acționeze pentru Hristos și care să pună în practică principiile Împărăției lui Dumnezeu. Ne dorim ca bisericile și credincioșii să fie dedicați câștigării de suflete pentru Dumnezeu, recuperării celor căzuți, ajutorarea celor cu diferite probleme pentru creșterea lor spirituală. Nu ne propunem să înlocuim misiunea Bisericii Domnului, ci să accentuăm, să motivăm, să reprezentăm o punte de legătură pentru evanghelizarea oamenilor și slujirea credincioșilor.",
     "description_p4_0": "Misiunea noastră",
     "description_p4_1": "Misiunea noastră se clădește pe valori, care determină acțiunile și modul nostru de lucru.",
@@ -24,25 +12,10 @@
     "description_p6_2": "Dragostea pentru Domnul Hristos ne conduce la dragostea pentru oameni. Scopul nostru este să-L vedem  pe El ca Domn și Mântuitor al multor oameni. Dragostea Lui a aprins în noi pasiune pentru oameni. Convingerea că Isus Hristos este singura cale de mântuire ne determină să folosim aceste metode de lucru, pentru a ajunge la inima oamenilor. Importanța familiei este o prioritate de aceea ne focalizăm în slujirea noastră pe cei din familie.",
     "description_p7_1": "Acțiune concretă pentru Hristos.",
     "description_p7_2": "Credința este demonstrată prin fapte! Dorim să fim influențabili, motivatori, contagioși pentru credincioși în favoarea celor nemântuiți, căzuți de la credință, cu diferite probleme.",
-<<<<<<< HEAD
     "description_p8_1": "Români pentru români de pretutindeni.",
     "description_p8_2": "Asemenea Apostolul Pavel, dorința inimii noastre și rugăciunea noastră către Dumnezeu este ca românii să fie mântuiți (Romani 10:1, 11:13-14). Credem într-o viziune  globală ce depășește contextul implicării bisericii locale și dominaționale și care presupune unitate, diversitate și dedicare pentru cauza lui Hristos în lume. Lucrării misionare pe termen lung sau scurt în anumite zone ale lumii pe care le susținem.",
     "principals_p1_0": "Principiile Arise",
     "principals_p1_1": "Sumarizăm misiunea noastră la două cuvinte: mântuire și acțiune. Mântuire pentru cei care nu Îl cunosc pe Hristos și mobilizare pentru credincioși prin acțiuni concrete.",
-=======
-    "description_p8_1": "Români pentru români de pretutindeni. ",
-    "description_p8_2": "Asemenea Apostolul Pavel, dorința inimii noastre și rugăciunea noastră către Dumnezeu este ca românii să fie mântuiți (Romani 10:1, 11:13-14). Credem într-o viziune  globală ce depășește contextul implicării bisericii locale și dominaționale și care presupune unitate, diversitate și dedicare pentru cauza lui Hristos în lume. Lucrării misionare pe termen lung sau scurt în anumite zone ale lumii pe care le susținem...",
-    "principals_p1_0": "Principiile Arise ",
-    "principals_p1_1": "Sumarizăm misiunea noastră la două cuvinte: ",
-    "principals_p1_2": "mântuire ",
-    "principals_p1_3": "și ",
-    "principals_p1_4": "acțiune. ",
-    "principals_p1_5": "Mântuire ",
-    "principals_p1_6": "pentru cei care nu Îl cunosc pe Hristos și ",
-    "principals_p1_7": "mobilizare ",
-    "principals_p1_8": "pentru credincioși prin ",
-    "principals_p1_9": "acțiuni concrete.",
->>>>>>> 8ae2494 (feat: Deleted the icons from accordions and change the text for the button and translate it)
     "principals_p2_1": " Dragostea",
     "principals_p2_2": "Dragostea lui Dumnezeu este sursa pasiunii noastre și ne dorim ca oamenii să fie eclipsați de aceasta. Ne rugăm și mijlocim pentru oameni cu pasiune.",
     "principals_p3_1": " Dedicare",
@@ -52,7 +25,6 @@
     "principals_p5_1": " Unitate în colaborare",
     "principals_p5_2": "Căutăm mereu colaborări zonale și locale cu misiuni, misionari, evangheliști, bisericii și caboratori cu care să slujim împreună Împărăția. Facem parteneriate și ne asociem cu cei care împărtășesc aceleași valori biblice cu noi. Suntem conștienți că lucrarea trebuie să se desfășoare în colaborare cu credincioși de orice nivele de funcție.",
     "principals_p6_1": "Crezul Arise",
-<<<<<<< HEAD
     "principals_p6_2": "Noi credem că Biblia, atât Vechiul cât și Noul Testament este inspirată verbal de Dumnezeu, inerantă în original, unică, fiind autoritatea finală în materie de credință și morală, respectiv practica creștină.",
     "principals_p6_3": "Noi credem într-un singur Dumnezeu, Spirit Infinit și Perfect, existând din Veșnicie în trei persoane: Tatăl, Fiul și Duhul Sfânt, Creator al întregului univers.",
     "principals_p6_4": "Noi credem că Isus Cristos a fost conceput de Duhul Sfânt și născut din fecioara Maria, în viața Lui fără păcat, fiind în același timp Dumnezeu adevărat și om adevãrat.",
@@ -64,19 +36,6 @@
     "principals_p6_10": "Noi credem în Botezul cu Duhul Sfânt, în operarea darurilor spirituale în vederea slujirii biserici Domnului și a lumii nemântuite.",
     "principals_p6_11": "Noi credem în acea „fericita nădejde“: întoarcerea iminentă a Domnului și Mântuitorului nostru Isus Cristos și răpirea Bisericii.",
     "principals_p6_12": "Noi credem în învierea trupească a celor drepți și nedrepți, pentru fericirea Veșnică a celor mântuiți și pentru pedeapsa veșnică a celor pierduți în urma judecăți lui Dumnezeu.",
-=======
-    "principals_p6_2": " Noi credem că Biblia, atât Vechiul cât și Noul Testament este inspirată verbal de Dumnezeu, inerantă în original, unică, fiind autoritatea finală în materie de credință și morală, respectiv practica creștină.",
-    "principals_p6_3": " Noi credem într-un singur Dumnezeu, Spirit Infinit și Perfect, existând din Veșnicie în trei persoane: Tatăl, Fiul și Duhul Sfânt, Creator al întregului univers.",
-    "principals_p6_4": " Noi credem că Isus Cristos a fost conceput de Duhul Sfânt și născut din fecioara Maria, în viața Lui fără păcat, fiind în același timp Dumnezeu adevărat și om adevãrat.",
-    "principals_p6_5": " Noi credem că Domnul Isus Christos a murit pentru păcatele noastre, conform Scripturilor, ca o jertfă reprezentativă și substituționară, și că toți cei care cred și se încred în El sunt justificați pe baza sângelui Său vărsat.",
-    "principals_p6_6": " Noi credem în învierea trupească din morți a Domnului nostru cel răstignit și în Înălțarea Lui la cer, unde în prezent mijlocește pentru noi ca Avocat și Mare Preot.",
-    "principals_p6_7": " Noi credem că omul a fost creat de Dumnezeu după chipul Său că a fost bun și drept; că a păcătuit  însă prin propria alegere prin neascultare ieșind de sub autoritatea lui Dumnezeu și ca urmare a suferit nu numai moarte fizic, ci și moarte spirituală, adică despărțire de Dumnezeu; că toate ființele umane se nasc cu o natură păcătoasă, iar în momentul în care ating vârsta responsabilității morale, devin păcătoși în gândire, vorbire și faptă.",
-    "principals_p6_8": " Noi credem că toți cei care Îl primesc pe Domnul Isus Cristos prin credință ca Domn și Mântuitor sunt născuți din nou de către Duhul Sfânt și ca urmare devin copii ai lui Dumnezeu.",
-    "principals_p6_9": " Noi credem în salvarea de păcat (mântuirea omului) prin harul lui Dumnezeu, prin pocăința omului,  în botezul în apă ca urmare a schimbări lucrate de Duhul prin Cuvântul lui Dumnezeu.",
-    "principals_p6_10": " Noi credem în Botezul cu Duhul Sfânt, în operarea darurilor spirituale în vederea slujirii biserici Domnului și a lumii nemântuite.",
-    "principals_p6_11": " Noi credem în acea „fericita nădejde“: întoarcerea iminentă a Domnului și Mântuitorului nostru Isus Cristos și răpirea Bisericii.",
-    "principals_p6_12": " Noi credem în învierea trupească a celor drepți și nedrepți, pentru fericirea Veșnică a celor mântuiți și pentru pedeapsa veșnică a celor pierduți în urma judecăți lui Dumnezeu.",
->>>>>>> 8ae2494 (feat: Deleted the icons from accordions and change the text for the button and translate it)
     "principals_title": "Principii de lucru ale Arise",
     "statement1": "Acționează corect.",
     "statement2": "Influențează prin fapte.",
