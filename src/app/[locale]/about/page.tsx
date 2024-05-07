@@ -1,5 +1,3 @@
-'use client'
-
 import React from 'react'
 
 import CustomHeroBg from '../components/sections/custom-hero-bg'
@@ -88,7 +86,6 @@ const About = () => {
                     <Image
                       alt="Arise photo"
                       className="custom-el-3-img p-relative size-full"
-                      loading="lazy"
                       src={step5}
                     />
                   </div>
@@ -100,7 +97,6 @@ const About = () => {
                     className="custom-el-3 bg-color-primary custom-border-radius-2 mx-auto appear-animation"
                     data-appear-animation="zoomIn"
                     data-appear-animation-delay="200"
-                    loading="lazy"
                     src={step2}
                   />
                 </div>
@@ -114,7 +110,6 @@ const About = () => {
                     <Image
                       alt="Arise photo"
                       className="custom-el-3-img p-relative size-full"
-                      loading="lazy"
                       src={step1}
                     />
                   </div>
@@ -130,7 +125,6 @@ const About = () => {
                     <Image
                       alt="Arise photo"
                       className="custom-el-3-img p-relative size-full"
-                      loading="lazy"
                       src={step3}
                     />
                   </div>
@@ -145,13 +139,13 @@ const About = () => {
                     <Image
                       alt="Arise photo"
                       className=" custom-el-3-img p-relative size-full"
-                      loading="lazy"
                       src={step4}
                     />
                   </div>
                 </div>
               </div>
             </div>
+
             <div className="col-lg-6 ps-lg-4">
               <p className="text-4-5 line-height-7">{ta('description_p1_6')}</p>
 
