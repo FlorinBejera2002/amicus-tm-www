@@ -21,6 +21,19 @@ const About = () => {
   const t = useTranslations('header')
   const ta = useTranslations('about_us')
   const tc = useTranslations('button')
+  const text = [
+    ta('principals_p6_2'),
+    ta('principals_p6_3'),
+    ta('principals_p6_4'),
+    ta('principals_p6_5'),
+    ta('principals_p6_6'),
+    ta('principals_p6_7'),
+    ta('principals_p6_8'),
+    ta('principals_p6_9'),
+    ta('principals_p6_10'),
+    ta('principals_p6_11'),
+    ta('principals_p6_12')
+  ].join('\n\n')
 
   return (
     <div className="main" role="main">
@@ -155,31 +168,24 @@ const About = () => {
                         </summary>
                         <div className=" mt-3 text-base leading-6 text-slate-600">
                           <p className="text-xl mb-4">
-                            <span className="font-semibold">
-                              {ta('description_p4_1')}
-                            </span>
-                            {` ${ta('description_p4_2')} ${ta('description_p4_3')}`}
-                          </p>
-                          <p className="text-xl mb-4">
-                            <span className="font-semibold">
+                            {ta('description_p4_1')}
+
+                            <span className="font-semibold block mt-8">
                               {ta('description_p5_1')}
                             </span>
-                            {` ${ta('description_p5_2')} ${ta('description_p5_3')}`}
-                          </p>
-                          <p className="text-xl mb-4">
-                            <span className="font-semibold">
+                            {` ${ta('description_p5_2')}`}
+
+                            <span className="font-semibold block mt-8">
                               {ta('description_p6_1')}
                             </span>
-                            {` ${ta('description_p6_2')} ${ta('description_p6_3')} ${ta('description_p6_4')}`}
-                          </p>
-                          <p className="text-xl mb-4">
-                            <span className="font-semibold">
+                            {` ${ta('description_p6_2')}`}
+
+                            <span className="font-semibold block mt-8">
                               {ta('description_p7_1')}
                             </span>
                             {` ${ta('description_p7_2')}`}
-                          </p>
-                          <p className="text-xl mb-4">
-                            <span className="font-semibold">
+
+                            <span className="font-semibold block mt-8">
                               {ta('description_p8_1')}
                             </span>
                             {` ${ta('description_p8_2')}`}
@@ -193,31 +199,17 @@ const About = () => {
                           {ta('principals_p1_0')}
                         </summary>
                         <div className="mt-3 text-base leading-6 text-slate-600">
-                          <p>
+                          <p className="text-xl mb-4">
                             {`${ta('principals_p1_1')} `}
-                            <strong>{`${ta('principals_p1_2')}`}</strong>
-                            {` ${ta('principals_p1_3')} `}
-                            <strong>{`${ta('principals_p1_4')}`}</strong>
-                            {` ${ta('principals_p1_5')} ${ta('principals_p1_6')} ${ta('principals_p1_7')} ${ta('principals_p1_8')} ${ta('principals_p1_9')}`}
-                            <br />
-                            <br />
-                            <strong>{`${ta('principals_p2_1')}`}</strong>
-                            <br />
+                            <span className="font-semibold block mt-8">
+                              {ta('principals_p2_1')}
+                            </span>
                             {` ${ta('principals_p2_2')}`}
-                            <br />
-                            <br />
-                            <strong>{`${ta('principals_p3_1')}`}</strong>
-                            <br />
+                            <span className="font-semibold block mt-8">{`${ta('principals_p3_1')}`}</span>
                             {` ${ta('principals_p3_2')}`}
-                            <br />
-                            <br />
-                            <strong>{`${ta('principals_p4_1')}`}</strong>
-                            <br />
+                            <span className="font-semibold block mt-8">{`${ta('principals_p4_1')}`}</span>
                             {` ${ta('principals_p4_2')}`}
-                            <br />
-                            <br />
-                            <strong>{`${ta('principals_p5_1')}`}</strong>
-                            <br />
+                            <span className="font-semibold block mt-8">{`${ta('principals_p5_1')}`}</span>
                             {` ${ta('principals_p5_2')}`}
                           </p>
                         </div>
@@ -229,28 +221,8 @@ const About = () => {
                           {ta('principals_p6_1')}
                         </summary>
                         <div className="mt-3 text-base leading-6 text-slate-600">
-                          <p>
-                            {`${ta('principals_p6_2')}`}
-                            <br /> <br />
-                            {`${ta('principals_p6_3')}`}
-                            <br /> <br />
-                            {`${ta('principals_p6_4')}`}
-                            <br /> <br />
-                            {`${ta('principals_p6_5')}`}
-                            <br /> <br />
-                            {`${ta('principals_p6_6')}`}
-                            <br /> <br />
-                            {`${ta('principals_p6_7')}`}
-                            <br /> <br />
-                            {`${ta('principals_p6_8')}`}
-                            <br /> <br />
-                            {`${ta('principals_p6_9')}`}
-                            <br /> <br />
-                            {`${ta('principals_p6_10')}`}
-                            <br /> <br />
-                            {`${ta('principals_p6_11')}`}
-                            <br /> <br />
-                            {`${ta('principals_p6_12')}`}
+                          <p className="text-xl mb-4 whitespace-pre-line">
+                            {text}
                           </p>
                         </div>
                       </details>
