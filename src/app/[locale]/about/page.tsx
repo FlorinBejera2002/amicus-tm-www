@@ -16,21 +16,19 @@ import step2 from '../../../../public/img/step2.jpeg'
 import step1 from '../../../../public/img/step1.jpg'
 
 const About = () => {
-  const t = useTranslations('header')
-  const ta = useTranslations('about_us')
-  const tc = useTranslations('button')
+  const t = useTranslations()
   const text = [
-    ta('principals_p6_2'),
-    ta('principals_p6_3'),
-    ta('principals_p6_4'),
-    ta('principals_p6_5'),
-    ta('principals_p6_6'),
-    ta('principals_p6_7'),
-    ta('principals_p6_8'),
-    ta('principals_p6_9'),
-    ta('principals_p6_10'),
-    ta('principals_p6_11'),
-    ta('principals_p6_12')
+    t('about_us.principals_p6_2'),
+    t('about_us.principals_p6_3'),
+    t('about_us.principals_p6_4'),
+    t('about_us.principals_p6_5'),
+    t('about_us.principals_p6_6'),
+    t('about_us.principals_p6_7'),
+    t('about_us.principals_p6_8'),
+    t('about_us.principals_p6_9'),
+    t('about_us.principals_p6_10'),
+    t('about_us.principals_p6_11'),
+    t('about_us.principals_p6_12')
   ].join('\n\n')
 
   return (
@@ -47,16 +45,16 @@ const About = () => {
                       className="text-color-primary text-decoration-none"
                       href="/"
                     >
-                      {t('home')}
+                      {t('header.home')}
                     </Link>
                   </li>
                   <FaAngleRight className="text-color-primary mt-0.5 z-[1]" />
                   <li className="text-color-primary active z-[1]">
-                    {t('about_us')}
+                    {t('header.about_us')}
                   </li>
                 </ul>
                 <h1 className="text-color-light font-weight-bold text-10">
-                  {t('about_us')}
+                  {t('header.about_us')}
                 </h1>
               </div>
             </div>
@@ -70,7 +68,7 @@ const About = () => {
           <div className="row px-lg-3">
             <div className="col">
               <p className="text-4-5 line-height-7 text-dark mb-lg-2 mb-xl-4 mb-4 pb-1">
-                {ta('description_p1_1')}
+                {t('about_us.description_p1_1')}
               </p>
             </div>
           </div>
@@ -147,7 +145,9 @@ const About = () => {
             </div>
 
             <div className="col-lg-6 ps-lg-4">
-              <p className="text-4-5 line-height-7">{ta('description_p1_6')}</p>
+              <p className="text-4-5 line-height-7">
+                {t('about_us.description_p1_6')}
+              </p>
 
               <div className="d-block text-4-5">
                 <div className="d-block appear-animation pt-4 appear-animation-visible">
@@ -158,31 +158,31 @@ const About = () => {
                     <section className="toggle">
                       <details className="py-1 rounded-lg overflow-hidden">
                         <summary className=" border-b pb-4 border-gray-400 leading-3 text-slate-900 dark:text-black font-semibold select-none  ">
-                          {ta('description_p4_0')}
+                          {t('about_us.description_p4_0')}
                         </summary>
                         <div className=" mt-3 text-base leading-6 text-slate-600">
                           <p className="text-xl mb-4">
-                            {ta('description_p4_1')}
+                            {t('about_us.description_p4_1')}
 
                             <span className="font-semibold block mt-8">
-                              {ta('description_p5_1')}
+                              {t('about_us.description_p5_1')}
                             </span>
-                            {` ${ta('description_p5_2')}`}
+                            {` ${t('description_p5_2')}`}
 
                             <span className="font-semibold block mt-8">
-                              {ta('description_p6_1')}
+                              {t('about_us.description_p6_1')}
                             </span>
-                            {` ${ta('description_p6_2')}`}
+                            {` ${t('about_us.description_p6_2')}`}
 
                             <span className="font-semibold block mt-8">
-                              {ta('description_p7_1')}
+                              {t('about_us.description_p7_1')}
                             </span>
-                            {` ${ta('description_p7_2')}`}
+                            {` ${t('about_us.description_p7_2')}`}
 
                             <span className="font-semibold block mt-8">
-                              {ta('description_p8_1')}
+                              {t('about_us.description_p8_1')}
                             </span>
-                            {` ${ta('description_p8_2')}`}
+                            {` ${t('about_us.description_p8_2')}`}
                           </p>
                         </div>
                       </details>
@@ -190,21 +190,21 @@ const About = () => {
                     <section className="toggle">
                       <details className="py-3 rounded-lg transform-gpu delay-75 duration-100 ease-in-out ">
                         <summary className="border-b pb-4 border-gray-400 leading-6 text-slate-900 dark:text-black font-semibold select-none">
-                          {ta('principals_p1_0')}
+                          {t('about_us.principals_p1_0')}
                         </summary>
                         <div className="mt-3 text-base leading-6 text-slate-600">
                           <p className="text-xl mb-4">
-                            {`${ta('principals_p1_1')} `}
+                            {`${t('about_us.principals_p1_1')} `}
                             <span className="font-semibold block mt-8">
-                              {ta('principals_p2_1')}
+                              {t('about_us.principals_p2_1')}
                             </span>
-                            {` ${ta('principals_p2_2')}`}
-                            <span className="font-semibold block mt-8">{`${ta('principals_p3_1')}`}</span>
-                            {` ${ta('principals_p3_2')}`}
-                            <span className="font-semibold block mt-8">{`${ta('principals_p4_1')}`}</span>
-                            {` ${ta('principals_p4_2')}`}
-                            <span className="font-semibold block mt-8">{`${ta('principals_p5_1')}`}</span>
-                            {` ${ta('principals_p5_2')}`}
+                            {` ${t('about_us.principals_p2_2')}`}
+                            <span className="font-semibold block mt-8">{`${t('about_us.principals_p3_1')}`}</span>
+                            {` ${t('about_us.principals_p3_2')}`}
+                            <span className="font-semibold block mt-8">{`${t('about_us.principals_p4_1')}`}</span>
+                            {` ${t('about_us.principals_p4_2')}`}
+                            <span className="font-semibold block mt-8">{`${t('about_us.principals_p5_1')}`}</span>
+                            {` ${t('about_us.principals_p5_2')}`}
                           </p>
                         </div>
                       </details>
@@ -212,7 +212,7 @@ const About = () => {
                     <section className="toggle">
                       <details className="py-1 rounded-lg transform-gpu delay-75 duration-100 ease-in-out ">
                         <summary className="border-b pb-4 border-gray-400 leading-6 text-slate-900 dark:text-black font-semibold select-none">
-                          {ta('principals_p6_1')}
+                          {t('about_us.principals_p6_1')}
                         </summary>
                         <div className="mt-3 text-base leading-6 text-slate-600">
                           <p className="text-xl mb-4 whitespace-pre-line">
@@ -230,7 +230,7 @@ const About = () => {
                   className="btn btn-modern btn-primary text-capitalize text-dark text-3 anim-hover-translate-top-5px transition-3ms py-1 pr-30 flex items-center font-semibold"
                   href="#"
                 >
-                  {tc('contact_us')}
+                  {t('button.contact_us')}
                   <ImArrowUpRight2 className="ml-2" />
                 </Link>
               </div>
@@ -239,7 +239,9 @@ const About = () => {
 
           <div className="row px-lg-3 py-5">
             <div className="col">
-              <p className="text-4-5 line-height-7">{ta('description_p3_1')}</p>
+              <p className="text-4-5 line-height-7">
+                {t('about_us.description_p3_1')}
+              </p>
             </div>
           </div>
         </div>
