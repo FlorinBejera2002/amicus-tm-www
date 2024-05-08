@@ -8,7 +8,7 @@ import Link from 'next/link'
 
 function Modal() {
   const searchParams = useSearchParams()
-  const modal = searchParams.get('ev-req-form')
+  const modal = searchParams.get('ev-req-form') === 'open'
   const pathname = usePathname()
 
   return (
