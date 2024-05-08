@@ -1,7 +1,7 @@
 import TrailerSection from './trailer-section'
 import Subtitle from './subtitle'
 import HeroSection from './hero-section'
-import EpisodesSection from './episodes-section'
+import EpisodeSection from './episode-section'
 
 export default function TimeIsNow() {
   return (
@@ -9,7 +9,7 @@ export default function TimeIsNow() {
       <div className="w-[55rem] my-10">
         <HeroSection />
         <TrailerSection />
-        <EpisodesSection />
+        <EpisodeSection />
         <Subtitle />
       </div>
     </div>
