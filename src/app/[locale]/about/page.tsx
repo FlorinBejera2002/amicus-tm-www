@@ -167,7 +167,7 @@ const About = () => {
                             <span className="font-semibold block mt-8">
                               {t('about_us.description_p5_1')}
                             </span>
-                            {` ${t('description_p5_2')}`}
+                            {` ${t('about_us.description_p5_2')}`}
 
                             <span className="font-semibold block mt-8">
                               {t('about_us.description_p6_1')}
