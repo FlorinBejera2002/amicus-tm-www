@@ -82,8 +82,11 @@ export default function Nav() {
                         </li>
 
                         <li>
-                          <Link className="nav-link" href={`/${language}/blog`}>
-                            {t('header.blog')}
+                          <Link
+                            className="nav-link"
+                            href={`/${language}/donate`}
+                          >
+                            {t('header.donate')}
                           </Link>
                         </li>
                         <Projects />
@@ -101,15 +104,8 @@ export default function Nav() {
                       </span>
                     </button>
                   </Link>
-
                   <button
-                    className="ml-12 cursor-pointer duration-500 hover:text-[#e3ae04] text-white "
-                    onClick={handleLocaleChange}
-                  >
-                    en/ro
-                  </button>
-                  <button
-                    className="btn header-btn-collapse-nav text-dark"
+                    className="btn header-btn-collapse-nav text-dark h-[2.375rem]"
                     data-bs-target=".header-nav-main nav"
                     data-bs-toggle="collapse"
                     onClick={() => setNavBar(!navbar)}
@@ -117,6 +113,12 @@ export default function Nav() {
                     <i className="fas fa-bars">
                       <FaBars />
                     </i>
+                  </button>
+                  <button
+                    className="ml-3 cursor-pointer duration-500 hover:text-[#e3ae04] text-white "
+                    onClick={handleLocaleChange}
+                  >
+                    en/ro
                   </button>
                 </div>
               </div>
@@ -162,10 +164,10 @@ export default function Nav() {
               <li>
                 <Link
                   className="nav-link"
-                  href={`/${language}/blog`}
+                  href={`/${language}/donate`}
                   onClick={() => setNavBar(!navbar)}
                 >
-                  {t('header.blog')}
+                  {t('header.donate')}
                 </Link>
               </li>
               <li>
