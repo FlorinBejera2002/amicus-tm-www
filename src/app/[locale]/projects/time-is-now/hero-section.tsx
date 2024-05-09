@@ -4,7 +4,7 @@ export default function HeroSection() {
   return (
     <>
       <div
-        className="container w-screen mt-28 pt-64 pb-4 bg-auto bg-no-repeat flex flex-col items-center justify-center"
+        className="container mt-28 pt-64 pb-4 bg-auto bg-no-repeat flex flex-col items-center justify-center"
         style={{
           backgroundImage: `url(${bgImage.src})`,
           backgroundPosition: 'center',

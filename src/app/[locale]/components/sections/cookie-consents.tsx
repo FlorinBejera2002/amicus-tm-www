@@ -10,17 +10,7 @@ export default function CookieConsents() {
 
   return (
     <CookieConsent
-      buttonStyle={{
-        alignItems: 'center',
-        backgroundColor: '#e3ae04',
-        borderRadius: '6px',
-        color: 'black',
-        display: 'flex',
-        fontSize: '13px',
-        fontWeight: '700',
-        justifyContent: 'center',
-        padding: '15px 30px'
-      }}
+      buttonClasses="items-center bg-[#e3ae04] rounded-md text-black flex size-9 font-bold justify-center py-4 px-8"
       buttonText={t('agree')}
       expires={150}
       location="bottom"
