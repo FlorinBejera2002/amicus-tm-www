@@ -15,8 +15,8 @@ export default function Nav() {
   const [navbar, setNavBar] = useState(false)
   const router = useRouter()
   const pathname = usePathname()
-  const t = useTranslations('header')
-  const tc = useTranslations('form')
+  const t = useTranslations()
+  // const tc = useTranslations('form')
 
   const handleLocaleChange = () =>
     router.push(
@@ -59,7 +59,7 @@ export default function Nav() {
                       <ul className="nav nav-pills" id="mainNav">
                         <li>
                           <Link className="nav-link" href="/">
-                            {t('home')}
+                            {t('header.home')}
                           </Link>
                         </li>
 
@@ -68,7 +68,7 @@ export default function Nav() {
                             className="nav-link"
                             href={`/${language}/about`}
                           >
-                            {t('about_us')}
+                            {t('header.about_us')}
                           </Link>
                         </li>
 
@@ -77,13 +77,13 @@ export default function Nav() {
                             className="nav-link"
                             href={`/${language}/vision`}
                           >
-                            {t('vision')}
+                            {t('header.vision')}
                           </Link>
                         </li>
 
                         <li>
                           <Link className="nav-link" href={`/${language}/blog`}>
-                            {t('blog')}
+                            {t('header.blog')}
                           </Link>
                         </li>
                         <Projects />
@@ -97,7 +97,7 @@ export default function Nav() {
                       type="button"
                     >
                       <span className="px-lg-4 d-block ws-nowrap">
-                        {tc('title')}
+                        {t('form.title')}
                       </span>
                     </button>
                   </Link>
@@ -138,7 +138,7 @@ export default function Nav() {
                   href="/"
                   onClick={() => setNavBar(!navbar)}
                 >
-                  {t('home')}
+                  {t('header.home')}
                 </Link>
               </li>
               <li>
@@ -147,7 +147,7 @@ export default function Nav() {
                   href={`/${language}/about`}
                   onClick={() => setNavBar(!navbar)}
                 >
-                  {t('about_us')}
+                  {t('header.about_us')}
                 </Link>
               </li>
               <li>
@@ -156,7 +156,7 @@ export default function Nav() {
                   href={`/${language}/vision`}
                   onClick={() => setNavBar(!navbar)}
                 >
-                  {t('vision')}
+                  {t('header.vision')}
                 </Link>
               </li>
               <li>
@@ -165,7 +165,7 @@ export default function Nav() {
                   href={`/${language}/blog`}
                   onClick={() => setNavBar(!navbar)}
                 >
-                  {t('blog')}
+                  {t('header.blog')}
                 </Link>
               </li>
               <li>
@@ -174,7 +174,7 @@ export default function Nav() {
                   href="#"
                   onClick={() => setNavBar(!navbar)}
                 >
-                  {t('project')}
+                  {t('header.project')}
                 </Link>
               </li>
             </ul>
