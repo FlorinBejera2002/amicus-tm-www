@@ -137,6 +137,7 @@
     "applicant_person": "Who is making the request?",
     "cancel": "CANCEL",
     "details": "details",
+    "checkbox_text": "By checking the box, you consent to the processing of your personal data for the purpose of receiving periodic communications from us.",
     "email": "email",
     "failed_submission": "Failed to send evangelism request! Please contact us via email.",
     "invalid_email": "Email not valid",

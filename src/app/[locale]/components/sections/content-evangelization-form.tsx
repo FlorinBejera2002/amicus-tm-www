@@ -124,7 +124,7 @@ const ContentEvangelizationForm = () => {
                   type="checkbox"
                 />
                 <label className="text-sm" htmlFor="consent">
-                  {t('text')}
+                  {t('checkbox_text')}
                 </label>
               </div>
               <div className="flex justify-center items-center">
