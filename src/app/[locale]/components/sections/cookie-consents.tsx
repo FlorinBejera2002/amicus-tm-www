@@ -10,18 +10,18 @@ export default function CookieConsents() {
 
   return (
     <CookieConsent
-      buttonClasses="items-center bg-[#e3ae04] rounded-md text-black flex size-9 font-bold justify-center py-4 px-8"
+      buttonClasses="!items-center !bg-[#e3ae04] !rounded-md !text-black !flex !size-9 !font-bold !justify-center py-4 !px-8 !w-fit"
       buttonText={t('agree')}
+      containerClasses="!bg-[#101119] !p-4"
       expires={150}
       location="bottom"
-      style={{ background: '#101119', padding: '20px' }}
     >
       {t('explanation')}
       <Link
         className="text-decoration-none font-weight-semibold font-poppins"
         href="mailto:info@ariseforchrist.com"
       >
-        info@ariseforchrist.com
+        info@ariseforchrist.com.
       </Link>
     </CookieConsent>
   )
