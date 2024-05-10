@@ -136,8 +136,8 @@
     "age": "vârstă",
     "applicant_person": "Cine face cererea?",
     "cancel": "RENUNȚĂ",
-    "details": "detalii",
     "checkbox_text": "Prin bifarea casutei îți dai acordul pentru prelucrarea datelor tale personale în scopul primirii comunicărilor periodice din partea noastră.",
+    "details": "detalii",
     "email": "email",
     "failed_submission": "Nu s-a reușit trimiterea datelor de evanghelizare! Vă rugăm contactați-ne prin email.",
     "invalid_email": "Email-ul este invalid",
@@ -170,6 +170,15 @@
     "question2": "Ai nevoie de sprijin în rugăciune?",
     "question3": "Vrei să încurajezi pe cineva?",
     "title-hero": "Speranță"
+  },
+  "podcast": {
+    "bottom-paragraf": "Toate episoadele Podcastului nostru le puteți găsi și pe",
+    "bottom-socials": "Apple Podcast, Spotify, sau Google Podcasts.",
+    "bottom-subtitle": "ASCULTĂ PE SPOTIFY",
+    "bottom-title": "Urmărește ultimul episod al Podcastului nostru!",
+    "hero-paragraf": "Acesta este un Podcast Arise for Christ. Un serial care își propune să evidențieze pe baza unor dialoguri, subiecte importante pentru biserica Lui Hristos din secolul 21.",
+    "subscribe": "ABONEAZĂ-TE!",
+    "text-episode": "Avem o serie de 88 episoade pe diferite subiecte, cum ar fi slujirea, consilierea creștină, închinare prin muzică, dependințe dar și altele."
   },
   "section": {
     "about_us": "DESPRE NOI",
