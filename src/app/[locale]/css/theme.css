@@ -1600,7 +1600,11 @@ html.sticky-header-active #header.header-bottom-slider .header-body {
 html #header.header-transparent {
   min-height: 0 !important;
   width: 100%;
-  position: absolute;
+  position: fixed;
+}
+.blur-backdrop-filter {
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px) !important;
 }
 
 html #header.header-transparent .header-body:not(.header-border-bottom) {

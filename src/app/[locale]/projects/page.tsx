@@ -1,4 +1,5 @@
 'use client'
+import { FaChevronDown } from 'react-icons/fa'
 import { useTranslations } from 'next-intl'
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
@@ -12,6 +13,7 @@ export default function Projects() {
     <li className="dropdown">
       <Link className="dropdown-item dropdown-toggle" href="#">
         {t('project')}
+        <FaChevronDown className="pl-1.5" />
       </Link>
       <ul className="dropdown-menu">
         <li className="dropdown-submenu">

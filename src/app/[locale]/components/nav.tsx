@@ -3,6 +3,7 @@ import { useState } from 'react'
 
 import Projects from '../projects/page'
 
+import { FaChevronDown } from 'react-icons/fa'
 import { FaBars } from 'react-icons/fa'
 import { useTranslations } from 'next-intl'
 import { usePathname, useRouter } from 'next/navigation'
@@ -28,7 +29,10 @@ export default function Nav() {
   const language = pathname.split('/')[1]
 
   return (
-    <header className="header-transparent" id="header">
+    <header
+      className="header-transparent bg-gray-950 shadow-sm bg-opacity-40 bg-clip-padding blur-backdrop-filter"
+      id="header"
+    >
       <div className="header-body border-top-0 bg-quaternary box-shadow-none h-auto">
         <div className="header-container container p-static">
           <div className="header-row py-3">
@@ -45,6 +49,12 @@ export default function Nav() {
                     />
                   </Link>
                 </div>
+                <button
+                  className="ml-10 cursor-pointer duration-500 hover:text-[#e3ae04] text-white "
+                  onClick={handleLocaleChange}
+                >
+                  en/ro
+                </button>
               </div>
             </div>
             <div className="header-column justify-content-end">
@@ -114,12 +124,6 @@ export default function Nav() {
                       <FaBars />
                     </i>
                   </button>
-                  <button
-                    className="ml-3 cursor-pointer duration-500 hover:text-[#e3ae04] text-white "
-                    onClick={handleLocaleChange}
-                  >
-                    en/ro
-                  </button>
                 </div>
               </div>
             </div>
@@ -177,6 +181,7 @@ export default function Nav() {
                   onClick={() => setNavBar(!navbar)}
                 >
                   {t('header.project')}
+                  <FaChevronDown className="absolute top-0 right-10 w-30 h-full flex items-center justify-center text-xs" />
                 </Link>
               </li>
             </ul>
