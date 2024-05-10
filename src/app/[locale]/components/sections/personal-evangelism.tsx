@@ -104,80 +104,80 @@ export default function PersonalEvangelism() {
               >
                 <section className="toggle">
                   <details className=" border-b  p-3 rounded-lg transform-gpu delay-75 duration-100 ease-in-out ">
-                    <summary className="leading-5 text-slate-900  font-semibold select-none">
+                    <summary className="leading-5 text-slate-900 dark:text-black font-semibold select-none">
                       {t('step1_title')}
                     </summary>
-                    <div className="mt-3 text-sm leading-6 text-slate-600 ">
+                    <div className="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-400">
                       <p>{t('step1_description')}</p>
                     </div>
                   </details>
                 </section>
                 <section className="toggle">
                   <details className=" border-b  p-3 rounded-lg transform-gpu delay-75 duration-100 ease-in-out ">
-                    <summary className="leading-6 text-slate-900  font-semibold select-none">
+                    <summary className="leading-6 text-slate-900 dark:text-black font-semibold select-none">
                       {t('step2_title')}
                     </summary>
-                    <div className="mt-3 text-sm leading-6 text-slate-600 ">
+                    <div className="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-400">
                       <p>{t('step2_description')}</p>
                     </div>
                   </details>
                 </section>
                 <section className="toggle">
                   <details className=" border-b  p-3 rounded-lg transform-gpu delay-75 duration-100 ease-in-out ">
-                    <summary className="leading-6 text-slate-900  font-semibold select-none">
+                    <summary className="leading-6 text-slate-900 dark:text-black font-semibold select-none">
                       {t('step3_title')}
                     </summary>
-                    <div className="mt-3 text-sm leading-6 text-slate-600 ">
+                    <div className="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-400">
                       <p>{t('step3_description')}</p>
                     </div>
                   </details>
                 </section>
                 <section className="toggle">
                   <details className=" border-b  p-3 rounded-lg transform-gpu delay-75 duration-100 ease-in-out ">
-                    <summary className="leading-6 text-slate-900  font-semibold select-none">
+                    <summary className="leading-6 text-slate-900 dark:text-black font-semibold select-none">
                       {t('step4_title')}
                     </summary>
-                    <div className="mt-3 text-sm leading-6 text-slate-600 ">
+                    <div className="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-400">
                       <p>{t('step4_description')}</p>
                     </div>
                   </details>
                 </section>
                 <section className="toggle">
                   <details className=" border-b  p-3 rounded-lg transform-gpu delay-75 duration-100 ease-in-out ">
-                    <summary className="leading-6 text-slate-900  font-semibold select-none">
+                    <summary className="leading-6 text-slate-900 dark:text-black font-semibold select-none">
                       {t('step5_title')}
                     </summary>
-                    <div className="mt-3 text-sm leading-6 text-slate-600 ">
+                    <div className="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-400">
                       <p>{t('step5_description')}</p>
                     </div>
                   </details>
                 </section>
                 <section className="toggle">
                   <details className=" border-b  p-3 rounded-lg transform-gpu delay-75 duration-100 ease-in-out ">
-                    <summary className="leading-6 text-slate-900  font-semibold select-none">
+                    <summary className="leading-6 text-slate-900 dark:text-black font-semibold select-none">
                       {t('step6_title')}
                     </summary>
-                    <div className="mt-3 text-sm leading-6 text-slate-600 ">
+                    <div className="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-400">
                       <p>{t('step6_description')}</p>
                     </div>
                   </details>
                 </section>
                 <section className="toggle">
                   <details className=" border-b  p-3 rounded-lg transform-gpu delay-75 duration-100 ease-in-out ">
-                    <summary className="leading-6 text-slate-900  font-semibold select-none">
+                    <summary className="leading-6 text-slate-900 dark:text-black font-semibold select-none">
                       {t('step7_title')}
                     </summary>
-                    <div className="mt-3 text-sm leading-6 text-slate-600 ">
+                    <div className="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-400">
                       <p>{t('step7_description')}</p>
                     </div>
                   </details>
                 </section>
                 <section className="toggle">
                   <details className=" border-b  p-3 rounded-lg transform-gpu delay-75 duration-100 ease-in-out ">
-                    <summary className="leading-6 text-slate-900  font-semibold select-none">
+                    <summary className="leading-6 text-slate-900 dark:text-black font-semibold select-none">
                       {t('step8_title')}
                     </summary>
-                    <div className="mt-3 text-sm leading-6 text-slate-600 ">
+                    <div className="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-400">
                       <p>{t('step8_description')}</p>
                     </div>
                   </details>

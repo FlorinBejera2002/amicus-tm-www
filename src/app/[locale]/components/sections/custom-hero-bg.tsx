@@ -1,6 +1,6 @@
 const CustomHeroBg = () => {
   return (
-    <div className="custom-hero-bg loaded">
+    <div className="custom-hero-bg loaded z-[0]">
       <svg preserveAspectRatio="xMidYMid slice" viewBox="0 0 100 100">
         <defs>
           <radialGradient

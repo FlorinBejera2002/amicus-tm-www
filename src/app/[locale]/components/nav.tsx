@@ -1,8 +1,10 @@
 'use client'
 import { useState } from 'react'
 
+// import Portfolio from '../portfolio/page'
+// import Elements from '../elements/page'
+
 import Projects from '../projects/page'
-import Elements from '../elements/page'
 
 import { useTranslations } from 'next-intl'
 import { usePathname, useRouter } from 'next/navigation'
@@ -88,7 +90,7 @@ export default function Nav() {
                           </Link>
                         </li>
                         <Projects />
-                        <Elements />
+                        {/* <Elements /> */}
                       </ul>
                     </nav>
                   </div>
@@ -135,11 +137,7 @@ export default function Nav() {
           <nav className="collapse show">
             <ul className="nav nav-pills">
               <li>
-                <Link
-                  className="nav-link "
-                  href="/"
-                  // onClick={() => setNavBar(!navbar)}
-                >
+                <Link className="nav-link " href="/">
                   Home
                 </Link>
               </li>
@@ -153,33 +151,21 @@ export default function Nav() {
                 </Link>
               </li>
               <li>
-                <Link
-                  className="nav-link"
-                  href="/services"
-                  // onClick={() => setNavBar(!navbar)}
-                >
+                <Link className="nav-link" href="/services">
                   Services
                 </Link>
               </li>
               <li>
-                <Link
-                  className="nav-link"
-                  href="/blog"
-                  // onClick={() => setNavBar(!navbar)}
-                >
+                <Link className="nav-link" href="/blog">
                   Blog
                 </Link>
               </li>
               <li>
-                <Link
-                  className="nav-link"
-                  href="/portfolio"
-                  // onClick={() => setNavBar(!navbar)}
-                >
+                <Link className="nav-link" href="/portfolio">
                   Portfolio
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link
                   className="nav-link"
                   href="/elements"
@@ -187,7 +173,7 @@ export default function Nav() {
                 >
                   Elements
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </nav>
         </div>

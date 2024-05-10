@@ -2,17 +2,22 @@
 import MailchimpSubscribe from 'react-mailchimp-subscribe'
 import React, { useState } from 'react'
 
-import { stringify } from 'querystring'
 import { useTranslations } from 'next-intl'
 import { useRouter } from 'next/navigation'
+import { cn } from '@/utils'
 const MAILCHIMP_URL =
   'https://app.us22.list-manage.com/subscribe/post?u=41ac89857e074d884af936f25&amp;id=cc995c9835&amp;f_id=00c8c4e1f0'
+
+type SubmitMessage = {
+  content: string
+  type: 'error' | 'success'
+}
 
 const ContentEvangelizationForm = () => {
   const t = useTranslations('form')
   const [isChecked, setIsChecked] = useState(false)
   const router = useRouter()
-  const [successMessage, setSuccessMessage] = useState(stringify)
+  const [message, setMessage] = useState<SubmitMessage | undefined>(undefined)
 
   const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setIsChecked(event.target.checked)
@@ -28,18 +33,19 @@ const ContentEvangelizationForm = () => {
           try {
             if (isChecked) {
               await subscribe({ EMAIL: email })
-              setSuccessMessage(t('successful_submission'))
+              setMessage({
+                content: t('successful_submission'),
+                type: 'success'
+              })
               setTimeout(() => {
                 router.push('/')
               }, 3000)
-            } else {
-              router.push('/')
             }
           } catch (error) {
-            console.error(
-              'A apărut o eroare la trimiterea formularului:',
-              error
-            )
+            setMessage({
+              content: 'A apărut o eroare la trimiterea formularului: ' + error,
+              type: 'error'
+            })
           }
         }
 
@@ -127,20 +133,29 @@ const ContentEvangelizationForm = () => {
                   {t('checkbox_text')}
                 </label>
               </div>
+
+              {message?.content && (
+                <div
+                  className={cn(
+                    message.type === 'success'
+                      ? 'text-green-600'
+                      : 'text-red-500'
+                  )}
+                >
+                  {message.content}
+                </div>
+              )}
+
               <div className="flex justify-center items-center">
                 <button
-                  className="bg-[#e3ae04] rounded-md px-20 hover:shadow-2xl hover:-translate-2 hover:scale-105 hover:bg-[#e3ae04] duration-700 text-black font-bold py-1 size-9 flex justify-center items-center"
+                  className="bg-[#e3ae04] rounded-md px-20 hover:shadow-2xl hover:-translate-2 hover:scale-105 hover:bg-[#e3ae04] duration-700 text-black font-bold py-1 size-9 flex justify-center items-center disabled:opacity-50 disabled:pointer-events-none"
+                  disabled={!isChecked}
                   type="submit"
                 >
                   {t('send')}
                 </button>
               </div>
             </form>
-            {successMessage && (
-              <div className="success-message p-5 absolute flex justify-center items-center text-green-900 h-24 rounded-xl bottom-5 right-5">
-                {successMessage}
-              </div>
-            )}
           </div>
         )
       }}
