@@ -15,6 +15,7 @@ import horizontalLogo from '../../../../public/logo_horizontal_white.png'
 
 export default function Nav() {
   const [navbar, setNavBar] = useState(false)
+  const [SubMenu, setSubMenu] = useState(false)
   const router = useRouter()
   const pathname = usePathname()
   const t = useTranslations()
@@ -183,12 +184,33 @@ export default function Nav() {
               <li>
                 <Link
                   className="nav-link"
-                  href="#"
-                  onClick={() => setNavBar(!navbar)}
+                  href=""
+                  onClick={() => setSubMenu(!SubMenu)}
                 >
                   {t('header.project')}
-                  <FaChevronDown className="absolute top-0 right-10 w-30 h-full flex items-center justify-center text-xs" />
+                  <FaChevronDown className="absolute top-0 right-10 w-30 h-10 flex items-center justify-center text-xs" />
                 </Link>
+                {SubMenu && (
+                  <ul className="top-full left-0 ">
+                    <li>
+                      <Link
+                        className="dropdown-item"
+                        href={`/${language}/projects/time-is-now`}
+                        onClick={() => {
+                          setNavBar(!navbar)
+                          setSubMenu(!SubMenu)
+                        }}
+                      >
+                        {t('header.project_')}
+                      </Link>
+                    </li>
+                    <li>
+                      <Link className="dropdown-item" href="#">
+                        Sublink 2
+                      </Link>
+                    </li>
+                  </ul>
+                )}
               </li>
             </ul>
           </nav>
