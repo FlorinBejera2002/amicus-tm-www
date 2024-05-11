@@ -9,6 +9,7 @@ import { useTranslations } from 'next-intl'
 import { usePathname, useRouter } from 'next/navigation'
 import Link from 'next/link'
 import Image from 'next/image'
+import { useWindowScroll } from '@uidotdev/usehooks'
 
 import horizontalLogo from '../../../../public/logo_horizontal_white.png'
 
@@ -17,6 +18,9 @@ export default function Nav() {
   const router = useRouter()
   const pathname = usePathname()
   const t = useTranslations()
+  const [{ x = 0, y = 0 }, scrollTo] = useWindowScroll()
+
+  console.log(y)
   // const tc = useTranslations('form')
 
   const handleLocaleChange = () =>
@@ -30,10 +34,14 @@ export default function Nav() {
 
   return (
     <header
-      className="header-transparent bg-gray-950 shadow-sm bg-opacity-40 bg-clip-padding blur-backdrop-filter"
+      className={`header-transparent  ${
+        y >= 50
+          ? 'bg-gray-950 shadow-sm bg-opacity-40 bg-clip-padding blur-backdrop-filter'
+          : ''
+      }`}
       id="header"
     >
-      <div className="header-body border-top-0 bg-quaternary box-shadow-none h-auto">
+      <div className="header-body border-top-0 bg-quaternary box-shadow-none h-auto ">
         <div className="header-container container p-static">
           <div className="header-row py-3">
             <div className="header-column">
