@@ -18,11 +18,9 @@ export default function Nav() {
   const router = useRouter()
   const pathname = usePathname()
   const t = useTranslations()
-  const [{ x = 0, y = 0 }, scrollTo] = useWindowScroll()
-
-  console.log(y)
-  // const tc = useTranslations('form')
-
+  // const [{ y = 0 }] = useWindowScroll()
+  const windowScroll = useWindowScroll()
+  const y = windowScroll ? windowScroll[0]?.y ?? 0 : 0
   const handleLocaleChange = () =>
     router.push(
       pathname.includes('/en')
