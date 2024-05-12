@@ -57,7 +57,7 @@ export default function Nav() {
                   </Link>
                 </div>
                 <button
-                  className="ml-10 cursor-pointer duration-500 hover:text-[#e3ae04] text-white "
+                  className="ml-10 cursor-pointer duration-500 hover:text-[#e3ae04] text-white buttonTranslate"
                   onClick={handleLocaleChange}
                 >
                   en/ro

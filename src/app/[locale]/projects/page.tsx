@@ -11,7 +11,7 @@ export default function Projects() {
 
   return (
     <li className="dropdown">
-      <Link className="dropdown-item dropdown-toggle" href="#">
+      <Link className="nav-link" href="#">
         {t('project')}
         <FaChevronDown className="pl-1.5" />
       </Link>
