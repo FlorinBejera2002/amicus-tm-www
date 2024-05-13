@@ -10,7 +10,7 @@ type Props = {
 export const StepEvangelization = (props: Props) => {
   return (
     <div
-      className={`flex justify-start flex-wrap items-center gap-3 ${props.styles}`}
+      className={`flex justify-center md:justify-start flex-col md:flex-row flex-wrap items-center gap-1 md:gap-2 xl:gap-4 ${props.styles}`}
     >
       {props.numberImage}
       <div>

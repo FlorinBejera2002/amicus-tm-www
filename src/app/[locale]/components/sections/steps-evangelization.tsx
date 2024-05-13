@@ -10,8 +10,8 @@ import logoArise from '../../../../../public/logo_horizontal_black.png'
 export default function StepsEvangelization() {
   return (
     <section className="" id="concept">
-      <div className="container d-flex justify-center gap-16  bg-color-light p-relative z-index-2 pb-10">
-        <div className="flex items-center">
+      <div className="container grid grid-cols-1 md:grid-cols-2 gap-16 bg-color-light p-relative z-index-2 pb-10">
+        <div className="hidden md:flex items-center justify-center">
           <Image
             alt="Stps for Evangelisation"
             className=""
@@ -20,35 +20,29 @@ export default function StepsEvangelization() {
             width={400}
           />
         </div>
-        <div className="d-flex flex-col gap-20">
-          <h1 className="text-5xl font-poppins text-center ">
+        <div className="flex flex-col gap-8 md:gap-12 xl:gap-20 px-2 md:px-4">
+          <h1 className="text-3xl md:text-4xl xl:text-5xl font-poppins text-center ">
             <b>Pasii de evanghelizare</b>
           </h1>
-
           <StepEvangelization
             description="Intră pe site-ul nostru și caută butonul cu cererea de
                 evanghelizare."
             header="Scanează codul QR"
             numberImage={<PiNumberCircleOneFill className="w-24 h-24" />}
           />
-          <div className="flex  justify-end flex-wrap items-center gap-3">
-            <PiNumberCircleTwoFill className="w-24 h-24" />
-            <div>
-              <b>Completează o cerere de evanghelizare</b>
-              <p>
-                Dorești mântuirea cuiva drag? <br /> Vrei să încurajezi pe
-                cineva?
-                <br />
-                Completează o cerere de evanghelizare!
-              </p>
-            </div>
-          </div>
           <StepEvangelization
-            description=" Noi vom prelua această cerere pentru a face un plan de
+            description=" Completeaza o cerere de evanghelizare!
+            "
+            header="Completează cererea"
+            numberImage={<PiNumberCircleTwoFill className="w-24 h-24" />}
+            styles="xl:justify-end"
+          />
+          <StepEvangelization
+            description=" Noi vom prelua cerere pentru un plan de
             evanghelizare!"
             header="Noi îl vom contacta"
             numberImage={<PiNumberCircleThreeFill className="w-24 h-24" />}
-            styles="justify-center"
+            styles="xl:justify-center"
           />
         </div>
       </div>
