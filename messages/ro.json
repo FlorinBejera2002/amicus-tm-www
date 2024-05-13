@@ -115,6 +115,10 @@
     "tooltip_costs_show_editing": "Editarea video",
     "tooltip_costs_travel": "Transport"
   },
+  "language": {
+    "lg": "EN",
+    "lg_1": "RO"
+  },
   "button": {
     "agree": "Sunt de acord",
     "contact_us": "Contactează-ne",

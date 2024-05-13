@@ -1602,10 +1602,6 @@ html #header.header-transparent {
   width: 100%;
   position: fixed;
 }
-.blur-backdrop-filter {
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px) !important;
-}
 
 html #header.header-transparent .header-body:not(.header-border-bottom) {
   border-bottom: 0;

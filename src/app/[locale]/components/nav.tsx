@@ -1,12 +1,13 @@
 'use client'
 import { useState } from 'react'
 
+import App from './sections/language-button'
 import Projects from '../projects/page'
 
 import { FaChevronDown } from 'react-icons/fa'
 import { FaBars } from 'react-icons/fa'
 import { useTranslations } from 'next-intl'
-import { usePathname, useRouter } from 'next/navigation'
+import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useWindowScroll } from '@uidotdev/usehooks'
@@ -16,26 +17,17 @@ import horizontalLogo from '../../../../public/logo_horizontal_white.png'
 export default function Nav() {
   const [navbar, setNavBar] = useState(false)
   const [SubMenu, setSubMenu] = useState(false)
-  const router = useRouter()
   const pathname = usePathname()
   const t = useTranslations()
-  // const [{ y = 0 }] = useWindowScroll()
-  const windowScroll = useWindowScroll()
-  const y = windowScroll ? windowScroll[0]?.y ?? 0 : 0
-  const handleLocaleChange = () =>
-    router.push(
-      pathname.includes('/en')
-        ? pathname.replace('/en', '/ro')
-        : pathname.replace('/ro', '/en')
-    )
+  const [{ y = 0 }] = useWindowScroll()
 
   const language = pathname.split('/')[1]
 
   return (
     <header
       className={`header-transparent  ${
-        y >= 50
-          ? 'bg-gray-950 shadow-sm bg-opacity-40 bg-clip-padding blur-backdrop-filter'
+        y !== null && y >= 50
+          ? 'bg-gray-950 shadow-sm bg-opacity-40 bg-clip-padding backdrop-blur-sm'
           : ''
       }`}
       id="header"
@@ -56,12 +48,7 @@ export default function Nav() {
                     />
                   </Link>
                 </div>
-                <button
-                  className="ml-10 cursor-pointer duration-500 hover:text-[#e3ae04] text-white buttonTranslate"
-                  onClick={handleLocaleChange}
-                >
-                  en/ro
-                </button>
+                <App />
               </div>
             </div>
             <div className="header-column justify-content-end">
