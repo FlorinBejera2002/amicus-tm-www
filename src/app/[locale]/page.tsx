@@ -40,7 +40,7 @@ export default function Home() {
                 {t('question3')}
               </h3>
 
-              <div className="flex gap-4 flex-wrap text-xl">
+              <div className="flex justify-center items-center lg:justify-start gap-4 flex-wrap text-xl">
                 <Link
                   className="text-decoration-none pointer"
                   href="https://www.facebook.com/AriseForChristRomania/"

@@ -1,14 +1,14 @@
 export default function YoutubeMiniFeed() {
   return (
-    <div className="custom-grid-1">
+    <div className="lg:custom-grid-1 lg:grid grid-cols-1">
       <div
-        className="flex gap-2.5  bg-color-light relative pt-2 pb-5 z-index-3 container flex-wrap justify-center items-center "
+        className="grid gap-1 lg:gap-2 md:grid-cols-2 lg:grid-cols-4 bg-transparent relative pt-1 lg:pt-2 xl:pt-3 pb-5 z-index-3 md:px-10 md:top-[-50px]"
         id="numbers"
       >
         <iframe
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen={true}
-          className="col-6 col-lg-3"
+          className="w-full"
           frameBorder="0"
           src="https://www.youtube.com/embed?listType=playlist&list=UUQy-aDJ2zjmVD7Yn2XusrsA&controls=0&modestbranding=1&index=1"
           title="YouTube Playlist"
@@ -17,7 +17,7 @@ export default function YoutubeMiniFeed() {
         <iframe
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen={true}
-          className="col-6 col-lg-3"
+          className="w-full hidden md:flex"
           frameBorder="0"
           src="https://www.youtube.com/embed?listType=playlist&list=UUQy-aDJ2zjmVD7Yn2XusrsA&controls=0&modestbranding=1&index=2"
           title="YouTube Playlist"
@@ -25,7 +25,7 @@ export default function YoutubeMiniFeed() {
         <iframe
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen={true}
-          className="col-6 col-lg-3"
+          className="w-full hidden md:flex"
           frameBorder="0"
           src="https://www.youtube.com/embed?listType=playlist&list=UUQy-aDJ2zjmVD7Yn2XusrsA&controls=0&modestbranding=1&index=3"
           title="YouTube Playlist"
@@ -33,7 +33,7 @@ export default function YoutubeMiniFeed() {
         <iframe
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen={true}
-          className="col-6 col-lg-3"
+          className="w-full hidden md:flex"
           frameBorder="0"
           src="https://www.youtube.com/embed?listType=playlist&list=UUQy-aDJ2zjmVD7Yn2XusrsA&controls=0&modestbranding=1&index=4"
           title="YouTube Playlist"

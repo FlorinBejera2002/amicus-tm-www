@@ -14,15 +14,6 @@ const config: Config = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))'
       }
-    },
-    screens: {
-      lg: { max: '1023px' },
-
-      md: { max: '767px' },
-
-      sm: { max: '639px' },
-
-      xl: { max: '1279px' }
     }
   }
 }
