@@ -1,5 +1,3 @@
-import React from 'react'
-
 import { useTranslations } from 'next-intl'
 import Link from 'next/link'
 import Image from 'next/image'
@@ -18,86 +16,100 @@ export default function Team() {
     <div className="bg-color-dark p-relative z-index-1 custom-section-1 bg-position-center bg-size-cover lazyload">
       <div className="container py-4">
         <div className="row align-items-center ">
-          <b className="items-center flex justify-center text-5xl text-gray-600 font-bold py-6">
+          <b className="text-3xl text-gray-50 font-bold py-6 text-center">
             {t('title-a4c')}
           </b>
 
-          <div className="py-5 flex gap-4 justify-center">
-            <div className=" relative w-52 h-80 bg-gradient-to-t from-gray-800 to-transparent rounded-xl gap-1 flex flex-col justify-center  items-center   hover:scale-110 hover:bg-indigo-900 duration-300  ">
+          <div className="py-5 grid gap-2 grid-cols-2 md:grid-cols-3 xl:grid-cols-6">
+            <div className="mt-3 bg-gradient-to-t from-gray-800 to-transparent rounded-xl gap-1 flex flex-col justify-center  items-center   hover:scale-110 hover:bg-indigo-900 duration-300  ">
               <Image
                 alt=""
-                className="border-b-2 pb-2 border-gray-600"
+                className="border-b border-gray-600 pb-3"
                 height={150}
                 src={Chris}
                 width={150}
               />
-              <b className="text-gray-400">Christian Potra</b>
-              <p className="text-gray-600">{t('christian-potra')}</p>
+              <div className="flex flex-col justify-center items-center h-24 px-3">
+                <b className="text-gray-50">Christian Potra</b>
+                <p className="text-gray-500 text-sm">{t('christian-potra')}</p>
+              </div>
             </div>
-            <div className="w-52 h-80 bg-gradient-to-t from-gray-800 to-transparent rounded-xl gap-1 flex flex-col justify-center  items-center  hover:-translate-y-1 hover:scale-110 hover:bg-indigo-900 duration-300 ">
+            <div className="mt-3 bg-gradient-to-t from-gray-800 to-transparent rounded-xl gap-1 flex flex-col justify-center  items-center  hover:-translate-y-1 hover:scale-110 hover:bg-indigo-900 duration-300 ">
               <Link href="https://www.youtube.com/watch?v=XhQIeYzccUI">
                 <Image
                   alt=""
-                  className="border-b-2 pb-2 border-gray-600"
+                  className="border-b border-gray-600 pb-3"
                   height={150}
                   src={Dana}
                   width={150}
                 />
               </Link>
-              <b className="text-gray-400">Dana Potra</b>
-              <p className="text-gray-600">{t('dana-potra')}</p>
+              <div className="flex flex-col justify-center items-center h-24 px-3 ">
+                <b className="text-gray-50">Dana Potra</b>
+                <p className="text-gray-500 text-sm">{t('dana-potra')}</p>
+              </div>
             </div>
-            <div className="w-52 h-80 bg-gradient-to-t from-gray-800 to-transparent rounded-xl gap-1 flex flex-col justify-center  items-center  hover:-translate-y-1 hover:scale-110 hover:bg-indigo-900 duration-300 ">
+            <div className="mt-3 bg-gradient-to-t from-gray-800 to-transparent rounded-xl gap-1 flex flex-col justify-center  items-center  hover:-translate-y-1 hover:scale-110 hover:bg-indigo-900 duration-300 ">
               <Link href="https://www.youtube.com/watch?v=XhQIeYzccUI">
                 <Image
                   alt=""
-                  className="border-b-2 pb-2 border-gray-600"
+                  className="border-b border-gray-600 pb-3"
                   height={150}
                   src={AvramSabou}
                   width={150}
                 />
               </Link>
-              <b className="text-gray-400">Avram Sabou</b>
-              <p className="text-gray-600">{t('avram-sabou')}</p>
+              <div className="flex flex-col justify-center items-center h-24 px-3 xl:pt-3">
+                <b className="text-gray-50">Avram Sabou</b>
+                <p className="text-gray-500 text-sm text-center">
+                  {t('avram-sabou')}
+                </p>
+              </div>
             </div>
-            <div className="w-52 h-80 bg-gradient-to-t from-gray-800 to-transparent rounded-xl gap-1 flex flex-col justify-center  items-center  hover:-translate-y-1 hover:scale-110 hover:bg-indigo-900 duration-300 ">
+            <div className="mt-3 bg-gradient-to-t from-gray-800 to-transparent rounded-xl gap-1 flex flex-col justify-center  items-center  hover:-translate-y-1 hover:scale-110 hover:bg-indigo-900 duration-300 ">
               <Link href="https://www.youtube.com/watch?v=XhQIeYzccUI">
                 <Image
                   alt=""
-                  className="border-b-2 pb-2 border-gray-600"
+                  className="border-b border-gray-600 pb-3"
                   height={150}
                   src={AdrianCovaci}
                   width={150}
                 />
               </Link>
-              <b className="text-gray-400">Adi Kovaci</b>
-              <p className="text-gray-600">{t('adi-kovaci')}</p>
+              <div className="flex flex-col justify-center items-center h-24 px-3 ">
+                <b className="text-gray-50">Adi Kovaci</b>
+                <p className="text-gray-500 text-sm">{t('adi-kovaci')}</p>
+              </div>
             </div>
-            <div className="w-52 h-80 bg-gradient-to-t from-gray-800 to-transparent rounded-xl gap-1 flex flex-col justify-center  items-center  hover:-translate-y-1 hover:scale-110 hover:bg-indigo-900 duration-300 ">
+            <div className="mt-3 bg-gradient-to-t from-gray-800 to-transparent rounded-xl gap-1 flex flex-col justify-center  items-center  hover:-translate-y-1 hover:scale-110 hover:bg-indigo-900 duration-300 ">
               <Link href="https://www.youtube.com/watch?v=XhQIeYzccUI">
                 <Image
                   alt=""
-                  className="border-b-2 pb-2 border-gray-600"
+                  className="border-b border-gray-600 pb-3"
                   height={150}
                   src={Andrei}
                   width={150}
                 />
               </Link>
-              <b className="text-gray-400">Andrei Birtea</b>
-              <p className="text-gray-600">{t('andrei-birtea')}</p>
+              <div className="flex flex-col justify-center items-center h-24 px-3 ">
+                <b className="text-gray-50">Andrei Birtea</b>
+                <p className="text-gray-500 text-sm ">{t('andrei-birtea')}</p>
+              </div>
             </div>
-            <div className="w-52 h-80 bg-gradient-to-t from-gray-800 to-transparent rounded-xl gap-1 flex flex-col justify-center  items-center  hover:-translate-y-1 hover:scale-110 hover:bg-indigo-900 duration-300 ">
+            <div className="mt-3 bg-gradient-to-t from-gray-800 to-transparent rounded-xl gap-1 flex flex-col justify-center  items-center  hover:-translate-y-1 hover:scale-110 hover:bg-indigo-900 duration-300 ">
               <Link href="https://www.youtube.com/watch?v=XhQIeYzccUI">
                 <Image
                   alt=""
-                  className="border-b-2 pb-2 border-gray-600"
+                  className="border-b border-gray-600 pb-3"
                   height={150}
                   src={Simona}
                   width={150}
                 />
               </Link>
-              <b className="text-gray-400">Simona Birtea </b>
-              <p className="text-gray-600">{t('simona-birtea')}</p>
+              <div className="flex flex-col justify-center items-center h-24 px-3">
+                <b className="text-gray-50">Simona Birtea </b>
+                <p className="text-gray-500 text-sm">{t('simona-birtea')}</p>
+              </div>
             </div>
           </div>
         </div>
