@@ -136,8 +136,8 @@
     "age": "age",
     "applicant_person": "Who is making the request?",
     "cancel": "CANCEL",
-    "details": "details",
     "checkbox_text": "By checking the box, you consent to the processing of your personal data for the purpose of receiving periodic communications from us.",
+    "details": "details",
     "email": "email",
     "failed_submission": "Failed to send evangelism request! Please contact us via email.",
     "invalid_email": "Email not valid",
@@ -170,6 +170,15 @@
     "question2": "Do you need support in prayer?",
     "question3": "Do you want to encourage someone?",
     "title-hero": "The Hope"
+  },
+  "podcast": {
+    "bottom-paragraf": "You can also find all the episodes of our Podcast on",
+    "bottom-socials": "Apple Podcast, Spotify, or Google Podcasts.",
+    "bottom-subtitle": "LISTEN ON SPOTIFY",
+    "bottom-title": "Watch the last episode of our Podcast!",
+    "hero-paragraf": "This is an Arise for Christ Podcast. A series that aims to highlight, based on dialogues, important topics for the church of Christ in the 21st century.",
+    "subscribe": "SUBSCRIBE!",
+    "text-episode": "We have a series of 88 episodes on various topics such as ministry, Christian counseling, worship through music, addictions and more."
   },
   "section": {
     "about_us": "ABOUT US",
