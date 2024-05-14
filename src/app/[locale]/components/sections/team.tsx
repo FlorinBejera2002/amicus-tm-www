@@ -1,6 +1,7 @@
 import { useTranslations } from 'next-intl'
 import Link from 'next/link'
 import Image from 'next/image'
+import { cn } from '@/utils'
 
 import Simona from '../../../../../public/img/team/simo.png'
 import Dana from '../../../../../public/img/team/dana potra.png'
@@ -11,6 +12,22 @@ import AvramSabou from '../../../../../public/img/team/Avram.png'
 
 export default function Team() {
   const t = useTranslations('team')
+  const combinedStyles = cn(
+    'mt-3',
+    'bg-gradient-to-t',
+    'from-gray-800',
+    'to-transparent ',
+    'rounded-xl',
+    ' gap-1',
+    'flex',
+    'flex-col',
+    'justify-center ',
+    'items-center ',
+    'hover:-translate-y-1',
+    'hover:scale-110 ',
+    'hover:bg-indigo-900 ',
+    'duration-300'
+  )
 
   return (
     <div className="bg-color-dark p-relative z-index-1 custom-section-1 bg-position-center bg-size-cover lazyload">
@@ -21,9 +38,9 @@ export default function Team() {
           </b>
 
           <div className="py-5 grid gap-2 grid-cols-2 md:grid-cols-3 xl:grid-cols-6">
-            <div className="mt-3 bg-gradient-to-t from-gray-800 to-transparent rounded-xl gap-1 flex flex-col justify-center  items-center   hover:scale-110 hover:bg-indigo-900 duration-300  ">
+            <div className={combinedStyles}>
               <Image
-                alt=""
+                alt="Christian Pot"
                 className="border-b border-gray-600 pb-3"
                 height={150}
                 src={Chris}
@@ -34,10 +51,10 @@ export default function Team() {
                 <p className="text-gray-500 text-sm">{t('christian-potra')}</p>
               </div>
             </div>
-            <div className="mt-3 bg-gradient-to-t from-gray-800 to-transparent rounded-xl gap-1 flex flex-col justify-center  items-center  hover:-translate-y-1 hover:scale-110 hover:bg-indigo-900 duration-300 ">
+            <div className={combinedStyles}>
               <Link href="https://www.youtube.com/watch?v=XhQIeYzccUI">
                 <Image
-                  alt=""
+                  alt="Dana Potra"
                   className="border-b border-gray-600 pb-3"
                   height={150}
                   src={Dana}
@@ -49,10 +66,10 @@ export default function Team() {
                 <p className="text-gray-500 text-sm">{t('dana-potra')}</p>
               </div>
             </div>
-            <div className="mt-3 bg-gradient-to-t from-gray-800 to-transparent rounded-xl gap-1 flex flex-col justify-center  items-center  hover:-translate-y-1 hover:scale-110 hover:bg-indigo-900 duration-300 ">
+            <div className={combinedStyles}>
               <Link href="https://www.youtube.com/watch?v=XhQIeYzccUI">
                 <Image
-                  alt=""
+                  alt="Avram Sabou"
                   className="border-b border-gray-600 pb-3"
                   height={150}
                   src={AvramSabou}
@@ -66,10 +83,10 @@ export default function Team() {
                 </p>
               </div>
             </div>
-            <div className="mt-3 bg-gradient-to-t from-gray-800 to-transparent rounded-xl gap-1 flex flex-col justify-center  items-center  hover:-translate-y-1 hover:scale-110 hover:bg-indigo-900 duration-300 ">
+            <div className={combinedStyles}>
               <Link href="https://www.youtube.com/watch?v=XhQIeYzccUI">
                 <Image
-                  alt=""
+                  alt="Adi Kovaci"
                   className="border-b border-gray-600 pb-3"
                   height={150}
                   src={AdrianCovaci}
@@ -81,10 +98,10 @@ export default function Team() {
                 <p className="text-gray-500 text-sm">{t('adi-kovaci')}</p>
               </div>
             </div>
-            <div className="mt-3 bg-gradient-to-t from-gray-800 to-transparent rounded-xl gap-1 flex flex-col justify-center  items-center  hover:-translate-y-1 hover:scale-110 hover:bg-indigo-900 duration-300 ">
+            <div className={combinedStyles}>
               <Link href="https://www.youtube.com/watch?v=XhQIeYzccUI">
                 <Image
-                  alt=""
+                  alt="Andrei Birtea"
                   className="border-b border-gray-600 pb-3"
                   height={150}
                   src={Andrei}
@@ -96,10 +113,10 @@ export default function Team() {
                 <p className="text-gray-500 text-sm ">{t('andrei-birtea')}</p>
               </div>
             </div>
-            <div className="mt-3 bg-gradient-to-t from-gray-800 to-transparent rounded-xl gap-1 flex flex-col justify-center  items-center  hover:-translate-y-1 hover:scale-110 hover:bg-indigo-900 duration-300 ">
+            <div className={combinedStyles}>
               <Link href="https://www.youtube.com/watch?v=XhQIeYzccUI">
                 <Image
-                  alt=""
+                  alt="Simona Birtea"
                   className="border-b border-gray-600 pb-3"
                   height={150}
                   src={Simona}

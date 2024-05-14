@@ -4,13 +4,26 @@ import { PiNumberCircleOneFill } from 'react-icons/pi'
 import { PiNumberCircleTwoFill } from 'react-icons/pi'
 import { PiNumberCircleThreeFill } from 'react-icons/pi'
 import Image from 'next/image'
+import { cn } from '@/utils'
 
 import logoArise from '../../../../../public/logo_horizontal_black.png'
 
 export default function StepsEvangelization() {
+  const conbinedStyles = cn(
+    'container',
+    'grid',
+    'grid-cols-1',
+    ' md:grid-cols-2',
+    'gap-16',
+    'bg-color-light',
+    'p-relative',
+    'z-index-2',
+    'pb-10'
+  )
+
   return (
     <section className="" id="concept">
-      <div className="container grid grid-cols-1 md:grid-cols-2 gap-16 bg-color-light p-relative z-index-2 pb-10">
+      <div className={conbinedStyles}>
         <div className="hidden md:flex items-center justify-center">
           <Image
             alt="Stps for Evangelisation"

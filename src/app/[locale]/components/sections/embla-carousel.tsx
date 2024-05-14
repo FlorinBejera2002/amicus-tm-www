@@ -6,6 +6,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import useEmblaCarousel from 'embla-carousel-react'
 import Autoplay from 'embla-carousel-autoplay'
+import { cn } from '@/utils'
 
 import LogoYouTube from '../../../../../public/img/logos/Logo-grey.jpeg'
 import LucianBalanescu from '../../../../../public/img/Podcast-Lucian-Balanescu.png'
@@ -21,16 +22,28 @@ export const EmblaCarousel = () => {
     }
   }, [emblaApi])
 
+  const combinedStyles = cn(
+    'rounded-1',
+    'flex',
+    'h-5',
+    'w-5',
+    'items-center',
+    'justify-center',
+    'bg-gray-200',
+    'text-xs',
+    'text-gray-500'
+  )
+
   return (
     <div className="overflow-hidden" ref={emblaRef}>
       <div className="flex h-96 pt-10 align-middle">
         <div
-          className="6  w-25 flex min-w-0 justify-center gap-14  border-t pt-10"
+          className="6 w-25 flex min-w-0 justify-center gap-14  border-t pt-10"
           style={{ flex: '100% 0 0' }}
         >
           <Link href="https://www.youtube.com/watch?v=XhQIeYzccUI">
             <Image
-              alt=""
+              alt="LucianBalanescu"
               className=""
               height={500}
               src={LucianBalanescu}
@@ -58,7 +71,7 @@ export const EmblaCarousel = () => {
                 style={{ textDecoration: 'none' }}
               >
                 <Image
-                  alt=""
+                  alt="LogoYouTube"
                   className="rounded-full"
                   height={25}
                   src={LogoYouTube}
@@ -72,9 +85,7 @@ export const EmblaCarousel = () => {
               persoana nepotrivită❗️” ...
             </p>
 
-            <b className="rounded-1 flex h-5 w-5  items-center justify-center bg-gray-200  text-xs text-gray-500">
-              4K
-            </b>
+            <b className={combinedStyles}>4K</b>
           </div>
         </div>
 
@@ -84,7 +95,7 @@ export const EmblaCarousel = () => {
         >
           <Link href="https://www.youtube.com/watch?v=VputJkB5E8g">
             <Image
-              alt=""
+              alt="IonutProdan"
               className=""
               height={500}
               src={IonutProdan}
@@ -106,12 +117,12 @@ export const EmblaCarousel = () => {
 
             <div className="flex gap-2 pt-3">
               <Link
-                className="flex gap-2 "
+                className="flex gap-2"
                 href="https://www.youtube.com/c/Ariseforchrist"
                 style={{ textDecoration: 'none' }}
               >
                 <Image
-                  alt=""
+                  alt="LogoYouTube"
                   className="rounded-full"
                   height={25}
                   src={LogoYouTube}
@@ -125,9 +136,7 @@ export const EmblaCarousel = () => {
               Ionuț Prodan, un om cu o poveste de viață ....
             </p>
 
-            <b className="rounded-1 flex h-5 w-5  items-center justify-center bg-gray-200  text-xs text-gray-500">
-              4K
-            </b>
+            <b className={combinedStyles}>4K</b>
           </div>
         </div>
 
@@ -137,7 +146,7 @@ export const EmblaCarousel = () => {
         >
           <Link href="https://www.youtube.com/watch?v=n8AgQqQjejU">
             <Image
-              alt=""
+              alt="CatalinOnitiu"
               className=""
               height={500}
               src={CatalinOnitiu}
@@ -165,7 +174,7 @@ export const EmblaCarousel = () => {
                 style={{ textDecoration: 'none' }}
               >
                 <Image
-                  alt=""
+                  alt="LogoYouTube"
                   className="rounded-full"
                   height={25}
                   src={LogoYouTube}
@@ -179,9 +188,7 @@ export const EmblaCarousel = () => {
               Ionuț Prodan, un om cu o poveste de viață ....
             </p>
 
-            <b className="rounded-1 flex h-5 w-5  items-center justify-center bg-gray-200  text-xs text-gray-500">
-              4K
-            </b>
+            <b className={combinedStyles}>4K</b>
           </div>
         </div>
       </div>

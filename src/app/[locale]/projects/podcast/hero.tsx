@@ -20,7 +20,7 @@ export default function Hero() {
         YouTube
       </Link>
       <div className="grid grid-cols-1 md:grid-cols-2  items-center gap-10">
-        <Image alt="arise for christ logo" className="" src={Adi} />
+        <Image alt="arise for christ logo" src={Adi} />
         <p className="text-white text-wrap text-xl md:text-2xl xl:text-3xl font-bold leading-normal">
           {t('hero-paragraf')}
         </p>
