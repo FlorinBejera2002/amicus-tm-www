@@ -26,15 +26,15 @@ export default function App() {
     <div className="pl-4">
       <Dropdown>
         <DropdownTrigger>
-          <Button
-            className="px-3 capitalize text-white btn btn-primary"
-            variant="bordered"
-          >
+          <Button className="font-semibold px-2 capitalize text-black btn btn-primary">
             {t('language.lg_1')}
           </Button>
         </DropdownTrigger>
-        <DropdownMenu className=" text-white">
-          <DropdownItem onClick={handleLocaleChange}>
+        <DropdownMenu>
+          <DropdownItem
+            className="px-2 capitalize text-black btn btn-primary"
+            onClick={handleLocaleChange}
+          >
             {t('language.lg')}
           </DropdownItem>
         </DropdownMenu>

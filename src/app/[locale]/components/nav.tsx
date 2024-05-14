@@ -16,10 +16,10 @@ import horizontalLogo from '../../../../public/logo_horizontal_white.png'
 
 export default function Nav() {
   const [navbar, setNavBar] = useState(false)
-  const [SubMenu, setSubMenu] = useState(false)
+  const [subMenu, setSubMenu] = useState(false)
   const pathname = usePathname()
   const t = useTranslations()
-  const [{ y = 0 }] = useWindowScroll()
+  const [{ y }] = useWindowScroll()
 
   const language = pathname.split('/')[1]
 
@@ -114,9 +114,7 @@ export default function Nav() {
                     data-bs-toggle="collapse"
                     onClick={() => setNavBar(!navbar)}
                   >
-                    <i className="fas fa-bars">
-                      <FaBars />
-                    </i>
+                    <FaBars />
                   </button>
                 </div>
               </div>
@@ -172,12 +170,12 @@ export default function Nav() {
                 <Link
                   className="nav-link"
                   href=""
-                  onClick={() => setSubMenu(!SubMenu)}
+                  onClick={() => setSubMenu(!subMenu)}
                 >
                   {t('header.project')}
                   <FaChevronDown className="absolute top-0 right-10 w-30 h-10 flex items-center justify-center text-xs" />
                 </Link>
-                {SubMenu && (
+                {subMenu && (
                   <ul className="top-full left-0 ">
                     <li>
                       <Link
@@ -185,7 +183,7 @@ export default function Nav() {
                         href={`/${language}/projects/time-is-now`}
                         onClick={() => {
                           setNavBar(!navbar)
-                          setSubMenu(!SubMenu)
+                          setSubMenu(!subMenu)
                         }}
                       >
                         {t('header.project_')}
