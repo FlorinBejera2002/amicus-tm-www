@@ -1,7 +1,5 @@
 import { ReactNode } from 'react'
 
-import { cn } from '../../../../utils'
-
 type Props = {
   description: string
   header: string
@@ -10,27 +8,13 @@ type Props = {
 }
 
 export const StepEvangelization = (props: Props) => {
-  const combinedStyles = cn(
-    'flex',
-    'justify-center',
-    'md:justify-start',
-    'flex-col',
-    'md:flex-row',
-    'flex-wrap',
-    'items-center',
-    'gap-1',
-    'md:gap-2',
-    'xl:gap-4',
-    props.styles
-  )
-
   return (
-    <div className={combinedStyles}>
+    <div
+      className={`flex justify-center md:justify-start flex-col md:flex-ro flex-wrap items-center gap-1 md:gap-2 xl:gap-4 ${props.styles}`}
+    >
       {props.numberImage}
-      <div>
-        <h3 className="font-bold mb-0">{props.header}</h3>
-        <p className="">{props.description}</p>
-      </div>
+      <h3 className="font-bold mb-0">{props.header}</h3>
+      <p className="">{props.description}</p>
     </div>
   )
 }

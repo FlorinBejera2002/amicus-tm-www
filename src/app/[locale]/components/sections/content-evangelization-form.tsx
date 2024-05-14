@@ -4,7 +4,6 @@ import React, { useState } from 'react'
 
 import { useTranslations } from 'next-intl'
 import { useRouter } from 'next/navigation'
-import { cn } from '@/utils'
 const MAILCHIMP_URL =
   'https://app.us22.list-manage.com/subscribe/post?u=41ac89857e074d884af936f25&amp;id=cc995c9835&amp;f_id=00c8c4e1f0'
 
@@ -18,62 +17,6 @@ const ContentEvangelizationForm = () => {
   const [isChecked, setIsChecked] = useState(false)
   const router = useRouter()
   const [message, setMessage] = useState<SubmitMessage | undefined>(undefined)
-  const combinedStyles = cn(
-    'peer-focus:font-medium',
-    'absolute',
-    'text-sm',
-    'text-black',
-    'duration-300',
-    'transform',
-    '-translate-y-6',
-    'scale-75',
-    'top-3',
-    '-z-10',
-    'origin-[0]',
-    'peer-focus:start-0 ',
-    'rtl:peer-focus:translate-x-1/4',
-    'rtl:peer-focus:left-auto',
-    'peer-focus:text-yellow-500',
-    'peer-placeholder-shown:scale-100',
-    'peer-placeholder-shown:translate-y-0',
-    'peer-focus:scale-75',
-    'peer-focus:-translate-y-6'
-  )
-  const buttonStyles = cn(
-    'bg-[#e3ae04] ',
-    'rounded-md ',
-    'px-20',
-    'hover:shadow-2xl',
-    'hover:-translate-2',
-    'hover:scale-105',
-    'hover:bg-[#e3ae04] ',
-    'duration-700 ',
-    'text-black ',
-    'font-bold ',
-    'py-1',
-    'size-9 ',
-    'flex ',
-    'justify-center ',
-    'items-center ',
-    'disabled:opacity-50',
-    ' disabled:pointer-events-none'
-  )
-  const inputStyles = cn(
-    'block',
-    'px-0',
-    'w-full',
-    'p-1',
-    'text-sm',
-    'text-gray-900',
-    'bg-transparent',
-    'border-b',
-    'border-gray-500',
-    'appearance-none',
-    'focus:outline-none',
-    'focus:ring-0',
-    'focus:border-yellow-500',
-    'peer'
-  )
 
   const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setIsChecked(event.target.checked)
@@ -113,42 +56,51 @@ const ContentEvangelizationForm = () => {
               <p className="text-sm">{t('text')}</p>
             </div>
             <form className="pt-4 flex flex-col gap-4" onSubmit={handleSubmit}>
-              <div className="flex gap-3 w-full mb-4">
+              <div className=" flex gap-3 w-full mb-4 ">
                 <div className="relative z-0 w-full group">
                   <input
-                    className={inputStyles}
+                    className="block px-0 p-1 w-full text-sm text-gray-900 bg-transparent border-b border-gray-500 appearance-none focus:outline-none focus:ring-0 focus:border-yellow-500 peer"
                     id="name"
                     name="name"
                     required={true}
                     type="name"
                   />
-                  <label className={combinedStyles} htmlFor="name">
+                  <label
+                    className="peer-focus:font-medium absolute text-sm text-black  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-yellow-500  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                    htmlFor="name"
+                  >
                     {t('name')}
                   </label>
                 </div>
 
                 <div className="relative z-0 w-full group">
                   <input
-                    className={inputStyles}
+                    className="block px-0 w-full p-1  text-sm text-gray-900 bg-transparent border-b border-gray-500 appearance-none focus:outline-none focus:ring-0 focus:border-yellow-500 peer"
                     id="email"
                     name="email"
                     required={true}
                     type="email"
                   />
-                  <label className={combinedStyles} htmlFor="email">
+                  <label
+                    className="peer-focus:font-medium absolute text-sm text-black  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-yellow-500  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                    htmlFor="email"
+                  >
                     {t('email')}
                   </label>
                 </div>
 
                 <div className="relative z-0 w-full group">
                   <input
-                    className={inputStyles}
+                    className="block px-0 w-full p-1 text-sm text-gray-900 bg-transparent border-b border-gray-500 appearance-none focus:outline-none focus:ring-0 focus:border-yellow-500 peer"
                     id="phone"
                     name="phone"
                     required={true}
                     type="phone"
                   />
-                  <label className={combinedStyles} htmlFor="phone">
+                  <label
+                    className="peer-focus:font-medium absolute text-sm text-black  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-yellow-500  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                    htmlFor="phone"
+                  >
                     {t('mobile')}
                   </label>
                 </div>
@@ -156,12 +108,15 @@ const ContentEvangelizationForm = () => {
 
               <div className="relative z-0 w-full group">
                 <textarea
-                  className="resize-none "
+                  className="resize-none block px-0 w-full p-1 text-sm text-gray-900 bg-transparent border-b border-gray-500 appearance-none focus:outline-none focus:ring-0 focus:border-yellow-500 peer"
                   id="details"
                   name="det"
                   rows={1}
                 />
-                <label className={combinedStyles} htmlFor="details">
+                <label
+                  className="peer-focus:font-medium absolute text-sm text-black  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-yellow-500  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                  htmlFor="details"
+                >
                   {t('details')}
                 </label>
               </div>
@@ -180,11 +135,11 @@ const ContentEvangelizationForm = () => {
 
               {message?.content && (
                 <div
-                  className={cn(
+                  className={
                     message.type === 'success'
                       ? 'text-green-600'
                       : 'text-red-500'
-                  )}
+                  }
                 >
                   {message.content}
                 </div>
@@ -192,7 +147,7 @@ const ContentEvangelizationForm = () => {
 
               <div className="flex justify-center items-center">
                 <button
-                  className={buttonStyles}
+                  className="bg-[#e3ae04] rounded-md px-20 hover:shadow-2xl hover:-translate-2 hover:scale-105 hover:bg-[#e3ae04] duration-700 text-black font-bold py-1 size-9 flex justify-center items-center disabled:opacity-50 disabled:pointer-events-none"
                   disabled={!isChecked}
                   type="submit"
                 >
