@@ -1,9 +1,20 @@
 'use client'
-import MailchimpSubscribe from 'react-mailchimp-subscribe'
+import MailchimpSubscribe, {
+  EmailFormFields,
+  FormHooks
+} from 'react-mailchimp-subscribe'
 import React, { useState } from 'react'
 
+import { PiNumberCircleOneFill } from 'react-icons/pi'
+import { PiNumberCircleTwoFill } from 'react-icons/pi'
+import { PiNumberCircleThreeFill } from 'react-icons/pi'
 import { useTranslations } from 'next-intl'
 import { useRouter } from 'next/navigation'
+import Image from 'next/image'
+import { cn } from '@/utils'
+
+import horizontalLogo from '../../../../../public/logo_horizontal_black.png'
+
 const MAILCHIMP_URL =
   'https://app.us22.list-manage.com/subscribe/post?u=41ac89857e074d884af936f25&amp;id=cc995c9835&amp;f_id=00c8c4e1f0'
 
@@ -24,7 +35,7 @@ const ContentEvangelizationForm = () => {
 
   return (
     <MailchimpSubscribe
-      render={({ subscribe }: any) => {
+      render={({ subscribe }: FormHooks<EmailFormFields>) => {
         const handleSubmit = async (event: any) => {
           event.preventDefault()
           const email = event.target.email.value
@@ -49,14 +60,38 @@ const ContentEvangelizationForm = () => {
         }
 
         return (
-          <div>
-            <div className="flex flex-col items-center">
-              <h1 className="text-xl pb-4">{t('title')}</h1>
-              <p className="text-sm">{t('subtitle')}</p>
-              <p className="text-sm">{t('text')}</p>
+          <div className="m-2 md:p-5 lg:p-10">
+            <Image
+              alt="arise for christ logo"
+              className="absolute left-12 top-12 hidden md:flex"
+              height={40}
+              src={horizontalLogo}
+              width={140}
+            />
+            <div className="flex flex-col md:items-center">
+              <h1 className="text-xl md:text-3xl lg:text-4xl md:pb-4 pt-3">
+                {t('title')}
+              </h1>
+              <div className="grid md:grid-cols-3 md:gap-5">
+                <p className="text-xs md:text-base flex flex-col gap-1">
+                  <PiNumberCircleOneFill className="w-10 h-10 ml-5" />
+                  {t('step1')}
+                </p>
+                <p className="text-xs md:text-base flex flex-col gap-1">
+                  <PiNumberCircleTwoFill className="w-10 h-10 ml-5" />
+                  {t('step2')}
+                </p>
+                <p className="text-xs md:text-base flex flex-col gap-1">
+                  <PiNumberCircleThreeFill className="w-10 h-10 ml-5" />
+                  {t('step3')}
+                </p>
+              </div>
             </div>
-            <form className="pt-4 flex flex-col gap-4" onSubmit={handleSubmit}>
-              <div className=" flex gap-3 w-full mb-4 ">
+            <form
+              className="pt-4 flex flex-col md:gap-4"
+              onSubmit={handleSubmit}
+            >
+              <div className="grid md:grid-cols-3 gap-5 w-full md:mb-4 ">
                 <div className="relative z-0 w-full group">
                   <input
                     className="block px-0 p-1 w-full text-sm text-gray-900 bg-transparent border-b border-gray-500 appearance-none focus:outline-none focus:ring-0 focus:border-yellow-500 peer"
@@ -106,7 +141,7 @@ const ContentEvangelizationForm = () => {
                 </div>
               </div>
 
-              <div className="relative z-0 w-full group">
+              <div className="relative z-0 w-full group mt-10 md:mt-2">
                 <textarea
                   className="resize-none block px-0 w-full p-1 text-sm text-gray-900 bg-transparent border-b border-gray-500 appearance-none focus:outline-none focus:ring-0 focus:border-yellow-500 peer"
                   id="details"
@@ -120,7 +155,7 @@ const ContentEvangelizationForm = () => {
                   {t('details')}
                 </label>
               </div>
-              <div className="flex gap-2">
+              <div className="flex gap-2 pt-3">
                 <input
                   checked={isChecked}
                   className="flex w-5 h-5"
@@ -128,24 +163,24 @@ const ContentEvangelizationForm = () => {
                   onChange={handleCheckboxChange}
                   type="checkbox"
                 />
-                <label className="text-sm" htmlFor="consent">
+                <label className="text-xs md:sm" htmlFor="consent">
                   {t('checkbox_text')}
                 </label>
               </div>
 
               {message?.content && (
                 <div
-                  className={
+                  className={cn(
                     message.type === 'success'
                       ? 'text-green-600'
                       : 'text-red-500'
-                  }
+                  )}
                 >
                   {message.content}
                 </div>
               )}
 
-              <div className="flex justify-center items-center">
+              <div className="flex justify-center items-center pb-3 pt-3 md:py-0">
                 <button
                   className="bg-[#e3ae04] rounded-md px-20 hover:shadow-2xl hover:-translate-2 hover:scale-105 hover:bg-[#e3ae04] duration-700 text-black font-bold py-1 size-9 flex justify-center items-center disabled:opacity-50 disabled:pointer-events-none"
                   disabled={!isChecked}

@@ -14,8 +14,8 @@ function Modal() {
   return (
     <>
       {modal && (
-        <dialog className="fixed left-0 top-0 w-full h-full bg-black bg-opacity-50 z-50 overflow-auto backdrop-blur flex justify-center items-center ">
-          <div className="bg-gradient-to-t relative bg-white m-auto p-16 pb-10 rounded-md w-[65em]">
+        <dialog className="fixed left-0 top-0 w-full h-full bg-black bg-opacity-50 z-50 overflow-auto backdrop-blur flex justify-center items-center">
+          <div className="bg-gradient-to-t relative bg-white p-2 md:p-5 lg:p-10 rounded-md w-[20em] md:w-[50em] lg:w-[65em] flex justify-center items-center">
             <Link
               className="flex justify-end absolute right-10 top-10 cursor-pointer"
               href={pathname}
