@@ -8,7 +8,7 @@ export default function YoutubeMiniFeed() {
         <iframe
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen={true}
-          className="w-full h-52 rounded-md"
+          className="w-full h-48 rounded-md"
           src="https://www.youtube.com/embed?listType=playlist&list=UUQy-aDJ2zjmVD7Yn2XusrsA&controls=0&modestbranding=1&index=1"
           title="YouTube Playlist"
         />
@@ -16,21 +16,21 @@ export default function YoutubeMiniFeed() {
         <iframe
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen={true}
-          className="w-full hidden md:flex h-52 rounded-md"
+          className="w-full hidden md:flex h-48 rounded-md"
           src="https://www.youtube.com/embed?listType=playlist&list=UUQy-aDJ2zjmVD7Yn2XusrsA&controls=0&modestbranding=1&index=2"
           title="YouTube Playlist"
         />
         <iframe
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen={true}
-          className="w-full hidden md:flex h-52 rounded-md"
+          className="w-full hidden md:flex h-48 rounded-md"
           src="https://www.youtube.com/embed?listType=playlist&list=UUQy-aDJ2zjmVD7Yn2XusrsA&controls=0&modestbranding=1&index=3"
           title="YouTube Playlist"
         />
         <iframe
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen={true}
-          className="w-full hidden md:flex h-52 rounded-md"
+          className="w-full hidden md:flex h-48 rounded-md"
           src="https://www.youtube.com/embed?listType=playlist&list=UUQy-aDJ2zjmVD7Yn2XusrsA&controls=0&modestbranding=1&index=4"
           title="YouTube Playlist"
         />

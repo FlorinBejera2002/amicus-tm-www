@@ -9,26 +9,19 @@ type Props = {
   styles?: string
 }
 
-export const StepEvangelization = (props: Props) => {
-  const combinedStyles = cn(
-    'flex',
-    'justify-center ',
-    'md:justify-start ',
-    'flex-col',
-    'md:flex-ro ',
-    'flex-wrap ',
-    'items-center',
-    'gap-1',
-    'md:gap-2',
-    'xl:gap-4 ',
-    props.styles
-  )
-
+export const StepEvangelization = ({ styles, ...props }: Props) => {
   return (
-    <div className={combinedStyles}>
+    <div
+      className={cn(
+        'flex justify-centermd:justify-start flex-col md:flex-row flex-wrap items-center gap-1 md:gap-2 xl:gap-4',
+        styles
+      )}
+    >
       {props.numberImage}
-      <h3 className="font-bold mb-0">{props.header}</h3>
-      <p className="">{props.description}</p>
+      <div>
+        <h3 className="font-bold mb-0">{props.header}</h3>
+        <p className="">{props.description}</p>
+      </div>
     </div>
   )
 }
