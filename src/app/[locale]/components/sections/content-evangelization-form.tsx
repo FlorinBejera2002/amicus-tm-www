@@ -1,8 +1,5 @@
 'use client'
-import MailchimpSubscribe, {
-  EmailFormFields,
-  FormHooks
-} from 'react-mailchimp-subscribe'
+import MailchimpSubscribe from 'react-mailchimp-subscribe'
 import React, { useState } from 'react'
 
 import { PiNumberCircleOneFill } from 'react-icons/pi'
@@ -35,7 +32,7 @@ const ContentEvangelizationForm = () => {
 
   return (
     <MailchimpSubscribe
-      render={({ subscribe }: FormHooks<EmailFormFields>) => {
+      render={({ subscribe }: any) => {
         const handleSubmit = async (event: any) => {
           event.preventDefault()
           const email = event.target.email.value
