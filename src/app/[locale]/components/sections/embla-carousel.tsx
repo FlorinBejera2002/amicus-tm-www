@@ -30,8 +30,7 @@ export const EmblaCarousel = () => {
         >
           <Link href="https://www.youtube.com/watch?v=XhQIeYzccUI">
             <Image
-              alt=""
-              className=""
+              alt="LucianBalanescu"
               height={500}
               src={LucianBalanescu}
               width={500}
@@ -58,7 +57,7 @@ export const EmblaCarousel = () => {
                 style={{ textDecoration: 'none' }}
               >
                 <Image
-                  alt=""
+                  alt="LogoYouTube"
                   className="rounded-full"
                   height={25}
                   src={LogoYouTube}
@@ -84,8 +83,7 @@ export const EmblaCarousel = () => {
         >
           <Link href="https://www.youtube.com/watch?v=VputJkB5E8g">
             <Image
-              alt=""
-              className=""
+              alt="IonutProdan"
               height={500}
               src={IonutProdan}
               width={500}
@@ -111,7 +109,7 @@ export const EmblaCarousel = () => {
                 style={{ textDecoration: 'none' }}
               >
                 <Image
-                  alt=""
+                  alt="LogoYouTube"
                   className="rounded-full"
                   height={25}
                   src={LogoYouTube}
@@ -137,8 +135,7 @@ export const EmblaCarousel = () => {
         >
           <Link href="https://www.youtube.com/watch?v=n8AgQqQjejU">
             <Image
-              alt=""
-              className=""
+              alt="CatalinOnitiu"
               height={500}
               src={CatalinOnitiu}
               width={500}
@@ -165,7 +162,7 @@ export const EmblaCarousel = () => {
                 style={{ textDecoration: 'none' }}
               >
                 <Image
-                  alt=""
+                  alt="LogoYouTube"
                   className="rounded-full"
                   height={25}
                   src={LogoYouTube}
