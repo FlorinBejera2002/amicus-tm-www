@@ -27,10 +27,10 @@ export default function Nav() {
   return (
     <header
       className={cn(
-        'header-transparent',
-        y !== null &&
-          y >= 50 &&
-          'bg-gray-950 shadow-sm bg-opacity-40 bg-clip-padding backdrop-blur-sm'
+        'header-transparent transition-all duration-500',
+        y !== null && y >= 50
+          ? 'bg-gray-950/[.4] shadow-sm backdrop-blur-md'
+          : ''
       )}
       id="header"
     >
