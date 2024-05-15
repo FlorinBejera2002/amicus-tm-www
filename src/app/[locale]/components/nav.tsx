@@ -1,8 +1,9 @@
 'use client'
 import { useState } from 'react'
 
-import App from './sections/language-button'
+import Language from './sections/language-button'
 import Projects from '../projects/page'
+import { cn } from '../../../utils'
 
 import { FaChevronDown } from 'react-icons/fa'
 import { FaBars } from 'react-icons/fa'
@@ -25,11 +26,12 @@ export default function Nav() {
 
   return (
     <header
-      className={`header-transparent  ${
-        y !== null && y >= 50
-          ? 'bg-gray-950 shadow-sm bg-opacity-40 bg-clip-padding backdrop-blur-sm'
-          : ''
-      }`}
+      className={cn(
+        'header-transparent',
+        y !== null &&
+          y >= 50 &&
+          'bg-gray-950 shadow-sm bg-opacity-40 bg-clip-padding backdrop-blur-sm'
+      )}
       id="header"
     >
       <div className="header-body border-top-0 bg-quaternary box-shadow-none h-auto ">
@@ -48,7 +50,7 @@ export default function Nav() {
                     />
                   </Link>
                 </div>
-                <App />
+                <Language />
               </div>
             </div>
             <div className="header-column justify-content-end">
@@ -108,6 +110,7 @@ export default function Nav() {
                       </span>
                     </button>
                   </Link>
+
                   <button
                     className="btn header-btn-collapse-nav text-dark h-[2.375rem]"
                     data-bs-target=".header-nav-main nav"
