@@ -1,17 +1,19 @@
 import episode from './episode-data'
 
+import { useTranslations } from 'next-intl'
 import Link from 'next/link'
 import Image from 'next/image'
 
 const EpisodeSection = () => {
+  const t = useTranslations('serial')
+
   return (
     <div className="flex flex-col justify-center items-center">
-      <div className=" w-screen px-96 flex flex-col justify-center items-center ">
-        <h4 className="text-lg text-white">
-          Fiecare episod poate fi accesat prin intermediul link-urilor de mai
-          jos.
+      <div className=" w-screen lg:px-96 flex flex-col justify-center items-center ">
+        <h4 className="text-base md:text-2xl font-semibold text-center md:my-7 text-white pb-3 md:pb-10 border-white w-80 md:w-full">
+          {t('title_serial')}
         </h4>
-        <div className="flex flex-wrap justify-center items-center gap-3 ">
+        <div className="grid md:grid-cols-3 gap-3 ">
           {episode.map((item) => {
             return (
               <div className="flex flex-wrap flex-col gap-3" key={item.id}>
@@ -22,7 +24,7 @@ const EpisodeSection = () => {
                     src={item.episodImage}
                   />
                 </Link>
-                <h4 className="pl-3 text-sm text-[#5b5f66] font-poppins">
+                <h4 className="pl-3 text-center md:text-start text-sm text-[#5b5f66] font-poppins">
                   {item.title}
                 </h4>
               </div>
@@ -30,14 +32,13 @@ const EpisodeSection = () => {
           })}
         </div>
       </div>
-      <div className="w-[57rem] flex flex-col justify-center items-center mb-24 py-7 border-t border-b border-white">
-        <p className="text-lg text-white">
-          `Câmpurile sunt bogate pentru seceriş, dar secerătorii sunt puţini.
-          <br />
-          Rugaţi deci pe Domnul secerişului să trimită lucrători în secerişul
-          Lui.`
+      <div className="flex flex-col justify-center items-center mb-5 mt-5 md:mb-24 py-5 md:py-7 border-t border-b border-white w-80 md:w-full">
+        <p className="text-sm md:text-2xl font-semibold text-white text-center">
+          {t('verset')}
         </p>
-        <p className="text-lg text-white">Luca 10:2</p>
+        <p className="text-sm md:text-2xl font-semibold text-white">
+          {t('reference')}
+        </p>
       </div>
     </div>
   )
