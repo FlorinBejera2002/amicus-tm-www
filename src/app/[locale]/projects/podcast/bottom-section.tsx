@@ -23,7 +23,7 @@ export default function BottomSection() {
         title="YouTube Playlist"
       />
       <div className="grid md:grid-cols-2 justify-center items-center pt-10  border-t border-white">
-        <Image alt="arise for christ logo" className="" src={mobileScreen} />
+        <Image alt="arise for christ logo" src={mobileScreen} />
         <div className="flex flex-col justify-center items-center text-white">
           <h2 className="pb-4">{t('bottom-subtitle')}</h2>
           <p className=" text-sm">{t('bottom-paragraf')}</p>

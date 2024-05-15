@@ -24,10 +24,7 @@ export const EmblaCarousel = () => {
   return (
     <div className="overflow-hidden" ref={emblaRef}>
       <div className="flex h-96 pt-10 align-middle">
-        <div
-          className="6  w-25 flex min-w-0 justify-center gap-14  border-t pt-10"
-          style={{ flex: '100% 0 0' }}
-        >
+        <div className="6  w-25 flex [flex: '100% 0 0'] min-w-0 justify-center gap-14  border-t pt-10">
           <Link href="https://www.youtube.com/watch?v=XhQIeYzccUI">
             <Image
               alt="LucianBalanescu"
@@ -36,11 +33,8 @@ export const EmblaCarousel = () => {
               width={500}
             />
           </Link>
-          <div className="flex flex-col gap-1 ">
-            <Link
-              href="https://www.youtube.com/watch?v=XhQIeYzccUI"
-              style={{ textDecoration: 'none' }}
-            >
+          <div className="flex flex-col gap-1 text-decoration-none">
+            <Link href="https://www.youtube.com/watch?v=XhQIeYzccUI">
               <h1 className="pb-1">
                 #46 PODCAST Lucian Bălănescu &quot;Tot timpul ne căsătorim cu
                 persoana nepotrivită&quot;
@@ -52,9 +46,8 @@ export const EmblaCarousel = () => {
 
             <div className="flex gap-2 pt-3">
               <Link
-                className="flex gap-2 "
+                className="text-decoration-none flex gap-2 "
                 href="https://www.youtube.com/c/Ariseforchrist"
-                style={{ textDecoration: 'none' }}
               >
                 <Image
                   alt="LogoYouTube"
@@ -77,10 +70,7 @@ export const EmblaCarousel = () => {
           </div>
         </div>
 
-        <div
-          className="6  w-25 flex min-w-0 justify-center gap-14  border-t pt-10"
-          style={{ flex: '100% 0 0' }}
-        >
+        <div className="6  w-25 flex min-w-0 [flex: '100% 0 0'] justify-center gap-14  border-t pt-10">
           <Link href="https://www.youtube.com/watch?v=VputJkB5E8g">
             <Image
               alt="IonutProdan"
@@ -90,10 +80,7 @@ export const EmblaCarousel = () => {
             />
           </Link>
           <div className="flex flex-col gap-1 ">
-            <Link
-              href="https://www.youtube.com/watch?v=VputJkB5E8g"
-              style={{ textDecoration: 'none' }}
-            >
+            <Link href="https://www.youtube.com/watch?v=VputJkB5E8g">
               <h1 className="pb-1">
                 84 CE NU AM REUȘIT SĂ-I MAI CITESC FETIȚEI MELE - IONUȚ PRODAN
               </h1>
@@ -104,9 +91,8 @@ export const EmblaCarousel = () => {
 
             <div className="flex gap-2 pt-3">
               <Link
-                className="flex gap-2 "
+                className="text-decoration-none flex gap-2 "
                 href="https://www.youtube.com/c/Ariseforchrist"
-                style={{ textDecoration: 'none' }}
               >
                 <Image
                   alt="LogoYouTube"
@@ -129,10 +115,7 @@ export const EmblaCarousel = () => {
           </div>
         </div>
 
-        <div
-          className="6  w-25 flex min-w-0 justify-center gap-14  border-t pt-10"
-          style={{ flex: '100% 0 0' }}
-        >
+        <div className="6  w-25 flex min-w-0 [flex: '100% 0 0'] justify-center gap-14  border-t pt-10">
           <Link href="https://www.youtube.com/watch?v=n8AgQqQjejU">
             <Image
               alt="CatalinOnitiu"
@@ -142,10 +125,7 @@ export const EmblaCarousel = () => {
             />
           </Link>
           <div className="flex flex-col gap-1 ">
-            <Link
-              href="https://www.youtube.com/watch?v=n8AgQqQjejU"
-              style={{ textDecoration: 'none' }}
-            >
+            <Link href="https://www.youtube.com/watch?v=n8AgQqQjejU">
               <h1 className="pb-1">
                 27 PODCAST Călin Onițiu &quot;Provocările părinților de
                 adolescenți&quot;
@@ -157,9 +137,8 @@ export const EmblaCarousel = () => {
 
             <div className="flex gap-2 pt-3">
               <Link
-                className="flex gap-2 "
+                className="text-decoration-none flex gap-2 "
                 href="https://www.youtube.com/c/Ariseforchrist"
-                style={{ textDecoration: 'none' }}
               >
                 <Image
                   alt="LogoYouTube"

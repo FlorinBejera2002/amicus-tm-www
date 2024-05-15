@@ -20,7 +20,7 @@ export const StepEvangelization = ({ styles, ...props }: Props) => {
       {props.numberImage}
       <div>
         <h3 className="font-bold mb-0">{props.header}</h3>
-        <p className="">{props.description}</p>
+        <p>{props.description}</p>
       </div>
     </div>
   )
