@@ -119,10 +119,6 @@
     "read_more": "read more...",
     "title": "Blog"
   },
-  "language": {
-    "lg": "RO",
-    "lg_1": "EN"
-  },
   "button": {
     "agree": "I Agree",
     "contact_us": "Contact Us",
@@ -164,18 +160,22 @@
   "header": {
     "about_us": "About Us",
     "actone": "Act One",
-    "donate": "Donate",
     "contact": "Contact",
+    "donate": "Donate",
     "home": "Home",
-    "vision": "Vision",
     "project": "Projects",
-    "project_": "Mision Project"
+    "project_": "The time is now",
+    "vision": "Vision"
   },
   "hero": {
     "question1": "Do you care for the salvation of your loved ones?",
     "question2": "Do you need support in prayer?",
     "question3": "Do you want to encourage someone?",
     "title-hero": "The Hope"
+  },
+  "language": {
+    "lg": "RO",
+    "lg_1": "EN"
   },
   "podcast": {
     "bottom-paragraf": "You can also find all the episodes of our Podcast on",

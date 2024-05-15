@@ -115,10 +115,6 @@
     "tooltip_costs_show_editing": "Editarea video",
     "tooltip_costs_travel": "Transport"
   },
-  "language": {
-    "lg": "EN",
-    "lg_1": "RO"
-  },
   "button": {
     "agree": "Sunt de acord",
     "contact_us": "Contactează-ne",
@@ -164,18 +160,22 @@
   "header": {
     "about_us": "Despre Noi",
     "actone": "Act One",
-    "donate": "Donare",
     "contact": "Contact",
+    "donate": "Donare",
     "home": "Acasă",
-    "vision": "Viziunea",
     "project": "Proiecte",
-    "project_": "Proiectul de misiune"
+    "project_": "Timpul este acum",
+    "vision": "Viziunea"
   },
   "hero": {
     "question1": "Dorești mântuirea cuiva drag?",
     "question2": "Ai nevoie de sprijin în rugăciune?",
     "question3": "Vrei să încurajezi pe cineva?",
     "title-hero": "Speranță"
+  },
+  "language": {
+    "lg": "EN",
+    "lg_1": "RO"
   },
   "podcast": {
     "bottom-paragraf": "Toate episoadele Podcastului nostru le puteți găsi și pe",
