@@ -14,17 +14,13 @@ export default function PersonalEvangelism() {
     <section id="concept">
       <div className="container bg-color-light p-relative z-index-2 py-1 mt-3">
         <div className="row py-3 my-3">
-          <h1 className="font-bold flex justify-center pb-4 text-7">
+          <h1 className="font-bold pb-4 text-2xl md:text-3xl xl:4xl text-center">
             {t('presentation_title')}
           </h1>
-          <div className="col-lg-6 text-center">
+          <div className="hidden md:flex flex-col col-lg-6 text-center">
             <div className="d-flex mb-3">
               <div className="p-2 flex-fill">
-                <div
-                  className="custom-el-3 bg-color-tertiary custom-border-radius-1 mx-auto appear-animation"
-                  data-appear-animation="zoomIn"
-                  data-appear-animation-delay="100"
-                >
+                <div className="custom-el-3 bg-color-tertiary custom-border-radius-1 mx-auto appear-animation">
                   <Image
                     alt="Arise photo"
                     className="custom-el-3-img p-relative size-full"
@@ -38,19 +34,13 @@ export default function PersonalEvangelism() {
                 <Image
                   alt="Arise photo"
                   className="custom-el-3 bg-color-primary custom-border-radius-2 mx-auto appear-animation"
-                  data-appear-animation="zoomIn"
-                  data-appear-animation-delay="200"
                   loading="lazy"
                   src={step2}
                 />
               </div>
 
               <div className="p-2 flex-fill">
-                <div
-                  className="custom-el-3 custom-el-3-pos-1 bg-color-dark custom-border-radius-3 mx-auto appear-animation"
-                  data-appear-animation="zoomIn"
-                  data-appear-animation-delay="300"
-                >
+                <div className="custom-el-3 custom-el-3-pos-1 bg-color-dark custom-border-radius-3 mx-auto appear-animation">
                   <Image
                     alt="Arise photo"
                     className="custom-el-3-img p-relative size-full"
@@ -93,91 +83,84 @@ export default function PersonalEvangelism() {
             </div>
           </div>
           <div className="col-lg-6">
-            <div
-              className="d-block appear-animation"
-              data-appear-animation="fadeInUpShorter"
-              data-appear-animation-delay="100"
-            >
-              <div
-                className="toggle toggle-minimal toggle-dark"
-                data-plugin-toggle={true}
-              >
+            <div className="d-block appear-animation">
+              <div className="toggle toggle-minimal toggle-dark">
                 <section className="toggle">
                   <details className=" border-b  p-3 rounded-lg transform-gpu delay-75 duration-100 ease-in-out ">
-                    <summary className="leading-5 text-slate-900 dark:text-black font-semibold select-none">
+                    <summary className="leading-6 text-slate-900 font-semibold select-none">
                       {t('step1_title')}
                     </summary>
-                    <div className="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-400">
+                    <div className="mt-3 text-sm leading-6 text-slate-600 ">
                       <p>{t('step1_description')}</p>
                     </div>
                   </details>
                 </section>
                 <section className="toggle">
                   <details className=" border-b  p-3 rounded-lg transform-gpu delay-75 duration-100 ease-in-out ">
-                    <summary className="leading-6 text-slate-900 dark:text-black font-semibold select-none">
+                    <summary className="leading-6 text-slate-900 font-semibold select-none">
                       {t('step2_title')}
                     </summary>
-                    <div className="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-400">
+                    <div className="mt-3 text-sm leading-6 text-slate-600 ">
                       <p>{t('step2_description')}</p>
                     </div>
                   </details>
                 </section>
                 <section className="toggle">
                   <details className=" border-b  p-3 rounded-lg transform-gpu delay-75 duration-100 ease-in-out ">
-                    <summary className="leading-6 text-slate-900 dark:text-black font-semibold select-none">
+                    <summary className="leading-6 text-slate-900 font-semibold select-none">
                       {t('step3_title')}
                     </summary>
-                    <div className="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-400">
+                    <div className="mt-3 text-sm leading-6 text-slate-600 ">
                       <p>{t('step3_description')}</p>
                     </div>
                   </details>
                 </section>
                 <section className="toggle">
                   <details className=" border-b  p-3 rounded-lg transform-gpu delay-75 duration-100 ease-in-out ">
-                    <summary className="leading-6 text-slate-900 dark:text-black font-semibold select-none">
+                    <summary className="leading-6 text-slate-900 font-semibold select-none">
                       {t('step4_title')}
                     </summary>
-                    <div className="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-400">
+                    <div className="mt-3 text-sm leading-6 text-slate-600 ">
                       <p>{t('step4_description')}</p>
                     </div>
                   </details>
                 </section>
                 <section className="toggle">
                   <details className=" border-b  p-3 rounded-lg transform-gpu delay-75 duration-100 ease-in-out ">
-                    <summary className="leading-6 text-slate-900 dark:text-black font-semibold select-none">
+                    <summary className="leading-6 text-slate-900 font-semibold select-none">
                       {t('step5_title')}
                     </summary>
-                    <div className="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-400">
+                    <div className="mt-3 text-sm leading-6 text-slate-600 ">
                       <p>{t('step5_description')}</p>
                     </div>
                   </details>
                 </section>
                 <section className="toggle">
                   <details className=" border-b  p-3 rounded-lg transform-gpu delay-75 duration-100 ease-in-out ">
-                    <summary className="leading-6 text-slate-900 dark:text-black font-semibold select-none">
+                    <summary className="leading-6 text-slate-900 font-semibold select-none">
                       {t('step6_title')}
                     </summary>
-                    <div className="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-400">
+                    <div className="mt-3 text-sm leading-6 text-slate-600 ">
                       <p>{t('step6_description')}</p>
                     </div>
                   </details>
                 </section>
                 <section className="toggle">
                   <details className=" border-b  p-3 rounded-lg transform-gpu delay-75 duration-100 ease-in-out ">
-                    <summary className="leading-6 text-slate-900 dark:text-black font-semibold select-none">
+                    <summary className="leading-6 text-slate-900 font-semibold select-none">
                       {t('step7_title')}
                     </summary>
-                    <div className="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-400">
+                    <div className="mt-3 text-sm leading-6 text-slate-600 ">
                       <p>{t('step7_description')}</p>
                     </div>
                   </details>
                 </section>
                 <section className="toggle">
                   <details className=" border-b  p-3 rounded-lg transform-gpu delay-75 duration-100 ease-in-out ">
-                    <summary className="leading-6 text-slate-900 dark:text-black font-semibold select-none">
+                    <summary className="leading-6 text-slate-900 font-semibold select-none">
                       {t('step8_title')}
                     </summary>
-                    <div className="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-400">
+                    <div className="mt-3 text-sm leading-6 text-slate-600 ">
                       <p>{t('step8_description')}</p>
                     </div>
                   </details>

@@ -4,7 +4,6 @@ import React, { useState } from 'react'
 
 import { useTranslations } from 'next-intl'
 import { useRouter } from 'next/navigation'
-import { cn } from '@/utils'
 const MAILCHIMP_URL =
   'https://app.us22.list-manage.com/subscribe/post?u=41ac89857e074d884af936f25&amp;id=cc995c9835&amp;f_id=00c8c4e1f0'
 
@@ -136,11 +135,11 @@ const ContentEvangelizationForm = () => {
 
               {message?.content && (
                 <div
-                  className={cn(
+                  className={
                     message.type === 'success'
                       ? 'text-green-600'
                       : 'text-red-500'
-                  )}
+                  }
                 >
                   {message.content}
                 </div>

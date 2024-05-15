@@ -155,7 +155,7 @@ const About = () => {
                   >
                     <section className="toggle">
                       <details className="py-1 rounded-lg overflow-hidden">
-                        <summary className=" border-b pb-4 border-gray-400 leading-3 text-slate-900 dark:text-black font-semibold select-none  ">
+                        <summary className=" border-b pb-4 border-gray-400 leading-3 text-slate-900  font-semibold select-none  ">
                           {t('about_us.description_p4_0')}
                         </summary>
                         <div className=" mt-3 text-base leading-6 text-slate-600">
@@ -187,7 +187,7 @@ const About = () => {
                     </section>
                     <section className="toggle">
                       <details className="py-3 rounded-lg transform-gpu delay-75 duration-100 ease-in-out ">
-                        <summary className="border-b pb-4 border-gray-400 leading-6 text-slate-900 dark:text-black font-semibold select-none">
+                        <summary className="border-b pb-4 border-gray-400 leading-6 text-slate-900  font-semibold select-none">
                           {t('about_us.principals_p1_0')}
                         </summary>
                         <div className="mt-3 text-base leading-6 text-slate-600">
@@ -209,7 +209,7 @@ const About = () => {
                     </section>
                     <section className="toggle">
                       <details className="py-1 rounded-lg transform-gpu delay-75 duration-100 ease-in-out ">
-                        <summary className="border-b pb-4 border-gray-400 leading-6 text-slate-900 dark:text-black font-semibold select-none">
+                        <summary className="border-b pb-4 border-gray-400 leading-6 text-slate-900  font-semibold select-none">
                           {t('about_us.principals_p6_1')}
                         </summary>
                         <div className="mt-3 text-base leading-6 text-slate-600">
