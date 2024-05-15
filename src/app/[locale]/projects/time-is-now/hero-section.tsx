@@ -5,7 +5,7 @@ export default function HeroSection() {
 
   return (
     <>
-      <div className="container mt-20 md:mt-32 pb-4 bg-auto bg-no-repeat flex flex-col items-center justify-center">
+      <div className="md:mx-48 mt-20 md:mt-32 pb-4 bg-auto bg-no-repeat flex flex-col items-center justify-center">
         <h1 className="flex items-center justify-center text-2xl md:text-4xl lg:text-6xl shadow-xl shadow-gray-700 text-white font-bold">
           {t('title')}
         </h1>

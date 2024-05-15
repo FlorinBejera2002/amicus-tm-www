@@ -12,7 +12,7 @@ export default function PersonalEvangelism() {
 
   return (
     <section id="concept">
-      <div className="container bg-color-light p-relative z-index-2 py-1 mt-3">
+      <div className="md:mx-48 px-2 bg-color-light p-relative z-index-2 py-1 mt-3">
         <div className="row py-3 my-3">
           <h1 className="font-bold pb-4 text-2xl md:text-3xl xl:4xl text-center">
             {t('presentation_title')}

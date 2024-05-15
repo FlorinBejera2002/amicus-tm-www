@@ -1,9 +1,7 @@
-import React from 'react'
-
 export default function Numbers() {
   return (
     <section id="numbers">
-      <div className="container bg-color-light p-relative z-index-2 py-1">
+      <div className="md:mx-48 bg-color-light p-relative z-index-2 py-1">
         <div className="row pt-5 pb-3">
           <div className="col-lg-9">
             <h3

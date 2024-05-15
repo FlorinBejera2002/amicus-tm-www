@@ -1,6 +1,6 @@
 export default function YoutubeMiniFeed() {
   return (
-    <div className="lg:custom-grid-1 lg:grid grid-cols-1">
+    <div className="lg:custom-grid-1 lg:grid grid-cols-1 md:mx-24">
       <div
         className="grid gap-2 md:grid-cols-2 lg:grid-cols-4 bg-transparent relative pt-1 lg:pt-2 xl:pt-3 pb-5 z-index-3 md:px-24 md:top-[-50px]"
         id="numbers"

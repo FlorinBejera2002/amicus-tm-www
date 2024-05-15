@@ -142,7 +142,6 @@ li {
   display: flex;
   flex-grow: 1;
   align-items: center;
-  align-self: stretch;
   max-height: 100%;
 }
 
@@ -6100,9 +6099,9 @@ html.sticky-header-enabled.sticky-header-active
   #header .header-nav-main {
     position: absolute;
     background: transparent;
-    width: 100%;
+    width: 90%;
     top: 100%;
-    left: 50%;
+    left: 47%;
     transform: translate3d(-50%, 0, 0);
   }
 
@@ -6361,6 +6360,7 @@ html.sticky-header-enabled.sticky-header-active
     display: block;
     position: relative;
     z-index: 1;
+    margin-right: 50px;
   }
 
   #header .header-nav.header-nav-stripe {

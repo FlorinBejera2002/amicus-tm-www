@@ -11,7 +11,7 @@ export default function BottomSection() {
   const t = useTranslations('podcast')
 
   return (
-    <div className="container flex flex-col justify-center items-center">
+    <div className="md:mx-48 flex flex-col justify-center items-center">
       <h1 className="py-5 text-white font-bold text-2xl md:text-3xl">
         {t('bottom-title')}
       </h1>

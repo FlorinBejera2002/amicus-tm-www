@@ -35,7 +35,7 @@ export default function Nav() {
       id="header"
     >
       <div className="header-body border-top-0 bg-quaternary box-shadow-none h-auto ">
-        <div className="header-container container p-static">
+        <div className="header-container md:mx-48 p-static">
           <div className="header-row py-3">
             <div className="header-column">
               <div className="header-row">
@@ -43,7 +43,7 @@ export default function Nav() {
                   <Link href="/">
                     <Image
                       alt="arise for christ logo"
-                      className="object-contain"
+                      className="object-contain hidden md:flex"
                       height={40}
                       src={horizontalLogo}
                       width={150}

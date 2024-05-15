@@ -10,7 +10,7 @@ import logoArise from '../../../../../public/logo_horizontal_black.png'
 export default function StepsEvangelization() {
   return (
     <section id="concept">
-      <div className="container d-flex justify-center gap-16  bg-color-light p-relative z-index-2 pb-10">
+      <div className="md:mx-48 d-flex justify-center gap-16  bg-color-light p-relative z-index-2 pb-10">
         <div className="hidden md:flex items-center justify-center">
           <Image
             alt="Stps for Evangelisation"

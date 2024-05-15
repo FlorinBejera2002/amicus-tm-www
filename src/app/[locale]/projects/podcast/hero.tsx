@@ -10,7 +10,7 @@ export default function Hero() {
   const t = useTranslations('podcast')
 
   return (
-    <div className="container flex flex-col gap-3 justify-center items-center">
+    <div className="md:mx-48 flex flex-col gap-3 justify-center items-center">
       <Image alt="arise for christ logo" className="pt-28" src={heroPodcast} />
       <h3 className="text-white">{t('subscribe')}</h3>
       <Link

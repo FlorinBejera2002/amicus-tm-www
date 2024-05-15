@@ -6,7 +6,7 @@ import horizontalLogo from '../../../../../public/logo_horizontal_black.png'
 export default function Presentation() {
   return (
     <div className="px-3 px-lg-0">
-      <div className="container py-1">
+      <div className="md:mx-48 py-1">
         <div className="row py-5 my-3">
           <div className="col text-center custom-projects-1">
             <div className="row border-top">

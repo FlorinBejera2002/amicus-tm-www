@@ -5,7 +5,7 @@ import horizontalLogo from '../../../../../public/logo_horizontal_black.png'
 export default function About() {
   return (
     <section id="about">
-      <div className="container py-1">
+      <div className="md:px-48 py-1">
         <div className="row pt-5 mt-3">
           <div className="col text-center">
             <h3

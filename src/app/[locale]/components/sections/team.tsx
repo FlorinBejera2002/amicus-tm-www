@@ -14,7 +14,7 @@ export default function Team() {
 
   return (
     <div className="bg-color-dark p-relative z-index-1 custom-section-1 bg-position-center bg-size-cover lazyload">
-      <div className="container py-4">
+      <div className="md:mx-48 px-2 py-4">
         <div className="row align-items-center ">
           <b className="text-3xl text-gray-50 font-bold py-6 text-center">
             {t('title-a4c')}
