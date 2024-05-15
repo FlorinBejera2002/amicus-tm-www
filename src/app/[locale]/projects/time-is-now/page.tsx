@@ -6,7 +6,7 @@ import EpisodeSection from './episode-section'
 export default function TimeIsNow() {
   return (
     <div className="bg-[#0c0e19] flex flex-col justify-center items-center">
-      <div className="w-[55rem] my-10">
+      <div className="xl:w-[60rem] my-10">
         <HeroSection />
         <TrailerSection />
         <EpisodeSection />

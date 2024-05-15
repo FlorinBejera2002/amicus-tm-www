@@ -1,17 +1,17 @@
 import episode from './episode-data'
 
+import { useTranslations } from 'next-intl'
 import Link from 'next/link'
 import Image from 'next/image'
 
 const EpisodeSection = () => {
+  const t = useTranslations('serial')
+
   return (
     <div className="flex flex-col justify-center items-center">
       <div className=" w-screen px-96 flex flex-col justify-center items-center ">
-        <h4 className="text-lg text-white">
-          Fiecare episod poate fi accesat prin intermediul link-urilor de mai
-          jos.
-        </h4>
-        <div className="flex flex-wrap justify-center items-center gap-3 ">
+        <h4 className="text-lg text-white pb-3">{t('title-serial')}</h4>
+        <div className="grid grid-cols-3 gap-3 ">
           {episode.map((item) => {
             return (
               <div className="flex flex-wrap flex-col gap-3" key={item.id}>
@@ -33,7 +33,8 @@ const EpisodeSection = () => {
       <div className="w-[57rem] flex flex-col justify-center items-center mb-24 py-7 border-t border-b border-white">
         <p className="text-lg text-white">
           `Câmpurile sunt bogate pentru seceriş, dar secerătorii sunt puţini.
-          <br />
+        </p>
+        <p className="text-lg text-white">
           Rugaţi deci pe Domnul secerişului să trimită lucrători în secerişul
           Lui.`
         </p>
