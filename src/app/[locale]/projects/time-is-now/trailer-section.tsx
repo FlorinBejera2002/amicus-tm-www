@@ -11,12 +11,12 @@ export default function TrailerSection() {
     <div className="flex flex-col gap-4 pb-4 justify-center items-center">
       <h3 className="text-[#f3a61d] font-bold">{t('trailer')}</h3>
       <Link
-        className="pointer border-b pb-10 border-[#ffffff]"
+        className="pointer "
         href="https://www.youtube.com/watch?v=k1VGbMGFpro"
       >
         <Image
           alt="arise for christ logo"
-          className="object-contain"
+          className="object-contain w-screen px-4"
           src={trailerImage}
         />
       </Link>
