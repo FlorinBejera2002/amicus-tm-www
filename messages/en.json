@@ -208,6 +208,15 @@
     "trailer": "OFFICIAL TRAILER",
     "verset": "`The fields are ripe for harvest, but the laborers are few. Therefore, pray to the Lord of the harvest to send out laborers into His harvest.`"
   },
+  "steps_evanghelization": {
+    "step1": "Scanează codul QR",
+    "step1_description": "Noi îl vom contacta",
+    "step2": "Completează cererea",
+    "step2_description": "Completeaza o cerere de evanghelizare!",
+    "step3": "Noi îl vom contacta",
+    "step3_description": "Completeaza o cerere de evanghelizare!",
+    "title": "Pasii de evanghelizare"
+  },
   "team": {
     "adi-kovaci": "Director of Media",
     "andrei-birtea": "Video maker",

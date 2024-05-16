@@ -208,6 +208,15 @@
     "trailer": "TRAILER OFICIAL",
     "verset": "`Câmpurile sunt bogate pentru seceriş, dar secerătorii sunt puţini. Rugaţi deci pe Domnul secerişului să trimită lucrători în secerişul Lui.`"
   },
+  "steps_evanghelization": {
+    "step1": "Scanează codul QR",
+    "step1_description": "Noi îl vom contacta",
+    "step2": "Completează cererea",
+    "step2_description": "Completeaza o cerere de evanghelizare!",
+    "step3": "Noi îl vom contacta",
+    "step3_description": "Completeaza o cerere de evanghelizare!",
+    "title": "Pasii de evanghelizare"
+  },
   "team": {
     "adi-kovaci": "Director Media",
     "andrei-birtea": "Producător video",
