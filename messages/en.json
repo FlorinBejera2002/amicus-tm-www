@@ -171,9 +171,9 @@
     "vision": "Vision"
   },
   "hero": {
-    "question1": "Do you care for the salvation of your loved ones?",
+    "question1": "Do you want a loved one to be saved?",
     "question2": "Do you need support in prayer?",
-    "question3": "Do you want to encourage someone?",
+    "question3": "Would you like to encourage someone?",
     "title-hero": "The Hope"
   },
   "language": {
@@ -224,7 +224,7 @@
     "christian-potra": "CEO Arise for Christ",
     "dana-potra": "CEO Arise for Christ",
     "simona-birtea": "Social Media",
-    "title-a4c": "Arise for Christ Team Timișoara 📍"
+    "title-a4c": "Arise for Christ Team"
   },
   "vision": {
     "description": "Arise for Christ is based on a personal evangelism project that requires the involvement of Christians for salvation of their family and friends.",

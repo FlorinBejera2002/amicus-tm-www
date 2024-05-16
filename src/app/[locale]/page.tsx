@@ -32,7 +32,7 @@ export default function Home() {
         <div className="md:mx-48 p-relative z-index-3">
           <div className="row min-vh-100 align-items-center">
             <div className="col-lg-10 text-center text-lg-start">
-              <h3 className="text-color-light font-weight-bold custom-hero-font-1 pb-2 mb-4 appear-animation text-wrap">
+              <h3 className="text-color-light font-weight-bold text-5xl leading-tight pb-2 mb-4 appear-animation text-wrap">
                 {t('question1')}
                 <br />
                 {t('question2')}

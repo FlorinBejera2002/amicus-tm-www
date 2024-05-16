@@ -14,8 +14,8 @@ export default function PersonalEvangelism() {
     <section id="concept">
       <div className="md:mx-48 px-2 bg-color-light p-relative z-index-2 py-1 mt-3">
         <div className="row py-3 my-3">
-          <h1 className="font-bold pb-4 text-2xl md:text-3xl xl:4xl text-center">
-            {t('presentation_title')}
+          <h1 className="font-bold pb-4 md:pb-10 text-2xl md:text-3xl xl:4xl text-center">
+            {t('title')}
           </h1>
           <div className="hidden md:flex flex-col col-lg-6 text-center">
             <div className="d-flex mb-3">
@@ -23,7 +23,7 @@ export default function PersonalEvangelism() {
                 <div className="custom-el-3 bg-color-tertiary custom-border-radius-1 mx-auto appear-animation">
                   <Image
                     alt="Arise photo"
-                    className="custom-el-3-img p-relative size-full"
+                    className="object-cover custom-el-3-img p-relative size-full"
                     loading="lazy"
                     src={step5}
                   />
@@ -33,7 +33,7 @@ export default function PersonalEvangelism() {
               <div className="p-2 flex-fill">
                 <Image
                   alt="Arise photo"
-                  className="custom-el-3 bg-color-primary custom-border-radius-2 mx-auto appear-animation"
+                  className="object-left object-cover custom-el-3 bg-color-primary custom-border-radius-2 mx-auto appear-animation"
                   loading="lazy"
                   src={step2}
                 />
@@ -43,7 +43,7 @@ export default function PersonalEvangelism() {
                 <div className="custom-el-3 custom-el-3-pos-1 bg-color-dark custom-border-radius-3 mx-auto appear-animation">
                   <Image
                     alt="Arise photo"
-                    className="custom-el-3-img p-relative size-full"
+                    className="object-cover custom-el-3-img p-relative size-full"
                     loading="lazy"
                     src={step1}
                   />
@@ -59,7 +59,7 @@ export default function PersonalEvangelism() {
                 >
                   <Image
                     alt="Arise photo"
-                    className="custom-el-3-img p-relative size-full"
+                    className="object-cover custom-el-3-img p-relative size-full"
                     loading="lazy"
                     src={step3}
                   />
@@ -74,7 +74,7 @@ export default function PersonalEvangelism() {
                 >
                   <Image
                     alt="Arise photo"
-                    className=" custom-el-3-img p-relative size-full"
+                    className="object-cover custom-el-3-img p-relative size-full"
                     loading="lazy"
                     src={step4}
                   />

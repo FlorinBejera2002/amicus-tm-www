@@ -20,11 +20,11 @@ export default function Team() {
             {t('title-a4c')}
           </b>
 
-          <div className="py-5 grid gap-2 grid-cols-2 md:grid-cols-3 xl:grid-cols-6">
+          <div className="py-5 grid gap-3 md:gas grid-cols-2 md:grid-cols-3 xl:grid-cols-6">
             <div className="mt-3 bg-gradient-to-t from-gray-800 to-transparent rounded-xl gap-1 flex flex-col justify-center  items-center   hover:scale-110 hover:bg-indigo-900 duration-300  ">
               <Image
                 alt="Christian Potra"
-                className="border-b border-gray-600 pb-3"
+                className="border-b border-gray-600 py-3"
                 height={150}
                 src={Chris}
                 width={150}
@@ -38,7 +38,7 @@ export default function Team() {
               <Link href="https://www.youtube.com/watch?v=XhQIeYzccUI">
                 <Image
                   alt="Dana Potra"
-                  className="border-b border-gray-600 pb-3"
+                  className="border-b border-gray-600 py-3"
                   height={150}
                   src={Dana}
                   width={150}
@@ -53,7 +53,7 @@ export default function Team() {
               <Link href="https://www.youtube.com/watch?v=XhQIeYzccUI">
                 <Image
                   alt="Avram Sabou"
-                  className="border-b border-gray-600 pb-3"
+                  className="border-b border-gray-600 py-3"
                   height={150}
                   src={AvramSabou}
                   width={150}
@@ -70,7 +70,7 @@ export default function Team() {
               <Link href="https://www.youtube.com/watch?v=XhQIeYzccUI">
                 <Image
                   alt="Adi Kovaci"
-                  className="border-b border-gray-600 pb-3"
+                  className="border-b border-gray-600 py-3"
                   height={150}
                   src={AdrianCovaci}
                   width={150}
@@ -85,7 +85,7 @@ export default function Team() {
               <Link href="https://www.youtube.com/watch?v=XhQIeYzccUI">
                 <Image
                   alt="Andrei Birtea"
-                  className="border-b border-gray-600 pb-3"
+                  className="border-b border-gray-600 py-3"
                   height={150}
                   src={Andrei}
                   width={150}
@@ -100,7 +100,7 @@ export default function Team() {
               <Link href="https://www.youtube.com/watch?v=XhQIeYzccUI">
                 <Image
                   alt="Simona Birtea"
-                  className="border-b border-gray-600 pb-3"
+                  className="border-b border-gray-600 py-3"
                   height={150}
                   src={Simona}
                   width={150}

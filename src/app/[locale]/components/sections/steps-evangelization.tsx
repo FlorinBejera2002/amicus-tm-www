@@ -13,17 +13,18 @@ export default function StepsEvangelization() {
 
   return (
     <section id="concept">
-      <div className="md:mx-48 grid grid-cols-2  bg-color-light p-relative z-index-2 pb-10">
+      <div className="md:mx-48 grid md:grid-cols-2  bg-color-light p-relative z-index-2 pb-10">
         <div className="hidden md:flex items-center justify-center">
           <Image
             alt="Stps for Evangelisation"
+            className="rounded-tr-[10em]"
             height={400}
             src={stepsImage}
             width={400}
           />
         </div>
-        <div className="flex flex-col gap-8 md:gap-12 xl:gap px-2 md:px-4">
-          <h1 className="text-3xl md:text-4xl xl:text-5xl font-poppins text-center font-bold">
+        <div className="flex flex-col gap-8 md:gap-12 xl:gap-16 px-2 md:px-4">
+          <h1 className="text-3xl md:text-4xl xl:text-5xl font-poppins font-bold ">
             {t('title')}
           </h1>
           <StepEvangelization
@@ -36,13 +37,13 @@ export default function StepsEvangelization() {
             description={t('step2_description')}
             header={t('step2')}
             numberImage={<PiNumberCircleTwoFill className="w-24 h-24" />}
-            styles="xl:justify-center mr-0"
+            styles="xl:justify-center"
           />
           <StepEvangelization
             description={t('step3_description')}
-            header={t('step2')}
+            header={t('step3')}
             numberImage={<PiNumberCircleThreeFill className="w-24 h-24" />}
-            styles="xl:"
+            styles="xl:justify-start"
           />
         </div>
       </div>
