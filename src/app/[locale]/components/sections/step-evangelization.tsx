@@ -13,7 +13,7 @@ export const StepEvangelization = ({ styles, ...props }: Props) => {
   return (
     <div
       className={cn(
-        'flex justify-centermd:justify-start flex-col md:flex-row flex-wrap items-center gap-1 md:gap-2 xl:gap-4',
+        'flex justify-center md:justify-start items-center flex-col md:flex-row flex-wrap  gap-1 md:gap-2 xl:gap-4',
         styles
       )}
     >
