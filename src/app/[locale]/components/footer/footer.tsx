@@ -1,19 +1,35 @@
 'use client'
-import Socials from './socials'
-import Animation from './sections/animation'
 
-import { useTranslations } from 'next-intl'
+import FooterOverview from './footer-overview'
+
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 import Image from 'next/image'
 
-import horizontalLogo from '../../../../public/logo_horizontal_white.png'
+import Socials from '.././socials'
+import Animation from '.././sections/animation'
+import horizontalLogo from '../../../../../public/logo_horizontal_white.png'
 
 export default function Footer() {
-  const t = useTranslations()
   const pathname = usePathname()
 
   const language = pathname.split('/')[1]
+
+  const companyLinks = [
+    { href: '/', titleKey: 'header.home' },
+    { href: `/${language}/about`, titleKey: 'header.about_us' },
+    { href: `/${language}/vision`, titleKey: 'header.vision' }
+  ]
+  const projectLinks = [
+    { href: `/${language}/donate`, titleKey: 'header.donate' },
+    { href: `/${language}/projects/time-is-now`, titleKey: 'header.project_' },
+    { href: `/${language}/projects/podcast`, titleKey: 'header.podcast' }
+  ]
+  const resourcesLinks = [
+    { href: `/${language}/donate`, titleKey: 'header.terms' },
+    { href: `/${language}/projects/time-is-now`, titleKey: 'header.blog' },
+    { href: '?ev-req-form=open', titleKey: 'header.contact' }
+  ]
 
   return (
     <footer className="p-relative  border-top-0 font-poppins px-2" id="footer">
@@ -55,108 +71,12 @@ export default function Footer() {
           </div>
           <div className="col-lg-6 mt-lg-5 pt-lg-3">
             <div className="row mb-5-5">
-              <div className="col-md-4 mb-4 mb-lg-0">
-                <h4 className="text-color-light font-weight-bold mb-3 ">
-                  {t('header.company')}
-                </h4>
-
-                <ul className="flex flex-col list list-unstyled text-3-5 gap-[13px]">
-                  <li>
-                    <Link
-                      className="text-color-grey text-color-hover-primary text-decoration-none"
-                      href="/"
-                    >
-                      {t('header.home')}
-                    </Link>
-                  </li>
-
-                  <li>
-                    <Link
-                      className="text-color-grey text-color-hover-primary text-decoration-none"
-                      href={`/${language}/about`}
-                    >
-                      {t('header.about_us')}
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      className="text-color-grey text-color-hover-primary text-decoration-none"
-                      href={`/${language}/vision`}
-                    >
-                      {t('header.vision')}
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="col-md-4 mb-4 mb-lg-0">
-                <h4 className="text-color-light font-weight-bold mb-3">
-                  {t('header.project')}
-                </h4>
-                <ul className="flex flex-col list list-unstyled text-3-5 gap-[13px]">
-                  <li>
-                    <Link
-                      className="text-color-grey text-color-hover-primary text-decoration-none"
-                      href={`/${language}/donate`}
-                    >
-                      {t('header.donate')}
-                    </Link>
-                  </li>
-
-                  <li>
-                    <Link
-                      className="text-color-grey text-color-hover-primary text-decoration-none"
-                      href={`/${language}/projects/time-is-now`}
-                    >
-                      {t('header.project_')}
-                    </Link>
-                  </li>
-
-                  <li>
-                    <Link
-                      className="text-color-grey text-color-hover-primary text-decoration-none"
-                      href={`/${language}/projects/podcast`}
-                    >
-                      Podcast
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="col-md-4 mb-4 mb-lg-0">
-                <h4 className="text-color-light font-weight-bold mb-3">
-                  {t('header.resources')}
-                </h4>
-
-                <ul className="flex flex-col list list-unstyled text-3-5 gap-[13px]">
-                  <li>
-                    <Link
-                      className="text-color-grey text-color-hover-primary text-decoration-none"
-                      href="https://www.youtube.com/@Ariseforchrist"
-                    >
-                      Terms
-                    </Link>
-                  </li>
-
-                  <li>
-                    <Link
-                      className="text-color-grey text-color-hover-primary text-decoration-none"
-                      href="https://www.youtube.com/@Ariseforchrist"
-                    >
-                      Blog
-                    </Link>
-                  </li>
-
-                  <li>
-                    <Link
-                      className="text-color-grey text-color-hover-primary text-decoration-none"
-                      href="?ev-req-form=open"
-                    >
-                      Contact
-                    </Link>
-                  </li>
-                </ul>
-              </div>
+              <FooterOverview links={companyLinks} titleKey="header.company" />
+              <FooterOverview links={projectLinks} titleKey="header.project" />
+              <FooterOverview
+                links={resourcesLinks}
+                titleKey="header.resources"
+              />
             </div>
 
             <h4 className="text-color-light font-extrabold mb-3 text-lg">

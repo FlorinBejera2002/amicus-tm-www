@@ -193,8 +193,15 @@ export default function Nav() {
                       </Link>
                     </li>
                     <li>
-                      <Link className="dropdown-item" href="#">
-                        Sublink 2
+                      <Link
+                        className="dropdown-item"
+                        href={`/${language}/projects/podcast`}
+                        onClick={() => {
+                          setNavBar(!navbar)
+                          setSubMenu(!subMenu)
+                        }}
+                      >
+                        Podcast
                       </Link>
                     </li>
                   </ul>

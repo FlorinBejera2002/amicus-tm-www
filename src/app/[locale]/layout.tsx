@@ -17,7 +17,7 @@ import './css/animate.compat.css'
 import ScrollButton from './components/sections/scroll-button'
 import Modal from './components/sections/evangelism-form'
 import Nav from './components/nav'
-import Footer from './components/footer'
+import Footer from './components/footer/footer'
 
 import { NextIntlClientProvider, useMessages } from 'next-intl'
 import { Poppins } from 'next/font/google'

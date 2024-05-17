@@ -1,18 +1,11 @@
 'use client'
-import React, { useState } from 'react'
 
 import { FaChevronUp } from 'react-icons/fa'
 import { useWindowScroll } from '@uidotdev/usehooks'
+import { cn } from '@/utils'
 
 export default function ScrollButton() {
-  const [visible, setVisible] = useState(false)
   const [{ y }] = useWindowScroll()
-
-  React.useEffect(() => {
-    if (y !== null) {
-      setVisible(y > 300)
-    }
-  }, [y])
 
   const scrollToTop = () => {
     window.scrollTo({
@@ -22,13 +15,14 @@ export default function ScrollButton() {
   }
 
   return (
-    visible && (
-      <button
-        className={`fixed bottom-20 right-2.5 flex justify-center items-center text-center bg-[#e3ae04] rounded-md p-3 min-w-12 text-lg opacity-75 transition-opacity duration-300 z-40 ${window.innerWidth > 768 ? 'block' : 'hidden'}`}
-        onClick={scrollToTop}
-      >
-        <FaChevronUp />
-      </button>
-    )
+    <button
+      className={cn(
+        'fixed bottom-[20px] right-[20px] justify-center items-center text-center bg-[#e3ae04]/[.75] rounded-md p-3 min-w-12 text-lg transition-all duration-300 z-40',
+        y! > 300 ? 'scale-100' : 'scale-0'
+      )}
+      onClick={scrollToTop}
+    >
+      <FaChevronUp />
+    </button>
   )
 }
