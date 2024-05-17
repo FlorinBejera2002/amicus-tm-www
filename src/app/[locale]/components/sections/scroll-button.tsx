@@ -24,7 +24,7 @@ export default function ScrollButton() {
   return (
     visible && (
       <button
-        className="fixed bottom-20 right-2.5 flex justify-center items-center text-center bg-[#e3ae04] rounded-md hidden-mobile visible p-3 min-w-12 text-lg opacity-75 transition-opacity duration-300 z-40"
+        className={`fixed bottom-20 right-2.5 flex justify-center items-center text-center bg-[#e3ae04] rounded-md p-3 min-w-12 text-lg opacity-75 transition-opacity duration-300 z-40 ${window.innerWidth > 768 ? 'block' : 'hidden'}`}
         onClick={scrollToTop}
       >
         <FaChevronUp />
