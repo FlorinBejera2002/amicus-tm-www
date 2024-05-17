@@ -1,12 +1,20 @@
+'use client'
 import Socials from './socials'
 import Animation from './sections/animation'
 
+import { useTranslations } from 'next-intl'
+import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 import Image from 'next/image'
 
 import horizontalLogo from '../../../../public/logo_horizontal_white.png'
 
 export default function Footer() {
+  const t = useTranslations()
+  const pathname = usePathname()
+
+  const language = pathname.split('/')[1]
+
   return (
     <footer className="p-relative  border-top-0 font-poppins px-2" id="footer">
       <div className="md:px-48 pt-5 pb-3 border-bottom">
@@ -49,34 +57,33 @@ export default function Footer() {
             <div className="row mb-5-5">
               <div className="col-md-4 mb-4 mb-lg-0">
                 <h4 className="text-color-light font-weight-bold mb-3 ">
-                  Company
+                  {t('header.company')}
                 </h4>
 
                 <ul className="flex flex-col list list-unstyled text-3-5 gap-[13px]">
                   <li>
                     <Link
                       className="text-color-grey text-color-hover-primary text-decoration-none"
-                      href="https://www.youtube.com/@Ariseforchrist"
+                      href="/"
                     >
-                      Home
+                      {t('header.home')}
                     </Link>
                   </li>
 
                   <li>
                     <Link
                       className="text-color-grey text-color-hover-primary text-decoration-none"
-                      href="https://www.youtube.com/@Ariseforchrist"
+                      href={`/${language}/about`}
                     >
-                      About Us
+                      {t('header.about_us')}
                     </Link>
                   </li>
-
                   <li>
                     <Link
                       className="text-color-grey text-color-hover-primary text-decoration-none"
-                      href="https://www.youtube.com/@Ariseforchrist"
+                      href={`/${language}/vision`}
                     >
-                      Services
+                      {t('header.vision')}
                     </Link>
                   </li>
                 </ul>
@@ -84,33 +91,33 @@ export default function Footer() {
 
               <div className="col-md-4 mb-4 mb-lg-0">
                 <h4 className="text-color-light font-weight-bold mb-3">
-                  Solutions
+                  {t('header.project')}
                 </h4>
                 <ul className="flex flex-col list list-unstyled text-3-5 gap-[13px]">
                   <li>
                     <Link
                       className="text-color-grey text-color-hover-primary text-decoration-none"
-                      href="https://www.youtube.com/@Ariseforchrist"
+                      href={`/${language}/donate`}
                     >
-                      Brand Development
+                      {t('header.donate')}
                     </Link>
                   </li>
 
                   <li>
                     <Link
                       className="text-color-grey text-color-hover-primary text-decoration-none"
-                      href="https://www.youtube.com/@Ariseforchrist"
+                      href={`/${language}/projects/time-is-now`}
                     >
-                      Graphic Design
+                      {t('header.project_')}
                     </Link>
                   </li>
 
                   <li>
                     <Link
                       className="text-color-grey text-color-hover-primary text-decoration-none"
-                      href="https://www.youtube.com/@Ariseforchrist"
+                      href={`/${language}/projects/podcast`}
                     >
-                      UX Design
+                      Podcast
                     </Link>
                   </li>
                 </ul>
@@ -118,7 +125,7 @@ export default function Footer() {
 
               <div className="col-md-4 mb-4 mb-lg-0">
                 <h4 className="text-color-light font-weight-bold mb-3">
-                  Resources
+                  {t('header.resources')}
                 </h4>
 
                 <ul className="flex flex-col list list-unstyled text-3-5 gap-[13px]">
@@ -143,7 +150,7 @@ export default function Footer() {
                   <li>
                     <Link
                       className="text-color-grey text-color-hover-primary text-decoration-none"
-                      href="https://www.youtube.com/@Ariseforchrist"
+                      href="?ev-req-form=open"
                     >
                       Contact
                     </Link>

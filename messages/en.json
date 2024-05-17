@@ -168,7 +168,9 @@
     "home": "Home",
     "project": "Projects",
     "project_": "The time is now",
-    "vision": "Vision"
+    "vision": "Vision",
+    "company": "Company",
+    "resources": "Resources"
   },
   "hero": {
     "question1": "Do you want a loved one to be saved?",

@@ -14,6 +14,7 @@ import './css/demo-creative-agency-2.css'
 import './css/custom.css'
 import './css/bootstrap.min.css'
 import './css/animate.compat.css'
+import ScrollButton from './components/sections/scroll-button'
 import Modal from './components/sections/evangelism-form'
 import Nav from './components/nav'
 import Footer from './components/footer'
@@ -49,6 +50,7 @@ export default function RootLayout({ children, params: { locale } }: any) {
           <Modal />
           <Footer />
         </NextIntlClientProvider>
+        <ScrollButton />
       </body>
     </html>
   )
