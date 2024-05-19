@@ -21,19 +21,6 @@
     "dist/",
     "vite.config.ts"
   ],
-  "overrides": [
-    {
-      "files": ["*.ts", "*.tsx"]
-    },
-    {
-      "files": ["./package.json", "./package-lock.json"],
-      "rules": {
-        "@typescript-eslint/no-explicit-any": "off",
-        "@typescript-eslint/no-unused-vars": "off",
-        "perfectionist/sort-objects": "off"
-      }
-    }
-  ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaFeatures": {
@@ -61,10 +48,6 @@
     "jsx-a11y/no-onchange": "error",
     "jsx-a11y/no-static-element-interactions": "error",
     "no-console": "warn",
-    "quotes": [
-      "error",
-      "single"
-    ],
     "no-undef": "error",
     "no-unused-vars": "error",
     "padding-line-between-statements": [
@@ -177,5 +160,24 @@
     "react": {
       "version": "detect"
     }
-  }
+  },
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx"]
+    },
+    {
+      "files": ["./package.json", "./package-lock.json"],
+      "rules": {
+        "@typescript-eslint/no-explicit-any": "off",
+        "@typescript-eslint/no-unused-vars": "off",
+        "perfectionist/sort-objects": "off"
+      }
+    },
+    {
+      "files": ["*.json"],
+      "rules": {
+        "quotes": ["error", "double"]
+      }
+    }
+  ]
 }
