@@ -1,8 +1,7 @@
 'use client'
-import { useState } from 'react'
+import { ReactNode, useState } from 'react'
 
 import Language from './sections/language-button'
-import Projects from '../projects/page'
 import { cn } from '../../../utils'
 
 import { FaChevronDown } from 'react-icons/fa'
@@ -14,6 +13,34 @@ import Image from 'next/image'
 import { useWindowScroll } from '@uidotdev/usehooks'
 
 import horizontalLogo from '../../../../public/logo_horizontal_white.png'
+
+type Link = {
+  href: string
+  label?: string | undefined
+  route: string
+}
+
+const ActiveLink = ({
+  children,
+  link,
+  pathname
+}: {
+  children?: ReactNode
+  link?: Link
+  pathname: string
+}) => (
+  <Link
+    className={cn(
+      'nav-link',
+      pathname === link?.href || (pathname.includes('projects') && !link)
+        ? '!text-[#e3ae04] md:!scale-125'
+        : ''
+    )}
+    href={link?.href ?? '#'}
+  >
+    {link?.label ?? children}
+  </Link>
+)
 
 export default function Nav() {
   const [navbar, setNavBar] = useState(false)
@@ -76,21 +103,34 @@ export default function Nav() {
                       <ul className="nav nav-pills" id="mainNav">
                         {navLinks.map((link) => (
                           <li key={link.route}>
-                            <Link
-                              className={cn(
-                                'nav-link',
-                                pathname === link.href
-                                  ? '!text-[#e3ae04] md:!scale-125'
-                                  : ''
-                              )}
-                              href={link.href}
-                            >
-                              {link.label}
-                            </Link>
+                            <ActiveLink link={link} pathname={pathname} />
                           </li>
                         ))}
 
-                        <Projects />
+                        <li className="dropdown">
+                          <ActiveLink pathname={pathname}>
+                            {t('project')}
+                            <FaChevronDown className="pl-1.5" />
+                          </ActiveLink>
+                          <ul className="dropdown-menu">
+                            <li>
+                              <Link
+                                className="dropdown-item"
+                                href={`/${language}/projects/time-is-now`}
+                              >
+                                {t('header.project_')}
+                              </Link>
+                            </li>
+                            <li>
+                              <Link
+                                className="dropdown-item"
+                                href={`/${language}/projects/podcast`}
+                              >
+                                Podcast
+                              </Link>
+                            </li>
+                          </ul>
+                        </li>
                       </ul>
                     </nav>
                   </div>

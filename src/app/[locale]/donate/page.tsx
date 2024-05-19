@@ -8,7 +8,7 @@ export default function Donate() {
   return (
     <div className="main" role="main">
       <section
-        className="p-relative border-0 bg-quaternary overflow-hidden px-2"
+        className="p-relative border-0 bg-quaternary overflow-hidden px-2 min-h-screen"
         id="home"
       >
         <div className="font-bold custom-hero-heading text-white">
