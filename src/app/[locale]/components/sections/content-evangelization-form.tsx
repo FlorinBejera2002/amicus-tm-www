@@ -71,7 +71,7 @@ const ContentEvangelizationForm = () => {
             })
             setTimeout(() => {
               router.push('/')
-            }, 3000)
+            }, 2000)
           } catch (error) {
             setMessage({
               content: 'A apărut o eroare la trimiterea formularului: ' + error,
