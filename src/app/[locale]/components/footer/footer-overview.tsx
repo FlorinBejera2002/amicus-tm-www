@@ -24,23 +24,6 @@ export default function FooterOverview({ links, titleKey }: CompanyProps) {
             </Link>
           </li>
         ))}
-
-        {/* <li>
-          <Link
-            className="text-color-grey text-color-hover-primary text-decoration-none"
-            href={`/${language}/about`}
-          >
-            {t('header.about_us')}
-          </Link>
-        </li>
-        <li>
-          <Link
-            className="text-color-grey text-color-hover-primary text-decoration-none"
-            href={`/${language}/vision`}
-          >
-            {t('header.vision')}
-          </Link>
-        </li> */}
       </ul>
     </div>
   )
