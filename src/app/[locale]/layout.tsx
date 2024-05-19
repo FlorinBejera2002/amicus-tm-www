@@ -20,7 +20,10 @@ import Nav from './components/nav'
 import Footer from './components/footer/footer'
 
 import { NextIntlClientProvider, useMessages } from 'next-intl'
+import Script from 'next/script'
 import { Poppins } from 'next/font/google'
+import { Analytics } from '@vercel/analytics/react'
+import splitbee from '@splitbee/web'
 
 const poppins = Poppins({
   display: 'swap',
@@ -38,6 +41,8 @@ export const metadata: Metadata = {
   title: 'Arise for Christ'
 }
 
+splitbee.init()
+
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export default function RootLayout({ children, params: { locale } }: any) {
   const messages = useMessages()
@@ -52,6 +57,10 @@ export default function RootLayout({ children, params: { locale } }: any) {
           <Footer />
         </NextIntlClientProvider>
         <ScrollButton />
+
+        {/* analytics */}
+        <Analytics />
+        <Script async={true} src="https://cdn.splitbee.io/sb.js"></Script>
       </body>
     </html>
   )
