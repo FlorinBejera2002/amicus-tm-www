@@ -32,7 +32,9 @@ const ContentEvangelizationForm = () => {
 
   return (
     <MailchimpSubscribe
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       render={({ subscribe }: any) => {
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         const handleSubmit = async (event: any) => {
           event.preventDefault()
           const email = event.target.email.value

@@ -163,17 +163,17 @@
   "header": {
     "about_us": "Despre Noi",
     "actone": "Act One",
+    "blog": "Blog",
+    "company": "Companie",
     "contact": "Contact",
     "donate": "Donează",
     "home": "Acasă",
+    "podcast": "Podcast",
     "project": "Proiecte",
     "project_": "Timpul este acum",
-    "vision": "Viziunea",
-    "company": "Companie",
     "resources": "Resurse",
-    "podcast": "Podcast",
     "terms": "Termeni",
-    "blog": "Blog"
+    "vision": "Viziunea"
   },
   "hero": {
     "question1": "Dorești mântuirea cuiva drag?",
