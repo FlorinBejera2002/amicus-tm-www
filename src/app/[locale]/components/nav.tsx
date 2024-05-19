@@ -24,6 +24,17 @@ export default function Nav() {
 
   const language = pathname.split('/')[1]
 
+  const navLinks = [
+    { href: `/${language}`, label: t('header.home'), route: 'home' },
+    {
+      href: `/${language}/about`,
+      label: t('header.about_us'),
+      route: 'aboutUs'
+    },
+    { href: `/${language}/vision`, label: t('header.vision'), route: 'vision' },
+    { href: `/${language}/donate`, label: t('header.donate'), route: 'donate' }
+  ]
+
   return (
     <header
       className={cn(
@@ -61,40 +72,24 @@ export default function Nav() {
                     header-nav-main-arrows header-nav-main-full-width-mega-menu header-nav-main-mega-menu-bg-hover 
                     header-nav-main-mega-menu-bg-hover-dark header-nav-main-effect-5 hidden"
                   >
-                    <nav className=" closed ">
+                    <nav className="closed">
                       <ul className="nav nav-pills" id="mainNav">
-                        <li>
-                          <Link className="nav-link" href="/">
-                            {t('header.home')}
-                          </Link>
-                        </li>
+                        {navLinks.map((link) => (
+                          <li key={link.route}>
+                            <Link
+                              className={cn(
+                                'nav-link',
+                                pathname === link.href
+                                  ? '!text-[#e3ae04] md:!scale-125'
+                                  : ''
+                              )}
+                              href={link.href}
+                            >
+                              {link.label}
+                            </Link>
+                          </li>
+                        ))}
 
-                        <li>
-                          <Link
-                            className="nav-link"
-                            href={`/${language}/about`}
-                          >
-                            {t('header.about_us')}
-                          </Link>
-                        </li>
-
-                        <li>
-                          <Link
-                            className="nav-link"
-                            href={`/${language}/vision`}
-                          >
-                            {t('header.vision')}
-                          </Link>
-                        </li>
-
-                        <li>
-                          <Link
-                            className="nav-link"
-                            href={`/${language}/donate`}
-                          >
-                            {t('header.donate')}
-                          </Link>
-                        </li>
                         <Projects />
                       </ul>
                     </nav>

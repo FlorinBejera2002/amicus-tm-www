@@ -1,5 +1,8 @@
 'use client'
-import MailchimpSubscribe from 'react-mailchimp-subscribe'
+import MailchimpSubscribe, {
+  EmailFormFields,
+  FormHooks
+} from 'react-mailchimp-subscribe'
 import React, { useState } from 'react'
 
 import { PiNumberCircleOneFill } from 'react-icons/pi'
@@ -7,10 +10,7 @@ import { PiNumberCircleTwoFill } from 'react-icons/pi'
 import { PiNumberCircleThreeFill } from 'react-icons/pi'
 import { useTranslations } from 'next-intl'
 import { useRouter } from 'next/navigation'
-import Image from 'next/image'
 import { cn } from '@/utils'
-
-import horizontalLogo from '../../../../../public/logo_horizontal_black.png'
 
 const CMS_URL = 'https://cms-backend.ariseforchrist.com'
 const MAILCHIMP_URL =
@@ -33,8 +33,7 @@ const ContentEvangelizationForm = () => {
 
   return (
     <MailchimpSubscribe
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      render={({ subscribe }: any) => {
+      render={({ subscribe }: FormHooks<EmailFormFields>) => {
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         const handleSubmit = async (event: any) => {
           event.preventDefault()
@@ -82,13 +81,6 @@ const ContentEvangelizationForm = () => {
 
         return (
           <div className="m-2 md:p-5 lg:p-10">
-            <Image
-              alt="arise for christ logo"
-              className="absolute left-12 top-12 hidden md:flex"
-              height={40}
-              src={horizontalLogo}
-              width={140}
-            />
             <div className="flex flex-col md:items-center">
               <h1 className="text-xl md:text-3xl lg:text-4xl md:pb-4 pt-3">
                 {t('title')}
@@ -108,6 +100,9 @@ const ContentEvangelizationForm = () => {
                 </p>
               </div>
             </div>
+
+            <div className="w-full h-[1px] bg-yellow-500 mt-1 mb-4" />
+
             <form
               className="pt-4 flex flex-col md:gap-4"
               onSubmit={handleSubmit}
@@ -175,7 +170,7 @@ const ContentEvangelizationForm = () => {
                   {t('details')}
                 </label>
               </div>
-              <div className="flex gap-2 pt-3">
+              <div className="flex gap-2 pt-3 items-center">
                 <input
                   checked={isChecked}
                   className="flex w-5 h-5"
@@ -202,7 +197,8 @@ const ContentEvangelizationForm = () => {
 
               <div className="flex justify-center items-center pb-3 pt-3 md:py-0">
                 <button
-                  className="bg-[#e3ae04] rounded-md px-20 hover:shadow-2xl hover:-translate-2 hover:scale-105 hover:bg-[#e3ae04] duration-700 text-black font-bold py-1 size-9 flex justify-center items-center disabled:opacity-50 disabled:pointer-events-none"
+                  className="bg-[#e3ae04] rounded-md px-20 text-black font-bold py-1 size-9 flex justify-center items-center disabled:opacity-50 disabled:pointer-events-none"
+                  disabled={!isChecked}
                   type="submit"
                 >
                   {t('send')}

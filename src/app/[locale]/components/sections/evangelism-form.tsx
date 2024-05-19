@@ -7,6 +7,7 @@ import ContentEvangelizationForm from './content-evangelization-form'
 import { AiOutlineClose } from 'react-icons/ai'
 import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 import Link from 'next/link'
+import { AnimatePresence, motion } from 'framer-motion'
 
 function Modal() {
   const searchParams = useSearchParams()
@@ -33,10 +34,16 @@ function Modal() {
   })
 
   return (
-    <>
+    <AnimatePresence>
       {modal && (
-        <dialog className="md:fixed left-0 top-0 w-full h-full bg-black bg-opacity-50 z-50 my-24 md:my-0 p-4 overflow-auto backdrop-blur flex justify-center items-center">
-          <div
+        <motion.dialog
+          animate={{ opacity: 1 }}
+          className="md:fixed left-0 top-0 w-full h-full bg-black bg-opacity-50 z-50 my-24 md:my-0 p-4 overflow-auto backdrop-blur flex justify-center items-center"
+          exit={{ opacity: 0 }}
+          initial={{ opacity: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          <motion.div
             className="bg-gradient-to-t relative bg-white rounded-md md:w-[50em] lg:w-[65em] mt-24 flex justify-center items-center"
             ref={modalRef}
           >
@@ -47,10 +54,10 @@ function Modal() {
               <AiOutlineClose className="fill-black w-7 h-7" />
             </Link>
             <ContentEvangelizationForm />
-          </div>
-        </dialog>
+          </motion.div>
+        </motion.dialog>
       )}
-    </>
+    </AnimatePresence>
   )
 }
 

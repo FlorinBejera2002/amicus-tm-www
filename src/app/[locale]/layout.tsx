@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 
+import Template from './template'
 import './globals.css'
 import './css/theme-shop.css'
 import './css/theme-blog.css'
@@ -15,7 +16,7 @@ import './css/custom.css'
 import './css/bootstrap.min.css'
 import './css/animate.compat.css'
 import ScrollButton from './components/sections/scroll-button'
-import Modal from './components/sections/evangelism-form'
+import EvangelismFormModal from './components/sections/evangelism-form'
 import Nav from './components/nav'
 import Footer from './components/footer/footer'
 
@@ -51,10 +52,12 @@ export default function RootLayout({ children, params: { locale } }: any) {
     <html lang={locale}>
       <body className={poppins.className}>
         <NextIntlClientProvider locale={locale} messages={messages}>
-          <Nav />
-          {children}
-          <Modal />
-          <Footer />
+          <Template>
+            <Nav />
+            {children}
+            <Footer />
+          </Template>
+          <EvangelismFormModal />
         </NextIntlClientProvider>
         <ScrollButton />
 

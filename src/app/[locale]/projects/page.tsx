@@ -3,6 +3,7 @@ import { FaChevronDown } from 'react-icons/fa'
 import { useTranslations } from 'next-intl'
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
+import { cn } from '@/utils'
 
 export default function Projects() {
   const pathname = usePathname()
@@ -11,12 +12,18 @@ export default function Projects() {
 
   return (
     <li className="dropdown">
-      <Link className="nav-link" href="#">
+      <Link
+        className={cn(
+          'nav-link',
+          pathname.includes('projects') ? '!text-[#e3ae04] md:!scale-125' : ''
+        )}
+        href="#"
+      >
         {t('project')}
         <FaChevronDown className="pl-1.5" />
       </Link>
       <ul className="dropdown-menu">
-        <li className="dropdown-submenu">
+        <li>
           <Link
             className="dropdown-item"
             href={`/${language}/projects/time-is-now`}
@@ -24,7 +31,7 @@ export default function Projects() {
             {t('project_')}
           </Link>
         </li>
-        <li className="dropdown-submenu">
+        <li>
           <Link
             className="dropdown-item"
             href={`/${language}/projects/podcast`}
