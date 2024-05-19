@@ -163,17 +163,17 @@
   "header": {
     "about_us": "About Us",
     "actone": "Act One",
+    "blog": "Blog",
+    "company": "Company",
     "contact": "Contact",
     "donate": "Donate",
     "home": "Home",
+    "podcast": "Podcast",
     "project": "Projects",
     "project_": "The time is now",
-    "vision": "Vision",
-    "company": "Company",
     "resources": "Resources",
-    "podcast": "Podcast",
     "terms": "Terms",
-    "blog": "Blog"
+    "vision": "Vision"
   },
   "hero": {
     "question1": "Do you want a loved one to be saved?",
@@ -214,6 +214,7 @@
     "verset": "`The fields are ripe for harvest, but the laborers are few. Therefore, pray to the Lord of the harvest to send out laborers into His harvest.`"
   },
   "steps_evanghelization": {
+    "evangelism_requests_count": "Evangelism requests created so far",
     "step1": "Scanează codul QR",
     "step1_description": "Noi îl vom contacta",
     "step2": "Completează cererea",
