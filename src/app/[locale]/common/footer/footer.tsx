@@ -8,7 +8,9 @@ import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 import Image from 'next/image'
 
-import horizontalLogo from '../../../../../public/logo_horizontal_white.png'
+import Socials from '.././socials'
+import Animation from '.././sections/animation'
+import horizontalLogo from '../../../../../public/logo_horizontal_white.webp'
 
 export default function Footer() {
   const pathname = usePathname()

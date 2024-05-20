@@ -8,11 +8,11 @@ import { useTranslations } from 'next-intl'
 import Link from 'next/link'
 import Image from 'next/image'
 
-import step5 from '../../../../public/img/step5.jpeg'
-import step4 from '../../../../public/img/step4.jpeg'
-import step3 from '../../../../public/img/step3.jpeg'
-import step2 from '../../../../public/img/step2.jpeg'
-import step1 from '../../../../public/img/step1.jpg'
+import step5 from '../../../../public/img/step5.webp'
+import step4 from '../../../../public/img/step4.webp'
+import step3 from '../../../../public/img/step3.webp'
+import step2 from '../../../../public/img/step2.webp'
+import step1 from '../../../../public/img/step1.webp'
 
 const About = () => {
   const t = useTranslations()
