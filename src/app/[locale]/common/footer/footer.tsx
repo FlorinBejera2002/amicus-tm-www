@@ -33,7 +33,7 @@ export default function Footer() {
 
   return (
     <footer className="p-relative  border-top-0 font-poppins px-2" id="footer">
-      <div className="container pt-5 pb-3 border-bottom">
+      <div className="container pt-5 pb-3 border-bottom px-3">
         <div className="row py-5">
           <div className="col-lg-6 mt-5 pt-3 gap-4">
             <Link className="flex w-fit" href="/">

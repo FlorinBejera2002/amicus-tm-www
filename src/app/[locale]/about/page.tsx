@@ -25,7 +25,7 @@ const About = () => {
           <div className="row align-items-center my-5 pb-4 pt-5">
             <div className="col my-5 pb-5 text-center">
               <div className="py-4">
-                <ul className="breadcrumb d-flex justify-content-center text-4-5 font-weight-medium mb-2">
+                <ul className="breadcrumb d-flex justify-content-center font-weight-medium mb-2 text-4-5">
                   <li className="z-[1]">
                     <Link
                       className="text-color-primary text-decoration-none"
@@ -50,16 +50,16 @@ const About = () => {
       </section>
 
       <div className="custom-page-content p-relative z-index-2 text-sm">
-        <div className="custom-padding-top-1 custom-padding-bottom-1 px-lg-5  container rounded-md bg-white">
-          <div className="row px-lg-3">
+        <div className="px-2 custom-padding-top-1 custom-padding-bottom-1 px-lg-5 container rounded-md bg-white">
+          <div className="row px-lg-3 px-3">
             <div className="col">
-              <p className="text-4-5 line-height-7 px-lg-3 pl-6">
+              <p className="text-lg md:text-2xl line-height-7 text-dark mb-lg-2 mb-xl-4 mb-4 pb-1">
                 {t('about_us.description_p1_1')}
               </p>
             </div>
           </div>
-          <div className="row px-lg-3 py-4">
-            <div className="col-lg-6 text-center">
+          <div className="row px-lg-3 py-4 px-3">
+            <div className="hidden md:flex flex-col col-lg-6 text-center">
               <div className="d-flex mb-3">
                 <div className="p-2 flex-fill">
                   <div
@@ -69,7 +69,7 @@ const About = () => {
                   >
                     <Image
                       alt="Arise photo"
-                      className="custom-el-3-img p-relative size-full"
+                      className="object-cover custom-el-3-img p-relative size-full"
                       src={step5}
                     />
                   </div>
@@ -78,7 +78,7 @@ const About = () => {
                 <div className="p-2 flex-fill">
                   <Image
                     alt="Arise photo"
-                    className="custom-el-3 bg-color-primary custom-border-radius-2 mx-auto appear-animation"
+                    className="object-left object-cover custom-el-3 bg-color-primary custom-border-radius-2 mx-auto appear-animation"
                     data-appear-animation="zoomIn"
                     data-appear-animation-delay="200"
                     src={step2}
@@ -93,7 +93,7 @@ const About = () => {
                   >
                     <Image
                       alt="Arise photo"
-                      className="custom-el-3-img p-relative size-full"
+                      className="object-cover custom-el-3-img p-relative size-full"
                       src={step1}
                     />
                   </div>
@@ -108,7 +108,7 @@ const About = () => {
                   >
                     <Image
                       alt="Arise photo"
-                      className="custom-el-3-img p-relative size-full"
+                      className="object-cover custom-el-3-img p-relative size-full"
                       src={step3}
                     />
                   </div>
@@ -122,7 +122,7 @@ const About = () => {
                   >
                     <Image
                       alt="Arise photo"
-                      className=" custom-el-3-img p-relative size-full"
+                      className="object-cover custom-el-3-img p-relative size-full"
                       src={step4}
                     />
                   </div>
@@ -130,8 +130,8 @@ const About = () => {
               </div>
             </div>
 
-            <div className="col-lg-6 ps-lg-4">
-              <p className="text-4-5 line-height-7 px-6">
+            <div className="col-lg-6 ps-lg-4 px-3">
+              <p className="text-lg md:text-2xl line-height-7">
                 {t('about_us.description_p1_6')}
               </p>
 
@@ -139,7 +139,7 @@ const About = () => {
 
               <div className="appear-animation pt-4 flex items-center px-6">
                 <Link
-                  className="btn btn-modern btn-primary text-capitalize text-dark text-3 anim-hover-translate-top-5px transition-3ms py-1 pr-30 flex items-center font-semibold"
+                  className="btn btn-modern btn-primary text-capitalize text-dark text-lg md:text-2xl anim-hover-translate-top-5px transition-3ms py-1 pr-30 flex items-center font-semibold"
                   href="#"
                 >
                   {t('button.contact_us')}
@@ -149,9 +149,9 @@ const About = () => {
             </div>
           </div>
 
-          <div className="row px-lg-3 py-5 pl-6">
+          <div className="row px-lg-3 py-5 pl-6 px-3">
             <div className="col">
-              <p className="text-4-5 line-height-7">
+              <p className="text-lg md:text-2xl line-height-7">
                 {t('about_us.description_p3_1')}
               </p>
             </div>
