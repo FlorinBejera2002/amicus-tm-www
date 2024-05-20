@@ -46,9 +46,7 @@ const About = () => {
       <div className="custom-page-content p-relative z-index-2">
         <div className="grid md:grid-cols-2 px-2 custom-padding-top-1 custom-padding-bottom-1 px-lg-5 bg-light md:mx-48">
           <div>
-            <h1 className="text-3xl font-bold mb-6">
-              Ajută-ne să reconstruim credința!
-            </h1>
+            <h1 className="text-3xl font-bold mb-6">{t('donate.title')}</h1>
 
             <p className="text-base text-gray-800 mb-4">
               {t('donate.paragraf_1')}
@@ -67,19 +65,13 @@ const About = () => {
             </p>
           </div>
           <div className="flex justify-center items-center">
-            {/* <div className="p-3 rounded-md bg-gray-300">
-              <div className="flex justify-center">
-                <Image alt="Logo for the bank" className="w-44" src={PayPal} />
-              </div>
-              <p className="">Email: </p>
-            </div> */}
             <div className="p-3 rounded-md bg-gray-300 flex flex-col gap-3 items-center">
               <div className="flex justify-center">
                 <Image alt="Logo for the bank" className="w-44" src={CECLogo} />
               </div>
               <p className="">{t('donate.name')} </p>
               <div className="flex flex-col gap-1">
-                <p className="m-0 font-semibold">RON </p>
+                <p className="m-0 font-semibold">{t('donate.ron')} </p>
                 <p>IBAN: RO36CECETM0130RON0998570</p>
               </div>
               <div className="flex flex-col gap-1">
