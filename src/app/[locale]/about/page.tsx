@@ -62,7 +62,7 @@ const About = () => {
       </section>
 
       <div className="custom-page-content p-relative z-index-2">
-        <div className="custom-padding-top-1 custom-padding-bottom-1 px-lg-5 bg-light container">
+        <div className="custom-padding-top-1 custom-padding-bottom-1 px-lg-5  container rounded-md bg-white">
           <div className="row px-lg-3">
             <div className="col">
               <p className="text-4-5 line-height-7 text-dark mb-lg-2 mb-xl-4 mb-4 pb-1">

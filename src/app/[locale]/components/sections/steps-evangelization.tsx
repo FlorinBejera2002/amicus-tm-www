@@ -10,7 +10,7 @@ export default function StepsEvangelization() {
 
   return (
     <section id="concept">
-      <div className="grid bg-color-light p-relative z-index-2 pb-10 md:mx-20 xl:mx-48 xl:grid-cols-2">
+      <div className="grid bg-color-light p-relative z-index-2 pb-12 md:mx-20 xl:mx-48 xl:grid-cols-2 rounded-md">
         <div className="flex mb-20 xl:flex items-center justify-center">
           <div className="flex flex-col w-1/2 bg-black p-5 rounded-tr-[7rem]">
             <h4 className="text-5xl font-weight-semi-bold text-light mb-4">

@@ -109,7 +109,7 @@ export default function Nav() {
 
                         <li className="dropdown">
                           <ActiveLink pathname={pathname}>
-                            {t('project')}
+                            {t('header.project')}
                             <FaChevronDown className="pl-1.5" />
                           </ActiveLink>
                           <ul className="dropdown-menu">

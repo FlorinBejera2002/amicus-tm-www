@@ -1,7 +1,7 @@
 import YoutubeMiniFeed from './components/sections/youtube-mini-feed'
 import Team from './components/sections/team'
 import StepsEvangelization from './components/sections/steps-evangelization'
-import PersonalEvangelism from './components/sections/personal-evangelism'
+import PersonalEvangelism from './components/sections/personal-evangelism/personal-evangelism'
 import CustomHeroBg from './components/sections/custom-hero-bg'
 import CookieConsents from './components/sections/cookie-consents'
 import Animation from './components/sections/animation'
@@ -68,7 +68,7 @@ export default function Home() {
                   href="https://www.youtube.com/c/Ariseforchrist/"
                   target="blank"
                 >
-                  <div className="flex justify-center items-center gap-2 hover:text-red-500 text-gray-400 ">
+                  <div className="flex justify-center items-center gap-2 hover:text-red-500 text-gray-400">
                     <FaYoutube className="w-5 h-5" />
                     <div>youtube</div>
                   </div>
@@ -79,7 +79,7 @@ export default function Home() {
                   href="https://www.tiktok.com/@ariseforchrist/"
                   target="blank"
                 >
-                  <div className="flex justify-center items-center gap-2 hover:text-[#2AC4CA] text-gray-400 ">
+                  <div className="flex justify-center items-center gap-2 hover:text-[#2AC4CA] text-gray-400">
                     <FaTiktok className="w-5 h-5" />
                     <div>tiktok</div>
                   </div>
@@ -90,7 +90,7 @@ export default function Home() {
                   href="https://open.spotify.com/show/3284C4Oox7JSflk1AOlgav"
                   target="blank"
                 >
-                  <div className="flex justify-center items-center gap-2 hover:text-green-500 text-gray-400 ">
+                  <div className="flex justify-center items-center gap-2 hover:text-green-500 text-gray-400">
                     <FaSpotify className="w-5 h-5" />
                     <div>spotify</div>
                   </div>
