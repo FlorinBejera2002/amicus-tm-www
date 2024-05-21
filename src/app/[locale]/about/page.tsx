@@ -33,7 +33,7 @@ const About = () => {
     <div className="main" role="main">
       <section className="page-header p-relative bg-quaternary m-0 overflow-hidden border-0 p-0">
         <CustomHeroBg />
-        <div className="">
+        <div className="container">
           <div className="row align-items-center my-5 pb-4 pt-5">
             <div className="col my-5 pb-5 text-center">
               <div className="py-4">
@@ -62,7 +62,7 @@ const About = () => {
       </section>
 
       <div className="custom-page-content p-relative z-index-2">
-        <div className="custom-padding-top-1 custom-padding-bottom-1 px-lg-5 bg-light md:mx-48">
+        <div className="custom-padding-top-1 custom-padding-bottom-1 px-lg-5 bg-light container">
           <div className="row px-lg-3">
             <div className="col">
               <p className="text-4-5 line-height-7 text-dark mb-lg-2 mb-xl-4 mb-4 pb-1">
