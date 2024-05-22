@@ -1,20 +1,22 @@
+import AccordionSection from './accordion-section'
+
 import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 
-import step5 from '../../../../../public/img/step5.webp'
-import step4 from '../../../../../public/img/step4.webp'
-import step3 from '../../../../../public/img/step3.webp'
-import step2 from '../../../../../public/img/step2.webp'
-import step1 from '../../../../../public/img/step1.webp'
+import step5 from '../../../../../../public/img/step5.webp'
+import step4 from '../../../../../../public/img/step4.webp'
+import step3 from '../../../../../../public/img/step3.webp'
+import step2 from '../../../../../../public/img/step2.webp'
+import step1 from '../../../../../../public/img/step1.webp'
 
 export default function PersonalEvangelism() {
   const t = useTranslations('vision')
 
   return (
     <section id="concept">
-      <div className="md:mx-48 px-2 bg-color-light p-relative z-index-2 py-1 mt-3">
-        <div className="row py-3 my-3">
-          <h1 className="font-bold pb-4 md:pb-10 text-2xl md:text-3xl xl:4xl text-center">
+      <div className="md:mx-48 px-2 bg-color-light p-relative z-index-2 py-1 mt-3 rounded-md ">
+        <div className="row py-3 my-3 px-8 ">
+          <h1 className="font-bold pb-4 md:pb-10 text-2xl md:text-3xl xl:4xl ">
             {t('title')}
           </h1>
           <div className="hidden md:flex flex-col col-lg-6 text-center">
@@ -82,90 +84,9 @@ export default function PersonalEvangelism() {
               </div>
             </div>
           </div>
-          <div className="col-lg-6">
-            <div className="d-block appear-animation">
-              <div className="toggle toggle-minimal toggle-dark">
-                <section className="toggle">
-                  <details className=" border-b  p-3 rounded-lg transform-gpu delay-75 duration-100 ease-in-out ">
-                    <summary className="leading-6 text-slate-900 font-semibold select-none">
-                      {t('step1_title')}
-                    </summary>
-                    <div className="mt-3 text-sm leading-6 text-slate-600 ">
-                      <p>{t('step1_description')}</p>
-                    </div>
-                  </details>
-                </section>
-                <section className="toggle">
-                  <details className=" border-b  p-3 rounded-lg transform-gpu delay-75 duration-100 ease-in-out ">
-                    <summary className="leading-6 text-slate-900 font-semibold select-none">
-                      {t('step2_title')}
-                    </summary>
-                    <div className="mt-3 text-sm leading-6 text-slate-600 ">
-                      <p>{t('step2_description')}</p>
-                    </div>
-                  </details>
-                </section>
-                <section className="toggle">
-                  <details className=" border-b  p-3 rounded-lg transform-gpu delay-75 duration-100 ease-in-out ">
-                    <summary className="leading-6 text-slate-900 font-semibold select-none">
-                      {t('step3_title')}
-                    </summary>
-                    <div className="mt-3 text-sm leading-6 text-slate-600 ">
-                      <p>{t('step3_description')}</p>
-                    </div>
-                  </details>
-                </section>
-                <section className="toggle">
-                  <details className=" border-b  p-3 rounded-lg transform-gpu delay-75 duration-100 ease-in-out ">
-                    <summary className="leading-6 text-slate-900 font-semibold select-none">
-                      {t('step4_title')}
-                    </summary>
-                    <div className="mt-3 text-sm leading-6 text-slate-600 ">
-                      <p>{t('step4_description')}</p>
-                    </div>
-                  </details>
-                </section>
-                <section className="toggle">
-                  <details className=" border-b  p-3 rounded-lg transform-gpu delay-75 duration-100 ease-in-out ">
-                    <summary className="leading-6 text-slate-900 font-semibold select-none">
-                      {t('step5_title')}
-                    </summary>
-                    <div className="mt-3 text-sm leading-6 text-slate-600 ">
-                      <p>{t('step5_description')}</p>
-                    </div>
-                  </details>
-                </section>
-                <section className="toggle">
-                  <details className=" border-b  p-3 rounded-lg transform-gpu delay-75 duration-100 ease-in-out ">
-                    <summary className="leading-6 text-slate-900 font-semibold select-none">
-                      {t('step6_title')}
-                    </summary>
-                    <div className="mt-3 text-sm leading-6 text-slate-600 ">
-                      <p>{t('step6_description')}</p>
-                    </div>
-                  </details>
-                </section>
-                <section className="toggle">
-                  <details className=" border-b  p-3 rounded-lg transform-gpu delay-75 duration-100 ease-in-out ">
-                    <summary className="leading-6 text-slate-900 font-semibold select-none">
-                      {t('step7_title')}
-                    </summary>
-                    <div className="mt-3 text-sm leading-6 text-slate-600 ">
-                      <p>{t('step7_description')}</p>
-                    </div>
-                  </details>
-                </section>
-                <section className="toggle">
-                  <details className=" border-b  p-3 rounded-lg transform-gpu delay-75 duration-100 ease-in-out ">
-                    <summary className="leading-6 text-slate-900 font-semibold select-none">
-                      {t('step8_title')}
-                    </summary>
-                    <div className="mt-3 text-sm leading-6 text-slate-600 ">
-                      <p>{t('step8_description')}</p>
-                    </div>
-                  </details>
-                </section>
-              </div>
+          <div className="col-lg-6 flex flex-col justify-center ">
+            <div className="flex-1 flex flex-col justify-between !gap-4 md:gap-0 max-h-[400px]">
+              <AccordionSection />
             </div>
           </div>
         </div>

@@ -3,20 +3,20 @@ import AccordionSection from './accordion-section'
 import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 
-import step5 from '../../../../../../public/img/step5.jpeg'
-import step4 from '../../../../../../public/img/step4.jpeg'
-import step3 from '../../../../../../public/img/step3.jpeg'
-import step2 from '../../../../../../public/img/step2.jpeg'
-import step1 from '../../../../../../public/img/step1.jpg'
+import step5 from '../../../../../../public/img/step5.webp'
+import step4 from '../../../../../../public/img/step4.webp'
+import step3 from '../../../../../../public/img/step3.webp'
+import step2 from '../../../../../../public/img/step2.webp'
+import step1 from '../../../../../../public/img/step1.webp'
 
 export default function PersonalEvangelism() {
   const t = useTranslations('vision')
 
   return (
     <section id="concept">
-      <div className="md:mx-48 px-2 bg-color-light p-relative z-index-2 py-1 mt-3 rounded-md ">
-        <div className="row py-3 my-3 px-8 ">
-          <h1 className="font-bold pb-4 md:pb-10 text-2xl md:text-3xl xl:4xl ">
+      <div className="md:mx-48 px-2 bg-color-light p-relative z-index-2 py-1 mt-3 rounded-md">
+        <div className="row py-3 my-3 px-8">
+          <h1 className="font-bold pb-4 md:pb-10 text-2xl md:text-3xl xl:4xl">
             {t('title')}
           </h1>
           <div className="hidden md:flex flex-col col-lg-6 text-center">
