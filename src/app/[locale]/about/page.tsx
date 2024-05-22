@@ -53,7 +53,7 @@ const About = () => {
         <div className="px-2 custom-padding-top-1 custom-padding-bottom-1 px-lg-5 container rounded-md bg-white">
           <div className="row px-lg-3 px-3">
             <div className="col">
-              <p className="text-lg md:text-2xl line-height-7 text-dark mb-lg-2 mb-xl-4 mb-4 pb-1">
+              <p className="text-lg md:text-2xl line-height-7 px-lg-3 pl-6">
                 {t('about_us.description_p1_1')}
               </p>
             </div>
@@ -131,7 +131,7 @@ const About = () => {
             </div>
 
             <div className="col-lg-6 ps-lg-4 px-3">
-              <p className="text-lg md:text-2xl line-height-7">
+              <p className="text-lg md:text-2xl line-height-7 px-6">
                 {t('about_us.description_p1_6')}
               </p>
 
@@ -149,7 +149,7 @@ const About = () => {
             </div>
           </div>
 
-          <div className="row px-lg-3 py-5 pl-6 px-3">
+          <div className="row px-lg-3 py-5 px-lg-3 pl-6">
             <div className="col">
               <p className="text-lg md:text-2xl line-height-7">
                 {t('about_us.description_p3_1')}
