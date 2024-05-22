@@ -1,17 +1,22 @@
-import { Dispatch, SetStateAction } from 'react'
+'use client'
+
+import { Dispatch, ReactNode, SetStateAction } from 'react'
 
 import { FaArrowDown, FaArrowRight } from 'react-icons/fa6'
 import { AnimatePresence, motion } from 'framer-motion'
+import { cn } from '@/utils'
 
 interface IAccordionProps {
-  description: string
+  customClassname?: string
+  description: ReactNode | string
   expanded: number
   idx: number
   setExpanded: Dispatch<SetStateAction<number>>
-  title: string
+  title: ReactNode | string
 }
 
 const Accordion = ({
+  customClassname,
   description,
   expanded,
   idx,
@@ -23,7 +28,10 @@ const Accordion = ({
   return (
     <>
       <motion.div
-        className="rounded-lg cursor-pointer flex flex-col bg-white xs:pl-0 md:pl-6"
+        className={cn(
+          'rounded-lg cursor-pointer flex flex-col bg-white xs:pl-0 md:pl-6',
+          customClassname
+        )}
         initial={false}
         onClick={() => setExpanded(isOpen ? -1 : idx)}
       >
@@ -33,9 +41,9 @@ const Accordion = ({
           ) : (
             <FaArrowDown className="size-3" />
           )}
-          <p className="text-slate-900 font-semibold select-none mb-0">
+          <div className="text-slate-900 font-semibold select-none mb-0 text-lg">
             {title}
-          </p>
+          </div>
         </div>
         <AnimatePresence initial={false}>
           {isOpen && (
@@ -50,7 +58,7 @@ const Accordion = ({
                 open: { height: 'auto', opacity: 1 }
               }}
             >
-              <p className="mt-2 pb-0">{description}</p>
+              <div className="mt-2 pb-0 !text-md">{description}</div>
             </motion.section>
           )}
         </AnimatePresence>

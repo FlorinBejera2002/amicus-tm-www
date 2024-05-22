@@ -1,3 +1,4 @@
+import AccordionSection from './accordion-section'
 import CustomHeroBg from '../components/sections/custom-hero-bg'
 import Animation from '../components/sections/animation'
 
@@ -15,19 +16,6 @@ import step1 from '../../../../public/img/step1.jpg'
 
 const About = () => {
   const t = useTranslations()
-  const text = [
-    t('about_us.principals_p6_2'),
-    t('about_us.principals_p6_3'),
-    t('about_us.principals_p6_4'),
-    t('about_us.principals_p6_5'),
-    t('about_us.principals_p6_6'),
-    t('about_us.principals_p6_7'),
-    t('about_us.principals_p6_8'),
-    t('about_us.principals_p6_9'),
-    t('about_us.principals_p6_10'),
-    t('about_us.principals_p6_11'),
-    t('about_us.principals_p6_12')
-  ].join('\n\n')
 
   return (
     <div className="main" role="main">
@@ -61,11 +49,11 @@ const About = () => {
         <Animation />
       </section>
 
-      <div className="custom-page-content p-relative z-index-2">
+      <div className="custom-page-content p-relative z-index-2 text-sm">
         <div className="custom-padding-top-1 custom-padding-bottom-1 px-lg-5  container rounded-md bg-white">
           <div className="row px-lg-3">
             <div className="col">
-              <p className="text-4-5 line-height-7 text-dark mb-lg-2 mb-xl-4 mb-4 pb-1">
+              <p className="text-4-5 line-height-7 px-lg-3 pl-6">
                 {t('about_us.description_p1_1')}
               </p>
             </div>
@@ -143,87 +131,13 @@ const About = () => {
             </div>
 
             <div className="col-lg-6 ps-lg-4">
-              <p className="text-4-5 line-height-7">
+              <p className="text-4-5 line-height-7 px-6">
                 {t('about_us.description_p1_6')}
               </p>
 
-              <div className="d-block text-4-5">
-                <div className="d-block appear-animation pt-4 appear-animation-visible">
-                  <div
-                    className="toggle toggle-minimal toggle-dark"
-                    data-plugin-toggle={true}
-                  >
-                    <section className="toggle">
-                      <details className="py-1 rounded-lg overflow-hidden">
-                        <summary className=" border-b pb-4 border-gray-400 leading-3 text-slate-900  font-semibold select-none  ">
-                          {t('about_us.description_p4_0')}
-                        </summary>
-                        <div className=" mt-3 text-base leading-6 text-slate-600">
-                          <p className="text-xl mb-4">
-                            {t('about_us.description_p4_1')}
+              <AccordionSection />
 
-                            <span className="font-semibold block mt-8">
-                              {t('about_us.description_p5_1')}
-                            </span>
-                            {` ${t('about_us.description_p5_2')}`}
-
-                            <span className="font-semibold block mt-8">
-                              {t('about_us.description_p6_1')}
-                            </span>
-                            {` ${t('about_us.description_p6_2')}`}
-
-                            <span className="font-semibold block mt-8">
-                              {t('about_us.description_p7_1')}
-                            </span>
-                            {` ${t('about_us.description_p7_2')}`}
-
-                            <span className="font-semibold block mt-8">
-                              {t('about_us.description_p8_1')}
-                            </span>
-                            {` ${t('about_us.description_p8_2')}`}
-                          </p>
-                        </div>
-                      </details>
-                    </section>
-                    <section className="toggle">
-                      <details className="py-3 rounded-lg transform-gpu delay-75 duration-100 ease-in-out ">
-                        <summary className="border-b pb-4 border-gray-400 leading-6 text-slate-900  font-semibold select-none">
-                          {t('about_us.principals_p1_0')}
-                        </summary>
-                        <div className="mt-3 text-base leading-6 text-slate-600">
-                          <p className="text-xl mb-4">
-                            {`${t('about_us.principals_p1_1')} `}
-                            <span className="font-semibold block mt-8">
-                              {t('about_us.principals_p2_1')}
-                            </span>
-                            {` ${t('about_us.principals_p2_2')}`}
-                            <span className="font-semibold block mt-8">{`${t('about_us.principals_p3_1')}`}</span>
-                            {` ${t('about_us.principals_p3_2')}`}
-                            <span className="font-semibold block mt-8">{`${t('about_us.principals_p4_1')}`}</span>
-                            {` ${t('about_us.principals_p4_2')}`}
-                            <span className="font-semibold block mt-8">{`${t('about_us.principals_p5_1')}`}</span>
-                            {` ${t('about_us.principals_p5_2')}`}
-                          </p>
-                        </div>
-                      </details>
-                    </section>
-                    <section className="toggle">
-                      <details className="py-1 rounded-lg transform-gpu delay-75 duration-100 ease-in-out ">
-                        <summary className="border-b pb-4 border-gray-400 leading-6 text-slate-900  font-semibold select-none">
-                          {t('about_us.principals_p6_1')}
-                        </summary>
-                        <div className="mt-3 text-base leading-6 text-slate-600">
-                          <p className="text-xl mb-4 whitespace-pre-line">
-                            {text}
-                          </p>
-                        </div>
-                      </details>
-                    </section>
-                  </div>
-                </div>
-              </div>
-
-              <div className="appear-animation pt-4 flex items-center">
+              <div className="appear-animation pt-4 flex items-center px-6">
                 <Link
                   className="btn btn-modern btn-primary text-capitalize text-dark text-3 anim-hover-translate-top-5px transition-3ms py-1 pr-30 flex items-center font-semibold"
                   href="#"
@@ -235,7 +149,7 @@ const About = () => {
             </div>
           </div>
 
-          <div className="row px-lg-3 py-5">
+          <div className="row px-lg-3 py-5 pl-6">
             <div className="col">
               <p className="text-4-5 line-height-7">
                 {t('about_us.description_p3_1')}

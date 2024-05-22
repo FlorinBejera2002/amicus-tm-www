@@ -8,7 +8,6 @@ import { useTranslations } from 'next-intl'
 
 const AccordionSection = () => {
   const [expanded, setExpanded] = useState(-1)
-
   const t = useTranslations('vision')
 
   const accordionItems = [

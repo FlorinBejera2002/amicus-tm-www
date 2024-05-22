@@ -1,5 +1,3 @@
-'use client'
-
 import AccordionSection from './accordion-section'
 
 import { useTranslations } from 'next-intl'

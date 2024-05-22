@@ -36,20 +36,19 @@ export default function Footer() {
       <div className="container pt-5 pb-3 border-bottom">
         <div className="row py-5">
           <div className="col-lg-6 mt-5 pt-3 gap-4">
-            <Link href="/">
+            <Link className="flex w-fit" href="/">
               <Image
                 alt="arise for christ logo"
                 className="object-contain pb-6"
                 height={40}
                 src={horizontalLogo}
-                width={140}
               />
             </Link>
 
             <ul className="list list-unstyled pt-4">
-              <li className="d-flex align-items-center mb-4">
+              <li className="d-flex align-items-center mb-4 ">
                 <Link
-                  className="d-inline-flex align-items-center text-decoration-none text-color-light text-color-hover-primary font-weight-semibold text-4-5"
+                  className="d-inline-flex align-items-center text-decoration-none font-weight-semibold text-white text-4-5 hover:!text-[#f3a61d] transition-all duration-300"
                   href="mailto:info@ariseforchrist.com"
                 >
                   info@ariseforchrist.com
@@ -57,11 +56,11 @@ export default function Footer() {
               </li>
 
               <li className="d-blok align-items-center mb-4">
-                <div className="pb-3 align-items-center text-decoration-none text-color-light text-color-hover-primary font-weight-semibold text-4-5">
+                <div className="pb-3 align-items-center text-decoration-none text-color-light text-color-hover-primary font-weight-semibold text-4-5 transition-all duration-300">
                   +40-721-804-560
                 </div>
 
-                <div className=" align-items-center text-decoration-none text-color-light text-color-hover-primary font-weight-semibold text-4-5">
+                <div className=" align-items-center text-decoration-none text-color-light text-color-hover-primary font-weight-semibold text-4-5 transition-all duration-300">
                   0356-175-148
                 </div>
               </li>

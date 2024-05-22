@@ -8,7 +8,7 @@ export default function TrailerSection() {
   const t = useTranslations('serial')
 
   return (
-    <div className="flex flex-col gap-4 pb-4 justify-center items-center">
+    <div className="flex flex-col gap-4 pb-4 px-8">
       <h3 className="text-[#f3a61d] font-bold">{t('trailer')}</h3>
       <Link
         className="pointer "
@@ -16,7 +16,7 @@ export default function TrailerSection() {
       >
         <Image
           alt="arise for christ logo"
-          className="object-contain w-screen px-4"
+          className="object-contain w-screen"
           src={trailerImage}
         />
       </Link>

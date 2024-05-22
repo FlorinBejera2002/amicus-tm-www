@@ -5,11 +5,11 @@ export default function HeroSection() {
 
   return (
     <>
-      <div className="md:mx-48 mt-20 md:mt-32 pb-4 bg-auto bg-no-repeat flex flex-col items-center justify-center">
-        <h1 className="flex items-center justify-center text-2xl md:text-4xl lg:text-6xl shadow-xl shadow-gray-700 text-white font-bold">
+      <div className="mt-20 md:mt-32 pb-4 bg-auto bg-no-repeat flex flex-col px-8">
+        <h1 className="text-2xl md:text-4xl lg:text-6xl text-white font-bold w-fit">
           {t('title')}
         </h1>
-        <div className="mt-16 lg:mt-44 px-4 flex flex-col items-center justify-center text-white">
+        <div className="mt-16 lg:mt-44 flex flex-col  text-white">
           <h2 className="text-[#f3a61d] font-bold pb-2 lg:mb-10 text-base md:text-3xl">
             {t('title_description_hero')}
           </h2>

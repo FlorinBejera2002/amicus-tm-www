@@ -10,7 +10,7 @@ const EpisodeSection = () => {
   return (
     <div className="flex flex-col justify-center items-center">
       <div className=" w-screen lg:px-96 flex flex-col justify-center items-center ">
-        <h4 className="text-base md:text-2xl font-semibold text-center md:my-7 text-white pb-3 md:pb-10 border-white w-80 md:w-full">
+        <h4 className="text-base md:text-2xl font-semibold text-center md:my-7 text-[#f3a61d] pb-3 md:pb-10 md:w-full">
           {t('title_serial')}
         </h4>
         <div className="grid md:grid-cols-3 gap-3 ">
@@ -24,7 +24,7 @@ const EpisodeSection = () => {
                     src={item.episodImage}
                   />
                 </Link>
-                <h4 className="pl-3 text-center md:text-start text-sm text-[#5b5f66] font-poppins">
+                <h4 className="pl-3 text-center md:text-start text-sm text-white font-poppins">
                   {item.title}
                 </h4>
               </div>

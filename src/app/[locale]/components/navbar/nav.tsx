@@ -1,8 +1,8 @@
 'use client'
 import { ReactNode, useState } from 'react'
 
-import Language from './sections/language-button'
-import { cn } from '../../../utils'
+import MobileNavbar from './mobile-navbar'
+import Language from '../sections/language-button'
 
 import { FaChevronDown } from 'react-icons/fa'
 import { FaBars } from 'react-icons/fa'
@@ -10,9 +10,11 @@ import { useTranslations } from 'next-intl'
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 import Image from 'next/image'
+import { AnimatePresence } from 'framer-motion'
 import { useWindowScroll } from '@uidotdev/usehooks'
+import { cn } from '@/utils'
 
-import horizontalLogo from '../../../../public/logo_horizontal_white.png'
+import horizontalLogo from '../../../../../public/logo_horizontal_white.png'
 
 type Link = {
   href: string
@@ -43,8 +45,8 @@ const ActiveLink = ({
 )
 
 export default function Nav() {
-  const [navbar, setNavBar] = useState(false)
-  const [subMenu, setSubMenu] = useState(false)
+  const [mobileNavbarOpen, setMobileNavbarOpen] = useState(false)
+
   const pathname = usePathname()
   const t = useTranslations()
   const [{ y }] = useWindowScroll()
@@ -150,7 +152,7 @@ export default function Nav() {
                     className="btn header-btn-collapse-nav text-dark h-[2.375rem]"
                     data-bs-target=".header-nav-main nav"
                     data-bs-toggle="collapse"
-                    onClick={() => setNavBar(!navbar)}
+                    onClick={() => setMobileNavbarOpen((prev) => !prev)}
                   >
                     <FaBars />
                   </button>
@@ -160,92 +162,15 @@ export default function Nav() {
           </div>
         </div>
       </div>
-      {navbar && (
-        <div
-          className="header-nav-main header-nav-main-square header-nav-main-dropdown-no-borders header-nav-main-text-capitalize
-        header-nav-main-arrows header-nav-main-full-width-mega-menu header-nav-main-mega-menu-bg-hover
-        header-nav-main-mega-menu-bg-hover-dark header-nav-main-effect-5 display-none"
-        >
-          <nav className="collapse show">
-            <ul className="nav nav-pills">
-              <li>
-                <Link
-                  className="nav-link"
-                  href="/"
-                  onClick={() => setNavBar(!navbar)}
-                >
-                  {t('header.home')}
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="nav-link"
-                  href={`/${language}/about`}
-                  onClick={() => setNavBar(!navbar)}
-                >
-                  {t('header.about_us')}
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="nav-link"
-                  href={`/${language}/vision`}
-                  onClick={() => setNavBar(!navbar)}
-                >
-                  {t('header.vision')}
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="nav-link"
-                  href={`/${language}/donate`}
-                  onClick={() => setNavBar(!navbar)}
-                >
-                  {t('header.donate')}
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="nav-link"
-                  href=""
-                  onClick={() => setSubMenu(!subMenu)}
-                >
-                  {t('header.project')}
-                  <FaChevronDown className="absolute top-0 right-10 w-30 h-10 flex items-center justify-center text-xs" />
-                </Link>
-                {subMenu && (
-                  <ul className="top-full left-0 ">
-                    <li>
-                      <Link
-                        className="dropdown-item"
-                        href={`/${language}/projects/time-is-now`}
-                        onClick={() => {
-                          setNavBar(!navbar)
-                          setSubMenu(!subMenu)
-                        }}
-                      >
-                        {t('header.project_')}
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        className="dropdown-item"
-                        href={`/${language}/projects/podcast`}
-                        onClick={() => {
-                          setNavBar(!navbar)
-                          setSubMenu(!subMenu)
-                        }}
-                      >
-                        Podcast
-                      </Link>
-                    </li>
-                  </ul>
-                )}
-              </li>
-            </ul>
-          </nav>
-        </div>
-      )}
+
+      <AnimatePresence initial={false} mode="popLayout">
+        {mobileNavbarOpen && (
+          <MobileNavbar
+            language={language}
+            setMobileNavbarOpen={setMobileNavbarOpen}
+          />
+        )}
+      </AnimatePresence>
     </header>
   )
 }
