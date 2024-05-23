@@ -14,7 +14,7 @@ import { AnimatePresence } from 'framer-motion'
 import { useWindowScroll } from '@uidotdev/usehooks'
 import { cn } from '@/utils'
 
-import horizontalLogo from '../../../../../public/logo_horizontal_white.png'
+import horizontalLogo from '../../../../../public/logo_horizontal_white.webp'
 
 type Link = {
   href: string

@@ -2,12 +2,12 @@ import { useTranslations } from 'next-intl'
 import Link from 'next/link'
 import Image from 'next/image'
 
-import Simona from '../../../../../public/img/team/simo.png'
-import Dana from '../../../../../public/img/team/dana potra.png'
-import Chris from '../../../../../public/img/team/chris potra.png'
-import Andrei from '../../../../../public/img/team/andrei bir.png'
-import AdrianCovaci from '../../../../../public/img/team/adi.png'
-import AvramSabou from '../../../../../public/img/team/Avram.png'
+import Simona from '../../../../../public/img/team/simo.webp'
+import Dana from '../../../../../public/img/team/dana potra.webp'
+import Chris from '../../../../../public/img/team/chris potra.webp'
+import Andrei from '../../../../../public/img/team/andrei bir.webp'
+import AdrianCovaci from '../../../../../public/img/team/adi.webp'
+import AvramSabou from '../../../../../public/img/team/Avram.webp'
 
 export default function Team() {
   const t = useTranslations('team')
