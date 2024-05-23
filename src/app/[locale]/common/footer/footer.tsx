@@ -1,7 +1,7 @@
 'use client'
 
-import FooterOverview from './footer-overview'
-import Socials from '../socials'
+import Socials from './components/socials'
+import FooterOverview from './components/footer-overview'
 import Animation from '../animation'
 
 import { usePathname } from 'next/navigation'

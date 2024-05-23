@@ -44,7 +44,7 @@ const About = () => {
       </section>
 
       <div className="custom-page-content p-relative z-index-2">
-        <div className="grid md:grid-cols-2 px-2 custom-padding-top-1 custom-padding-bottom-1 px-lg-5 bg-light md:mx-48">
+        <div className="grid md:grid-cols-2 px-2 custom-padding-top-1 custom-padding-bottom-1 px-lg-5 bg-light md:mx-48 rounded-md">
           <div>
             <h1 className="text-3xl font-bold mb-6">{t('donate.title')}</h1>
 

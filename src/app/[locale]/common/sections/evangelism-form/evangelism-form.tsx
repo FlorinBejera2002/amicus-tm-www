@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from 'react'
 
-import ContentEvangelizationForm from './content-evangelization-form'
+import Content from './content'
 
 import { AiOutlineClose } from 'react-icons/ai'
 import { usePathname, useRouter, useSearchParams } from 'next/navigation'
@@ -53,7 +53,7 @@ function Modal() {
             >
               <AiOutlineClose className="fill-black w-7 h-7" />
             </Link>
-            <ContentEvangelizationForm />
+            <Content />
           </motion.div>
         </motion.dialog>
       )}

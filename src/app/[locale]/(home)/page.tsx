@@ -1,7 +1,7 @@
 import YoutubeMiniFeed from './components/youtube-mini-feed'
 import Team from './components/team'
-import StepsEvangelization from './components/steps-evangelization'
 import PersonalEvangelism from './components/personal-evangelism/personal-evangelism'
+import StepsEvangelization from './components/evangelism-steps/evangelism-steps'
 import CustomHeroBg from '../common/custom-hero-bg'
 import Animation from '../common/animation'
 
