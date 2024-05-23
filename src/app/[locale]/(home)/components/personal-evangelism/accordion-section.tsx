@@ -5,6 +5,7 @@ import { useState } from 'react'
 import Accordion from '../../../common/accordion'
 
 import { useTranslations } from 'next-intl'
+import InViewTransition from '@/app/[locale]/common/in-view-transition'
 
 const AccordionSection = () => {
   const [expanded, setExpanded] = useState(-1)
@@ -48,14 +49,15 @@ const AccordionSection = () => {
   return (
     <>
       {accordionItems.map((item, idx) => (
-        <Accordion
-          description={item.description}
-          expanded={expanded}
-          idx={idx}
-          key={idx}
-          setExpanded={setExpanded}
-          title={item.title}
-        />
+        <InViewTransition damping={25} delay={idx * 0.25} key={idx}>
+          <Accordion
+            description={item.description}
+            expanded={expanded}
+            idx={idx}
+            setExpanded={setExpanded}
+            title={item.title}
+          />
+        </InViewTransition>
       ))}
     </>
   )

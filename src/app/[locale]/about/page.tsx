@@ -49,11 +49,11 @@ const About = () => {
         <Animation />
       </section>
 
-      <div className="custom-page-content p-relative z-index-2 text-sm">
+      <div className="custom-page-content p-relative z-index-2">
         <div className="px-2 custom-padding-top-1 custom-padding-bottom-1 px-lg-5 container rounded-md bg-white">
           <div className="row px-lg-3 px-3">
             <div className="col">
-              <p className="text-lg md:text-2xl line-height-7 px-lg-3 pl-6">
+              <p className="text-md md:text-lg line-height-7 px-lg-3 pl-6">
                 {t('about_us.description_p1_1')}
               </p>
             </div>
@@ -131,7 +131,7 @@ const About = () => {
             </div>
 
             <div className="col-lg-6 ps-lg-4 px-3">
-              <p className="text-lg md:text-2xl line-height-7 px-6">
+              <p className="text-md md:text-lg line-height-7 px-6">
                 {t('about_us.description_p1_6')}
               </p>
 
@@ -139,7 +139,7 @@ const About = () => {
 
               <div className="appear-animation pt-4 flex items-center px-6">
                 <Link
-                  className="btn btn-modern btn-primary text-capitalize text-dark text-lg md:text-2xl anim-hover-translate-top-5px transition-3ms py-1 pr-30 flex items-center font-semibold"
+                  className="btn btn-modern btn-primary text-capitalize text-dark text-md md:text-lg anim-hover-translate-top-5px transition-3ms py-1 pr-30 flex items-center font-semibold"
                   href="#"
                 >
                   {t('button.contact_us')}
@@ -149,9 +149,9 @@ const About = () => {
             </div>
           </div>
 
-          <div className="row px-lg-3 py-5 px-lg-3 pl-6">
+          <div className="row px-lg-3 px-lg-3 pl-6">
             <div className="col">
-              <p className="text-lg md:text-2xl line-height-7">
+              <p className="text-md md:text-lg line-height-7 pl-6">
                 {t('about_us.description_p3_1')}
               </p>
             </div>

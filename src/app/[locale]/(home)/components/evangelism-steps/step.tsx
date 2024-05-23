@@ -18,13 +18,13 @@ export const Step = ({
   return (
     <div
       className={cn(
-        'flex justify-center items-center px-2 flex-col flex-wrap gap-1 md:gap-2 md:flex-row md:justify-start xl:gap-4',
+        'flex justify-center items-center px-2 flex-col flex-wrap gap-1 md:gap-2 md:flex-row  xl:gap-4',
         customClassname
       )}
     >
       {icon}
       <div>
-        <h3 className=" font-bold mb-0">{headerLabel}</h3>
+        <h3 className="font-bold mb-0">{headerLabel}</h3>
         <p className="mb-0">{description}</p>
       </div>
     </div>

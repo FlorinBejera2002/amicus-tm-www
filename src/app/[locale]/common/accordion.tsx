@@ -29,7 +29,7 @@ const Accordion = ({
     <>
       <motion.div
         className={cn(
-          'rounded-lg cursor-pointer flex flex-col bg-white xs:pl-0 md:pl-6',
+          'rounded-lg cursor-pointer flex flex-col bg-white pl-0 md:pl-6',
           customClassname
         )}
         initial={false}

@@ -3,6 +3,7 @@ import { ReactNode, useState } from 'react'
 
 import MobileNavbar from './components/mobile-navbar'
 import Language from '../sections/language-button'
+import InViewTransition from '../in-view-transition'
 
 import { FaChevronDown } from 'react-icons/fa'
 import { FaBars } from 'react-icons/fa'
@@ -74,103 +75,105 @@ export default function Nav() {
       )}
       id="header"
     >
-      <div className="header-body border-top-0 bg-quaternary box-shadow-none h-auto ">
-        <div className="header-container container p-static">
-          <div className="header-row py-3">
-            <div className="header-column">
-              <div className="header-row">
-                <div className="header-logo">
-                  <Link href="/">
-                    <Image
-                      alt="arise for christ logo"
-                      className="object-contain hidden md:flex"
-                      height={40}
-                      src={horizontalLogo}
-                      width={150}
-                    />
-                  </Link>
+      <InViewTransition delay={0} yIn={0} yOut={0}>
+        <div className="header-body border-top-0 bg-quaternary box-shadow-none h-auto ">
+          <div className="header-container container p-static">
+            <div className="header-row py-3">
+              <div className="header-column">
+                <div className="header-row">
+                  <div className="header-logo">
+                    <Link href="/">
+                      <Image
+                        alt="arise for christ logo"
+                        className="object-contain hidden md:flex"
+                        height={40}
+                        src={horizontalLogo}
+                        width={150}
+                      />
+                    </Link>
+                  </div>
+                  <Language />
                 </div>
-                <Language />
               </div>
-            </div>
-            <div className="header-column justify-content-end">
-              <div className="header-row">
-                <div className="header-nav header-nav-links header-nav-dropdowns-dark header-nav-light-text order-2 order-lg-1">
-                  <div
-                    className="header-nav-main header-nav-main-square header-nav-main-dropdown-no-borders header-nav-main-text-capitalize 
+              <div className="header-column justify-content-end">
+                <div className="header-row">
+                  <div className="header-nav header-nav-links header-nav-dropdowns-dark header-nav-light-text order-2 order-lg-1">
+                    <div
+                      className="header-nav-main header-nav-main-square header-nav-main-dropdown-no-borders header-nav-main-text-capitalize 
                     header-nav-main-arrows header-nav-main-full-width-mega-menu header-nav-main-mega-menu-bg-hover 
                     header-nav-main-mega-menu-bg-hover-dark header-nav-main-effect-5 hidden"
-                  >
-                    <nav className="closed">
-                      <ul className="nav nav-pills" id="mainNav">
-                        {navLinks.map((link) => (
-                          <li key={link.route}>
-                            <ActiveLink link={link} pathname={pathname} />
-                          </li>
-                        ))}
-
-                        <li className="dropdown">
-                          <ActiveLink pathname={pathname}>
-                            {t('header.project')}
-                            <FaChevronDown className="pl-1.5" />
-                          </ActiveLink>
-                          <ul className="dropdown-menu">
-                            <li>
-                              <Link
-                                className="dropdown-item"
-                                href={`/${language}/projects/time-is-now`}
-                              >
-                                {t('header.project_')}
-                              </Link>
-                            </li>
-                            <li>
-                              <Link
-                                className="dropdown-item"
-                                href={`/${language}/projects/podcast`}
-                              >
-                                Podcast
-                              </Link>
-                            </li>
-                          </ul>
-                        </li>
-                      </ul>
-                    </nav>
-                  </div>
-                  <Link href="?ev-req-form=open">
-                    <button
-                      className="btn btn-primary font-weight-semibold text-3 py-lg-3 btn-gradient text-quaternary
-                      anim-hover-translate-top-5px transition-2ms ms-4"
-                      type="button"
                     >
-                      <span className="px-lg-4 d-block ws-nowrap">
-                        {t('form.title')}
-                      </span>
-                    </button>
-                  </Link>
+                      <nav className="closed">
+                        <ul className="nav nav-pills" id="mainNav">
+                          {navLinks.map((link) => (
+                            <li key={link.route}>
+                              <ActiveLink link={link} pathname={pathname} />
+                            </li>
+                          ))}
 
-                  <button
-                    className="btn header-btn-collapse-nav text-dark h-[2.375rem]"
-                    data-bs-target=".header-nav-main nav"
-                    data-bs-toggle="collapse"
-                    onClick={() => setMobileNavbarOpen((prev) => !prev)}
-                  >
-                    <FaBars />
-                  </button>
+                          <li className="dropdown">
+                            <ActiveLink pathname={pathname}>
+                              {t('header.project')}
+                              <FaChevronDown className="pl-1.5" />
+                            </ActiveLink>
+                            <ul className="dropdown-menu">
+                              <li>
+                                <Link
+                                  className="dropdown-item"
+                                  href={`/${language}/projects/time-is-now`}
+                                >
+                                  {t('header.project_')}
+                                </Link>
+                              </li>
+                              <li>
+                                <Link
+                                  className="dropdown-item"
+                                  href={`/${language}/projects/podcast`}
+                                >
+                                  Podcast
+                                </Link>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </nav>
+                    </div>
+                    <Link href="?ev-req-form=open">
+                      <button
+                        className="btn btn-primary font-weight-semibold text-3 py-lg-3 btn-gradient text-quaternary
+                      anim-hover-translate-top-5px transition-2ms ms-4"
+                        type="button"
+                      >
+                        <span className="px-lg-4 d-block ws-nowrap">
+                          {t('form.title')}
+                        </span>
+                      </button>
+                    </Link>
+
+                    <button
+                      className="btn header-btn-collapse-nav text-dark h-[2.375rem]"
+                      data-bs-target=".header-nav-main nav"
+                      data-bs-toggle="collapse"
+                      onClick={() => setMobileNavbarOpen((prev) => !prev)}
+                    >
+                      <FaBars />
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <AnimatePresence initial={false} mode="popLayout">
-        {mobileNavbarOpen && (
-          <MobileNavbar
-            language={language}
-            setMobileNavbarOpen={setMobileNavbarOpen}
-          />
-        )}
-      </AnimatePresence>
+        <AnimatePresence initial={false} mode="popLayout">
+          {mobileNavbarOpen && (
+            <MobileNavbar
+              language={language}
+              setMobileNavbarOpen={setMobileNavbarOpen}
+            />
+          )}
+        </AnimatePresence>
+      </InViewTransition>
     </header>
   )
 }

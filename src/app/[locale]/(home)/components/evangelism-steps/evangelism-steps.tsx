@@ -6,6 +6,7 @@ import { PiNumberCircleOneFill } from 'react-icons/pi'
 import { PiNumberCircleTwoFill } from 'react-icons/pi'
 import { PiNumberCircleThreeFill } from 'react-icons/pi'
 import { useTranslations } from 'next-intl'
+import InViewTransition from '@/app/[locale]/common/in-view-transition'
 
 type EvStep = {
   customClassname: string
@@ -14,8 +15,8 @@ type EvStep = {
   icon: ReactNode
 }
 
-export default function StepsEvangelization() {
-  const t = useTranslations('steps_evanghelization')
+export default function EvangelismSteps() {
+  const t = useTranslations('steps_evangelization')
 
   const steps: EvStep[] = [
     {
@@ -39,10 +40,15 @@ export default function StepsEvangelization() {
   ]
 
   return (
-    <section id="concept">
-      <div className="grid bg-color-light p-relative z-index-2 pb-12 md:mx-20 xl:mx-48 xl:grid-cols-2 rounded-md">
-        <div className="flex mb-20 xl:flex items-center justify-center">
-          <div className="flex flex-col w-1/2 bg-black p-5 rounded-tr-[7rem]">
+    <div className="grid !relative !z-10 bg-white pb-20 md:mx-20 xl:mx-48 xl:grid-cols-2 rounded-md">
+      <div className="flex mb-20 xl:flex items-center justify-center">
+        <InViewTransition
+          customClassname="flex justify-center items-center w-full"
+          damping={25}
+          xOut={-100}
+          yOut={0}
+        >
+          <div className="flex flex-col w-1/2 bg-black p-5 rounded-tr-[7rem] self-center">
             <h4 className="text-5xl font-weight-semi-bold text-light mb-4">
               585+
             </h4>
@@ -51,13 +57,15 @@ export default function StepsEvangelization() {
               {t('evangelism_requests_count')}
             </div>
           </div>
-        </div>
+        </InViewTransition>
+      </div>
 
-        <div className="flex flex-col gap-8 px-2 md:px-4 md:gap-12 xl:gap-16">
-          <h1 className="text-3xl font-poppins font-bold text-center md:text-4xl xl:text-5xl">
-            {t('title')}
-          </h1>
-          {steps.map((step, index) => (
+      <div className="flex flex-col gap-8 px-2 md:px-4 md:gap-12 xl:gap-16">
+        <h1 className="text-3xl font-poppins font-bold text-center md:text-4xl xl:text-5xl">
+          {t('title')}
+        </h1>
+        {steps.map((step, index) => (
+          <InViewTransition damping={25} delay={index * 0.25} key={index}>
             <Step
               customClassname={step.customClassname}
               description={step.description}
@@ -65,9 +73,9 @@ export default function StepsEvangelization() {
               icon={step.icon}
               key={index}
             />
-          ))}
-        </div>
+          </InViewTransition>
+        ))}
       </div>
-    </section>
+    </div>
   )
 }
