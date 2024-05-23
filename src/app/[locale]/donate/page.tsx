@@ -1,5 +1,5 @@
-import CustomHeroBg from '../components/sections/custom-hero-bg'
-import Animation from '../components/sections/animation'
+import CustomHeroBg from '../common/custom-hero-bg'
+import Animation from '../common/animation'
 
 import { FaAngleRight } from 'react-icons/fa'
 import { useTranslations } from 'next-intl'

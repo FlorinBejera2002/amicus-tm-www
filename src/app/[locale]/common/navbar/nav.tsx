@@ -1,7 +1,7 @@
 'use client'
 import { ReactNode, useState } from 'react'
 
-import MobileNavbar from './mobile-navbar'
+import MobileNavbar from './components/mobile-navbar'
 import Language from '../sections/language-button'
 
 import { FaChevronDown } from 'react-icons/fa'

@@ -1,13 +1,13 @@
 'use client'
 
 import FooterOverview from './footer-overview'
+import Socials from '../socials'
+import Animation from '../animation'
 
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 import Image from 'next/image'
 
-import Socials from '.././socials'
-import Animation from '.././sections/animation'
 import horizontalLogo from '../../../../../public/logo_horizontal_white.png'
 
 export default function Footer() {

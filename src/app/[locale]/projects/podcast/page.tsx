@@ -1,5 +1,5 @@
-import Hero from './hero'
-import BottomSection from './bottom-section'
+import Hero from './components/hero'
+import BottomSection from './components/bottom-section'
 
 export default function Podcast() {
   return (

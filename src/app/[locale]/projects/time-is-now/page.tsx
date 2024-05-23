@@ -1,7 +1,7 @@
-import TrailerSection from './trailer-section'
-import Subtitle from './subtitle'
-import HeroSection from './hero-section'
-import EpisodeSection from './episode-section'
+import TrailerSection from './components/trailer-section'
+import Subtitle from './components/subtitle'
+import HeroSection from './components/hero-section'
+import EpisodeSection from './components/episode-section'
 
 export default function TimeIsNow() {
   return (

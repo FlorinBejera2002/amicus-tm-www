@@ -2,7 +2,7 @@ import { useTranslations } from 'next-intl'
 import Link from 'next/link'
 import Image from 'next/image'
 
-import trailerImage from '../../../../../public/trailer.jpeg'
+import trailerImage from '../../../../../../public/trailer.jpeg'
 
 export default function TrailerSection() {
   const t = useTranslations('serial')

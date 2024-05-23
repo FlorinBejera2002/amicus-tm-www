@@ -1,10 +1,9 @@
-import YoutubeMiniFeed from './components/sections/youtube-mini-feed'
-import Team from './components/sections/team'
-import StepsEvangelization from './components/sections/steps-evangelization'
-import PersonalEvangelism from './components/sections/personal-evangelism/personal-evangelism'
-import CustomHeroBg from './components/sections/custom-hero-bg'
-import CookieConsents from './components/sections/cookie-consents'
-import Animation from './components/sections/animation'
+import YoutubeMiniFeed from './components/youtube-mini-feed'
+import Team from './components/team'
+import StepsEvangelization from './components/steps-evangelization'
+import PersonalEvangelism from './components/personal-evangelism/personal-evangelism'
+import CustomHeroBg from '../common/custom-hero-bg'
+import Animation from '../common/animation'
 
 import { FaFacebookF } from 'react-icons/fa6'
 import { FaInstagram } from 'react-icons/fa6'
@@ -19,8 +18,6 @@ export default function Home() {
 
   return (
     <div className="main max-w-screen" role="main">
-      <CookieConsents />
-
       <section
         className="p-relative border-0 bg-quaternary overflow-hidden px-2"
         id="home"
@@ -103,11 +100,8 @@ export default function Home() {
       <Animation />
       <YoutubeMiniFeed />
       <StepsEvangelization />
-      {/* <EmblaCarousel /> */}
-      {/* <About /> */}
       <Team />
       <PersonalEvangelism />
-      <CookieConsents />
     </div>
   )
 }

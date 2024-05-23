@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 
-import Accordion from '../../accordion'
+import Accordion from '../../../common/accordion'
 
 import { useTranslations } from 'next-intl'
 

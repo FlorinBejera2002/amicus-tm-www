@@ -1,4 +1,4 @@
-import { StepEvangelization } from './step-evangelization'
+import { StepEvangelization } from '../../common/sections/step-evangelization'
 
 import { PiNumberCircleOneFill } from 'react-icons/pi'
 import { PiNumberCircleTwoFill } from 'react-icons/pi'

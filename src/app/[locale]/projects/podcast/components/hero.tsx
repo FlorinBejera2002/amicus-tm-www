@@ -2,9 +2,9 @@ import { useTranslations } from 'next-intl'
 import Link from 'next/link'
 import Image from 'next/image'
 
-import youtubeChanelImage from '../../../../../public/youtube-chanel-image.png'
-import heroPodcast from '../../../../../public/podcast-hero.png'
-import Adi from '../../../../../public/adi-text.png'
+import youtubeChanelImage from '../../../../../../public/youtube-chanel-image.png'
+import heroPodcast from '../../../../../../public/podcast-hero.png'
+import Adi from '../../../../../../public/adi-text.png'
 
 export default function Hero() {
   const t = useTranslations('podcast')

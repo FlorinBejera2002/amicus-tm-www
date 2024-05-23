@@ -1,6 +1,6 @@
-import AccordionSection from './accordion-section'
-import CustomHeroBg from '../components/sections/custom-hero-bg'
-import Animation from '../components/sections/animation'
+import AccordionSection from './components/accordion-section'
+import CustomHeroBg from '../common/custom-hero-bg'
+import Animation from '../common/animation'
 
 import { ImArrowUpRight2 } from 'react-icons/im'
 import { FaAngleRight } from 'react-icons/fa'

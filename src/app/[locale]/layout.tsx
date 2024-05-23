@@ -1,16 +1,16 @@
 import type { Metadata } from 'next'
 
-import Template from './template'
 import './globals.css'
 // css
 import './css/theme.css'
 import './css/skin-creative-agency-2.css'
 import './css/demo-creative-agency-2.css'
 import './css/bootstrap.min.css'
-import ScrollButton from './components/sections/scroll-button'
-import EvangelismFormModal from './components/sections/evangelism-form'
-import Nav from './components/navbar/nav'
-import Footer from './components/footer/footer'
+import ScrollButton from './common/sections/scroll-button'
+import EvangelismFormModal from './common/sections/evangelism-form'
+import Nav from './common/navbar/nav'
+import Footer from './common/footer/footer'
+import CookieConsents from './common/cookie-consents'
 
 import { NextIntlClientProvider, useMessages } from 'next-intl'
 import Script from 'next/script'
@@ -44,13 +44,15 @@ export default function RootLayout({ children, params: { locale } }: any) {
     <html lang={locale}>
       <body className={poppins.className}>
         <NextIntlClientProvider locale={locale} messages={messages}>
-          <Template>
-            <Nav />
-            {children}
-            <Footer />
-          </Template>
+          <Nav />
+          {children}
+          <Footer />
+
           <EvangelismFormModal />
+
+          <CookieConsents />
         </NextIntlClientProvider>
+
         <ScrollButton />
 
         {/* analytics */}
