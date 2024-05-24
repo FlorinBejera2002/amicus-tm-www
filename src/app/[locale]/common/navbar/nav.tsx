@@ -2,7 +2,7 @@
 import { ReactNode, useState } from 'react'
 
 import MobileNavbar from './components/mobile-navbar'
-import Language from '../sections/language-button'
+import Language from './components/language-button'
 import InViewTransition from '../in-view-transition'
 
 import { FaChevronDown } from 'react-icons/fa'

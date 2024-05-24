@@ -1,8 +1,5 @@
-import React from 'react'
-
 import { useTranslations } from 'next-intl'
 import { usePathname, useRouter } from 'next/navigation'
-import { Button } from '@nextui-org/button'
 
 export default function Language() {
   const router = useRouter()
@@ -18,12 +15,12 @@ export default function Language() {
 
   return (
     <div className="pl-4">
-      <Button
+      <button
         className="font-semibold px-2 capitalize text-black btn btn-primary"
         onClick={handleLocaleChange}
       >
         {t('language.lg')}
-      </Button>
+      </button>
     </div>
   )
 }
