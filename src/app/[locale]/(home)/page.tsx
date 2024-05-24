@@ -18,9 +18,9 @@ export default function Home() {
   const t = useTranslations('hero')
 
   return (
-    <div className="main max-w-screen" role="main">
+    <div className="main" role="main">
       <section
-        className="p-relative border-0 bg-quaternary overflow-hidden px-2"
+        className="p-relative border-0 bg-quaternary overflow-hidden m-0"
         id="home"
       >
         <div className="font-bold custom-hero-heading text-white">
@@ -40,10 +40,10 @@ export default function Home() {
         </InViewTransition>
 
         <InViewTransition>
-          <div className="md:mx-48 p-relative z-index-3">
+          <div className="container p-relative z-index-3">
             <div className="row min-vh-100 align-items-center">
               <div className="col-lg-10 text-center text-lg-start">
-                <h3 className="text-color-light font-weight-bold text-5xl leading-tight pb-2 mb-4 appear-animation text-wrap">
+                <h3 className="text-color-light font-weight-bold text-3xl leading-tight pb-2 mb-4 appear-animation text-wrap md:text-4xl lg:text-5xl">
                   {t('question1')}
                   <br />
                   {t('question2')}
