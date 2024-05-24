@@ -40,7 +40,7 @@ export default function EvangelismSteps() {
   ]
 
   return (
-    <div className="grid !relative !z-10 bg-white pb-20 md:mx-20 xl:mx-48 xl:grid-cols-2 rounded-md">
+    <div className="grid !relative !z-10 bg-white pb-20 container xl:grid-cols-2 rounded-md">
       <div className="flex mb-20 xl:flex items-center justify-center">
         <InViewTransition
           customClassname="flex justify-center items-center w-full"
@@ -48,7 +48,7 @@ export default function EvangelismSteps() {
           xOut={-100}
           yOut={0}
         >
-          <div className="flex flex-col w-1/2 bg-black p-5 rounded-tr-[7rem] self-center">
+          <div className="flex flex-col mx-3 md:w-1/2 bg-black p-5 rounded-tr-[7rem] self-center">
             <h4 className="text-5xl font-weight-semi-bold text-light mb-4">
               585+
             </h4>

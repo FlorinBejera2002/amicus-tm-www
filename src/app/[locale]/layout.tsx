@@ -17,6 +17,7 @@ import Script from 'next/script'
 import { Poppins } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/react'
 import splitbee from '@splitbee/web'
+import { cn } from '@/utils'
 
 const poppins = Poppins({
   display: 'swap',
@@ -42,7 +43,7 @@ export default function RootLayout({ children, params: { locale } }: any) {
 
   return (
     <html lang={locale}>
-      <body className={poppins.className}>
+      <body className={cn('body', poppins.className)}>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Nav />
           {children}

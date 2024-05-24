@@ -225,12 +225,12 @@
   },
   "steps_evangelization": {
     "evangelism_requests_count": "Evangelism requests created so far",
-    "step1": "Scanează codul QR",
-    "step1_description": "Noi îl vom contacta",
-    "step2": "Completează cererea",
-    "step2_description": "Completeaza o cerere de evanghelizare!",
-    "step3": "Noi îl vom contacta",
-    "step3_description": "Completeaza o cerere de evanghelizare!",
+    "step1": "Create an Evangelization Request",
+    "step1_description": "Click the Evangelization Request Button",
+    "step2": "Fill out the request form",
+    "step2_description": "Fill out an evangelization request!",
+    "step3": "We will contact him/her",
+    "step3_description": "We will process the request for an evangelization plan!",
     "title": "The steps of evangelization."
   },
   "team": {
