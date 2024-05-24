@@ -2,7 +2,7 @@
   "env": {
     "amd": true,
     "browser": true,
-    "es2020": true,
+    "es2021": true,
     "node": true
   },
   "extends": [
@@ -12,7 +12,8 @@
     "plugin:react/recommended",
     "plugin:jsx-a11y/recommended",
     "plugin:perfectionist/recommended-natural",
-    "plugin:prettier/recommended"
+    "plugin:prettier/recommended",
+    "next/core-web-vitals"
   ],
   "ignorePatterns": [
     "shadcn/",

@@ -2,7 +2,7 @@
 import { ReactNode, useState } from 'react'
 
 import MobileNavbar from './components/mobile-navbar'
-import Language from './components/language-button'
+import ChangeLanguage from './components/change-language'
 import InViewTransition from '../in-view-transition'
 
 import { FaChevronDown } from 'react-icons/fa'
@@ -80,7 +80,7 @@ export default function Nav() {
           <div className="header-container container p-static">
             <div className="header-row py-3">
               <div className="header-column">
-                <div className="header-row">
+                <div className="header-row flex gap-4 items-center">
                   <div className="header-logo">
                     <Link href="/">
                       <Image
@@ -92,7 +92,7 @@ export default function Nav() {
                       />
                     </Link>
                   </div>
-                  <Language />
+                  <ChangeLanguage />
                 </div>
               </div>
               <div className="header-column justify-content-end">
