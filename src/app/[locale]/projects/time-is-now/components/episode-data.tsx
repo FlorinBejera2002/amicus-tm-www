@@ -1,19 +1,19 @@
 import { StaticImageData } from 'next/image'
 
-import imageEpisod15 from '../../../../../../public/image-episod15.jpg'
+import imageEpisod15 from '../../../../../../public/image-episod15.webp'
 import imageEpisod14 from '../../../../../../public/image-episod14.webp'
 import imageEpisod13 from '../../../../../../public/image-episod13.webp'
 import imageEpisod12 from '../../../../../../public/image-episod12.webp'
 import imageEpisod11 from '../../../../../../public/image-episod11.webp'
-import imageEpisod10 from '../../../../../../public/image-episod10.jpg'
-import imageEpisod9 from '../../../../../../public/image-episod9.jpg'
+import imageEpisod10 from '../../../../../../public/image-episod10.webp'
+import imageEpisod9 from '../../../../../../public/image-episod9.webp'
 import imageEpisod8 from '../../../../../../public/image-episod8.webp'
 import imageEpisod7 from '../../../../../../public/image-episod7.webp'
 import imageEpisod6 from '../../../../../../public/image-episod6.webp'
 import imageEpisod5 from '../../../../../../public/image-episod5.webp'
 import imageEpisod4 from '../../../../../../public/image-episod4.webp'
 import imageEpisod3 from '../../../../../../public/image-episod3.webp'
-import imageEpisod2 from '../../../../../../public/image-episod2.jpg'
+import imageEpisod2 from '../../../../../../public/image-episod2.webp'
 import imageEpisod1 from '../../../../../../public/image-episod1.webp'
 
 type IEpisode = {

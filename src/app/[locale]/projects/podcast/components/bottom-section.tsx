@@ -2,10 +2,10 @@ import { useTranslations } from 'next-intl'
 import Link from 'next/link'
 import Image from 'next/image'
 
-import spotifi from '../../../../../../public/spotify.png'
-import mobileScreen from '../../../../../../public/mobile-screen.png'
-import googlePodcast from '../../../../../../public/google-podcasts.png'
-import applePodcast from '../../../../../../public/apple-podcast.png'
+import spotifi from '../../../../../../public/spotify.webp'
+import mobileScreen from '../../../../../../public/mobile-screen.webp'
+import googlePodcast from '../../../../../../public/google-podcasts.webp'
+import applePodcast from '../../../../../../public/apple-podcast.webp'
 
 export default function BottomSection() {
   const t = useTranslations('podcast')

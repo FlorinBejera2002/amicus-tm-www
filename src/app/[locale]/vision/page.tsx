@@ -6,11 +6,11 @@ import { useTranslations } from 'next-intl'
 import Link from 'next/link'
 import Image from 'next/image'
 
-import Project5 from '../../../../public/vision-projects5.jpg'
-import Project4 from '../../../../public/vision-projects4.jpeg'
-import Project2 from '../../../../public/vision-projects3.jpeg'
-import Project3 from '../../../../public/vision-projects2.jpeg'
-import Project1 from '../../../../public/vision-projects1.jpg'
+import Project5 from '../../../../public/vision-projects5.webp'
+import Project4 from '../../../../public/vision-projects4.webp'
+import Project2 from '../../../../public/vision-projects3.webp'
+import Project3 from '../../../../public/vision-projects2.webp'
+import Project1 from '../../../../public/vision-projects1.webp'
 
 export default function Vision() {
   const t = useTranslations('')
