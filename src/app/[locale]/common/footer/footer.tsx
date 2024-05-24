@@ -86,38 +86,16 @@ export default function Footer() {
                 />
               </div>
 
-              <h4 className="text-color-light font-extrabold mb-3 text-lg">
-                Blog
-              </h4>
-              <div className="flex flex-wrap text-white text-xs gap-2.5">
-                <div className="bg-dark--100 py-1.5 px-3 transform hover:-translate-y-1 transition-transform duration-200">
-                  Web Design
-                </div>
-                <div className="bg-dark--100 py-1.5 px-3 transform hover:-translate-y-1 transition-transform duration-200">
-                  CMS
-                </div>
-                <div className="bg-dark--100 py-1.5 px-3 transform hover:-translate-y-1 transition-transform duration-200">
-                  SEO
-                </div>
-                <div className="bg-dark--100 py-1.5 px-3 transform hover:-translate-y-1 transition-transform duration-200">
-                  User Experience (UX) Design
-                </div>
-                <div className="bg-dark--100 py-1.5 px-3 transform hover:-translate-y-1 transition-transform duration-200">
-                  Social Media Marketing
-                </div>
-                <div className="bg-dark--100 py-1.5 px-3 transform hover:-translate-y-1 transition-transform duration-200">
-                  Website Development
-                </div>
-                <div className="bg-dark--100 py-1.5 px-3 transform hover:-translate-y-1 transition-transform duration-200">
-                  E-commerce Strategies
-                </div>
-                <div className="bg-dark--100 py-1.5 px-3 transform hover:-translate-y-1 transition-transform duration-200">
-                  Mobile Applications
-                </div>
-                <div className="bg-dark--100 py-1.5 px-3 transform hover:-translate-y-1 transition-transform duration-200">
-                  Website Maintenance
-                </div>
-              </div>
+              <h5 className="text-white">
+                Handcrafted by{' '}
+                <Link
+                  className="!text-[#e3ae04] no-underline"
+                  href="https://new-ark.cloud/"
+                  target="_blank"
+                >
+                  new ark
+                </Link>
+              </h5>
             </div>
           </div>
         </div>
