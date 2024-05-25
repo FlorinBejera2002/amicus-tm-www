@@ -33,18 +33,37 @@ function Modal() {
     }
   })
 
+  useEffect(() => {
+    const htmlElement = document.documentElement
+
+    const handleOverflow = () => {
+      if (modal) {
+        htmlElement.style.overflow = 'hidden'
+      } else {
+        htmlElement.style.overflow = ''
+      }
+    }
+
+    handleOverflow()
+
+    // Clean up the effect when the component unmounts
+    return () => {
+      htmlElement.style.overflow = ''
+    }
+  }, [modal])
+
   return (
     <AnimatePresence>
       {modal && (
         <motion.dialog
           animate={{ opacity: 1 }}
-          className="md:fixed left-0 top-0 w-full h-full bg-black bg-opacity-50 z-50 my-24 md:my-0 p-4 overflow-auto backdrop-blur flex justify-center items-center"
+          className="fixed left-0 top-[-95px] md:top-0 w-full h-full bg-black bg-opacity-50 z-[9999] my-24 md:my-0 p-4 backdrop-blur flex justify-center items-center"
           exit={{ opacity: 0 }}
           initial={{ opacity: 0 }}
           transition={{ duration: 0.5 }}
         >
           <motion.div
-            className="bg-gradient-to-t relative bg-white rounded-md md:w-[50em] lg:w-[65em] mt-24 flex justify-center items-center"
+            className="bg-gradient-to-t relative bg-white rounded-md md:w-[50em] lg:w-[65em] flex justify-center items-center p-3"
             ref={modalRef}
           >
             <Link

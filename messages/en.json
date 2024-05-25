@@ -178,9 +178,9 @@
     "contact": "Contact",
     "donate": "Donate",
     "home": "Home",
-    "podcast": "Podcast",
+    "project_subPodcast": "Podcast",
     "project": "Projects",
-    "project_": "The time is now",
+    "project_subProject": "The time is now",
     "resources": "Resources",
     "terms": "Terms",
     "vision": "Vision"
@@ -221,7 +221,7 @@
     "title_description_hero": "FOLLOW THE 15-EPISODE SERIES.",
     "title_serial": "Each episode can be accessed through the links below.",
     "trailer": "OFFICIAL TRAILER",
-    "verset": "`The fields are ripe for harvest, but the laborers are few. Therefore, pray to the Lord of the harvest to send out laborers into His harvest.`"
+    "verset": "The fields are ripe for harvest, but the laborers are few. Therefore, pray to the Lord of the harvest to send out laborers into His harvest."
   },
   "steps_evangelization": {
     "evangelism_requests_count": "Evangelism requests created so far",

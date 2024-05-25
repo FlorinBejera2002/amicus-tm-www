@@ -8,8 +8,10 @@ export default function TrailerSection() {
   const t = useTranslations('serial')
 
   return (
-    <div className="flex flex-col gap-4 pb-4 px-8">
-      <h3 className="text-[#f3a61d] font-bold">{t('trailer')}</h3>
+    <div className="flex flex-col gap-4 pb-14">
+      <h3 className="text-[#e3ae04] font-bold text-xl md:text-3xl">
+        {t('trailer')}
+      </h3>
       <Link
         className="pointer "
         href="https://www.youtube.com/watch?v=k1VGbMGFpro"

@@ -8,6 +8,7 @@ import Animation from '../animation'
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 import Image from 'next/image'
+import { cn } from '@/utils'
 
 import horizontalLogo from '../../../../../public/logo_horizontal_white.webp'
 
@@ -23,20 +24,28 @@ export default function Footer() {
   ]
   const projectLinks = [
     { href: `/${language}/donate`, titleKey: 'header.donate' },
-    { href: `/${language}/projects/time-is-now`, titleKey: 'header.project_' },
-    { href: `/${language}/projects/podcast`, titleKey: 'header.podcast' }
-  ]
-  const resourcesLinks = [
-    { href: `/${language}/donate`, titleKey: 'header.terms' },
-    { href: `/${language}/projects/time-is-now`, titleKey: 'header.blog' },
-    { href: '?ev-req-form=open', titleKey: 'header.contact' }
+    {
+      href: `/${language}/projects/time-is-now`,
+      titleKey: 'header.project_subProject'
+    },
+    {
+      href: `/${language}/projects/podcast`,
+      titleKey: 'header.project_subPodcast'
+    }
   ]
 
   return (
-    <footer className="p-relative  border-top-0 font-poppins px-2" id="footer">
+    <footer className="border-top-0 font-poppins px-3" id="footer">
       <InViewTransition damping={50} delay={0.5}>
-        <div className="container pt-5 pb-3 border-bottom px-3">
-          <div className="row py-5">
+        <div className="container border-bottom px-3">
+          <div
+            className={cn(
+              'row',
+              !['vision', 'projects'].some((item) => pathname.includes(item))
+                ? 'py-5'
+                : ''
+            )}
+          >
             <div className="col-lg-6 mt-5 pt-3 gap-4">
               <Link className="flex w-fit" href="/">
                 <Image
@@ -50,7 +59,7 @@ export default function Footer() {
               <ul className="list list-unstyled pt-4">
                 <li className="d-flex align-items-center mb-4 ">
                   <Link
-                    className="d-inline-flex align-items-center text-decoration-none font-weight-semibold text-white text-4-5 hover:!text-[#f3a61d] transition-all duration-300"
+                    className="d-inline-flex align-items-center text-decoration-none font-weight-semibold text-white text-4-5 hover:!text-[#e3ae04] transition-all duration-300"
                     href="mailto:info@ariseforchrist.com"
                   >
                     info@ariseforchrist.com
@@ -71,7 +80,7 @@ export default function Footer() {
               <Socials />
             </div>
             <div className="col-lg-6 mt-lg-5 pt-lg-3">
-              <div className="row mb-5-5">
+              <div className="w-full flex justify-between mb-5">
                 <FooterOverview
                   links={companyLinks}
                   titleKey="header.company"
@@ -80,16 +89,12 @@ export default function Footer() {
                   links={projectLinks}
                   titleKey="header.project"
                 />
-                <FooterOverview
-                  links={resourcesLinks}
-                  titleKey="header.resources"
-                />
               </div>
 
-              <h5 className="text-white">
-                Handcrafted by{' '}
+              <h5 className="text-white mb-4">
+                Handcrafted by
                 <Link
-                  className="!text-[#e3ae04] no-underline"
+                  className="!text-[#e3ae04] no-underline ml-2 "
                   href="https://new-ark.cloud/"
                   target="_blank"
                 >

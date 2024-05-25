@@ -178,9 +178,9 @@
     "contact": "Contact",
     "donate": "Donează",
     "home": "Acasă",
-    "podcast": "Podcast",
+    "project_subPodcast": "Podcast",
     "project": "Proiecte",
-    "project_": "Timpul este acum",
+    "project_subProject": "Timpul este acum",
     "resources": "Resurse",
     "terms": "Termeni",
     "vision": "Viziunea"
@@ -221,7 +221,7 @@
     "title_description_hero": "URMĂREȘTE SERIA DE 15 EPISOADE",
     "title_serial": "Fiecare episod poate fi accesat prin intermediul link-urilor de mai jos.",
     "trailer": "TRAILER OFICIAL",
-    "verset": "`Câmpurile sunt bogate pentru seceriş, dar secerătorii sunt puţini. Rugaţi deci pe Domnul secerişului să trimită lucrători în secerişul Lui.`"
+    "verset": "Câmpurile sunt bogate pentru seceriş, dar secerătorii sunt puţini. Rugaţi deci pe Domnul secerişului să trimită lucrători în secerişul Lui."
   },
   "steps_evangelization": {
     "evangelism_requests_count": "Cereri de evanghelizare create până în acest moment",

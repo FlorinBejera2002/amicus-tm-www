@@ -1,117 +1,167 @@
 'use client'
 
-import { Dispatch, SetStateAction, useState } from 'react'
+import { Dispatch, SetStateAction, useEffect, useState } from 'react'
+
+import SubMenu from './sub-menu'
+import { MenuButton } from './hamburger'
+import Animation from '../../animation'
 
 import { FaChevronDown } from 'react-icons/fa'
 import { useTranslations } from 'next-intl'
+import { useSearchParams } from 'next/navigation'
 import Link from 'next/link'
-import { AnimatePresence, motion } from 'framer-motion'
+import { motion } from 'framer-motion'
+import { useWindowSize } from '@uidotdev/usehooks'
+import { cn } from '@/utils'
 
 const MobileNavbar = ({
   language,
+  mobileNavbarOpen,
   setMobileNavbarOpen
 }: {
   language: string
+  mobileNavbarOpen: boolean
   setMobileNavbarOpen: Dispatch<SetStateAction<boolean>>
 }) => {
   const [subMenu, setSubMenu] = useState(false)
+
   const t = useTranslations()
+
+  const searchParams = useSearchParams()
+  const modal = searchParams.get('ev-req-form') === 'open'
+
+  const { width } = useWindowSize()
+
+  const menuLinks = [
+    {
+      href: '/',
+      label: t('header.home')
+    },
+    {
+      href: `/${language}/about`,
+      label: t('header.about_us')
+    },
+
+    {
+      href: `/${language}/vision`,
+      label: t('header.vision')
+    },
+    {
+      href: `/${language}/donate`,
+      label: t('header.donate')
+    },
+    {
+      customClassname: 'flex items-center gap-2',
+      href: `#`,
+      icon: (
+        <FaChevronDown
+          className={cn(
+            'transition-all duration-300',
+            subMenu ? 'rotate-180' : ''
+          )}
+        />
+      ),
+      label: t('header.project'),
+      onClick: () => setSubMenu(!subMenu)
+    }
+  ]
+
+  const handleSubMenuItemClick = () => {
+    setMobileNavbarOpen((prev) => !prev)
+  }
+
+  useEffect(() => {
+    const htmlElement = document.documentElement
+
+    const handleOverflow = () => {
+      if (mobileNavbarOpen || modal) {
+        htmlElement.style.overflow = 'hidden'
+      } else {
+        htmlElement.style.overflow = ''
+      }
+    }
+
+    handleOverflow()
+
+    // Clean up the effect when the component unmounts
+    return () => {
+      if (modal) {
+        htmlElement.style.overflow = 'hidden'
+      } else {
+        htmlElement.style.overflow = ''
+      }
+    }
+  }, [mobileNavbarOpen, modal])
 
   return (
     <motion.div
-      animate={{ opacity: 1 }}
-      className="header-nav-main header-nav-main-square header-nav-main-dropdown-no-borders header-nav-main-text-capitalize
-        header-nav-main-arrows header-nav-main-full-width-mega-menu header-nav-main-mega-menu-bg-hover
-        header-nav-main-mega-menu-bg-hover-dark header-nav-main-effect-5 display-none w-screen before:rounded-md"
-      exit={{ opacity: 0 }}
-      initial={{ opacity: 0 }}
+      animate={{
+        opacity: 1,
+        transform: 'translateX(0)',
+        transition: {
+          duration: 0.2
+        }
+      }}
+      className={cn(
+        'absolute top-0 left-0 mx-auto bg-[#121212] w-screen h-[100dvh] p-4 z-50',
+        width! < 900 ? 'flex' : 'hidden'
+      )}
+      exit={{ opacity: 0, transform: 'translateX(-100%)' }}
+      initial={{ opacity: 0, transform: 'translateX(-100%)' }}
       transition={{ duration: 0.5, type: 'spring' }}
     >
-      <nav className="collapse show rounded-md w-screen">
-        <ul className="nav nav-pills">
-          <li>
-            <Link
-              className="nav-link"
-              href="/"
-              onClick={() => setMobileNavbarOpen((prev) => !prev)}
-            >
-              {t('header.home')}
-            </Link>
-          </li>
-          <li>
-            <Link
-              className="nav-link"
-              href={`/${language}/about`}
-              onClick={() => setMobileNavbarOpen((prev) => !prev)}
-            >
-              {t('header.about_us')}
-            </Link>
-          </li>
-          <li>
-            <Link
-              className="nav-link"
-              href={`/${language}/vision`}
-              onClick={() => setMobileNavbarOpen((prev) => !prev)}
-            >
-              {t('header.vision')}
-            </Link>
-          </li>
-          <li>
-            <Link
-              className="nav-link"
-              href={`/${language}/donate`}
-              onClick={() => setMobileNavbarOpen((prev) => !prev)}
-            >
-              {t('header.donate')}
-            </Link>
-          </li>
-          <li>
-            <Link
-              className="nav-link relative flex items-center justify-between w-full"
-              href="#"
-              onClick={() => setSubMenu(!subMenu)}
-            >
-              {t('header.project')}
-              <FaChevronDown />
-            </Link>
-            <AnimatePresence initial={false} mode="popLayout">
-              {subMenu && (
-                <motion.ul
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  initial={{ opacity: 0 }}
-                  transition={{ damping: 25, duration: 0.5, type: 'spring' }}
-                >
-                  <li>
-                    <Link
-                      className="dropdown-item"
-                      href={`/${language}/projects/time-is-now`}
-                      onClick={() => {
-                        setMobileNavbarOpen((prev) => !prev)
-                        setSubMenu(!subMenu)
-                      }}
-                    >
-                      {t('header.project_')}
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      className="dropdown-item"
-                      href={`/${language}/projects/podcast`}
-                      onClick={() => {
-                        setMobileNavbarOpen((prev) => !prev)
-                        setSubMenu(!subMenu)
-                      }}
-                    >
-                      Podcast
-                    </Link>
-                  </li>
-                </motion.ul>
-              )}
-            </AnimatePresence>
-          </li>
-        </ul>
-      </nav>
+      <Link href="?ev-req-form=open">
+        <button
+          className=" bg-[#e3ae04] text-black font-weight-semibold p-2 text-sm rounded-md absolute top-[32px] left-[32px]"
+          onClick={() => setMobileNavbarOpen((prev) => !prev)}
+          type="button"
+        >
+          {t('form.title')}
+        </button>
+      </Link>
+      <MenuButton
+        className={cn(
+          'cursor-pointer text-white scale-50 -mr-2 absolute top-[40px] right-[32px]',
+          width! < 900 ? 'flex' : 'hidden'
+        )}
+        color="white"
+        height="24"
+        isOpen={mobileNavbarOpen}
+        onClick={() => setMobileNavbarOpen((prev) => !prev)}
+        strokeWidth="4"
+        transition={{ duration: 0.2, ease: 'easeOut' }}
+        width="64"
+      />
+      <div className="flex flex-col w-screen h-[100dvh] items-center gap-2">
+        {menuLinks.map((link, idx) => (
+          <Link
+            className={cn(
+              'w-fit p-3 no-underline active:!no-underline hover:!no-underline text-center text-white text-xl font-semibold',
+              idx === 0 ? 'mt-[30%]' : '',
+              link.customClassname
+            )}
+            href={link.href}
+            key={idx}
+            onClick={() =>
+              link.href === '#'
+                ? link.onClick?.()
+                : setMobileNavbarOpen((prev) => !prev)
+            }
+          >
+            {link.label}
+            {link.icon}
+          </Link>
+        ))}
+
+        <SubMenu
+          handleSubMenuItemClick={handleSubMenuItemClick}
+          isDesktop={false}
+          language={language}
+          subMenu={subMenu}
+        />
+
+        <Animation />
+      </div>
     </motion.div>
   )
 }

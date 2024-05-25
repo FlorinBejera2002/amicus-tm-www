@@ -50,7 +50,7 @@ export default function ChangeLanguage() {
   return (
     <button
       className={cn(
-        'flex cursor-pointer p-[10px] rounded-full h-[40px] w-[75px] bg-[#e3ae04] items-center relative',
+        'flex cursor-pointer p-[10px] rounded-full h-[40px] w-[75px] min-w-[75px] bg-[#e3ae04] items-center relative',
         language === 'en' ? 'justify-end' : ''
       )}
       onClick={toggleSwitch}

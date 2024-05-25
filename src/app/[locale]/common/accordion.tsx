@@ -41,7 +41,7 @@ const Accordion = ({
           ) : (
             <FaArrowDown className="size-3" />
           )}
-          <div className="text-slate-900 font-semibold select-none mb-0 text-lg">
+          <div className="text-slate-900 font-semibold select-none mb-0 text-md md:text-lg">
             {title}
           </div>
         </div>

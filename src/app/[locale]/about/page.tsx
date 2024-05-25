@@ -18,8 +18,8 @@ const About = () => {
   const t = useTranslations()
 
   return (
-    <div className="main" role="main">
-      <section className="page-header p-relative bg-quaternary m-0 overflow-hidden border-0 p-0">
+    <div className="main flex flex-col items-center" role="main">
+      <section className="page-header p-relative bg-quaternary m-0 overflow-hidden border-0 p-0 w-screen">
         <CustomHeroBg />
         <div className="container">
           <div className="row align-items-center my-5 pb-4 pt-5">
@@ -49,16 +49,16 @@ const About = () => {
         <Animation />
       </section>
 
-      <div className="custom-page-content p-relative z-index-2">
-        <div className="px-2 custom-padding-top-1 custom-padding-bottom-1 px-lg-5 container rounded-md bg-white">
-          <div className="row px-lg-3 px-3">
+      <div className="custom-page-content max-w-7xl z-index-2">
+        <div className="rounded-md bg-white !p-8">
+          <div className="row">
             <div className="col">
-              <p className="text-md md:text-lg line-height-7 px-lg-3 pl-6">
+              <p className="text-md md:text-lg line-height-7">
                 {t('about_us.description_p1_1')}
               </p>
             </div>
           </div>
-          <div className="row px-lg-3 py-4 px-3">
+          <div className="row">
             <div className="hidden md:flex flex-col col-lg-6 text-center">
               <div className="d-flex mb-3">
                 <div className="p-2 flex-fill">
@@ -130,14 +130,14 @@ const About = () => {
               </div>
             </div>
 
-            <div className="col-lg-6 ps-lg-4 px-3">
-              <p className="text-md md:text-lg line-height-7 px-6">
+            <div className="col-lg-6 ps-lg-4">
+              <p className="text-md md:text-lg line-height-7">
                 {t('about_us.description_p1_6')}
               </p>
 
               <AccordionSection />
 
-              <div className="appear-animation pt-4 flex items-center px-6">
+              <div className="appear-animation pt-4 flex items-center">
                 <Link
                   className="btn btn-modern btn-primary text-capitalize text-dark text-md md:text-lg anim-hover-translate-top-5px transition-3ms py-1 pr-30 flex items-center font-semibold"
                   href="#"
@@ -149,13 +149,9 @@ const About = () => {
             </div>
           </div>
 
-          <div className="row px-lg-3 px-lg-3 pl-6">
-            <div className="col">
-              <p className="text-md md:text-lg line-height-7 pl-6">
-                {t('about_us.description_p3_1')}
-              </p>
-            </div>
-          </div>
+          <p className="text-md md:text-lg pb-0 mb-0 mt-8 sm:mt-0">
+            {t('about_us.description_p3_1')}
+          </p>
         </div>
       </div>
     </div>

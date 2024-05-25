@@ -43,7 +43,7 @@ export default function RootLayout({ children, params: { locale } }: any) {
 
   return (
     <html lang={locale}>
-      <body className={cn('body', poppins.className)}>
+      <body className={cn('body', poppins.className, 'relative')}>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Nav />
           {children}

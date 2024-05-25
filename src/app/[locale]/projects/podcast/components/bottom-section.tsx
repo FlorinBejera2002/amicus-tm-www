@@ -11,17 +11,19 @@ export default function BottomSection() {
   const t = useTranslations('podcast')
 
   return (
-    <div className="container flex flex-col justify-center items-center">
-      <h1 className="py-5 text-white font-bold text-2xl md:text-3xl">
-        {t('bottom-title')}
-      </h1>
-      <iframe
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowFullScreen={true}
-        className="pb-5 md:w-[900px] md:h-[500px]"
-        src="https://www.youtube.com/embed?listType=playlist&list=UUQy-aDJ2zjmVD7Yn2XusrsA&controls=0&modestbranding=1&index=1"
-        title="YouTube Playlist"
-      />
+    <div className="max-w-7xl flex flex-col justify-center items-center !px-8 pb-10 z-2">
+      <div className="flex flex-col py-12 gap-4 w-full">
+        <h1 className=" text-white font-bold text-2xl md:text-3xl">
+          {t('bottom-title')}
+        </h1>
+        <iframe
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen={true}
+          className="md:w-[900px] md:h-[500px]"
+          src="https://www.youtube.com/embed?listType=playlist&list=UUQy-aDJ2zjmVD7Yn2XusrsA&controls=0&modestbranding=1&index=1"
+          title="YouTube Playlist"
+        />
+      </div>
       <div className="grid md:grid-cols-2 justify-center items-center pt-10  border-t border-white">
         <Image alt="arise for christ logo" src={mobileScreen} />
         <div className="flex flex-col justify-center items-center text-white">

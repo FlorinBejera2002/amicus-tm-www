@@ -6,15 +6,15 @@ export default function Subtitle() {
 
   return (
     <>
-      <div className="grid md:grid-cols-2 gap-10 pb-10 ">
-        <div className="flex flex-col gap-1 items-center ">
+      <div className="flex flex-wrap mb-24 md:mb-12">
+        <div className="flex flex-col gap-1 items-center flex-1 w-full">
           <h4 className=" text-yellow-600 font-bold pl-10">{t('subtitle')}</h4>
           <p className="text-sm text-white text-center w-80 md:w-full">
             {t('subtitle_text')}
           </p>
         </div>
 
-        <div className="flex flex-col justify-center items-center">
+        <div className="flex flex-col justify-center items-center flex-1">
           <h3 className="text-white">{t('title')}</h3>
 
           <p className="text-white text-xs">{t('text_bottom')}</p>

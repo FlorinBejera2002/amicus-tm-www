@@ -62,9 +62,10 @@ const AccordionSection = () => {
   ]
 
   return (
-    <div className="flex flex-col gap-2 pl-6 md:pl-0">
+    <div className="flex flex-col gap-2 md:pl-0">
       {accordionItems.map((item, idx) => (
         <Accordion
+          customClassname="!pl-0"
           description={item.description}
           expanded={expanded}
           idx={idx}

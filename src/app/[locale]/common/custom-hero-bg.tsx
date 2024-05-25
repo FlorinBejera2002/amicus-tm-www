@@ -1,7 +1,13 @@
-const CustomHeroBg = () => {
+import { cn } from '@/utils'
+
+const CustomHeroBg = ({ customClassname }: { customClassname?: string }) => {
   return (
-    <div className="custom-hero-bg loaded z-[0]">
-      <svg preserveAspectRatio="xMidYMid slice" viewBox="0 0 100 100">
+    <div className={cn('custom-hero-bg loaded z-[0]', customClassname)}>
+      <svg
+        className={customClassname}
+        preserveAspectRatio="xMidYMid slice"
+        viewBox="0 0 100 100"
+      >
         <defs>
           <radialGradient
             cx="50%"

@@ -16,10 +16,10 @@ export default function Vision() {
   const t = useTranslations('')
 
   return (
-    <div className="main bg-black pb-24" role="main">
+    <div className="main bg-black pb-24 flex flex-col items-center" role="main">
       <section className="page-header p-relative bg-quaternary m-0 overflow-hidden border-0 p-0">
         <CustomHeroBg />
-        <div className="">
+        <div className="w-screen">
           <div className="row align-items-center my-5 pb-4 pt-5">
             <div className="col my-5 pb-5 text-center">
               <div className="py-4">
@@ -46,20 +46,20 @@ export default function Vision() {
         </div>
         <Animation />
       </section>
-      <section className="md:mx-64 px-2 flex justify-center items-center flex-col mt-5 md:gap-20">
-        <h1 className="text-white text-2xl md:text-6xl font-bold pb-3 md:pb-10">
+      <section className="max-w-7xl flex justify-center items-center flex-col mt-5 md:gap-20 !p-4 !pb-8 !px-6">
+        <h1 className="text-white text-2xl md:text-6xl font-bold pb-3 md:pb-10 text-center">
           {t('vision.presentation_title')}
         </h1>
         <div className="grid md:grid-cols-2 items-center text-center text-gray-50 md:gap-20 px-3">
           <div className="md:pl-16 flex flex-col items-center justify-center pb-2">
-            <h3 className="font-bold text-lg md:text-2xl text-gray-400">
+            <p className="font-bold text-md md:text-lg text-gray-400">
               {t('vision.presentation_p1_1')}
-            </h3>
+            </p>
           </div>
           <div className="md:border-l border-t md:border-t-0 border-gray-400 md:h-[17em] md:pl-16 pt-3 flex flex-col items-center justify-center">
-            <h3 className="font-bold text-lg md:text-2xl text-gray-400">
+            <p className="font-bold text-md md:text-lg text-gray-400">
               {t('vision.presentation_p2')}
-            </h3>
+            </p>
           </div>
         </div>
 
@@ -76,7 +76,7 @@ export default function Vision() {
             <h3 className="font-bold text-2xl md:text-4xl">
               {t('vision.projects_p1_2')}
             </h3>
-            <p className="px-3 md:px-0 text-base md:text-xl font-semibold text-gray-400">
+            <p className="px-3 md:px-0 text-md md:text-lg font-semibold text-gray-400">
               {t('vision.projects_p1_3')}
             </p>
           </div>
@@ -86,7 +86,7 @@ export default function Vision() {
             <h3 className="font-bold text-2xl md:text-4xl">
               {t('vision.projects_p2_1')}
             </h3>
-            <p className="px-3 md:px-0 text-base md:text-xl font-semibold text-gray-400">
+            <p className="px-3 md:px-0 text-md md:text-lg font-semibold text-gray-400">
               {t('vision.projects_p2_2')}
             </p>
           </div>
@@ -106,7 +106,7 @@ export default function Vision() {
             <h3 className="font-bold text-2xl md:text-4xl">
               {t('vision.projects_p3_1')}
             </h3>
-            <p className="px-3 md:px-0 text-base md:text-xl font-semibold text-gray-400">
+            <p className="px-3 md:px-0 text-base text-md md:text-lg font-semibold text-gray-400">
               {t('vision.projects_p3_2')}
             </p>
           </div>
@@ -116,7 +116,7 @@ export default function Vision() {
             <h3 className="font-bold text-2xl md:text-4xl">
               {t('vision.projects_p3_7')}
             </h3>
-            <p className="px-3 md:px-0 text-base md:text-xl font-semibold text-gray-400">
+            <p className="px-3 md:px-0 text-base text-md md:text-lg font-semibold text-gray-400">
               {t('vision.projects_p3_6')}
             </p>
           </div>
@@ -136,7 +136,7 @@ export default function Vision() {
             <h3 className="font-bold text-2xl md:text-4xl">
               {t('vision.projects_p4_1')}
             </h3>
-            <p className="px-3 md:px-0 text-base md:text-xl font-semibold text-gray-400">
+            <p className="px-3 md:px-0 text-base text-md md:text-lg font-semibold text-gray-400">
               {t('vision.projects_p4_2')}
             </p>
           </div>
