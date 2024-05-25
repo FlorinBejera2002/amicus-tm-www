@@ -18,7 +18,7 @@ export const Step = ({
   return (
     <div
       className={cn(
-        'flex justify-center items-center px-2 flex-col flex-wrap gap-1 md:gap-2 md:flex-row  xl:gap-4',
+        'flex justify-center items-center flex-col flex-wrap gap-1 md:gap-2 md:flex-row xl:gap-4 !text-center md:!text-start',
         customClassname
       )}
     >

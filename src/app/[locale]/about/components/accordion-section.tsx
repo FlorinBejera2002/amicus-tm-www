@@ -45,18 +45,20 @@ const AccordionSection = () => {
     },
     {
       description: [
-        t('about_us.principals_p6_2'),
-        t('about_us.principals_p6_3'),
-        t('about_us.principals_p6_4'),
-        t('about_us.principals_p6_5'),
-        t('about_us.principals_p6_6'),
-        t('about_us.principals_p6_7'),
-        t('about_us.principals_p6_8'),
-        t('about_us.principals_p6_9'),
-        t('about_us.principals_p6_10'),
-        t('about_us.principals_p6_11'),
-        t('about_us.principals_p6_12')
-      ].join('\n\n'),
+        <>
+          <p>{t('about_us.principals_p6_2')}</p>
+          <p>{t('about_us.principals_p6_3')}</p>
+          <p>{t('about_us.principals_p6_4')}</p>
+          <p>{t('about_us.principals_p6_5')}</p>
+          <p>{t('about_us.principals_p6_6')}</p>
+          <p>{t('about_us.principals_p6_7')}</p>
+          <p>{t('about_us.principals_p6_8')}</p>
+          <p>{t('about_us.principals_p6_9')}</p>
+          <p>{t('about_us.principals_p6_10')}</p>
+          <p>{t('about_us.principals_p6_11')}</p>
+          <p>{t('about_us.principals_p6_12')}</p>
+        </>
+      ],
       title: t('about_us.principals_p6_1')
     }
   ]

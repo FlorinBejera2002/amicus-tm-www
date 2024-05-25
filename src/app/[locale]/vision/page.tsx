@@ -12,6 +12,10 @@ import Project2 from '../../../../public/vision-projects3.webp'
 import Project3 from '../../../../public/vision-projects2.webp'
 import Project1 from '../../../../public/vision-projects1.webp'
 
+const Divider = () => (
+  <div className="hidden md:flex h-auto w-[1px] bg-gray-400" />
+)
+
 export default function Vision() {
   const t = useTranslations('')
 
@@ -46,97 +50,98 @@ export default function Vision() {
         </div>
         <Animation />
       </section>
-      <section className="max-w-7xl flex justify-center items-center flex-col mt-5 md:gap-20 !p-4 !pb-8 !px-6">
-        <h1 className="text-white text-2xl md:text-6xl font-bold pb-3 md:pb-10 text-center">
+      <section className="max-w-7xl flex justify-center flex-col mt-5 md:gap-10 !p-4 !pb-8 !px-8">
+        <h1 className="text-white text-3xl md:text-6xl !font-semibold pb-3 md:pb-10 text-start">
           {t('vision.presentation_title')}
         </h1>
-        <div className="grid md:grid-cols-2 items-center text-center text-gray-50 md:gap-20 px-3">
-          <div className="md:pl-16 flex flex-col items-center justify-center pb-2">
-            <p className="font-bold text-md md:text-lg text-gray-400">
-              {t('vision.presentation_p1_1')}
-            </p>
-          </div>
-          <div className="md:border-l border-t md:border-t-0 border-gray-400 md:h-[17em] md:pl-16 pt-3 flex flex-col items-center justify-center">
-            <p className="font-bold text-md md:text-lg text-gray-400">
-              {t('vision.presentation_p2')}
-            </p>
-          </div>
+        <div className="flex flex-col md:flex-row !gap-0 md:!gap-10">
+          <p className="!font-semibold text-md md:text-lg text-gray-400 text-start mb-0">
+            {t('vision.presentation_p1_1')}
+          </p>
+
+          <Divider />
+
+          <p className="!font-semibold text-md md:text-lg text-gray-400 text-start mb-0">
+            {t('vision.presentation_p2')}
+          </p>
         </div>
 
-        <h1 className="text-white text-3xl md:text-6xl font-bold pb-10 pt-5 md:pt-0">
+        <h1 className="text-white text-3xl md:text-6xl !font-semibold pt-5 md:pt-0 pb-3">
           {t('vision.projects_title')}
         </h1>
-        <div className="grid md:grid-cols-2 items-center text-center text-gray-50 md:gap-20 pb-3">
+
+        <div className="flex flex-col md:flex-row !gap-0 md:!gap-16">
           <Image
             alt="Christian images"
-            className="image-cover w-[30em] h-[20em] rounded-md ml-16 hidden md:flex"
+            className="object-cover hidden md:flex aspect-video flex-1 rounded-md shadow-2xl shadow-gray-400"
             src={Project1}
           />
-          <div className="md:border-l border-gray-400 md:h-[17em] md:pl-16 flex flex-col items-center justify-center">
-            <h3 className="font-bold text-2xl md:text-4xl">
+
+          <div className="flex flex-col flex-1">
+            <h3 className="!font-semibold text-2xl md:text-4xl text-start text-white">
               {t('vision.projects_p1_2')}
             </h3>
-            <p className="px-3 md:px-0 text-md md:text-lg font-semibold text-gray-400">
+            <p className="md:px-0 text-md md:text-lg font-semibold text-gray-400 text-start">
               {t('vision.projects_p1_3')}
             </p>
           </div>
         </div>
-        <div className="grid md:grid-cols-2 items-center text-center text-gray-50 md:gap-20 pb-3">
-          <div className="md:border-r border-gray-400 md:h-[17em] md:px-16 md:-mr-[5em] flex flex-col items-center justify-center">
-            <h3 className="font-bold text-2xl md:text-4xl">
+        <div className="flex flex-col md:flex-row !gap-0 md:!gap-16 mt-3">
+          <div className="flex flex-col flex-1">
+            <h3 className="!font-semibold text-2xl md:text-4xl text-start text-white">
               {t('vision.projects_p2_1')}
             </h3>
-            <p className="px-3 md:px-0 text-md md:text-lg font-semibold text-gray-400">
+            <p className="text-md md:text-lg font-semibold text-gray-400 text-start ">
               {t('vision.projects_p2_2')}
             </p>
           </div>
           <Image
             alt="Christian images"
-            className="image-cover w-[30em] h-[20em] rounded-md ml-16 hidden md:flex"
+            className="rounded-md flex-1 hidden md:flex shadow-2xl shadow-gray-400 object-cover"
             src={Project2}
           />
         </div>
-        <div className="grid md:grid-cols-2 items-center text-center text-gray-50 md:gap-20 pb-3">
+        <div className="flex flex-col md:flex-row !gap-0 md:!gap-16 mt-3">
           <Image
             alt="Christian images"
-            className="image-cover w-[30em] h-[20em] rounded-md ml-16 hidden md:flex"
+            className="object-cover rounded-md hidden md:flex flex-1"
             src={Project3}
           />
-          <div className="md:border-l border-gray-400 md:h-[17em] md:pl-16 flex flex-col items-center justify-center">
-            <h3 className="font-bold text-2xl md:text-4xl">
+          <div className="flex flex-col flex-1">
+            <h3 className="!font-semibold text-2xl md:text-4xl text-start text-white">
               {t('vision.projects_p3_1')}
             </h3>
-            <p className="px-3 md:px-0 text-base text-md md:text-lg font-semibold text-gray-400">
+            <p className="text-md md:text-lg font-semibold text-gray-400">
               {t('vision.projects_p3_2')}
             </p>
           </div>
         </div>
-        <div className="grid md:grid-cols-2 items-center text-center text-gray-50 md:gap-20 pb-3">
-          <div className="md:border-r border-gray-400 md:h-[17em] md:px-16 md:-mr-[5em] flex flex-col items-center justify-center">
-            <h3 className="font-bold text-2xl md:text-4xl">
+        <div className="flex flex-col md:flex-row !gap-0 md:!gap-16 mt-3">
+          <div className="flex flex-col flex-1">
+            <h3 className="!font-semibold text-2xl md:text-4xl text-start text-white">
               {t('vision.projects_p3_7')}
             </h3>
-            <p className="px-3 md:px-0 text-base text-md md:text-lg font-semibold text-gray-400">
+            <p className="text-md md:text-lg font-semibold text-gray-400">
               {t('vision.projects_p3_6')}
             </p>
           </div>
           <Image
             alt="Christian images"
-            className="image-cover w-[30em] h-[20em] rounded-md ml-16 hidden md:flex"
+            className="object-cover rounded-md hidden md:flex shadow-2xl shadow-gray-400 flex-1"
             src={Project4}
           />
         </div>
-        <div className="grid md:grid-cols-2 items-center text-center text-gray-50 md:gap-20">
+        <div className="flex flex-col md:flex-row !gap-0 md:!gap-16 mt-3">
           <Image
             alt="Christian images"
-            className="image-cover w-[30em] h-[20em] rounded-md ml-16 hidden md:flex"
+            className="object-cover rounded-md hidden md:flex shadow-2xl shadow-gray-400 flex-1"
             src={Project5}
           />
-          <div className="md:border-l border-gray-400 md:h-[17em] md:pl-10 flex flex-col items-center justify-center">
-            <h3 className="font-bold text-2xl md:text-4xl">
+          <div className="flex flex-col flex-1">
+            <h3 className="!font-semibold text-2xl md:text-4xl text-start text-white">
               {t('vision.projects_p4_1')}
             </h3>
-            <p className="px-3 md:px-0 text-base text-md md:text-lg font-semibold text-gray-400">
+            <p className="text-md md:text-lg font-semibold text-gray-400">
               {t('vision.projects_p4_2')}
             </p>
           </div>

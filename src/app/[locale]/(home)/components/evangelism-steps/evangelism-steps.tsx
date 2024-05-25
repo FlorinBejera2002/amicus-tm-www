@@ -40,7 +40,7 @@ export default function EvangelismSteps() {
   ]
 
   return (
-    <div className="grid !relative !z-10 bg-white pb-20 container xl:grid-cols-2 rounded-md">
+    <div className="grid !relative !z-10 bg-white pb-20 max-w-7xl xl:grid-cols-2 rounded-md">
       <div className="flex mb-20 xl:flex items-center justify-center">
         <InViewTransition
           customClassname="flex justify-center items-center w-full"
@@ -60,7 +60,7 @@ export default function EvangelismSteps() {
         </InViewTransition>
       </div>
 
-      <div className="flex flex-col gap-8 px-2 md:px-4 md:gap-12 xl:gap-16">
+      <div className="flex flex-col gap-8 px-8 md:px-4 md:gap-12 xl:gap-16">
         <h1 className="text-3xl font-poppins font-bold text-center md:text-4xl xl:text-5xl">
           {t('title')}
         </h1>

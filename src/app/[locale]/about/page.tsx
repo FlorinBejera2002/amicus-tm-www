@@ -137,7 +137,7 @@ const About = () => {
 
               <AccordionSection />
 
-              <div className="appear-animation pt-4 flex items-center">
+              <div className="appear-animation py-4 flex items-center">
                 <Link
                   className="btn btn-modern btn-primary text-capitalize text-dark text-md md:text-lg anim-hover-translate-top-5px transition-3ms py-1 pr-30 flex items-center font-semibold"
                   href="#"
@@ -149,7 +149,7 @@ const About = () => {
             </div>
           </div>
 
-          <p className="text-md md:text-lg pb-0 mb-0 mt-8 sm:mt-0">
+          <p className="text-md md:text-lg pb-0 mb-0">
             {t('about_us.description_p3_1')}
           </p>
         </div>
