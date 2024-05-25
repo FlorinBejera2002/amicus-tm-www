@@ -1,4 +1,3 @@
-'use client'
 import MailchimpSubscribe, {
   EmailFormFields,
   FormHooks
@@ -80,11 +79,9 @@ const ContentEvangelizationForm = () => {
         }
 
         return (
-          <div className="m-2 md:p-5 lg:p-10">
-            <div className="flex flex-col md:items-center">
-              <h1 className="text-xl md:text-3xl lg:text-4xl md:pb-4 pt-3">
-                {t('title')}
-              </h1>
+          <div className="flex flex-col">
+            <div className="flex flex-col md:items-center mt-[100%] sm:mt-0 !gap-0 md:!gap-4">
+              <h1 className="text-xl md:text-3xl lg:text-4xl">{t('title')}</h1>
               <div className="grid md:grid-cols-3 md:gap-5">
                 <p className="text-xs md:text-base flex flex-col gap-1">
                   <PiNumberCircleOneFill className="w-10 h-10 ml-5" />
@@ -101,7 +98,7 @@ const ContentEvangelizationForm = () => {
               </div>
             </div>
 
-            <div className="w-full h-[1px] bg-yellow-500 mt-1 mb-4" />
+            <div className="w-full h-[1px] bg-yellow-500 mt-2 mb-4" />
 
             <form
               className="pt-4 flex flex-col md:gap-4"

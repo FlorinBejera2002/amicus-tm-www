@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from 'react'
 
-import Content from './content'
+import ContentEvangelizationForm from './content'
 
 import { AiOutlineClose } from 'react-icons/ai'
 import { usePathname, useRouter, useSearchParams } from 'next/navigation'
@@ -63,16 +63,16 @@ function Modal() {
           transition={{ duration: 0.5 }}
         >
           <motion.div
-            className="bg-gradient-to-t relative bg-white rounded-md md:w-[50em] lg:w-[65em] flex justify-center items-center p-3"
+            className="bg-gradient-to-t relative bg-white rounded-md md:w-[50em] lg:w-[65em] flex justify-center items-center p-8 max-h-[600px] overflow-y-auto"
             ref={modalRef}
           >
             <Link
-              className="flex justify-end absolute right-12 top-12 cursor-pointer"
+              className="flex justify-end absolute right-[24px] top-[24px] cursor-pointer"
               href={pathname}
             >
               <AiOutlineClose className="fill-black w-7 h-7" />
             </Link>
-            <Content />
+            <ContentEvangelizationForm />
           </motion.div>
         </motion.dialog>
       )}
