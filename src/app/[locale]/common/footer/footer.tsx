@@ -35,18 +35,18 @@ export default function Footer() {
   ]
 
   return (
-    <footer className="border-top-0 font-poppins px-3" id="footer">
+    <footer className="border-top-0 font-poppins" id="footer">
       <InViewTransition damping={50} delay={0.5}>
         <div className="max-w-[1480px] mx-auto border-bottom px-3">
           <div
             className={cn(
-              'row',
+              'row px-8',
               !['vision', 'projects'].some((item) => pathname.includes(item))
                 ? 'py-5'
                 : ''
             )}
           >
-            <div className="col-lg-6 mt-5 pt-3 gap-4">
+            <div className="col-lg-6 mt-5 !px-0 pt-3 gap-4">
               <Link className="flex w-fit" href="/">
                 <Image
                   alt="arise for christ logo"
@@ -79,7 +79,7 @@ export default function Footer() {
 
               <Socials />
             </div>
-            <div className="col-lg-6 mt-lg-5 pt-lg-3">
+            <div className="col-lg-6 mt-lg-5 pt-lg-3 !px-0">
               <div className="w-full flex justify-between mb-5">
                 <FooterOverview
                   links={companyLinks}
@@ -105,24 +105,11 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="footer-copyright bg-transparent">
-          <div className="container pb-5">
-            <hr className="bg-color-light opacity-1" />
-            <div className="row">
-              <div className="col-lg-6 mt-4">
-                <p className="text-start text-3-5 font-weight-semi-bold text-light mb-0">
-                  © Copyright AriseForChrist
-                </p>
-              </div>
-              <div className="col-lg-6 text-lg-end mt-4">
-                <span className="text-color-grey text-color-hover-primary cursor-pointer">
-                  Privacy Policy
-                </span>
-                <span className="text-color-grey text-color-hover-primary ms-3 cursor-pointer">
-                  Terms of Use
-                </span>
-              </div>
-            </div>
+        <div className="footer-copyright bg-transparent max-w-[1480px] mx-auto">
+          <div className="p-10">
+            <p className="text-start text-3-5 font-weight-semi-bold text-light mb-0">
+              © Copyright AriseForChrist
+            </p>
           </div>
         </div>
         <Animation />

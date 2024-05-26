@@ -34,7 +34,7 @@ export default function Socials() {
   ]
 
   return (
-    <div className="flex gap-2 flex-wrap w-screen mb-5">
+    <div className="flex gap-2 flex-wrap w-screen mb-5 !z-10 relative">
       {links.map((link, idx) => (
         <div
           className={cn(

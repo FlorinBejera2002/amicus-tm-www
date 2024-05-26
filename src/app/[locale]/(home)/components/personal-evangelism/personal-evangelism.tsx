@@ -8,7 +8,7 @@ export default function PersonalEvangelism() {
   const t = useTranslations('vision')
 
   return (
-    <section className="container px-2 bg-color-light p-relative z-index-2 py-1 mt-3 rounded-md">
+    <section className="max-w-6xl mx-auto px-2 bg-color-light p-relative z-index-2 py-1 mt-3 rounded-md">
       <div className="row p-8">
         <InViewTransition>
           <h1 className="font-bold pb-4 md:pb-10 text-2xl md:text-3xl xl:4xl">

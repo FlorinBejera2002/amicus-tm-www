@@ -25,7 +25,7 @@ const About = () => {
         <div className="row align-items-center my-5 pb-4 pt-5">
           <div className="col my-5 pb-5 text-center">
             <div className="py-4">
-              <ul className="breadcrumb d-flex justify-content-center font-weight-medium mb-2 text-4-5">
+              <ul className="breadcrumb flex gap-2 justify-content-center font-weight-medium mb-2 text-4-5">
                 <li className="z-[1]">
                   <Link
                     className="text-color-primary text-decoration-none"

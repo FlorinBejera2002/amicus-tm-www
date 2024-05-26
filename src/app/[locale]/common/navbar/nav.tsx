@@ -104,7 +104,7 @@ export default function Nav() {
     >
       <nav
         className={cn(
-          'transition-all duration-500 !top-0 !left-0 w-screen bg-transparent flex items-center justify-center py-8 lg:py-10 pl-0 md:pl-8',
+          'transition-all duration-500 !top-0 !left-0 w-screen bg-transparent flex items-center justify-center py-8 lg:py-10 !pl-0 md:!pl-4',
           y !== null && y >= 25
             ? 'bg-gray-950/[.4] shadow-sm backdrop-blur-md'
             : ''

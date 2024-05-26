@@ -156,7 +156,7 @@
     "name": "nume",
     "occupation": "ocupație",
     "religion": "religie",
-    "send": "TRIMITE",
+    "send": "Trimite",
     "step1": "Completați formularul cu datele dumneavoastră personale.",
     "step2": "Echipa noastră vă va contacta în cel mai scurt timp posibil pentru a discuta mai în detaliu.",
     "step3": "Împreună vom crea un plan personalizat de evanghelizare, adaptat nevoilor spirituale.",
@@ -281,5 +281,8 @@
     "step8_description": "Arise for Christ va lucra îndeaproape cu cei responsabili de procesul de evanghelizare personală din biserica locală și cu cel care a făcut solicitarea, raportând periodic progresul.",
     "step8_title": "Raport periodic",
     "title": "Pașii lucrării de evanghelizare personală aplicați la biserica locală."
+  },
+  "evangelismForm": {
+    "title": "Cerere de Evanghelizare"
   }
 }

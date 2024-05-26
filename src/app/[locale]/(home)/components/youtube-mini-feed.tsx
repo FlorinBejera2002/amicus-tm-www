@@ -18,7 +18,7 @@ export default function YoutubeMiniFeed() {
 
   return (
     <div
-      className="grid gap-2 md:grid-cols-2 lg:grid-cols-4 bg-transparent relative pt-1 lg:pt-2 xl:pt-3 pb-5 z-index-3 md:px-24 top-[-50px] px-8 md:p-0"
+      className="grid gap-2 md:grid-cols-2 lg:grid-cols-4 bg-transparent relative pt-1 lg:pt-2 xl:pt-3 z-index-3 md:px-24 top-[-50px] px-8 md:p-0"
       id="numbers"
     >
       {ytVids.map((vid, idx) => (

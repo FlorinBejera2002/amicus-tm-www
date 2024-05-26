@@ -114,7 +114,7 @@ const MobileNavbar = ({
       initial={{ opacity: 0, transform: 'translateX(-100%)' }}
       transition={{ duration: 0.5, type: 'spring' }}
     >
-      <div className="flex items-center justify-between p-8">
+      <div className="flex items-center justify-between p-10 pr-8">
         <ChangeLanguage customClassname="flex" />
         <MenuButton
           className={cn(

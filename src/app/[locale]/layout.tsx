@@ -7,7 +7,6 @@ import './css/skin-creative-agency-2.css'
 import './css/demo-creative-agency-2.css'
 import './css/bootstrap.min.css'
 import ScrollButton from './common/sections/scroll-button'
-import EvangelismFormModal from './common/sections/evangelism-form/evangelism-form'
 import Nav from './common/navbar/nav'
 import Footer from './common/footer/footer'
 import CookieConsents from './common/cookie-consents'
@@ -48,8 +47,6 @@ export default function RootLayout({ children, params: { locale } }: any) {
           <Nav />
           {children}
           <Footer />
-
-          <EvangelismFormModal />
 
           <CookieConsents />
         </NextIntlClientProvider>

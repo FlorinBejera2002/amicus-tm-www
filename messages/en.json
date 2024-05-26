@@ -156,7 +156,7 @@
     "name": "name",
     "occupation": "occupation",
     "religion": "religion",
-    "send": "SEND",
+    "send": "Send",
     "step1": "Fill out the form with your personal information.",
     "step2": "Our team will contact you as soon as possible to discuss in more detail.",
     "step3": "Together, we will create a personalized evangelization plan tailored to your spiritual needs.",
@@ -281,5 +281,8 @@
     "step8_description": "Arise for Christ will work closely with those responsible for the local church personal evangelism process and with the person who made the evangelism request, regularly reporting the progress.",
     "step8_title": "Regular report",
     "title": "Personal evangelism process steps applied to the local church."
+  },
+  "evangelismForm": {
+    "title": "Evangelism Form"
   }
 }

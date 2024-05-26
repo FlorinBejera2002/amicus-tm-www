@@ -1,3 +1,5 @@
+'use client'
+
 import MailchimpSubscribe, {
   EmailFormFields,
   FormHooks
@@ -80,25 +82,24 @@ const ContentEvangelizationForm = () => {
 
         return (
           <div className="flex flex-col">
-            <div className="flex flex-col md:items-center mt-[100%] sm:mt-0 !gap-0 md:!gap-4">
-              <h1 className="text-xl md:text-3xl lg:text-4xl">{t('title')}</h1>
-              <div className="grid md:grid-cols-3 md:gap-5">
-                <p className="text-xs md:text-base flex flex-col gap-1">
-                  <PiNumberCircleOneFill className="w-10 h-10 ml-5" />
+            <div className="flex flex-col md:items-center !gap-0 md:!gap-4">
+              <div className="flex !gap-0 sm:!gap-2 flex-wrap">
+                <p className="text-md md:text-lg flex flex-row md:flex-col gap-2 flex-1 min-w-[200px] items-start h-full">
+                  <PiNumberCircleOneFill className="w-full h-full max-w-[50px] self-start" />
                   {t('step1')}
                 </p>
-                <p className="text-xs md:text-base flex flex-col gap-1">
-                  <PiNumberCircleTwoFill className="w-10 h-10 ml-5" />
+                <p className="text-md md:text-lg flex flex-row md:flex-col gap-2 flex-1 min-w-[200px] items-start h-full">
+                  <PiNumberCircleTwoFill className="w-full h-full max-w-[50px] self-start" />
                   {t('step2')}
                 </p>
-                <p className="text-xs md:text-base flex flex-col gap-1">
-                  <PiNumberCircleThreeFill className="w-10 h-10 ml-5" />
+                <p className="text-md md:text-lg flex flex-row md:flex-col gap-2 flex-1 min-w-[200px] items-start h-full">
+                  <PiNumberCircleThreeFill className="w-full h-full max-w-[50px] self-start" />
                   {t('step3')}
                 </p>
               </div>
             </div>
 
-            <div className="w-full h-[1px] bg-yellow-500 mt-2 mb-4" />
+            {/* <div className="w-full h-[1px] bg-yellow-500 mt-2 mb-4" /> */}
 
             <form
               className="pt-4 flex flex-col md:gap-4"
@@ -170,12 +171,12 @@ const ContentEvangelizationForm = () => {
               <div className="flex gap-2 pt-3 items-center">
                 <input
                   checked={isChecked}
-                  className="flex w-5 h-5"
+                  className="flex w-5 h-5 cursor-pointer"
                   id="consent"
                   onChange={handleCheckboxChange}
                   type="checkbox"
                 />
-                <label className="text-xs md:sm" htmlFor="consent">
+                <label className="text-sm cursor-pointer" htmlFor="consent">
                   {t('checkbox_text')}
                 </label>
               </div>
@@ -192,7 +193,7 @@ const ContentEvangelizationForm = () => {
                 </div>
               )}
 
-              <div className="flex justify-center items-center pb-3 pt-3 md:py-0">
+              <div className="flex justify-center items-center mt-4">
                 <button
                   className="bg-[#e3ae04] rounded-md px-20 text-black font-bold py-1 size-9 flex justify-center items-center disabled:opacity-50 disabled:pointer-events-none"
                   disabled={!isChecked}
