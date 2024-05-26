@@ -69,8 +69,8 @@ export default function Home() {
           yIn={0}
           yOut={0}
         >
-          <CustomHeroBg />
           <Animation />
+          <CustomHeroBg />
         </InViewTransition>
 
         <InViewTransition>

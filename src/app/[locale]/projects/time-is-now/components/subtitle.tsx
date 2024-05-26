@@ -17,7 +17,7 @@ export default function Subtitle() {
         <div className="flex flex-col justify-center items-center flex-1">
           <h3 className="text-white">{t('title')}</h3>
 
-          <p className="text-white text-xs">{t('text_bottom')}</p>
+          <p className="text-white text-md">{t('text_bottom')}</p>
           <div className="border-y w-64 border-yellow-600 py-4 flex flex-col gap-1 justify-center items-center">
             <h3 className="text-yellow-600 font-poppins">
               {t('serial_bottom')}

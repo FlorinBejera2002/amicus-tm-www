@@ -5,15 +5,13 @@ import { usePathname, useRouter } from 'next/navigation'
 import { motion } from 'framer-motion'
 import { cn } from '@/utils'
 
-const spring = {
-  damping: 30,
-  stiffness: 700,
-  type: 'spring'
-}
-
 type Language = 'en' | 'ro'
 
-export default function ChangeLanguage() {
+export default function ChangeLanguage({
+  customClassname
+}: {
+  customClassname?: string
+}) {
   const pathname = usePathname()
   const [language, setLanguage] = useState(pathname.split('/')[1] as Language)
   const t = useTranslations()
@@ -50,15 +48,16 @@ export default function ChangeLanguage() {
   return (
     <button
       className={cn(
-        'flex cursor-pointer p-[10px] rounded-full h-[40px] w-[75px] min-w-[75px] bg-[#e3ae04] items-center relative',
-        language === 'en' ? 'justify-end' : ''
+        'cursor-pointer p-[10px] rounded-full h-[40px] w-[75px] min-w-[75px] bg-[#e3ae04] items-center relative hidden lg:flex',
+        language === 'en' ? 'justify-end' : '',
+        customClassname
       )}
       onClick={toggleSwitch}
     >
       <motion.div
-        className=" bg-white rounded-full -ml-1 -mr-1 size-8"
+        className="bg-white rounded-full -ml-1 -mr-1 size-8"
         layout={true}
-        transition={spring}
+        transition={{ duration: 0.2 }}
       />
 
       <motion.div

@@ -44,7 +44,7 @@ const About = () => {
       </section>
 
       <div className="custom-page-content pb-4 p-relative z-index-2 text-md md:text-lg flex w-full justify-center">
-        <div className="max-w-6xl flex flex-col lg:flex-row justify-around bg-white rounded-md p-8 gap-0 mt-4">
+        <div className="max-w-6xl flex flex-col lg:flex-row justify-around bg-white rounded-md p-8 md:p-12 gap-0 mt-4">
           <div className="flex-[1.75]">
             <h1 className="text-3xl font-bold mb-6">{t('donate.title')}</h1>
 

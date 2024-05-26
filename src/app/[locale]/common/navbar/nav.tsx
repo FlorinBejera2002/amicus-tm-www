@@ -13,7 +13,7 @@ import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 import Image from 'next/image'
 import { AnimatePresence } from 'framer-motion'
-import { useWindowScroll, useWindowSize } from '@uidotdev/usehooks'
+import { useWindowScroll } from '@uidotdev/usehooks'
 import { cn } from '@/utils'
 
 import horizontalLogo from '../../../../../public/logo_horizontal_white.webp'
@@ -56,9 +56,9 @@ export default function Nav() {
   const [mobileNavbarOpen, setMobileNavbarOpen] = useState(false)
 
   const pathname = usePathname()
+
   const t = useTranslations()
   const [{ y }] = useWindowScroll()
-  const { width } = useWindowSize()
 
   const dropdownRef = useRef(null)
 
@@ -104,13 +104,13 @@ export default function Nav() {
     >
       <nav
         className={cn(
-          'transition-all duration-500 !top-0 !left-0 w-screen bg-transparent flex items-center justify-center py-8 lg:py-10',
-          y !== null && y >= 50
+          'transition-all duration-500 !top-0 !left-0 w-screen bg-transparent flex items-center justify-center py-8 lg:py-10 pl-0 md:pl-8',
+          y !== null && y >= 25
             ? 'bg-gray-950/[.4] shadow-sm backdrop-blur-md'
             : ''
         )}
       >
-        <div className="flex items-center justify-between w-screen lg:w-full lg:container px-8">
+        <div className="flex items-center justify-between w-screen lg:w-full lg:container px-8 pl-0">
           <div className="flex items-center mr-8">
             <Link href="/">
               <Image
@@ -124,12 +124,7 @@ export default function Nav() {
             <ChangeLanguage />
           </div>
 
-          <div
-            className={cn(
-              'flex items-center gap-8',
-              width! < 900 ? 'hidden' : 'flex'
-            )}
-          >
+          <div className={cn('items-center gap-8 hidden lg:flex')}>
             {navLinks.map((link) => (
               <ActiveLink
                 customClassname="text-nowrap"
@@ -165,20 +160,26 @@ export default function Nav() {
               />
             </div>
 
-            <Link href="?ev-req-form=open">
-              <button
-                className=" bg-[#e3ae04] text-black font-weight-semibold p-3 text-md rounded-md truncate"
-                type="button"
-              >
-                {t('form.title')}
-              </button>
+            <Link
+              className=" bg-[#e3ae04] text-black font-weight-semibold p-3 text-md rounded-md min-w-fit no-underline hover:!no-underline"
+              href={`/${language}/evangelism-request`}
+              type="button"
+            >
+              {t('form.title')}
             </Link>
           </div>
 
+          <Link
+            className=" bg-[#e3ae04] text-black font-weight-semibold p-3 text-md rounded-md min-w-fit flex lg:hidden mr-auto no-underline hover:!no-underline"
+            href={`/${language}/evangelism-request`}
+            type="button"
+          >
+            {t('form.title')}
+          </Link>
+
           <MenuButton
             className={cn(
-              'cursor-pointer text-white scale-50 -mr-2',
-              width! < 900 ? 'flex' : 'hidden'
+              'cursor-pointer text-white scale-50 -mr-2 flex lg:hidden'
             )}
             color="white"
             height="24"

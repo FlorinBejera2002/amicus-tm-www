@@ -37,7 +37,7 @@ export default function Footer() {
   return (
     <footer className="border-top-0 font-poppins px-3" id="footer">
       <InViewTransition damping={50} delay={0.5}>
-        <div className="container border-bottom px-3">
+        <div className="max-w-[1480px] mx-auto border-bottom px-3">
           <div
             className={cn(
               'row',

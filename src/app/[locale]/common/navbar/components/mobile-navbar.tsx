@@ -4,14 +4,15 @@ import { Dispatch, SetStateAction, useEffect, useState } from 'react'
 
 import SubMenu from './sub-menu'
 import { MenuButton } from './hamburger'
+import ChangeLanguage from './change-language'
+import InViewTransition from '../../in-view-transition'
 import Animation from '../../animation'
 
 import { FaChevronDown } from 'react-icons/fa'
 import { useTranslations } from 'next-intl'
-import { useSearchParams } from 'next/navigation'
+import { usePathname, useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
-import { useWindowSize } from '@uidotdev/usehooks'
 import { cn } from '@/utils'
 
 const MobileNavbar = ({
@@ -30,11 +31,11 @@ const MobileNavbar = ({
   const searchParams = useSearchParams()
   const modal = searchParams.get('ev-req-form') === 'open'
 
-  const { width } = useWindowSize()
+  const pathname = usePathname()
 
   const menuLinks = [
     {
-      href: '/',
+      href: `/${language}`,
       label: t('header.home')
     },
     {
@@ -99,58 +100,72 @@ const MobileNavbar = ({
         opacity: 1,
         transform: 'translateX(0)',
         transition: {
-          duration: 0.2
+          duration: 0.5
         }
       }}
       className={cn(
-        'absolute top-0 left-0 mx-auto bg-[#121212] w-screen h-[100dvh] p-4 z-50',
-        width! < 900 ? 'flex' : 'hidden'
+        'absolute top-0 left-0 mx-auto bg-[#121212] w-screen h-[100dvh] z-50 flex flex-col'
       )}
-      exit={{ opacity: 0, transform: 'translateX(-100%)' }}
+      exit={{
+        opacity: 0,
+        transform: 'translateX(-100%)',
+        transition: { duration: 0.5 }
+      }}
       initial={{ opacity: 0, transform: 'translateX(-100%)' }}
       transition={{ duration: 0.5, type: 'spring' }}
     >
-      <Link href="?ev-req-form=open">
-        <button
-          className=" bg-[#e3ae04] text-black font-weight-semibold p-2 text-sm rounded-md absolute top-[32px] left-[32px]"
+      <div className="flex items-center justify-between p-8">
+        <ChangeLanguage customClassname="flex" />
+        <MenuButton
+          className={cn(
+            'cursor-pointer text-white scale-50 z-50 -mr-2 -mt-2 flex lg:hidden'
+          )}
+          color="white"
+          height="24"
+          isOpen={mobileNavbarOpen}
           onClick={() => setMobileNavbarOpen((prev) => !prev)}
-          type="button"
-        >
-          {t('form.title')}
-        </button>
-      </Link>
-      <MenuButton
-        className={cn(
-          'cursor-pointer text-white scale-50 -mr-2 absolute top-[40px] right-[32px]',
-          width! < 900 ? 'flex' : 'hidden'
-        )}
-        color="white"
-        height="24"
-        isOpen={mobileNavbarOpen}
-        onClick={() => setMobileNavbarOpen((prev) => !prev)}
-        strokeWidth="4"
-        transition={{ duration: 0.2, ease: 'easeOut' }}
-        width="64"
-      />
-      <div className="flex flex-col w-screen h-[100dvh] items-center gap-2">
+          strokeWidth="4"
+          transition={{ duration: 0.2, ease: 'easeOut' }}
+          width="64"
+        />
+      </div>
+
+      <div className="flex flex-col h-screen gap-4 relative">
         {menuLinks.map((link, idx) => (
-          <Link
-            className={cn(
-              'w-fit p-3 no-underline active:!no-underline hover:!no-underline text-center text-white text-xl font-semibold',
-              idx === 0 ? 'mt-[30%]' : '',
-              link.customClassname
+          <InViewTransition
+            customClassname={cn(
+              'flex flex-col w-screen items-center gap-2',
+              idx === 0 ? 'mt-[75px]' : ''
             )}
-            href={link.href}
+            damping={25}
+            delay={idx * 0.15}
+            duration={0.5}
             key={idx}
-            onClick={() =>
-              link.href === '#'
-                ? link.onClick?.()
-                : setMobileNavbarOpen((prev) => !prev)
-            }
+            xIn={0}
+            xOut={-400}
+            yIn={0}
+            yOut={0}
           >
-            {link.label}
-            {link.icon}
-          </Link>
+            <Link
+              className={cn(
+                'w-fit p-3 no-underline active:!no-underline hover:!no-underline text-center text-white text-xl font-semibold',
+                link.customClassname,
+                pathname === link?.href ||
+                  (pathname?.includes('projects') && idx === 4)
+                  ? 'text-[#e3ae04] !scale-125'
+                  : 'text-white mb-0'
+              )}
+              href={link.href}
+              onClick={() =>
+                link.href === '#'
+                  ? link.onClick?.()
+                  : setMobileNavbarOpen((prev) => !prev)
+              }
+            >
+              {link.label}
+              {link.icon}
+            </Link>
+          </InViewTransition>
         ))}
 
         <SubMenu

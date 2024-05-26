@@ -50,7 +50,7 @@ export default function Vision() {
         </div>
         <Animation />
       </section>
-      <section className="max-w-7xl flex justify-center flex-col mt-5 md:gap-10 !p-4 !pb-8 !px-8">
+      <section className="max-w-6xl flex justify-center flex-col md:gap-10 !p-8 md:mt-5">
         <h1 className="text-white text-3xl md:text-6xl !font-semibold pb-3 md:pb-10 text-start">
           {t('vision.presentation_title')}
         </h1>
@@ -97,14 +97,14 @@ export default function Vision() {
           </div>
           <Image
             alt="Christian images"
-            className="rounded-md flex-1 hidden md:flex shadow-2xl shadow-gray-400 object-cover"
+            className="rounded-md flex-1 hidden md:flex shadow-2xl shadow-gray-400 object-cover w-1/2"
             src={Project2}
           />
         </div>
         <div className="flex flex-col md:flex-row !gap-0 md:!gap-16 mt-3">
           <Image
             alt="Christian images"
-            className="object-cover rounded-md hidden md:flex flex-1"
+            className="object-cover rounded-md hidden md:flex flex-1 shadow-2xl shadow-gray-400"
             src={Project3}
           />
           <div className="flex flex-col flex-1">
@@ -127,7 +127,7 @@ export default function Vision() {
           </div>
           <Image
             alt="Christian images"
-            className="object-cover rounded-md hidden md:flex shadow-2xl shadow-gray-400 flex-1"
+            className="object-cover rounded-md hidden md:flex shadow-2xl shadow-gray-400 flex-1 w-1/2"
             src={Project4}
           />
         </div>

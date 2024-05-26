@@ -26,7 +26,9 @@ const SubMenu = ({
           animate={{ opacity: 1, y: 0 }}
           aria-orientation="vertical"
           className={cn(
-            isDesktop ? 'absolute mt-6 min-w-fit rounded-md shadow-lg ' : ''
+            isDesktop
+              ? 'absolute mt-6 min-w-fit rounded-md shadow-lg '
+              : 'ml-20 -mt-5'
           )}
           exit={{ opacity: 0, y: -10 }}
           initial={{ opacity: 0, y: -10 }}

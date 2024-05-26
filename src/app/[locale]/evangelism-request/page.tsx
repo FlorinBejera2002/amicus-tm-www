@@ -14,7 +14,7 @@ import step3 from '../../../../public/img/step3.webp'
 import step2 from '../../../../public/img/step2.webp'
 import step1 from '../../../../public/img/step1.webp'
 
-const About = () => {
+const EvangelismRequest = () => {
   const t = useTranslations()
 
   return (
@@ -158,4 +158,4 @@ const About = () => {
   )
 }
 
-export default About
+export default EvangelismRequest

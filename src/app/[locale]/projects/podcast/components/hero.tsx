@@ -1,44 +1,35 @@
 import { useTranslations } from 'next-intl'
-import Link from 'next/link'
 import Image from 'next/image'
 
 import youtubeChanelImage from '../../../../../../public/youtube-chanel-image.webp'
-import heroPodcast from '../../../../../../public/podcast-hero.webp'
 import Adi from '../../../../../../public/adi-text.webp'
 
 export default function Hero() {
   const t = useTranslations('podcast')
 
   return (
-    <div className="max-w-7xl flex flex-col gap-3 justify-center items-center mt-[200px] !px-8 z-2">
-      <Image
-        alt="arise for christ logo"
-        className="scale-125 lg:scale-100 mb-4"
-        src={heroPodcast}
-      />
-      <h3 className="text-white">{t('subscribe')}</h3>
-      <Link
-        className="text-white bg-red-600 py-2.5 px-4 rounded-md text-decoration-none cursor-pointer "
-        href="https://www.youtube.com/@Ariseforchrist"
-      >
-        YouTube
-      </Link>
-      <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-10">
-        <Image alt="arise for christ logo" src={Adi} />
-        <p className="text-white text-wrap text-xl md:text-2xl xl:text-3xl font-bold leading-normal">
+    <div className="max-w-6xl flex flex-col justify-center mt-[240px] !px-8 md:!px-12 z-2 w-screen">
+      <h1 className="text-2xl md:text-4xl lg:text-6xl text-white font-bold w-fit">
+        {t('title')}
+      </h1>
+      <div className="flex mt-8 flex-wrap">
+        <Image
+          alt="arise for christ logo"
+          className="flex-1 object-cover max-w-[800px] w-full"
+          src={Adi}
+        />
+        <p className="text-white text-wrap text-md md:text-xl font-semibold flex-1 self-center mb-6 min-w-fit">
           {t('hero-paragraf')}
         </p>
       </div>
-      <div className="py-5 border-y border-white grid md:grid-cols-2 justify-center items-center gap-10">
-        <p className="text-white text-wrap text-xl md:text-2xl xl:text-3xl  font-bold leading-normal mb-0">
+      <div className="py-8 border-y border-white flex justify-center gap-10">
+        <p className="text-white text-wrap text-md md:text-xl font-semibold leading-normal mb-0 flex-1">
           {t('text-episode')}
         </p>
         <Image
           alt="arise for christ logo"
-          className="hidden md:flex"
-          height={900}
+          className="hidden md:flex object-cover rounded-md max-h-[150px]"
           src={youtubeChanelImage}
-          width={600}
         />
       </div>
     </div>
