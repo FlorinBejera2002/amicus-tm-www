@@ -59,6 +59,7 @@ export default function Vision() {
             </div>
           </div>
         </div>
+
         <Animation />
       </section>
       <section className="max-w-6xl flex justify-center flex-col md:gap-10 !p-8 md:mt-5">
