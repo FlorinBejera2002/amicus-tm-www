@@ -17,9 +17,11 @@ export default function Team() {
     <div className="bg-color-dark p-relative custom-section-1 bg-position-center bg-size-cover lazyload px-8">
       <div className="container px-2 py-4">
         <div className="row align-items-center ">
-          <b className="text-3xl text-gray-50 font-bold py-6 text-center">
-            {t('title-a4c')}
-          </b>
+          <InViewTransition>
+            <h2 className="text-2xl lg:text-4xl text-gray-50 font-semibold py-6 mb-0 !w-fit">
+              {t('title-a4c')}
+            </h2>
+          </InViewTransition>
 
           <div className="py-5 grid gap-3 md:gas grid-cols-2 md:grid-cols-3 xl:grid-cols-6">
             <InViewTransition>

@@ -100,7 +100,7 @@ const MobileNavbar = ({
         opacity: 1,
         transform: 'translateX(0)',
         transition: {
-          duration: 0.5
+          duration: 0.25
         }
       }}
       className={cn(
@@ -130,15 +130,15 @@ const MobileNavbar = ({
         />
       </div>
 
-      <div className="flex flex-col h-screen gap-4 relative">
+      <div className="flex flex-col h-screen gap-4 relative z-[500]">
         {menuLinks.map((link, idx) => (
           <InViewTransition
             customClassname={cn(
               'flex flex-col w-screen items-center gap-2',
-              idx === 0 ? 'mt-[75px]' : ''
+              idx === 0 ? 'mt-[50px]' : ''
             )}
             damping={25}
-            delay={idx * 0.15}
+            delay={idx * 0.05}
             duration={0.5}
             key={idx}
             xIn={0}

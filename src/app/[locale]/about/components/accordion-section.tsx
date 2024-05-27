@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 
+import InViewTransition from '../../common/in-view-transition'
 import Accordion from '../../common/accordion'
 
 import { useTranslations } from 'next-intl'
@@ -66,15 +67,16 @@ const AccordionSection = () => {
   return (
     <div className="flex flex-col gap-2 md:pl-0">
       {accordionItems.map((item, idx) => (
-        <Accordion
-          customClassname="!pl-0"
-          description={item.description}
-          expanded={expanded}
-          idx={idx}
-          key={idx}
-          setExpanded={setExpanded}
-          title={item.title}
-        />
+        <InViewTransition delay={0.75 + idx * 0.25} key={idx}>
+          <Accordion
+            customClassname="!pl-0"
+            description={item.description}
+            expanded={expanded}
+            idx={idx}
+            setExpanded={setExpanded}
+            title={item.title}
+          />
+        </InViewTransition>
       ))}
     </div>
   )

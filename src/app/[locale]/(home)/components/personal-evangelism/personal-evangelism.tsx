@@ -1,5 +1,5 @@
-import Images from './images'
 import AccordionSection from './accordion-section'
+import Images from '../../../common/images'
 
 import { useTranslations } from 'next-intl'
 import InViewTransition from '@/app/[locale]/common/in-view-transition'
