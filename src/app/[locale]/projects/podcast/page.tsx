@@ -2,6 +2,12 @@ import Hero from './components/hero'
 import BottomSection from './components/bottom-section'
 import CustomHeroBg from '../../common/custom-hero-bg'
 
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Arise for Christ | Podcast'
+}
+
 export default function Podcast() {
   return (
     <div className="bg-[#0c0e19] flex flex-col justify-center items-center pb-16 px-3 z-30">

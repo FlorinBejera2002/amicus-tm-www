@@ -8,6 +8,11 @@ import Animation from '../common/animation'
 import { FaAngleRight } from 'react-icons/fa'
 import { useTranslations } from 'next-intl'
 import Link from 'next/link'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Arise for Christ | About'
+}
 
 const About = () => {
   const t = useTranslations()

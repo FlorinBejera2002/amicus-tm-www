@@ -13,7 +13,12 @@ import { FaYoutube } from 'react-icons/fa'
 import { FaTiktok } from 'react-icons/fa'
 import { useTranslations } from 'next-intl'
 import Link from 'next/link'
+import { Metadata } from 'next'
 import { cn } from '@/utils'
+
+export const metadata: Metadata = {
+  title: 'Arise for Christ | Home'
+}
 
 export default function Home() {
   const t = useTranslations('hero')

@@ -5,6 +5,12 @@ import EpisodeSection from './components/episode-section'
 import CustomHeroBg from '../../common/custom-hero-bg'
 import Animation from '../../common/animation'
 
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Arise for Christ | Time is now'
+}
+
 export default function TimeIsNow() {
   return (
     <div className="bg-[#0c0e19] flex flex-col justify-center items-center pb-12">

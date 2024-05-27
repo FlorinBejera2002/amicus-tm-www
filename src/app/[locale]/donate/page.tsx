@@ -6,8 +6,13 @@ import { FaAngleRight } from 'react-icons/fa'
 import { useTranslations } from 'next-intl'
 import Link from 'next/link'
 import Image from 'next/image'
+import { Metadata } from 'next'
 
 import CECLogo from '../../../../public/CEC Bank.svg'
+
+export const metadata: Metadata = {
+  title: 'Arise for Christ | Donate'
+}
 
 const About = () => {
   const t = useTranslations()

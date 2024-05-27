@@ -6,6 +6,7 @@ import { FaAngleRight } from 'react-icons/fa'
 import { useTranslations } from 'next-intl'
 import Link from 'next/link'
 import Image from 'next/image'
+import { Metadata } from 'next'
 
 import Project5 from '../../../../public/vision-projects5.webp'
 import Project4 from '../../../../public/vision-projects4.webp'
@@ -16,6 +17,10 @@ import Project1 from '../../../../public/vision-projects1.webp'
 const Divider = () => (
   <div className="hidden md:flex h-auto w-[1px] bg-gray-400" />
 )
+
+export const metadata: Metadata = {
+  title: 'Arise for Christ | Vision'
+}
 
 export default function Vision() {
   const t = useTranslations('')
