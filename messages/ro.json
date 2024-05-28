@@ -284,5 +284,13 @@
   },
   "evangelismForm": {
     "title": "Cerere de Evanghelizare"
+  },
+
+  "metadata": {
+    "vision": {
+      "title": "Arise for Christ | Viziunea",
+      "description": "Arise for Christ este o misiune creștină care acționează pentru împărțirea Evangheliei, evanghelizarea personală, recuperarea celor căzuți spiritual, consilierea biblică, rugăciunea de mijlocire și proiecte multimedia cu conținut creștin inspirațional. Ne propunem conectarea cu cei nemântuiți din familiile credincioșilor. Orice credincios are pe cineva nemântuit în familia sa, sau în apropiere, iar noi toți suntem responsabili de a-i conecta cu Evanghelia! Persoana pentru care s-a făcut solicitarea intră în procesul de evanghelizare, având ca scop final mântuirea ei.",
+      "keywords": "Arise for Christ, misiune creștină, evanghelizare, consiliere biblică, rugăciune, proiecte multimedia, dezvoltare spirituală, evanghelie, recuperare spirituală"
+    }
   }
 }

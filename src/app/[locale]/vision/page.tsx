@@ -3,10 +3,10 @@ import CustomHeroBg from '../common/custom-hero-bg'
 import Animation from '../common/animation'
 
 import { FaAngleRight } from 'react-icons/fa'
+import { getTranslations } from 'next-intl/server'
 import { useTranslations } from 'next-intl'
 import Link from 'next/link'
 import Image from 'next/image'
-import { Metadata } from 'next'
 
 import Project5 from '../../../../public/vision-projects5.webp'
 import Project4 from '../../../../public/vision-projects4.webp'
@@ -14,16 +14,30 @@ import Project2 from '../../../../public/vision-projects3.webp'
 import Project3 from '../../../../public/vision-projects2.webp'
 import Project1 from '../../../../public/vision-projects1.webp'
 
-const Divider = () => (
-  <div className="hidden md:flex h-auto w-[1px] bg-gray-400" />
-)
+export async function generateMetadata({
+  params: { locale }
+}: {
+  params: { locale: string }
+}) {
+  const t = await getTranslations({ locale, namespace: 'metadata.vision' })
 
-export const metadata: Metadata = {
-  title: 'Arise for Christ | Vision'
+  return {
+    description: t('description'),
+    icons: [
+      { rel: 'icon', url: '/logo.ico' },
+      { rel: 'apple-touch-icon', url: '/logo.ico' }
+    ],
+    keywords: t('keywords'),
+    og: {
+      description: t('description'),
+      title: t('title')
+    },
+    title: t('title')
+  }
 }
 
 export default function Vision() {
-  const t = useTranslations('')
+  const t = useTranslations()
 
   return (
     <div className="main bg-black pb-24 flex flex-col items-center" role="main">
@@ -79,7 +93,7 @@ export default function Vision() {
               {t('vision.presentation_p1_1')}
             </p>
 
-            <Divider />
+            <div className="hidden md:flex h-auto w-[1px] bg-gray-400" />
 
             <p className="!font-semibold text-md md:text-lg text-gray-400 text-start mb-0">
               {t('vision.presentation_p2')}
