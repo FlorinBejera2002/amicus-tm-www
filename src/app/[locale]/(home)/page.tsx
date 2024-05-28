@@ -11,13 +11,32 @@ import { FaInstagram } from 'react-icons/fa6'
 import { FaSpotify } from 'react-icons/fa6'
 import { FaYoutube } from 'react-icons/fa'
 import { FaTiktok } from 'react-icons/fa'
+import { getTranslations } from 'next-intl/server'
 import { useTranslations } from 'next-intl'
 import Link from 'next/link'
 import { Metadata } from 'next'
 import { cn } from '@/utils'
 
-export const metadata: Metadata = {
-  title: 'Arise for Christ | Home'
+export async function generateMetadata({
+  params: { locale }
+}: {
+  params: { locale: string }
+}) {
+  const t = await getTranslations({ locale, namespace: 'metadata.vision' })
+
+  return {
+    description: t('description'),
+    icons: [
+      { rel: 'icon', url: '/logo.ico' },
+      { rel: 'apple-touch-icon', url: '/logo.ico' }
+    ],
+    keywords: t('keywords'),
+    og: {
+      description: t('description'),
+      title: t('title')
+    },
+    title: t('title')
+  } as Metadata
 }
 
 export default function Home() {

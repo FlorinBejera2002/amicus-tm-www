@@ -7,6 +7,7 @@ import { getTranslations } from 'next-intl/server'
 import { useTranslations } from 'next-intl'
 import Link from 'next/link'
 import Image from 'next/image'
+import { Metadata } from 'next'
 
 import Project5 from '../../../../public/vision-projects5.webp'
 import Project4 from '../../../../public/vision-projects4.webp'
@@ -33,7 +34,7 @@ export async function generateMetadata({
       title: t('title')
     },
     title: t('title')
-  }
+  } as Metadata
 }
 
 export default function Vision() {
