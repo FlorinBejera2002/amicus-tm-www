@@ -18,7 +18,7 @@ import { cn } from '@/utils'
 
 const CMS_URL = 'https://cms-backend.ariseforchrist.com'
 const MAILCHIMP_URL =
-  'https://app.us22.list-manage.com/subscribe/post?u=41ac89857e074d884af936f25&amp;id=cc995c9835&amp;f_id=00c8c4e1f0'
+  'https://ariseforchrist.us8.list-manage.com/subscribe/post?u=2e2f0dbc155ffea12f7b6621c&amp;id=a1fd3925be&amp;f_id=00a321e3f0'
 
 type SubmitMessage = {
   content: string
