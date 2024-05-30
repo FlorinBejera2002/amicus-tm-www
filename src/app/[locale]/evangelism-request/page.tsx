@@ -56,7 +56,7 @@ const EvangelismRequest = () => {
       </section>
 
       <div className="custom-page-content max-w-6xl z-index-2 py-4">
-        <div className="rounded-md bg-white !p-8 md:!p-12">
+        <div className="rounded-md bg-white !p-8 md:!p-12 my-2">
           <ContentEvangelizationForm />
         </div>
       </div>

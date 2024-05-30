@@ -22,7 +22,7 @@ export default function YoutubeMiniFeed() {
       id="numbers"
     >
       {ytVids.map((vid, idx) => (
-        <InViewTransition damping={25} delay={1.5 + idx * 0.25} key={idx}>
+        <InViewTransition damping={25} delay={0.25 + idx * 0.25} key={idx}>
           <iframe
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen={true}

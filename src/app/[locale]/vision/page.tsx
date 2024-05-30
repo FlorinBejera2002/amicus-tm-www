@@ -143,7 +143,7 @@ export default function Vision() {
               </p>
             </InViewTransition>
           </div>
-          <InViewTransition delay={0.25}>
+          <InViewTransition customClassname="flex flex-1" delay={0.25}>
             <Image
               alt="Christian images"
               className="rounded-md flex-1 hidden md:flex shadow-2xl shadow-gray-400 object-cover w-1/2"
@@ -185,7 +185,7 @@ export default function Vision() {
               </p>
             </InViewTransition>
           </div>
-          <InViewTransition delay={0.25}>
+          <InViewTransition customClassname="flex flex-1" delay={0.25}>
             <Image
               alt="Christian images"
               className="object-cover rounded-md hidden md:flex shadow-2xl shadow-gray-400 flex-1 w-1/2"

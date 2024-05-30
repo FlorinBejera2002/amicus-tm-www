@@ -51,7 +51,7 @@ const About = () => {
         >
           <CustomHeroBg />
         </InViewTransition>
-        <div className="row align-items-center my-5 pb-4 pt-5">
+        <div className="row align-items-center !my-[31px] pb-4 pt-5">
           <div className="col my-5 pb-5 text-center">
             <InViewTransition delay={0.25}>
               <div className="py-4">
@@ -81,7 +81,7 @@ const About = () => {
       </section>
 
       <div className="custom-page-content pb-4 p-relative z-index-2 text-md md:text-lg flex w-full justify-center">
-        <div className="max-w-6xl flex flex-col lg:flex-row justify-around bg-white rounded-md p-8 md:p-12 gap-0 mt-4">
+        <div className="max-w-6xl flex flex-col lg:flex-row justify-around bg-white rounded-md !p-8 md:!p-12 mt-4">
           <div className="flex-[1.75]">
             {leftSectionText.map((item, idx) => (
               <InViewTransition delay={0.25 * idx} key={idx}>
