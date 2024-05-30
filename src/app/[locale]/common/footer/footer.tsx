@@ -10,6 +10,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { cn } from '@/utils'
 
+import newarklogo from '../../../../../public/new-ark_logo.webp'
 import horizontalLogo from '../../../../../public/logo_horizontal_white.webp'
 
 export default function Footer() {
@@ -91,16 +92,21 @@ export default function Footer() {
                 />
               </div>
 
-              <h5 className="text-white mb-4">
-                Handcrafted by
+              <p className="flex items-center text-white mb-4">
+                handcrafted by
                 <Link
                   className="!text-[#e3ae04] no-underline ml-2 "
                   href="https://new-ark.cloud/"
                   target="_blank"
                 >
-                  new ark
+                  <Image
+                    alt="new ark logo"
+                    className="object-contain"
+                    height={30}
+                    src={newarklogo}
+                  />
                 </Link>
-              </h5>
+              </p>
             </div>
           </div>
         </div>
