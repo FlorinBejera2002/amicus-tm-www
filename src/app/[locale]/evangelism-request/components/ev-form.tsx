@@ -211,7 +211,6 @@ const ContentEvangelizationForm = () => {
 
                 <button
                   className="bg-[#e3ae04] rounded-md px-20 text-black font-bold py-1 size-9 flex justify-center items-center disabled:opacity-50 disabled:pointer-events-none self-start md:self-center !mt-4 md:!mt-0"
-                  disabled={!isChecked}
                   type="submit"
                 >
                   {t('send')}

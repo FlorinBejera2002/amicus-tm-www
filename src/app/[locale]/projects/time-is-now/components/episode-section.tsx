@@ -20,7 +20,7 @@ const EpisodeSection = () => {
                 className="flex flex-col relative hover:scale-105 duration-300 "
                 key={item.id}
               >
-                <Link href={item.url}>
+                <Link href={item.url} target="_blank">
                   <Image
                     alt="arise for christ logo"
                     className="object-contain hover:-translate-1 w-full "
