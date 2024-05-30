@@ -81,7 +81,7 @@ const About = () => {
       </section>
 
       <div className="custom-page-content pb-4 p-relative z-index-2 text-md md:text-lg flex w-full justify-center">
-        <div className="max-w-6xl flex flex-col lg:flex-row justify-around bg-white rounded-md !p-8 md:!p-12 mt-4">
+        <div className="max-w-6xl flex flex-col lg:flex-row justify-around bg-white rounded-md !p-8 md:!p-12 mt-4  md:items-center">
           <div className="flex-[1.75]">
             {leftSectionText.map((item, idx) => (
               <InViewTransition delay={0.25 * idx} key={idx}>

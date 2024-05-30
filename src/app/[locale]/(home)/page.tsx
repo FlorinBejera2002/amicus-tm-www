@@ -22,7 +22,7 @@ export async function generateMetadata({
 }: {
   params: { locale: string }
 }) {
-  const t = await getTranslations({ locale, namespace: 'metadata.vision' })
+  const t = await getTranslations({ locale, namespace: 'metadata.home' })
 
   return {
     description: t('description'),

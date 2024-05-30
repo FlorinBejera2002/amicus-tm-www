@@ -291,11 +291,16 @@
       "title": "Arise for Christ | Vision",
       "description": "Arise for Christ is a Christian mission dedicated to personal evangelism, recovering those who have fallen away from the faith, providing biblical counseling, intercessory prayer, and creating multimedia projects with biblical teachings and inspirational content. We aim to connect with the unchurched individuals within the families of believers. Every believer has someone unchurched in their family or vicinity, and we are all responsible for connecting them with the Gospel! The person for whom the request is made enters the process of evangelization, with the ultimate goal of their salvation.",
       "keywords": "Arise for Christ, Christian mission, evangelism, biblical counseling, prayer, multimedia projects, spiritual recovery, gospel, fallen away, Arise for Christ | Vision, arise for christ vision"
+    },
+    "home": {
+      "title": "Arise for Christ | Home",
+      "description": "Arise for Christ is a Christian organization focused on personal evangelism and encouraging believers to share their faith.",
+      "keywords": "Arise for Christ, evangelism, personal evangelism, salvation, prayer, faith, encouragement, Christianity, Arise for Christ | Home, arise for christ home"
+    },
+    "request": {
+      "title": "Arise for Christ | Evangelism Request",
+      "description": "Submit an evangelism request to the Arise for Christ team to receive personalized guidance and support for sharing your faith or encouraging someone in their spiritual journey.",
+      "keywords": "Arise for Christ, evangelism request, share faith, spiritual encouragement, personalized evangelism plan, Christian outreach"
     }
-  },
-  "home": {
-    "title": "Arise for Christ | Home",
-    "description": "Arise for Christ is a Christian organization focused on personal evangelism and encouraging believers to share their faith.",
-    "keywords": "Arise for Christ, evangelism, personal evangelism, salvation, prayer, faith, encouragement, Christianity, Arise for Christ | Home, arise for christ home"
   }
 }

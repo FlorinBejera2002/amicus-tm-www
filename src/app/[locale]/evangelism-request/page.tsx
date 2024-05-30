@@ -4,12 +4,31 @@ import CustomHeroBg from '../common/custom-hero-bg'
 import Animation from '../common/animation'
 
 import { FaAngleRight } from 'react-icons/fa'
+import { getTranslations } from 'next-intl/server'
 import { useTranslations } from 'next-intl'
 import Link from 'next/link'
 import { Metadata } from 'next'
 
-export const metadata: Metadata = {
-  title: 'Arise for Christ | Evangelization'
+export async function generateMetadata({
+  params: { locale }
+}: {
+  params: { locale: string }
+}) {
+  const t = await getTranslations({ locale, namespace: 'metadata.request' })
+
+  return {
+    description: t('description'),
+    icons: [
+      { rel: 'icon', url: '/logo.ico' },
+      { rel: 'apple-touch-icon', url: '/logo.ico' }
+    ],
+    keywords: t('keywords'),
+    og: {
+      description: t('description'),
+      title: t('title')
+    },
+    title: t('title')
+  } as Metadata
 }
 
 const EvangelismRequest = () => {
@@ -56,7 +75,7 @@ const EvangelismRequest = () => {
       </section>
 
       <div className="custom-page-content max-w-6xl z-index-2 py-4">
-        <div className="rounded-md bg-white !p-8 md:!p-12 my-2">
+        <div className="rounded-md bg-white !p-8 md:!p-12 my-4">
           <ContentEvangelizationForm />
         </div>
       </div>
