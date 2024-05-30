@@ -141,12 +141,15 @@
     "ron": "RON Românesc",
     "title": "Ajută-ne să reconstruim credința!"
   },
+  "evangelismForm": {
+    "title": "Cerere de Evanghelizare"
+  },
   "form": {
     "address": "adresă",
     "age": "vârstă",
     "applicant_person": "Cine face cererea?",
     "cancel": "RENUNȚĂ",
-    "checkbox_text": "Prin bifarea casutei îți dai acordul pentru prelucrarea datelor tale personale în scopul primirii comunicărilor periodice din partea noastră.",
+    "checkbox_text": "Bifând această căsuță, îți dai acordul pentru prelucrarea datelor tale personale în scopul primirii newsletterelor.",
     "details": "detalii",
     "email": "email",
     "failed_submission": "Nu s-a reușit trimiterea datelor de evanghelizare! Vă rugăm contactați-ne prin email.",
@@ -178,8 +181,8 @@
     "contact": "Contact",
     "donate": "Donează",
     "home": "Acasă",
-    "project_subPodcast": "Podcast",
     "project": "Proiecte",
+    "project_subPodcast": "Podcast",
     "project_subProject": "Timpul este acum",
     "resources": "Resurse",
     "terms": "Termeni",
@@ -192,18 +195,35 @@
     "title-hero": "Speranță"
   },
   "language": {
-    "ro": "RO",
-    "en": "EN"
+    "en": "EN",
+    "ro": "RO"
+  },
+  "metadata": {
+    "home": {
+      "description": "Arise for Christ este o organizație creștină axată pe evanghelizarea personală și încurajarea credincioșilor să își împărtășească credința.",
+      "keywords": "Arise for Christ, evanghelizare, evanghelizare personală, mântuire, rugăciune, credință, încurajare, creștinism, Arise for Christ | Acasă, arise for christ acasa",
+      "title": "Arise for Christ | Acasă"
+    },
+    "request": {
+      "description": "Trimiteți o solicitare de evanghelizare echipei Arise for Christ pentru a primi îndrumare personalizată și sprijin pentru a împărtăși credința sau a încuraja pe cineva în călătoria sa spirituală.",
+      "keywords": "Arise for Christ, solicitare de evanghelizare, împărtășirea credinței, încurajare spirituală, plan personalizat de evanghelizare, evanghelizare creștină",
+      "title": "Arise for Christ | Cerere Evanghelizare"
+    },
+    "vision": {
+      "description": "Arise for Christ este o misiune creștină care acționează pentru împărțirea Evangheliei, evanghelizarea personală, recuperarea celor căzuți spiritual, consilierea biblică, rugăciunea de mijlocire și proiecte multimedia cu conținut creștin inspirațional. Ne propunem conectarea cu cei nemântuiți din familiile credincioșilor. Orice credincios are pe cineva nemântuit în familia sa, sau în apropiere, iar noi toți suntem responsabili de a-i conecta cu Evanghelia! Persoana pentru care s-a făcut solicitarea intră în procesul de evanghelizare, având ca scop final mântuirea ei.",
+      "keywords": "Arise for Christ, misiune creștină, evanghelizare, consiliere biblică, rugăciune, proiecte multimedia, dezvoltare spirituală, evanghelie, recuperare spirituală, Arise for Christ | Viziunea, arise for christ viziunea",
+      "title": "Arise for Christ | Viziunea"
+    }
   },
   "podcast": {
-    "title": "PODCAST",
     "bottom-paragraf": "Toate episoadele Podcastului nostru le puteți găsi și pe",
     "bottom-socials": "Apple Podcast, Spotify, sau Google Podcasts.",
     "bottom-subtitle": "ASCULTĂ PE SPOTIFY",
     "bottom-title": "Urmărește ultimul episod al Podcastului nostru!",
     "hero-paragraf": "Acesta este un Podcast Arise for Christ. Un serial care își propune să evidențieze pe baza unor dialoguri, subiecte importante pentru biserica Lui Hristos din secolul 21.",
     "subscribe": "Abonează-te!",
-    "text-episode": "Avem o serie de 88 episoade pe diferite subiecte, cum ar fi slujirea, consilierea creștină, închinare prin muzică, dependințe dar și altele."
+    "text-episode": "Avem o serie de 88 episoade pe diferite subiecte, cum ar fi slujirea, consilierea creștină, închinare prin muzică, dependințe dar și altele.",
+    "title": "PODCAST"
   },
   "section": {
     "about_us": "DESPRE NOI",
@@ -243,6 +263,7 @@
     "simona-birtea": "Social Media",
     "title-a4c": "Echipa Arise for Christ"
   },
+
   "vision": {
     "description": "Arise for Christ are la bază un proiect de evanghelizare personală care presupune implicarea creștinilor pentru mântuirea prietenilor tăi și a celor dragi",
     "presentation_p1_1": "Numele nostru este inspirat din Isaia 60:1: „Ridică-te, strălucește! Căci lumina ta a venit și gloria Domnului a răsărit peste tine” Romani 11:36: „Din El prin El și pentru El sunt toate lucrurile”.",
@@ -281,26 +302,5 @@
     "step8_description": "Arise for Christ va lucra îndeaproape cu cei responsabili de procesul de evanghelizare personală din biserica locală și cu cel care a făcut solicitarea, raportând periodic progresul.",
     "step8_title": "Raport periodic",
     "title": "Pașii lucrării de evanghelizare personală aplicați la biserica locală."
-  },
-  "evangelismForm": {
-    "title": "Cerere de Evanghelizare"
-  },
-
-  "metadata": {
-    "vision": {
-      "title": "Arise for Christ | Viziunea",
-      "description": "Arise for Christ este o misiune creștină care acționează pentru împărțirea Evangheliei, evanghelizarea personală, recuperarea celor căzuți spiritual, consilierea biblică, rugăciunea de mijlocire și proiecte multimedia cu conținut creștin inspirațional. Ne propunem conectarea cu cei nemântuiți din familiile credincioșilor. Orice credincios are pe cineva nemântuit în familia sa, sau în apropiere, iar noi toți suntem responsabili de a-i conecta cu Evanghelia! Persoana pentru care s-a făcut solicitarea intră în procesul de evanghelizare, având ca scop final mântuirea ei.",
-      "keywords": "Arise for Christ, misiune creștină, evanghelizare, consiliere biblică, rugăciune, proiecte multimedia, dezvoltare spirituală, evanghelie, recuperare spirituală, Arise for Christ | Viziunea, arise for christ viziunea"
-    },
-    "home": {
-      "title": "Arise for Christ | Acasă",
-      "description": "Arise for Christ este o organizație creștină axată pe evanghelizarea personală și încurajarea credincioșilor să își împărtășească credința.",
-      "keywords": "Arise for Christ, evanghelizare, evanghelizare personală, mântuire, rugăciune, credință, încurajare, creștinism, Arise for Christ | Acasă, arise for christ acasa"
-    },
-    "request": {
-      "title": "Arise for Christ | Cerere Evanghelizare",
-      "description": "Trimiteți o solicitare de evanghelizare echipei Arise for Christ pentru a primi îndrumare personalizată și sprijin pentru a împărtăși credința sau a încuraja pe cineva în călătoria sa spirituală.",
-      "keywords": "Arise for Christ, solicitare de evanghelizare, împărtășirea credinței, încurajare spirituală, plan personalizat de evanghelizare, evanghelizare creștină"
-    }
   }
 }

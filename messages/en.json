@@ -141,12 +141,15 @@
     "ron": "Romanian RON",
     "title": "Help us rebuild faith!"
   },
+  "evangelismForm": {
+    "title": "Evangelism Form"
+  },
   "form": {
     "address": "address",
     "age": "age",
     "applicant_person": "Who is making the request?",
     "cancel": "CANCEL",
-    "checkbox_text": "By checking the box, you consent to the processing of your personal data for the purpose of receiving periodic communications from us.",
+    "checkbox_text": "By checking this box, you agree to the processing of your personal data for the purpose of receiving our periodic newsletters.",
     "details": "details",
     "email": "email",
     "failed_submission": "Failed to send evangelism request! Please contact us via email.",
@@ -178,8 +181,8 @@
     "contact": "Contact",
     "donate": "Donate",
     "home": "Home",
-    "project_subPodcast": "Podcast",
     "project": "Projects",
+    "project_subPodcast": "Podcast",
     "project_subProject": "The time is now",
     "resources": "Resources",
     "terms": "Terms",
@@ -192,18 +195,35 @@
     "title-hero": "The Hope"
   },
   "language": {
-    "ro": "RO",
-    "en": "EN"
+    "en": "EN",
+    "ro": "RO"
+  },
+  "metadata": {
+    "home": {
+      "description": "Arise for Christ is a Christian organization focused on personal evangelism and encouraging believers to share their faith.",
+      "keywords": "Arise for Christ, evangelism, personal evangelism, salvation, prayer, faith, encouragement, Christianity, Arise for Christ | Home, arise for christ home",
+      "title": "Arise for Christ | Home"
+    },
+    "request": {
+      "description": "Submit an evangelism request to the Arise for Christ team to receive personalized guidance and support for sharing your faith or encouraging someone in their spiritual journey.",
+      "keywords": "Arise for Christ, evangelism request, share faith, spiritual encouragement, personalized evangelism plan, Christian outreach",
+      "title": "Arise for Christ | Evangelism Request"
+    },
+    "vision": {
+      "description": "Arise for Christ is a Christian mission dedicated to personal evangelism, recovering those who have fallen away from the faith, providing biblical counseling, intercessory prayer, and creating multimedia projects with biblical teachings and inspirational content. We aim to connect with the unchurched individuals within the families of believers. Every believer has someone unchurched in their family or vicinity, and we are all responsible for connecting them with the Gospel! The person for whom the request is made enters the process of evangelization, with the ultimate goal of their salvation.",
+      "keywords": "Arise for Christ, Christian mission, evangelism, biblical counseling, prayer, multimedia projects, spiritual recovery, gospel, fallen away, Arise for Christ | Vision, arise for christ vision",
+      "title": "Arise for Christ | Vision"
+    }
   },
   "podcast": {
-    "title": "PODCAST",
     "bottom-paragraf": "You can also find all the episodes of our Podcast on",
     "bottom-socials": "Apple Podcast, Spotify, or Google Podcasts.",
     "bottom-subtitle": "LISTEN ON SPOTIFY",
     "bottom-title": "Watch the last episode of our Podcast!",
     "hero-paragraf": "This is an Arise for Christ Podcast. A series that aims to highlight, based on dialogues, important topics for the church of Christ in the 21st century.",
     "subscribe": "Subscribe!",
-    "text-episode": "We have a series of 88 episodes on various topics such as ministry, Christian counseling, worship through music, addictions and more."
+    "text-episode": "We have a series of 88 episodes on various topics such as ministry, Christian counseling, worship through music, addictions and more.",
+    "title": "PODCAST"
   },
   "section": {
     "about_us": "ABOUT US",
@@ -243,6 +263,7 @@
     "simona-birtea": "Social Media",
     "title-a4c": "Arise for Christ Team"
   },
+
   "vision": {
     "description": "Arise for Christ is based on a personal evangelism project that requires the involvement of Christians for salvation of their family and friends.",
     "presentation_p1_1": "Our name is inspired from Isaiah 60:1: „Arise, shine! For your light has come! And the glory of the Lord is risen upon you. Romans 11:36: „For of Him and through Him and to Him are all things, to whom be glory forever. Amen.",
@@ -281,26 +302,5 @@
     "step8_description": "Arise for Christ will work closely with those responsible for the local church personal evangelism process and with the person who made the evangelism request, regularly reporting the progress.",
     "step8_title": "Regular report",
     "title": "Personal evangelism process steps applied to the local church."
-  },
-  "evangelismForm": {
-    "title": "Evangelism Form"
-  },
-
-  "metadata": {
-    "vision": {
-      "title": "Arise for Christ | Vision",
-      "description": "Arise for Christ is a Christian mission dedicated to personal evangelism, recovering those who have fallen away from the faith, providing biblical counseling, intercessory prayer, and creating multimedia projects with biblical teachings and inspirational content. We aim to connect with the unchurched individuals within the families of believers. Every believer has someone unchurched in their family or vicinity, and we are all responsible for connecting them with the Gospel! The person for whom the request is made enters the process of evangelization, with the ultimate goal of their salvation.",
-      "keywords": "Arise for Christ, Christian mission, evangelism, biblical counseling, prayer, multimedia projects, spiritual recovery, gospel, fallen away, Arise for Christ | Vision, arise for christ vision"
-    },
-    "home": {
-      "title": "Arise for Christ | Home",
-      "description": "Arise for Christ is a Christian organization focused on personal evangelism and encouraging believers to share their faith.",
-      "keywords": "Arise for Christ, evangelism, personal evangelism, salvation, prayer, faith, encouragement, Christianity, Arise for Christ | Home, arise for christ home"
-    },
-    "request": {
-      "title": "Arise for Christ | Evangelism Request",
-      "description": "Submit an evangelism request to the Arise for Christ team to receive personalized guidance and support for sharing your faith or encouraging someone in their spiritual journey.",
-      "keywords": "Arise for Christ, evangelism request, share faith, spiritual encouragement, personalized evangelism plan, Christian outreach"
-    }
   }
 }
