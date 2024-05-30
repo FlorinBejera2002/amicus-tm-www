@@ -9,6 +9,7 @@ import { useTranslations } from 'next-intl'
 import Link from 'next/link'
 import { Metadata } from 'next'
 
+// eslint-disable-next-line react-refresh/only-export-components
 export async function generateMetadata({
   params: { locale }
 }: {

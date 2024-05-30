@@ -7,6 +7,7 @@ import Animation from '../../common/animation'
 
 import { Metadata } from 'next'
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const metadata: Metadata = {
   title: 'Arise for Christ | Time is now'
 }

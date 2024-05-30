@@ -15,6 +15,7 @@ import Project2 from '../../../../public/vision-projects3.webp'
 import Project3 from '../../../../public/vision-projects2.webp'
 import Project1 from '../../../../public/vision-projects1.webp'
 
+// eslint-disable-next-line react-refresh/only-export-components
 export async function generateMetadata({
   params: { locale }
 }: {
