@@ -15,7 +15,6 @@ import { NextIntlClientProvider, useMessages } from 'next-intl'
 import Script from 'next/script'
 import { Poppins } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/react'
-import splitbee from '@splitbee/web'
 import { cn } from '@/utils'
 
 const poppins = Poppins({
@@ -31,8 +30,6 @@ export const metadata: Metadata = {
     { rel: 'apple-touch-icon', url: '/logo.ico' }
   ]
 }
-
-splitbee.init()
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export default function RootLayout({ children, params: { locale } }: any) {
@@ -53,6 +50,8 @@ export default function RootLayout({ children, params: { locale } }: any) {
 
         {/* analytics */}
         <Analytics />
+
+        {/* Splitbee */}
         <Script async={true} src="https://cdn.splitbee.io/sb.js"></Script>
       </body>
     </html>
