@@ -4,6 +4,7 @@ import Socials from './components/socials'
 import FooterOverview from './components/footer-overview'
 import InViewTransition from '../in-view-transition'
 import Animation from '../animation'
+import { Newsletter } from '../../(home)/components/newsletter'
 
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
@@ -91,22 +92,24 @@ export default function Footer() {
                   titleKey="header.project"
                 />
               </div>
-
-              <p className="flex items-center text-white mb-4">
-                handcrafted by
-                <Link
-                  className="!text-[#e3ae04] no-underline ml-2 "
-                  href="https://new-ark.cloud/"
-                  target="_blank"
-                >
-                  <Image
-                    alt="new ark logo"
-                    className="object-contain"
-                    height={30}
-                    src={newarklogo}
-                  />
-                </Link>
-              </p>
+              <div className="w-full flex justify-between mb-5">
+                <p className="flex items-center text-white mb-4">
+                  handcrafted by
+                  <Link
+                    className="!text-[#e3ae04] no-underline ml-2 "
+                    href="https://new-ark.cloud/"
+                    target="_blank"
+                  >
+                    <Image
+                      alt="new ark logo"
+                      className="object-contain"
+                      height={30}
+                      src={newarklogo}
+                    />
+                  </Link>
+                </p>
+                <Newsletter />
+              </div>
             </div>
           </div>
         </div>
