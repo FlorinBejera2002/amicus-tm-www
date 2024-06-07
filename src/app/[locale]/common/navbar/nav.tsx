@@ -104,13 +104,13 @@ export default function Nav() {
     >
       <nav
         className={cn(
-          'transition-all duration-500 !top-0 !left-0 w-screen bg-transparent flex items-center justify-center py-8 lg:py-10 !pl-0 md:!pl-4',
+          'transition-all duration-500 !top-0 !left-0 w-screen bg-transparent flex items-center justify-center py-6 md:py-8 lg:py-10 !pl-0 md:!pl-4',
           y !== null && y >= 25
             ? 'bg-gray-950/[.4] shadow-sm backdrop-blur-md'
             : ''
         )}
       >
-        <div className="flex items-center justify-between w-screen lg:w-full lg:container px-8 pl-0">
+        <div className="flex items-center justify-between w-screen lg:w-full lg:container px-4 pl-0">
           <div className="flex items-center mr-8">
             <Link href="/">
               <Image
@@ -170,7 +170,7 @@ export default function Nav() {
           </div>
 
           <Link
-            className=" bg-[#e3ae04] text-black font-weight-semibold p-3 text-md rounded-md min-w-fit flex lg:hidden mr-auto no-underline hover:!no-underline"
+            className=" bg-[#e3ae04] text-black font-semibold md:p-3 py-1 px-2 text-md rounded-md min-w-fit flex lg:hidden mr-auto no-underline hover:!no-underline"
             href={`/${language}/evangelism-request`}
             type="button"
           >

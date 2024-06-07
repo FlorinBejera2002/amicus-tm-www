@@ -102,7 +102,7 @@ export default function Home() {
           <div className="!px-8 z-index-3 container">
             <div className="row min-vh-100 align-items-center">
               <div className="col-lg-10 text-center text-lg-start">
-                <h3 className="text-color-light font-weight-bold text-3xl leading-tight pb-2 mb-4 appear-animation text-wrap md:text-4xl lg:text-5xl">
+                <h3 className="text-color-light font-weight-bold text-2xl leading-tight pb-2 mb-4 appear-animation text-wrap md:text-4xl lg:text-5xl">
                   {t('question1')}
                   <br />
                   {t('question2')}
@@ -110,7 +110,7 @@ export default function Home() {
                   {t('question3')}
                 </h3>
 
-                <div className="flex justify-center items-center lg:justify-start gap-4 flex-wrap text-xl">
+                <div className="flex justify-center items-center lg:justify-start gap-4 flex-wrap text-base">
                   {socialMediaLinks.map((link, idx) => (
                     <Link
                       className={cn(
