@@ -6,7 +6,10 @@ import { PiNumberCircleOneFill } from 'react-icons/pi'
 import { PiNumberCircleTwoFill } from 'react-icons/pi'
 import { PiNumberCircleThreeFill } from 'react-icons/pi'
 import { useTranslations } from 'next-intl'
+import Image from 'next/image'
 import InViewTransition from '@/app/[locale]/common/in-view-transition'
+
+import step from '../../../../../../public/step.png'
 
 type EvStep = {
   customClassname: string
@@ -48,15 +51,11 @@ export default function EvangelismSteps() {
           xOut={-100}
           yOut={0}
         >
-          <div className="flex flex-col bg-black p-5 rounded-tr-[7rem] self-center rounded-b-md">
-            <h4 className="text-5xl font-weight-semi-bold text-light mb-4">
-              585+
-            </h4>
-
-            <div className="text-md text-white">
-              {t('evangelism_requests_count')}
-            </div>
-          </div>
+          <Image
+            alt="Bible picture"
+            className="object-cover size-full ml-10 rounded-tr-[7rem] pr-16 rounded-md"
+            src={step}
+          />
         </InViewTransition>
       </div>
 
