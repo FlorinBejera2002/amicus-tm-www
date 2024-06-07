@@ -20,18 +20,18 @@ export const Newsletter = () => {
 
         return (
           <div className="shadow-lg max-w-sm w-full flex flex-col ">
-            <h2 className=" text-base font-bold mr-10">
+            <h2 className=" text-sm font-bold mr-10">
               Subscribe to our Newsletter
             </h2>
-            <form className="flex gap-3">
+            <form className="w-screen flex gap-2">
               <input
-                className="text-sm p-2 border border-gray-500 rounded "
+                className="text-xs p-2 border w-44 md:w-52 rounded "
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter your email"
                 type="email"
               />
               <button
-                className="bg-[#e3ae04] text-black font-semibold py-2 px-3 rounded flex items-center gap-2"
+                className="bg-[#e3ae04] text-xs text-black font-semibold py-2 px-3 rounded flex items-center gap-2"
                 onClick={() => subscribe({ EMAIL: email })}
                 type="submit"
               >
