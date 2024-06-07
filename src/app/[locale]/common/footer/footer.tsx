@@ -82,7 +82,7 @@ export default function Footer() {
               <Socials />
             </div>
             <div className="col-lg-6 mt-lg-5 pt-lg-3 !px-0">
-              <div className="w-full flex gap-5  md:gap-10 lg:gap-20 mb-5">
+              <div className="w-full flex md:gap-20 justify-between md:justify-normal mb-5">
                 <FooterOverview
                   links={companyLinks}
                   titleKey="header.company"
