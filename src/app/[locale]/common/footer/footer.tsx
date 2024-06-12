@@ -16,7 +16,6 @@ import horizontalLogo from '../../../../../public/logo_horizontal_white.webp'
 
 export default function Footer() {
   const pathname = usePathname()
-
   const language = pathname.split('/')[1]
 
   const companyLinks = [
@@ -24,6 +23,7 @@ export default function Footer() {
     { href: `/${language}/about`, titleKey: 'header.about_us' },
     { href: `/${language}/vision`, titleKey: 'header.vision' }
   ]
+
   const projectLinks = [
     { href: `/${language}/donate`, titleKey: 'header.donate' },
     {

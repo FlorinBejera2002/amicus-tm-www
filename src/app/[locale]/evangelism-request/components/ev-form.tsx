@@ -14,11 +14,7 @@ import {
   PiNumberCircleTwoFill
 } from 'react-icons/pi'
 import { useTranslations } from 'next-intl'
-import { cn } from '@/utils'
-
-const CMS_URL = 'https://cms-backend.ariseforchrist.com'
-const MAILCHIMP_URL =
-  'https://ariseforchrist.us8.list-manage.com/subscribe/post?u=2e2f0dbc155ffea12f7b6621c&amp;id=a1fd3925be&amp;f_id=00a321e3f0'
+import { CMS_URL, MAILCHIMP_URL, cn } from '@/utils'
 
 type SubmitMessage = {
   content: string
