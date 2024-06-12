@@ -52,7 +52,7 @@ export default function Footer() {
               <Link className="flex w-fit" href="/">
                 <Image
                   alt="arise for christ logo"
-                  className="object-contain pb-6"
+                  className="object-contain pb-6 w-24 md:w-40"
                   height={40}
                   src={horizontalLogo}
                 />
