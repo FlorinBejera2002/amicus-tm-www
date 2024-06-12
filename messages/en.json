@@ -122,7 +122,8 @@
   "button": {
     "agree": "I Agree",
     "contact_us": "Contact Us",
-    "er_request": "Evangelism Request"
+    "er_request": "Evangelism Request",
+    "subscribe": "Subscribe"
   },
   "contact": {
     "email": "Email",
@@ -143,6 +144,13 @@
   },
   "evangelismForm": {
     "title": "Evangelism Form"
+  },
+  "footer": {
+    "subscribe_dialog_button": "Got it, thanks!",
+    "subscribe_dialog_header": "Thank you for subscribing",
+    "subscribe_dialog_paragraph": "You will receive a confirmation email shortly. Please click the link in the email to confirm your subscription.",
+    "subscribe_placeholder": "Enter your email",
+    "subscribe_to_newsletter": "Subscribe to our Newsletter"
   },
   "form": {
     "address": "address",
@@ -263,7 +271,6 @@
     "simona-birtea": "Social Media",
     "title-a4c": "Arise for Christ Team"
   },
-
   "vision": {
     "description": "Arise for Christ is based on a personal evangelism project that requires the involvement of Christians for salvation of their family and friends.",
     "presentation_p1_1": "Our name is inspired from Isaiah 60:1: „Arise, shine! For your light has come! And the glory of the Lord is risen upon you. Romans 11:36: „For of Him and through Him and to Him are all things, to whom be glory forever. Amen.",

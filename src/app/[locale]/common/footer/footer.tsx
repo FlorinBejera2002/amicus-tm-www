@@ -4,6 +4,7 @@ import Socials from './components/socials'
 import FooterOverview from './components/footer-overview'
 import InViewTransition from '../in-view-transition'
 import Animation from '../animation'
+import { Newsletter } from '../../(home)/components/newsletter'
 
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
@@ -15,7 +16,6 @@ import horizontalLogo from '../../../../../public/logo_horizontal_white.webp'
 
 export default function Footer() {
   const pathname = usePathname()
-
   const language = pathname.split('/')[1]
 
   const companyLinks = [
@@ -23,6 +23,7 @@ export default function Footer() {
     { href: `/${language}/about`, titleKey: 'header.about_us' },
     { href: `/${language}/vision`, titleKey: 'header.vision' }
   ]
+
   const projectLinks = [
     { href: `/${language}/donate`, titleKey: 'header.donate' },
     {
@@ -81,7 +82,7 @@ export default function Footer() {
               <Socials />
             </div>
             <div className="col-lg-6 mt-lg-5 pt-lg-3 !px-0">
-              <div className="w-full flex justify-between mb-5">
+              <div className="w-full flex md:gap-20 justify-between md:justify-normal mb-5">
                 <FooterOverview
                   links={companyLinks}
                   titleKey="header.company"
@@ -91,22 +92,24 @@ export default function Footer() {
                   titleKey="header.project"
                 />
               </div>
-
-              <p className="flex items-center text-white mb-4">
-                handcrafted by
-                <Link
-                  className="!text-[#e3ae04] no-underline ml-2 "
-                  href="https://new-ark.cloud/"
-                  target="_blank"
-                >
-                  <Image
-                    alt="new ark logo"
-                    className="object-contain"
-                    height={30}
-                    src={newarklogo}
-                  />
-                </Link>
-              </p>
+              <div className="w-full md:flex justify-between mb-5">
+                <p className="flex items-center text-white mb-4">
+                  handcrafted by
+                  <Link
+                    className="!text-[#e3ae04] no-underline ml-2 "
+                    href="https://new-ark.cloud/"
+                    target="_blank"
+                  >
+                    <Image
+                      alt="new ark logo"
+                      className="object-contain"
+                      height={30}
+                      src={newarklogo}
+                    />
+                  </Link>
+                </p>
+                <Newsletter />
+              </div>
             </div>
           </div>
         </div>

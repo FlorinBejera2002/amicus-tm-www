@@ -118,7 +118,8 @@
   "button": {
     "agree": "Sunt de acord",
     "contact_us": "Contactează-ne",
-    "er_request": "Cerere Evanghelizare"
+    "er_request": "Cerere Evanghelizare",
+    "subscribe": "Abonează-te"
   },
   "contact": {
     "blog": {
@@ -143,6 +144,13 @@
   },
   "evangelismForm": {
     "title": "Cerere de Evanghelizare"
+  },
+  "footer": {
+    "subscribe_dialog_button": "Închide",
+    "subscribe_dialog_header": "Mulțumim pentru abonare!",
+    "subscribe_dialog_paragraph": "Vei primi un email de confirmare în scurt timp.",
+    "subscribe_placeholder": "Introdu adresa de email",
+    "subscribe_to_newsletter": "Abonează-te la Newsletter"
   },
   "form": {
     "address": "adresă",
@@ -263,7 +271,6 @@
     "simona-birtea": "Social Media",
     "title-a4c": "Echipa Arise for Christ"
   },
-
   "vision": {
     "description": "Arise for Christ are la bază un proiect de evanghelizare personală care presupune implicarea creștinilor pentru mântuirea prietenilor tăi și a celor dragi",
     "presentation_p1_1": "Numele nostru este inspirat din Isaia 60:1: „Ridică-te, strălucește! Căci lumina ta a venit și gloria Domnului a răsărit peste tine” Romani 11:36: „Din El prin El și pentru El sunt toate lucrurile”.",
