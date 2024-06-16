@@ -33,7 +33,6 @@ export const Newsletter = () => {
               />
               <button
                 className="bg-[#e3ae04] text-xs text-black font-semibold py-2 px-3 rounded flex items-center gap-2"
-                // onClick={() => subscribe({ EMAIL: email })}
                 onClick={() => {
                   subscribe({ EMAIL: email })
                   setEmail('')
