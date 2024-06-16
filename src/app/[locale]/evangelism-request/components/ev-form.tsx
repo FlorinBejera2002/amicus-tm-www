@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/no-static-element-interactions */
 'use client'
 
 import MailchimpSubscribe, {
@@ -13,7 +14,10 @@ import {
   PiNumberCircleThreeFill,
   PiNumberCircleTwoFill
 } from 'react-icons/pi'
+import { MdOutlineContentCopy } from 'react-icons/md'
+import { IoLink } from 'react-icons/io5'
 import { useTranslations } from 'next-intl'
+import { Dialog, DialogPanel, DialogTitle } from '@headlessui/react'
 import { CMS_URL, MAILCHIMP_URL, cn } from '@/utils'
 
 type SubmitMessage = {
@@ -24,12 +28,21 @@ type SubmitMessage = {
 const ContentEvangelizationForm = () => {
   const t = useTranslations('form')
   const [isChecked, setIsChecked] = useState(false)
-
+  const [isOpen, setIsOpen] = useState(false)
+  const [showCopyLabel, setShowCopyLabel] = useState(false)
   const [message, setMessage] = useState<SubmitMessage | undefined>(undefined)
 
   const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setIsChecked(event.target.checked)
   }
+
+  const code = `
+  <a href="https://www.ariseforchrist.com/en/evangelism-request" target="_blank">
+    <button style="background-color: black; color:#F5B298; font-weight: 600; padding: 8px 12px; border-radius: 4px; cursor: pointer;">
+        ${t('ev_embed_code_button_label')}
+    </button>
+  </a>
+`
 
   return (
     <MailchimpSubscribe
@@ -206,13 +219,83 @@ const ContentEvangelizationForm = () => {
                 </div>
 
                 <button
-                  className="bg-[#e3ae04] rounded-md px-20 text-black font-bold py-1 size-9 flex justify-center items-center disabled:opacity-50 disabled:pointer-events-none self-start md:self-center !mt-4 md:!mt-0"
+                  className="bg-[#e3ae04] rounded-md px-20 text-black font-bold py-1 size-9 flex justify-center items-center disabled:opacity-50 disabled:pointer-events-none self-start md:self-center mt-4 md:!mt-0"
                   type="submit"
                 >
                   {t('send')}
                 </button>
               </form>
+
+              <div
+                className="flex justify-end items-center mt-4"
+                onClick={() => {
+                  setIsOpen(true)
+                }}
+              >
+                <IoLink color="#e3ae04" />
+                <label className="flex text-sm pl-2 cursor-pointer justify-end font-bold text-[#E3AE04] hover:text-[#CFBE47]">
+                  {t('ev_embed')}
+                </label>
+              </div>
             </InViewTransition>
+
+            <Dialog
+              className="relative z-50"
+              onClose={() => {
+                setShowCopyLabel(false)
+                setIsOpen(false)
+              }}
+              open={isOpen}
+            >
+              <div className="fixed inset-0 flex w-screen items-center justify-center p-4">
+                <DialogPanel className="max-w-lg space-y-4 bg-[#E3AE04] p-12 rounded">
+                  <DialogTitle className="font-bold">
+                    {t('ev_embed')}
+                  </DialogTitle>
+                  <p>{t('ev_embed_description')}</p>
+
+                  <p>
+                    {t('ev_embed_code_label')}{' '}
+                    {showCopyLabel && (
+                      <span className="font-bold">copiat!</span>
+                    )}
+                  </p>
+                  <div className="p-2 rounded bg-white relative overflow-hidden">
+                    <div className="absolute top-0 right-0 p-1">
+                      <MdOutlineContentCopy
+                        className=" cursor-pointer"
+                        onClick={() => {
+                          setShowCopyLabel(true)
+                          navigator.clipboard.writeText(code)
+                        }}
+                      />
+                    </div>
+
+                    {code}
+                  </div>
+
+                  <p>{t('ev_embed_example_label')}</p>
+                  <div className="flex justify-center p-4 rounded border-dashed border-2 border-black">
+                    <button className="bg-black text-xs text-[#F5B298] font-semibold py-2 px-3 rounded flex items-center gap-2">
+                      {t('ev_embed_example_button')} <br />{' '}
+                      {t('ev_embed_example_button2')}
+                    </button>
+                  </div>
+
+                  <div className="flex gap-4">
+                    <button
+                      className="bg-black text-xs text-[#F5B298] font-semibold py-2 px-3 rounded flex items-center gap-2"
+                      onClick={() => {
+                        setShowCopyLabel(false)
+                        setIsOpen(false)
+                      }}
+                    >
+                      {t('ev_embed_close_button')}
+                    </button>
+                  </div>
+                </DialogPanel>
+              </div>
+            </Dialog>
           </div>
         )
       }}
