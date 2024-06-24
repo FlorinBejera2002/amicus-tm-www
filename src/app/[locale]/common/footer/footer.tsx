@@ -92,7 +92,7 @@ export default function Footer() {
                   titleKey="header.project"
                 />
               </div>
-              <div className="w-full md:flex justify-between mb-5">
+              <div className="w-full md:flex flex-wrap justify-between mb-5">
                 <p className="flex items-center text-white mb-4">
                   handcrafted by
                   <Link

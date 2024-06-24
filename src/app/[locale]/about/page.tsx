@@ -23,8 +23,8 @@ const About = () => {
       <section className="page-header p-relative bg-quaternary m-0 overflow-hidden border-0 p-0 w-screen">
         <InViewTransition
           damping={100}
-          delay={0.75}
-          duration={1}
+          delay={0.25}
+          duration={0.5}
           yIn={0}
           yOut={0}
         >
@@ -91,7 +91,7 @@ const About = () => {
             </div>
           </div>
 
-          <InViewTransition delay={0.75}>
+          <InViewTransition delay={0.25}>
             <p className="text-md md:text-lg pb-0 mb-0">
               {t('about_us.description_p3_1')}
             </p>

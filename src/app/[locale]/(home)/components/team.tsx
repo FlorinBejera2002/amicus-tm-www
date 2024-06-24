@@ -44,7 +44,7 @@ export default function Team() {
               </div>
             </InViewTransition>
 
-            <InViewTransition damping={50} delay={0.75}>
+            <InViewTransition damping={50} delay={0.25}>
               <div className="mt-3 bg-gradient-to-t from-gray-800 to-transparent rounded-xl gap-1 flex flex-col  items-center  hover:-translate-y-1 hover:scale-110 hover:bg-[#e3ae04]/[.6] duration-300 ">
                 <Image
                   alt="Dana Potra"

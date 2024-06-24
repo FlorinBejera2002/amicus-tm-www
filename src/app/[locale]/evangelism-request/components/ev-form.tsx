@@ -123,7 +123,7 @@ const ContentEvangelizationForm = () => {
               </div>
             </div>
 
-            <InViewTransition customClassname="mt-4" delay={0.75}>
+            <InViewTransition customClassname="mt-4" delay={0.25}>
               <form
                 className="pt-4 flex flex-col md:gap-4"
                 onSubmit={handleSubmit}
