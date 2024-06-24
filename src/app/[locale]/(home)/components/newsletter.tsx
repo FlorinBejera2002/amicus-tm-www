@@ -26,13 +26,13 @@ export const Newsletter = () => {
             </h2>
             <div className="w-screen flex gap-2">
               <input
-                className="text-xs p-2 border w-44 md:w-52 rounded "
+                className="text-xs p-2 border w-44 md:w-52 rounded z-10"
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder={t('footer.subscribe_placeholder')}
                 type="email"
               />
               <button
-                className="bg-[#e3ae04] text-xs text-black font-semibold py-2 px-3 rounded flex items-center gap-2"
+                className="bg-[#e3ae04] text-xs text-black font-semibold py-2 px-3 rounded flex items-center gap-2 z-10"
                 onClick={() => {
                   subscribe({ EMAIL: email })
                   setEmail('')
