@@ -1,21 +1,20 @@
+'use client'
 import InViewTransition from '../common/in-view-transition'
 import CustomHeroBg from '../common/custom-hero-bg'
 import Animation from '../common/animation'
 
 import { FaAngleRight } from 'react-icons/fa'
+import { BiSolidDonateHeart } from 'react-icons/bi'
 import { useTranslations } from 'next-intl'
+import { usePathname } from 'next/navigation'
 import Link from 'next/link'
-import Image from 'next/image'
-import { Metadata } from 'next'
-
-import CECLogo from '../../../../public/CEC Bank.svg'
 
 // eslint-disable-next-line react-refresh/only-export-components
-export const metadata: Metadata = {
-  title: 'Arise for Christ | Donate'
-}
 
 const About = () => {
+  const pathname = usePathname()
+  const language = pathname.split('/')[1]
+
   const t = useTranslations()
 
   const leftSectionText = [
@@ -82,7 +81,7 @@ const About = () => {
       </section>
 
       <div className="custom-page-content pb-4 p-relative z-index-2 text-md md:text-lg flex w-full justify-center">
-        <div className="max-w-6xl flex flex-col lg:flex-row justify-around bg-white rounded-md !p-8 md:!p-12 mt-4  md:items-center">
+        <div className="max-w-6xl flex-col justify-around gap-24 bg-white rounded-md !p-8 md:!p-12 mt-4  md:items-center">
           <div className="flex-[1.75]">
             {leftSectionText.map((item, idx) => (
               <InViewTransition delay={0.25 * idx} key={idx}>
@@ -92,20 +91,16 @@ const About = () => {
           </div>
 
           <InViewTransition delay={0.25}>
-            <div className="p-4 rounded-md bg-gray-300 flex flex-col gap-3 items-center flex-1 ml-0 lg:ml-8">
-              <div className="flex justify-center">
-                <Image alt="Logo for the bank" className="w-44" src={CECLogo} />
-              </div>
-              <p className="">{t('donate.name')} </p>
-              <div className="flex flex-col gap-1">
-                <p className="m-0 font-semibold">{t('donate.ron')} </p>
-                <p>IBAN: RO36CECETM0130RON0998570</p>
-              </div>
-              <div className="flex flex-col gap-1">
-                <p className="m-0 font-semibold">{t('donate.dollars')}</p>
-                <p>IBAN: RO37CECETM01B8USD0998572</p>
-              </div>
-            </div>
+            <Link
+              className="!no-underline"
+              href={`/${language}/donate/stripe`}
+              target="_blank"
+            >
+              <span className="text-black bg-[#e3ae04]  rounded-md py-2 px-4 font-semibold flex gap-2 items-center w-40">
+                {t('donate.donate')}
+                <BiSolidDonateHeart />
+              </span>
+            </Link>
           </InViewTransition>
         </div>
       </div>
