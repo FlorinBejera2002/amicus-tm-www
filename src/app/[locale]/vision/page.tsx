@@ -46,8 +46,8 @@ export default function Vision() {
       <section className="page-header p-relative bg-quaternary m-0 overflow-hidden border-0 p-0">
         <InViewTransition
           damping={100}
-          delay={0.75}
-          duration={1}
+          delay={0.25}
+          duration={0.5}
           yIn={0}
           yOut={0}
         >
@@ -124,7 +124,7 @@ export default function Vision() {
                 {t('vision.projects_p1_2')}
               </h3>
             </InViewTransition>
-            <InViewTransition delay={0.75}>
+            <InViewTransition delay={0.25}>
               <p className="md:px-0 text-md md:text-lg font-semibold text-gray-400 text-start">
                 {t('vision.projects_p1_3')}
               </p>

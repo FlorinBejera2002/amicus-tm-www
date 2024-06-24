@@ -45,8 +45,8 @@ const About = () => {
       <section className="page-header p-relative bg-quaternary m-0 overflow-hidden border-0 p-0">
         <InViewTransition
           damping={100}
-          delay={0.75}
-          duration={1}
+          delay={0.25}
+          duration={0.5}
           yIn={0}
           yOut={0}
         >

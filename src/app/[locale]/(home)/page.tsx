@@ -83,14 +83,14 @@ export default function Home() {
         id="home"
       >
         <div className="font-bold custom-hero-heading text-white">
-          <InViewTransition delay={0.75} duration={1}>
+          <InViewTransition delay={0.25} duration={0.5}>
             {t('title-hero')}
           </InViewTransition>
         </div>
         <InViewTransition
           damping={100}
-          delay={0.75}
-          duration={1}
+          delay={0.25}
+          duration={0.5}
           yIn={0}
           yOut={0}
         >
