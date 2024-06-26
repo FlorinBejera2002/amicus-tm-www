@@ -93,7 +93,7 @@ const About = () => {
                 href="https://buy.stripe.com/test_bIY9En9Qqelp0dW7ss"
                 target="_blank"
               > */}
-              <span className="text-black bg-[#e3ae04]  rounded-s-full py-4 px-4 font-semibold flex gap-2 items-center w-40 cursor-none">
+              <span className="text-black bg-[#e3ae04]  rounded-s-full py-4 px-4 font-semibold flex gap-2 items-center w-40 cursor-pointer">
                 <FaDonate />
                 {t('donate.donate')}
               </span>
@@ -106,7 +106,7 @@ const About = () => {
 
           <div className="">
             <InViewTransition delay={0.25}>
-              <div className="p-4 rounded-md bg-[#F1D782] flex flex-col gap-3 items-center">
+              <div className="p-4 rounded-md bg-[#e3ae04] flex flex-col gap-3 items-center">
                 <div className="flex justify-center">
                   <Image
                     alt="Logo for the bank"
