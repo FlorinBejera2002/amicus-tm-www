@@ -10,7 +10,7 @@ const EpisodeSection = () => {
   return (
     <div className="flex flex-col !z-2 relative">
       <div className="flex flex-col w-full">
-        <h4 className="text-base md:text-2xl font-semibold md:my-7 text-[#e3ae04] pb-3 md:pb-10 md:w-full px-0">
+        <h4 className="text-base md:text-2xl font-semibold md:my-7 text-accent pb-3 md:pb-10 md:w-full px-0">
           {t('title_serial')}
         </h4>
         <div className="grid md:grid-cols-3 gap-3 ">

@@ -10,7 +10,7 @@ export default function HeroSection() {
           {t('title')}
         </h1>
         <div className="mt-16 lg:mt-44 flex flex-col  text-white">
-          <h2 className="text-[#e3ae04] font-bold pb-2 lg:mb-10 text-xl md:text-3xl">
+          <h2 className="text-accent font-bold pb-2 lg:mb-10 text-xl md:text-3xl">
             {t('title_description_hero')}
           </h2>
           <div className="grid md:grid-cols-2 pb-10">

@@ -14,7 +14,7 @@ const ContactUsBtn = () => {
   return (
     <InViewTransition delay={1}>
       <Link
-        className="bg-[#e3ae04] p-4 py-2 rounded-md flex items-center gap-2 !no-underline hover:!no-underline text-black"
+        className="bg-accent p-4 py-2 rounded-md flex items-center gap-2 !no-underline hover:!no-underline text-black"
         href={`/${language}/evangelism-request`}
       >
         {t('button.contact_us')}

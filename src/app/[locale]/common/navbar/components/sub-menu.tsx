@@ -50,7 +50,7 @@ const SubMenu = ({
               transition={{ duration: 0.2 }}
             >
               <Link
-                className="text-black flex items-center gap-2 px-3 py-2 w-fit text-sm hover:bg-gray-100 hover:!no-underline hover:text-gray-900 bg-[#e3ae04] transition-all duration-300 rounded-md no-underline truncate"
+                className="text-black flex items-center gap-2 px-3 py-2 w-fit text-sm hover:bg-gray-100 hover:!no-underline hover:text-gray-900 bg-accent transition-all duration-300 rounded-md no-underline truncate"
                 href={`/${language}/projects/time-is-now`}
                 onClick={handleSubMenuItemClick}
                 role="menuitem"
@@ -66,7 +66,7 @@ const SubMenu = ({
               transition={{ delay: 0.1, duration: 0.25 }}
             >
               <Link
-                className="text-black flex items-center gap-2 px-3 py-2 w-fit text-sm hover:bg-gray-100 hover:!no-underline hover:text-gray-900 bg-[#e3ae04] transition-all duration-300 rounded-md no-underline"
+                className="text-black flex items-center gap-2 px-3 py-2 w-fit text-sm hover:bg-gray-100 hover:!no-underline hover:text-gray-900 bg-accent transition-all duration-300 rounded-md no-underline"
                 href={`/${language}/projects/podcast`}
                 onClick={handleSubMenuItemClick}
                 role="menuitem"

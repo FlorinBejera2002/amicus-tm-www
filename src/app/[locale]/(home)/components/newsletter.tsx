@@ -1,8 +1,8 @@
 'use client'
 
 import MailchimpSubscribe, {
-  EmailFormFields,
-  FormHooks
+    EmailFormFields,
+    FormHooks
 } from 'react-mailchimp-subscribe'
 import { useState } from 'react'
 
@@ -32,7 +32,7 @@ export const Newsletter = () => {
                 type="email"
               />
               <button
-                className="bg-[#e3ae04] text-xs text-black font-semibold py-2 px-3 rounded flex items-center gap-2 z-10"
+                className="bg-accent text-xs text-black font-semibold py-2 px-3 rounded flex items-center gap-2 z-10"
                 onClick={() => {
                   subscribe({ EMAIL: email })
                   setEmail('')
@@ -55,7 +55,7 @@ export const Newsletter = () => {
         open={isOpen}
       >
         <div className="fixed inset-0 flex w-screen items-center justify-center p-4">
-          <DialogPanel className="max-w-lg space-y-4 bg-[#E3AE04] p-12 rounded">
+          <DialogPanel className="max-w-lg space-y-4 bg-accent p-12 rounded">
             <DialogTitle className="font-bold">
               {t('footer.subscribe_dialog_header')}
             </DialogTitle>

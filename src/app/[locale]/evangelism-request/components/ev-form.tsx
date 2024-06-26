@@ -2,17 +2,17 @@
 'use client'
 
 import MailchimpSubscribe, {
-  EmailFormFields,
-  FormHooks
+    EmailFormFields,
+    FormHooks
 } from 'react-mailchimp-subscribe'
 import React, { useState } from 'react'
 
 import InViewTransition from '../../common/in-view-transition'
 
 import {
-  PiNumberCircleOneFill,
-  PiNumberCircleThreeFill,
-  PiNumberCircleTwoFill
+    PiNumberCircleOneFill,
+    PiNumberCircleThreeFill,
+    PiNumberCircleTwoFill
 } from 'react-icons/pi'
 import { MdOutlineContentCopy } from 'react-icons/md'
 import { IoLink } from 'react-icons/io5'
@@ -219,7 +219,7 @@ const ContentEvangelizationForm = () => {
                 </div>
 
                 <button
-                  className="bg-[#e3ae04] rounded-md px-20 text-black font-bold py-1 size-9 flex justify-center items-center disabled:opacity-50 disabled:pointer-events-none self-start md:self-center mt-4 md:!mt-0"
+                  className="bg-accent rounded-md px-20 text-black font-bold py-1 size-9 flex justify-center items-center disabled:opacity-50 disabled:pointer-events-none self-start md:self-center mt-4 md:!mt-0"
                   type="submit"
                 >
                   {t('send')}
@@ -233,7 +233,7 @@ const ContentEvangelizationForm = () => {
                 }}
               >
                 <IoLink color="#e3ae04" />
-                <label className="flex text-sm pl-2 cursor-pointer justify-end font-bold text-[#E3AE04] hover:text-[#CFBE47]">
+                <label className="flex text-sm pl-2 cursor-pointer justify-end font-bold text-accent hover:text-[#CFBE47]">
                   {t('ev_embed')}
                 </label>
               </div>
@@ -248,7 +248,7 @@ const ContentEvangelizationForm = () => {
               open={isOpen}
             >
               <div className="fixed inset-0 flex w-screen items-center justify-center p-4">
-                <DialogPanel className="max-w-lg space-y-4 bg-[#E3AE04] p-12 rounded">
+                <DialogPanel className="max-w-lg space-y-4 bg-accent p-12 rounded">
                   <DialogTitle className="font-bold">
                     {t('ev_embed')}
                   </DialogTitle>

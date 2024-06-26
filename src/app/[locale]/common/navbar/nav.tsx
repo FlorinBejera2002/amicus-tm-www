@@ -41,7 +41,7 @@ const ActiveLink = ({
     className={cn(
       'text-md no-underline hover:!no-underline transition-all duration-300',
       pathname === link?.href || (pathname?.includes('projects') && !link)
-        ? '!text-[#e3ae04] md:scale-125'
+        ? '!text-accent md:scale-125'
         : 'text-white mb-0',
       customClassname
     )}
@@ -141,7 +141,7 @@ export default function Nav() {
                 className={cn(
                   'flex items-center gap-2 text-white transition-all duration-300',
                   pathname?.includes('projects')
-                    ? 'text-[#e3ae04] md:scale-125'
+                    ? 'text-accent md:scale-125'
                     : ''
                 )}
                 onClick={toggleDropdown}
@@ -163,7 +163,7 @@ export default function Nav() {
             </div>
 
             <Link
-              className=" bg-[#e3ae04] text-black font-weight-semibold p-3 text-md rounded-md min-w-fit no-underline hover:!no-underline"
+              className=" bg-accent text-black font-weight-semibold p-3 text-md rounded-md min-w-fit no-underline hover:!no-underline"
               href={`/${language}/evangelism-request`}
               type="button"
             >
@@ -172,7 +172,7 @@ export default function Nav() {
           </div>
 
           <Link
-            className=" bg-[#e3ae04] text-black font-semibold py-2.5 px-3 text-sm rounded-md min-w-fit flex lg:hidden mr-auto no-underline hover:!no-underline"
+            className=" bg-accent text-black font-semibold py-2.5 px-3 text-sm rounded-md min-w-fit flex lg:hidden mr-auto no-underline hover:!no-underline"
             href={`/${language}/evangelism-request`}
             type="button"
           >

@@ -61,7 +61,7 @@ export default function Footer() {
               <ul className="list list-unstyled pt-4">
                 <li className="d-flex align-items-center mb-4 ">
                   <Link
-                    className="d-inline-flex align-items-center text-decoration-none font-weight-semibold text-white text-4-5 hover:!text-[#e3ae04] transition-all duration-300"
+                    className="d-inline-flex align-items-center text-decoration-none font-weight-semibold text-white text-4-5 hover:!text-accent transition-all duration-300"
                     href="mailto:info@ariseforchrist.com"
                   >
                     info@ariseforchrist.com
@@ -96,7 +96,7 @@ export default function Footer() {
                 <p className="flex items-center text-white mb-4">
                   handcrafted by
                   <Link
-                    className="!text-[#e3ae04] no-underline ml-2 "
+                    className="!text-accent no-underline ml-2 "
                     href="https://new-ark.cloud/"
                     target="_blank"
                   >

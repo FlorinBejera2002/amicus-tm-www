@@ -9,7 +9,7 @@ export default function TrailerSection() {
 
   return (
     <div className="flex flex-col gap-4 pb-14">
-      <h3 className="text-[#e3ae04] font-bold text-xl md:text-3xl">
+      <h3 className="text-accent font-bold text-xl md:text-3xl">
         {t('trailer')}
       </h3>
       <Link
