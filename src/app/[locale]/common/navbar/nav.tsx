@@ -172,7 +172,7 @@ export default function Nav() {
           </div>
 
           <Link
-            className=" bg-[#e3ae04] text-black font-semibold p-3 text-md rounded-md min-w-fit flex lg:hidden mr-auto no-underline hover:!no-underline"
+            className=" bg-[#e3ae04] text-black font-semibold py-2.5 px-3 text-sm rounded-md min-w-fit flex lg:hidden mr-auto no-underline hover:!no-underline"
             href={`/${language}/evangelism-request`}
             type="button"
           >
