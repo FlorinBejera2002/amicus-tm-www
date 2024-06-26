@@ -111,7 +111,7 @@ const MobileNavbar = ({
       initial={{ opacity: 0, transform: 'translateX(-100%)' }}
       transition={{ duration: 0.5, type: 'spring' }}
     >
-      <ChangeLanguage />
+      <ChangeLanguage customClassname="p-2 text-sm absolute top-[32px] left-[32px]" />
       <MenuButton
         className={cn(
           'cursor-pointer text-white scale-50 -mr-2 absolute top-[40px] right-[32px]',
