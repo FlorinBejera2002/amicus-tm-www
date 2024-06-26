@@ -4,6 +4,7 @@ import { Dispatch, SetStateAction, useEffect, useState } from 'react'
 
 import SubMenu from './sub-menu'
 import { MenuButton } from './hamburger'
+import ChangeLanguage from './change-language'
 import Animation from '../../animation'
 
 import { FaChevronDown } from 'react-icons/fa'
@@ -110,15 +111,7 @@ const MobileNavbar = ({
       initial={{ opacity: 0, transform: 'translateX(-100%)' }}
       transition={{ duration: 0.5, type: 'spring' }}
     >
-      <Link href="?ev-req-form=open">
-        <button
-          className=" bg-[#e3ae04] text-black font-weight-semibold p-2 text-sm rounded-md absolute top-[32px] left-[32px]"
-          onClick={() => setMobileNavbarOpen((prev) => !prev)}
-          type="button"
-        >
-          {t('form.title')}
-        </button>
-      </Link>
+      <ChangeLanguage />
       <MenuButton
         className={cn(
           'cursor-pointer text-white scale-50 -mr-2 absolute top-[40px] right-[32px]',

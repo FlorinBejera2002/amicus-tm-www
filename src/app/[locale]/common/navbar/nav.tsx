@@ -121,7 +121,9 @@ export default function Nav() {
                 width={150}
               />
             </Link>
-            <ChangeLanguage />
+            <div className="hidden lg:flex">
+              <ChangeLanguage />
+            </div>
           </div>
 
           <div className={cn('items-center gap-8 hidden lg:flex')}>
