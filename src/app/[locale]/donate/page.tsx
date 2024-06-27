@@ -104,24 +104,35 @@ const About = () => {
             </InViewTransition>
           </div>
 
-          <div className="">
+          <div className="-mt-10">
             <InViewTransition delay={0.25}>
-              <div className="p-4 rounded-md bg-accent flex flex-col gap-3 items-center">
-                <div className="flex justify-center">
+              <h1 className="text-3xl font-bold mb-6 px-10" key={1}>
+                {t('donate.title_2')}
+              </h1>
+              <div className="px-10 pb-10 rounded-md flex flex-col gap-3">
+                <div>
                   <Image
                     alt="Logo for the bank"
                     className="w-44"
                     src={CECLogo}
                   />
                 </div>
-                <p className="">{t('donate.name')} </p>
+
+                <p>{t('donate.name')} </p>
                 <div className="flex flex-col gap-1">
                   <p className="m-0 font-semibold">{t('donate.ron')} </p>
                   <p>IBAN: RO36CECETM0130RON0998570</p>
                 </div>
+
                 <div className="flex flex-col gap-1">
                   <p className="m-0 font-semibold">{t('donate.dollars')}</p>
                   <p>IBAN: RO37CECETM01B8USD0998572</p>
+                </div>
+                <div className="pb-10">
+                  <h1 className="text-3xl font-bold mb-6 " key={1}>
+                    {t('donate.title_3')}
+                  </h1>
+                  <p>{t('donate.paragraf_5')}</p>
                 </div>
               </div>
             </InViewTransition>
