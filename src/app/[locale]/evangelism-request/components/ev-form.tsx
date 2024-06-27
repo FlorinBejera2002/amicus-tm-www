@@ -2,17 +2,17 @@
 'use client'
 
 import MailchimpSubscribe, {
-    EmailFormFields,
-    FormHooks
+  EmailFormFields,
+  FormHooks
 } from 'react-mailchimp-subscribe'
 import React, { useState } from 'react'
 
 import InViewTransition from '../../common/in-view-transition'
 
 import {
-    PiNumberCircleOneFill,
-    PiNumberCircleThreeFill,
-    PiNumberCircleTwoFill
+  PiNumberCircleOneFill,
+  PiNumberCircleThreeFill,
+  PiNumberCircleTwoFill
 } from 'react-icons/pi'
 import { MdOutlineContentCopy } from 'react-icons/md'
 import { IoLink } from 'react-icons/io5'
