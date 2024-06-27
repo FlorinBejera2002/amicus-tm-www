@@ -14,6 +14,9 @@ const config: Config = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))'
       },
+      boxShadow: {
+        'outline-red': '0 0 10px 5px rgba(255, 0, 0, 0.5)'
+      },
       colors: {
         accent: '#e3ae04'
       }

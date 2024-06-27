@@ -233,7 +233,7 @@ const ContentEvangelizationForm = () => {
                 }}
               >
                 <IoLink color="#e3ae04" />
-                <label className="flex cursor-pointer justify-end pl-2 text-sm font-bold text-accent hover:text-[#CFBE47]">
+                <label className="flex cursor-pointer justify-end pl-2 text-sm font-bold text-accent hover:text-accent">
                   {t('ev_embed')}
                 </label>
               </div>

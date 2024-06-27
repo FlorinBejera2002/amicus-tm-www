@@ -18,6 +18,7 @@ export default function Animation() {
             width={140}
           />
         </div>
+
         <div
           className="appear-animation"
           data-appear-animation="fadeInUpShorter"
@@ -30,6 +31,7 @@ export default function Animation() {
             width={140}
           />
         </div>
+
         <div
           className="appear-animation"
           data-appear-animation="fadeInUpShorter"
@@ -43,6 +45,7 @@ export default function Animation() {
           />
         </div>
       </div>
+
       <div className="p-absolute custom-el-2 custom-el-pos-2">
         <div
           className="appear-animation"
@@ -56,6 +59,7 @@ export default function Animation() {
             width={70}
           />
         </div>
+
         <div
           className="appear-animation"
           data-appear-animation="fadeInUpShorter"
@@ -68,6 +72,7 @@ export default function Animation() {
             width={70}
           />
         </div>
+
         <div
           className="appear-animation"
           data-appear-animation="fadeInUpShorter"

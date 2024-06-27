@@ -41,6 +41,7 @@ export default function RootLayout({ children, params: { locale } }: any) {
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Nav />
           {children}
+
           <Footer />
 
           <CookieConsents />

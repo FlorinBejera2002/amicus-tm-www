@@ -155,6 +155,7 @@
     "subscribe_dialog_header": "Thank you for subscribing",
     "subscribe_dialog_paragraph": "You will receive a confirmation email shortly. Please click the link in the email to confirm your subscription.",
     "subscribe_placeholder": "Enter your email",
+    "subscribe_placeholder_error": "Invalid email",
     "subscribe_to_newsletter": "Subscribe to our Newsletter"
   },
   "form": {

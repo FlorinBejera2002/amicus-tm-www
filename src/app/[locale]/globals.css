@@ -3,5 +3,7 @@
 @tailwind utilities;
 
 * {
-  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS */
+  scroll-behavior: smooth; /* Enable smooth scrolling in modern browsers */
 }
+

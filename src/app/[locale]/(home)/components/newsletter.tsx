@@ -9,12 +9,27 @@ import { useState } from 'react'
 import { FaTelegramPlane } from 'react-icons/fa'
 import { useTranslations } from 'next-intl'
 import { Dialog, DialogPanel, DialogTitle } from '@headlessui/react'
-import { MAILCHIMP_URL } from '@/utils'
+import { MAILCHIMP_URL, cn } from '@/utils'
 
 export const Newsletter = () => {
   const t = useTranslations()
   const [email, setEmail] = useState('')
   const [isOpen, setIsOpen] = useState(false)
+  const [error, setError] = useState('')
+
+  const handleSubmit = (subscribe: (data: EmailFormFields) => void) => {
+    // validate email
+    if (!/\S+@\S+\.\S+/.test(email)) {
+      setError('invalid email')
+
+      return
+    }
+
+    setError('')
+    setEmail('')
+    subscribe({ EMAIL: email })
+    setIsOpen(true)
+  }
 
   return (
     <>
@@ -26,18 +41,17 @@ export const Newsletter = () => {
             </h2>
             <div className="flex w-screen gap-2">
               <input
-                className="z-10 w-44 rounded border p-2 text-xs md:w-52"
+                className={cn(
+                  'z-10 w-44 rounded border p-2 text-xs md:w-52',
+                  error && 'shadow-outline-red'
+                )}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder={t('footer.subscribe_placeholder')}
+                placeholder={error || t('footer.subscribe_placeholder')}
                 type="email"
               />
               <button
                 className="z-10 flex items-center gap-2 rounded bg-accent px-3 py-2 text-xs font-semibold text-black"
-                onClick={() => {
-                  subscribe({ EMAIL: email })
-                  setEmail('')
-                  setIsOpen(true)
-                }}
+                onClick={() => handleSubmit(subscribe)}
                 type="submit"
               >
                 {t('button.subscribe')}

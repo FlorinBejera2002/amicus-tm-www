@@ -155,6 +155,7 @@
     "subscribe_dialog_header": "Mulțumim pentru abonare!",
     "subscribe_dialog_paragraph": "Vei primi un email de confirmare în scurt timp.",
     "subscribe_placeholder": "Introdu adresa de email",
+    "subscribe_placeholder_error": "Email invalid",
     "subscribe_to_newsletter": "Abonează-te la Newsletter"
   },
   "form": {
