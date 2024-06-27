@@ -39,10 +39,10 @@ const ActiveLink = ({
 }) => (
   <Link
     className={cn(
-      'text-md no-underline hover:!no-underline transition-all duration-300',
+      'text-md no-underline transition-all duration-300 hover:!no-underline',
       pathname === link?.href || (pathname?.includes('projects') && !link)
         ? '!text-accent md:scale-125'
-        : 'text-white mb-0',
+        : 'mb-0 text-white',
       customClassname
     )}
     href={link?.href || '#'}
@@ -104,18 +104,18 @@ export default function Nav() {
     >
       <nav
         className={cn(
-          'transition-all duration-500 !top-0 !left-0 w-screen bg-transparent flex items-center justify-center py-6 md:py-8 lg:py-10',
+          '!left-0 !top-0 flex w-screen items-center justify-center bg-transparent py-6 transition-all duration-500 md:py-8 lg:py-10',
           y !== null && y >= 25
             ? 'bg-gray-950/[.4] shadow-sm backdrop-blur-md'
             : ''
         )}
       >
-        <div className="flex items-center justify-between w-screen lg:w-full lg:container px-4">
-          <div className="flex items-center mr-8">
+        <div className="flex w-screen items-center justify-between px-4 lg:container lg:w-full">
+          <div className="mr-8 flex items-center">
             <Link href="/">
               <Image
                 alt="arise for christ logo"
-                className="object-contain hidden lg:flex mr-8"
+                className="mr-8 hidden object-contain lg:flex"
                 height={40}
                 src={horizontalLogo}
                 width={150}
@@ -126,7 +126,7 @@ export default function Nav() {
             </div>
           </div>
 
-          <div className={cn('items-center gap-8 hidden lg:flex')}>
+          <div className={cn('hidden items-center gap-8 lg:flex')}>
             {navLinks.map((link) => (
               <ActiveLink
                 customClassname="text-nowrap"
@@ -163,7 +163,7 @@ export default function Nav() {
             </div>
 
             <Link
-              className=" bg-accent text-black font-weight-semibold p-3 text-md rounded-md min-w-fit no-underline hover:!no-underline"
+              className=" font-weight-semibold text-md min-w-fit rounded-md bg-accent p-3 text-black no-underline hover:!no-underline"
               href={`/${language}/evangelism-request`}
               type="button"
             >
@@ -172,7 +172,7 @@ export default function Nav() {
           </div>
 
           <Link
-            className=" bg-accent text-black font-semibold py-2.5 px-3 text-sm rounded-md min-w-fit flex lg:hidden mr-auto no-underline hover:!no-underline"
+            className=" mr-auto flex min-w-fit rounded-md bg-accent px-3 py-2.5 text-sm font-semibold text-black no-underline hover:!no-underline lg:hidden"
             href={`/${language}/evangelism-request`}
             type="button"
           >
@@ -181,7 +181,7 @@ export default function Nav() {
 
           <MenuButton
             className={cn(
-              'cursor-pointer text-white scale-50 -mr-2 flex lg:hidden'
+              '-mr-2 flex scale-50 cursor-pointer text-white lg:hidden'
             )}
             color="white"
             height="24"

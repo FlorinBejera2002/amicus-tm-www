@@ -25,7 +25,7 @@ export default function CookieConsents() {
           expires={150}
           location="bottom"
         >
-          <p className="p-0 m-0">
+          <p className="m-0 p-0">
             {t('explanation')}
             <Link
               className="text-decoration-none font-weight-semibold font-poppins text-black"

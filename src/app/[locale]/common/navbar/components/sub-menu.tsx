@@ -28,7 +28,7 @@ const SubMenu = ({
           className={cn(
             isDesktop
               ? 'absolute mt-6 min-w-fit rounded-md shadow-lg '
-              : 'ml-20 -mt-5'
+              : '-mt-5 ml-20'
           )}
           exit={{ opacity: 0, y: -10 }}
           initial={{ opacity: 0, y: -10 }}
@@ -39,7 +39,7 @@ const SubMenu = ({
             className={cn(
               'flex flex-col gap-2',
               isDesktop
-                ? 'p-3 bg-white/[.4] backdrop-blur-md shadow-md rounded-md'
+                ? 'rounded-md bg-white/[.4] p-3 shadow-md backdrop-blur-md'
                 : 'ml-[100px]'
             )}
           >
@@ -50,7 +50,7 @@ const SubMenu = ({
               transition={{ duration: 0.2 }}
             >
               <Link
-                className="text-black flex items-center gap-2 px-3 py-2 w-fit text-sm hover:bg-gray-100 hover:!no-underline hover:text-gray-900 bg-accent transition-all duration-300 rounded-md no-underline truncate"
+                className="flex w-fit items-center gap-2 truncate rounded-md bg-accent px-3 py-2 text-sm text-black no-underline transition-all duration-300 hover:bg-gray-100 hover:text-gray-900 hover:!no-underline"
                 href={`/${language}/projects/time-is-now`}
                 onClick={handleSubMenuItemClick}
                 role="menuitem"
@@ -66,7 +66,7 @@ const SubMenu = ({
               transition={{ delay: 0.1, duration: 0.25 }}
             >
               <Link
-                className="text-black flex items-center gap-2 px-3 py-2 w-fit text-sm hover:bg-gray-100 hover:!no-underline hover:text-gray-900 bg-accent transition-all duration-300 rounded-md no-underline"
+                className="flex w-fit items-center gap-2 rounded-md bg-accent px-3 py-2 text-sm text-black no-underline transition-all duration-300 hover:bg-gray-100 hover:text-gray-900 hover:!no-underline"
                 href={`/${language}/projects/podcast`}
                 onClick={handleSubMenuItemClick}
                 role="menuitem"

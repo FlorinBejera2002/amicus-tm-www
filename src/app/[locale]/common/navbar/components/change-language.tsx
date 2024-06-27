@@ -48,21 +48,21 @@ export default function ChangeLanguage({
   return (
     <button
       className={cn(
-        'cursor-pointer p-[10px] rounded-full h-[40px] w-[75px] min-w-[75px] bg-accent items-center relative flex',
+        'relative flex h-[40px] w-[75px] min-w-[75px] cursor-pointer items-center rounded-full bg-accent p-[10px]',
         language === 'en' ? 'justify-end' : '',
         customClassname
       )}
       onClick={toggleSwitch}
     >
       <motion.div
-        className="bg-white rounded-full -ml-1 -mr-1 size-8"
+        className="-ml-1 -mr-1 size-8 rounded-full bg-white"
         layout={true}
         transition={{ duration: 0.2 }}
       />
 
       <motion.div
         className={cn(
-          'absolute font-semibold text-sm z-2 left-[12px]',
+          'z-2 absolute left-[12px] text-sm font-semibold',
           language === 'en' ? 'text-white' : 'text-black'
         )}
       >
@@ -70,7 +70,7 @@ export default function ChangeLanguage({
       </motion.div>
       <motion.div
         className={cn(
-          'absolute font-semibold text-sm z-2 right-[12px] mr-[1px]',
+          'z-2 absolute right-[12px] mr-[1px] text-sm font-semibold',
           language === 'ro' ? 'text-white' : 'text-black'
         )}
       >

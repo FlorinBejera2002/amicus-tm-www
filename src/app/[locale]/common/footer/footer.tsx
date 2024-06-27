@@ -39,7 +39,7 @@ export default function Footer() {
   return (
     <footer className="border-top-0 font-poppins" id="footer">
       <InViewTransition damping={50} delay={0.5}>
-        <div className="max-w-[1480px] mx-auto border-bottom px-3">
+        <div className="border-bottom mx-auto max-w-[1480px] px-3">
           <div
             className={cn(
               'row px-8',
@@ -48,11 +48,11 @@ export default function Footer() {
                 : ''
             )}
           >
-            <div className="col-lg-6 mt-5 !px-0 pt-3 gap-4">
+            <div className="col-lg-6 mt-5 gap-4 !px-0 pt-3">
               <Link className="flex w-fit" href="/">
                 <Image
                   alt="arise for christ logo"
-                  className="object-contain pb-6 w-24 md:w-40"
+                  className="w-24 object-contain pb-6 md:w-40"
                   height={40}
                   src={horizontalLogo}
                 />
@@ -61,7 +61,7 @@ export default function Footer() {
               <ul className="list list-unstyled pt-4">
                 <li className="d-flex align-items-center mb-4 ">
                   <Link
-                    className="d-inline-flex align-items-center text-decoration-none font-weight-semibold text-white text-4-5 hover:!text-accent transition-all duration-300"
+                    className="d-inline-flex align-items-center text-decoration-none font-weight-semibold text-4-5 text-white transition-all duration-300 hover:!text-accent"
                     href="mailto:info@ariseforchrist.com"
                   >
                     info@ariseforchrist.com
@@ -69,7 +69,7 @@ export default function Footer() {
                 </li>
 
                 <li className="d-blok align-items-center mb-4">
-                  <div className="pb-3 align-items-center text-decoration-none text-color-light text-color-hover-primary font-weight-semibold text-4-5 transition-all duration-300">
+                  <div className="align-items-center text-decoration-none text-color-light text-color-hover-primary font-weight-semibold text-4-5 pb-3 transition-all duration-300">
                     +40-721-804-560
                   </div>
 
@@ -82,7 +82,7 @@ export default function Footer() {
               <Socials />
             </div>
             <div className="col-lg-6 mt-lg-5 pt-lg-3 !px-0">
-              <div className="w-full flex md:gap-20 justify-between md:justify-normal mb-5">
+              <div className="mb-5 flex w-full justify-between md:justify-normal md:gap-20">
                 <FooterOverview
                   links={companyLinks}
                   titleKey="header.company"
@@ -92,11 +92,11 @@ export default function Footer() {
                   titleKey="header.project"
                 />
               </div>
-              <div className="w-full md:flex flex-wrap justify-between mb-5">
-                <p className="flex items-center text-white mb-4">
+              <div className="mb-5 w-full flex-wrap justify-between md:flex">
+                <p className="mb-4 flex items-center text-white">
                   handcrafted by
                   <Link
-                    className="!text-accent no-underline ml-2 "
+                    className="ml-2 !text-accent no-underline "
                     href="https://new-ark.cloud/"
                     target="_blank"
                   >
@@ -114,9 +114,9 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="footer-copyright bg-transparent max-w-[1480px] mx-auto">
+        <div className="footer-copyright mx-auto max-w-[1480px] bg-transparent">
           <div className="p-10">
-            <p className="text-start text-3-5 font-weight-semi-bold text-light mb-0">
+            <p className="text-3-5 font-weight-semi-bold text-light mb-0 text-start">
               © Copyright AriseForChrist
             </p>
           </div>

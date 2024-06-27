@@ -20,19 +20,19 @@ export const Newsletter = () => {
     <>
       <MailchimpSubscribe
         render={({ subscribe }: FormHooks<EmailFormFields>) => (
-          <div className="shadow-lg max-w-sm w-full flex flex-col ">
+          <div className="flex w-full max-w-sm flex-col shadow-lg ">
             <h2 className="text-sm font-bold">
               {t('footer.subscribe_to_newsletter')}
             </h2>
-            <div className="w-screen flex gap-2">
+            <div className="flex w-screen gap-2">
               <input
-                className="text-xs p-2 border w-44 md:w-52 rounded z-10"
+                className="z-10 w-44 rounded border p-2 text-xs md:w-52"
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder={t('footer.subscribe_placeholder')}
                 type="email"
               />
               <button
-                className="bg-accent text-xs text-black font-semibold py-2 px-3 rounded flex items-center gap-2 z-10"
+                className="z-10 flex items-center gap-2 rounded bg-accent px-3 py-2 text-xs font-semibold text-black"
                 onClick={() => {
                   subscribe({ EMAIL: email })
                   setEmail('')
@@ -55,7 +55,7 @@ export const Newsletter = () => {
         open={isOpen}
       >
         <div className="fixed inset-0 flex w-screen items-center justify-center p-4">
-          <DialogPanel className="max-w-lg space-y-4 bg-accent p-12 rounded">
+          <DialogPanel className="max-w-lg space-y-4 rounded bg-accent p-12">
             <DialogTitle className="font-bold">
               {t('footer.subscribe_dialog_header')}
             </DialogTitle>
@@ -63,7 +63,7 @@ export const Newsletter = () => {
 
             <div className="flex gap-4">
               <button
-                className="bg-black text-xs text-[#F5B298] font-semibold py-2 px-3 rounded flex items-center gap-2"
+                className="flex items-center gap-2 rounded bg-black px-3 py-2 text-xs font-semibold text-[#F5B298]"
                 onClick={() => setIsOpen(false)}
               >
                 {t('footer.subscribe_dialog_button')}

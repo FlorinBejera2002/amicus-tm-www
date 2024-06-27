@@ -97,27 +97,27 @@ const ContentEvangelizationForm = () => {
 
         return (
           <div className="flex flex-col">
-            <div className="flex flex-col md:items-center !gap-0 md:!gap-4">
-              <div className="flex !gap-4 sm:!gap-2 flex-wrap">
+            <div className="flex flex-col !gap-0 md:items-center md:!gap-4">
+              <div className="flex flex-wrap !gap-4 sm:!gap-2">
                 <InViewTransition
                   customClassname="text-md md:text-lg flex flex-row md:flex-col gap-2 flex-1 min-w-[200px] items-start h-full"
                   delay={0.3}
                 >
-                  <PiNumberCircleOneFill className="w-full h-full max-w-[50px] self-start" />
+                  <PiNumberCircleOneFill className="h-full w-full max-w-[50px] self-start" />
                   {t('step1')}
                 </InViewTransition>
                 <InViewTransition
                   customClassname="text-md md:text-lg flex flex-row md:flex-col gap-2 flex-1 min-w-[200px] items-start h-full"
                   delay={0.4}
                 >
-                  <PiNumberCircleTwoFill className="w-full h-full max-w-[50px] self-start" />
+                  <PiNumberCircleTwoFill className="h-full w-full max-w-[50px] self-start" />
                   {t('step2')}
                 </InViewTransition>
                 <InViewTransition
                   customClassname="text-md md:text-lg flex flex-row md:flex-col gap-2 flex-1 min-w-[200px] items-start h-full"
                   delay={0.5}
                 >
-                  <PiNumberCircleThreeFill className="w-full h-full max-w-[50px] self-start" />
+                  <PiNumberCircleThreeFill className="h-full w-full max-w-[50px] self-start" />
                   {t('step3')}
                 </InViewTransition>
               </div>
@@ -125,51 +125,51 @@ const ContentEvangelizationForm = () => {
 
             <InViewTransition customClassname="mt-4" delay={0.25}>
               <form
-                className="pt-4 flex flex-col md:gap-4"
+                className="flex flex-col pt-4 md:gap-4"
                 onSubmit={handleSubmit}
               >
-                <div className="grid md:grid-cols-3 gap-5 w-full md:mb-4 ">
-                  <div className="relative z-0 w-full group">
+                <div className="grid w-full gap-5 md:mb-4 md:grid-cols-3 ">
+                  <div className="group relative z-0 w-full">
                     <input
-                      className="block px-0 p-1 w-full text-sm text-gray-900 bg-transparent border-b border-gray-500 appearance-none focus:outline-none focus:ring-0 focus:border-yellow-500 peer"
+                      className="peer block w-full appearance-none border-b border-gray-500 bg-transparent p-1 px-0 text-sm text-gray-900 focus:border-yellow-500 focus:outline-none focus:ring-0"
                       id="name"
                       name="name"
                       required={true}
                       type="name"
                     />
                     <label
-                      className="peer-focus:font-medium absolute text-sm text-black  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-yellow-500  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                      className="absolute top-3 -z-10 origin-[0]  -translate-y-6 scale-75 transform text-sm text-black duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:start-0 peer-focus:-translate-y-6 peer-focus:scale-75  peer-focus:font-medium peer-focus:text-yellow-500 rtl:peer-focus:left-auto rtl:peer-focus:translate-x-1/4"
                       htmlFor="name"
                     >
                       {t('name')}
                     </label>
                   </div>
 
-                  <div className="relative z-0 w-full group">
+                  <div className="group relative z-0 w-full">
                     <input
-                      className="block px-0 w-full p-1  text-sm text-gray-900 bg-transparent border-b border-gray-500 appearance-none focus:outline-none focus:ring-0 focus:border-yellow-500 peer"
+                      className="peer block w-full appearance-none  border-b border-gray-500 bg-transparent p-1 px-0 text-sm text-gray-900 focus:border-yellow-500 focus:outline-none focus:ring-0"
                       id="email"
                       name="email"
                       required={true}
                       type="email"
                     />
                     <label
-                      className="peer-focus:font-medium absolute text-sm text-black  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-yellow-500  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                      className="absolute top-3 -z-10 origin-[0]  -translate-y-6 scale-75 transform text-sm text-black duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:start-0 peer-focus:-translate-y-6 peer-focus:scale-75  peer-focus:font-medium peer-focus:text-yellow-500 rtl:peer-focus:left-auto rtl:peer-focus:translate-x-1/4"
                       htmlFor="email"
                     >
                       {t('email')}
                     </label>
                   </div>
 
-                  <div className="relative z-0 w-full group">
+                  <div className="group relative z-0 w-full">
                     <input
-                      className="block px-0 w-full p-1 text-sm text-gray-900 bg-transparent border-b border-gray-500 appearance-none focus:outline-none focus:ring-0 focus:border-yellow-500 peer"
+                      className="peer block w-full appearance-none border-b border-gray-500 bg-transparent p-1 px-0 text-sm text-gray-900 focus:border-yellow-500 focus:outline-none focus:ring-0"
                       id="phone"
                       name="phone"
                       type="phone"
                     />
                     <label
-                      className="peer-focus:font-medium absolute text-sm text-black  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-yellow-500  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                      className="absolute top-3 -z-10 origin-[0]  -translate-y-6 scale-75 transform text-sm text-black duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:start-0 peer-focus:-translate-y-6 peer-focus:scale-75  peer-focus:font-medium peer-focus:text-yellow-500 rtl:peer-focus:left-auto rtl:peer-focus:translate-x-1/4"
                       htmlFor="phone"
                     >
                       {t('mobile')}
@@ -177,15 +177,15 @@ const ContentEvangelizationForm = () => {
                   </div>
                 </div>
 
-                <div className="relative z-0 w-full group mt-10 md:mt-2">
+                <div className="group relative z-0 mt-10 w-full md:mt-2">
                   <textarea
-                    className="resize-none block px-0 w-full p-1 text-sm text-gray-900 bg-transparent border-b border-gray-500 appearance-none focus:outline-none focus:ring-0 focus:border-yellow-500 peer"
+                    className="peer block w-full resize-none appearance-none border-b border-gray-500 bg-transparent p-1 px-0 text-sm text-gray-900 focus:border-yellow-500 focus:outline-none focus:ring-0"
                     id="details"
                     name="details"
                     rows={1}
                   />
                   <label
-                    className="peer-focus:font-medium absolute text-sm text-black  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-yellow-500  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                    className="absolute top-3 -z-10 origin-[0]  -translate-y-6 scale-75 transform text-sm text-black duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:start-0 peer-focus:-translate-y-6 peer-focus:scale-75  peer-focus:font-medium peer-focus:text-yellow-500 rtl:peer-focus:left-auto rtl:peer-focus:translate-x-1/4"
                     htmlFor="details"
                   >
                     {t('details')}
@@ -205,21 +205,21 @@ const ContentEvangelizationForm = () => {
                   </div>
                 )}
 
-                <div className="flex gap-2 pt-6 items-start">
+                <div className="flex items-start gap-2 pt-6">
                   <input
                     checked={isChecked}
-                    className="flex w-5 h-5 cursor-pointer"
+                    className="flex h-5 w-5 cursor-pointer"
                     id="consent"
                     onChange={handleCheckboxChange}
                     type="checkbox"
                   />
-                  <label className="text-sm cursor-pointer" htmlFor="consent">
+                  <label className="cursor-pointer text-sm" htmlFor="consent">
                     {t('checkbox_text')}
                   </label>
                 </div>
 
                 <button
-                  className="bg-accent rounded-md px-20 text-black font-bold py-1 size-9 flex justify-center items-center disabled:opacity-50 disabled:pointer-events-none self-start md:self-center mt-4 md:!mt-0"
+                  className="mt-4 flex size-9 items-center justify-center self-start rounded-md bg-accent px-20 py-1 font-bold text-black disabled:pointer-events-none disabled:opacity-50 md:!mt-0 md:self-center"
                   type="submit"
                 >
                   {t('send')}
@@ -227,13 +227,13 @@ const ContentEvangelizationForm = () => {
               </form>
 
               <div
-                className="flex justify-end items-center mt-4"
+                className="mt-4 flex items-center justify-end"
                 onClick={() => {
                   setIsOpen(true)
                 }}
               >
                 <IoLink color="#e3ae04" />
-                <label className="flex text-sm pl-2 cursor-pointer justify-end font-bold text-accent hover:text-[#CFBE47]">
+                <label className="flex cursor-pointer justify-end pl-2 text-sm font-bold text-accent hover:text-[#CFBE47]">
                   {t('ev_embed')}
                 </label>
               </div>
@@ -248,7 +248,7 @@ const ContentEvangelizationForm = () => {
               open={isOpen}
             >
               <div className="fixed inset-0 flex w-screen items-center justify-center p-4">
-                <DialogPanel className="max-w-lg space-y-4 bg-accent p-12 rounded">
+                <DialogPanel className="max-w-lg space-y-4 rounded bg-accent p-12">
                   <DialogTitle className="font-bold">
                     {t('ev_embed')}
                   </DialogTitle>
@@ -260,8 +260,8 @@ const ContentEvangelizationForm = () => {
                       <span className="font-bold">copiat!</span>
                     )}
                   </p>
-                  <div className="p-2 rounded bg-white relative overflow-hidden">
-                    <div className="absolute top-0 right-0 p-1">
+                  <div className="relative overflow-hidden rounded bg-white p-2">
+                    <div className="absolute right-0 top-0 p-1">
                       <MdOutlineContentCopy
                         className=" cursor-pointer"
                         onClick={() => {
@@ -275,8 +275,8 @@ const ContentEvangelizationForm = () => {
                   </div>
 
                   <p>{t('ev_embed_example_label')}</p>
-                  <div className="flex justify-center p-4 rounded border-dashed border-2 border-black">
-                    <button className="bg-black text-xs text-[#F5B298] font-semibold py-2 px-3 rounded flex items-center gap-2">
+                  <div className="flex justify-center rounded border-2 border-dashed border-black p-4">
+                    <button className="flex items-center gap-2 rounded bg-black px-3 py-2 text-xs font-semibold text-[#F5B298]">
                       {t('ev_embed_example_button')} <br />{' '}
                       {t('ev_embed_example_button2')}
                     </button>
@@ -284,7 +284,7 @@ const ContentEvangelizationForm = () => {
 
                   <div className="flex gap-4">
                     <button
-                      className="bg-black text-xs text-[#F5B298] font-semibold py-2 px-3 rounded flex items-center gap-2"
+                      className="flex items-center gap-2 rounded bg-black px-3 py-2 text-xs font-semibold text-[#F5B298]"
                       onClick={() => {
                         setShowCopyLabel(false)
                         setIsOpen(false)

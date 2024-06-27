@@ -26,25 +26,25 @@ export default function EvangelismSteps() {
       customClassname: 'xl:justify-start',
       description: t('step1_description'),
       headerLabel: t('step1'),
-      icon: <PiNumberCircleOneFill className="min-w-24 min-h-24" />
+      icon: <PiNumberCircleOneFill className="min-h-24 min-w-24" />
     },
     {
       customClassname: 'xl:justify-center',
       description: t('step2_description'),
       headerLabel: t('step2'),
-      icon: <PiNumberCircleTwoFill className="min-w-24 min-h-24" />
+      icon: <PiNumberCircleTwoFill className="min-h-24 min-w-24" />
     },
     {
       customClassname: 'xl:justify-start',
       description: t('step3_description'),
       headerLabel: t('step3'),
-      icon: <PiNumberCircleThreeFill className="min-w-24 min-h-24" />
+      icon: <PiNumberCircleThreeFill className="min-h-24 min-w-24" />
     }
   ]
 
   return (
-    <div className="grid !relative !z-10 bg-white pb-10 max-w-6xl xl:grid-cols-2 rounded-md mx-auto px-8">
-      <div className="flex mb-10 xl:flex items-center justify-center">
+    <div className="!relative !z-10 mx-auto grid max-w-6xl rounded-md bg-white px-8 pb-10 xl:grid-cols-2">
+      <div className="mb-10 flex items-center justify-center xl:flex">
         <InViewTransition
           customClassname="flex justify-center items-center w-full"
           damping={25}
@@ -53,7 +53,7 @@ export default function EvangelismSteps() {
         >
           <Image
             alt="Bible picture"
-            className="object-cover size-full ml-10 rounded-tr-[7rem] pr-16 rounded-md"
+            className="ml-10 size-full rounded-md rounded-tr-[7rem] object-cover pr-16"
             src={step}
           />
         </InViewTransition>

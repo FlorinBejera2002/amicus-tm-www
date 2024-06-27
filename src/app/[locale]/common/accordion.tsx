@@ -29,19 +29,19 @@ const Accordion = ({
     <>
       <motion.div
         className={cn(
-          'rounded-lg cursor-pointer flex flex-col bg-white pl-0 md:pl-6',
+          'flex cursor-pointer flex-col rounded-lg bg-white pl-0 md:pl-6',
           customClassname
         )}
         initial={false}
         onClick={() => setExpanded(isOpen ? -1 : idx)}
       >
-        <div className="flex gap-2 items-center">
+        <div className="flex items-center gap-2">
           {!isOpen ? (
             <FaArrowRight className="size-3" />
           ) : (
             <FaArrowDown className="size-3" />
           )}
-          <div className="text-slate-900 font-semibold select-none mb-0 text-md md:text-lg">
+          <div className="text-md mb-0 select-none font-semibold text-slate-900 md:text-lg">
             {title}
           </div>
         </div>
@@ -49,7 +49,7 @@ const Accordion = ({
           {isOpen && (
             <motion.section
               animate="open"
-              className="text-sm leading-6 text-slate-600 pl-5"
+              className="pl-5 text-sm leading-6 text-slate-600"
               exit="collapsed"
               initial="collapsed"
               transition={{ duration: 0.4, ease: [0.04, 0.62, 0.23, 0.98] }}
@@ -58,7 +58,7 @@ const Accordion = ({
                 open: { height: 'auto', opacity: 1 }
               }}
             >
-              <div className="mt-2 pb-0 !text-md">{description}</div>
+              <div className="!text-md mt-2 pb-0">{description}</div>
             </motion.section>
           )}
         </AnimatePresence>

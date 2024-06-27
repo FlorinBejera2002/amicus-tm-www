@@ -104,7 +104,7 @@ const MobileNavbar = ({
         }
       }}
       className={cn(
-        'absolute top-0 left-0 mx-auto bg-[#121212] w-screen h-[100dvh] p-4 z-50',
+        'absolute left-0 top-0 z-50 mx-auto h-[100dvh] w-screen bg-[#121212] p-4',
         width! < 900 ? 'flex' : 'hidden'
       )}
       exit={{ opacity: 0, transform: 'translateX(-100%)' }}
@@ -114,7 +114,7 @@ const MobileNavbar = ({
       <ChangeLanguage customClassname="p-2 text-sm absolute top-[32px] left-[32px]" />
       <MenuButton
         className={cn(
-          'cursor-pointer text-white scale-50 -mr-2 absolute top-[40px] right-[32px]',
+          'absolute right-[32px] top-[40px] -mr-2 scale-50 cursor-pointer text-white',
           width! < 900 ? 'flex' : 'hidden'
         )}
         color="white"
@@ -125,11 +125,11 @@ const MobileNavbar = ({
         transition={{ duration: 0.2, ease: 'easeOut' }}
         width="64"
       />
-      <div className="flex flex-col w-screen h-[100dvh] items-center gap-2">
+      <div className="flex h-[100dvh] w-screen flex-col items-center gap-2">
         {menuLinks.map((link, idx) => (
           <Link
             className={cn(
-              'w-fit p-3 no-underline active:!no-underline hover:!no-underline text-center text-white text-xl font-semibold',
+              'w-fit p-3 text-center text-xl font-semibold text-white no-underline hover:!no-underline active:!no-underline',
               idx === 0 ? 'mt-[30%]' : '',
               link.customClassname
             )}

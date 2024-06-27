@@ -37,7 +37,7 @@ const EvangelismRequest = () => {
 
   return (
     <div className="main flex flex-col items-center">
-      <section className="page-header p-relative bg-quaternary m-0 !mt-4 overflow-hidden border-0 p-0 w-screen">
+      <section className="page-header p-relative bg-quaternary m-0 !mt-4 w-screen overflow-hidden border-0 p-0">
         <InViewTransition
           damping={100}
           delay={0.25}
@@ -51,7 +51,7 @@ const EvangelismRequest = () => {
         <div className="row align-items-center !my-10 !pb-10 pt-5">
           <InViewTransition delay={0.25}>
             <div className="col my-5 pb-5 text-center">
-              <ul className="breadcrumb flex gap-2 justify-content-center font-weight-medium text-4-5 mt-8">
+              <ul className="breadcrumb justify-content-center font-weight-medium text-4-5 mt-8 flex gap-2">
                 <li className="z-[1]">
                   <Link
                     className="text-color-primary text-decoration-none"
@@ -60,7 +60,7 @@ const EvangelismRequest = () => {
                     {t('header.home')}
                   </Link>
                 </li>
-                <FaAngleRight className="text-color-primary mt-0.5 z-[1]" />
+                <FaAngleRight className="text-color-primary z-[1] mt-0.5" />
                 <li className="text-color-primary active z-[1]">
                   {t('evangelismForm.title')}
                 </li>
@@ -75,8 +75,8 @@ const EvangelismRequest = () => {
         <Animation />
       </section>
 
-      <div className="custom-page-content max-w-6xl z-index-2 py-4">
-        <div className="rounded-md bg-white !p-8 md:!p-12 my-4">
+      <div className="custom-page-content z-index-2 max-w-6xl py-4">
+        <div className="my-4 rounded-md bg-white !p-8 md:!p-12">
           <ContentEvangelizationForm />
         </div>
       </div>

@@ -17,7 +17,7 @@ export default function ScrollButton() {
   return (
     <button
       className={cn(
-        'fixed bottom-[20px] right-[20px] justify-center items-center text-center bg-accent/[.75] rounded-md p-3 min-w-12 text-lg transition-all duration-300 z-40',
+        'fixed bottom-[20px] right-[20px] z-40 min-w-12 items-center justify-center rounded-md bg-accent/[.75] p-3 text-center text-lg transition-all duration-300',
         y! > 300 ? 'scale-100' : 'scale-0'
       )}
       onClick={scrollToTop}

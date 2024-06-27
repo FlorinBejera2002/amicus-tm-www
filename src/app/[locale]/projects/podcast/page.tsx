@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function Podcast() {
   return (
-    <div className="bg-[#0c0e19] flex flex-col justify-center items-center pb-16 px-3 z-30">
+    <div className="z-30 flex flex-col items-center justify-center bg-[#0c0e19] px-3 pb-16">
       <CustomHeroBg customClassname="!h-[2500px] sm:!h-[3000px] lg:!h-[3000px] " />
       <Hero />
       <BottomSection />

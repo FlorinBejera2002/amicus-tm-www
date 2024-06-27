@@ -13,23 +13,23 @@ import CECLogo from '../../../../public/CEC Bank.svg'
 const About = () => {
   const t = useTranslations()
   const leftSectionText = [
-    <h1 className="text-3xl font-bold mb-6" key={1}>
+    <h1 className="mb-6 text-3xl font-bold" key={1}>
       {t('donate.title')}
     </h1>,
 
-    <p className=" text-gray-800 mb-4" key={2}>
+    <p className=" mb-4 text-gray-800" key={2}>
       {t('donate.paragraf_1')}
     </p>,
 
-    <p className=" text-gray-800 mb-4" key={3}>
+    <p className=" mb-4 text-gray-800" key={3}>
       {t('donate.paragraf_2')}
     </p>,
 
-    <p className=" text-gray-800 mb-4" key={4}>
+    <p className=" mb-4 text-gray-800" key={4}>
       {t('donate.paragraf_3')}
     </p>,
 
-    <p className=" text-gray-800 mb-4" key={5}>
+    <p className=" mb-4 text-gray-800" key={5}>
       {t('donate.paragraf_4')}
     </p>
   ]
@@ -50,7 +50,7 @@ const About = () => {
           <div className="col my-5 pb-5 text-center">
             <InViewTransition delay={0.25}>
               <div className="py-4">
-                <ul className="breadcrumb flex gap-2 justify-content-center text-4-5 font-weight-medium mb-2">
+                <ul className="breadcrumb justify-content-center text-4-5 font-weight-medium mb-2 flex gap-2">
                   <li className="z-[1]">
                     <Link
                       className="text-color-primary text-decoration-none"
@@ -59,7 +59,7 @@ const About = () => {
                       {t('header.home')}
                     </Link>
                   </li>
-                  <FaAngleRight className="text-color-primary mt-0.5 z-[1]" />
+                  <FaAngleRight className="text-color-primary z-[1] mt-0.5" />
                   <li className="text-color-primary active z-[1]">
                     {t('header.donate')}
                   </li>
@@ -75,9 +75,9 @@ const About = () => {
         <Animation />
       </section>
 
-      <div className="custom-page-content pb-4 p-relative z-index-2 text-md md:text-lg flex w-full justify-center -mb20">
+      <div className="custom-page-content p-relative z-index-2 text-md -mb20 flex w-full justify-center pb-4 md:text-lg">
         <div className="flex-col content-center">
-          <div className="max-w-6xl md:flex gap-24 bg-white rounded-md !p-8 md:!p-12 mt-4  md:items-center">
+          <div className="mt-4 max-w-6xl gap-24 rounded-md bg-white !p-8 md:flex md:items-center  md:!p-12">
             <div className="flex-[1.75]">
               {leftSectionText.map((item, idx) => (
                 <InViewTransition delay={0.25 * idx} key={idx}>
@@ -92,7 +92,7 @@ const About = () => {
                 href="https://buy.stripe.com/test_bIY9En9Qqelp0dW7ss"
                 target="_blank"
               > */}
-              <span className="text-black bg-accent rounded-s-full py-4 px-4 font-semibold flex gap-2 items-center w-40 cursor-pointer">
+              <span className="flex w-40 cursor-pointer items-center gap-2 rounded-s-full bg-accent px-4 py-4 font-semibold text-black">
                 <FaDonate />
                 {t('donate.donate')}
               </span>
@@ -105,10 +105,10 @@ const About = () => {
 
           <div className="md:-mt-10 ">
             <InViewTransition delay={0.25}>
-              <h1 className="text-3xl mt-5 font-bold mb-6 px-10" key={1}>
+              <h1 className="mb-6 mt-5 px-10 text-3xl font-bold" key={1}>
                 {t('donate.title_2')}
               </h1>
-              <div className="px-10 rounded-md flex flex-col gap-3">
+              <div className="flex flex-col gap-3 rounded-md px-10">
                 <div>
                   <Image
                     alt="Logo for the bank"
@@ -133,7 +133,7 @@ const About = () => {
                   <p>IBAN: RO37CECETM01B8USD0998572</p>
                 </div>
                 <div className="mt-5">
-                  <h1 className="text-3xl font-bold mb-6 " key={1}>
+                  <h1 className="mb-6 text-3xl font-bold " key={1}>
                     {t('donate.title_3')}
                   </h1>
                   <p className="md:w-2/3">{t('donate.paragraf_5')}</p>
@@ -141,7 +141,7 @@ const About = () => {
               </div>
             </InViewTransition>
           </div>
-          <div className="bg-white h-16 w-full rounded-md hidden lg:flex" />
+          <div className="hidden h-16 w-full rounded-md bg-white lg:flex" />
         </div>
       </div>
     </div>

@@ -18,13 +18,13 @@ export const Step = ({
   return (
     <div
       className={cn(
-        'flex gap-1 md:gap-2 md:flex-row xl:gap-4 !text-center md:!text-start',
+        'flex gap-1 !text-center md:flex-row md:gap-2 md:!text-start xl:gap-4',
         customClassname
       )}
     >
       {icon}
-      <div className="flex flex-col !gap-2 md:!gap-0 items-start">
-        <h3 className="font-semibold text-md md:text-lg mb-0 text-start">
+      <div className="flex flex-col items-start !gap-2 md:!gap-0">
+        <h3 className="text-md mb-0 text-start font-semibold md:text-lg">
           {headerLabel}
         </h3>
         <p className="mb-0 text-start">{description}</p>

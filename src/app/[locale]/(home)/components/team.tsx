@@ -18,14 +18,14 @@ export default function Team() {
       <div className="container px-2 py-4">
         <div className="row align-items-center ">
           <InViewTransition>
-            <h2 className="text-2xl lg:text-4xl text-gray-50 font-semibold py-6 mb-0 !w-fit">
+            <h2 className="mb-0 !w-fit py-6 text-2xl font-semibold text-gray-50 lg:text-4xl">
               {t('title-a4c')}
             </h2>
           </InViewTransition>
 
-          <div className="py-5 grid gap-3 md:gas grid-cols-2 md:grid-cols-3 xl:grid-cols-6">
+          <div className="md:gas grid grid-cols-2 gap-3 py-5 md:grid-cols-3 xl:grid-cols-6">
             <InViewTransition>
-              <div className="mt-3 bg-gradient-to-t from-gray-800 to-transparent rounded-xl gap-1 flex flex-col  items-center   hover:scale-110 hover:bg-accent/[.6] duration-300  ">
+              <div className="mt-3 flex flex-col items-center gap-1 rounded-xl bg-gradient-to-t from-gray-800  to-transparent   duration-300 hover:scale-110 hover:bg-accent/[.6]  ">
                 <Image
                   alt="Christian Potra"
                   className="border-b border-gray-600 py-3"
@@ -33,11 +33,11 @@ export default function Team() {
                   src={Chris}
                   width={150}
                 />
-                <div className="flex flex-col text-center h-16 md:h-20 lg:h-24 p-2 gap-1">
-                  <b className="text-gray-50 text-sm md:text-base">
+                <div className="flex h-16 flex-col gap-1 p-2 text-center md:h-20 lg:h-24">
+                  <b className="text-sm text-gray-50 md:text-base">
                     Christian Potra
                   </b>
-                  <p className="text-gray-500 text-xs md:text-sm">
+                  <p className="text-xs text-gray-500 md:text-sm">
                     {t('christian-potra')}
                   </p>
                 </div>
@@ -45,7 +45,7 @@ export default function Team() {
             </InViewTransition>
 
             <InViewTransition damping={50} delay={0.25}>
-              <div className="mt-3 bg-gradient-to-t from-gray-800 to-transparent rounded-xl gap-1 flex flex-col  items-center  hover:-translate-y-1 hover:scale-110 hover:bg-accent/[.6] duration-300 ">
+              <div className="mt-3 flex flex-col items-center gap-1 rounded-xl bg-gradient-to-t from-gray-800  to-transparent  duration-300 hover:-translate-y-1 hover:scale-110 hover:bg-accent/[.6] ">
                 <Image
                   alt="Dana Potra"
                   className="border-b border-gray-600 py-3"
@@ -53,18 +53,18 @@ export default function Team() {
                   src={Dana}
                   width={150}
                 />
-                <div className="flex flex-col text-center h-16 md:h-20 lg:h-24 p-2 gap-1">
-                  <b className="text-gray-50 text-sm md:text-base">
+                <div className="flex h-16 flex-col gap-1 p-2 text-center md:h-20 lg:h-24">
+                  <b className="text-sm text-gray-50 md:text-base">
                     Dana Potra
                   </b>
-                  <p className="text-gray-500 text-xs md:text-sm">
+                  <p className="text-xs text-gray-500 md:text-sm">
                     {t('dana-potra')}
                   </p>
                 </div>
               </div>
             </InViewTransition>
             <InViewTransition damping={50} delay={1}>
-              <div className="mt-3 bg-gradient-to-t from-gray-800 to-transparent rounded-xl gap-1 flex flex-col justify-center  items-center  hover:-translate-y-1 hover:scale-110 hover:bg-accent/[.6] duration-300 ">
+              <div className="mt-3 flex flex-col items-center justify-center gap-1 rounded-xl bg-gradient-to-t from-gray-800  to-transparent  duration-300 hover:-translate-y-1 hover:scale-110 hover:bg-accent/[.6] ">
                 <Image
                   alt="Avram Sabou"
                   className="border-b border-gray-600 py-3"
@@ -72,18 +72,18 @@ export default function Team() {
                   src={AvramSabou}
                   width={150}
                 />
-                <div className="flex flex-col text-center h-16 md:h-20 lg:h-24 p-2 gap-1">
-                  <b className="text-gray-50 text-sm md:text-base">
+                <div className="flex h-16 flex-col gap-1 p-2 text-center md:h-20 lg:h-24">
+                  <b className="text-sm text-gray-50 md:text-base">
                     Avram Sabou
                   </b>
-                  <p className="text-gray-500 text-xs md:text-sm text-center">
+                  <p className="text-center text-xs text-gray-500 md:text-sm">
                     {t('avram-sabou')}
                   </p>
                 </div>
               </div>
             </InViewTransition>
             <InViewTransition damping={50} delay={1.25}>
-              <div className="mt-3 bg-gradient-to-t from-gray-800 to-transparent rounded-xl gap-1 flex flex-col justify-center  items-center  hover:-translate-y-1 hover:scale-110 hover:bg-accent/[.6] duration-300 ">
+              <div className="mt-3 flex flex-col items-center justify-center gap-1 rounded-xl bg-gradient-to-t from-gray-800  to-transparent  duration-300 hover:-translate-y-1 hover:scale-110 hover:bg-accent/[.6] ">
                 <Image
                   alt="Adi Kovaci"
                   className="border-b border-gray-600 py-3"
@@ -91,18 +91,18 @@ export default function Team() {
                   src={AdrianCovaci}
                   width={150}
                 />
-                <div className="flex flex-col text-center h-16 md:h-20 lg:h-24 p-2 gap-1">
-                  <b className="text-gray-50 text-sm md:text-base">
+                <div className="flex h-16 flex-col gap-1 p-2 text-center md:h-20 lg:h-24">
+                  <b className="text-sm text-gray-50 md:text-base">
                     Adi Kovaci
                   </b>
-                  <p className="text-gray-500 text-xs md:text-sm">
+                  <p className="text-xs text-gray-500 md:text-sm">
                     {t('adi-kovaci')}
                   </p>
                 </div>
               </div>
             </InViewTransition>
             <InViewTransition damping={50} delay={1.5}>
-              <div className="mt-3 bg-gradient-to-t from-gray-800 to-transparent rounded-xl gap-1 flex flex-col justify-center  items-center  hover:-translate-y-1 hover:scale-110 hover:bg-accent/[.6] duration-300 ">
+              <div className="mt-3 flex flex-col items-center justify-center gap-1 rounded-xl bg-gradient-to-t from-gray-800  to-transparent  duration-300 hover:-translate-y-1 hover:scale-110 hover:bg-accent/[.6] ">
                 <Image
                   alt="Andrei Birtea"
                   className="border-b border-gray-600 py-3"
@@ -110,18 +110,18 @@ export default function Team() {
                   src={Andrei}
                   width={150}
                 />
-                <div className="flex flex-col text-center h-16 md:h-20 lg:h-24 p-2 gap-1">
-                  <b className="text-gray-50 text-sm md:text-base">
+                <div className="flex h-16 flex-col gap-1 p-2 text-center md:h-20 lg:h-24">
+                  <b className="text-sm text-gray-50 md:text-base">
                     Andrei Birtea
                   </b>
-                  <p className="text-gray-500 text-xs md:text-sm ">
+                  <p className="text-xs text-gray-500 md:text-sm ">
                     {t('andrei-birtea')}
                   </p>
                 </div>
               </div>
             </InViewTransition>
             <InViewTransition damping={50} delay={1.75}>
-              <div className="mt-3 bg-gradient-to-t from-gray-800 to-transparent rounded-xl gap-1 flex flex-col  items-center  hover:-translate-y-1 hover:scale-110 hover:bg-accent/[.6] duration-300 ">
+              <div className="mt-3 flex flex-col items-center gap-1 rounded-xl bg-gradient-to-t from-gray-800  to-transparent  duration-300 hover:-translate-y-1 hover:scale-110 hover:bg-accent/[.6] ">
                 <Image
                   alt="Simona Birtea"
                   className="border-b border-gray-600 py-3"
@@ -129,11 +129,11 @@ export default function Team() {
                   src={Simona}
                   width={150}
                 />
-                <div className="flex flex-col text-center h-16 md:h-20 lg:h-24 p-2 gap-1">
-                  <b className="text-gray-50 text-sm md:text-base">
+                <div className="flex h-16 flex-col gap-1 p-2 text-center md:h-20 lg:h-24">
+                  <b className="text-sm text-gray-50 md:text-base">
                     Simona Birtea
                   </b>
-                  <p className="text-gray-500 text-xs md:text-sm">
+                  <p className="text-xs text-gray-500 md:text-sm">
                     {t('simona-birtea')}
                   </p>
                 </div>

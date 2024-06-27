@@ -8,27 +8,27 @@ export default function Hero() {
   const t = useTranslations('podcast')
 
   return (
-    <div className="max-w-6xl flex flex-col justify-center mt-[240px] !px-8 md:!px-12 z-2 w-screen">
-      <h1 className="text-2xl md:text-4xl lg:text-6xl text-white font-bold w-fit">
+    <div className="z-2 mt-[240px] flex w-screen max-w-6xl flex-col justify-center !px-8 md:!px-12">
+      <h1 className="w-fit text-2xl font-bold text-white md:text-4xl lg:text-6xl">
         {t('title')}
       </h1>
-      <div className="flex mt-8 flex-wrap">
+      <div className="mt-8 flex flex-wrap">
         <Image
           alt="arise for christ logo"
-          className="flex-1 object-cover max-w-[800px] w-full"
+          className="w-full max-w-[800px] flex-1 object-cover"
           src={Adi}
         />
-        <p className="text-white text-wrap text-md md:text-xl font-semibold flex-1 self-center mb-6 min-w-fit">
+        <p className="text-md mb-6 min-w-fit flex-1 self-center text-wrap font-semibold text-white md:text-xl">
           {t('hero-paragraf')}
         </p>
       </div>
-      <div className="py-8 border-y border-white flex justify-center gap-10">
-        <p className="text-white text-wrap text-md md:text-xl font-semibold leading-normal mb-0 flex-1">
+      <div className="flex justify-center gap-10 border-y border-white py-8">
+        <p className="text-md mb-0 flex-1 text-wrap font-semibold leading-normal text-white md:text-xl">
           {t('text-episode')}
         </p>
         <Image
           alt="arise for christ logo"
-          className="hidden md:flex object-cover rounded-md max-h-[150px]"
+          className="hidden max-h-[150px] rounded-md object-cover md:flex"
           src={youtubeChanelImage}
         />
       </div>

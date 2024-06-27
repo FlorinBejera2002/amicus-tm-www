@@ -10,14 +10,14 @@ export default function BottomSection() {
   const t = useTranslations('podcast')
 
   return (
-    <div className="max-w-6xl flex flex-col justify-center items-center !px-8 md:!px-12 pb-10 z-2 w-screen">
-      <div className="flex flex-col py-12 gap-4 w-full">
-        <div className="flex items-center gap-4 flex-wrap">
-          <h1 className="text-white font-bold text-2xl md:text-3xl mb-0">
+    <div className="z-2 flex w-screen max-w-6xl flex-col items-center justify-center !px-8 pb-10 md:!px-12">
+      <div className="flex w-full flex-col gap-4 py-12">
+        <div className="flex flex-wrap items-center gap-4">
+          <h1 className="mb-0 text-2xl font-bold text-white md:text-3xl">
             {t('bottom-title')}
           </h1>
           <Link
-            className="text-white bg-red-600 py-2.5 px-4 rounded-md text-decoration-none cursor-pointer w-full lg:w-fit text-center"
+            className="text-decoration-none w-full cursor-pointer rounded-md bg-red-600 px-4 py-2.5 text-center text-white lg:w-fit"
             href="https://www.youtube.com/@Ariseforchrist"
           >
             {t('subscribe')}
@@ -26,20 +26,20 @@ export default function BottomSection() {
         <iframe
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen={true}
-          className="rounded-md  aspect-video"
+          className="aspect-video  rounded-md"
           src="https://www.youtube.com/embed?listType=playlist&list=UUQy-aDJ2zjmVD7Yn2XusrsA&controls=0&modestbranding=1&index=1"
           title="YouTube Playlist"
         />
       </div>
-      <div className="flex flex-wrap pt-10 border-t border-white w-full">
-        <div className="flex flex-col justify-center text-white flex-1">
+      <div className="flex w-full flex-wrap border-t border-white pt-10">
+        <div className="flex flex-1 flex-col justify-center text-white">
           <h2 className="pb-4 !text-start md:!text-center">
             {t('bottom-subtitle')}
           </h2>
-          <p className="text-md md:text-lg !text-start md:!text-center">
+          <p className="text-md !text-start md:!text-center md:text-lg">
             {t('bottom-paragraf')}
           </p>
-          <p className="text-sm !text-start md:!text-center">
+          <p className="!text-start text-sm md:!text-center">
             {t('bottom-socials')}
           </p>
           <div className="flex flex-col md:flex-row">
@@ -50,7 +50,7 @@ export default function BottomSection() {
               <Image alt="arise for christ logo" src={applePodcast} />
             </Link>
             <Link
-              className="cursor-pointer !self-start md:!self-center  scale-[0.85]"
+              className="scale-[0.85] cursor-pointer !self-start  md:!self-center"
               href="https://open.spotify.com/show/3284C4Oox7JSflk1AOlgav"
             >
               <Image alt="arise for christ logo" src={spotifi} />
