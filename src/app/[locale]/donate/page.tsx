@@ -105,7 +105,7 @@ const About = () => {
 
           <div className="md:-mt-10 ">
             <InViewTransition delay={0.25}>
-              <h1 className="text-3xl font-bold mb-6 px-10" key={1}>
+              <h1 className="text-3xl mt-5 font-bold mb-6 px-10" key={1}>
                 {t('donate.title_2')}
               </h1>
               <div className="px-10 rounded-md flex flex-col gap-3">
@@ -117,7 +117,12 @@ const About = () => {
                   />
                 </div>
 
-                <p>{t('donate.name')} </p>
+                <div className="flex flex-col gap-1">
+                  <p className="m-0 font-semibold">
+                    {t('donate.beneficiary')}{' '}
+                  </p>
+                  <p>{t('donate.name')}</p>
+                </div>
                 <div className="flex flex-col gap-1">
                   <p className="m-0 font-semibold">{t('donate.ron')} </p>
                   <p>IBAN: RO36CECETM0130RON0998570</p>
@@ -127,7 +132,7 @@ const About = () => {
                   <p className="m-0 font-semibold">{t('donate.dollars')}</p>
                   <p>IBAN: RO37CECETM01B8USD0998572</p>
                 </div>
-                <div>
+                <div className="mt-5">
                   <h1 className="text-3xl font-bold mb-6 " key={1}>
                     {t('donate.title_3')}
                   </h1>
