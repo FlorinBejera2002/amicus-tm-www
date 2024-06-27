@@ -1,8 +1,8 @@
 'use client'
 
 import MailchimpSubscribe, {
-    EmailFormFields,
-    FormHooks
+  EmailFormFields,
+  FormHooks
 } from 'react-mailchimp-subscribe'
 import { useState } from 'react'
 
