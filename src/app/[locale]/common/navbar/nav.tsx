@@ -111,7 +111,7 @@ export default function Nav() {
         )}
       >
         <div className="flex w-screen items-center justify-between px-8 lg:container lg:w-full">
-          <div className="mr-8 hidden lg:flex items-center">
+          <div className="mr-8 hidden items-center lg:flex">
             <Link href="/">
               <Image
                 alt="arise for christ logo"
