@@ -76,11 +76,13 @@ const About = () => {
       </section>
 
       <div className="custom-page-content p-relative z-index-2 text-md -mb20 md:text-l flex w-full justify-center pb-4">
-        <div className="mb-20 flex-col content-center">
+        <div className="flex-col content-center rounded-md bg-white">
           <div className="mt-4 max-w-6xl gap-24 rounded-md bg-white !p-8 md:flex md:items-center md:!p-12">
             <div className="flex-[1.75]">
+              {' '}
               {leftSectionText.map((item, idx) => (
                 <InViewTransition delay={0.25 * idx} key={idx}>
+                  {' '}
                   {item}
                 </InViewTransition>
               ))}
