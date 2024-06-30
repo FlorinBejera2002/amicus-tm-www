@@ -75,7 +75,7 @@ const About = () => {
         <Animation />
       </section>
 
-      <div className="custom-page-content p-relative z-index-2 text-md -mb20 flex w-full justify-center pb-4 md:text-lg">
+      <div className="custom-page-content p-relative z-index-2 text-md -mb20 md:text-l flex w-full justify-center pb-4">
         <div className="flex-col content-center">
           <div className="mt-4 max-w-6xl gap-24 rounded-md bg-white !p-8 md:flex md:items-center  md:!p-12">
             <div className="flex-[1.75]">
@@ -87,23 +87,25 @@ const About = () => {
             </div>
 
             <InViewTransition delay={0.25}>
-              {/* <Link
-                className="!no-underline"
-                href="https://buy.stripe.com/test_bIY9En9Qqelp0dW7ss"
-                target="_blank"
-              > */}
-              <span className="flex w-40 cursor-pointer items-center gap-2 rounded-s-full bg-accent px-4 py-4 font-semibold text-black">
-                <FaDonate />
-                {t('donate.donate')}
-              </span>
-              <span className="text-xs text-gray-400">
-                *stripe integration coming soon
-              </span>
-              {/* </Link> */}
+              <div className="flex flex-col items-end">
+                {/* <Link
+              className="!no-underline"
+              href="https://buy.stripe.com/test_bIY9En9Qqelp0dW7ss"
+              target="_blank"
+            > */}
+                <span className="flex w-40 cursor-pointer items-center gap-2 rounded-s-full bg-accent px-4 py-4 font-semibold text-black">
+                  <FaDonate />
+                  {t('donate.donate')}
+                </span>
+                <span className="mt-1 text-xs text-gray-400">
+                  *stripe integration coming soon
+                </span>
+                {/* </Link> */}
+              </div>
             </InViewTransition>
           </div>
 
-          <div className="md:-mt-10 ">
+          <div className="max-w-full md:-mt-10">
             <InViewTransition delay={0.25}>
               <h1 className="mb-6 mt-5 px-10 text-3xl font-bold" key={1}>
                 {t('donate.title_2')}
@@ -118,9 +120,7 @@ const About = () => {
                 </div>
 
                 <div className="flex flex-col gap-1">
-                  <p className="m-0 font-semibold">
-                    {t('donate.beneficiary')}{' '}
-                  </p>
+                  <p className="m-0 font-semibold">{t('donate.beneficiary')}</p>
                   <p>{t('donate.name')}</p>
                 </div>
                 <div className="flex flex-col gap-1">
@@ -132,11 +132,14 @@ const About = () => {
                   <p className="m-0 font-semibold">{t('donate.dollars')}</p>
                   <p>IBAN: RO37CECETM01B8USD0998572</p>
                 </div>
-                <div className="mt-5">
-                  <h1 className="mb-6 text-3xl font-bold " key={1}>
+
+                <div className="mt-5 max-w-full">
+                  <h1 className="mb-6 text-3xl font-bold" key={1}>
                     {t('donate.title_3')}
                   </h1>
-                  <p className="md:w-2/3">{t('donate.paragraf_5')}</p>
+                  <div className="w-full md:w-2/3">
+                    <p>{t('donate.paragraf_5')}</p>
+                  </div>
                 </div>
               </div>
             </InViewTransition>
