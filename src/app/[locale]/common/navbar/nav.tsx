@@ -97,25 +97,25 @@ export default function Nav() {
 
   return (
     <InViewTransition
-      customClassname="fixed top-0 left-0 z-[1000] flex justify-center w-full"
+      customClassname="fixed top-0 left-0 z-[1000] justify-center w-full"
       delay={0}
       yIn={0}
       yOut={0}
     >
       <nav
         className={cn(
-          '!left-0 !top-0 flex w-screen items-center justify-center bg-transparent py-6 transition-all duration-500 md:py-8 lg:py-10',
+          '!left-0 !top-0 flex w-full items-center justify-center bg-transparent py-6 transition-all duration-500 md:py-8 lg:py-10',
           y !== null && y >= 25
             ? 'bg-gray-950/[.4] shadow-sm backdrop-blur-md'
             : ''
         )}
       >
-        <div className="flex w-screen items-center justify-between px-4 lg:container lg:w-full">
-          <div className="mr-8 flex items-center">
+        <div className="flex w-screen items-center justify-between px-8 lg:container lg:w-full">
+          <div className="mr-8 hidden items-center lg:flex">
             <Link href="/">
               <Image
                 alt="arise for christ logo"
-                className="mr-8 hidden object-contain lg:flex"
+                className="mr-8 object-contain"
                 height={40}
                 src={horizontalLogo}
                 width={150}
@@ -172,7 +172,7 @@ export default function Nav() {
           </div>
 
           <Link
-            className=" mr-auto flex min-w-fit rounded-md bg-accent px-3 py-2.5 text-sm font-semibold text-black no-underline hover:!no-underline lg:hidden"
+            className=" mr-auto flex min-w-fit rounded-md bg-accent px-3 py-2.5 text-xs font-semibold text-black no-underline hover:!no-underline lg:hidden"
             href={`/${language}/evangelism-request`}
             type="button"
           >
@@ -181,7 +181,7 @@ export default function Nav() {
 
           <MenuButton
             className={cn(
-              '-mr-2 flex scale-50 cursor-pointer text-white lg:hidden'
+              '-mr-4 flex scale-50 cursor-pointer text-white lg:hidden'
             )}
             color="white"
             height="24"
