@@ -3,9 +3,9 @@ import { useEffect, useState } from 'react'
 
 import InViewTransition from '../../common/in-view-transition'
 
+import { FaAngleLeft, FaAngleRight } from 'react-icons/fa6'
 import { useTranslations } from 'next-intl'
 import Image from 'next/image'
-import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/outline'
 
 import Simona from '../../../../../public/img/team/simo.webp'
 import Dana from '../../../../../public/img/team/dana potra.webp'
@@ -37,7 +37,7 @@ export default function Team() {
   useEffect(() => {
     const updateCardsToShow = () => {
       if (window.innerWidth >= 1280) {
-        setCardsToShow(5)
+        setCardsToShow(6)
       } else if (window.innerWidth >= 768) {
         setCardsToShow(2)
       } else {
@@ -90,12 +90,12 @@ export default function Team() {
 
           <div className="relative">
             <button
-              className="absolute left-0 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 transform items-center justify-center rounded-full border-2 border-[#061e35] bg-[#061e35] bg-opacity-50 text-white hover:bg-opacity-75 lg:left-20 lg:ml-20"
+              className="absolute  left-0 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 transform items-center justify-center rounded-full border-2 border-[#061e35] bg-[#061e35] bg-opacity-50 text-white hover:bg-opacity-75 lg:left-20 lg:ml-20 xl:hidden"
               onClick={handlePrevClick}
             >
-              <ChevronLeftIcon className="h-6 w-6" />
+              <FaAngleLeft className="h-6 w-6" />
             </button>
-            <div className="grid grid-cols-1 gap-3 overflow-hidden py-5 md:grid-cols-2 lg:px-32 xl:grid-cols-5">
+            <div className="grid grid-cols-1 gap-3 overflow-hidden py-5 md:grid-cols-2 xl:grid-cols-6">
               {getVisibleMembers().map((member, idx) => (
                 <InViewTransition damping={50} delay={0.25 * idx} key={idx}>
                   <div className="group relative mt-3 flex flex-col items-center gap-1 overflow-hidden rounded-xl bg-gradient-to-b from-[#090d1a] via-blue-900 to-[#061e35] duration-300 hover:scale-110">
@@ -108,7 +108,7 @@ export default function Team() {
                       <b className="text-sm text-gray-50 group-hover:hidden md:text-base">
                         {member.name}
                       </b>
-                      <p className="text-xs text-blue-600 group-hover:hidden md:text-sm">
+                      <p className="text-xs text-accent group-hover:hidden md:text-sm">
                         {member.desc}
                       </p>
                     </div>
@@ -125,10 +125,10 @@ export default function Team() {
               ))}
             </div>
             <button
-              className="absolute right-0 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 transform items-center justify-center rounded-full border-2 border-[#061e35] bg-[#061e35] bg-opacity-50 text-white hover:bg-opacity-75 lg:mr-20"
+              className="absolute right-0 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 transform items-center justify-center rounded-full border-2 border-[#061e35] bg-[#061e35] bg-opacity-50 text-white hover:bg-opacity-75 lg:mr-20 xl:hidden"
               onClick={handleNextClick}
             >
-              <ChevronRightIcon className="h-6 w-6" />
+              <FaAngleRight className="h-6 w-6" />
             </button>
           </div>
         </div>
