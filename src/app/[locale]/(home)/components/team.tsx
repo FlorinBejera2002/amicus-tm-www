@@ -7,6 +7,7 @@ import { FaAngleLeft, FaAngleRight } from 'react-icons/fa6'
 import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 
+import Mark from '../../../../../public/mark.png'
 import Simona from '../../../../../public/img/team/simo.webp'
 import Dana from '../../../../../public/img/team/dana potra.webp'
 import Chris from '../../../../../public/img/team/chris potra.webp'
@@ -18,17 +19,48 @@ export default function Team() {
   const t = useTranslations('team')
 
   const teamMembers = [
-    { desc: t('christian-potra'), img: Chris, name: 'Christian Potra' },
-    { desc: t('dana-potra'), img: Dana, name: 'Dana Potra' },
     {
-      desc: t('avram-sabou'),
-      desc1: t('the_team_p1_2'),
-      img: AvramSabou,
-      name: 'Avram Sabou'
+      description: t('christian_des'),
+      img: Chris,
+      name: 'Christian Potra',
+      role: t('christian-potra')
     },
-    { desc: t('adi-kovaci'), img: AdrianCovaci, name: 'Adi Kovaci' },
-    { desc: t('andrei-birtea'), img: Andrei, name: 'Andrei Birtea' },
-    { desc: t('simona-birtea'), img: Simona, name: 'Simona Birtea' }
+    {
+      description: t('dana_des'),
+      img: Dana,
+      name: 'Dana Potra',
+      role: t('dana-potra')
+    },
+    {
+      description: t('avram_des'),
+      img: AvramSabou,
+      name: 'Avram Sabou',
+      role: t('avram-sabou')
+    },
+    {
+      description: t('adi_des'),
+      img: AdrianCovaci,
+      name: 'Adi Kovaci',
+      role: t('adi-kovaci')
+    },
+    {
+      description: t('andrei_des'),
+      img: Andrei,
+      name: 'Andrei Birtea',
+      role: t('andrei-birtea')
+    },
+    {
+      description: t('simona_des'),
+      img: Simona,
+      name: 'Simona Birtea',
+      role: t('simona-birtea')
+    },
+    {
+      description: t('mark_des'),
+      img: Mark,
+      name: 'Mark Moldovan',
+      role: t('mark')
+    }
   ]
 
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -37,7 +69,7 @@ export default function Team() {
   useEffect(() => {
     const updateCardsToShow = () => {
       if (window.innerWidth >= 1280) {
-        setCardsToShow(6)
+        setCardsToShow(7)
       } else if (window.innerWidth >= 768) {
         setCardsToShow(2)
       } else {
@@ -95,10 +127,10 @@ export default function Team() {
             >
               <FaAngleLeft className="h-6 w-6" />
             </button>
-            <div className="grid grid-cols-1 gap-3 overflow-hidden py-5 md:grid-cols-2 xl:grid-cols-6">
+            <div className="grid grid-cols-1 gap-3 overflow-hidden py-5 md:grid-cols-2 xl:grid-cols-7">
               {getVisibleMembers().map((member, idx) => (
                 <InViewTransition damping={50} delay={0.25 * idx} key={idx}>
-                  <div className="group relative mt-3 flex flex-col items-center gap-1 overflow-hidden rounded-xl bg-gradient-to-b from-[#090d1a] via-blue-900 to-[#061e35] duration-300 hover:scale-110">
+                  <div className="group relative mx-2 mt-3 flex flex-col items-center gap-1 overflow-hidden rounded-xl bg-gradient-to-b from-[#090d1a] via-blue-900 to-[#061e35] duration-300 hover:scale-110">
                     <Image
                       alt={member.name}
                       className="w-full pt-3"
@@ -109,16 +141,18 @@ export default function Team() {
                         {member.name}
                       </b>
                       <p className="text-xs text-accent group-hover:hidden md:text-sm">
-                        {member.desc}
+                        {member.role}
                       </p>
                     </div>
                     <div className="absolute bottom-0 left-0 right-0 top-0 translate-y-full transform bg-[#122a80] bg-opacity-90 p-4 text-white transition-transform duration-1000 ease-in-out group-hover:translate-y-0">
-                      <p className="text-center text-lg font-bold">
-                        {member.name}
-                      </p>
-                      <p className="pt-20 text-sm font-medium">
-                        {member.desc1}
-                      </p>
+                      <div className="absolute bottom-3">
+                        <h3 className="pb-2 text-sm font-bold">
+                          {member.name}
+                        </h3>
+                        <p className="pr-4 text-xs font-medium text-accent">
+                          {member.description}
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </InViewTransition>
