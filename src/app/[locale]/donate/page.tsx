@@ -90,19 +90,19 @@ const About = () => {
 
             <InViewTransition delay={0.25}>
               <div className="flex flex-col items-end">
-                {/* <Link
-              className="!no-underline"
-              href="https://buy.stripe.com/test_bIY9En9Qqelp0dW7ss"
-              target="_blank"
-            > */}
-                <span className="flex w-40 cursor-pointer items-center gap-2 rounded-s-full bg-accent px-4 py-4 font-semibold text-black">
-                  <FaDonate />
-                  {t('donate.donate')}
-                </span>
-                <span className="mt-1 text-xs text-gray-400">
-                  *stripe integration coming soon
-                </span>
-                {/* </Link> */}
+                <Link
+                  className="!no-underline"
+                  href="https://buy.stripe.com/dR66oueifggya3ubII"
+                  target="_blank"
+                >
+                  <span className="flex w-40 cursor-pointer items-center gap-2 rounded-s-full bg-accent px-4 py-4 font-semibold text-black">
+                    <FaDonate />
+                    {t('donate.donate')}
+                  </span>
+                  <span className="mt-1 text-xs text-gray-400">
+                    *stripe integration coming soon
+                  </span>
+                </Link>
               </div>
             </InViewTransition>
           </div>
