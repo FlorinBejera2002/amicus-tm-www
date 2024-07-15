@@ -140,7 +140,7 @@ export default function Team() {
                       <b className="text-sm text-gray-50 group-hover:hidden md:text-base">
                         {member.name}
                       </b>
-                      <p className="text-xs text-accent group-hover:hidden md:text-sm">
+                      <p className="text-xs text-white group-hover:hidden md:text-sm">
                         {member.role}
                       </p>
                     </div>
@@ -149,7 +149,7 @@ export default function Team() {
                         <h3 className="pb-2 text-sm font-bold">
                           {member.name}
                         </h3>
-                        <p className="pr-4 text-xs font-medium text-accent">
+                        <p className="pr-4 text-xs font-medium text-white">
                           {member.description}
                         </p>
                       </div>
