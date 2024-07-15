@@ -35,19 +35,20 @@ export const Newsletter = () => {
     <>
       <MailchimpSubscribe
         render={({ subscribe }: FormHooks<EmailFormFields>) => (
-          <div className="flex w-full max-w-sm flex-col shadow-lg ">
-            <h2 className="text-sm font-bold">
+          <div className="ml-16 mt-4 flex max-w-sm flex-col md:ml-0">
+            <h2 className="text-sm font-bold text-white md:text-base lg:text-xl">
               {t('footer.subscribe_to_newsletter')}
             </h2>
             <div className="flex w-screen gap-2">
               <input
                 className={cn(
-                  'z-10 w-44 rounded border p-2 text-xs md:w-52',
+                  'z-10 w-40 rounded border bg-gray-50 p-2 text-xs placeholder:text-gray-700 md:w-52 lg:text-sm',
                   error && 'shadow-outline-red'
                 )}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder={error || t('footer.subscribe_placeholder')}
                 type="email"
+                value={email}
               />
               <button
                 className="z-10 flex items-center gap-2 rounded bg-accent px-3 py-2 text-xs font-semibold text-black"

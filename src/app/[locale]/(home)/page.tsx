@@ -1,6 +1,7 @@
 import YoutubeMiniFeed from './components/youtube-mini-feed'
 import Team from './components/team'
 import PersonalEvangelism from './components/personal-evangelism/personal-evangelism'
+import { Newsletter } from './components/newsletter'
 import EvangelismSteps from './components/evangelism-steps/evangelism-steps'
 import InViewTransition from '../common/in-view-transition'
 import CustomHeroBg from '../common/custom-hero-bg'
@@ -101,15 +102,7 @@ export default function Home() {
         <InViewTransition>
           <div className="z-index-3 container !px-8">
             <div className="row min-vh-100 align-items-center">
-              <div className="col-lg-10 text-lg-start text-center">
-                <h3 className="text-color-light font-weight-bold appear-animation mb-4 text-wrap pb-2 text-2xl leading-tight md:text-4xl lg:text-5xl">
-                  {t('question1')}
-                  <br />
-                  {t('question2')}
-                  <br />
-                  {t('question3')}
-                </h3>
-
+              <div className="flex flex-col items-center justify-center lg:items-start">
                 <div className="flex flex-wrap items-center justify-center gap-4 text-base lg:justify-start">
                   {socialMediaLinks.map((link, idx) => (
                     <Link
@@ -126,6 +119,18 @@ export default function Home() {
                     </Link>
                   ))}
                 </div>
+                <div className="mt-4 text-wrap">
+                  <h3 className=" text-2xl font-bold text-white md:text-4xl lg:text-5xl">
+                    {t('question1')}
+                  </h3>
+                  <h3 className=" text-2xl font-bold text-white md:text-4xl lg:text-5xl">
+                    {t('question2')}
+                  </h3>
+                  <h3 className=" text-2xl font-bold text-white md:text-4xl lg:text-5xl">
+                    {t('question3')}
+                  </h3>
+                </div>
+                <Newsletter />
               </div>
             </div>
           </div>
