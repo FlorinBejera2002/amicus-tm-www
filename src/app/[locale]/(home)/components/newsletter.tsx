@@ -48,6 +48,7 @@ export const Newsletter = () => {
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder={error || t('footer.subscribe_placeholder')}
                 type="email"
+                value={email}
               />
               <button
                 className="z-10 flex items-center gap-2 rounded bg-accent px-3 py-2 text-xs font-semibold text-black"
