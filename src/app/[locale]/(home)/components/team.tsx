@@ -1,8 +1,13 @@
+'use client'
+import { useEffect, useState } from 'react'
+
 import InViewTransition from '../../common/in-view-transition'
 
+import { FaAngleLeft, FaAngleRight } from 'react-icons/fa6'
 import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 
+import Mark from '../../../../../public/mark.png'
 import Simona from '../../../../../public/img/team/simo.webp'
 import Dana from '../../../../../public/img/team/dana potra.webp'
 import Chris from '../../../../../public/img/team/chris potra.webp'
@@ -13,132 +18,152 @@ import AvramSabou from '../../../../../public/img/team/Avram.webp'
 export default function Team() {
   const t = useTranslations('team')
 
+  const teamMembers = [
+    {
+      description: t('christian_des'),
+      img: Chris,
+      name: 'Christian Potra',
+      role: t('christian-potra')
+    },
+    {
+      description: t('dana_des'),
+      img: Dana,
+      name: 'Dana Potra',
+      role: t('dana-potra')
+    },
+    {
+      description: t('avram_des'),
+      img: AvramSabou,
+      name: 'Avram Sabou',
+      role: t('avram-sabou')
+    },
+    {
+      description: t('adi_des'),
+      img: AdrianCovaci,
+      name: 'Adi Kovaci',
+      role: t('adi-kovaci')
+    },
+    {
+      description: t('andrei_des'),
+      img: Andrei,
+      name: 'Andrei Birtea',
+      role: t('andrei-birtea')
+    },
+    {
+      description: t('simona_des'),
+      img: Simona,
+      name: 'Simona Birtea',
+      role: t('simona-birtea')
+    },
+    {
+      description: t('mark_des'),
+      img: Mark,
+      name: 'Mark Moldovan',
+      role: t('mark')
+    }
+  ]
+
+  const [currentIndex, setCurrentIndex] = useState(0)
+  const [cardsToShow, setCardsToShow] = useState(5)
+
+  useEffect(() => {
+    const updateCardsToShow = () => {
+      if (window.innerWidth >= 1280) {
+        setCardsToShow(7)
+      } else if (window.innerWidth >= 768) {
+        setCardsToShow(2)
+      } else {
+        setCardsToShow(1)
+      }
+    }
+
+    updateCardsToShow()
+    window.addEventListener('resize', updateCardsToShow)
+
+    return () => {
+      window.removeEventListener('resize', updateCardsToShow)
+    }
+  }, [])
+
+  const handlePrevClick = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? teamMembers.length - 1 : prevIndex - 1
+    )
+  }
+
+  const handleNextClick = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === teamMembers.length - 1 ? 0 : prevIndex + 1
+    )
+  }
+
+  const getVisibleMembers = () => {
+    const end = currentIndex + cardsToShow
+
+    if (end <= teamMembers.length) {
+      return teamMembers.slice(currentIndex, end)
+    } else {
+      return [
+        ...teamMembers.slice(currentIndex, teamMembers.length),
+        ...teamMembers.slice(0, end - teamMembers.length)
+      ]
+    }
+  }
+
   return (
-    <div className="bg-color-dark p-relative custom-section-1 bg-position-center bg-size-cover lazyload px-8">
+    <div className="bg-color-dark p-relative custom-section-1 lazyload bg-cover bg-center px-8">
       <div className="container px-2 py-4">
-        <div className="row align-items-center ">
+        <div className="row align-items-center">
           <InViewTransition>
-            <h2 className="mb-0 !w-fit py-6 text-2xl font-semibold text-gray-50 lg:text-4xl">
+            <h2 className="mb-0 w-fit py-6 text-2xl font-semibold text-gray-50 lg:pl-32 lg:text-4xl">
               {t('title-a4c')}
             </h2>
           </InViewTransition>
 
-          <div className="md:gas grid grid-cols-2 gap-3 py-5 md:grid-cols-3 xl:grid-cols-6">
-            <InViewTransition>
-              <div className="mt-3 flex flex-col items-center gap-1 rounded-xl bg-gradient-to-t from-gray-800  to-transparent   duration-300 hover:scale-110 hover:bg-accent/[.6]  ">
-                <Image
-                  alt="Christian Potra"
-                  className="border-b border-gray-600 py-3"
-                  height={150}
-                  src={Chris}
-                  width={150}
-                />
-                <div className="flex h-16 flex-col gap-1 p-2 text-center md:h-20 lg:h-24">
-                  <b className="text-sm text-gray-50 md:text-base">
-                    Christian Potra
-                  </b>
-                  <p className="text-xs text-gray-500 md:text-sm">
-                    {t('christian-potra')}
-                  </p>
-                </div>
-              </div>
-            </InViewTransition>
-
-            <InViewTransition damping={50} delay={0.25}>
-              <div className="mt-3 flex flex-col items-center gap-1 rounded-xl bg-gradient-to-t from-gray-800  to-transparent  duration-300 hover:-translate-y-1 hover:scale-110 hover:bg-accent/[.6] ">
-                <Image
-                  alt="Dana Potra"
-                  className="border-b border-gray-600 py-3"
-                  height={150}
-                  src={Dana}
-                  width={150}
-                />
-                <div className="flex h-16 flex-col gap-1 p-2 text-center md:h-20 lg:h-24">
-                  <b className="text-sm text-gray-50 md:text-base">
-                    Dana Potra
-                  </b>
-                  <p className="text-xs text-gray-500 md:text-sm">
-                    {t('dana-potra')}
-                  </p>
-                </div>
-              </div>
-            </InViewTransition>
-            <InViewTransition damping={50} delay={1}>
-              <div className="mt-3 flex flex-col items-center justify-center gap-1 rounded-xl bg-gradient-to-t from-gray-800  to-transparent  duration-300 hover:-translate-y-1 hover:scale-110 hover:bg-accent/[.6] ">
-                <Image
-                  alt="Avram Sabou"
-                  className="border-b border-gray-600 py-3"
-                  height={150}
-                  src={AvramSabou}
-                  width={150}
-                />
-                <div className="flex h-16 flex-col gap-1 p-2 text-center md:h-20 lg:h-24">
-                  <b className="text-sm text-gray-50 md:text-base">
-                    Avram Sabou
-                  </b>
-                  <p className="text-center text-xs text-gray-500 md:text-sm">
-                    {t('avram-sabou')}
-                  </p>
-                </div>
-              </div>
-            </InViewTransition>
-            <InViewTransition damping={50} delay={1.25}>
-              <div className="mt-3 flex flex-col items-center justify-center gap-1 rounded-xl bg-gradient-to-t from-gray-800  to-transparent  duration-300 hover:-translate-y-1 hover:scale-110 hover:bg-accent/[.6] ">
-                <Image
-                  alt="Adi Kovaci"
-                  className="border-b border-gray-600 py-3"
-                  height={150}
-                  src={AdrianCovaci}
-                  width={150}
-                />
-                <div className="flex h-16 flex-col gap-1 p-2 text-center md:h-20 lg:h-24">
-                  <b className="text-sm text-gray-50 md:text-base">
-                    Adi Kovaci
-                  </b>
-                  <p className="text-xs text-gray-500 md:text-sm">
-                    {t('adi-kovaci')}
-                  </p>
-                </div>
-              </div>
-            </InViewTransition>
-            <InViewTransition damping={50} delay={1.5}>
-              <div className="mt-3 flex flex-col items-center justify-center gap-1 rounded-xl bg-gradient-to-t from-gray-800  to-transparent  duration-300 hover:-translate-y-1 hover:scale-110 hover:bg-accent/[.6] ">
-                <Image
-                  alt="Andrei Birtea"
-                  className="border-b border-gray-600 py-3"
-                  height={150}
-                  src={Andrei}
-                  width={150}
-                />
-                <div className="flex h-16 flex-col gap-1 p-2 text-center md:h-20 lg:h-24">
-                  <b className="text-sm text-gray-50 md:text-base">
-                    Andrei Birtea
-                  </b>
-                  <p className="text-xs text-gray-500 md:text-sm ">
-                    {t('andrei-birtea')}
-                  </p>
-                </div>
-              </div>
-            </InViewTransition>
-            <InViewTransition damping={50} delay={1.75}>
-              <div className="mt-3 flex flex-col items-center gap-1 rounded-xl bg-gradient-to-t from-gray-800  to-transparent  duration-300 hover:-translate-y-1 hover:scale-110 hover:bg-accent/[.6] ">
-                <Image
-                  alt="Simona Birtea"
-                  className="border-b border-gray-600 py-3"
-                  height={150}
-                  src={Simona}
-                  width={150}
-                />
-                <div className="flex h-16 flex-col gap-1 p-2 text-center md:h-20 lg:h-24">
-                  <b className="text-sm text-gray-50 md:text-base">
-                    Simona Birtea
-                  </b>
-                  <p className="text-xs text-gray-500 md:text-sm">
-                    {t('simona-birtea')}
-                  </p>
-                </div>
-              </div>
-            </InViewTransition>
+          <div className="relative">
+            <button
+              className="absolute  left-0 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 transform items-center justify-center rounded-full border-2 border-[#061e35] bg-[#061e35] bg-opacity-50 text-white hover:bg-opacity-75 lg:left-20 lg:ml-20 xl:hidden"
+              onClick={handlePrevClick}
+            >
+              <FaAngleLeft className="h-6 w-6" />
+            </button>
+            <div className="grid grid-cols-1 gap-3 overflow-hidden py-5 md:grid-cols-2 xl:grid-cols-7">
+              {getVisibleMembers().map((member, idx) => (
+                <InViewTransition damping={50} delay={0.25 * idx} key={idx}>
+                  <div className="group relative mx-2 mt-3 flex flex-col items-center gap-1 overflow-hidden rounded-xl bg-gradient-to-b from-[#090d1a] via-blue-900 to-[#061e35] duration-300 hover:scale-110">
+                    <Image
+                      alt={member.name}
+                      className="w-full pt-3"
+                      src={member.img}
+                    />
+                    <div className="absolute bottom-2 left-2 gap-1 pl-2">
+                      <b className="text-sm text-gray-50 group-hover:hidden md:text-base">
+                        {member.name}
+                      </b>
+                      <p className="text-xs text-white group-hover:hidden md:text-sm">
+                        {member.role}
+                      </p>
+                    </div>
+                    <div className="absolute bottom-0 left-0 right-0 top-0 translate-y-full transform bg-[#122a80] bg-opacity-90 p-4 text-white transition-transform duration-1000 ease-in-out group-hover:translate-y-0">
+                      <div className="absolute bottom-3">
+                        <h3 className="pb-2 text-sm font-bold">
+                          {member.name}
+                        </h3>
+                        <p className="pr-4 text-xs font-medium text-white">
+                          {member.description}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </InViewTransition>
+              ))}
+            </div>
+            <button
+              className="absolute right-0 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 transform items-center justify-center rounded-full border-2 border-[#061e35] bg-[#061e35] bg-opacity-50 text-white hover:bg-opacity-75 lg:mr-20 xl:hidden"
+              onClick={handleNextClick}
+            >
+              <FaAngleRight className="h-6 w-6" />
+            </button>
           </div>
         </div>
       </div>

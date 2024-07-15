@@ -277,11 +277,19 @@
     "title": "The steps of evangelization."
   },
   "team": {
+    "adi_des": "Director of the Multimedia Department and moderator of the Arise for Christ podcast.",
     "adi-kovaci": "Director of Media",
+    "andrei_des": "My name is Andrei, and I handle video production, editing, and graphic design within the media department of Arise for Christ.",
     "andrei-birtea": "Videographer",
+    "avram_des": "Responsible for personal evangelism, biblical counseling, and ministering to those going through difficult situations.",
     "avram-sabou": "President",
-    "christian-potra": "Founder",
-    "dana-potra": "Founder",
+    "christian_des": "Founder of the Arise for Christ mission and coordinator in the United States.",
+    "christian-potra": "CEO Arise for Christ",
+    "dana_des": "Founder of the Arise for Christ mission and financial administrator",
+    "dana-potra": "CEO Arise for Christ",
+    "mark": "President",
+    "mark_des": "Involved in the evangelism department and biblical counseling.",
+    "simona_des": "My name is Simona, and I create content for the Arise for Christ page. I manage the Instagram, Facebook, and TikTok accounts.",
     "simona-birtea": "Social Media",
     "title-a4c": "Arise for Christ Team"
   },
