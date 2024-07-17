@@ -9,6 +9,7 @@ import React, { useState } from 'react'
 
 import InViewTransition from '../../common/in-view-transition'
 
+import { v4 as uuid } from 'uuid'
 import {
   PiNumberCircleOneFill,
   PiNumberCircleThreeFill,
@@ -17,8 +18,9 @@ import {
 import { MdOutlineContentCopy } from 'react-icons/md'
 import { IoLink } from 'react-icons/io5'
 import { useTranslations } from 'next-intl'
+import { createClient } from '@supabase/supabase-js'
 import { Dialog, DialogPanel, DialogTitle } from '@headlessui/react'
-import { CMS_URL, MAILCHIMP_URL, cn } from '@/utils'
+import { MAILCHIMP_URL, cn } from '@/utils'
 
 type SubmitMessage = {
   content: string
@@ -57,21 +59,40 @@ const ContentEvangelizationForm = () => {
 
           // submit
           try {
-            await fetch(CMS_URL + '/evangelism-requests', {
-              body: JSON.stringify({
-                applicantEmail: email,
-                applicantMobile: phone,
-                applicantName: name,
-                category: 'EvangelismRequest',
-                otherdetails: details,
-                status: 'InProgress'
-              }),
-              headers: {
-                Accept: 'application/json',
-                'Content-Type': 'application/json'
-              },
-              method: 'POST'
-            })
+            // supabase
+            const supabaseUrl = process.env.SUPABASE_URL as string
+            const supabaseAnonKey = process.env.SUPABASE_ANON_KEY as string
+            const supabase = createClient(supabaseUrl, supabaseAnonKey)
+
+            const evReqId = uuid()
+            const personRequestingId = uuid()
+
+            const { error: requesterError } = await supabase
+              .from('requesters')
+              .insert({
+                details: details || '',
+                email: email || '',
+                id: personRequestingId,
+                name: name || '',
+                phone: phone || ''
+              })
+
+            if (requesterError) {
+              throw new Error(requesterError.message)
+            }
+
+            const { error: reqError } = await supabase
+              .from('evangelism_requests')
+              .insert({
+                category: 'evangelism',
+                id: evReqId,
+                person_requesting_id: personRequestingId,
+                status: 'received'
+              })
+
+            if (reqError) {
+              throw new Error(reqError.message)
+            }
 
             if (isChecked) {
               await subscribe({ EMAIL: email })
