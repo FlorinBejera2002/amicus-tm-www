@@ -114,17 +114,17 @@ export default function Vision() {
             </div>
           </div>
 
-          <div className="row mb-5">
+          <div className="row mb-3 md:pb-5">
             <div className="col">
               <InViewTransition delay={0.55}>
-                <h1 className="text-2xl font-semibold text-gray-800 md:text-4xl">
+                <h1 className="text-2xl font-bold text-gray-800 md:text-4xl">
                   {t('vision.projects_title')}
                 </h1>
               </InViewTransition>
             </div>
           </div>
 
-          <div className="row mb-5">
+          <div className="row mb-3 md:pb-5">
             <div className="col-md-6 md:order-2">
               <InViewTransition delay={0.7}>
                 <h3 className="text-start text-xl font-semibold text-gray-800 md:text-2xl">
@@ -148,7 +148,7 @@ export default function Vision() {
             </div>
           </div>
 
-          <div className="row mb-5">
+          <div className="row mb-3 md:pb-5">
             <div className="col-md-6 order-md-1 md:order-2">
               <InViewTransition delay={0.25}>
                 <h3 className="text-start text-xl font-semibold text-gray-800 md:text-2xl">
@@ -172,7 +172,7 @@ export default function Vision() {
             </div>
           </div>
 
-          <div className="row mb-5">
+          <div className="row mb-3 md:pb-5">
             <div className="col-md-6 md:order-2">
               <InViewTransition delay={0.25}>
                 <h3 className="text-start text-xl font-semibold text-gray-800 md:text-2xl">
@@ -196,7 +196,7 @@ export default function Vision() {
             </div>
           </div>
 
-          <div className="row mb-5">
+          <div className="row mb-3 md:pb-5">
             <div className="col-md-6 order-md-1 md:order-2">
               <InViewTransition delay={0.25}>
                 <h3 className="text-start text-xl font-semibold text-gray-800 md:text-2xl">
@@ -220,7 +220,7 @@ export default function Vision() {
             </div>
           </div>
 
-          <div className="row">
+          <div className="row mb-3 md:pb-5">
             <div className="col-md-6 md:order-2">
               <InViewTransition delay={0.25}>
                 <h3 className="text-start text-xl font-semibold text-gray-800 md:text-2xl">
