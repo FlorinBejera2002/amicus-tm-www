@@ -1,8 +1,10 @@
 import YoutubeMiniFeed from './components/youtube-mini-feed'
 import Team from './components/team'
+import Spotify from './components/spotify'
 import PersonalEvangelism from './components/personal-evangelism/personal-evangelism'
 import { Newsletter } from './components/newsletter'
 import EvangelismSteps from './components/evangelism-steps/evangelism-steps'
+import Book from './components/book'
 import InViewTransition from '../common/in-view-transition'
 import CustomHeroBg from '../common/custom-hero-bg'
 import Animation from '../common/animation'
@@ -143,6 +145,8 @@ export default function Home() {
 
       <Team />
       <PersonalEvangelism />
+      <Spotify />
+      <Book />
     </div>
   )
 }

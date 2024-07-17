@@ -119,12 +119,19 @@
     "read_more": "read more...",
     "title": "Blog"
   },
+  "book": {
+    "author": "Mark Cole",
+    "description": "\"Like a masterclass for the working Christian, this devotional written for professional life will ignite your passion for Jesus in a completely new way.\"",
+    "title": "The book \"Divine Intelligence\""
+  },
+
   "button": {
     "agree": "I Agree",
     "contact_us": "Contact Us",
     "er_request": "Evangelism Request",
     "subscribe": "Subscribe"
   },
+
   "contact": {
     "email": "Email",
     "phone": "Phone",
