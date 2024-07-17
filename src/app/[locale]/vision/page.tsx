@@ -125,16 +125,7 @@ export default function Vision() {
           </div>
 
           <div className="row mb-5">
-            <div className="col-md-6 mb-4">
-              <InViewTransition delay={0.65}>
-                <Image
-                  alt="Christian images"
-                  className="aspect-video w-full rounded-md object-cover shadow-lg "
-                  src={Project1}
-                />
-              </InViewTransition>
-            </div>
-            <div className="col-md-6">
+            <div className="col-md-6 md:order-2">
               <InViewTransition delay={0.7}>
                 <h3 className="text-start text-xl font-semibold text-gray-800 md:text-2xl">
                   {t('vision.projects_p1_2')}
@@ -146,19 +137,19 @@ export default function Vision() {
                 </p>
               </InViewTransition>
             </div>
-          </div>
-
-          <div className="row mb-5">
-            <div className="col-md-6 order-md-2 mb-4">
-              <InViewTransition delay={0.25}>
+            <div className="col-md-6 mb-4 md:order-1">
+              <InViewTransition delay={0.65}>
                 <Image
                   alt="Christian images"
                   className="aspect-video w-full rounded-md object-cover shadow-lg "
-                  src={Project2}
+                  src={Project1}
                 />
               </InViewTransition>
             </div>
-            <div className="col-md-6 order-md-1">
+          </div>
+
+          <div className="row mb-5">
+            <div className="col-md-6 order-md-1 md:order-2">
               <InViewTransition delay={0.25}>
                 <h3 className="text-start text-xl font-semibold text-gray-800 md:text-2xl">
                   {t('vision.projects_p2_1')}
@@ -170,19 +161,19 @@ export default function Vision() {
                 </p>
               </InViewTransition>
             </div>
-          </div>
-
-          <div className="row mb-5">
-            <div className="col-md-6 mb-4">
+            <div className="col-md-6 order-md-2 mb-4 md:order-1">
               <InViewTransition delay={0.25}>
                 <Image
                   alt="Christian images"
                   className="aspect-video w-full rounded-md object-cover shadow-lg "
-                  src={Project3}
+                  src={Project2}
                 />
               </InViewTransition>
             </div>
-            <div className="col-md-6">
+          </div>
+
+          <div className="row mb-5">
+            <div className="col-md-6 md:order-2">
               <InViewTransition delay={0.25}>
                 <h3 className="text-start text-xl font-semibold text-gray-800 md:text-2xl">
                   {t('vision.projects_p3_1')}
@@ -194,19 +185,19 @@ export default function Vision() {
                 </p>
               </InViewTransition>
             </div>
-          </div>
-
-          <div className="row mb-5">
-            <div className="col-md-6 order-md-2 mb-4">
+            <div className="col-md-6 mb-4 md:order-1">
               <InViewTransition delay={0.25}>
                 <Image
                   alt="Christian images"
                   className="aspect-video w-full rounded-md object-cover shadow-lg "
-                  src={Project4}
+                  src={Project3}
                 />
               </InViewTransition>
             </div>
-            <div className="col-md-6 order-md-1">
+          </div>
+
+          <div className="row mb-5">
+            <div className="col-md-6 order-md-1 md:order-2">
               <InViewTransition delay={0.25}>
                 <h3 className="text-start text-xl font-semibold text-gray-800 md:text-2xl">
                   {t('vision.projects_p3_7')}
@@ -218,19 +209,19 @@ export default function Vision() {
                 </p>
               </InViewTransition>
             </div>
-          </div>
-
-          <div className="row">
-            <div className="col-md-6">
+            <div className="col-md-6 order-md-2 mb-4 md:order-1">
               <InViewTransition delay={0.25}>
                 <Image
                   alt="Christian images"
                   className="aspect-video w-full rounded-md object-cover shadow-lg "
-                  src={Project5}
+                  src={Project4}
                 />
               </InViewTransition>
             </div>
-            <div className="col-md-6">
+          </div>
+
+          <div className="row">
+            <div className="col-md-6 md:order-2">
               <InViewTransition delay={0.25}>
                 <h3 className="text-start text-xl font-semibold text-gray-800 md:text-2xl">
                   {t('vision.projects_p4_1')}
@@ -240,6 +231,15 @@ export default function Vision() {
                 <p className="text-md text-gray-600 md:text-lg">
                   {t('vision.projects_p4_2')}
                 </p>
+              </InViewTransition>
+            </div>
+            <div className="col-md-6 md:order-1">
+              <InViewTransition delay={0.25}>
+                <Image
+                  alt="Christian images"
+                  className="aspect-video w-full rounded-md object-cover shadow-lg "
+                  src={Project5}
+                />
               </InViewTransition>
             </div>
           </div>
