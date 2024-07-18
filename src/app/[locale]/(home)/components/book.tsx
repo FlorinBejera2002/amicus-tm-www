@@ -23,14 +23,14 @@ export default function Book() {
           />
         </InViewTransition>
       </div>
-      <div className="flex flex-col justify-center p-3 md:pr-10 lg:pr-16">
-        <InViewTransition delay={0.7}>
-          <h3 className="mb-4 text-2xl font-bold text-gray-900 md:text-3xl">
+      <div className="flex flex-col justify-center p-3 md:p-8 md:pr-10 lg:pr-16">
+        <InViewTransition delay={0.25}>
+          <h3 className="pb-4 text-2xl font-bold text-gray-900 md:text-3xl">
             {t('title')}
           </h3>
         </InViewTransition>
         <InViewTransition delay={0.25}>
-          <p className="mb-4 text-lg font-semibold italic text-gray-500 md:text-lg">
+          <p className="pb-4 text-lg font-semibold italic text-gray-500 md:text-lg">
             {t('description')}
           </p>
         </InViewTransition>
