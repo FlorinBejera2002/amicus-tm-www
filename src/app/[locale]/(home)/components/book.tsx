@@ -8,7 +8,7 @@ export default function Book() {
   const t = useTranslations('book')
 
   return (
-    <div className="relative z-10 mx-auto max-w-6xl rounded-lg bg-white py-3 shadow-lg md:-mt-16 xl:grid xl:grid-cols-2 xl:gap-8">
+    <div className="relative z-10 mx-auto max-w-6xl rounded-lg bg-white py-3 shadow-lg md:-mt-16 md:py-0 xl:grid xl:grid-cols-2 xl:gap-8">
       <div className="container flex items-center justify-center">
         <InViewTransition
           customClassname="flex justify-center items-center w-full"

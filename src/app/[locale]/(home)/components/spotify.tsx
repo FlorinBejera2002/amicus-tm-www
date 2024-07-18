@@ -12,8 +12,8 @@ export default function Spotify() {
   const t = useTranslations('podcast')
 
   return (
-    <div className="bg-color-dark p-relative custom-section-1 lazyload bg-cover bg-center px-8 md:pb-28">
-      <div className="flex w-full flex-wrap pb-4 pt-8 md:mb-8 md:mt-12">
+    <div className="bg-color-dark p-relative custom-section-1 lazyload bg-cover bg-center px-8 md:pb-20">
+      <div className="flex w-full flex-wrap pt-8 md:mb-8 md:mt-12 md:pb-4">
         <div className="flex flex-1 flex-col items-center justify-center text-white">
           <h2 className="pb-4 text-center">{t('bottom-subtitle')}</h2>
           <p className="text-md text-center md:text-lg">
@@ -35,7 +35,7 @@ export default function Spotify() {
             </Link>
 
             <Link
-              className="cursor-pointer !self-start md:!self-center "
+              className="cursor-pointer !self-start pb-2 md:!self-center"
               href="https://www.google.com/podcasts?feed=aHR0cHM6Ly9hbmNob3IuZm0vcy81ZjRmYWU1Yy9wb2RjYXN0L3Jzcw=="
             >
               <Image alt="arise for christ logo" src={googlePodcast} />
