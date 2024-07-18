@@ -13,17 +13,13 @@ export default function Spotify() {
 
   return (
     <div className="bg-color-dark p-relative custom-section-1 lazyload bg-cover bg-center px-8 md:pb-28">
-      <div className="flex w-full flex-wrap pb-8 pt-12">
+      <div className="flex w-full flex-wrap pb-4 pt-8 md:mb-8 md:mt-12">
         <div className="flex flex-1 flex-col items-center justify-center text-white">
-          <h2 className="pb-4 !text-start md:!text-center">
-            {t('bottom-subtitle')}
-          </h2>
-          <p className="text-md !text-start md:!text-center md:text-lg">
+          <h2 className="pb-4 text-center">{t('bottom-subtitle')}</h2>
+          <p className="text-md text-center md:text-lg">
             {t('bottom-paragraf')}
           </p>
-          <p className="!text-start text-sm md:!text-center">
-            {t('bottom-socials')}
-          </p>
+          <p className="text-center text-sm">{t('bottom-socials')}</p>
           <div className="flex flex-col items-center md:w-[50em] md:flex-row">
             <Link
               className="cursor-pointer !self-start md:!self-center "
