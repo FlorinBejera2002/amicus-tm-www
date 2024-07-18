@@ -35,7 +35,7 @@ export const Newsletter = () => {
     <>
       <MailchimpSubscribe
         render={({ subscribe }: FormHooks<EmailFormFields>) => (
-          <div className="ml-16 mt-4 flex max-w-sm flex-col md:ml-0">
+          <div className="mt-4 flex max-w-sm flex-col">
             <h2 className="text-sm font-bold text-white md:text-base lg:text-xl">
               {t('footer.subscribe_to_newsletter')}
             </h2>

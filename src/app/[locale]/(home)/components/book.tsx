@@ -9,7 +9,7 @@ export default function Book() {
 
   return (
     <div className="relative z-10 mx-auto max-w-6xl rounded-lg bg-white shadow-lg md:-mt-16 xl:grid xl:grid-cols-2 xl:gap-8">
-      <div className="flex items-center justify-center">
+      <div className="container flex items-center justify-center">
         <InViewTransition
           customClassname="flex justify-center items-center w-full"
           damping={25}
@@ -23,7 +23,7 @@ export default function Book() {
           />
         </InViewTransition>
       </div>
-      <div className="flex flex-col justify-center p-3 md:p-8 md:pr-10 lg:pr-16">
+      <div className="flex flex-col justify-center p-[35px] md:p-8 md:pr-10 lg:pr-16">
         <InViewTransition delay={0.25}>
           <h3 className="pb-4 text-2xl font-bold text-gray-900 md:text-3xl">
             {t('title')}

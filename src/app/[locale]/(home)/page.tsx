@@ -132,7 +132,9 @@ export default function Home() {
                     {t('question3')}
                   </h3>
                 </div>
-                <Newsletter />
+                <div className="ml-16 md:ml-0">
+                  <Newsletter />
+                </div>
               </div>
             </div>
           </div>
