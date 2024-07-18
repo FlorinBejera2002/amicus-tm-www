@@ -142,7 +142,6 @@ export default function Home() {
       </section>
 
       <YoutubeMiniFeed />
-
       <EvangelismSteps />
 
       <Team />
