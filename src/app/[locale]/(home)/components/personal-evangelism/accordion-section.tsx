@@ -50,7 +50,7 @@ const AccordionSection = () => {
     <>
       {accordionItems.map((item, idx) => (
         <InViewTransition damping={25} delay={idx * 0.25} key={idx}>
-          <div className="mr-10">
+          <div className="md:mr-10">
             <Accordion
               description={item.description}
               expanded={expanded}

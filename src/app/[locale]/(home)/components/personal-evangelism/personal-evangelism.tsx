@@ -8,16 +8,16 @@ export default function PersonalEvangelism() {
   const t = useTranslations('vision')
 
   return (
-    <section className="bg-color-light z-index-10 relative mx-auto -mt-16 max-w-6xl rounded-md bg-white px-2 shadow-lg">
+    <section className="bg-color-light z-index-10 relative mx-auto max-w-6xl rounded-md bg-white px-2 shadow-lg md:-mt-16">
       <div className="row container p-8">
         <InViewTransition>
-          <h1 className="xl:4xl pb-4 text-center text-2xl font-bold md:pb-10 md:text-3xl">
+          <h1 className="xl:4xl pb-4 pl-5 text-start text-2xl font-bold md:pb-10 md:text-3xl">
             {t('title')}
           </h1>
         </InViewTransition>
         <div className="flex md:ml-10">
           <Images />
-          <div className="col-lg-6 flex flex-col justify-center md:pb-10">
+          <div className="col-lg-6 flex flex-col justify-center pl-5 md:pb-10">
             <div className="flex max-h-[600px] w-full flex-1 flex-col justify-between !gap-4 md:gap-0 xl:max-h-[400px]">
               <AccordionSection />
             </div>
