@@ -49,7 +49,7 @@ const Accordion = ({
           {isOpen && (
             <motion.section
               animate="open"
-              className="pl-5 text-sm leading-6 text-slate-600"
+              className=" pl-5 text-sm leading-6 text-slate-600"
               exit="collapsed"
               initial="collapsed"
               transition={{ duration: 0.4, ease: [0.04, 0.62, 0.23, 0.98] }}
