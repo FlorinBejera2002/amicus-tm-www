@@ -13,9 +13,9 @@ export default function Spotify() {
 
   return (
     <div className="bg-color-dark p-relative custom-section-1 lazyload bg-cover bg-center px-8 md:pb-20">
-      <div className="flex w-full flex-wrap pt-8 md:mb-8 md:mt-12 md:pb-4">
+      <div className="flex w-full flex-wrap pt-8 md:mt-4 md:pb-4">
         <div className="flex flex-1 flex-col items-center justify-center text-white">
-          <h2 className="pb-4 text-center">{t('bottom-subtitle')}</h2>
+          <h2 className="text-bold pb-4 text-center">{t('bottom-subtitle')}</h2>
           <p className="text-md text-center md:text-lg">
             {t('bottom-paragraf')}
           </p>
