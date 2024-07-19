@@ -130,7 +130,7 @@ export default function Team() {
             <div className="grid grid-cols-1 gap-3 overflow-hidden pb-3 md:grid-cols-2 md:px-3 xl:grid-cols-7">
               {getVisibleMembers().map((member, idx) => (
                 <InViewTransition damping={50} delay={0.25 * idx} key={idx}>
-                  <div className="group relative z-10 mt-5 flex flex-col items-center gap-1 overflow-hidden rounded-md bg-gradient-to-b from-[#090d1a] via-blue-900 to-[#061e35] duration-300 hover:scale-110">
+                  <div className="group relative z-10 mt-5 flex flex-col items-center gap-1 overflow-hidden rounded-md bg-gradient-to-b from-[#090d1a] via-blue-900 to-[#061e35] duration-300">
                     <Image
                       alt={member.name}
                       className="w-full pt-3"
