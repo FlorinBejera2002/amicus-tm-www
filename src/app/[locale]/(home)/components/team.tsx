@@ -127,10 +127,10 @@ export default function Team() {
             >
               <FaAngleLeft className="h-6 w-6" />
             </button>
-            <div className="grid grid-cols-1 gap-3 overflow-hidden pb-3 md:grid-cols-2 xl:grid-cols-7">
+            <div className="grid grid-cols-1 gap-3 overflow-hidden pb-3 md:grid-cols-2 md:px-3 xl:grid-cols-7">
               {getVisibleMembers().map((member, idx) => (
                 <InViewTransition damping={50} delay={0.25 * idx} key={idx}>
-                  <div className="group relative mt-5 flex flex-col items-center gap-1 overflow-hidden rounded-xl bg-gradient-to-b from-[#090d1a] via-blue-900 to-[#061e35] duration-300 hover:scale-110">
+                  <div className="group relative z-10 mt-5 flex flex-col items-center gap-1 overflow-hidden rounded-md bg-gradient-to-b from-[#090d1a] via-blue-900 to-[#061e35] duration-300 hover:scale-110">
                     <Image
                       alt={member.name}
                       className="w-full pt-3"
@@ -144,7 +144,7 @@ export default function Team() {
                         {member.role}
                       </p>
                     </div>
-                    <div className="absolute bottom-0 left-0 right-0 top-0 w-full translate-y-full transform rounded-xl bg-[#122a80] bg-opacity-90 p-4 text-white transition-transform duration-1000 ease-in-out group-hover:translate-y-0">
+                    <div className="absolute bottom-0 left-0 right-0 top-0 z-10 w-full translate-y-full transform rounded-md bg-[#122a80] bg-opacity-90 p-4 text-white transition-transform duration-1000 ease-in-out group-hover:translate-y-0">
                       <div className="absolute bottom-3">
                         <h3 className="pb-2 text-sm font-bold">
                           {member.name}
