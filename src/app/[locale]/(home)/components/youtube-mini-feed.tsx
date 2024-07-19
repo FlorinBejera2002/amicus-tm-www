@@ -18,7 +18,7 @@ export default function YoutubeMiniFeed() {
 
   return (
     <div
-      className="relative top-[-50px] z-20 grid gap-2 bg-transparent px-8 pt-1 md:grid-cols-2 md:p-0 md:px-24 lg:grid-cols-4 lg:pt-2 xl:pt-3"
+      className="relative -top-20 z-20 grid gap-2 bg-transparent px-8 pt-1 md:grid-cols-2 md:p-0 md:px-24 lg:grid-cols-4 lg:pt-2 xl:pt-3"
       id="numbers"
     >
       {ytVids.map((vid, idx) => (
@@ -26,7 +26,7 @@ export default function YoutubeMiniFeed() {
           <iframe
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen={true}
-            className="h-48 w-full rounded-md"
+            className="aspect-video w-full rounded-md object-cover "
             src={vid.src}
             title="YouTube Playlist"
           />
