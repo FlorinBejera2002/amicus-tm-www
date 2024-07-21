@@ -48,12 +48,6 @@ export default function TimeIsNow() {
                   <FaAngleRight className="text-color-primary z-[1] mt-0.5" />
 
                   <li className="text-color-primary active z-[1]">
-                    {t('header.project')}
-                  </li>
-
-                  <FaAngleRight className="text-color-primary z-[1] mt-0.5" />
-
-                  <li className="text-color-primary active z-[1]">
                     {t('header.project_subProject')}
                   </li>
                 </ul>
