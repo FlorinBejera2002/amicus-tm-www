@@ -1,23 +1,31 @@
 import { useTranslations } from 'next-intl'
+import InViewTransition from '@/app/[locale]/common/in-view-transition'
 
 export default function HeroSection() {
   const t = useTranslations('serial')
 
   return (
     <>
-      <div className="relative mt-[200px] flex flex-col bg-auto bg-no-repeat pb-4">
-        <h1 className="w-fit text-2xl font-bold text-white md:text-4xl lg:text-6xl">
-          {t('title')}
-        </h1>
-        <div className="mt-16 flex flex-col text-white  lg:mt-44">
-          <h2 className="pb-2 text-xl font-bold text-accent md:text-3xl lg:mb-10">
-            {t('title_description_hero')}
-          </h2>
-          <div className="grid pb-10 md:grid-cols-2">
-            <p className="text-md border-b border-white pb-3 md:border-b-0 md:border-r md:pr-16 md:text-lg">
-              {t('hero_paragraf1')}
-            </p>
-            <p className="text-md md:pl-16 md:text-lg">{t('hero_paragraf2')}</p>
+      <div className="relative flex flex-col bg-auto bg-no-repeat pb-4">
+        <div className="flex flex-col text-gray-800">
+          <InViewTransition delay={0.25}>
+            <h1 className="text-start text-2xl font-bold text-accent md:pb-10 md:text-4xl">
+              {t('title_description_hero')}
+            </h1>
+          </InViewTransition>
+
+          <div className="grid md:grid-cols-2">
+            <InViewTransition delay={0.55}>
+              <p className="text-md border-b border-white pb-3 md:border-b-0 md:border-r md:pr-16 md:text-lg">
+                {t('hero_paragraf1')}
+              </p>
+            </InViewTransition>
+
+            <InViewTransition delay={0.75}>
+              <p className="text-md md:pl-16 md:text-lg">
+                {t('hero_paragraf2')}
+              </p>
+            </InViewTransition>
           </div>
         </div>
       </div>
