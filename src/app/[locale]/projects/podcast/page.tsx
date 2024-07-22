@@ -9,7 +9,6 @@ import { useTranslations } from 'next-intl'
 import Link from 'next/link'
 import { Metadata } from 'next'
 
-// eslint-disable-next-line react-refresh/only-export-components
 export const metadata: Metadata = {
   title: 'Arise for Christ | Podcast'
 }
@@ -42,14 +41,11 @@ export default function Podcast() {
                       {t('header.home')}
                     </Link>
                   </li>
-
                   <FaAngleRight className="text-color-primary z-[1] mt-0.5" />
-
                   <li className="text-color-primary active z-[1]">
                     {t('header.project_subPodcast')}
                   </li>
                 </ul>
-
                 <h1 className="text-color-light font-weight-bold text-10">
                   {t('header.project_subPodcast')}
                 </h1>
@@ -57,9 +53,9 @@ export default function Podcast() {
             </InViewTransition>
           </div>
         </div>
-
         <Animation />
       </section>
+
       <div className="custom-page-content z-2 max-w-6xl">
         <div className="rounded-md bg-white p-8 shadow-lg md:p-12">
           <Hero />

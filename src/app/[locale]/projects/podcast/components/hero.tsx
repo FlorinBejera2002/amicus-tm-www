@@ -14,24 +14,21 @@ export default function Hero() {
         <InViewTransition delay={0.25}>
           <Image
             alt="arise for christ logo"
-            className="w-full max-w-[800px] flex-1 object-cover"
+            className="-mt-16 w-full max-w-[800px] flex-1 object-cover md:-mt-32"
             src={Adi}
           />
         </InViewTransition>
-
         <InViewTransition delay={0.35}>
-          <p className="text-md mb-6 min-w-fit flex-1 self-center text-wrap font-semibold text-gray-800 md:text-xl">
+          <p className="text-md mb-8 min-w-fit flex-1 self-center text-wrap font-semibold text-gray-800 md:text-xl">
             {t('hero-paragraf')}
           </p>
         </InViewTransition>
       </div>
-
       <InViewTransition delay={0.75}>
         <div className="flex justify-center gap-10 border-y border-gray-800 py-8">
           <p className="text-md mb-0 flex-1 text-wrap font-semibold leading-normal text-gray-800 md:text-xl">
             {t('text-episode')}
           </p>
-
           <InViewTransition delay={0.95}>
             <Image
               alt="arise for christ logo"
