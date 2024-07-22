@@ -9,7 +9,7 @@ export default function TrailerSection() {
   const t = useTranslations('serial')
 
   return (
-    <div className="flex flex-col gap-4 pb-14">
+    <div className="flex flex-col pb-14">
       <InViewTransition delay={0.55}>
         <h1 className="text-start text-2xl font-bold text-accent md:pb-6 md:text-4xl">
           {t('trailer')}
@@ -23,7 +23,7 @@ export default function TrailerSection() {
         >
           <Image
             alt="arise for christ logo"
-            className="w-screen object-contain"
+            className="w-screen rounded-md object-contain"
             src={trailerImage}
           />
         </Link>
