@@ -19,25 +19,23 @@ const EpisodeSection = () => {
         <div className="grid gap-3 md:grid-cols-3">
           {episode.map((item) => {
             return (
-              <>
-                <InViewTransition delay={0.75}>
-                  <div
-                    className="relative flex flex-col duration-300 hover:scale-105 "
-                    key={item.id}
-                  >
-                    <Link href={item.url} target="_blank">
-                      <Image
-                        alt="arise for christ logo"
-                        className="hover:-translate-1 w-full rounded-md object-contain "
-                        src={item.episodImage}
-                      />
-                    </Link>
-                    <h4 className="absolute bottom-0 left-8 text-white">
-                      {item.title}
-                    </h4>
-                  </div>
-                </InViewTransition>
-              </>
+              <InViewTransition delay={0.75} key={item.id}>
+                <div
+                  className="relative flex flex-col duration-300 hover:scale-105 "
+                  key={item.id}
+                >
+                  <Link href={item.url} target="_blank">
+                    <Image
+                      alt="arise for christ logo"
+                      className="hover:-translate-1 w-full rounded-md object-contain "
+                      src={item.episodImage}
+                    />
+                  </Link>
+                  <h4 className="absolute bottom-0 left-8 text-white">
+                    {item.title}
+                  </h4>
+                </div>
+              </InViewTransition>
             )
           })}
         </div>
