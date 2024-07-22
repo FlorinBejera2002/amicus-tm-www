@@ -111,8 +111,8 @@ export default function Team() {
   }
 
   return (
-    <div className="bg-color-dark p-relative custom-section-1 lazyload bg-cover bg-center px-8 md:pb-24">
-      <div className="container py-8">
+    <div className="bg-color-dark p-relative custom-section-1 lazyload mx-auto bg-cover bg-center md:px-28 md:pb-24">
+      <div className="p-8 md:pb-0 md:pt-8 ">
         <div className="row align-items-center">
           <InViewTransition>
             <h2 className="mb-0 text-center text-xl font-semibold text-gray-50 lg:text-4xl">
