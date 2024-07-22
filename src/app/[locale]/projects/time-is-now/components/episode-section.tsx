@@ -20,10 +20,7 @@ const EpisodeSection = () => {
           {episode.map((item) => {
             return (
               <InViewTransition delay={0.75} key={item.id}>
-                <div
-                  className="relative flex flex-col duration-300 hover:scale-105 "
-                  key={item.id}
-                >
+                <div className="relative flex flex-col duration-300 hover:scale-105 ">
                   <Link href={item.url} target="_blank">
                     <Image
                       alt="arise for christ logo"
