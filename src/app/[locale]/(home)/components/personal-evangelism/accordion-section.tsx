@@ -50,13 +50,15 @@ const AccordionSection = () => {
     <>
       {accordionItems.map((item, idx) => (
         <InViewTransition damping={25} delay={idx * 0.25} key={idx}>
-          <Accordion
-            description={item.description}
-            expanded={expanded}
-            idx={idx}
-            setExpanded={setExpanded}
-            title={item.title}
-          />
+          <div className="md:mr-10">
+            <Accordion
+              description={item.description}
+              expanded={expanded}
+              idx={idx}
+              setExpanded={setExpanded}
+              title={item.title}
+            />
+          </div>
         </InViewTransition>
       ))}
     </>

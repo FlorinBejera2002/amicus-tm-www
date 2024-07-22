@@ -12,8 +12,8 @@ import Simona from '../../../../../public/img/team/simo.webp'
 import Dana from '../../../../../public/img/team/dana potra.webp'
 import Chris from '../../../../../public/img/team/chris potra.webp'
 import Andrei from '../../../../../public/img/team/andrei bir.webp'
-import AdrianCovaci from '../../../../../public/img/team/adi.webp'
 import AvramSabou from '../../../../../public/img/team/Avram.webp'
+import AdrianCovaci from '../../../../../public/adi.webp'
 
 export default function Team() {
   const t = useTranslations('team')
@@ -111,11 +111,11 @@ export default function Team() {
   }
 
   return (
-    <div className="bg-color-dark p-relative custom-section-1 lazyload bg-cover bg-center px-8">
-      <div className="container px-2 py-4">
+    <div className="bg-color-dark p-relative custom-section-1 lazyload mx-auto bg-cover bg-center md:px-28 md:pb-24">
+      <div className="p-8 md:pb-0 md:pt-8 ">
         <div className="row align-items-center">
           <InViewTransition>
-            <h2 className="mb-0 w-fit py-6 text-2xl font-semibold text-gray-50 lg:pl-32 lg:text-4xl">
+            <h2 className="mb-0 text-center text-xl font-semibold text-gray-50 lg:text-4xl">
               {t('title-a4c')}
             </h2>
           </InViewTransition>
@@ -127,10 +127,10 @@ export default function Team() {
             >
               <FaAngleLeft className="h-6 w-6" />
             </button>
-            <div className="grid grid-cols-1 gap-3 overflow-hidden py-5 md:grid-cols-2 xl:grid-cols-7">
+            <div className="grid grid-cols-1 gap-3 overflow-hidden md:grid-cols-2 md:px-3 md:pb-3 xl:grid-cols-7">
               {getVisibleMembers().map((member, idx) => (
                 <InViewTransition damping={50} delay={0.25 * idx} key={idx}>
-                  <div className="group relative mx-2 mt-3 flex flex-col items-center gap-1 overflow-hidden rounded-xl bg-gradient-to-b from-[#090d1a] via-blue-900 to-[#061e35] duration-300 hover:scale-110">
+                  <div className="group relative z-10 mt-4 flex flex-col items-center gap-1 overflow-hidden rounded-md bg-gradient-to-b from-[#090d1a] via-blue-900 to-[#061e35] duration-300">
                     <Image
                       alt={member.name}
                       className="w-full pt-3"
@@ -144,7 +144,7 @@ export default function Team() {
                         {member.role}
                       </p>
                     </div>
-                    <div className="absolute bottom-0 left-0 right-0 top-0 translate-y-full transform bg-[#122a80] bg-opacity-90 p-4 text-white transition-transform duration-1000 ease-in-out group-hover:translate-y-0">
+                    <div className="absolute bottom-0 left-0 right-0 top-0 z-10 w-full translate-y-full transform rounded-md bg-[#122a80] bg-opacity-90 p-4 text-white transition-transform duration-1000 ease-in-out group-hover:translate-y-0">
                       <div className="absolute bottom-3">
                         <h3 className="pb-2 text-sm font-bold">
                           {member.name}
