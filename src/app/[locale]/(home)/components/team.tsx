@@ -112,10 +112,10 @@ export default function Team() {
 
   return (
     <div className="bg-color-dark p-relative custom-section-1 lazyload bg-cover bg-center px-8 md:pb-24">
-      <div className="container px-2 py-4">
+      <div className="container py-8">
         <div className="row align-items-center">
           <InViewTransition>
-            <h2 className="mb-0 pt-6 text-center text-2xl font-semibold text-gray-50 lg:text-4xl">
+            <h2 className="mb-0 text-center text-xl font-semibold text-gray-50 lg:text-4xl">
               {t('title-a4c')}
             </h2>
           </InViewTransition>
@@ -127,10 +127,10 @@ export default function Team() {
             >
               <FaAngleLeft className="h-6 w-6" />
             </button>
-            <div className="grid grid-cols-1 gap-3 overflow-hidden pb-3 md:grid-cols-2 md:px-3 xl:grid-cols-7">
+            <div className="grid grid-cols-1 gap-3 overflow-hidden md:grid-cols-2 md:px-3 md:pb-3 xl:grid-cols-7">
               {getVisibleMembers().map((member, idx) => (
                 <InViewTransition damping={50} delay={0.25 * idx} key={idx}>
-                  <div className="group relative z-10 mt-5 flex flex-col items-center gap-1 overflow-hidden rounded-md bg-gradient-to-b from-[#090d1a] via-blue-900 to-[#061e35] duration-300">
+                  <div className="group relative z-10 mt-4 flex flex-col items-center gap-1 overflow-hidden rounded-md bg-gradient-to-b from-[#090d1a] via-blue-900 to-[#061e35] duration-300">
                     <Image
                       alt={member.name}
                       className="w-full pt-3"
