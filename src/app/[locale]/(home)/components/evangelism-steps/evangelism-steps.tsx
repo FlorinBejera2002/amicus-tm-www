@@ -43,7 +43,7 @@ export default function EvangelismSteps() {
   ]
 
   return (
-    <div className="!relative !z-10 mx-auto -mt-12 grid max-w-6xl rounded-md bg-white px-8 pb-8 md:-mt-52 md:pt-52 md:shadow-lg xl:grid-cols-2">
+    <div className="!relative !z-10 mx-auto -mt-12 grid max-w-6xl rounded-md bg-white px-8 pb-8 shadow-lg md:-mt-52 md:pt-52 xl:grid-cols-2">
       <div className=" hidden items-center justify-center md:flex">
         <InViewTransition
           customClassname="flex justify-center items-center w-full"
