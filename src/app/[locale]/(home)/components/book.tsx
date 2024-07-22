@@ -8,7 +8,7 @@ export default function Book() {
   const t = useTranslations('book')
 
   return (
-    <div className="relative z-10 flex max-w-6xl flex-col justify-center rounded-lg bg-white px-8 pb-8 pt-3 shadow-lg md:-mt-16 xl:grid xl:grid-cols-2 xl:gap-8">
+    <div className="relative z-10 mx-auto flex max-w-6xl flex-col justify-center rounded-lg bg-white px-8 pb-8 pt-3 shadow-lg md:-mt-16 xl:grid xl:grid-cols-2 xl:gap-8">
       <InViewTransition
         customClassname="flex justify-center items-center w-full !p-0"
         damping={25}
