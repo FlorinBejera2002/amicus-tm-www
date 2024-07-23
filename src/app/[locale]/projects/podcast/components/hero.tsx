@@ -32,7 +32,7 @@ export default function Hero() {
           <InViewTransition delay={0.95}>
             <Image
               alt="arise for christ logo"
-              className="hidden max-h-[150px] object-cover md:flex"
+              className="hidden max-h-[150px] rounded-lg object-cover md:flex"
               src={youtubeChanelImage}
             />
           </InViewTransition>
