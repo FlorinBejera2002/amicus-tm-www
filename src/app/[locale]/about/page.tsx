@@ -63,7 +63,7 @@ const About = () => {
       </section>
 
       <div className="custom-page-content z-index-2 max-w-6xl">
-        <div className="rounded-md bg-white !p-8 md:!p-12">
+        <div className="rounded-md bg-white !p-8 shadow-lg md:!p-12">
           <div className="row">
             <div className="col">
               <InViewTransition delay={0}>
