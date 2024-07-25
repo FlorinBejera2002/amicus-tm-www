@@ -9,9 +9,9 @@ import Image from 'next/image'
 import { Metadata } from 'next'
 
 import StripeLogo from '../../../../public/srtripe.png'
-import QRCode from '../../../../public/qrcode.png'
 import QRStripe from '../../../../public/qr-stripe.png'
 import RevolutLogo from '../../../../public/Revolut-Logo.png'
+import QRPayPal from '../../../../public/QRPayPal.png'
 import PayPal from '../../../../public/PayPal.png'
 import CECLogo from '../../../../public/CEC Bank.svg'
 
@@ -107,23 +107,17 @@ const About = () => {
                       className=" w-32 "
                       src={RevolutLogo}
                     />
-                    <div className="flex flex-col items-center justify-center pt-4 text-center">
+                    <div className="flex flex-col items-center justify-center pt-10 text-center">
                       <div>
-                        <p className=" font-semibold text-gray-700">
+                        <p className="mb-1 font-semibold text-gray-700">
                           {t('donate.phone')}
                         </p>
                         <p className="text-gray-600">+40 773 307 292</p>
                       </div>
-                      <Link
-                        className="!no-underline"
-                        href=" https://revolut.me/andreixmtj"
-                        target="_blank"
-                      >
-                        <p className=" font-semibold text-gray-700">
-                          {/* {t('donate.qr')} */}
-                          @andreibirtea
-                        </p>
-                      </Link>
+
+                      <p className=" font-semibold text-gray-700">
+                        @ariseforchrist
+                      </p>
                       <Link
                         className="!no-underline"
                         href="https://business.revolut.com/overview"
@@ -131,28 +125,28 @@ const About = () => {
                       >
                         <Image
                           alt="QR Code for donation"
-                          className="w-32"
-                          src={QRCode}
+                          className="w-28"
+                          src={QRStripe}
                         />
                       </Link>
                     </div>
                   </div>
                 </InViewTransition>
                 <InViewTransition delay={0.25}>
-                  <div className="flex flex-col items-center rounded-lg bg-gray-50 p-10 shadow-md md:h-96">
+                  <div className="flex flex-col items-center rounded-lg bg-purple-50 p-10 shadow-md md:h-96">
                     <Image
                       alt="Logo for the bank"
                       className="mt-0 w-24 "
                       src={StripeLogo}
                     />
-                    <div className="flex flex-col items-center justify-center pt-8 text-center">
+                    <div className="flex flex-col items-center justify-center pt-16 text-center">
                       <div className="flex flex-col items-center justify-center">
                         <Link
                           className="!no-underline"
                           href="https://buy.stripe.com/dR66oueifggya3ubII"
                           target="_blank"
                         >
-                          <span className="flex cursor-pointer items-center gap-2 rounded-md bg-accent p-2 text-center font-semibold text-black">
+                          <span className="flex cursor-pointer items-center gap-2 rounded-md bg-accent px-3 py-2 text-center font-semibold text-black">
                             <FaDonate />
                             {t('donate.donate')}
                           </span>
@@ -165,7 +159,7 @@ const About = () => {
                       >
                         <Image
                           alt="QR Code for donation"
-                          className="mt-8 w-32"
+                          className="mt-10 w-28"
                           src={QRStripe}
                         />
                       </Link>
@@ -174,45 +168,41 @@ const About = () => {
                 </InViewTransition>
 
                 <InViewTransition delay={0.25}>
-                  <div className=" flex w-full flex-col items-center rounded-lg bg-gray-50 p-10 shadow-md md:h-96">
+                  <div className=" flex w-full flex-col items-center rounded-lg bg-blue-50 p-10 shadow-md md:h-96">
                     <Image
                       alt="Logo for the bank"
                       className=" w-36 "
                       src={PayPal}
                     />
-                    <div className="flex flex-col items-center justify-center pt-4 text-center">
-                      <div>
-                        <p className=" font-semibold text-gray-700">
-                          {t('donate.phone')}
-                        </p>
-                        <p className="text-gray-600">+40 773 307 292</p>
+                    <div className="flex flex-col items-center justify-center pt-16 text-center">
+                      <div className="flex flex-col items-center justify-center">
+                        <Link
+                          className="!no-underline"
+                          href="https://www.paypal.com/donate/?hosted_button_id=D8M92EYVFPSM6"
+                          target="_blank"
+                        >
+                          <span className="flex cursor-pointer items-center gap-2 rounded-md bg-accent px-3 py-2 text-center font-semibold text-black">
+                            <FaDonate />
+                            {t('donate.donate')}
+                          </span>
+                        </Link>
                       </div>
                       <Link
                         className="!no-underline"
-                        href=" https://revolut.me/andreixmtj"
-                        target="_blank"
-                      >
-                        <p className=" font-semibold text-gray-700">
-                          {/* {t('donate.qr')} */}
-                          @andreibirtea
-                        </p>
-                      </Link>
-                      <Link
-                        className="!no-underline"
-                        href="https://business.revolut.com/overview"
+                        href="https://www.paypal.com/donate/?hosted_button_id=D8M92EYVFPSM6"
                         target="_blank"
                       >
                         <Image
                           alt="QR Code for donation"
-                          className="w-32"
-                          src={QRCode}
+                          className="mt-10 w-[104px]"
+                          src={QRPayPal}
                         />
                       </Link>
                     </div>
                   </div>
                 </InViewTransition>
                 <InViewTransition delay={0.25}>
-                  <div className="flex flex-col items-center rounded-lg bg-gray-50 p-10 shadow-md md:h-96">
+                  <div className="flex flex-col items-center rounded-lg bg-green-50 p-10 shadow-md md:h-96">
                     <Image
                       alt="Logo for the bank"
                       className=" w-52"
