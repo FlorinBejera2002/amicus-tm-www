@@ -95,11 +95,11 @@ const About = () => {
 
           <div className="max-w-full">
             <InViewTransition delay={0.25}>
-              <h1 className="mb-6 pt-8 text-3xl font-bold text-gray-800 md:mb-8 md:pt-12">
+              <h1 className="pb-6 pt-8 text-3xl font-bold text-gray-800 md:pb-8 md:pt-12">
                 {t('donate.title_2')}
               </h1>
 
-              <div className="flex flex-col flex-wrap gap-8 md:flex-row">
+              <div className="grid grid-cols-1 gap-8 md:grid-cols-2 md:flex-row xl:grid-cols-4">
                 <InViewTransition delay={0.25}>
                   <div className=" flex w-full flex-col items-center gap-10 rounded-lg bg-gray-50 p-10 shadow-md md:h-96">
                     <Image
@@ -125,7 +125,7 @@ const About = () => {
                       >
                         <Image
                           alt="QR Code for donation"
-                          className="w-28"
+                          className="mt-1 w-28"
                           src={QRStripe}
                         />
                       </Link>
@@ -159,7 +159,7 @@ const About = () => {
                       >
                         <Image
                           alt="QR Code for donation"
-                          className="w-28"
+                          className="-mt-[3px] w-28"
                           src={QRStripe}
                         />
                       </Link>
@@ -202,13 +202,13 @@ const About = () => {
                   </div>
                 </InViewTransition>
                 <InViewTransition delay={0.25}>
-                  <div className="flex flex-col items-center gap-4 rounded-lg bg-green-50 p-10 shadow-md md:h-96">
+                  <div className="flex flex-col items-center gap-4 rounded-lg bg-green-50 p-6 shadow-md md:h-96 lg:w-full">
                     <Image
                       alt="Logo for the bank"
-                      className=" w-52"
+                      className="w-40"
                       src={CECLogo}
                     />
-                    <div className="flex flex-col gap-3 text-center">
+                    <div className="flex flex-col gap-2 text-center">
                       <div>
                         <p className="font-semibold text-gray-700">
                           {t('donate.beneficiary')}
@@ -237,15 +237,17 @@ const About = () => {
               </div>
             </InViewTransition>
           </div>
-          {/* <Contribution /> */}
-          <div className="pt-12 lg:-mb-20">
-            <h1 className="mb-6 text-3xl font-bold" key={1}>
-              {t('donate.title_3')}
-            </h1>
-            <div className="w-full md:w-2/3 ">
-              <p className="mb-0">{t('donate.paragraf_5')}</p>
+          <InViewTransition delay={0.25}>
+            <div className="pt-12 lg:-mb-20 ">
+              <h1 className="mb-6 text-3xl font-bold" key={1}>
+                {t('donate.title_3')}
+              </h1>
+              <div className="w-full md:w-2/3 ">
+                <p className="mb-0">{t('donate.paragraf_5')}</p>
+              </div>
             </div>
-          </div>
+          </InViewTransition>
+
           <div className="hidden h-16 w-full rounded-md bg-white lg:flex" />
         </div>
       </div>
