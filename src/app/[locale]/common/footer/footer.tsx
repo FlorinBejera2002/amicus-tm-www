@@ -5,6 +5,7 @@ import FooterOverview from './components/footer-overview'
 import { Newsletter } from '../../(home)/components/newsletter'
 
 import { IoLogoWhatsapp } from 'react-icons/io'
+import { useTranslations } from 'next-intl'
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 import Image from 'next/image'
@@ -15,6 +16,7 @@ import horizontalLogo from '../../../../../public/logo_horizontal_white.webp'
 export default function Footer() {
   const pathname = usePathname()
   const language = pathname.split('/')[1]
+  const t = useTranslations('footer')
 
   const companyLinks = [
     { href: '/', titleKey: 'header.home' },
@@ -67,9 +69,7 @@ export default function Footer() {
             </ul>
             <Socials />
             <li className="d-blok align-items-center mb-10">
-              <h3 className="text-base font-bold md:text-xl">
-                Contactează-ne pe WhatsApp
-              </h3>
+              <h3 className="text-base font-bold md:text-xl">{t('contact')}</h3>
               <div className="align-items-center text-decoration-none font-weight-semibold  text-4-5 transition-all duration-300">
                 <Link
                   className="flex items-center gap-2 text-base text-white no-underline hover:!text-accent md:text-xl"
