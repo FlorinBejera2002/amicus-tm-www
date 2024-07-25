@@ -57,13 +57,13 @@ export default function Footer() {
               </li>
               <li className="d-blok align-items-center mb-4">
                 <div className="align-items-center text-decoration-none text-color-light font-weight-semibold text-4-5 pb-3 transition-all duration-300">
-                  +40-773-307-292
+                  +40 (773) 307 292
                 </div>
                 <div className="align-items-center text-decoration-none text-color-light font-weight-semibold text-4-5 pb-3 transition-all duration-300">
-                  +40-721-804-560
+                  +40 (721) 804 560
                 </div>
                 <div className="align-items-center text-decoration-none text-color-light font-weight-semibold text-4-5 transition-all duration-300">
-                  +40-356-175-148
+                  +40 (356) 175 148
                 </div>
               </li>
             </ul>
