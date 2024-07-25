@@ -4,7 +4,6 @@ import Socials from './components/socials'
 import FooterOverview from './components/footer-overview'
 import { Newsletter } from '../../(home)/components/newsletter'
 
-import { IoLogoWhatsapp } from 'react-icons/io'
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 import Image from 'next/image'
@@ -56,21 +55,14 @@ export default function Footer() {
                   info@ariseforchrist.com
                 </Link>
               </li>
-              <li className="d-blok align-items-center mb-3 ">
-                <Link
-                  className=" text-4-5 flex items-center gap-2 text-base font-semibold text-white no-underline hover:!text-accent"
-                  href="https://wa.me/qr/ID4EZCB73HFTP1"
-                  target="_blank"
-                >
-                  <IoLogoWhatsapp />
-                  +40-773-307-292
-                </Link>
-              </li>
               <li className="d-blok align-items-center mb-4">
-                <div className="align-items-center text-decoration-none text-color-light text-color-hover-primary font-weight-semibold text-4-5 pb-3 transition-all duration-300">
+                <div className="align-items-center text-decoration-none text-color-light font-weight-semibold text-4-5 pb-3 transition-all duration-300">
+                  +40-773-307-292
+                </div>
+                <div className="align-items-center text-decoration-none text-color-light font-weight-semibold text-4-5 pb-3 transition-all duration-300">
                   +40-721-804-560
                 </div>
-                <div className="align-items-center text-decoration-none text-color-light text-color-hover-primary font-weight-semibold text-4-5 transition-all duration-300">
+                <div className="align-items-center text-decoration-none text-color-light font-weight-semibold text-4-5 transition-all duration-300">
                   +40-356-175-148
                 </div>
               </li>
