@@ -99,15 +99,15 @@ const About = () => {
                 {t('donate.title_2')}
               </h1>
 
-              <div className="flex flex-col gap-8 md:flex-row">
+              <div className="flex flex-col flex-wrap gap-8 md:flex-row">
                 <InViewTransition delay={0.25}>
-                  <div className=" flex w-full flex-col items-center rounded-lg bg-gray-50 p-10 shadow-md md:h-96">
+                  <div className=" flex w-full flex-col items-center gap-10 rounded-lg bg-gray-50 p-10 shadow-md md:h-96">
                     <Image
                       alt="Logo for the bank"
                       className=" w-32 "
                       src={RevolutLogo}
                     />
-                    <div className="flex flex-col items-center justify-center pt-10 text-center">
+                    <div className="flex flex-col items-center justify-center text-center">
                       <div>
                         <p className="mb-1 font-semibold text-gray-700">
                           {t('donate.phone')}
@@ -115,7 +115,7 @@ const About = () => {
                         <p className="text-gray-600">+40 773 307 292</p>
                       </div>
 
-                      <p className=" font-semibold text-gray-700">
+                      <p className="font-semibold text-gray-700">
                         @ariseforchrist
                       </p>
                       <Link
@@ -133,13 +133,13 @@ const About = () => {
                   </div>
                 </InViewTransition>
                 <InViewTransition delay={0.25}>
-                  <div className="flex flex-col items-center rounded-lg bg-purple-50 p-10 shadow-md md:h-96">
+                  <div className="flex flex-col items-center gap-16 rounded-lg bg-purple-50 p-10 shadow-md md:h-96">
                     <Image
                       alt="Logo for the bank"
                       className="mt-0 w-24 "
                       src={StripeLogo}
                     />
-                    <div className="flex flex-col items-center justify-center pt-16 text-center">
+                    <div className="flex flex-col items-center justify-center gap-10 text-center">
                       <div className="flex flex-col items-center justify-center">
                         <Link
                           className="!no-underline"
@@ -159,7 +159,7 @@ const About = () => {
                       >
                         <Image
                           alt="QR Code for donation"
-                          className="mt-10 w-28"
+                          className="w-28"
                           src={QRStripe}
                         />
                       </Link>
@@ -168,13 +168,13 @@ const About = () => {
                 </InViewTransition>
 
                 <InViewTransition delay={0.25}>
-                  <div className=" flex w-full flex-col items-center rounded-lg bg-blue-50 p-10 shadow-md md:h-96">
+                  <div className=" flex w-full flex-col items-center gap-16 rounded-lg bg-blue-50 p-10 shadow-md md:h-96">
                     <Image
                       alt="Logo for the bank"
                       className=" w-36 "
                       src={PayPal}
                     />
-                    <div className="flex flex-col items-center justify-center pt-16 text-center">
+                    <div className="flex flex-col items-center justify-center gap-10 text-center">
                       <div className="flex flex-col items-center justify-center">
                         <Link
                           className="!no-underline"
@@ -194,7 +194,7 @@ const About = () => {
                       >
                         <Image
                           alt="QR Code for donation"
-                          className="mt-10 w-[104px]"
+                          className="w-[104px]"
                           src={QRPayPal}
                         />
                       </Link>
@@ -202,13 +202,13 @@ const About = () => {
                   </div>
                 </InViewTransition>
                 <InViewTransition delay={0.25}>
-                  <div className="flex flex-col items-center rounded-lg bg-green-50 p-10 shadow-md md:h-96">
+                  <div className="flex flex-col items-center gap-4 rounded-lg bg-green-50 p-10 shadow-md md:h-96">
                     <Image
                       alt="Logo for the bank"
                       className=" w-52"
                       src={CECLogo}
                     />
-                    <div className="flex flex-col gap-3 pt-4 text-center">
+                    <div className="flex flex-col gap-3 text-center">
                       <div>
                         <p className="font-semibold text-gray-700">
                           {t('donate.beneficiary')}
@@ -238,7 +238,7 @@ const About = () => {
             </InViewTransition>
           </div>
           {/* <Contribution /> */}
-          <div className="pt-12 md:-mb-20">
+          <div className="pt-12 lg:-mb-20">
             <h1 className="mb-6 text-3xl font-bold" key={1}>
               {t('donate.title_3')}
             </h1>

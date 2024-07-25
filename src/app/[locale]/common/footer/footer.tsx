@@ -5,7 +5,6 @@ import FooterOverview from './components/footer-overview'
 import { Newsletter } from '../../(home)/components/newsletter'
 
 import { IoLogoWhatsapp } from 'react-icons/io'
-import { useTranslations } from 'next-intl'
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 import Image from 'next/image'
@@ -16,7 +15,6 @@ import horizontalLogo from '../../../../../public/logo_horizontal_white.webp'
 export default function Footer() {
   const pathname = usePathname()
   const language = pathname.split('/')[1]
-  const t = useTranslations('footer')
 
   const companyLinks = [
     { href: '/', titleKey: 'header.home' },
@@ -50,7 +48,7 @@ export default function Footer() {
               />
             </Link>
             <ul className="list list-unstyled pt-4">
-              <li className="d-flex align-items-center mb-4">
+              <li className="d-flex align-items-center mb-3">
                 <Link
                   className="d-inline-flex align-items-center text-decoration-none font-weight-semibold text-4-5 text-white transition-all duration-300 hover:!text-accent"
                   href="mailto:info@ariseforchrist.com"
@@ -58,29 +56,26 @@ export default function Footer() {
                   info@ariseforchrist.com
                 </Link>
               </li>
-              <li className="d-blok align-items-center mb-4">
-                <div className="align-items-center text-decoration-none text-color-light text-color-hover-primary font-weight-semibold text-4-5 pb-3 transition-all duration-300">
-                  +40-721-804-560
-                </div>
-                <div className="align-items-center text-decoration-none text-color-light text-color-hover-primary font-weight-semibold text-4-5 transition-all duration-300">
-                  0356-175-148
-                </div>
-              </li>
-            </ul>
-            <Socials />
-            <li className="d-blok align-items-center mb-10">
-              <h3 className="text-base font-bold md:text-xl">{t('contact')}</h3>
-              <div className="align-items-center text-decoration-none font-weight-semibold  text-4-5 transition-all duration-300">
+              <li className="d-blok align-items-center mb-3 ">
                 <Link
-                  className="flex items-center gap-2 text-base text-white no-underline hover:!text-accent md:text-xl"
+                  className=" text-4-5 flex items-center gap-2 text-base font-semibold text-white no-underline hover:!text-accent"
                   href="https://wa.me/qr/ID4EZCB73HFTP1"
                   target="_blank"
                 >
                   <IoLogoWhatsapp />
                   +40-773-307-292
                 </Link>
-              </div>
-            </li>
+              </li>
+              <li className="d-blok align-items-center mb-4">
+                <div className="align-items-center text-decoration-none text-color-light text-color-hover-primary font-weight-semibold text-4-5 pb-3 transition-all duration-300">
+                  +40-721-804-560
+                </div>
+                <div className="align-items-center text-decoration-none text-color-light text-color-hover-primary font-weight-semibold text-4-5 transition-all duration-300">
+                  +40-356-175-148
+                </div>
+              </li>
+            </ul>
+            <Socials />
           </div>
           <div className="col-lg-6 mt-lg-5 pt-lg-3 !px-0">
             <div className="mb-5 flex w-full justify-between md:justify-normal md:gap-20">
