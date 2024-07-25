@@ -18,8 +18,9 @@ export default function TrailerSection() {
 
       <InViewTransition delay={1.25}>
         <Link
-          className="pointer "
+          className="pointer"
           href="https://www.youtube.com/watch?v=k1VGbMGFpro"
+          target="_blank"
         >
           <Image
             alt="arise for christ logo"

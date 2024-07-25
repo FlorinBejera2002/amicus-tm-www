@@ -4,6 +4,7 @@ import Socials from './components/socials'
 import FooterOverview from './components/footer-overview'
 import { Newsletter } from '../../(home)/components/newsletter'
 
+import { IoLogoWhatsapp } from 'react-icons/io'
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 import Image from 'next/image'
@@ -65,6 +66,21 @@ export default function Footer() {
               </li>
             </ul>
             <Socials />
+            <li className="d-blok align-items-center mb-10">
+              <h3 className="text-base font-bold md:text-xl">
+                Contactează-ne pe WhatsApp
+              </h3>
+              <div className="align-items-center text-decoration-none font-weight-semibold  text-4-5 transition-all duration-300">
+                <Link
+                  className="flex items-center gap-2 text-base text-white no-underline hover:!text-accent md:text-xl"
+                  href="https://wa.me/qr/ID4EZCB73HFTP1"
+                  target="_blank"
+                >
+                  <IoLogoWhatsapp />
+                  +40-773-307-292
+                </Link>
+              </div>
+            </li>
           </div>
           <div className="col-lg-6 mt-lg-5 pt-lg-3 !px-0">
             <div className="mb-5 flex w-full justify-between md:justify-normal md:gap-20">
