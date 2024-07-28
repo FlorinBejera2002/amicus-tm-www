@@ -104,7 +104,7 @@ const About = () => {
                   <div className=" flex w-full flex-col items-center justify-between gap-10 rounded-lg bg-gray-50 p-10 shadow-md md:h-96">
                     <Image
                       alt="Logo for the bank"
-                      className="w-32 pt-1 "
+                      className="w-32"
                       src={RevolutLogo}
                     />
                     <div className="flex flex-col items-center justify-center text-center">
@@ -125,7 +125,7 @@ const About = () => {
                       >
                         <Image
                           alt="QR Code for donation"
-                          className="mt-1 w-28"
+                          className="w-28"
                           src={QRStripe}
                         />
                       </Link>
@@ -136,7 +136,7 @@ const About = () => {
                   <div className="flex flex-col items-center justify-between gap-16 rounded-lg bg-purple-50 p-10 shadow-md md:h-96">
                     <Image
                       alt="Logo for the bank"
-                      className="mt-0 w-24 "
+                      className="w-24"
                       src={StripeLogo}
                     />
                     <div className="flex flex-col items-center justify-center gap-10 text-center">
@@ -159,7 +159,7 @@ const About = () => {
                       >
                         <Image
                           alt="QR Code for donation"
-                          className="-mt-[3px] w-28"
+                          className="w-28"
                           src={QRStripe}
                         />
                       </Link>
@@ -171,7 +171,7 @@ const About = () => {
                   <div className=" flex w-full flex-col items-center justify-between gap-16 rounded-lg bg-blue-50 p-10 shadow-md md:h-96">
                     <Image
                       alt="Logo for the bank"
-                      className=" w-36 "
+                      className="w-36"
                       src={PayPal}
                     />
                     <div className="flex flex-col items-center justify-center gap-10 text-center">
@@ -202,10 +202,10 @@ const About = () => {
                   </div>
                 </InViewTransition>
                 <InViewTransition delay={0.25}>
-                  <div className="flex flex-col items-center justify-between gap-6 rounded-lg bg-green-50 p-6 shadow-md md:h-96 lg:w-full">
+                  <div className="flex flex-col items-center justify-between gap-6 rounded-lg bg-green-50 p-10 shadow-md md:h-96 lg:w-full">
                     <Image
                       alt="Logo for the bank"
-                      className="w-44 pt-4"
+                      className="h-20 w-48"
                       src={CECLogo}
                     />
                     <div className="flex flex-col text-center">
