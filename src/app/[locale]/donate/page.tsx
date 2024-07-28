@@ -104,7 +104,7 @@ const About = () => {
                   <div className=" flex w-full flex-col items-center gap-10 rounded-lg bg-gray-50 p-10 shadow-md md:h-96">
                     <Image
                       alt="Logo for the bank"
-                      className=" w-32 "
+                      className="w-32 pt-1 "
                       src={RevolutLogo}
                     />
                     <div className="flex flex-col items-center justify-center text-center">
@@ -202,13 +202,13 @@ const About = () => {
                   </div>
                 </InViewTransition>
                 <InViewTransition delay={0.25}>
-                  <div className="flex flex-col items-center gap-4 rounded-lg bg-green-50 p-6 shadow-md md:h-96 lg:w-full">
+                  <div className="flex flex-col items-center gap-6 rounded-lg bg-green-50 p-6 shadow-md md:h-96 lg:w-full">
                     <Image
                       alt="Logo for the bank"
-                      className="w-40"
+                      className="w-44 pt-4"
                       src={CECLogo}
                     />
-                    <div className="flex flex-col gap-2 text-center">
+                    <div className="flex flex-col text-center">
                       <div>
                         <p className="font-semibold text-gray-700">
                           {t('donate.beneficiary')}
@@ -220,7 +220,7 @@ const About = () => {
                           {t('donate.ron')}
                         </p>
                         <p className="text-xs text-gray-600">
-                          IBAN: RO36CECETM0130RON0998570
+                          RO36CECETM0130RON0998570
                         </p>
                       </div>
                       <div>
@@ -228,7 +228,7 @@ const About = () => {
                           {t('donate.dollars')}
                         </p>
                         <p className="mb-0 text-xs text-gray-600">
-                          IBAN: RO37CECETM01B8USD0998572
+                          RO37CECETM01B8USD0998572
                         </p>
                       </div>
                     </div>
