@@ -120,7 +120,7 @@
     "title": "Blog"
   },
   "book": {
-    "author": "Mark Cole",
+    "author": "~ Mark Cole",
     "description": "\"Like a masterclass for the working Christian, this devotional written for professional life will ignite your passion for Jesus in a completely new way.\"",
     "title": "The book \"Divine Intelligence\""
   },
@@ -140,7 +140,7 @@
     "title": "Contact us and get involved in personal evangelism projects."
   },
   "donate": {
-    "beneficiary": "Beneficiary:",
+    "beneficiary": "Beneficiary",
     "dollars": "US Dollars",
     "donate": "Donate",
     "name": "Asociatia Arise for Christ",
@@ -149,15 +149,18 @@
     "paragraf_3": "Each contribution is a glimmer of hope offered to those who feel lost.",
     "paragraf_4": "Together, we can be a force for good and a beacon of faith for those searching for their spiritual path.",
     "paragraf_5": "The period for completing form 230 has expired. We look forward to seeing you at the beginning of next year when a new session opens.",
+    "phone": "Phone number",
+    "qr": "QR code",
     "ron": "Romanian RON",
     "title": "Help us rebuild faith!",
-    "title_2": "Donate via bank account:",
+    "title_2": "Donate via bank account",
     "title_3": "3.5% of income tax"
   },
   "evangelismForm": {
     "title": "Evangelism Form"
   },
   "footer": {
+    "contact": "Contact us on WhatsApp",
     "subscribe_dialog_button": "Got it, thanks!",
     "subscribe_dialog_header": "Thank you for subscribing",
     "subscribe_dialog_paragraph": "You will receive a confirmation email shortly. Please click the link in the email to confirm your subscription.",
@@ -249,9 +252,9 @@
     "bottom-socials": "Apple Podcast, Spotify, or Google Podcasts.",
     "bottom-subtitle": "LISTEN ON SPOTIFY",
     "bottom-title": "Watch the last episode of our Podcast!",
-    "hero-paragraf": "This is an Arise for Christ Podcast. A series that aims to highlight, based on dialogues, important topics for the church of Christ in the 21st century.",
+    "hero-paragraf": "This is an Arise for Christ Podcast. Our aim is to dialogue on important topics for the church of Christ in the 21st century.",
     "subscribe": "Subscribe!",
-    "text-episode": "We have a series of 88 episodes on various topics such as ministry, Christian counseling, worship through music, addictions and more.",
+    "text-episode": "We recorded and released over 90 episodes on various topics such as ministry, Christian counseling, worship through music, addictions and more.",
     "title": "PODCAST"
   },
   "section": {
@@ -286,7 +289,7 @@
   "team": {
     "adi_des": "Director of the Multimedia Department and moderator of the Arise for Christ podcast.",
     "adi-kovaci": "Director of Media",
-    "andrei_des": "My name is Andrei, and I handle video production, editing, and graphic design within the media department of Arise for Christ.",
+    "andrei_des": "Handles video production, editing, and graphic design within the Arise for Christ media department.",
     "andrei-birtea": "Videographer",
     "avram_des": "Responsible for personal evangelism, biblical counseling, and ministering to those going through difficult situations.",
     "avram-sabou": "President",
@@ -296,7 +299,7 @@
     "dana-potra": "Founder",
     "mark": "Missionary",
     "mark_des": "Involved in the evangelism department and biblical counseling.",
-    "simona_des": "My name is Simona, and I create content for the Arise for Christ page. I manage the Instagram, Facebook, and TikTok accounts.",
+    "simona_des": "Creates content for the Arise for Christ page. Manages the Instagram, Facebook, TikTok accounts.",
     "simona-birtea": "Social Media",
     "title-a4c": "Arise for Christ Team"
   },

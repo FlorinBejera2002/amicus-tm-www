@@ -117,7 +117,7 @@
   },
 
   "book": {
-    "author": "Mark Cole",
+    "author": "~ Mark Cole",
     "description": "\"Ca un masterclass pentru creștinul care muncește, acest devoțional scris pentru viața profesională îți va aprinde pasiunea pentru Isus într-un mod cu totul nou.\"",
     "title": "Cartea \"Inteligența divină\""
   },
@@ -140,7 +140,7 @@
     "title": "Contactează-ne și implică-te alături de noi în lucrarea de evanghelizare personală."
   },
   "donate": {
-    "beneficiary": "Beneficiar:",
+    "beneficiary": "Beneficiar",
     "dollars": "Dolari Americani",
     "donate": "Donează",
     "name": "Asociatia Arise for Christ",
@@ -149,15 +149,18 @@
     "paragraf_3": "Fiecare contribuție este o fărâmă de speranță oferită celor care se simt pierduți.",
     "paragraf_4": "Împreună, putem fi o forță a binelui și un far al credinței pentru cei aflați în căutarea drumului lor spiritual.",
     "paragraf_5": "Perioada de completare a formularului 230 a expirat. Teașteptăm la începutul anului viitor, când se va deschide onouă sesiune.",
+    "phone": "Numar de telefon",
+    "qr": "Cod QR",
     "ron": "RON Românesc",
     "title": "Ajută-ne să reconstruim credința!",
-    "title_2": "Donează prin cont bancar:",
+    "title_2": "Donează prin cont bancar",
     "title_3": "3,5% din impozitul pe venit"
   },
   "evangelismForm": {
     "title": "Cerere de Evanghelizare"
   },
   "footer": {
+    "contact": "Contactează-ne pe WhatsApp",
     "subscribe_dialog_button": "Închide",
     "subscribe_dialog_header": "Mulțumim pentru abonare!",
     "subscribe_dialog_paragraph": "Vei primi un email de confirmare în scurt timp.",
@@ -250,9 +253,9 @@
     "bottom-socials": "Apple Podcast, Spotify, sau Google Podcasts.",
     "bottom-subtitle": "ASCULTĂ PE SPOTIFY",
     "bottom-title": "Urmărește ultimul episod al Podcastului nostru!",
-    "hero-paragraf": "Acesta este un Podcast Arise for Christ. Un serial care își propune să evidențieze pe baza unor dialoguri, subiecte importante pentru biserica Lui Hristos din secolul 21.",
+    "hero-paragraf": "Acesta este un Podcast Arise for Christ unde ne propunem să aducem în evidență pe baza unor dialoguri, subiecte importante pentru biserica Lui Hristos din secolul 21.",
     "subscribe": "Abonează-te!",
-    "text-episode": "Avem o serie de 88 episoade pe diferite subiecte, cum ar fi slujirea, consilierea creștină, închinare prin muzică, dependințe dar și altele.",
+    "text-episode": "Am lansat peste 90 de episoade pe diferite subiecte, cum ar fi slujirea, consilierea creștină, închinare prin muzică, dependințe dar și altele.",
     "title": "PODCAST"
   },
   "section": {
@@ -261,18 +264,18 @@
     "vision": "VIZIUNEA"
   },
   "serial": {
-    "hero_paragraf1": "O echipă dedicată de misionari se îndreaptă către orașele sărace din Filipine, împărtășindu-și credința în comunitățile locale. Aceștia se confruntă cu numeroase provocări, experimentând momente intense în fiecare zi. Filipinezii sunt ajutați în construirea bisericilor și în răspândirea Evangheliei în întregul oraș.",
-    "hero_paragraf2": "Te invităm să vizionezi serialul ,,Timpul este acum”, care conține 15 episoade de 25 de minute fiecare. În această călătorie, misionarii străbat triburi, munți și insule, plantând biserici și ducând Evanghelia filipinezilor.",
-    "reference": "Luca 10:2",
-    "serial_bottom": "Serial TV 2023",
-    "subtitle": "SUBTITRARE",
-    "subtitle_text": "Activează butonul din colțul de jos dreapta si selectează subtitrarea in limba română! De asemenea pentru a urmării episoadele la calitate maximă, alegeți 2160p 4k.",
-    "text_bottom": "Un serial de Arise for Christ",
-    "title": "TIMPUL ESTE ACUM 2023",
-    "title_description_hero": "Urmărește seria de 15 episoade",
-    "title_serial": "Vizionați fiecare episod accesând linkurile de mai jos",
-    "trailer": "Trailer Oficial",
-    "verset": "Câmpurile sunt bogate pentru seceriş, dar secerătorii sunt puţini. Rugaţi deci pe Domnul secerişului să trimită lucrători în secerişul Lui."
+    "hero_paragraf1": "A dedicated team of missionaries is heading to the impoverished cities of the Philippines, sharing their faith with local communities. They face numerous challenges, experiencing intense moments every day. Filipinos are aided in building churches and spreading the gospel throughout their cities",
+    "hero_paragraf2": "We invite you to watch the series ' The Time is Now,' which consists of 15 episodes, each lasting 25 minutes. On this journey, missionaries traverse tribes, mountains, and islands, planting churches and spreading the gospel to the Filipino people.",
+    "reference": "Luke 10:2",
+    "serial_bottom": "TV Series 2023",
+    "subtitle": "SUBTITLE",
+    "subtitle_text": "Activate the button in the bottom right corner and select Romanian subtitles! Also, to watch the episodes in the highest quality, choose 2160p 4k.",
+    "text_bottom": "A series by Arise for Christ",
+    "title": "THE TIME IS NOW",
+    "title_description_hero": "FOLLOW THE 15-EPISODE SERIES.",
+    "title_serial": "Each episode can be accessed through the links below.",
+    "trailer": "OFFICIAL TRAILER",
+    "verset": "The fields are ripe for harvest, but the laborers are few. Therefore, pray to the Lord of the harvest to send out laborers into His harvest."
   },
   "steps_evangelization": {
     "evangelism_requests_count": "Cereri de evanghelizare create până în acest moment",
@@ -287,7 +290,7 @@
   "team": {
     "adi_des": "Director al departamentului de multimedia și moderator al podcastului Arise for Christ.",
     "adi-kovaci": "Director Media",
-    "andrei_des": "Sunt Andrei si mă ocup de producția video, editare si design grafic în cadrul departamentului media Arise for Christ.",
+    "andrei_des": "Se ocupă de producția video, editare si design grafic în cadrul departamentului media Arise for Christ.",
     "andrei-birtea": "Producător video",
     "avram_des": "Responsabil de evanghelizarea personală, consilierea biblică și recuperarea celor care trec prin situații dificile.",
     "avram-sabou": "Președinte",
@@ -297,7 +300,7 @@
     "dana-potra": "Fondator",
     "mark": "Misionar",
     "mark_des": "Implicat în departamentul de evanghelizare, și consiliere biblică.",
-    "simona_des": "Sunt Simona și creez conținut pentru pagina Arise for Christ. Administrez conturile de Instagram, Facebook, TikTok.",
+    "simona_des": "Creeză conținut pentru pagina Arise for Christ. Administreză conturile de Instagram, Facebook, TikTok.",
     "simona-birtea": "Social Media",
     "title-a4c": "Echipa Arise for Christ"
   },

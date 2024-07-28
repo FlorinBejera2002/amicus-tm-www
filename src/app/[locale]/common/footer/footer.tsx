@@ -47,7 +47,7 @@ export default function Footer() {
               />
             </Link>
             <ul className="list list-unstyled pt-4">
-              <li className="d-flex align-items-center mb-4">
+              <li className="d-flex align-items-center mb-3">
                 <Link
                   className="d-inline-flex align-items-center text-decoration-none font-weight-semibold text-4-5 text-white transition-all duration-300 hover:!text-accent"
                   href="mailto:info@ariseforchrist.com"
@@ -56,11 +56,14 @@ export default function Footer() {
                 </Link>
               </li>
               <li className="d-blok align-items-center mb-4">
-                <div className="align-items-center text-decoration-none text-color-light text-color-hover-primary font-weight-semibold text-4-5 pb-3 transition-all duration-300">
-                  +40-721-804-560
+                <div className="align-items-center text-decoration-none text-color-light font-weight-semibold text-4-5 pb-3 transition-all duration-300">
+                  +40 (773) 307 292
                 </div>
-                <div className="align-items-center text-decoration-none text-color-light text-color-hover-primary font-weight-semibold text-4-5 transition-all duration-300">
-                  0356-175-148
+                <div className="align-items-center text-decoration-none text-color-light font-weight-semibold text-4-5 pb-3 transition-all duration-300">
+                  +40 (721) 804 560
+                </div>
+                <div className="align-items-center text-decoration-none text-color-light font-weight-semibold text-4-5 transition-all duration-300">
+                  +40 (356) 175 148
                 </div>
               </li>
             </ul>

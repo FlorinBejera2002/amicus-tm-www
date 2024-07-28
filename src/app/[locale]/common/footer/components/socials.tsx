@@ -1,3 +1,4 @@
+import { IoLogoWhatsapp } from 'react-icons/io'
 import { FaFacebookF, FaSpotify, FaTiktok } from 'react-icons/fa6'
 import { FaInstagram } from 'react-icons/fa6'
 import { FaYoutube } from 'react-icons/fa'
@@ -6,6 +7,11 @@ import { cn } from '@/utils'
 
 export default function Socials() {
   const links = [
+    {
+      hoverClasses: 'hover:bg-green-500',
+      href: 'https://wa.me/qr/ID4EZCB73HFTP1',
+      icon: <IoLogoWhatsapp className="size-4 text-white" />
+    },
     {
       hoverClasses: 'hover:bg-blue-900',
       href: 'https://www.facebook.com/AriseForChristRomania/',
@@ -34,7 +40,7 @@ export default function Socials() {
   ]
 
   return (
-    <div className="relative !z-10 mb-5 flex w-screen flex-wrap gap-2">
+    <div className="relative !z-10 mb-3 flex w-screen flex-wrap gap-2">
       {links.map((link, idx) => (
         <div
           className={cn(
