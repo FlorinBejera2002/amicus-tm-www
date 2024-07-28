@@ -1,6 +1,6 @@
+import InViewTransition from '@/app/[locale]/common/in-view-transition'
 import { useTranslations } from 'next-intl'
 import Image from 'next/image'
-import InViewTransition from '@/app/[locale]/common/in-view-transition'
 
 import book from '../../../../../public/book-image.png'
 

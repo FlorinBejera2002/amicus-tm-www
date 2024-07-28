@@ -4,8 +4,8 @@ import { useState } from 'react'
 
 import Accordion from '../../../common/accordion'
 
-import { useTranslations } from 'next-intl'
 import InViewTransition from '@/app/[locale]/common/in-view-transition'
+import { useTranslations } from 'next-intl'
 
 const AccordionSection = () => {
   const [expanded, setExpanded] = useState(-1)

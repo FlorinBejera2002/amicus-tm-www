@@ -3,8 +3,8 @@
 import InViewTransition from '../../common/in-view-transition'
 
 import { useTranslations } from 'next-intl'
-import { usePathname } from 'next/navigation'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 
 const ContactUsBtn = () => {
   const t = useTranslations()

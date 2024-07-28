@@ -3,17 +3,17 @@ import { useEffect, useState } from 'react'
 
 import InViewTransition from '../../common/in-view-transition'
 
-import { FaAngleLeft, FaAngleRight } from 'react-icons/fa6'
 import { useTranslations } from 'next-intl'
 import Image from 'next/image'
+import { FaAngleLeft, FaAngleRight } from 'react-icons/fa6'
 
-import Mark from '../../../../../public/mark.png'
-import Simona from '../../../../../public/img/team/simo.webp'
-import Dana from '../../../../../public/img/team/dana potra.webp'
-import Chris from '../../../../../public/img/team/chris potra.webp'
-import Andrei from '../../../../../public/img/team/andrei bir.webp'
-import AvramSabou from '../../../../../public/img/team/Avram.webp'
 import AdrianCovaci from '../../../../../public/adi.webp'
+import AvramSabou from '../../../../../public/img/team/Avram.webp'
+import Andrei from '../../../../../public/img/team/andrei bir.webp'
+import Chris from '../../../../../public/img/team/chris potra.webp'
+import Dana from '../../../../../public/img/team/dana potra.webp'
+import Simona from '../../../../../public/img/team/simo.webp'
+import Mark from '../../../../../public/mark.png'
 
 export default function Team() {
   const t = useTranslations('team')

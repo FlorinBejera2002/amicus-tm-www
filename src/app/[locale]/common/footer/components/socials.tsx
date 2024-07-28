@@ -1,9 +1,9 @@
-import { IoLogoWhatsapp } from 'react-icons/io'
+import { cn } from '@/utils'
+import Link from 'next/link'
+import { FaYoutube } from 'react-icons/fa'
 import { FaFacebookF, FaSpotify, FaTiktok } from 'react-icons/fa6'
 import { FaInstagram } from 'react-icons/fa6'
-import { FaYoutube } from 'react-icons/fa'
-import Link from 'next/link'
-import { cn } from '@/utils'
+import { IoLogoWhatsapp } from 'react-icons/io'
 
 export default function Socials() {
   const links = [

@@ -1,9 +1,9 @@
 import { useCallback, useEffect, useState } from 'react'
 
+import { cn } from '@/utils'
+import { motion } from 'framer-motion'
 import { useTranslations } from 'next-intl'
 import { usePathname, useRouter } from 'next/navigation'
-import { motion } from 'framer-motion'
-import { cn } from '@/utils'
 
 type Language = 'en' | 'ro'
 
@@ -43,7 +43,7 @@ export default function ChangeLanguage({
     }, 150)
 
     return () => clearTimeout(timeout)
-  }, [handleLocaleChange, language])
+  }, [handleLocaleChange])
 
   return (
     <button

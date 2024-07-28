@@ -1,15 +1,15 @@
 'use client'
 
-import MailchimpSubscribe, {
-  EmailFormFields,
-  FormHooks
-} from 'react-mailchimp-subscribe'
 import { useState } from 'react'
+import MailchimpSubscribe, {
+  type EmailFormFields,
+  type FormHooks
+} from 'react-mailchimp-subscribe'
 
-import { FaTelegramPlane } from 'react-icons/fa'
-import { useTranslations } from 'next-intl'
-import { Dialog, DialogPanel, DialogTitle } from '@headlessui/react'
 import { MAILCHIMP_URL, cn } from '@/utils'
+import { Dialog, DialogPanel, DialogTitle } from '@headlessui/react'
+import { useTranslations } from 'next-intl'
+import { FaTelegramPlane } from 'react-icons/fa'
 
 export const Newsletter = () => {
   const t = useTranslations()

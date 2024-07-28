@@ -1,13 +1,13 @@
-import ContentEvangelizationForm from './components/ev-form'
-import InViewTransition from '../common/in-view-transition'
-import CustomHeroBg from '../common/custom-hero-bg'
 import Animation from '../common/animation'
+import CustomHeroBg from '../common/custom-hero-bg'
+import InViewTransition from '../common/in-view-transition'
+import ContentEvangelizationForm from './components/ev-form'
 
-import { FaAngleRight } from 'react-icons/fa'
-import { getTranslations } from 'next-intl/server'
+import type { Metadata } from 'next'
 import { useTranslations } from 'next-intl'
+import { getTranslations } from 'next-intl/server'
 import Link from 'next/link'
-import { Metadata } from 'next'
+import { FaAngleRight } from 'react-icons/fa'
 
 // eslint-disable-next-line react-refresh/only-export-components
 export async function generateMetadata({

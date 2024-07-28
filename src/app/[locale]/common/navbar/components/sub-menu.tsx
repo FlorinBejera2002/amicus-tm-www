@@ -1,8 +1,8 @@
-import { IoReturnDownForwardOutline } from 'react-icons/io5'
+import { cn } from '@/utils'
+import { AnimatePresence, motion } from 'framer-motion'
 import { useTranslations } from 'next-intl'
 import Link from 'next/link'
-import { AnimatePresence, motion } from 'framer-motion'
-import { cn } from '@/utils'
+import { IoReturnDownForwardOutline } from 'react-icons/io5'
 
 interface ISubMenu {
   handleSubMenuItemClick: () => void

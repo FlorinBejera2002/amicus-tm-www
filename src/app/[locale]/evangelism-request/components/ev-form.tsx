@@ -1,26 +1,26 @@
-/* eslint-disable jsx-a11y/no-static-element-interactions */
 'use client'
 
+import type React from 'react'
+import { useState } from 'react'
 import MailchimpSubscribe, {
-  EmailFormFields,
-  FormHooks
+  type EmailFormFields,
+  type FormHooks
 } from 'react-mailchimp-subscribe'
-import React, { useState } from 'react'
 
 import InViewTransition from '../../common/in-view-transition'
 
-import { v4 as uuid } from 'uuid'
+import { MAILCHIMP_URL, cn } from '@/utils'
+import { Dialog, DialogPanel, DialogTitle } from '@headlessui/react'
+import { createClient } from '@supabase/supabase-js'
+import { useTranslations } from 'next-intl'
+import { IoLink } from 'react-icons/io5'
+import { MdOutlineContentCopy } from 'react-icons/md'
 import {
   PiNumberCircleOneFill,
   PiNumberCircleThreeFill,
   PiNumberCircleTwoFill
 } from 'react-icons/pi'
-import { MdOutlineContentCopy } from 'react-icons/md'
-import { IoLink } from 'react-icons/io5'
-import { useTranslations } from 'next-intl'
-import { createClient } from '@supabase/supabase-js'
-import { Dialog, DialogPanel, DialogTitle } from '@headlessui/react'
-import { MAILCHIMP_URL, cn } from '@/utils'
+import { v4 as uuid } from 'uuid'
 
 type SubmitMessage = {
   content: string
@@ -49,7 +49,7 @@ const ContentEvangelizationForm = () => {
   return (
     <MailchimpSubscribe
       render={({ subscribe }: FormHooks<EmailFormFields>) => {
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        // biome-ignore lint/suspicious/noExplicitAny: <explanation>
         const handleSubmit = async (event: any) => {
           event.preventDefault()
           const name = event.target.name.value
@@ -242,6 +242,7 @@ const ContentEvangelizationForm = () => {
                 <button
                   className="mt-4 flex size-9 items-center justify-center self-start rounded-md bg-accent px-20 py-1 font-bold text-black disabled:pointer-events-none disabled:opacity-50 md:!mt-0 md:self-center"
                   type="submit"
+                  disabled={!isChecked}
                 >
                   {t('send')}
                 </button>

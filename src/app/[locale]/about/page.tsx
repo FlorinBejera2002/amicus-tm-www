@@ -1,14 +1,14 @@
-import ContactUsBtn from './components/contact-us-button'
-import AccordionSection from './components/accordion-section'
-import InViewTransition from '../common/in-view-transition'
-import Images from '../common/images'
-import CustomHeroBg from '../common/custom-hero-bg'
 import Animation from '../common/animation'
+import CustomHeroBg from '../common/custom-hero-bg'
+import Images from '../common/images'
+import InViewTransition from '../common/in-view-transition'
+import AccordionSection from './components/accordion-section'
+import ContactUsBtn from './components/contact-us-button'
 
-import { FaAngleRight } from 'react-icons/fa'
+import type { Metadata } from 'next'
 import { useTranslations } from 'next-intl'
 import Link from 'next/link'
-import { Metadata } from 'next'
+import { FaAngleRight } from 'react-icons/fa'
 
 // eslint-disable-next-line react-refresh/only-export-components
 export const metadata: Metadata = {

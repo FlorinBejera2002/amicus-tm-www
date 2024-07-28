@@ -1,19 +1,19 @@
-import InViewTransition from '../common/in-view-transition'
-import CustomHeroBg from '../common/custom-hero-bg'
 import Animation from '../common/animation'
+import CustomHeroBg from '../common/custom-hero-bg'
+import InViewTransition from '../common/in-view-transition'
 
-import { FaAngleRight } from 'react-icons/fa'
-import { getTranslations } from 'next-intl/server'
+import type { Metadata } from 'next'
 import { useTranslations } from 'next-intl'
-import Link from 'next/link'
+import { getTranslations } from 'next-intl/server'
 import Image from 'next/image'
-import { Metadata } from 'next'
+import Link from 'next/link'
+import { FaAngleRight } from 'react-icons/fa'
 
-import Project5 from '../../../../public/vision-projects5.webp'
-import Project4 from '../../../../public/vision-projects4.webp'
-import Project2 from '../../../../public/vision-projects3.webp'
-import Project3 from '../../../../public/vision-projects2.webp'
 import Project1 from '../../../../public/vision-projects1.webp'
+import Project3 from '../../../../public/vision-projects2.webp'
+import Project2 from '../../../../public/vision-projects3.webp'
+import Project4 from '../../../../public/vision-projects4.webp'
+import Project5 from '../../../../public/vision-projects5.webp'
 
 // eslint-disable-next-line react-refresh/only-export-components
 export async function generateMetadata({

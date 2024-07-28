@@ -1,6 +1,6 @@
+import InViewTransition from '@/app/[locale]/common/in-view-transition'
 import { useTranslations } from 'next-intl'
 import Link from 'next/link'
-import InViewTransition from '@/app/[locale]/common/in-view-transition'
 
 export default function Subtitle() {
   const t = useTranslations('serial')

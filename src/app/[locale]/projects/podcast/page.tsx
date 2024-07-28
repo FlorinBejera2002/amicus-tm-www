@@ -1,13 +1,13 @@
-import Hero from './components/hero'
-import BottomSection from './components/bottom-section'
-import InViewTransition from '../../common/in-view-transition'
-import CustomHeroBg from '../../common/custom-hero-bg'
 import Animation from '../../common/animation'
+import CustomHeroBg from '../../common/custom-hero-bg'
+import InViewTransition from '../../common/in-view-transition'
+import BottomSection from './components/bottom-section'
+import Hero from './components/hero'
 
-import { FaAngleRight } from 'react-icons/fa'
+import type { Metadata } from 'next'
 import { useTranslations } from 'next-intl'
 import Link from 'next/link'
-import { Metadata } from 'next'
+import { FaAngleRight } from 'react-icons/fa'
 
 export const metadata: Metadata = {
   title: 'Arise for Christ | Podcast'

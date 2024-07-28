@@ -1,9 +1,9 @@
-import { SVGMotionProps, Transition, motion } from 'framer-motion'
+import { type SVGMotionProps, type Transition, motion } from 'framer-motion'
 
 interface Props extends SVGMotionProps<unknown> {
   color?: string
   isOpen?: boolean
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  // biome-ignore lint/suspicious/noExplicitAny: <explanation>
   lineProps?: any
   strokeWidth?: number | string
   transition?: Transition

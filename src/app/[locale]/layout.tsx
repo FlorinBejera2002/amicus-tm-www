@@ -6,16 +6,18 @@ import './css/theme.css'
 import './css/skin-creative-agency-2.css'
 import './css/demo-creative-agency-2.css'
 import './css/bootstrap.min.css'
-import ScrollButton from './common/sections/scroll-button'
-import Nav from './common/navbar/nav'
-import Footer from './common/footer/footer'
 import CookieConsents from './common/cookie-consents'
+import Footer from './common/footer/footer'
+import Nav from './common/navbar/nav'
+import ScrollButton from './common/scroll-button'
 
-import { NextIntlClientProvider, useMessages } from 'next-intl'
-import Script from 'next/script'
-import { Poppins } from 'next/font/google'
-import { Analytics } from '@vercel/analytics/react'
 import { cn } from '@/utils'
+import { Analytics } from '@vercel/analytics/react'
+import { NextIntlClientProvider, useMessages } from 'next-intl'
+import { Poppins } from 'next/font/google'
+import Script from 'next/script'
+import { ReactNode } from 'react'
+import FloatingSocials from './common/floating-socials'
 
 const poppins = Poppins({
   display: 'swap',
@@ -23,7 +25,6 @@ const poppins = Poppins({
   weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900']
 })
 
-// eslint-disable-next-line react-refresh/only-export-components
 export const metadata: Metadata = {
   icons: [
     { rel: 'icon', url: '/logo.ico' },
@@ -31,8 +32,10 @@ export const metadata: Metadata = {
   ]
 }
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export default function RootLayout({ children, params: { locale } }: any) {
+export default function RootLayout({
+  children,
+  params: { locale }
+}: { children: ReactNode; params: { locale: string } }) {
   const messages = useMessages()
 
   return (
@@ -48,7 +51,7 @@ export default function RootLayout({ children, params: { locale } }: any) {
         </NextIntlClientProvider>
 
         <ScrollButton />
-
+        <FloatingSocials />
         {/* analytics */}
         <Analytics />
 

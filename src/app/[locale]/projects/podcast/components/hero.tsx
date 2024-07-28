@@ -1,9 +1,9 @@
+import InViewTransition from '@/app/[locale]/common/in-view-transition'
 import { useTranslations } from 'next-intl'
 import Image from 'next/image'
-import InViewTransition from '@/app/[locale]/common/in-view-transition'
 
-import youtubeChanelImage from '../../../../../../public/youtube-chanel-image.webp'
 import Adi from '../../../../../../public/adi-text.webp'
+import youtubeChanelImage from '../../../../../../public/youtube-chanel-image.webp'
 
 export default function Hero() {
   const t = useTranslations('podcast')

@@ -1,10 +1,10 @@
 'use client'
 
-import { Dispatch, ReactNode, SetStateAction } from 'react'
+import type { Dispatch, ReactNode, SetStateAction } from 'react'
 
-import { FaArrowDown, FaArrowRight } from 'react-icons/fa6'
-import { AnimatePresence, motion } from 'framer-motion'
 import { cn } from '@/utils'
+import { AnimatePresence, motion } from 'framer-motion'
+import { FaArrowDown, FaArrowRight } from 'react-icons/fa6'
 
 interface IAccordionProps {
   customClassname?: string

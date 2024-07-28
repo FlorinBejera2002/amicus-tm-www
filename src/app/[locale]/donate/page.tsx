@@ -1,21 +1,23 @@
-import InViewTransition from '../common/in-view-transition'
-import CustomHeroBg from '../common/custom-hero-bg'
 import Animation from '../common/animation'
+import CustomHeroBg from '../common/custom-hero-bg'
+import InViewTransition from '../common/in-view-transition'
 
-import { FaAngleRight, FaDonate } from 'react-icons/fa'
 import { useTranslations } from 'next-intl'
-import Link from 'next/link'
-import Image from 'next/image'
+
 import { Metadata } from 'next'
 
-import StripeLogo from '../../../../public/srtripe.png'
-import QRStripe from '../../../../public/qr-stripe.png'
-import RevolutLogo from '../../../../public/Revolut-Logo.png'
-import QRPayPal from '../../../../public/QRPayPal.png'
-import PayPal from '../../../../public/PayPal.png'
-import CECLogo from '../../../../public/CEC Bank.svg'
+import Image from 'next/image'
+import Link from 'next/link'
+import { FaDonate } from 'react-icons/fa'
+import { FaAngleRight } from 'react-icons/fa'
 
-// eslint-disable-next-line react-refresh/only-export-components
+import CECLogo from '../../../../public/CEC Bank.svg'
+import PayPal from '../../../../public/PayPal.png'
+import QRPayPal from '../../../../public/QRPayPal.png'
+import RevolutLogo from '../../../../public/Revolut-Logo.png'
+import QRStripe from '../../../../public/qr-stripe.png'
+import StripeLogo from '../../../../public/srtripe.png'
+
 export const metadata: Metadata = {
   title: 'Arise for Christ | Donate'
 }
@@ -205,31 +207,33 @@ const About = () => {
                   <div className="flex flex-col items-center justify-between gap-6 rounded-lg bg-green-50 p-10 shadow-md md:h-96 lg:w-full">
                     <Image
                       alt="Logo for the bank"
-                      className="h-20 w-48"
+                      className="w-48"
                       src={CECLogo}
                     />
-                    <div className="flex flex-col text-center">
-                      <div>
-                        <p className="font-semibold text-gray-700">
+                    <div className="flex flex-col text-center gap-4">
+                      <div className="flex flex-col gap-1">
+                        <span className="font-semibold text-gray-700">
                           {t('donate.beneficiary')}
-                        </p>
-                        <p className="text-gray-600">{t('donate.name')}</p>
+                        </span>
+                        <span className="text-gray-600">
+                          {t('donate.name')}
+                        </span>
                       </div>
-                      <div>
-                        <p className="font-semibold text-gray-700">
+                      <div className="flex flex-col gap-1">
+                        <span className="font-semibold text-gray-700">
                           {t('donate.ron')}
-                        </p>
-                        <p className="text-xs text-gray-600">
+                        </span>
+                        <span className="text-xs text-gray-600">
                           RO36CECETM0130RON0998570
-                        </p>
+                        </span>
                       </div>
-                      <div>
-                        <p className="font-semibold text-gray-700">
+                      <div className="flex flex-col gap-1">
+                        <span className="font-semibold text-gray-700">
                           {t('donate.dollars')}
-                        </p>
-                        <p className="mb-0 text-xs text-gray-600">
+                        </span>
+                        <span className="text-xs text-gray-600">
                           RO37CECETM01B8USD0998572
-                        </p>
+                        </span>
                       </div>
                     </div>
                   </div>

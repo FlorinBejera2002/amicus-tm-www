@@ -1,19 +1,19 @@
 'use client'
 
-import { Dispatch, SetStateAction, useEffect, useState } from 'react'
+import { type Dispatch, type SetStateAction, useEffect, useState } from 'react'
 
-import SubMenu from './sub-menu'
-import { MenuButton } from './hamburger'
-import ChangeLanguage from './change-language'
 import Animation from '../../animation'
+import ChangeLanguage from './change-language'
+import { MenuButton } from './hamburger'
+import SubMenu from './sub-menu'
 
-import { FaChevronDown } from 'react-icons/fa'
-import { useTranslations } from 'next-intl'
-import { useSearchParams } from 'next/navigation'
-import Link from 'next/link'
-import { motion } from 'framer-motion'
-import { useWindowSize } from '@uidotdev/usehooks'
 import { cn } from '@/utils'
+import { useWindowSize } from '@uidotdev/usehooks'
+import { motion } from 'framer-motion'
+import { useTranslations } from 'next-intl'
+import Link from 'next/link'
+import { useSearchParams } from 'next/navigation'
+import { FaChevronDown } from 'react-icons/fa'
 
 const MobileNavbar = ({
   language,

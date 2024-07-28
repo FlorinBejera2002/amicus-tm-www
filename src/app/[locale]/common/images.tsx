@@ -1,11 +1,11 @@
-import Image from 'next/image'
 import InViewTransition from '@/app/[locale]/common/in-view-transition'
+import Image from 'next/image'
 
-import step5 from '../../../../public/img/step5.webp'
-import step4 from '../../../../public/img/step4.webp'
-import step3 from '../../../../public/img/step3.webp'
-import step2 from '../../../../public/img/step2.webp'
 import step1 from '../../../../public/img/step1.webp'
+import step2 from '../../../../public/img/step2.webp'
+import step3 from '../../../../public/img/step3.webp'
+import step4 from '../../../../public/img/step4.webp'
+import step5 from '../../../../public/img/step5.webp'
 
 const images = () => {
   return (

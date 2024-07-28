@@ -1,11 +1,11 @@
-import { useTranslations } from 'next-intl'
-import Link from 'next/link'
-import Image from 'next/image'
 import InViewTransition from '@/app/[locale]/common/in-view-transition'
+import { useTranslations } from 'next-intl'
+import Image from 'next/image'
+import Link from 'next/link'
 
-import spotifi from '../../../../../../public/spotify.webp'
-import googlePodcast from '../../../../../../public/google-podcasts.webp'
 import applePodcast from '../../../../../../public/apple-podcast.webp'
+import googlePodcast from '../../../../../../public/google-podcasts.webp'
+import spotifi from '../../../../../../public/spotify.webp'
 
 export default function BottomSection() {
   const t = useTranslations('podcast')

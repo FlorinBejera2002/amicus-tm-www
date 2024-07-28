@@ -1,15 +1,15 @@
 'use client'
 
-import Socials from './components/socials'
-import FooterOverview from './components/footer-overview'
 import { Newsletter } from '../../(home)/components/newsletter'
+import FooterOverview from './components/footer-overview'
+import Socials from './components/socials'
 
-import { usePathname } from 'next/navigation'
-import Link from 'next/link'
 import Image from 'next/image'
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 
-import newarklogo from '../../../../../public/new-ark_logo.webp'
 import horizontalLogo from '../../../../../public/logo_horizontal_white.webp'
+import newarklogo from '../../../../../public/new-ark_logo.webp'
 
 export default function Footer() {
   const pathname = usePathname()

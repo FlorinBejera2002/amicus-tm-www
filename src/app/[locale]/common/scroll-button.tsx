@@ -1,8 +1,8 @@
 'use client'
 
-import { FaChevronUp } from 'react-icons/fa'
-import { useWindowScroll } from '@uidotdev/usehooks'
 import { cn } from '@/utils'
+import { useWindowScroll } from '@uidotdev/usehooks'
+import { FaChevronUp } from 'react-icons/fa'
 
 export default function ScrollButton() {
   const [{ y }] = useWindowScroll()

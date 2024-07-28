@@ -1,8 +1,8 @@
-import AccordionSection from './accordion-section'
 import Images from '../../../common/images'
+import AccordionSection from './accordion-section'
 
-import { useTranslations } from 'next-intl'
 import InViewTransition from '@/app/[locale]/common/in-view-transition'
+import { useTranslations } from 'next-intl'
 
 export default function PersonalEvangelism() {
   const t = useTranslations('vision')

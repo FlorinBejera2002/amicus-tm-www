@@ -2,8 +2,8 @@
 
 import { useState } from 'react'
 
-import InViewTransition from '../../common/in-view-transition'
 import Accordion from '../../common/accordion'
+import InViewTransition from '../../common/in-view-transition'
 
 import { useTranslations } from 'next-intl'
 
@@ -45,7 +45,7 @@ const AccordionSection = () => {
       title: t('about_us.principals_p1_0')
     },
     {
-      description: [
+      description: (
         <>
           <p>{t('about_us.principals_p6_2')}</p>
           <p>{t('about_us.principals_p6_3')}</p>
@@ -59,7 +59,7 @@ const AccordionSection = () => {
           <p>{t('about_us.principals_p6_11')}</p>
           <p>{t('about_us.principals_p6_12')}</p>
         </>
-      ],
+      ),
       title: t('about_us.principals_p6_1')
     }
   ]

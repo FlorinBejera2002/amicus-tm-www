@@ -1,9 +1,9 @@
 'use client'
 
-import { ReactNode } from 'react'
+import type { ReactNode } from 'react'
 
-import { motion } from 'framer-motion'
 import { cn } from '@/utils'
+import { motion } from 'framer-motion'
 
 const InViewTransition = ({
   children,

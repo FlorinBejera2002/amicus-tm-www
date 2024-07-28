@@ -1,5 +1,5 @@
-import { useTranslations } from 'next-intl'
 import InViewTransition from '@/app/[locale]/common/in-view-transition'
+import { useTranslations } from 'next-intl'
 
 export default function HeroSection() {
   const t = useTranslations('serial')

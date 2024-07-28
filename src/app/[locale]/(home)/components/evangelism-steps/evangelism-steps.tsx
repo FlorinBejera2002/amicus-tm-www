@@ -1,13 +1,13 @@
-import { ReactNode } from 'react'
+import type { ReactNode } from 'react'
 
 import { Step } from './step'
 
+import InViewTransition from '@/app/[locale]/common/in-view-transition'
+import { useTranslations } from 'next-intl'
+import Image from 'next/image'
 import { PiNumberCircleOneFill } from 'react-icons/pi'
 import { PiNumberCircleTwoFill } from 'react-icons/pi'
 import { PiNumberCircleThreeFill } from 'react-icons/pi'
-import { useTranslations } from 'next-intl'
-import Image from 'next/image'
-import InViewTransition from '@/app/[locale]/common/in-view-transition'
 
 import step from '../../../../../../public/step.png'
 
