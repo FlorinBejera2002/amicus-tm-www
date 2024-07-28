@@ -101,7 +101,7 @@ const About = () => {
 
               <div className="grid grid-cols-1 gap-8 md:grid-cols-2 md:flex-row xl:grid-cols-4">
                 <InViewTransition delay={0.25}>
-                  <div className=" flex w-full flex-col items-center gap-10 rounded-lg bg-gray-50 p-10 shadow-md md:h-96">
+                  <div className=" flex w-full flex-col items-center justify-between gap-10 rounded-lg bg-gray-50 p-10 shadow-md md:h-96">
                     <Image
                       alt="Logo for the bank"
                       className="w-32 pt-1 "
@@ -133,7 +133,7 @@ const About = () => {
                   </div>
                 </InViewTransition>
                 <InViewTransition delay={0.25}>
-                  <div className="flex flex-col items-center gap-16 rounded-lg bg-purple-50 p-10 shadow-md md:h-96">
+                  <div className="flex flex-col items-center justify-between gap-16 rounded-lg bg-purple-50 p-10 shadow-md md:h-96">
                     <Image
                       alt="Logo for the bank"
                       className="mt-0 w-24 "
@@ -168,7 +168,7 @@ const About = () => {
                 </InViewTransition>
 
                 <InViewTransition delay={0.25}>
-                  <div className=" flex w-full flex-col items-center gap-16 rounded-lg bg-blue-50 p-10 shadow-md md:h-96">
+                  <div className=" flex w-full flex-col items-center justify-between gap-16 rounded-lg bg-blue-50 p-10 shadow-md md:h-96">
                     <Image
                       alt="Logo for the bank"
                       className=" w-36 "
@@ -202,7 +202,7 @@ const About = () => {
                   </div>
                 </InViewTransition>
                 <InViewTransition delay={0.25}>
-                  <div className="flex flex-col items-center gap-6 rounded-lg bg-green-50 p-6 shadow-md md:h-96 lg:w-full">
+                  <div className="flex flex-col items-center justify-between gap-6 rounded-lg bg-green-50 p-6 shadow-md md:h-96 lg:w-full">
                     <Image
                       alt="Logo for the bank"
                       className="w-44 pt-4"
