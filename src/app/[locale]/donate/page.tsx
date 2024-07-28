@@ -25,7 +25,7 @@ export const metadata: Metadata = {
 const About = () => {
   const t = useTranslations()
   const leftSectionText = [
-    <h1 className="mb-4 text-2xl font-bold md:mb-6 md:pt-0 md:text-3xl" key={1}>
+    <h1 className="mb-3 text-2xl font-bold md:mb-6 md:pt-0 md:text-3xl" key={1}>
       {t('donate.title')}
     </h1>,
     <p className="mb-2 text-gray-800 md:mb-4" key={2}>
@@ -83,8 +83,8 @@ const About = () => {
         <Animation />
       </section>
 
-      <div className="custom-page-content p-relative z-index-2 text-md flex w-full justify-center">
-        <div className="max-w-6xl flex-col content-center rounded-md bg-white p-8 shadow-lg md:p-12">
+      <div className="custom-page-content p-relative z-index-2 text-md flex w-full justify-center ">
+        <div className="max-w-6xl flex flex-col content-center rounded-md bg-white p-8 shadow-lg md:p-12 gap-10">
           <div className=" rounded-md bg-white md:flex md:items-center">
             <div className="flex-[1.75]">
               {leftSectionText.map((item, idx) => (
@@ -97,7 +97,7 @@ const About = () => {
 
           <div className="max-w-full">
             <InViewTransition delay={0.25}>
-              <h1 className="pb-6 pt-8 text-3xl font-bold text-gray-800 md:pb-8 md:pt-12">
+              <h1 className="text-2xl md:text-3xl font-bold text-gray-800 mb-3">
                 {t('donate.title_2')}
               </h1>
 
@@ -241,18 +241,15 @@ const About = () => {
               </div>
             </InViewTransition>
           </div>
+
           <InViewTransition delay={0.25}>
-            <div className="pt-12 lg:-mb-20 ">
-              <h1 className="mb-6 text-3xl font-bold" key={1}>
-                {t('donate.title_3')}
-              </h1>
-              <div className="w-full md:w-2/3 ">
-                <p className="mb-0">{t('donate.paragraf_5')}</p>
-              </div>
+            <h1 className="mb-3 text-2xl md:text-3xl font-bold" key={1}>
+              {t('donate.title_3')}
+            </h1>
+            <div className="w-full md:w-2/3 ">
+              <p className="mb-0">{t('donate.paragraf_5')}</p>
             </div>
           </InViewTransition>
-
-          <div className="hidden h-16 w-full rounded-md bg-white lg:flex" />
         </div>
       </div>
     </div>
