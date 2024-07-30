@@ -88,23 +88,23 @@ export default function Vision() {
       <div className="custom-page-content z-index-2 max-w-6xl">
         <div className="rounded-md bg-white p-8 shadow-lg gap-8 flex flex-col">
           <div className="row">
-            <div className="col gap-6 flex flex-col" >
+            <div className="col gap-3 md:gap-6 flex flex-col">
               <InViewTransition delay={0.25}>
                 <h1 className="text-start text-2xl font-bold text-gray-800 mb-0 md:text-4xl">
                   {t('vision.presentation_title')}
                 </h1>
               </InViewTransition>
-              <div className="grid md:grid-cols-2 gap-8">
-                  <InViewTransition delay={0.35}>
-                    <p className="text-md mb-0 text-start text-gray-600 md:text-lg">
-                      {t('vision.presentation_p1_1')}
-                    </p>
-                  </InViewTransition>
-                  <InViewTransition delay={0.35}>
-                    <p className="text-md mb-0 text-start text-gray-600 md:text-lg">
-                      {t('vision.presentation_p2')}
-                    </p>
-                  </InViewTransition>
+              <div className="grid md:grid-cols-2 gap-3 md:gap-8">
+                <InViewTransition delay={0.35}>
+                  <p className="text-md mb-0 text-start text-gray-600 md:text-lg">
+                    {t('vision.presentation_p1_1')}
+                  </p>
+                </InViewTransition>
+                <InViewTransition delay={0.35}>
+                  <p className="text-md mb-0 text-start text-gray-600 md:text-lg">
+                    {t('vision.presentation_p2')}
+                  </p>
+                </InViewTransition>
               </div>
             </div>
           </div>
@@ -119,8 +119,8 @@ export default function Vision() {
             </div>
           </div>
 
-          <div className="flex gap-8">
-            <div className="md:order-2 flex flex-col gap-6 w-1/2 justify-center">
+          <div className="row">
+            <div className="md:order-2 col-md-6 flex flex-col md:gap-6 gap-3">
               <InViewTransition delay={0.7}>
                 <h3 className="text-start text-xl font-bold m-0 text-gray-800 md:text-2xl">
                   {t('vision.projects_p1_2')}
@@ -132,7 +132,7 @@ export default function Vision() {
                 </p>
               </InViewTransition>
             </div>
-            <div className="md:order-1  w-1/2">
+            <div className="md:order-1 col-md-6">
               <InViewTransition delay={0.65}>
                 <Image
                   alt="Christian images"
@@ -144,14 +144,14 @@ export default function Vision() {
           </div>
 
           <div className="row">
-            <div className="col-md-6 order-md-1 md:order-2">
+            <div className="col-md-6 order-md-1 md:order-2 flex flex-col md:gap-6 gap-3">
               <InViewTransition delay={0.25}>
-                <h3 className="text-start text-xl font-semibold text-gray-800 md:text-2xl">
+                <h3 className="text-start text-xl font-semibold mb-0 text-gray-800 md:text-2xl">
                   {t('vision.projects_p2_1')}
                 </h3>
               </InViewTransition>
               <InViewTransition delay={0.25}>
-                <p className="text-md text-start text-gray-600 md:text-lg ">
+                <p className="text-md text-start mb-0 text-gray-600 md:text-lg ">
                   {t('vision.projects_p2_2')}
                 </p>
               </InViewTransition>
@@ -168,14 +168,14 @@ export default function Vision() {
           </div>
 
           <div className="row">
-            <div className="col-md-6 md:order-2">
+            <div className="col-md-6 md:order-2 flex flex-col md:gap-6 gap-3">
               <InViewTransition delay={0.25}>
-                <h3 className="text-start text-xl font-semibold text-gray-800 md:text-2xl">
+                <h3 className="text-start text-xl mb-0 font-semibold text-gray-800 md:text-2xl">
                   {t('vision.projects_p3_1')}
                 </h3>
               </InViewTransition>
               <InViewTransition delay={0.25}>
-                <p className="text-md text-gray-600 md:text-lg">
+                <p className="text-md text-gray-600 mb-0 md:text-lg">
                   {t('vision.projects_p3_2')}
                 </p>
               </InViewTransition>
@@ -192,14 +192,14 @@ export default function Vision() {
           </div>
 
           <div className="row">
-            <div className="col-md-6 order-md-1 md:order-2">
+            <div className="col-md-6 order-md-1 md:order-2 flex flex-col md:gap-6 gap-3">
               <InViewTransition delay={0.25}>
-                <h3 className="text-start text-xl font-semibold text-gray-800 md:text-2xl">
+                <h3 className="text-start text-xl mb-0 font-semibold text-gray-800 md:text-2xl">
                   {t('vision.projects_p3_7')}
                 </h3>
               </InViewTransition>
               <InViewTransition delay={0.25}>
-                <p className="text-md text-gray-600 md:text-lg">
+                <p className="text-md text-gray-600 mb-0 md:text-lg">
                   {t('vision.projects_p3_6')}
                 </p>
               </InViewTransition>
@@ -216,14 +216,14 @@ export default function Vision() {
           </div>
 
           <div className="row">
-            <div className="col-md-6 md:order-2">
+            <div className="col-md-6 md:order-2 flex flex-col md:gap-6 gap-3">
               <InViewTransition delay={0.25}>
-                <h3 className="text-start text-xl font-semibold text-gray-800 md:text-2xl">
+                <h3 className="text-start text-xl mb-0 font-semibold text-gray-800 md:text-2xl">
                   {t('vision.projects_p4_1')}
                 </h3>
               </InViewTransition>
               <InViewTransition delay={0.25}>
-                <p className="text-md text-gray-600 md:text-lg">
+                <p className="text-md text-gray-600 mb-0 md:text-lg">
                   {t('vision.projects_p4_2')}
                 </p>
               </InViewTransition>
