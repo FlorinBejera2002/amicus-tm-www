@@ -24,23 +24,7 @@ export const metadata: Metadata = {
 
 const About = () => {
   const t = useTranslations()
-  const leftSectionText = [
-    <h1 className="mb-3 text-2xl font-bold md:mb-6 md:pt-0 md:text-3xl" key={1}>
-      {t('donate.title')}
-    </h1>,
-    <p className="mb-2 text-gray-800 md:mb-4" key={2}>
-      {t('donate.paragraf_1')}
-    </p>,
-    <p className="mb-2 text-gray-800 md:mb-4" key={3}>
-      {t('donate.paragraf_2')}
-    </p>,
-    <p className="mb-2 text-gray-800 md:mb-4" key={4}>
-      {t('donate.paragraf_3')}
-    </p>,
-    <p className="mb-0 text-gray-800" key={5}>
-      {t('donate.paragraf_4')}
-    </p>
-  ]
+ 
 
   return (
     <div className="main" role="main">
@@ -85,15 +69,6 @@ const About = () => {
 
       <div className="custom-page-content p-relative z-index-2 text-md flex w-full justify-center ">
         <div className="max-w-6xl flex flex-col content-center rounded-md bg-white p-8 shadow-lg md:p-12 gap-10">
-          <div className=" rounded-md bg-white md:flex md:items-center">
-            <div className="flex-[1.75]">
-              {leftSectionText.map((item, idx) => (
-                <InViewTransition delay={0.25 * idx} key={idx}>
-                  {item}
-                </InViewTransition>
-              ))}
-            </div>
-          </div>
 
           <div className="max-w-full">
             <InViewTransition delay={0.25}>
