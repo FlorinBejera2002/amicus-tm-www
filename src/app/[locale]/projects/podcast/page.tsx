@@ -57,7 +57,7 @@ export default function Podcast() {
       </section>
 
       <div className="custom-page-content z-2 max-w-6xl">
-        <div className="rounded-md bg-white p-8 shadow-lg md:p-12">
+        <div className="rounded-md bg-white p-8 shadow-lg flex flex-col gap-8">
           <Hero />
           <BottomSection />
         </div>
