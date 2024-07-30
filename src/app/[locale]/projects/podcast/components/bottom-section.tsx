@@ -43,6 +43,7 @@ export default function BottomSection() {
             <p className="!text-start md:!text-center md:text-lg">
               {t('bottom-paragraf')}
             </p>
+
             <p className="!text-start m-0 md:!text-center">
               {t('bottom-socials')}
             </p>

@@ -112,59 +112,57 @@ export default function Team() {
 
   return (
     <div className="bg-color-dark relative lazyload mx-auto bg-cover bg-center">
-        <div className="md:p-28 p-8">
-          <InViewTransition>
-            <h2 className="mb-0 text-center text-xl font-semibold text-gray-50 lg:text-4xl">
-              {t('title-a4c')}
-            </h2>
-          </InViewTransition>
+      <div className="md:p-28 p-8">
+        <InViewTransition>
+          <h2 className="mb-0 text-center text-xl font-semibold text-gray-50 lg:text-4xl">
+            {t('title-a4c')}
+          </h2>
+        </InViewTransition>
 
-          <div className="relative">
-            <button
-              className="absolute left-0 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 transform items-center justify-center rounded-full border-2 border-[#061e35] bg-[#061e35] bg-opacity-50 text-white hover:bg-opacity-75 lg:left-20 lg:ml-20 xl:hidden"
-              onClick={handlePrevClick}
-            >
-              <FaAngleLeft className="h-6 w-6" />
-            </button>
-            <div className="grid grid-cols-1 gap-3 overflow-hidden md:grid-cols-2 md:px-3 md:pb-3 xl:grid-cols-7">
-              {getVisibleMembers().map((member, idx) => (
-                <InViewTransition damping={50} delay={0.25 * idx} key={idx}>
-                  <div className="group relative z-10 mt-4 flex flex-col items-center gap-1 overflow-hidden rounded-md bg-gradient-to-b from-[#090d1a] via-blue-900 to-[#061e35] duration-300">
-                    <Image
-                      alt={member.name}
-                      className="w-full pt-3"
-                      src={member.img}
-                    />
-                    <div className="absolute bottom-2 left-2 gap-1 pl-2">
-                      <b className="text-sm text-gray-50 group-hover:hidden md:text-base">
-                        {member.name}
-                      </b>
-                      <p className="text-xs text-white group-hover:hidden md:text-sm">
-                        {member.role}
+        <div className="relative">
+          <button
+            className="absolute left-0 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 transform items-center justify-center rounded-full border-2 border-[#061e35] bg-[#061e35] bg-opacity-50 text-white hover:bg-opacity-75 lg:left-20 lg:ml-20 xl:hidden"
+            onClick={handlePrevClick}
+          >
+            <FaAngleLeft className="h-6 w-6" />
+          </button>
+          <div className="grid grid-cols-1 gap-3 overflow-hidden md:grid-cols-2 md:px-3 md:pb-3 xl:grid-cols-7">
+            {getVisibleMembers().map((member, idx) => (
+              <InViewTransition damping={50} delay={0.25 * idx} key={idx}>
+                <div className="group relative z-10 mt-4 flex flex-col items-center gap-1 overflow-hidden rounded-md bg-gradient-to-b from-[#090d1a] via-blue-900 to-[#061e35] duration-300">
+                  <Image
+                    alt={member.name}
+                    className="w-full pt-3"
+                    src={member.img}
+                  />
+                  <div className="absolute bottom-2 left-2 gap-1 pl-2">
+                    <b className="text-sm text-gray-50 group-hover:hidden md:text-base">
+                      {member.name}
+                    </b>
+                    <p className="text-xs text-white group-hover:hidden md:text-sm">
+                      {member.role}
+                    </p>
+                  </div>
+                  <div className="absolute bottom-0 left-0 right-0 top-0 z-10 w-full translate-y-full transform rounded-md bg-[#122a80] bg-opacity-90 p-4 text-white transition-transform duration-1000 ease-in-out group-hover:translate-y-0">
+                    <div className="absolute bottom-3">
+                      <h3 className="pb-2 text-sm font-bold">{member.name}</h3>
+                      <p className="pr-4 text-xs font-medium text-white">
+                        {member.description}
                       </p>
                     </div>
-                    <div className="absolute bottom-0 left-0 right-0 top-0 z-10 w-full translate-y-full transform rounded-md bg-[#122a80] bg-opacity-90 p-4 text-white transition-transform duration-1000 ease-in-out group-hover:translate-y-0">
-                      <div className="absolute bottom-3">
-                        <h3 className="pb-2 text-sm font-bold">
-                          {member.name}
-                        </h3>
-                        <p className="pr-4 text-xs font-medium text-white">
-                          {member.description}
-                        </p>
-                      </div>
-                    </div>
                   </div>
-                </InViewTransition>
-              ))}
-            </div>
-            <button
-              className="absolute right-0 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 transform items-center justify-center rounded-full border-2 border-[#061e35] bg-[#061e35] bg-opacity-50 text-white hover:bg-opacity-75 lg:mr-20 xl:hidden"
-              onClick={handleNextClick}
-            >
-              <FaAngleRight className="h-6 w-6" />
-            </button>
+                </div>
+              </InViewTransition>
+            ))}
           </div>
+          <button
+            className="absolute right-0 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 transform items-center justify-center rounded-full border-2 border-[#061e35] bg-[#061e35] bg-opacity-50 text-white hover:bg-opacity-75 lg:mr-20 xl:hidden"
+            onClick={handleNextClick}
+          >
+            <FaAngleRight className="h-6 w-6" />
+          </button>
         </div>
+      </div>
     </div>
   )
 }
