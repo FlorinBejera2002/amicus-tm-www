@@ -63,7 +63,7 @@ export default function TimeIsNow() {
         <Animation />
       </section>
       <div className="custom-page-content z-2 max-w-6xl">
-        <div className="rounded-md bg-white p-8 shadow-lg md:p-12">
+        <div className="rounded-md bg-white p-8 flex flex-col gap-8 shadow-lg">
           <HeroSection />
           <TrailerSection />
           <EpisodeSection />

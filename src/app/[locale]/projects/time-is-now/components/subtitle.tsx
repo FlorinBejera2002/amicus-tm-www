@@ -7,31 +7,31 @@ export default function Subtitle() {
 
   return (
     <>
-      <div className="mb-24 flex flex-wrap md:mb-12">
-        <div className="flex w-full flex-1 flex-col items-center gap-1">
+      <div className=" flex flex-wrap gap-8">
+        <div className="flex w-full flex-1 flex-col items-center gap-3 md:gap-6">
           <InViewTransition delay={0.55}>
-            <h4 className="font-bold text-yellow-600">{t('subtitle')}</h4>
+            <h4 className="font-bold text-yellow-600 m-0">{t('subtitle')}</h4>
           </InViewTransition>
 
           <InViewTransition delay={0.75}>
-            <p className="w-80 text-center text-sm text-gray-800 md:w-full">
+            <p className="w-80 text-center text-sm text-gray-800 md:w-full m-0">
               {t('subtitle_text')}
             </p>
           </InViewTransition>
         </div>
 
-        <div className="flex flex-1 flex-col items-center justify-center">
+        <div className="flex flex-1 flex-col items-center justify-center gap-3 md:gap-6">
           <InViewTransition delay={0.75}>
-            <h3 className="font-bold text-gray-800">{t('title')}</h3>
+            <h3 className="font-bold text-gray-800 m-0">{t('title')}</h3>
           </InViewTransition>
 
           <InViewTransition delay={0.85}>
-            <p className="text-md text-gray-800">{t('text_bottom')}</p>
+            <p className="text-md text-gray-800 m-0">{t('text_bottom')}</p>
           </InViewTransition>
 
           <InViewTransition delay={0.95}>
-            <div className="flex w-64 flex-col items-center justify-center gap-1 border-y border-yellow-600 py-4">
-              <h3 className="font-bold text-yellow-600">
+            <div className="flex w-64 flex-col items-center justify-center border-y gap-3 md:gap-6 border-yellow-600 py-3 md:py-6">
+              <h3 className="font-bold text-yellow-600 m-0">
                 {t('serial_bottom')}
               </h3>
               <Link

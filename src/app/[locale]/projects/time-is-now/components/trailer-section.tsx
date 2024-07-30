@@ -9,9 +9,9 @@ export default function TrailerSection() {
   const t = useTranslations('serial')
 
   return (
-    <div className="flex flex-col pb-14">
+    <div className="flex flex-col gap-3 md:gap-6">
       <InViewTransition delay={0.55}>
-        <h1 className="text-start text-2xl font-bold text-accent md:pb-6 md:text-4xl">
+        <h1 className="text-start text-2xl m-0 font-bold text-accent md:text-4xl">
           {t('trailer')}
         </h1>
       </InViewTransition>

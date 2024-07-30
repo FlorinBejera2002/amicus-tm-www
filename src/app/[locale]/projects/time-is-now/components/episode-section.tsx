@@ -10,9 +10,9 @@ const EpisodeSection = () => {
 
   return (
     <div className="!z-2 relative flex flex-col">
-      <div className="flex w-full flex-col">
+      <div className="flex w-full flex-col gap-3">
         <InViewTransition delay={0.55}>
-          <h1 className="text-start text-2xl font-bold text-accent md:pb-6 md:text-3xl">
+          <h1 className="text-start text-2xl font-bold text-accent md:text-3xl">
             {t('title_serial')}
           </h1>
         </InViewTransition>
@@ -39,7 +39,7 @@ const EpisodeSection = () => {
       </div>
 
       <InViewTransition delay={0.95}>
-        <div className="text-md mb-5 mt-5 flex w-full flex-col items-center justify-center border-b border-t border-gray-800 py-5 md:mb-24 md:py-7 md:text-xl">
+        <div className="flex w-full flex-col items-center justify-center border-b border-t border-gray-800 pt-8 md:text-xl">
           <q className=" text-center font-semibold text-gray-800">
             {t('verset')}
           </q>
