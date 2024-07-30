@@ -43,7 +43,7 @@ export default function EvangelismSteps() {
   ]
 
   return (
-    <div className="!relative !z-10 mx-auto -mt-12 grid max-w-6xl rounded-md bg-white px-8 pb-8 shadow-lg md:-mt-52 md:pt-52 xl:grid-cols-2">
+    <div className="!relative !z-10 mx-auto p-8 md:-mb-16 -mt-16 grid max-w-6xl rounded-md bg-white shadow-lg md:-mt-52 md:pt-40 xl:grid-cols-2">
       <div className=" hidden items-center justify-center md:flex">
         <InViewTransition
           customClassname="flex justify-center items-center w-full"
@@ -53,15 +53,15 @@ export default function EvangelismSteps() {
         >
           <Image
             alt="Bible picture"
-            className="ml-10 size-full rounded-md rounded-tr-[7rem] object-cover pr-16"
+            className=" size-full rounded-md rounded-tr-[7rem] object-cover pr-16"
             src={step}
           />
         </InViewTransition>
       </div>
 
-      <div className="flex flex-col gap-4 md:gap-12 xl:gap-16">
+      <div className="flex flex-col gap-4 md:gap-12 xl:gap-16 md:justify-center">
         <InViewTransition damping={25} delay={0.5}>
-          <h1 className="text-3xl font-semibold md:text-4xl xl:text-5xl">
+          <h1 className="text-3xl font-bold md:text-4xl xl:text-4xl">
             {t('title')}
           </h1>
         </InViewTransition>

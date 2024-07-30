@@ -23,11 +23,11 @@ export const Step = ({
       )}
     >
       {icon}
-      <div className="flex flex-col items-start !gap-2 md:!gap-0">
+      <div className="flex flex-col md:justify-center items-start !gap-2 md:!gap-0">
         <h3 className="text-md mb-0 text-start font-semibold md:text-lg">
           {headerLabel}
         </h3>
-        <p className="mb-0 text-start">{description}</p>
+        <p className="mb-0 text-start text-sm">{description}</p>
       </div>
     </div>
   )

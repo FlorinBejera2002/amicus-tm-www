@@ -111,9 +111,8 @@ export default function Team() {
   }
 
   return (
-    <div className="bg-color-dark p-relative custom-section-1 lazyload mx-auto bg-cover bg-center md:px-28 md:pb-24">
-      <div className="p-8 md:pb-0 md:pt-8 ">
-        <div className="row align-items-center">
+    <div className="bg-color-dark relative lazyload mx-auto bg-cover bg-center">
+        <div className="md:p-28 p-8">
           <InViewTransition>
             <h2 className="mb-0 text-center text-xl font-semibold text-gray-50 lg:text-4xl">
               {t('title-a4c')}
@@ -122,7 +121,7 @@ export default function Team() {
 
           <div className="relative">
             <button
-              className="absolute  left-0 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 transform items-center justify-center rounded-full border-2 border-[#061e35] bg-[#061e35] bg-opacity-50 text-white hover:bg-opacity-75 lg:left-20 lg:ml-20 xl:hidden"
+              className="absolute left-0 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 transform items-center justify-center rounded-full border-2 border-[#061e35] bg-[#061e35] bg-opacity-50 text-white hover:bg-opacity-75 lg:left-20 lg:ml-20 xl:hidden"
               onClick={handlePrevClick}
             >
               <FaAngleLeft className="h-6 w-6" />
@@ -166,7 +165,6 @@ export default function Team() {
             </button>
           </div>
         </div>
-      </div>
     </div>
   )
 }
