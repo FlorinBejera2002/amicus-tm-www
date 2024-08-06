@@ -20,18 +20,6 @@ export default function Team() {
 
   const teamMembers = [
     {
-      description: t('christian_des'),
-      img: Chris,
-      name: 'Christian Potra',
-      role: t('christian-potra')
-    },
-    {
-      description: t('dana_des'),
-      img: Dana,
-      name: 'Dana Potra',
-      role: t('dana-potra')
-    },
-    {
       description: t('avram_des'),
       img: AvramSabou,
       name: 'Avram Sabou',
@@ -43,6 +31,19 @@ export default function Team() {
       name: 'Adi Kovaci',
       role: t('adi-kovaci')
     },
+    {
+      description: t('christian_des'),
+      img: Chris,
+      name: 'Christian Potra',
+      role: t('christian-potra')
+    },
+    {
+      description: t('dana_des'),
+      img: Dana,
+      name: 'Dana Potra',
+      role: t('dana-potra')
+    },
+    
     {
       description: t('andrei_des'),
       img: Andrei,
