@@ -57,36 +57,44 @@ export default function Book() {
 
       <div className="custom-page-content z-2 max-w-4xl">
         <div className="rounded-md bg-white shadow-lg p-8 gap-6  md:gap-8 md:p-12 flex flex-col items-center">
-          <div className="w-full flex justify-center">
-            <Image
-              src="/book-image.png"
-              alt="Inteligența Divină"
-              width={400}
-              height={400}
-            />
-          </div>
-          <div className="w-full text-center flex flex-col gap-4">
-            <h2 className="text-3xl font-bold text-gray-900 m-0">
-              {t('book.title_1')}
-            </h2>
-            <h3 className="text-xl font-semibold text-gray-700 m-0">
-              {t('book.subtitle')}
-            </h3>
-          </div>
-          <div className="w-full flex flex-col gap-4">
-            <p className="text-gray-600 m-0">{t('book.paragraf_1')}</p>
-            <p className="text-gray-600 m-0">{t('book.paragraf_2')}</p>
-            <p className="text-gray-600 m-0">{t('book.paragraf_3')}</p>
-            <p className="text-gray-600 m-0">{t('book.paragraf_4')}</p>
-            <div className="flex justify-center">
-              <Link
-                href="https://www.kingdom-design.org/produs/inteligenta-divina-scott-hogle/"
-                className="flex min-w-fit rounded-md bg-accent px-3 py-2.5 text-xs font-semibold text-black !no-underline"
-              >
-                {t('book.button')}
-              </Link>
+          <InViewTransition delay={0.25}>
+            <div className="w-full flex justify-center">
+              <Image
+                src="/book-image.png"
+                alt="Inteligența Divină"
+                width={400}
+                height={400}
+              />
             </div>
-          </div>
+          </InViewTransition>
+
+          <InViewTransition delay={0.5}>
+            <div className="w-full text-center flex flex-col gap-4">
+              <h2 className="text-3xl font-bold text-gray-900 m-0">
+                {t('book.title_1')}
+              </h2>
+              <h3 className="text-xl font-semibold text-gray-700 m-0">
+                {t('book.subtitle')}
+              </h3>
+            </div>
+          </InViewTransition>
+
+          <InViewTransition delay={0.75}>
+            <div className="w-full flex flex-col gap-4">
+              <p className="text-gray-600 m-0">{t('book.paragraf_1')}</p>
+              <p className="text-gray-600 m-0">{t('book.paragraf_2')}</p>
+              <p className="text-gray-600 m-0">{t('book.paragraf_3')}</p>
+              <p className="text-gray-600 m-0">{t('book.paragraf_4')}</p>
+              <div className="flex justify-center">
+                <Link
+                  href="https://www.kingdom-design.org/produs/inteligenta-divina-scott-hogle/"
+                  className="flex min-w-fit rounded-md bg-accent px-3 py-2.5 text-xs font-semibold text-black !no-underline"
+                >
+                  {t('book.button')}
+                </Link>
+              </div>
+            </div>
+          </InViewTransition>
         </div>
       </div>
     </div>
