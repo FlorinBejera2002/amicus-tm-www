@@ -4,9 +4,9 @@ import InViewTransition from '../../common/in-view-transition'
 
 import type { Metadata } from 'next'
 import { useTranslations } from 'next-intl'
+import Image from 'next/image'
 import Link from 'next/link'
 import { FaAngleRight } from 'react-icons/fa'
-import Image from 'next/image'
 
 export const metadata: Metadata = {
   title: 'Arise for Christ | Podcast'
