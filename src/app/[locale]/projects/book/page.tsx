@@ -55,15 +55,16 @@ export default function Book() {
         <Animation />
       </section>
 
-      <div className="custom-page-content z-2 max-w-4xl xl:max-w-6xl">
-        <div className="rounded-md bg-white shadow-lg p-8 gap-6  md:gap-8 md:p-12 grid grid-cols-1 xl:grid-cols-2 items-center">
+      <div className="custom-page-content z-2 max-w-4xl xl:max-w-5xl">
+        <div className="rounded-md bg-white shadow-lg p-8 gap-6  md:p-12 grid grid-cols-1 md:grid-cols-2 items-center justify-center">
           <InViewTransition delay={0.25}>
             <div className=" flex justify-center">
               <Image
                 src="/book-image.png"
                 alt="Inteligența Divină"
-                width={500}
-                height={500}
+                className="w-full"
+                width={800}
+                height={800}
               />
             </div>
           </InViewTransition>
