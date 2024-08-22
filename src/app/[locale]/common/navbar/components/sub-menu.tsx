@@ -75,6 +75,22 @@ const SubMenu = ({
                 {t('header.project_subPodcast')}
               </Link>
             </motion.div>
+            <motion.div
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              initial={{ opacity: 0, y: -10 }}
+              transition={{ delay: 0.1, duration: 0.25 }}
+            >
+              <Link
+                className="flex w-fit items-center gap-2 rounded-md bg-accent px-3 py-2 text-sm text-black no-underline transition-all duration-300 hover:bg-gray-100 hover:text-gray-900 hover:!no-underline"
+                href={`/${language}/projects/book`}
+                onClick={handleSubMenuItemClick}
+                role="menuitem"
+              >
+                <IoReturnDownForwardOutline className="size-5" />
+                {t('book.book')}
+              </Link>
+            </motion.div>
           </div>
         </motion.div>
       )}

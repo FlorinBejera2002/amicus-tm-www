@@ -117,9 +117,17 @@
   },
 
   "book": {
+    "book": "Carte",
     "author": "~ Mark Cole",
     "description": "\"Ca un masterclass pentru creștinul care muncește, acest devoțional scris pentru viața profesională îți va aprinde pasiunea pentru Isus într-un mod cu totul nou.\"",
-    "title": "Cartea \"Inteligența divină\""
+    "title": "Cartea \"Inteligența divină\"",
+    "subtitle": "Scott Hogle",
+    "title_1": "Inteligența divină",
+    "paragraf_1": "Cartea „Inteligența divină” de Scott Hogle, este o frumoasă carte „pentru fiecare”, este un devoțional care ne provoacă cinci zile din fiecare săptămână, timp de un an!",
+    "paragraf_2": "Este un „instrument” pe care merită să o ai la tine; poate în „cameră casei tale”, în mașină, la birou chiar la locul de muncă, pentru a citi și a o „digera”, fiind o binecuvântare pentru credincioși „și mai puțin credincioși”, din toate categoriile sociale și profesionale în care ne regăsim.",
+    "paragraf_3": "Este un material bun, ce pornește de la un pasaj respectiv verset biblic, care apoi prezintă o învățătură sănătoasă, după care te interoghează și te face să reflectezi personal la cine ești și ce ar trebui să mai faci.",
+    "paragraf_4": "La finalul fiecărei scrierii zilnice, are frumoase gânduri inteligente! Este pentru tine și pentru a face cadou un prieten drag!",
+    "button": "Comandă acum"
   },
 
   "button": {
