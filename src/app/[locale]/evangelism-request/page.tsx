@@ -65,7 +65,7 @@ const EvangelismRequest = () => {
                   {t('evangelismForm.title')}
                 </li>
               </ul>
-              <h1 className="text-color-light font-weight-bold text-10">
+              <h1 className="text-color-light font-weight-bold text-4xl px-4">
                 {t('evangelismForm.title')}
               </h1>
             </div>
