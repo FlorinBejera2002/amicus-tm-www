@@ -269,42 +269,45 @@ const ContentEvangelizationForm = () => {
               }}
               open={isOpen}
             >
-              <div className="fixed inset-0 flex w-screen items-center justify-center p-4">
-                <DialogPanel className="max-w-lg space-y-4 rounded bg-accent p-12">
-                  <DialogTitle className="font-bold">
+              <div className="fixed inset-0 flex items-center justify-center p-4 mt-20">
+                <DialogPanel className="w-full max-w-lg overflow-y-auto space-y-4 rounded bg-accent p-3 md:p-6">
+                  <DialogTitle className="font-bold text-center text-lg md:text-xl">
                     {t('ev_embed')}
                   </DialogTitle>
-                  <p>{t('ev_embed_description')}</p>
+                  <p className="text-sm text-center">
+                    {t('ev_embed_description')}
+                  </p>
 
-                  <p>
+                  <p className="text-sm">
                     {t('ev_embed_code_label')}{' '}
                     {showCopyLabel && (
                       <span className="font-bold">copiat!</span>
                     )}
                   </p>
-                  <div className="relative overflow-hidden rounded bg-white p-2">
+                  <div className="relative overflow-hidden rounded bg-white text-xs p-2">
                     <div className="absolute right-0 top-0 p-1">
                       <MdOutlineContentCopy
-                        className=" cursor-pointer"
+                        className="cursor-pointer"
                         onClick={() => {
                           setShowCopyLabel(true)
                           navigator.clipboard.writeText(code)
                         }}
                       />
                     </div>
-
                     {code}
                   </div>
 
-                  <p>{t('ev_embed_example_label')}</p>
-                  <div className="flex justify-center rounded border-2 border-dashed border-black p-4">
+                  <p className="text-sm text-center mt-2">
+                    {t('ev_embed_example_label')}
+                  </p>
+                  <div className="flex justify-center rounded border-2 border-dashed border-black p-3">
                     <button className="flex items-center gap-2 rounded bg-black px-3 py-2 text-xs font-semibold text-[#F5B298]">
                       {t('ev_embed_example_button')} <br />{' '}
                       {t('ev_embed_example_button2')}
                     </button>
                   </div>
 
-                  <div className="flex gap-4">
+                  <div className="flex justify-center gap-4">
                     <button
                       className="flex items-center gap-2 rounded bg-black px-3 py-2 text-xs font-semibold text-[#F5B298]"
                       onClick={() => {
