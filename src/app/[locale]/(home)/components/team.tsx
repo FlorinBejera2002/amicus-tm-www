@@ -9,7 +9,6 @@ import { FaAngleLeft, FaAngleRight } from 'react-icons/fa6'
 
 import AdrianCovaci from '../../../../../public/adi.webp'
 import AvramSabou from '../../../../../public/img/team/Avram.webp'
-import Andrei from '../../../../../public/img/team/andrei bir.webp'
 import Chris from '../../../../../public/img/team/chris potra.webp'
 import Dana from '../../../../../public/img/team/dana potra.webp'
 import Simona from '../../../../../public/img/team/simo.webp'
@@ -43,13 +42,7 @@ export default function Team() {
       name: 'Dana Potra',
       role: t('dana-potra')
     },
-    
-    {
-      description: t('andrei_des'),
-      img: Andrei,
-      name: 'Andrei Birtea',
-      role: t('andrei-birtea')
-    },
+
     {
       description: t('simona_des'),
       img: Simona,
@@ -70,7 +63,7 @@ export default function Team() {
   useEffect(() => {
     const updateCardsToShow = () => {
       if (window.innerWidth >= 1280) {
-        setCardsToShow(7)
+        setCardsToShow(6)
       } else if (window.innerWidth >= 768) {
         setCardsToShow(2)
       } else {
@@ -127,7 +120,7 @@ export default function Team() {
           >
             <FaAngleLeft className="h-6 w-6" />
           </button>
-          <div className="grid grid-cols-1 gap-3 overflow-hidden md:grid-cols-2 md:px-3 md:pb-3 xl:grid-cols-7">
+          <div className="grid grid-cols-1 gap-3 overflow-hidden md:grid-cols-2 md:px-3 md:pb-3 xl:grid-cols-6">
             {getVisibleMembers().map((member, idx) => (
               <InViewTransition damping={50} delay={0.25 * idx} key={idx}>
                 <div className="group relative z-10 mt-4 flex flex-col items-center gap-1 overflow-hidden rounded-md bg-gradient-to-b from-[#090d1a] via-blue-900 to-[#061e35] duration-300">
