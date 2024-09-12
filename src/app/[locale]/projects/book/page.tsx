@@ -86,14 +86,14 @@ export default function Book() {
                 <p className="text-gray-600 m-0">{t('book.paragraf_2')}</p>
                 <p className="text-gray-600 m-0">{t('book.paragraf_3')}</p>
                 <p className="text-gray-600 m-0">{t('book.paragraf_4')}</p>
-                <div className="flex justify-center">
+                {/* <div className="flex justify-center">
                   <Link
                     href="https://www.kingdom-design.org/produs/inteligenta-divina-scott-hogle/"
                     className="flex min-w-fit rounded-md bg-accent px-3 py-2.5 text-xs font-semibold text-black !no-underline"
                   >
                     {t('book.button')}
                   </Link>
-                </div>
+                </div> */}
               </div>
             </div>
           </InViewTransition>
