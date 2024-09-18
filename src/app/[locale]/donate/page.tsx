@@ -9,6 +9,7 @@ import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { FaDonate } from 'react-icons/fa'
+import { FaFileAlt } from 'react-icons/fa'
 import { FaAngleRight } from 'react-icons/fa'
 
 import CECLogo from '../../../../public/CEC Bank.svg'
@@ -107,6 +108,7 @@ const About = () => {
                     </div>
                   </div>
                 </InViewTransition>
+
                 <InViewTransition delay={0.25}>
                   <div className="flex flex-col items-center justify-between gap-16 rounded-lg bg-purple-50 p-10 shadow-md md:h-96">
                     <Image
@@ -176,6 +178,7 @@ const About = () => {
                     </div>
                   </div>
                 </InViewTransition>
+
                 <InViewTransition delay={0.25}>
                   <div className="flex flex-col items-center justify-between gap-6 rounded-lg bg-green-50 p-10 shadow-md md:h-96 lg:w-full">
                     <Image
@@ -215,14 +218,22 @@ const About = () => {
             </InViewTransition>
           </div>
 
-          <InViewTransition delay={0.25}>
-            <h1 className="mb-3 text-2xl md:text-3xl font-bold" key={1}>
-              {t('donate.title_3')}
-            </h1>
-            <div className="w-full md:w-2/3 ">
-              <p className="mb-0">{t('donate.paragraf_5')}</p>
-            </div>
-          </InViewTransition>
+          <div className="mt-20">
+            <InViewTransition delay={0.25}>
+              <h1 className="mb-3 text-2xl md:text-3xl font-bold" key={1}>
+                {t('donate.title_3')}
+              </h1>
+
+              <span className="inline-flex cursor-pointer items-center gap-2 rounded-md bg-accent px-3 py-2 text-center font-semibold text-black opacity-50">
+                <FaFileAlt />
+                {t('donate.form')}
+              </span>
+
+              <div className="w-full mt-4">
+                <p className="mb-0">{t('donate.paragraf_5')}</p>
+              </div>
+            </InViewTransition>
+          </div>
         </div>
       </div>
     </div>
