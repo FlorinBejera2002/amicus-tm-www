@@ -161,7 +161,7 @@ export default function CollaboratorForm() {
             className=" flex size-9 items-center justify-center self-start rounded-md bg-accent px-20 py-1 font-bold text-black disabled:pointer-events-none disabled:opacity-50 md:!mt-0 md:self-center"
             type="submit"
           >
-            {t('send')}
+            {t('collaborator.send')}
           </button>
         </form>
       </InViewTransition>
