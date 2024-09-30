@@ -119,6 +119,15 @@
     "read_more": "read more...",
     "title": "Blog"
   },
+  "collaborator": {
+    "title": "Get Involved",
+    "subtitle": "Collaborate with the Arise for Christ team",
+    "title_1": "“Then they came to Him, bringing a paralytic who was carried by four men.” – Mark 2:3",
+    "paragraf_1": "Like the four men who carried the paralytic to Jesus, we too are called to help the fallen souls around us. Every act of support can bring real change in the life of someone who needs healing and hope.",
+    "paragraf_2": "If you want to get involved and become part of the Arise for Christ team, we invite you to fill out the form below. Together, we can bring light and help to those around us.",
+    "form": "Complete the form and join the team:"
+  },
+
   "book": {
     "book": "Book",
     "author": "~ Mark Cole",
@@ -130,7 +139,7 @@
     "paragraf_2": "It is an „instrument” that deserves your attention; can be in „your case”, in your home, at your desk, for you to read and to „digest”, being a binge for the believers „and less believers”, from all social and professional areas where you are.",
     "paragraf_3": "It is a good material, starting from a particularly well-written biblical passage, which then presents a fresh insight, after which you ask and you reflect personally on who you are and what you should do.",
     "paragraf_4": "At the end of each night's writing, there are frumoasy moments! It is for you and to make a sacrifice of a believer!",
-    "button": "Order now" 
+    "button": "Order now"
   },
 
   "button": {
@@ -217,6 +226,7 @@
     "about_us": "About Us",
     "actone": "Act One",
     "blog": "Blog",
+    "collaborator": "Involve",
     "company": "Pages",
     "contact": "Contact",
     "donate": "Donate",

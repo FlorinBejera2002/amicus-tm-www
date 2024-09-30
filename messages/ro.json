@@ -115,6 +115,14 @@
     "tooltip_costs_show_editing": "Editarea video",
     "tooltip_costs_travel": "Transport"
   },
+  "collaborator": {
+    "title": "Implicate",
+    "subtitle": "Colaborează cu echipa Arise for Christ",
+    "title_1": "„Apoi au venit la El, aducând un slăbănog pe care-l purtau patru oameni.” – Marcu 2:3",
+    "paragraf_1": "Ca acești patru oameni care l-au purtat pe slăbănog la Isus, și noi suntem chemați să ajutăm sufletele căzute din jurul nostru. Fiecare gest de sprijin poate aduce o schimbare reală în viața cuiva care are nevoie de vindecare și speranță.",
+    "paragraf_2": "Dacă vrei să te implici și să devii parte din echipa Arise for Christ, te invităm să completezi formularul de mai jos. Împreună putem aduce lumină și ajutor celor din jur.",
+    "form": "Completează formularul și alătură-te echipei:"
+  },
 
   "book": {
     "book": "Carte",
@@ -216,6 +224,7 @@
   "header": {
     "about_us": "Despre Noi",
     "actone": "Act One",
+    "collaborator": "Implicăte",
     "blog": "Blog",
     "company": "Pagini",
     "contact": "Contact",
