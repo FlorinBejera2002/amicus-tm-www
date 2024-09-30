@@ -43,7 +43,7 @@ export default function Team() {
       name: 'Dana Potra',
       role: t('dana-potra')
     },
-    
+
     {
       description: t('andrei_des'),
       img: Andrei,

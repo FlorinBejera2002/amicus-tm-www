@@ -24,7 +24,6 @@ export const metadata: Metadata = {
 
 const About = () => {
   const t = useTranslations()
- 
 
   return (
     <div className="main" role="main">
@@ -69,7 +68,6 @@ const About = () => {
 
       <div className="custom-page-content p-relative z-index-2 text-md flex w-full justify-center ">
         <div className="max-w-6xl flex flex-col content-center rounded-md bg-white p-8 shadow-lg md:p-12 gap-10">
-
           <div className="max-w-full">
             <InViewTransition delay={0.25}>
               <h1 className="text-2xl md:text-3xl font-bold text-gray-800 mb-3">

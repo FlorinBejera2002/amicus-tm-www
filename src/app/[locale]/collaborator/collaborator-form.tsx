@@ -1,9 +1,9 @@
 'use client'
-import InViewTransition from '../common/in-view-transition'
+import { cn } from '@/utils'
 import { createClient } from '@supabase/supabase-js'
 import { useTranslations } from 'next-intl'
 import { useState } from 'react'
-import { cn } from '@/utils'
+import InViewTransition from '../common/in-view-transition'
 
 type SubmitMessage = {
   content: string

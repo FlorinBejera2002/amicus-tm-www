@@ -2,6 +2,7 @@ import Animation from '../common/animation'
 import CustomHeroBg from '../common/custom-hero-bg'
 import InViewTransition from '../common/in-view-transition'
 import Book from './components/book'
+import { CardCollaborator } from './components/card-collaborator'
 import EvangelismSteps from './components/evangelism-steps/evangelism-steps'
 import { Newsletter } from './components/newsletter'
 import PersonalEvangelism from './components/personal-evangelism/personal-evangelism'
@@ -75,8 +76,9 @@ export default function Home() {
                     {t('question3')}
                   </h3>
                 </div>
-                <div className="ml-16 md:ml-0">
+                <div className="ml-16 md:ml-0 flex justify-between w-full">
                   <Newsletter />
+                  <CardCollaborator />
                 </div>
               </div>
             </div>
