@@ -224,7 +224,7 @@
     "home": "Acasă",
     "project": "Proiecte",
     "project_subPodcast": "Podcast",
-    "project_subProject": "Timpul este acum",
+    "project_subProject": "The time is now",
     "resources": "Resurse",
     "terms": "Termeni",
     "vision": "Viziunea"
@@ -273,18 +273,18 @@
     "vision": "VIZIUNEA"
   },
   "serial": {
-    "hero_paragraf1": "A dedicated team of missionaries is heading to the impoverished cities of the Philippines, sharing their faith with local communities. They face numerous challenges, experiencing intense moments every day. Filipinos are aided in building churches and spreading the gospel throughout their cities",
-    "hero_paragraf2": "We invite you to watch the series ' The Time is Now,' which consists of 15 episodes, each lasting 25 minutes. On this journey, missionaries traverse tribes, mountains, and islands, planting churches and spreading the gospel to the Filipino people.",
-    "reference": "Luke 10:2",
-    "serial_bottom": "TV Series 2023",
-    "subtitle": "SUBTITLE",
-    "subtitle_text": "Activate the button in the bottom right corner and select Romanian subtitles! Also, to watch the episodes in the highest quality, choose 2160p 4k.",
-    "text_bottom": "A series by Arise for Christ",
-    "title": "THE TIME IS NOW",
-    "title_description_hero": "FOLLOW THE 15-EPISODE SERIES.",
-    "title_serial": "Each episode can be accessed through the links below.",
-    "trailer": "OFFICIAL TRAILER",
-    "verset": "The fields are ripe for harvest, but the laborers are few. Therefore, pray to the Lord of the harvest to send out laborers into His harvest."
+    "hero_paragraf1": "O echipă dedicată de misionari se îndreaptă spre orașele sărace din Filipine, împărtășindu-și credința cu comunitățile locale. Ei se confruntă cu numeroase provocări, trăind momente intense în fiecare zi. Filipinezii sunt ajutați în construirea bisericilor și răspândirea Evangheliei în orașele lor.",
+    "hero_paragraf2": "Te invităm să urmărești seria 'The time is now,' care constă din 15 episoade, fiecare având o durată de 25 de minute. În această călătorie, misionarii traversează triburi, munți și insule, plantând biserici și răspândind Evanghelia poporului filipinez.",
+    "reference": "Luca 10:2",
+    "serial_bottom": "Serial TV 2023",
+    "subtitle": "SUBTITRARE",
+    "subtitle_text": "Activează butonul din colțul din dreapta jos și selectează subtitrările în română! De asemenea, pentru a viziona episoadele la cea mai bună calitate, alege 2160p 4k.",
+    "text_bottom": "O serie realizată de Arise for Christ",
+    "title": "The time is now",
+    "title_description_hero": "URMĂREȘTE SERIA DE 15 EPISOADE.",
+    "title_serial": "Fiecare episod poate fi accesat prin linkurile de mai jos.",
+    "trailer": "TRAILER OFICIAL",
+    "verset": "Holdele sunt gata de recoltă, dar lucrătorii sunt puțini. De aceea, rugați-L pe Domnul secerișului să trimită lucrători în secerișul Lui."
   },
   "steps_evangelization": {
     "evangelism_requests_count": "Cereri de evanghelizare create până în acest moment",
