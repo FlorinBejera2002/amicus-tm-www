@@ -28,10 +28,9 @@ export default function BottomSection() {
           <iframe
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen={true}
-            className="aspect-video rounded-md"
+            className="aspect-video rounded-md max-w-[800px] w-full"
             src="https://www.youtube.com/embed/XtwpJzDdQ0k"
             title="YouTube Video"
-            width={800}
           />
         </div>
       </InViewTransition>
