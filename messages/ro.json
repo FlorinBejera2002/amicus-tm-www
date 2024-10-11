@@ -240,9 +240,9 @@
     "vision": "Viziunea"
   },
   "hero": {
-    "question1": "Dorești mântuirea cuiva drag?",
-    "question2": "Ai nevoie de sprijin în rugăciune?",
-    "question3": "Vrei să încurajezi pe cineva?",
+    "question1": "Cum pot ajuta la mântuirea cuiva drag?",
+    "question2": "Cum pot să sprijin pe cineva în rugăciune?",
+    "question3": "Cum pot să încurajez pe cineva?",
     "title-hero": "Eternitate"
   },
 
@@ -270,7 +270,7 @@
   "podcast": {
     "bottom-paragraf": "Toate episoadele Podcastului nostru le puteți găsi și pe",
     "bottom-socials": "Apple Podcast, Spotify, sau Google Podcasts.",
-    "bottom-subtitle": "ASCULTĂ PE SPOTIFY",
+    "bottom-subtitle": "PODCAST",
     "bottom-title": "Urmărește ultimul episod al Podcastului nostru!",
     "hero-paragraf": "Acesta este un Podcast Arise for Christ unde ne propunem să aducem în evidență pe baza unor dialoguri, subiecte importante pentru biserica Lui Hristos din secolul 21.",
     "subscribe": "Abonează-te!",

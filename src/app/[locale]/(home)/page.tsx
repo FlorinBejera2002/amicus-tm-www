@@ -5,6 +5,7 @@ import Book from './components/book'
 import { CardCollaborator } from './components/card-collaborator'
 import EvangelismSteps from './components/evangelism-steps/evangelism-steps'
 import PersonalEvangelism from './components/personal-evangelism/personal-evangelism'
+import { QuestionCarousel } from './components/question-carousel'
 import Spotify from './components/spotify'
 import Team from './components/team'
 import YoutubeMiniFeed from './components/youtube-mini-feed'
@@ -64,18 +65,8 @@ export default function Home() {
           <div className="z-index-3 container !px-8">
             <div className="row min-vh-100 align-items-center">
               <div className="flex gap-3 flex-col items-center justify-center lg:items-start">
-                <div className="mt-4 text-wrap">
-                  <h3 className=" text-2xl font-bold text-white md:text-4xl lg:text-5xl">
-                    {t('question1')}
-                  </h3>
-                  <h3 className=" text-2xl font-bold text-white md:text-4xl lg:text-5xl">
-                    {t('question2')}
-                  </h3>
-                  <h3 className=" text-2xl font-bold text-white md:text-4xl lg:text-5xl">
-                    {t('question3')}
-                  </h3>
-                </div>
-                <div className="ml-16 md:ml-0">
+                <div className=" md:ml-0">
+                  <QuestionCarousel />
                   <CardCollaborator />
                 </div>
               </div>
