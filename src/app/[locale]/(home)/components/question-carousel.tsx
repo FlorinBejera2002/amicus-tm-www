@@ -1,7 +1,7 @@
 'use client'
 
 import { useTranslations } from 'next-intl'
-import { useState, useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
 export const QuestionCarousel = () => {
   const t = useTranslations('hero')
@@ -25,7 +25,7 @@ export const QuestionCarousel = () => {
   return (
     <div className="text-wrap flex flex-col justify-center mb-8">
       <h5 className="font-bold text-gray-500 text-sm md:text-xl">
-        Ți-ai pus vreodată întrebarea:
+        {t('title-question')}
       </h5>
       <div className={`overflow-hidden h-20`}>
         <div
