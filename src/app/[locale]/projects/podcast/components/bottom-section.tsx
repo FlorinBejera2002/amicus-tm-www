@@ -13,7 +13,7 @@ export default function BottomSection() {
   return (
     <div className="z-2 flex flex-col gap-8">
       <InViewTransition delay={0.95}>
-        <div className="flex w-full flex-col gap-3 md:gap-6">
+        <div className="flex w-full flex-col gap-3 md:gap-6 items-center">
           <div className="flex flex-wrap items-center justify-center gap-3 md:gap-6">
             <h1 className="mb-0 text-2xl font-bold text-gray-800 md:text-3xl">
               {t('bottom-title')}
@@ -28,9 +28,9 @@ export default function BottomSection() {
           <iframe
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen={true}
-            className="aspect-video rounded-md"
-            src="https://www.youtube.com/embed?listType=playlist&list=UUQy-aDJ2zjmVD7Yn2XusrsA&controls=0&modestbranding=1&index=1"
-            title="YouTube Playlist"
+            className="aspect-video rounded-md max-w-[800px] w-full"
+            src="https://www.youtube.com/embed/XtwpJzDdQ0k"
+            title="YouTube Video"
           />
         </div>
       </InViewTransition>
