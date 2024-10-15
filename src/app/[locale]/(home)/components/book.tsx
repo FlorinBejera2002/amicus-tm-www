@@ -15,7 +15,7 @@ export default function Book() {
         xOut={-100}
         yOut={0}
       >
-        <Image alt="Book Arise for Christ" src={book} />
+        <Image alt="Book Arise for Christ" src={book} className="w-[300px]" />
       </InViewTransition>
       <div className="flex flex-col justify-center md:pr-10 lg:pr-16">
         <InViewTransition delay={0.25}>

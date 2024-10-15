@@ -108,7 +108,7 @@ export default function Team() {
     <div className="bg-color-dark relative lazyload mx-auto bg-cover bg-center">
       <div className="md:p-28 p-8">
         <InViewTransition>
-          <h2 className="mb-0 text-center text-xl font-semibold text-gray-50 lg:text-4xl">
+          <h2 className="mb-0 text-center text-2xl font-semibold text-gray-50 lg:text-4xl">
             {t('title-a4c')}
           </h2>
         </InViewTransition>
@@ -137,7 +137,7 @@ export default function Team() {
                       {member.role}
                     </p>
                   </div>
-                  <div className="absolute bottom-0 left-0 right-0 top-0 z-10 w-full translate-y-full transform rounded-md bg-[#122a80] bg-opacity-90 p-4 text-white transition-transform duration-1000 ease-in-out group-hover:translate-y-0">
+                  <div className="absolute bottom-0 left-0 right-0 top-0 z-10 w-full translate-y-full transform rounded-md bg-[#122a80] bg-opacity-90 p-4 text-white transition-transform duration-500 ease-in-out group-hover:translate-y-0">
                     <div className="absolute bottom-3">
                       <h3 className="pb-2 text-sm font-bold">{member.name}</h3>
                       <p className="pr-4 text-xs font-medium text-white">

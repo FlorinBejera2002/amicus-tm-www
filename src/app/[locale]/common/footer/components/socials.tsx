@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { FaYoutube } from 'react-icons/fa'
 import { FaFacebookF, FaSpotify, FaTiktok } from 'react-icons/fa6'
 import { FaInstagram } from 'react-icons/fa6'
-import { IoLogoWhatsapp } from 'react-icons/io'
+import { IoLogoWhatsapp } from 'react-icons/io5'
 
 export default function Socials() {
   const links = [
