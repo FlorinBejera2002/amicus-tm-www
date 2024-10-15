@@ -8,10 +8,10 @@ import {
   FaTiktok,
   FaYoutube
 } from 'react-icons/fa'
-import InViewTransition from './in-view-transition'
-import { IoLogoWhatsapp } from 'react-icons/io'
 import { FaAngleDown } from 'react-icons/fa6'
+import { IoLogoWhatsapp } from 'react-icons/io'
 import { IoShareSocial } from 'react-icons/io5'
+import InViewTransition from './in-view-transition'
 
 import { useState } from 'react'
 
