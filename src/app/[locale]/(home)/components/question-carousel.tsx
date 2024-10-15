@@ -23,7 +23,7 @@ export const QuestionCarousel = () => {
   }, [questions.length])
 
   return (
-    <div className="text-wrap flex flex-col justify-center mb-8">
+    <div className="text-wrap flex flex-col justify-center mb-1">
       <h5 className="font-bold text-gray-500 text-sm md:text-xl">
         {t('title-question')}
       </h5>
@@ -33,7 +33,7 @@ export const QuestionCarousel = () => {
             isAnimating ? 'translate-y-0' : 'translate-y-24 '
           }`}
         >
-          <h3 className="text-4xl font-bold text-white md:text-4xl lg:text-5xl">
+          <h3 className="text-2xl font-bold text-white md:text-4xl lg:text-5xl">
             {questions[currentIndex]}
           </h3>
         </div>

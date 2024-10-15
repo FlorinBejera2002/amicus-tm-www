@@ -17,7 +17,8 @@ export default function Footer() {
   const companyLinks = [
     { href: '/', titleKey: 'header.home' },
     { href: `/${language}/about`, titleKey: 'header.about_us' },
-    { href: `/${language}/vision`, titleKey: 'header.vision' }
+    { href: `/${language}/vision`, titleKey: 'header.vision' },
+    { href: `/${language}/collaborator`, titleKey: 'header.collaborator' }
   ]
 
   const projectLinks = [

@@ -64,7 +64,7 @@ export default function Home() {
         <InViewTransition>
           <div className="z-index-3 container !px-8">
             <div className="row min-vh-100 align-items-center">
-              <div className="flex gap-3 flex-col items-center justify-center lg:items-start">
+              <div className="flex flex-col items-center justify-center lg:items-start">
                 <div className=" md:ml-0">
                   <QuestionCarousel />
                   <CardCollaborator />

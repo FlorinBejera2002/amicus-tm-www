@@ -26,56 +26,61 @@ export default function EvangelismSteps() {
       customClassname: 'xl:justify-start',
       description: t('step1_description'),
       headerLabel: t('step1'),
-      icon: <PiNumberCircleOneFill className="min-h-24 min-w-24" />
+      icon: (
+        <PiNumberCircleOneFill className="min-h-12 min-w-12 md:min-h-24 md:min-w-24 " />
+      )
     },
     {
       customClassname: 'xl:justify-center',
       description: t('step2_description'),
       headerLabel: t('step2'),
-      icon: <PiNumberCircleTwoFill className="min-h-24 min-w-24" />
+      icon: (
+        <PiNumberCircleTwoFill className="min-h-12 min-w-12 md:min-h-24 md:min-w-24 " />
+      )
     },
     {
       customClassname: 'xl:justify-start',
       description: t('step3_description'),
       headerLabel: t('step3'),
-      icon: <PiNumberCircleThreeFill className="min-h-24 min-w-24" />
+      icon: (
+        <PiNumberCircleThreeFill className="min-h-12 min-w-12 md:min-h-24 md:min-w-24 " />
+      )
     }
   ]
 
   return (
-    <div className="!relative !z-10 mx-auto p-8 md:-mb-16 -mt-16 grid max-w-6xl rounded-md bg-white shadow-lg md:-mt-52 md:pt-40 xl:grid-cols-2">
-      <div className=" hidden items-center justify-center md:flex">
+    <div className="!relative !z-10 mx-auto p-8 md:-mb-16 -mt-20 grid max-w-6xl rounded-md bg-white md:shadow-lg md:-mt-52 md:pt-40">
+      <InViewTransition damping={25} delay={0.5}>
+        <h1 className="text-2xl font-bold md:text-4xl xl:text-4xl mb-4">
+          {t('title')}
+        </h1>
+      </InViewTransition>
+      <div className="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-2">
+        <div className="flex flex-col gap-4 md:gap-12 xl:gap-16 md:justify-center">
+          {steps.map((step, index) => (
+            <InViewTransition damping={25} delay={index * 0.25} key={index}>
+              <Step
+                customClassname={step.customClassname}
+                description={step.description}
+                headerLabel={step.headerLabel}
+                icon={step.icon}
+                key={index}
+              />
+            </InViewTransition>
+          ))}
+        </div>
         <InViewTransition
-          customClassname="flex justify-center items-center w-full"
+          customClassname="flex justify-center items-end w-full h-full hidden md:flex"
           damping={25}
           xOut={-100}
           yOut={0}
         >
           <Image
             alt="Bible picture"
-            className="w-[400px] rounded-lg  object-cover mr-12"
+            className="w-[500px] object-cover mr-12"
             src={step}
           />
         </InViewTransition>
-      </div>
-
-      <div className="flex flex-col gap-4 md:gap-12 xl:gap-16 md:justify-center">
-        <InViewTransition damping={25} delay={0.5}>
-          <h1 className="text-3xl font-bold md:text-4xl xl:text-4xl">
-            {t('title')}
-          </h1>
-        </InViewTransition>
-        {steps.map((step, index) => (
-          <InViewTransition damping={25} delay={index * 0.25} key={index}>
-            <Step
-              customClassname={step.customClassname}
-              description={step.description}
-              headerLabel={step.headerLabel}
-              icon={step.icon}
-              key={index}
-            />
-          </InViewTransition>
-        ))}
       </div>
     </div>
   )
