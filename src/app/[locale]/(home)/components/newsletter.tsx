@@ -35,14 +35,20 @@ export const Newsletter = () => {
     <>
       <MailchimpSubscribe
         render={({ subscribe }: FormHooks<EmailFormFields>) => (
-          <div className="mt-4 flex max-w-sm flex-col">
-            <h2 className="text-sm font-bold text-white md:text-base lg:text-xl">
-              {t('footer.subscribe_to_newsletter')}
-            </h2>
-            <div className="flex w-screen gap-2">
+          <div className="mt-4 md:flex w-full border-b border-[#313632] mx-auto max-w-[1480px] pb-4 ">
+            <div className="w-full">
+              <h2 className="text-base font-bold text-white lg:text-xl">
+                {t('footer.subscribe_to_newsletter')}
+              </h2>
+              <p className="text-sm text-gray-500">
+                {t('footer.subscribe_to_newsletter_desc')}
+              </p>
+            </div>
+
+            <div className="flex w-screen gap-2 md:justify-end items-center">
               <input
                 className={cn(
-                  'z-10 w-40 rounded border bg-gray-50 p-2 text-xs placeholder:text-gray-700 md:w-52 lg:text-sm',
+                  'z-10 w-40 h-10 rounded-md border bg-gray-5s0 p-2 text-xs placeholder:text-gray-500 md:w-52 lg:text-sm',
                   error && 'shadow-outline-red'
                 )}
                 onChange={(e) => setEmail(e.target.value)}
@@ -51,7 +57,7 @@ export const Newsletter = () => {
                 value={email}
               />
               <button
-                className="z-10 flex items-center gap-2 rounded bg-accent px-3 py-2 text-xs font-semibold text-black"
+                className="z-10 h-10 flex items-center gap-2 rounded bg-accent px-3 py-2 text-xs font-semibold text-black"
                 onClick={() => handleSubmit(subscribe)}
                 type="submit"
               >

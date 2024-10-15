@@ -185,7 +185,8 @@
     "subscribe_dialog_paragraph": "You will receive a confirmation email shortly. Please click the link in the email to confirm your subscription.",
     "subscribe_placeholder": "Enter your email",
     "subscribe_placeholder_error": "Invalid email",
-    "subscribe_to_newsletter": "Subscribe to our Newsletter"
+    "subscribe_to_newsletter": "Subscribe to our Newsletter",
+    "subscribe_to_newsletter_desc": "The latest news, articles, and resources, sent to your inbox."
   },
   "form": {
     "address": "address",
