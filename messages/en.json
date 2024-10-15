@@ -119,6 +119,16 @@
     "read_more": "read more...",
     "title": "Blog"
   },
+  "collaborator": {
+    "send": "Send",
+    "title": "Get Involved",
+    "subtitle": "Collaborate with the Arise for Christ team",
+    "title_1": "“Then they came to Him, bringing a paralytic who was carried by four men.” – Mark 2:3",
+    "paragraf_1": "Like the four men who carried the paralytic to Jesus, we too are called to help the fallen souls around us. Every act of support can bring real change in the life of someone who needs healing and hope.",
+    "paragraf_2": "If you want to get involved and become part of the Arise for Christ team, we invite you to fill out the form below. Together, we can bring light and help to those around us.",
+    "form": "Complete the form and join the team:"
+  },
+
   "book": {
     "book": "Book",
     "author": "~ Mark Cole",
@@ -126,10 +136,10 @@
     "title": "The book \"Divine Intelligence\"",
     "subtitle": "Scott Hogle",
     "title_1": "Divine Intelligence",
-    "paragraf_1": "The book \"Divine Intelligence\" by Scott Hogle, is a beautiful book for everyone. It is a devotional that challenges us five days out of the week for a full year!",
-    "paragraf_2": "It is a \"tool\" worth having with you; perhaps in your living room, in the car, at the office or even at work, to read and to digest it. The book is intended to be a blessing for believers from all social and professional categories in which we find ourselves.",
-    "paragraf_3": "The book brings good material that starts with a passage / Bible verse, which then presents a sound teaching, after which it motivates you to reflect personally on who you are and what you should do next.",
-    "paragraf_4": "At the end of each daily reading, you’ll find an encouraging intelligent thought.  This book is intended for you and also as the perfect gift to a friend!",
+    "paragraf_1": "The book „Divine Intelligence” by Scott Hogle is a frumoasy book „for each”, it is a devotional that inspires five days in each Sunday, for a year!",
+    "paragraf_2": "It is an „instrument” that deserves your attention; can be in „your case”, in your home, at your desk, for you to read and to „digest”, being a binge for the believers „and less believers”, from all social and professional areas where you are.",
+    "paragraf_3": "It is a good material, starting from a particularly well-written biblical passage, which then presents a fresh insight, after which you ask and you reflect personally on who you are and what you should do.",
+    "paragraf_4": "At the end of each night's writing, there are frumoasy moments! It is for you and to make a sacrifice of a believer!",
     "button": "Order now"
   },
 
@@ -219,6 +229,7 @@
     "about_us": "About Us",
     "actone": "Act One",
     "blog": "Blog",
+    "collaborator": "Involve",
     "company": "Pages",
     "contact": "Contact",
     "donate": "Donate",
@@ -231,10 +242,11 @@
     "vision": "Vision"
   },
   "hero": {
-    "question1": "Do you want a loved one to be saved?",
-    "question2": "Do you need support in prayer?",
-    "question3": "Would you like to encourage someone?",
-    "title-hero": "Eternity"
+    "question1": "How can I help with the salvation of a loved one?",
+    "question2": "How can I support someone in prayer?",
+    "question3": "How can I encourage someone?",
+    "title-hero": "Eternity",
+    "title-question": "Have you ever asked yourself:"
   },
   "language": {
     "en": "EN",

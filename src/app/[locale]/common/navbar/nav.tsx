@@ -72,6 +72,11 @@ export default function Nav() {
       route: 'aboutUs'
     },
     { href: `/${language}/vision`, label: t('header.vision'), route: 'vision' },
+    {
+      href: `/${language}/collaborator`,
+      label: t('header.collaborator'),
+      route: 'collaborator'
+    },
     { href: `/${language}/donate`, label: t('header.donate'), route: 'donate' }
   ]
 
