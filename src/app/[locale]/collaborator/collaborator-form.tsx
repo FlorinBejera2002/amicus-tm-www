@@ -1,78 +1,75 @@
 'use client'
-import { cn } from '@/utils'
-import { createClient } from '@supabase/supabase-js'
 import { useTranslations } from 'next-intl'
-import { useState } from 'react'
 import InViewTransition from '../common/in-view-transition'
 
-type SubmitMessage = {
-  content: string
-  type: 'error' | 'success'
-}
+// type SubmitMessage = {
+//   content: string
+//   type: 'error' | 'success'
+// }
 
 export default function CollaboratorForm() {
-  const [message, setMessage] = useState<SubmitMessage | undefined>(undefined)
+  // const [message, setMessage] = useState<SubmitMessage | undefined>(undefined)
   const t = useTranslations()
-  const handleSubmit = async (event: any) => {
-    event.preventDefault()
-    const name = event.target.name.value
-    const email = event.target.email.value
-    const phone = event.target.phone.value
-    const details = event.target.details.value
+  // const handleSubmit = async (event: any) => {
+  //   event.preventDefault()
+  //   const name = event.target.name.value
+  //   const email = event.target.email.value
+  //   const phone = event.target.phone.value
+  //   const details = event.target.details.value
 
-    // submit
-    try {
-      // supabase
-      const supabaseUrl = process.env.SUPABASE_URL as string
-      const supabaseAnonKey = process.env.SUPABASE_ANON_KEY as string
-      const supabase = createClient(supabaseUrl, supabaseAnonKey)
+  //   // submit
+  //   try {
+  //     // supabase
+  //     const supabaseUrl = process.env.SUPABASE_URL as string
+  //     const supabaseAnonKey = process.env.SUPABASE_ANON_KEY as string
+  //     const supabase = createClient(supabaseUrl, supabaseAnonKey)
 
-      const evReqId = uuid()
-      const personRequestingId = uuid()
+  //     const evReqId = uuid()
+  //     const personRequestingId = uuid()
 
-      const { error: requesterError } = await supabase
-        .from('requesters')
-        .insert({
-          details: details || '',
-          email: email || '',
-          id: personRequestingId,
-          name: name || '',
-          phone: phone || ''
-        })
+  //     const { error: requesterError } = await supabase
+  //       .from('requesters')
+  //       .insert({
+  //         details: details || '',
+  //         email: email || '',
+  //         id: personRequestingId,
+  //         name: name || '',
+  //         phone: phone || ''
+  //       })
 
-      if (requesterError) {
-        throw new Error(requesterError.message)
-      }
+  //     if (requesterError) {
+  //       throw new Error(requesterError.message)
+  //     }
 
-      const { error: reqError } = await supabase
-        .from('evangelism_requests')
-        .insert({
-          category: 'evangelism',
-          id: evReqId,
-          person_requesting_id: personRequestingId,
-          status: 'received'
-        })
+  //     const { error: reqError } = await supabase
+  //       .from('evangelism_requests')
+  //       .insert({
+  //         category: 'evangelism',
+  //         id: evReqId,
+  //         person_requesting_id: personRequestingId,
+  //         status: 'received'
+  //       })
 
-      if (reqError) {
-        throw new Error(reqError.message)
-      }
+  //     if (reqError) {
+  //       throw new Error(reqError.message)
+  //     }
 
-      setMessage({
-        content: t('successful_submission'),
-        type: 'success'
-      })
+  //     setMessage({
+  //       content: t('successful_submission'),
+  //       type: 'success'
+  //     })
 
-      setTimeout(() => {
-        event.target.reset()
-        setMessage(undefined)
-      }, 5000)
-    } catch (error) {
-      setMessage({
-        content: 'A apărut o eroare la trimiterea formularului: ' + error,
-        type: 'error'
-      })
-    }
-  }
+  //     setTimeout(() => {
+  //       event.target.reset()
+  //       setMessage(undefined)
+  //     }, 5000)
+  //   } catch (error) {
+  //     setMessage({
+  //       content: 'A apărut o eroare la trimiterea formularului: ' + error,
+  //       type: 'error'
+  //     })
+  //   }
+  // }
 
   return (
     <div>
@@ -81,7 +78,7 @@ export default function CollaboratorForm() {
 
         <form
           className="flex flex-col gap-3 md:gap-4 mt-4"
-          onSubmit={handleSubmit}
+          // onSubmit={handleSubmit}
         >
           <div className="grid w-full gap-5 md:mb-4 md:grid-cols-2 ">
             <div className="group relative z-0 w-full">
@@ -146,7 +143,7 @@ export default function CollaboratorForm() {
             </div>
           </div>
 
-          {message?.content && (
+          {/* {message?.content && (
             <div
               className={cn(
                 message.type === 'success' ? 'text-green-600' : 'text-red-500',
@@ -155,19 +152,23 @@ export default function CollaboratorForm() {
             >
               {message.content}
             </div>
-          )}
-
-          <button
-            className=" flex size-9 items-center justify-center self-start rounded-md bg-accent px-20 py-1 font-bold text-black disabled:pointer-events-none disabled:opacity-50 md:!mt-0 md:self-center"
-            type="submit"
-          >
-            {t('collaborator.send')}
-          </button>
+          )} */}
+          <div className="w-full flex flex-col justify-center">
+            <p className="text-xs text-center text-gray-800 m-0 ">
+              Comming soon...
+            </p>
+            <button
+              className=" flex size-9 opacity-20 items-center justify-center self-start rounded-md bg-accent px-20 py-1 font-bold text-black disabled:pointer-events-none disabled:opacity-50 md:!mt-0 md:self-center"
+              type="submit"
+            >
+              {t('collaborator.send')}
+            </button>
+          </div>
         </form>
       </InViewTransition>
     </div>
   )
 }
-function uuid() {
-  throw new Error('Function not implemented.')
-}
+// function uuid() {
+//   throw new Error('Function not implemented.')
+// }
