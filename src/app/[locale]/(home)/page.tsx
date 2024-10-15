@@ -67,7 +67,7 @@ export default function Home() {
               <div className="flex flex-col items-center justify-center lg:items-start">
                 <div className=" md:ml-0">
                   <QuestionCarousel />
-                  
+
                   <CardCollaborator />
                 </div>
               </div>
