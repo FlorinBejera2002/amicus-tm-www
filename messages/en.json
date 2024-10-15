@@ -126,11 +126,11 @@
     "title": "The book \"Divine Intelligence\"",
     "subtitle": "Scott Hogle",
     "title_1": "Divine Intelligence",
-    "paragraf_1": "The book \"Divine Intelligence\" by Scott Hogle, is a beautiful book for everyone. It is a devotional that challenges us five days out of the week for a full year!", 
+    "paragraf_1": "The book \"Divine Intelligence\" by Scott Hogle, is a beautiful book for everyone. It is a devotional that challenges us five days out of the week for a full year!",
     "paragraf_2": "It is a \"tool\" worth having with you; perhaps in your living room, in the car, at the office or even at work, to read and to digest it. The book is intended to be a blessing for believers from all social and professional categories in which we find ourselves.",
     "paragraf_3": "The book brings good material that starts with a passage / Bible verse, which then presents a sound teaching, after which it motivates you to reflect personally on who you are and what you should do next.",
     "paragraf_4": "At the end of each daily reading, you’ll find an encouraging intelligent thought.  This book is intended for you and also as the perfect gift to a friend!",
-    "button": "Order now" 
+    "button": "Order now"
   },
 
   "button": {
@@ -175,7 +175,8 @@
     "subscribe_dialog_paragraph": "You will receive a confirmation email shortly. Please click the link in the email to confirm your subscription.",
     "subscribe_placeholder": "Enter your email",
     "subscribe_placeholder_error": "Invalid email",
-    "subscribe_to_newsletter": "Subscribe to our Newsletter"
+    "subscribe_to_newsletter": "Subscribe to our Newsletter",
+    "subscribe_to_newsletter_desc": "The latest news, articles, and resources, sent to your inbox."
   },
   "form": {
     "address": "address",

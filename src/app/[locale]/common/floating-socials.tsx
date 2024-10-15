@@ -1,3 +1,4 @@
+'use client'
 import { cn } from '@/utils'
 import Link from 'next/link'
 import {
@@ -8,9 +9,20 @@ import {
   FaYoutube
 } from 'react-icons/fa'
 import InViewTransition from './in-view-transition'
+import { IoLogoWhatsapp } from 'react-icons/io'
+import { FaAngleDown } from 'react-icons/fa6'
+import { IoShareSocial } from 'react-icons/io5'
+
+import { useState } from 'react'
 
 const FloatingSocials = () => {
+  const [socialMediaOpen, setSocialMediaOpen] = useState(false)
   const socialMediaLinks = [
+    {
+      hoverBgColor: 'bg-green-500',
+      href: 'https://wa.me/qr/ID4EZCB73HFTP1',
+      icon: <IoLogoWhatsapp className="h-5 w-5" />
+    },
     {
       hoverBgColor: 'bg-blue-900',
       href: 'https://www.facebook.com/AriseForChristRomania/',
@@ -43,19 +55,35 @@ const FloatingSocials = () => {
       customClassname="fixed md:right-[20px] md:bottom-[90px] flex md:flex-col gap-1 text-base lg:justify-start z-[999] p-2 rounded-lg bg-[#e3ae04]/[.75] h-fit"
       delay={2}
     >
-      {socialMediaLinks.map((link, idx) => (
-        <Link
-          className={cn(
-            'pointer flex items-center gap-2 no-underline transition-all duration-300 hover:!no-underline p-2 rounded-lg text-gray-900',
-            `hover:${link.hoverBgColor} hover:text-gray-100`
-          )}
-          href={link.href}
-          key={idx}
-          target="blank"
+      {socialMediaOpen === false ? (
+        <button
+          onClick={() => setSocialMediaOpen(true)}
+          className="pointer flex items-center p-1 text-gray-900"
         >
-          {link.icon}
-        </Link>
-      ))}
+          <IoShareSocial className="w-7 h-7" />
+        </button>
+      ) : (
+        <button
+          onClick={() => setSocialMediaOpen(false)}
+          className="pointer flex items-center justify-center text-gray-900 border-b border-gray-900 pb-1"
+        >
+          <FaAngleDown className="w-6 h-6" />
+        </button>
+      )}
+      {socialMediaOpen &&
+        socialMediaLinks.map((link, idx) => (
+          <Link
+            className={cn(
+              'pointer flex items-center gap-2 no-underline transition-all duration-300 hover:!no-underline p-2 rounded-lg text-gray-900',
+              `hover:${link.hoverBgColor} hover:text-gray-100`
+            )}
+            href={link.href}
+            key={idx}
+            target="blank"
+          >
+            {link.icon}
+          </Link>
+        ))}
     </InViewTransition>
   )
 }

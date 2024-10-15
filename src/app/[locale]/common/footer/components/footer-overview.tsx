@@ -10,10 +10,10 @@ export default function FooterOverview({ links, titleKey }: CompanyProps) {
   const t = useTranslations()
 
   return (
-    <div className="col-md-4 mb-lg-0 mb-4">
-      <h4 className="text-color-light font-weight-bold mb-3 ">{t(titleKey)}</h4>
+    <div className="w-full">
+      <h4 className="text-color-light font-bold mb-3 ">{t(titleKey)}</h4>
 
-      <ul className="list list-unstyled text-3-5 flex flex-col gap-[13px]">
+      <ul className=" list-unstyled text-3-5 flex flex-col gap-[13px] text-nowrap">
         {links.map((link, index) => (
           <li key={index}>
             <Link
