@@ -19,7 +19,7 @@ export default function BottomSection() {
               {t('bottom-title')}
             </h1>
             <Link
-              className="text-decoration-none w-full cursor-pointer rounded-md bg-red-600 px-4 py-2.5 text-center text-black lg:w-fit"
+              className="text-decoration-none w-full cursor-pointer rounded-full bg-black px-4 py-2.5 text-center text-white font-semibold lg:w-fit"
               href="https://www.youtube.com/@Ariseforchrist"
             >
               {t('subscribe')}

@@ -18,7 +18,7 @@ export const Step = ({
   return (
     <div
       className={cn(
-        'flex gap-1 !text-center md:flex-row md:gap-2 md:!text-start xl:gap-4',
+        'flex gap-2 !text-center md:flex-row md:gap-2 md:!text-start xl:gap-4',
         customClassname
       )}
     >

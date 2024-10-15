@@ -27,7 +27,7 @@ export default function EvangelismSteps() {
       description: t('step1_description'),
       headerLabel: t('step1'),
       icon: (
-        <PiNumberCircleOneFill className="min-h-12 min-w-12 md:min-h-24 md:min-w-24 " />
+        <PiNumberCircleOneFill className="min-h-12 min-w-12 md:min-h-12 md:min-w-12 " />
       )
     },
     {
@@ -35,7 +35,7 @@ export default function EvangelismSteps() {
       description: t('step2_description'),
       headerLabel: t('step2'),
       icon: (
-        <PiNumberCircleTwoFill className="min-h-12 min-w-12 md:min-h-24 md:min-w-24 " />
+        <PiNumberCircleTwoFill className="min-h-12 min-w-12 md:min-h-12 md:min-w-12 " />
       )
     },
     {
@@ -43,7 +43,7 @@ export default function EvangelismSteps() {
       description: t('step3_description'),
       headerLabel: t('step3'),
       icon: (
-        <PiNumberCircleThreeFill className="min-h-12 min-w-12 md:min-h-24 md:min-w-24 " />
+        <PiNumberCircleThreeFill className="min-h-12 min-w-12 md:min-h-12 md:min-w-12 " />
       )
     }
   ]

@@ -39,14 +39,14 @@ export default function Footer() {
       titleKey: 'info@ariseforchrist.com'
     },
     {
-      href: `phone:+40 (773) 307 292`,
+      href: `tel:+40 (773) 307 292`,
       titleKey: ' +40 (773) 307 292'
     },
     {
-      href: `phone:+40 (721) 804 560`,
+      href: `tel:+40 (721) 804 560`,
       titleKey: '+40 (721) 804 560'
     },
-    { href: `phone+40 (356) 175 148`, titleKey: '+40 (356) 175 148' }
+    { href: `tel:+40 (356) 175 148`, titleKey: '+40 (356) 175 148' }
   ]
 
   return (

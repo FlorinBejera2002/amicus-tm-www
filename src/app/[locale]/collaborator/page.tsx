@@ -2,12 +2,11 @@ import { Metadata } from 'next'
 import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 import Link from 'next/link'
-import { FaAngleRight } from 'react-icons/fa'
+import { FaAngleRight, FaHandsHelping } from 'react-icons/fa'
 import Collaborator from '../../../../public/collaborator.webp'
 import Animation from '../common/animation'
 import CustomHeroBg from '../common/custom-hero-bg'
 import InViewTransition from '../common/in-view-transition'
-import CollaboratorForm from './collaborator-form'
 
 export const metadata: Metadata = {
   title: 'Arise for Christ | Podcast'
@@ -90,7 +89,13 @@ export default function Book() {
             </InViewTransition>
           </div>
 
-          <CollaboratorForm />
+          <Link
+            className="text-decoration-none flex gap-2 items-center justify-center self-start rounded-md bg-accent px-12 py-2.5 font-bold text-black disabled:pointer-events-none md:!mt-0 md:self-center"
+            href="mailto:info@ariseforchrist.com?subject=Vreau%20să%20mă%20implic&body=Mă%20numesc%20...%20și%20vreau%20să%20mă%20implic%20în%20lucrare"
+          >
+            {t('collaborator.send')}
+            <FaHandsHelping />
+          </Link>
         </div>
       </div>
     </div>
