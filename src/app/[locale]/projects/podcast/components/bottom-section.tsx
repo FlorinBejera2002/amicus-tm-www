@@ -19,7 +19,7 @@ export default function BottomSection() {
               {t('bottom-title')}
             </h1>
             <Link
-              className="text-decoration-none w-full cursor-pointer rounded-md bg-red-600 px-4 py-2.5 text-center text-white lg:w-fit"
+              className="text-decoration-none w-full cursor-pointer rounded-md bg-red-600 px-4 py-2.5 text-center text-black lg:w-fit"
               href="https://www.youtube.com/@Ariseforchrist"
             >
               {t('subscribe')}
@@ -36,38 +36,49 @@ export default function BottomSection() {
       </InViewTransition>
       <InViewTransition delay={0.95}>
         <div className="flex flex-1 flex-col gap-3 md:gap-6 justify-center w-full flex-wrap border-t pt-8 border-gray-800 text-gray-800">
-          <h2 className="!text-start m-0 md:!text-center !hidden ">
-            {t('bottom-subtitle')}
-          </h2>
-          <div>
-            <p className="!text-start md:!text-center md:text-lg">
-              {t('bottom-paragraf')}
-            </p>
-
-            <p className="!text-start m-0 md:!text-center !hidden ">
-              {t('bottom-socials')}
-            </p>
-          </div>
           <InViewTransition delay={1.25}>
-            <div className="flex flex-col md:flex-row gap-3 ">
-              <Link
-                className="cursor-pointer !self-start md:!self-center "
-                href="https://podcasts.apple.com/ro/podcast/arise-for-christ/id1573830106"
-              >
-                <Image alt="arise for christ logo" src={applePodcast} />
-              </Link>
-              <Link
-                className="scale-[0.85] cursor-pointer !self-start md:!self-center"
-                href="https://open.spotify.com/show/3284C4Oox7JSflk1AOlgav"
-              >
-                <Image alt="arise for christ logo" src={spotifi} />
-              </Link>
-              <Link
-                className="cursor-pointer !self-start md:!self-center "
-                href="https://www.google.com/podcasts?feed=aHR0cHM6Ly9hbmNob3IuZm0vcy81ZjRmYWU1Yy9wb2RjYXN0L3Jzcw=="
-              >
-                <Image alt="arise for christ logo" src={googlePodcast} />
-              </Link>
+            <div className="flex w-full flex-wrap">
+              <div className="flex flex-1 flex-col gap-6 items-center justify-center text-black">
+                <h3 className="text-lg text-center md:text-2xl m-0">
+                  {t('bottom-paragraf')}
+                </h3>
+                <p className="text-center text-xs md:text-base m-0 hidden md:flex">
+                  {t('bottom-socials')}
+                </p>
+                <div className="flex flex-col items-center justify-center gap-2 md:w-[50em] md:flex-row">
+                  <Link
+                    className="cursor-pointer !self-start md:!self-center "
+                    href="https://podcasts.apple.com/ro/podcast/arise-for-christ/id1573830106"
+                  >
+                    <Image
+                      alt="arise for christ logo"
+                      className="!w-56 !md:80"
+                      src={applePodcast}
+                    />
+                  </Link>
+                  <Link
+                    className=" cursor-pointer !self-start  md:!self-center"
+                    href="https://open.spotify.com/show/3284C4Oox7JSflk1AOlgav"
+                  >
+                    <Image
+                      className="!w-56 !md:80"
+                      alt="arise for christ logo"
+                      src={spotifi}
+                    />
+                  </Link>
+
+                  <Link
+                    className="cursor-pointer !self-start md:!self-center"
+                    href="https://www.google.com/podcasts?feed=aHR0cHM6Ly9hbmNob3IuZm0vcy81ZjRmYWU1Yy9wb2RjYXN0L3Jzcw=="
+                  >
+                    <Image
+                      className="!w-56 !md:80"
+                      alt="arise for christ logo"
+                      src={googlePodcast}
+                    />
+                  </Link>
+                </div>
+              </div>
             </div>
           </InViewTransition>
         </div>
