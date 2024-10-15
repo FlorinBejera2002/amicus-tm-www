@@ -10,10 +10,10 @@ import Link from 'next/link'
 import { FaAngleRight } from 'react-icons/fa'
 
 import Project1 from '../../../../public/vision-projects1.webp'
-import Project3 from '../../../../public/vision-projects2.webp'
-import Project2 from '../../../../public/vision-projects3.webp'
-import Project4 from '../../../../public/vision-projects4.webp'
-import Project5 from '../../../../public/vision-projects5.webp'
+import Project3 from '../../../../public/consilierea-biblică.png'
+import Project2 from '../../../../public/recuperarea-celor-căzuți.png'
+import Project4 from '../../../../public/rugăciunea-de-mijlocire.png'
+import Project5 from '../../../../public/media-arise.png'
 
 // eslint-disable-next-line react-refresh/only-export-components
 export async function generateMetadata({
