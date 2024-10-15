@@ -36,7 +36,7 @@ export default function BottomSection() {
       </InViewTransition>
       <InViewTransition delay={0.95}>
         <div className="flex flex-1 flex-col gap-3 md:gap-6 justify-center w-full flex-wrap border-t pt-8 border-gray-800 text-gray-800">
-          <h2 className="!text-start m-0 md:!text-center">
+          <h2 className="!text-start m-0 md:!text-center !hidden ">
             {t('bottom-subtitle')}
           </h2>
           <div>
@@ -44,12 +44,12 @@ export default function BottomSection() {
               {t('bottom-paragraf')}
             </p>
 
-            <p className="!text-start m-0 md:!text-center">
+            <p className="!text-start m-0 md:!text-center !hidden ">
               {t('bottom-socials')}
             </p>
           </div>
           <InViewTransition delay={1.25}>
-            <div className="flex flex-col md:flex-row gap-3">
+            <div className="flex flex-col md:flex-row gap-3 ">
               <Link
                 className="cursor-pointer !self-start md:!self-center "
                 href="https://podcasts.apple.com/ro/podcast/arise-for-christ/id1573830106"

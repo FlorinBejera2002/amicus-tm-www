@@ -115,6 +115,15 @@
     "tooltip_costs_show_editing": "Editarea video",
     "tooltip_costs_travel": "Transport"
   },
+  "collaborator": {
+    "send": "Trimite",
+    "title": "Implicate",
+    "subtitle": "Colaborează cu echipa Arise for Christ",
+    "title_1": "„Apoi au venit la El, aducând un slăbănog pe care-l purtau patru oameni.” – Marcu 2:3",
+    "paragraf_1": "Ca acești patru oameni care l-au purtat pe slăbănog la Isus, și noi suntem chemați să ajutăm sufletele căzute din jurul nostru. Fiecare gest de sprijin poate aduce o schimbare reală în viața cuiva care are nevoie de vindecare și speranță.",
+    "paragraf_2": "Dacă vrei să te implici și să devii parte din echipa Arise for Christ, te invităm să completezi formularul de mai jos. Împreună putem aduce lumină și ajutor celor din jur.",
+    "form": "Completează formularul și alătură-te echipei:"
+  },
 
   "book": {
     "book": "Carte",
@@ -218,6 +227,7 @@
   "header": {
     "about_us": "Despre Noi",
     "actone": "Act One",
+    "collaborator": "Implicăte",
     "blog": "Blog",
     "company": "Pagini",
     "contact": "Contact",
@@ -231,10 +241,11 @@
     "vision": "Viziunea"
   },
   "hero": {
-    "question1": "Dorești mântuirea cuiva drag?",
-    "question2": "Ai nevoie de sprijin în rugăciune?",
-    "question3": "Vrei să încurajezi pe cineva?",
-    "title-hero": "Eternitate"
+    "question1": "Cum pot ajuta la mântuirea cuiva drag?",
+    "question2": "Cum pot să sprijin pe cineva în rugăciune?",
+    "question3": "Cum pot să încurajez pe cineva?",
+    "title-hero": "Eternitate",
+    "title-question": "Ți-ai pus vreodată întrebarea:"
   },
 
   "language": {
@@ -261,7 +272,7 @@
   "podcast": {
     "bottom-paragraf": "Toate episoadele Podcastului nostru le puteți găsi și pe",
     "bottom-socials": "Apple Podcast, Spotify, sau Google Podcasts.",
-    "bottom-subtitle": "ASCULTĂ PE SPOTIFY",
+    "bottom-subtitle": "PODCAST",
     "bottom-title": "Urmărește ultimul episod al Podcastului nostru!",
     "hero-paragraf": "Acesta este un Podcast Arise for Christ unde ne propunem să aducem în evidență pe baza unor dialoguri, subiecte importante pentru biserica Lui Hristos din secolul 21.",
     "subscribe": "Abonează-te!",

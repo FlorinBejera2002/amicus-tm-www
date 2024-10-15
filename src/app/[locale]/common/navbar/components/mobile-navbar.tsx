@@ -48,6 +48,10 @@ const MobileNavbar = ({
       label: t('header.vision')
     },
     {
+      href: `/${language}/collaborator`,
+      label: t('header.collaborator')
+    },
+    {
       href: `/${language}/donate`,
       label: t('header.donate')
     },

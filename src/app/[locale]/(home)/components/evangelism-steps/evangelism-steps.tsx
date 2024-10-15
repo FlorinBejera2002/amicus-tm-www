@@ -9,7 +9,7 @@ import { PiNumberCircleOneFill } from 'react-icons/pi'
 import { PiNumberCircleTwoFill } from 'react-icons/pi'
 import { PiNumberCircleThreeFill } from 'react-icons/pi'
 
-import step from '../../../../../../public/step.png'
+import step from '../../../../../../public/step.webp'
 
 type EvStep = {
   customClassname: string
@@ -53,7 +53,7 @@ export default function EvangelismSteps() {
         >
           <Image
             alt="Bible picture"
-            className=" size-full rounded-md rounded-tr-[7rem] object-cover pr-16"
+            className="w-[400px] rounded-lg  object-cover mr-12"
             src={step}
           />
         </InViewTransition>
