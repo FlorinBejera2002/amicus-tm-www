@@ -30,7 +30,7 @@ export default function Subtitle() {
           </InViewTransition>
 
           <InViewTransition delay={0.95}>
-            <div className="flex w-64 flex-col items-center justify-center border-y gap-3 md:gap-6 border-yellow-600 py-3 md:py-6">
+            <div className="flex w-64 flex-col items-center justify-center border- gap-3 md:gap-6 border-yellow-600 py-3 md:py-6">
               <h3 className="font-bold text-yellow-600 m-0">
                 {t('serial_bottom')}
               </h3>
