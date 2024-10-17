@@ -90,15 +90,15 @@ export default function Book() {
           </div>
 
           <InViewTransition delay={1.25}>
-          <div className='flex justify-center'>
-            <Link
-              className="w-fit text-decoration-none flex gap-2 items-center justify-center self-start rounded-md bg-accent px-12 py-2.5 font-bold text-black disabled:pointer-events-none md:!mt-0 md:self-center"
-              href="mailto:info@ariseforchrist.com?subject=Vreau%20să%20mă%20implic&body=Mă%20numesc%20...%20și%20vreau%20să%20mă%20implic%20în%20lucrare"
-            >
-              {t('collaborator.send')}
-              <FaHandsHelping />
-            </Link>
-          </div>
+            <div className="flex justify-center">
+              <Link
+                className="w-fit text-decoration-none flex gap-2 items-center justify-center self-start rounded-md bg-accent px-12 py-2.5 font-bold text-black disabled:pointer-events-none md:!mt-0 md:self-center"
+                href="mailto:info@ariseforchrist.com?subject=Vreau%20să%20mă%20implic&body=Mă%20numesc%20...%20și%20vreau%20să%20mă%20implic%20în%20lucrare"
+              >
+                {t('collaborator.send')}
+                <FaHandsHelping />
+              </Link>
+            </div>
           </InViewTransition>
         </div>
       </div>
