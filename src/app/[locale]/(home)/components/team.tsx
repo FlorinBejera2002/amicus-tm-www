@@ -7,11 +7,9 @@ import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 import { FaAngleLeft, FaAngleRight } from 'react-icons/fa6'
 
-import AdrianCovaci from '../../../../../public/adi.webp'
 import AvramSabou from '../../../../../public/img/team/Avram.webp'
 import Chris from '../../../../../public/img/team/chris potra.webp'
 import Dana from '../../../../../public/img/team/dana potra.webp'
-import Simona from '../../../../../public/img/team/simo.webp'
 import Mark from '../../../../../public/mark.png'
 
 export default function Team() {
@@ -25,12 +23,6 @@ export default function Team() {
       role: t('avram-sabou')
     },
     {
-      description: t('adi_des'),
-      img: AdrianCovaci,
-      name: 'Adi Kovaci',
-      role: t('adi-kovaci')
-    },
-    {
       description: t('christian_des'),
       img: Chris,
       name: 'Christian Potra',
@@ -42,13 +34,6 @@ export default function Team() {
       name: 'Dana Potra',
       role: t('dana-potra')
     },
-
-    {
-      description: t('simona_des'),
-      img: Simona,
-      name: 'Simona Birtea',
-      role: t('simona-birtea')
-    },
     {
       description: t('mark_des'),
       img: Mark,
@@ -58,12 +43,12 @@ export default function Team() {
   ]
 
   const [currentIndex, setCurrentIndex] = useState(0)
-  const [cardsToShow, setCardsToShow] = useState(5)
+  const [cardsToShow, setCardsToShow] = useState(4)
 
   useEffect(() => {
     const updateCardsToShow = () => {
       if (window.innerWidth >= 1280) {
-        setCardsToShow(6)
+        setCardsToShow(4)
       } else if (window.innerWidth >= 768) {
         setCardsToShow(2)
       } else {
@@ -120,7 +105,7 @@ export default function Team() {
           >
             <FaAngleLeft className="h-6 w-6" />
           </button>
-          <div className="grid grid-cols-1 gap-3 overflow-hidden md:grid-cols-2 md:px-3 md:pb-3 xl:grid-cols-6">
+          <div className="grid grid-cols-1 gap-3 overflow-hidden md:grid-cols-2 md:px-3 md:pb-3 xl:grid-cols-4">
             {getVisibleMembers().map((member, idx) => (
               <InViewTransition damping={50} delay={0.25 * idx} key={idx}>
                 <div className="group relative z-10 mt-4 flex flex-col items-center gap-1 overflow-hidden rounded-md bg-gradient-to-b from-[#090d1a] via-blue-900 to-[#061e35] duration-300">

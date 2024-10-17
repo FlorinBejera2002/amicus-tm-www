@@ -9,6 +9,7 @@ import { usePathname } from 'next/navigation'
 
 import horizontalLogo from '../../../../../public/logo_horizontal_white.webp'
 import newarklogo from '../../../../../public/new-ark_logo.webp'
+import Socials from './components/socials'
 
 export default function Footer() {
   const pathname = usePathname()
@@ -52,15 +53,18 @@ export default function Footer() {
   return (
     <footer className="border-top-0 font-poppins !px-8" id="footer">
       <div className="md:border-b border-[#313632] mx-auto max-w-[1480px] flex w-full flex-col md:flex-row pb-10 pt-24">
-        <Link className="flex w-full" href="/">
-          <Image
-            alt="arise for christ logo"
-            className="w-24 object-contain pb-6 md:w-40"
-            height={40}
-            src={horizontalLogo}
-          />
-        </Link>
-        <div className="md:flex-row w-full justify-end flex flex-col md:gap-52 pr-20">
+        <div className="flex flex-col w-full justify-between gap-10">
+          <Link className="flex  w-full" href="/">
+            <Image
+              alt="arise for christ logo"
+              className="w-24 object-contain pb-6 md:w-40"
+              height={40}
+              src={horizontalLogo}
+            />
+          </Link>
+          <Socials />
+        </div>
+        <div className="md:flex-row w-full justify-end flex flex-col md:gap-52 pr-20 ">
           <FooterOverview links={contactLinks} titleKey="header.contact" />
           <FooterOverview links={projectLinks} titleKey="header.project" />
           <FooterOverview links={companyLinks} titleKey="header.company" />
