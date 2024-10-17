@@ -2,6 +2,7 @@ import InViewTransition from '@/app/[locale]/common/in-view-transition'
 import { useTranslations } from 'next-intl'
 import Image, { StaticImageData } from 'next/image'
 
+import Link from 'next/link'
 import StudioA4C from '../../../../../../public/SediuA4C.jpeg'
 import youtubePodcast1 from '../../../../../../public/youtubePodcast1.webp'
 import youtubePodcast2 from '../../../../../../public/youtubePodcast2.webp'
@@ -11,7 +12,6 @@ import youtubePodcast5 from '../../../../../../public/youtubePodcast5.webp'
 import youtubePodcast6 from '../../../../../../public/youtubePodcast6.webp'
 import youtubePodcast7 from '../../../../../../public/youtubePodcast7.webp'
 import youtubePodcast8 from '../../../../../../public/youtubePodcast8.webp'
-import Link from 'next/link'
 
 type IPodcast = {
   podcastImage: StaticImageData
