@@ -39,7 +39,7 @@ const EpisodeSection = () => {
       </div>
 
       <InViewTransition delay={0.95}>
-        <div className="flex w-full flex-col items-center justify-center border-b border-t border-gray-800 pt-8 md:text-xl">
+        <div className="flex w-full flex-col items-center justify-center border-b border-gray-800 pt-8 md:text-xl">
           <q className=" text-center font-semibold text-gray-800">
             {t('verset')}
           </q>
