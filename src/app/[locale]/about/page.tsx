@@ -1,6 +1,5 @@
 import Animation from '../common/animation'
 import CustomHeroBg from '../common/custom-hero-bg'
-import Images from '../common/images'
 import InViewTransition from '../common/in-view-transition'
 import AccordionSection from './components/accordion-section'
 import ContactUsBtn from './components/contact-us-button'
@@ -73,21 +72,17 @@ const About = () => {
               </InViewTransition>
             </div>
           </div>
-          <div className="row">
-            <Images />
+          <div className="flex flex-col">
+            <InViewTransition delay={0.5}>
+              <p className="text-md line-height-7 md:text-lg max-w-[700px]">
+                {t('about_us.description_p1_6')}
+              </p>
+            </InViewTransition>
 
-            <div className="col-lg-6 ps-lg-4">
-              <InViewTransition delay={0.5}>
-                <p className="text-md line-height-7 md:text-lg">
-                  {t('about_us.description_p1_6')}
-                </p>
-              </InViewTransition>
+            <AccordionSection />
 
-              <AccordionSection />
-
-              <div className="appear-animation flex items-center py-4">
-                <ContactUsBtn />
-              </div>
+            <div className="appear-animation flex items-center py-4">
+              <ContactUsBtn />
             </div>
           </div>
 
