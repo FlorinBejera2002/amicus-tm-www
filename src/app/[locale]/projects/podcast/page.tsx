@@ -1,3 +1,5 @@
+import Image from 'next/image'
+import StudioA4C from '../../../../../public/SediuA4C.jpeg'
 import Animation from '../../common/animation'
 import CustomHeroBg from '../../common/custom-hero-bg'
 import InViewTransition from '../../common/in-view-transition'
@@ -57,7 +59,15 @@ export default function Podcast() {
       </section>
 
       <div className="custom-page-content z-2 max-w-6xl">
-        <div className="rounded-md bg-white md:p-12 p-8  shadow-lg flex flex-col gap-8">
+        <div className="rounded-md bg-white shadow-lg flex flex-col gap-8">
+          <InViewTransition delay={0.25}>
+            <Image
+              alt="arise for christ logo"
+              className="flex-1 object-cover rounded-tr-md rounded-tl-md"
+              src={StudioA4C}
+            />
+          </InViewTransition>
+
           <Hero />
           <BottomSection />
         </div>

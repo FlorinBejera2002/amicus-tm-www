@@ -3,7 +3,6 @@ import { useTranslations } from 'next-intl'
 import Image, { StaticImageData } from 'next/image'
 
 import Link from 'next/link'
-import StudioA4C from '../../../../../../public/SediuA4C.jpeg'
 import youtubePodcast1 from '../../../../../../public/youtubePodcast1.webp'
 import youtubePodcast2 from '../../../../../../public/youtubePodcast2.webp'
 import youtubePodcast3 from '../../../../../../public/youtubePodcast3.webp'
@@ -74,15 +73,8 @@ export default function Hero() {
     }
   ]
   return (
-    <div className="z-2 flex flex-col gap-8">
+    <div className="z-2 flex flex-col gap-8 md:px-12 md:pb-12 px-8 pb-8">
       <div className="flex flex-wrap items-center justify-center">
-        <InViewTransition delay={0.25}>
-          <Image
-            alt="arise for christ logo"
-            className=" w-full max-w-[800px] flex-1 object-cover mb-8  rounded-md"
-            src={StudioA4C}
-          />
-        </InViewTransition>
         <InViewTransition delay={0.35}>
           <p className="text-md min-w-fit m-0 flex-1 self-center text-wrap text-gray-800 md:text-xl">
             {t('hero-paragraf')}

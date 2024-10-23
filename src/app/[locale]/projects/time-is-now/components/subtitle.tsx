@@ -10,7 +10,7 @@ export default function Subtitle() {
       <div className=" flex flex-wrap gap-8">
         <div className="flex w-full flex-1 flex-col items-center gap-3 md:gap-6">
           <InViewTransition delay={0.55}>
-            <h4 className="font-bold text-yellow-600 m-0">{t('subtitle')}</h4>
+            <h4 className="font-bold m-0">{t('subtitle')}</h4>
           </InViewTransition>
 
           <InViewTransition delay={0.75}>

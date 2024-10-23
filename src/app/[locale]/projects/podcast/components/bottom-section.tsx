@@ -11,7 +11,7 @@ export default function BottomSection() {
   const t = useTranslations('podcast')
 
   return (
-    <div className="z-2 flex flex-col gap-8">
+    <div className="z-2 flex flex-col gap-8 md:p-12 p-8">
       <InViewTransition delay={0.95}>
         <div className="flex w-full flex-col gap-3 md:gap-6 items-center">
           <div className="flex flex-wrap items-center justify-center gap-3 md:gap-6">

@@ -12,7 +12,7 @@ const EpisodeSection = () => {
     <div className="!z-2 relative flex flex-col">
       <div className="flex w-full flex-col gap-3">
         <InViewTransition delay={0.55}>
-          <h1 className="text-start text-2xl font-bold text-accent md:text-3xl">
+          <h1 className="text-start text-2xl font-bold md:text-3xl">
             {t('title_serial')}
           </h1>
         </InViewTransition>

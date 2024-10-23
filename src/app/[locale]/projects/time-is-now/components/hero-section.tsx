@@ -9,7 +9,7 @@ export default function HeroSection() {
       <div className="relative flex flex-col bg-auto bg-no-repeat">
         <div className="flex flex-col text-gray-800 md:gap-6 gap-3">
           <InViewTransition delay={0.25}>
-            <h1 className="text-start text-2xl font-bold m-0 text-accent md:text-4xl">
+            <h1 className="text-start text-2xl font-bold m-0 md:text-4xl">
               {t('title_description_hero')}
             </h1>
           </InViewTransition>
