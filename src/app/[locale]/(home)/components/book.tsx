@@ -23,11 +23,13 @@ export default function Book() {
             {t('title')}
           </h3>
         </InViewTransition>
+        
         <InViewTransition delay={0.25}>
           <p className="text-lg font-semibold italic text-gray-500 md:pb-4 md:text-lg">
             {t('description')}
           </p>
         </InViewTransition>
+
         <InViewTransition delay={0.25}>
           <p className="mb-0 text-lg font-bold text-gray-600 md:text-base">
             {t('author')}

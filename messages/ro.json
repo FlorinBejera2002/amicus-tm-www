@@ -125,7 +125,6 @@
     "paragraf_2": "Dacă vrei să te implici și să devii parte din echipa Arise for Christ, te invităm să completezi formularul de mai jos. Împreună putem aduce lumină și ajutor celor din jur.",
     "form": "Completează formularul și alătură-te echipei:"
   },
-
   "book": {
     "book": "Carte",
     "author": "~ Mark Cole",
@@ -139,7 +138,9 @@
     "paragraf_4": "La finalul fiecărei scrierii zilnice, are frumoase gânduri inteligente! Este pentru tine și pentru a face cadou un prieten drag!",
     "button": "Comandă acum"
   },
-
+  "resurse-crestine": {
+    "colaborator": "Colaborator"
+  },
   "button": {
     "agree": "Sunt de acord",
     "contact_us": "Contactează-ne",

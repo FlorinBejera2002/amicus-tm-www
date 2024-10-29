@@ -14,7 +14,7 @@ export default function Spotify() {
   const t = useTranslations('podcast')
 
   return (
-        <div className="bg-color-dark relative bg-cover bg-center p-8 md:p-28">
+    <div className="bg-color-dark relative bg-cover bg-center p-8 md:p-28">
       <InViewTransition delay={0.25}>
         <div className="flex w-full flex-wrap justify-center">
           <div className="flex flex-1 flex-col gap-6 items-center justify-center text-white">

@@ -6,6 +6,7 @@ import { CardCollaborator } from './components/card-collaborator'
 import EvangelismSteps from './components/evangelism-steps/evangelism-steps'
 import PersonalEvangelism from './components/personal-evangelism/personal-evangelism'
 import { QuestionCarousel } from './components/question-carousel'
+import ResurseCrestine from './components/resurse-crestine'
 import Spotify from './components/spotify'
 import Team from './components/team'
 import YoutubeMiniFeed from './components/youtube-mini-feed'
@@ -83,6 +84,7 @@ export default function Home() {
       <PersonalEvangelism />
       <Spotify />
       <Book />
+      <ResurseCrestine />
     </div>
   )
 }
