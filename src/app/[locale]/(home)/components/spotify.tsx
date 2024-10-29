@@ -14,9 +14,9 @@ export default function Spotify() {
   const t = useTranslations('podcast')
 
   return (
-    <div className="bg-color-dark relative bg-cover bg-center p-8 md:p-28">
+        <div className="bg-color-dark relative bg-cover bg-center p-8 md:p-28">
       <InViewTransition delay={0.25}>
-        <div className="flex w-full flex-wrap">
+        <div className="flex w-full flex-wrap justify-center">
           <div className="flex flex-1 flex-col gap-6 items-center justify-center text-white">
             <h3 className="text-lg text-center md:text-2xl m-0">
               {t('bottom-paragraf')}
@@ -26,7 +26,7 @@ export default function Spotify() {
             </p>
             <div className="flex flex-col items-center justify-center gap-2 md:w-[50em] md:flex-row">
               <Link
-                className="cursor-pointer !self-start md:!self-center "
+                className="cursor-pointer !self-center"
                 href="https://podcasts.apple.com/ro/podcast/arise-for-christ/id1573830106"
               >
                 <Image
@@ -36,7 +36,7 @@ export default function Spotify() {
                 />
               </Link>
               <Link
-                className=" cursor-pointer !self-start  md:!self-center"
+                className="cursor-pointer !self-center"
                 href="https://open.spotify.com/show/3284C4Oox7JSflk1AOlgav"
               >
                 <Image
@@ -45,9 +45,8 @@ export default function Spotify() {
                   src={spotify}
                 />
               </Link>
-
               <Link
-                className="cursor-pointer !self-start md:!self-center"
+                className="cursor-pointer !self-center"
                 href="https://www.google.com/podcasts?feed=aHR0cHM6Ly9hbmNob3IuZm0vcy81ZjRmYWU1Yy9wb2RjYXN0L3Jzcw=="
               >
                 <Image
