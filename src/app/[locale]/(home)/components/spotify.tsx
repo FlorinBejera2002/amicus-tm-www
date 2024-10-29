@@ -8,7 +8,7 @@ import Link from 'next/link'
 
 import applePodcast from '../../../../../public/apple-podcast.webp'
 import googlePodcast from '../../../../../public/google-podcasts.webp'
-import spotifi from '../../../../../public/spotify.webp'
+import spotify from '../../../../../public/spotify.webp'
 
 export default function Spotify() {
   const t = useTranslations('podcast')
@@ -42,7 +42,7 @@ export default function Spotify() {
                 <Image
                   className="!w-56 !md:80"
                   alt="arise for christ logo"
-                  src={spotifi}
+                  src={spotify}
                 />
               </Link>
 

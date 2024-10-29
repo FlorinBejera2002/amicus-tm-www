@@ -41,7 +41,7 @@ export default function YoutubeMiniFeed() {
 
   return (
     <div
-      className="relative -top-20 z-20 grid gap-2 bg-transparent px-8 pt-1 md:grid-cols-2 md:p-0 md:px-24 lg:grid-cols-4 lg:pt-2 xl:pt-3"
+      className="relative -top-20 z-20 grid gap-2 bg-transparent px-8 pt-1 mb-10 md:grid-cols-2 md:p-0 md:px-24 lg:grid-cols-4 lg:pt-2 xl:pt-3"
       id="numbers"
     >
       {videosToShow.map((vid, idx) => (

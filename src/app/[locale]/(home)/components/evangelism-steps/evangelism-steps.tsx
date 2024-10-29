@@ -51,7 +51,7 @@ export default function EvangelismSteps() {
   return (
     <div className="!relative !z-10 mx-auto p-8 md:-mb-16 -mt-20 grid max-w-6xl rounded-md bg-white md:shadow-lg md:-mt-52 md:pt-40">
       <InViewTransition damping={25} delay={0.5}>
-        <h1 className="text-2xl font-bold md:text-4xl xl:text-4xl mb-4">
+        <h1 className="text-2xl font-bold md:text-4xl xl:text-4xl">
           {t('title')}
         </h1>
       </InViewTransition>
