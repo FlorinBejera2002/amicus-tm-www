@@ -139,7 +139,11 @@
     "button": "Comandă acum"
   },
   "resurse-crestine": {
-    "colaborator": "Colaborator"
+    "colaborator": "Colaborator",
+    "asociatia_resurse_crestine": "Asociația Resurse Creștine",
+    "descriere_asociatie": "În luna iunie 2017 a fost înființată Asociația Resurse Creștine, al cărui scop constă în distribuirea online prin site-ul",
+    "materiale_gratuite": "de materiale gratuite pentru implementarea valorilor moral-creștine.",
+    "vezi_mai_multe": "Vezi mai multe"
   },
   "button": {
     "agree": "Sunt de acord",

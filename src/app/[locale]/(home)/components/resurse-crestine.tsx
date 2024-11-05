@@ -44,29 +44,8 @@ export default function ResurseCrestine() {
 
   return (
     <div className="flex items-center justify-center md:-mt-16 bg-[#121212] text-white">
-      <div className="flex flex-col items-center justify-center p-8 md:p-28 md:pt-32 xl:gap-8 max-w-6xl">
+      <div className="flex flex-col items-center  p-8 md:p-28  xl:gap-4 max-w-6xl">
         <Link
-          href="https://www.resursecrestine.ro"
-          className="no-underline hover:no-underline w-full !p-0 mb-14"
-        >
-          <InViewTransition
-            damping={25}
-            xOut={-100}
-            yOut={0}
-            customClassname="flex flex-col items-end no-underline hover:no-underline"
-          >
-            <Image
-              alt="Logo Resurse Creștine"
-              src={resurseCrestineLogo}
-              className="w-52"
-            />
-            <span className="text-gray-500 no-underline hover:no-underline">
-              {t('colaborator')}
-            </span>
-          </InViewTransition>
-        </Link>
-
-        <a
           href={verse.link}
           target="_blank"
           rel="noopener noreferrer"
@@ -83,7 +62,21 @@ export default function ResurseCrestine() {
               <span>{verse.referenceText}</span>
             </div>
           </InViewTransition>
-        </a>
+        </Link>
+
+        <InViewTransition
+          damping={25}
+          xOut={-100}
+          yOut={0}
+          customClassname="flex flex-col items-end w-full"
+        >
+          <Image
+            alt="Logo Resurse Creștine"
+            src={resurseCrestineLogo}
+            className="w-40"
+          />
+          <span className="text-gray-500">{t('colaborator')}</span>
+        </InViewTransition>
       </div>
     </div>
   )
