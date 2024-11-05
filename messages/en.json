@@ -144,7 +144,11 @@
     "button": "Get the book by contacting us on WhatsApp"
   },
   "resurse-crestine": {
-    "colaborator": "Colaborator"
+    "colaborator": "Colaborator",
+    "asociatia_resurse_crestine": "Christian Resources Association",
+    "descriere_asociatie": "In June 2017, the Christian Resources Association was established, whose purpose is the online distribution through the website",
+    "materiale_gratuite": "of free materials for the implementation of moral-Christian values.",
+    "vezi_mai_multe": "See more"
   },
   "button": {
     "agree": "I Agree",
