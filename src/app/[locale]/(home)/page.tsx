@@ -1,6 +1,7 @@
 import Animation from '../common/animation'
 import CustomHeroBg from '../common/custom-hero-bg'
 import InViewTransition from '../common/in-view-transition'
+import AboutResusrseCrestine from './components/about-resurse-crestine'
 import Book from './components/book'
 import { CardCollaborator } from './components/card-collaborator'
 import EvangelismSteps from './components/evangelism-steps/evangelism-steps'
@@ -85,6 +86,7 @@ export default function Home() {
       <Spotify />
       <Book />
       <ResurseCrestine />
+      <AboutResusrseCrestine />
     </div>
   )
 }
