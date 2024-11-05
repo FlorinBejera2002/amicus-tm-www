@@ -63,24 +63,20 @@ export default function ResurseCrestine() {
             </div>
           </InViewTransition>
         </Link>
-        <Link
-          href="https://www.resursecrestine.ro"
-          className="no-underline hover:no-underline w-full !p-0"
+
+        <InViewTransition
+          damping={25}
+          xOut={-100}
+          yOut={0}
+          customClassname="flex flex-col items-end w-full"
         >
-          <InViewTransition
-            damping={25}
-            xOut={-100}
-            yOut={0}
-            customClassname="flex flex-col items-end no-underline hover:no-underline"
-          >
-            <Image
-              alt="Logo Resurse Creștine"
-              src={resurseCrestineLogo}
-              className="w-40"
-            />
-            <span className="text-gray-500">{t('colaborator')}</span>
-          </InViewTransition>
-        </Link>
+          <Image
+            alt="Logo Resurse Creștine"
+            src={resurseCrestineLogo}
+            className="w-40"
+          />
+          <span className="text-gray-500">{t('colaborator')}</span>
+        </InViewTransition>
       </div>
     </div>
   )
