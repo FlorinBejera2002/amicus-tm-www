@@ -2,8 +2,8 @@ import InViewTransition from '@/app/[locale]/common/in-view-transition'
 import Image from 'next/image'
 import resurseCrestineLogo from '../../../../../public/resurse-crestine-image.png'
 
-import Link from 'next/link'
 import { useTranslations } from 'next-intl'
+import Link from 'next/link'
 
 export default function AboutResusrseCrestine() {
   const t = useTranslations('')
