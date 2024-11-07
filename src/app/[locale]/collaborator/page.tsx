@@ -64,8 +64,8 @@ export default function Book() {
                   src={Collaborator}
                   alt="Inteligența Divină"
                   className=" rounded-md"
-                  width={450}
-                  height={300}
+                  width={900}
+                  height={600}
                 />
               </div>
             </InViewTransition>
