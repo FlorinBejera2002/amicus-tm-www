@@ -8,9 +8,9 @@ import Image from 'next/image'
 import { FaAngleLeft, FaAngleRight } from 'react-icons/fa6'
 
 import AvramSabou from '../../../../../public/img/team/Avram.webp'
-import Mark from '../../../../../public/mark.png'
 import Chris from '../../../../../public/img/team/chris potra.webp'
 import Dana from '../../../../../public/img/team/dana potra.webp'
+import Mark from '../../../../../public/mark.png'
 
 export default function Team() {
   const t = useTranslations('team')
