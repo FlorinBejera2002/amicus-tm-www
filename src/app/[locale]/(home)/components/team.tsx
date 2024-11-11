@@ -113,7 +113,7 @@ export default function Team() {
               <InViewTransition damping={50} delay={0.25 * idx} key={idx}>
                 <div className="group h-96 relative z-10 mt-4 flex flex-col items-center gap-1 overflow-hidden rounded-md bg-gradient-to-b from-[#090d1a] via-blue-900 to-[#061e35] duration-300">
                   <Image
-                    className={cn("w-full pt-3", member.style)}
+                    className={cn('w-full pt-3', member.style)}
                     src={member.img}
                     alt={''}
                   />
