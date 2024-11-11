@@ -8,9 +8,9 @@ import Image from 'next/image'
 import { FaAngleLeft, FaAngleRight } from 'react-icons/fa6'
 
 import AvramSabou from '../../../../../public/img/team/Avram.webp'
+import Mark from '../../../../../public/mark.png'
 import Chris from '../../../../../public/img/team/chris potra.webp'
 import Dana from '../../../../../public/img/team/dana potra.webp'
-import Mark from '../../../../../public/mark.png'
 
 export default function Team() {
   const t = useTranslations('team')
@@ -23,6 +23,12 @@ export default function Team() {
       role: t('avram-sabou')
     },
     {
+      description: t('mark_des'),
+      img: Mark,
+      name: 'Mark Moldovan',
+      role: t('mark')
+    },
+    {
       description: t('christian_des'),
       img: Chris,
       name: 'Christian Potra',
@@ -33,12 +39,6 @@ export default function Team() {
       img: Dana,
       name: 'Dana Potra',
       role: t('dana-potra')
-    },
-    {
-      description: t('mark_des'),
-      img: Mark,
-      name: 'Mark Moldovan',
-      role: t('mark')
     }
   ]
 
@@ -91,7 +91,7 @@ export default function Team() {
 
   return (
     <div className="bg-color-dark relative lazyload mx-auto bg-cover bg-center">
-      <div className="md:p-28 p-8">
+      <div className="md:p-28 p-8 md:px-44">
         <InViewTransition>
           <h2 className="mb-0 text-center text-2xl font-semibold text-gray-50 lg:text-4xl">
             {t('title-a4c')}
@@ -108,12 +108,8 @@ export default function Team() {
           <div className="grid grid-cols-1 gap-3 overflow-hidden md:grid-cols-2 md:px-3 md:pb-3 xl:grid-cols-4">
             {getVisibleMembers().map((member, idx) => (
               <InViewTransition damping={50} delay={0.25 * idx} key={idx}>
-                <div className="group relative z-10 mt-4 flex flex-col items-center gap-1 overflow-hidden rounded-md bg-gradient-to-b from-[#090d1a] via-blue-900 to-[#061e35] duration-300">
-                  <Image
-                    alt={member.name}
-                    className="w-full pt-3"
-                    src={member.img}
-                  />
+                <div className="group h-96 relative z-10 mt-4 flex flex-col items-center gap-1 overflow-hidden rounded-md bg-gradient-to-b from-[#090d1a] via-blue-900 to-[#061e35] duration-300">
+                  <Image className="w-full pt-3" src={member.img} alt={''} />
                   <div className="absolute bottom-2 left-2 gap-1 pl-2">
                     <b className="text-sm text-gray-50 group-hover:hidden md:text-base">
                       {member.name}
