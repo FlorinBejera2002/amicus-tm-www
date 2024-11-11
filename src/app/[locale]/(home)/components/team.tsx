@@ -7,10 +7,11 @@ import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 import { FaAngleLeft, FaAngleRight } from 'react-icons/fa6'
 
+import { cn } from '@/utils'
 import AvramSabou from '../../../../../public/img/team/Avram.webp'
-import Chris from '../../../../../public/img/team/chris potra.webp'
-import Dana from '../../../../../public/img/team/dana potra.webp'
-import Mark from '../../../../../public/mark.png'
+import ChrisPotra from '../../../../../public/img/team/chris_potra.webp'
+import DanaPotra from '../../../../../public/img/team/dana_potra.webp'
+import Mark from '../../../../../public/img/team/mark.png'
 
 export default function Team() {
   const t = useTranslations('team')
@@ -30,15 +31,17 @@ export default function Team() {
     },
     {
       description: t('christian_des'),
-      img: Chris,
+      img: ChrisPotra,
       name: 'Christian Potra',
-      role: t('christian-potra')
+      role: t('christian-potra'),
+      style: '!opacity-50'
     },
     {
       description: t('dana_des'),
-      img: Dana,
+      img: DanaPotra,
       name: 'Dana Potra',
-      role: t('dana-potra')
+      role: t('dana-potra'),
+      style: '!opacity-50'
     }
   ]
 
@@ -90,8 +93,8 @@ export default function Team() {
   }
 
   return (
-    <div className="bg-color-dark relative lazyload mx-auto bg-cover bg-center">
-      <div className="md:p-28 p-8 md:px-44">
+    <div className="bg-color-dark relative lazyload mx-auto bg-cover bg-center flex justify-center">
+      <div className="md:p-28 p-8 md:px-44 max-w-7xl">
         <InViewTransition>
           <h2 className="mb-0 text-center text-2xl font-semibold text-gray-50 lg:text-4xl">
             {t('title-a4c')}
@@ -109,7 +112,11 @@ export default function Team() {
             {getVisibleMembers().map((member, idx) => (
               <InViewTransition damping={50} delay={0.25 * idx} key={idx}>
                 <div className="group h-96 relative z-10 mt-4 flex flex-col items-center gap-1 overflow-hidden rounded-md bg-gradient-to-b from-[#090d1a] via-blue-900 to-[#061e35] duration-300">
-                  <Image className="w-full pt-3" src={member.img} alt={''} />
+                  <Image
+                    className={cn("w-full pt-3", member.style)}
+                    src={member.img}
+                    alt={''}
+                  />
                   <div className="absolute bottom-2 left-2 gap-1 pl-2">
                     <b className="text-sm text-gray-50 group-hover:hidden md:text-base">
                       {member.name}
