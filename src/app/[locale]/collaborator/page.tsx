@@ -2,17 +2,18 @@ import { Metadata } from 'next'
 import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 import Link from 'next/link'
-import { FaAngleRight, FaHandsHelping } from 'react-icons/fa'
-import Collaborator from '../../../../public/collaborator.webp'
+import { FaAngleRight } from 'react-icons/fa'
+import CollaboratorImage from '../../../../public/collaborator.webp'
 import Animation from '../common/animation'
 import CustomHeroBg from '../common/custom-hero-bg'
 import InViewTransition from '../common/in-view-transition'
+import { CollaboratorButton } from './collaborator-button'
 
 export const metadata: Metadata = {
   title: 'Arise for Christ | Podcast'
 }
 
-export default function Book() {
+export default function Collaborator() {
   const t = useTranslations()
 
   return (
@@ -61,7 +62,7 @@ export default function Book() {
             <InViewTransition delay={0.25}>
               <div className=" flex justify-center">
                 <Image
-                  src={Collaborator}
+                  src={CollaboratorImage}
                   alt="Inteligența Divină"
                   className=" rounded-md"
                   width={900}
@@ -91,13 +92,14 @@ export default function Book() {
 
           <InViewTransition delay={1.25}>
             <div className="flex justify-center">
-              <Link
+              {/* <Link
                 className="w-fit text-decoration-none flex gap-2 items-center justify-center self-start rounded-md bg-accent px-12 py-2.5 font-bold text-black disabled:pointer-events-none md:!mt-0 md:self-center"
                 href="mailto:info@ariseforchrist.com?subject=Vreau%20să%20mă%20implic&body=Mă%20numesc%20...%20și%20vreau%20să%20mă%20implic%20în%20lucrare"
               >
                 {t('collaborator.send')}
                 <FaHandsHelping />
-              </Link>
+              </Link> */}
+              <CollaboratorButton />
             </div>
           </InViewTransition>
         </div>
