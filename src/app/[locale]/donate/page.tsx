@@ -219,15 +219,93 @@ const About = () => {
           </div>
 
           <div className="mt-20">
-            <InViewTransition delay={0.25}>
+            <InViewTransition
+              delay={0.25}
+              customClassname="flex flex-col gap-4"
+            >
               <h1 className="mb-3 text-2xl md:text-3xl font-bold" key={1}>
-                {t('donate.title_3')}
+                Formularul 230 - {t('donate.title_3')}
               </h1>
 
               <span className="inline-flex cursor-pointer items-center gap-2 rounded-md bg-accent px-3 py-2 text-center font-semibold text-black opacity-50">
                 <FaFileAlt />
                 {t('donate.form')}
               </span>
+
+              <InViewTransition delay={0}>
+                <p className="text-md line-height-7 md:text-lg">
+                  Formularul 230 este un document oficial utilizat în România
+                  pentru a redirecționa până la 3,5% din impozitul pe venit
+                  către o organizație non-guvernamentală sau o cauză socială.
+                  Este un mod simplu prin care contribuabilii pot sprijini
+                  inițiativele în care cred, fără a suporta costuri
+                  suplimentare.
+                </p>
+              </InViewTransition>
+
+              <InViewTransition delay={0}>
+                <h3>Cine poate completa Formularul 230?</h3>
+                <p className="text-md line-height-7 md:text-lg">
+                  Formularul 230 poate fi completat de: Persoane fizice care au
+                  realizat venituri din salarii sau pensii în anul anterior.
+                  Persoane care au realizat venituri impozabile în România, cum
+                  ar fi din chirii sau alte activități independente (dacă sunt
+                  specificate de legislație).”
+                </p>
+              </InViewTransition>
+
+              <InViewTransition delay={0}>
+                <h3>Cum se completează Formularul 230?</h3>
+                <Link href={''} className="text-md line-height-7 md:text-lg">
+                  1. Descărcați Formularul 230
+                </Link>
+                <p className="text-md line-height-7 md:text-lg">
+                  2. Completați datele personale
+                  <li>Nume si prenume</li>
+                  <li>Cod numeric personal (CNP)</li>
+                  <li>Adresă de domiciliu.</li>
+                </p>
+                <p className="text-md line-height-7 md:text-lg">
+                  3. Adăugați detaliile organizației noastre
+                  <li>Denumirea organizației - Asociatia Arise for Christ</li>
+                  <li>Codul fiscal - </li>
+                  <li>IBAN - </li>
+                </p>
+                <p className="text-md line-height-7 md:text-lg">
+                  4. Bifați opțiunea pentru redirecționarea procentului dorit
+                  <li>3,5% este standard pentru organizațiile eligibile.</li>
+                </p>
+                <p className="text-md line-height-7 md:text-lg">
+                  5. Semnați formularul
+                  <li>
+                    Scrieți data completării și semnați în partea inferioară.
+                  </li>
+                </p>
+              </InViewTransition>
+
+              <InViewTransition delay={0}>
+                <h3>Cum se depune Formularul 230?</h3>
+
+                <p className="text-md line-height-7 md:text-lg">
+                  Online: Prin platforma Spațiul Privat Virtual (SPV)
+                  disponibilă pe site-ul ANAF.
+                </p>
+                <p className="text-md line-height-7 md:text-lg">
+                  Fizic: La sediul ANAF de care aparțineți, în funcție de
+                  domiciliu.
+                </p>
+                <p className="text-md line-height-7 md:text-lg">
+                  Poștă: Prin scrisoare recomandată, trimisă la administrația
+                  financiară relevantă.
+                </p>
+              </InViewTransition>
+
+              <InViewTransition delay={0}>
+                <Link href={''} className="text-md line-height-7 md:text-lg">
+                  Află mai multe accesând Formularul 230 direct de pe site-ul
+                  ANAF.
+                </Link>
+              </InViewTransition>
 
               <div className="w-full mt-4">
                 <p className="mb-0">{t('donate.paragraf_5')}</p>
