@@ -9,7 +9,6 @@ import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { FaDonate } from 'react-icons/fa'
-import { FaFileAlt } from 'react-icons/fa'
 import { FaAngleRight } from 'react-icons/fa'
 
 import CECLogo from '../../../../public/CEC Bank.svg'
@@ -18,6 +17,7 @@ import QRPayPal from '../../../../public/QRPayPal.png'
 import RevolutLogo from '../../../../public/Revolut-Logo.png'
 import QRStripe from '../../../../public/qr-stripe.png'
 import StripeLogo from '../../../../public/srtripe.png'
+import formImage from '../../../../public/form-230-image.png'
 
 export const metadata: Metadata = {
   title: 'Arise for Christ | Donate'
@@ -67,7 +67,7 @@ const About = () => {
         <Animation />
       </section>
 
-      <div className="custom-page-content p-relative z-index-2 text-md flex w-full justify-center ">
+      <div className="custom-page-content p-relative z-index-2 text-base flex w-full justify-center ">
         <div className="max-w-6xl flex flex-col content-center rounded-md bg-white p-8 shadow-lg md:p-12 gap-10">
           <div className="max-w-full">
             <InViewTransition delay={0.25}>
@@ -227,13 +227,13 @@ const About = () => {
                 Formularul 230 - {t('donate.title_3')}
               </h1>
 
-              <span className="inline-flex cursor-pointer items-center gap-2 rounded-md bg-accent px-3 py-2 text-center font-semibold text-black opacity-50">
+              {/* <span className="inline-flex cursor-pointer items-center gap-2 rounded-md bg-accent px-3 py-2 text-center font-semibold text-black opacity-50">
                 <FaFileAlt />
                 {t('donate.form')}
-              </span>
+              </span> */}
 
               <InViewTransition delay={0}>
-                <p className="text-md line-height-7 md:text-lg">
+                <p className="text-base line-height-7 md:text-lg">
                   Formularul 230 este un document oficial utilizat în România
                   pentru a redirecționa până la 3,5% din impozitul pe venit
                   către o organizație non-guvernamentală sau o cauză socială.
@@ -244,8 +244,10 @@ const About = () => {
               </InViewTransition>
 
               <InViewTransition delay={0}>
-                <h3>Cine poate completa Formularul 230?</h3>
-                <p className="text-md line-height-7 md:text-lg">
+                <h3 className="text-base mb-0 text-start font-semibold md:text-xl">
+                  Cine poate completa Formularul 230?
+                </h3>
+                <p className="text-base line-height-7 md:text-lg">
                   Formularul 230 poate fi completat de: Persoane fizice care au
                   realizat venituri din salarii sau pensii în anul anterior.
                   Persoane care au realizat venituri impozabile în România, cum
@@ -254,62 +256,117 @@ const About = () => {
                 </p>
               </InViewTransition>
 
-              <InViewTransition delay={0}>
-                <h3>Cum se completează Formularul 230?</h3>
-                <Link href={''} className="text-md line-height-7 md:text-lg">
-                  1. Descărcați Formularul 230
-                </Link>
-                <p className="text-md line-height-7 md:text-lg">
-                  2. Completați datele personale
-                  <li>Nume si prenume</li>
-                  <li>Cod numeric personal (CNP)</li>
-                  <li>Adresă de domiciliu.</li>
-                </p>
-                <p className="text-md line-height-7 md:text-lg">
-                  3. Adăugați detaliile organizației noastre
-                  <li>Denumirea organizației - Asociatia Arise for Christ</li>
-                  <li>Codul fiscal - </li>
-                  <li>IBAN - </li>
-                </p>
-                <p className="text-md line-height-7 md:text-lg">
-                  4. Bifați opțiunea pentru redirecționarea procentului dorit
-                  <li>3,5% este standard pentru organizațiile eligibile.</li>
-                </p>
-                <p className="text-md line-height-7 md:text-lg">
-                  5. Semnați formularul
-                  <li>
-                    Scrieți data completării și semnați în partea inferioară.
-                  </li>
-                </p>
+              <InViewTransition delay={0} customClassname="flex flex-col gap-4">
+                <h3 className="text-base mb-0 text-start font-semibold md:text-xl">
+                  Cum se completează Formularul 230?
+                </h3>
+                <div className="md:flex">
+                  <div className="flex flex-col md:gap-4 w-full">
+                    <Link
+                      href={''}
+                      className="text-base line-height-7 md:text-lg md:hover:underline no-underline"
+                    >
+                      <b className="text-gray-900">1.</b> Descărcați Formularul
+                      230
+                    </Link>
+
+                    <ul className="text-base line-height-7 md:text-lg pl-0">
+                      <b className="text-gray-900">2.</b> Completați datele
+                      personale
+                      <li className="text-sm text-gray-700 md:text-base">
+                        Nume si prenume
+                      </li>
+                      <li className="text-sm text-gray-700 md:text-base">
+                        Cod numeric personal (CNP)
+                      </li>
+                      <li className="text-sm text-gray-700 md:text-base">
+                        Adresă de domiciliu.
+                      </li>
+                    </ul>
+
+                    <ul className="text-base line-height-7 md:text-lg pl-0">
+                      <b className="text-gray-900">3.</b> Adăugați detaliile
+                      organizației noastre
+                      <li className="text-sm text-gray-700 md:text-base">
+                        Denumirea organizației - Asociatia Arise for Christ
+                      </li>
+                      <li className="text-sm text-gray-700 md:text-base">
+                        Codul fiscal -
+                      </li>
+                      <li className="text-sm text-gray-700 md:text-base">
+                        IBAN -
+                      </li>
+                    </ul>
+
+                    <ul className="text-base line-height-7 md:text-lg pl-0">
+                      <b className="text-gray-900">4.</b> Bifați opțiunea pentru
+                      redirecționarea procentului dorit
+                      <li className="text-sm text-gray-700 md:text-base">
+                        3,5% este standard pentru organizațiile eligibile.
+                      </li>
+                    </ul>
+
+                    <ul className="text-base line-height-7 md:text-lg pl-0">
+                      <b className="text-gray-900">5.</b> Semnați formularul
+                      <li className="text-sm text-gray-700 md:text-base">
+                        Scrieți data completării și semnați în partea
+                        inferioară.
+                      </li>
+                    </ul>
+                  </div>
+                  <InViewTransition
+                    customClassname="flex justify-center items-center w-full !p-0 hidden md:flex"
+                    damping={25}
+                    xOut={-100}
+                    yOut={0}
+                  >
+                    <Image
+                      alt="Book Arise for Christ"
+                      src={formImage}
+                      className="w-[400px]"
+                    />
+                  </InViewTransition>
+                </div>
+              </InViewTransition>
+
+              <InViewTransition delay={0} customClassname="flex flex-col gap-4">
+                <h3 className="text-base mb-0 text-start font-semibold md:text-xl">
+                  Cum se depune Formularul 230?
+                </h3>
+
+                <div className="flex flex-col">
+                  <p className="text-base line-height-7 md:text-lg">
+                    <b className="text-base font-medium"> Online:</b> Prin
+                    platforma Spațiul Privat Virtual (SPV) disponibilă pe
+                    site-ul ANAF.
+                  </p>
+
+                  <p className="text-base line-height-7 md:text-lg">
+                    <b className="text-base font-medium"> Fizic: </b> La sediul
+                    ANAF de care aparțineți, în funcție de domiciliu.
+                  </p>
+
+                  <p className="text-base line-height-7 md:text-lg">
+                    <b className="text-base font-medium"> Poștă: </b> Prin
+                    scrisoare recomandată, trimisă la administrația financiară
+                    relevantă.
+                  </p>
+                </div>
               </InViewTransition>
 
               <InViewTransition delay={0}>
-                <h3>Cum se depune Formularul 230?</h3>
-
-                <p className="text-md line-height-7 md:text-lg">
-                  Online: Prin platforma Spațiul Privat Virtual (SPV)
-                  disponibilă pe site-ul ANAF.
-                </p>
-                <p className="text-md line-height-7 md:text-lg">
-                  Fizic: La sediul ANAF de care aparțineți, în funcție de
-                  domiciliu.
-                </p>
-                <p className="text-md line-height-7 md:text-lg">
-                  Poștă: Prin scrisoare recomandată, trimisă la administrația
-                  financiară relevantă.
-                </p>
-              </InViewTransition>
-
-              <InViewTransition delay={0}>
-                <Link href={''} className="text-md line-height-7 md:text-lg">
+                <Link
+                  href={''}
+                  className="text-base line-height-7 md:text-lg no-underline hover:underline"
+                >
                   Află mai multe accesând Formularul 230 direct de pe site-ul
                   ANAF.
                 </Link>
               </InViewTransition>
 
-              <div className="w-full mt-4">
+              {/* <div className="w-full mt-4">
                 <p className="mb-0">{t('donate.paragraf_5')}</p>
-              </div>
+              </div> */}
             </InViewTransition>
           </div>
         </div>
