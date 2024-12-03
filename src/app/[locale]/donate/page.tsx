@@ -9,13 +9,13 @@ import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { FaDonate } from 'react-icons/fa'
-import { FaFileAlt } from 'react-icons/fa'
 import { FaAngleRight } from 'react-icons/fa'
 
 import CECLogo from '../../../../public/CEC Bank.svg'
 import PayPal from '../../../../public/PayPal.png'
 import QRPayPal from '../../../../public/QRPayPal.png'
 import RevolutLogo from '../../../../public/Revolut-Logo.png'
+import formImage from '../../../../public/form-230-image.png'
 import QRStripe from '../../../../public/qr-stripe.png'
 import StripeLogo from '../../../../public/srtripe.png'
 
@@ -67,7 +67,7 @@ const About = () => {
         <Animation />
       </section>
 
-      <div className="custom-page-content p-relative z-index-2 text-md flex w-full justify-center ">
+      <div className="custom-page-content p-relative z-index-2 text-base flex w-full justify-center ">
         <div className="max-w-6xl flex flex-col content-center rounded-md bg-white p-8 shadow-lg md:p-12 gap-10">
           <div className="max-w-full">
             <InViewTransition delay={0.25}>
@@ -219,19 +219,145 @@ const About = () => {
           </div>
 
           <div className="mt-20">
-            <InViewTransition delay={0.25}>
+            <InViewTransition
+              delay={0.25}
+              customClassname="flex flex-col gap-4"
+            >
               <h1 className="mb-3 text-2xl md:text-3xl font-bold" key={1}>
-                {t('donate.title_3')}
+                {t('donate.forms')} - {t('donate.title_3')}
               </h1>
 
-              <span className="inline-flex cursor-pointer items-center gap-2 rounded-md bg-accent px-3 py-2 text-center font-semibold text-black opacity-50">
-                <FaFileAlt />
-                {t('donate.form')}
-              </span>
+              <InViewTransition delay={0}>
+                <p className="text-base line-height-7 md:text-lg">
+                  {t('donate.forms_p_1')}
+                </p>
+              </InViewTransition>
 
-              <div className="w-full mt-4">
-                <p className="mb-0">{t('donate.paragraf_5')}</p>
-              </div>
+              <InViewTransition delay={0}>
+                <h3 className="text-base mb-0 text-start font-semibold md:text-xl">
+                  {t('donate.forms_q_1')}
+                </h3>
+                <p className="text-base line-height-7 md:text-lg">
+                  {t('donate.forms_p_2')}
+                </p>
+              </InViewTransition>
+
+              <InViewTransition delay={0} customClassname="flex flex-col gap-4">
+                <h3 className="text-base mb-0 text-start font-semibold md:text-xl">
+                  {t('donate.forms_q_2')}
+                </h3>
+                <div className="md:flex">
+                  <div className="flex flex-col md:gap-4 w-full">
+                    <div
+                      // href={
+                      //   'https://static.anaf.ro/static/10/Anaf/Declaratii_R/230.html'
+                      // }
+                      className="text-base line-height-7 md:text-lg no-underline"
+                    >
+                      <b className="text-gray-900">1.</b>
+                      {t('donate.forms_p_3')}
+                      <p className="text-gray-500 text-sm">
+                        {t('donate.forms_p_4')}
+                      </p>
+                    </div>
+
+                    <ul className="text-base line-height-7 md:text-lg pl-0">
+                      <b className="text-gray-900">2.</b>
+                      {t('donate.forms_p_5')}
+                      <li className="text-sm text-gray-700 md:text-base">
+                        {t('donate.forms_p_6')}
+                      </li>
+                      <li className="text-sm text-gray-700 md:text-base">
+                        {t('donate.forms_p_7')}
+                      </li>
+                      <li className="text-sm text-gray-700 md:text-base">
+                        {t('donate.forms_p_8')}
+                      </li>
+                    </ul>
+
+                    <ul className="text-base line-height-7 md:text-lg pl-0">
+                      <b className="text-gray-900">3.</b>
+                      {t('donate.forms_q_3')}
+                      <li className="text-sm text-gray-700 md:text-base">
+                        {t('donate.forms_p_9')} - ASOCIATIA ARISE FOR CHRIST
+                      </li>
+                      <li className="text-sm text-gray-700 md:text-base">
+                        {t('donate.forms_p_10')} - 34622199
+                      </li>
+                      <li className="text-sm text-gray-700 md:text-base">
+                        IBAN - RO36CECETM0130RON0998570
+                      </li>
+                    </ul>
+
+                    <ul className="text-base line-height-7 md:text-lg pl-0">
+                      <b className="text-gray-900">4.</b>
+                      {t('donate.forms_q_4')}
+                      <li className="text-sm text-gray-700 md:text-base">
+                        {t('donate.forms_p_11')}
+                      </li>
+                    </ul>
+
+                    <ul className="text-base line-height-7 md:text-lg pl-0">
+                      <b className="text-gray-900">5.</b>
+                      {t('donate.forms_q_5')}
+                      <li className="text-sm text-gray-700 md:text-base">
+                        {t('donate.forms_p_12')}
+                      </li>
+                    </ul>
+                  </div>
+                  <InViewTransition
+                    customClassname="flex justify-center items-center w-full !p-0 hidden md:flex"
+                    damping={25}
+                    xOut={-100}
+                    yOut={0}
+                  >
+                    <Image
+                      alt="Book Arise for Christ"
+                      src={formImage}
+                      className="w-[400px]"
+                    />
+                  </InViewTransition>
+                </div>
+              </InViewTransition>
+
+              <InViewTransition delay={0} customClassname="flex flex-col gap-4">
+                <h3 className="text-base mb-0 text-start font-semibold md:text-xl">
+                  {t('donate.forms_q_6')}
+                </h3>
+
+                <div className="flex flex-col">
+                  <p className="text-base line-height-7 md:text-lg">
+                    <b className="text-base font-medium"> Online:</b>
+                    {t('donate.forms_p_13')}
+                  </p>
+
+                  <p className="text-base line-height-7 md:text-lg">
+                    <b className="text-base font-medium">
+                      {t('donate.forms_p_16')}:
+                    </b>
+                    {t('donate.forms_p_14')}
+                  </p>
+
+                  <p className="text-base line-height-7 md:text-lg">
+                    <b className="text-base font-medium">
+                      {t('donate.forms_p_17')}:
+                    </b>
+                    {t('donate.forms_p_15')}
+                  </p>
+                </div>
+              </InViewTransition>
+
+              <InViewTransition delay={0}>
+                <Link
+                  href={
+                    'https://static.anaf.ro/static/10/Anaf/Declaratii_R/230.html'
+                  }
+                  target="_blank"
+                  className="text-base line-height-7 md:text-lg no-underline hover:underline"
+                >
+                  {t('donate.forms_p_18')}
+                </Link>
+              </InViewTransition>
             </InViewTransition>
           </div>
         </div>
