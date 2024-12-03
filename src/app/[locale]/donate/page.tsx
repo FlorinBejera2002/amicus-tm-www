@@ -224,93 +224,84 @@ const About = () => {
               customClassname="flex flex-col gap-4"
             >
               <h1 className="mb-3 text-2xl md:text-3xl font-bold" key={1}>
-                Formularul 230 - {t('donate.title_3')}
+                {t('donate.forms')} - {t('donate.title_3')}
               </h1>
-
-              {/* <span className="inline-flex cursor-pointer items-center gap-2 rounded-md bg-accent px-3 py-2 text-center font-semibold text-black opacity-50">
-                <FaFileAlt />
-                {t('donate.form')}
-              </span> */}
 
               <InViewTransition delay={0}>
                 <p className="text-base line-height-7 md:text-lg">
-                  Formularul 230 este un document oficial utilizat în România
-                  pentru a redirecționa până la 3,5% din impozitul pe venit
-                  către o organizație non-guvernamentală sau o cauză socială.
-                  Este un mod simplu prin care contribuabilii pot sprijini
-                  inițiativele în care cred, fără a suporta costuri
-                  suplimentare.
+                  {t('donate.forms_p_1')}
                 </p>
               </InViewTransition>
 
               <InViewTransition delay={0}>
                 <h3 className="text-base mb-0 text-start font-semibold md:text-xl">
-                  Cine poate completa Formularul 230?
+                  {t('donate.forms_q_1')}
                 </h3>
                 <p className="text-base line-height-7 md:text-lg">
-                  Formularul 230 poate fi completat de: Persoane fizice care au
-                  realizat venituri din salarii sau pensii în anul anterior.
-                  Persoane care au realizat venituri impozabile în România, cum
-                  ar fi din chirii sau alte activități independente (dacă sunt
-                  specificate de legislație).”
+                  {t('donate.forms_p_2')}
                 </p>
               </InViewTransition>
 
               <InViewTransition delay={0} customClassname="flex flex-col gap-4">
                 <h3 className="text-base mb-0 text-start font-semibold md:text-xl">
-                  Cum se completează Formularul 230?
+                  {t('donate.forms_q_2')}
                 </h3>
                 <div className="md:flex">
                   <div className="flex flex-col md:gap-4 w-full">
                     <Link
-                      href={''}
+                      href={
+                        'https://static.anaf.ro/static/10/Anaf/Declaratii_R/230.html'
+                      }
                       className="text-base line-height-7 md:text-lg md:hover:underline no-underline"
                     >
-                      <b className="text-gray-900">1.</b> Descărcați Formularul
-                      230
+                      <b className="text-gray-900">1.</b>
+                      {t('donate.forms_p_3')}
+                      <p className="text-gray-500 text-sm">
+                        {t('donate.forms_p_4')}
+                      </p>
                     </Link>
 
                     <ul className="text-base line-height-7 md:text-lg pl-0">
-                      <b className="text-gray-900">2.</b> Completați datele
-                      personale
+                      <b className="text-gray-900">2.</b>
+                      {t('donate.forms_p_5')}
                       <li className="text-sm text-gray-700 md:text-base">
-                        Nume si prenume
+                        {t('donate.forms_p_6')}
                       </li>
                       <li className="text-sm text-gray-700 md:text-base">
-                        Cod numeric personal (CNP)
+                        {t('donate.forms_p_7')}
                       </li>
                       <li className="text-sm text-gray-700 md:text-base">
-                        Adresă de domiciliu.
-                      </li>
-                    </ul>
-
-                    <ul className="text-base line-height-7 md:text-lg pl-0">
-                      <b className="text-gray-900">3.</b> Adăugați detaliile
-                      organizației noastre
-                      <li className="text-sm text-gray-700 md:text-base">
-                        Denumirea organizației - Asociatia Arise for Christ
-                      </li>
-                      <li className="text-sm text-gray-700 md:text-base">
-                        Codul fiscal -
-                      </li>
-                      <li className="text-sm text-gray-700 md:text-base">
-                        IBAN -
+                        {t('donate.forms_p_8')}
                       </li>
                     </ul>
 
                     <ul className="text-base line-height-7 md:text-lg pl-0">
-                      <b className="text-gray-900">4.</b> Bifați opțiunea pentru
-                      redirecționarea procentului dorit
+                      <b className="text-gray-900">3.</b>
+                      {t('donate.forms_q_3')}
                       <li className="text-sm text-gray-700 md:text-base">
-                        3,5% este standard pentru organizațiile eligibile.
+                        {t('donate.forms_p_9')} - ASOCIATIA ARISE FOR CHRIST
+                      </li>
+                      <li className="text-sm text-gray-700 md:text-base">
+                        {t('donate.forms_p_10')} - 34622199
+                      </li>
+                      <li className="text-sm text-gray-700 md:text-base">
+                        IBAN - RO36CECETM0130RON0998570
                       </li>
                     </ul>
 
                     <ul className="text-base line-height-7 md:text-lg pl-0">
-                      <b className="text-gray-900">5.</b> Semnați formularul
+                      <b className="text-gray-900">4.</b>
+                      {t('donate.forms_q_4')}
                       <li className="text-sm text-gray-700 md:text-base">
-                        Scrieți data completării și semnați în partea
-                        inferioară.
+                        {t('donate.forms_p_11')}
+                      </li>
+                    </ul>
+
+                    <ul className="text-base line-height-7 md:text-lg pl-0">
+                      <b className="text-gray-900">5.</b>
+                      {t('donate.forms_q_5')}
+                      <li className="text-sm text-gray-700 md:text-base">
+                        {t('donate.forms_p_12')}
                       </li>
                     </ul>
                   </div>
@@ -331,42 +322,42 @@ const About = () => {
 
               <InViewTransition delay={0} customClassname="flex flex-col gap-4">
                 <h3 className="text-base mb-0 text-start font-semibold md:text-xl">
-                  Cum se depune Formularul 230?
+                  {t('donate.forms_q_6')}
                 </h3>
 
                 <div className="flex flex-col">
                   <p className="text-base line-height-7 md:text-lg">
-                    <b className="text-base font-medium"> Online:</b> Prin
-                    platforma Spațiul Privat Virtual (SPV) disponibilă pe
-                    site-ul ANAF.
+                    <b className="text-base font-medium"> Online:</b>
+                    {t('donate.forms_p_13')}
                   </p>
 
                   <p className="text-base line-height-7 md:text-lg">
-                    <b className="text-base font-medium"> Fizic: </b> La sediul
-                    ANAF de care aparțineți, în funcție de domiciliu.
+                    <b className="text-base font-medium">
+                      {t('donate.forms_p_16')}:
+                    </b>
+                    {t('donate.forms_p_14')}
                   </p>
 
                   <p className="text-base line-height-7 md:text-lg">
-                    <b className="text-base font-medium"> Poștă: </b> Prin
-                    scrisoare recomandată, trimisă la administrația financiară
-                    relevantă.
+                    <b className="text-base font-medium">
+                      {t('donate.forms_p_17')}:
+                    </b>
+                    {t('donate.forms_p_15')}
                   </p>
                 </div>
               </InViewTransition>
 
               <InViewTransition delay={0}>
                 <Link
-                  href={''}
+                  href={
+                    'https://static.anaf.ro/static/10/Anaf/Declaratii_R/230.html'
+                  }
+                  target="_blank"
                   className="text-base line-height-7 md:text-lg no-underline hover:underline"
                 >
-                  Află mai multe accesând Formularul 230 direct de pe site-ul
-                  ANAF.
+                  {t('donate.forms_p_18')}
                 </Link>
               </InViewTransition>
-
-              {/* <div className="w-full mt-4">
-                <p className="mb-0">{t('donate.paragraf_5')}</p>
-              </div> */}
             </InViewTransition>
           </div>
         </div>
