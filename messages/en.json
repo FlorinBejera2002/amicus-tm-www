@@ -218,7 +218,11 @@
     "subscribe_placeholder": "Enter your email",
     "subscribe_placeholder_error": "Invalid email",
     "subscribe_to_newsletter": "Subscribe to our Newsletter",
-    "subscribe_to_newsletter_desc": "The latest news, articles, and resources, sent to your inbox."
+    "subscribe_to_newsletter_desc": "The latest news, articles, and resources, sent to your inbox.",
+    "email": "info@ariseforchrist.com",
+    "phone1": "+40 (773) 307 292",
+    "phone2": "+40 (721) 804 560",
+    "phone3": "+40 (356) 175 148"
   },
   "form": {
     "address": "address",
