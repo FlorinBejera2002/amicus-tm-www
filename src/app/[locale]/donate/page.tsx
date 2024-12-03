@@ -15,9 +15,9 @@ import CECLogo from '../../../../public/CEC Bank.svg'
 import PayPal from '../../../../public/PayPal.png'
 import QRPayPal from '../../../../public/QRPayPal.png'
 import RevolutLogo from '../../../../public/Revolut-Logo.png'
+import formImage from '../../../../public/form-230-image.png'
 import QRStripe from '../../../../public/qr-stripe.png'
 import StripeLogo from '../../../../public/srtripe.png'
-import formImage from '../../../../public/form-230-image.png'
 
 export const metadata: Metadata = {
   title: 'Arise for Christ | Donate'
