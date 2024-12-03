@@ -216,7 +216,11 @@
     "subscribe_placeholder": "Introdu adresa de email",
     "subscribe_placeholder_error": "Email invalid",
     "subscribe_to_newsletter": "Abonează-te la Newsletter",
-    "subscribe_to_newsletter_desc": "Cele mai recente noutăți, articole și resurse trimise la adresa ta de email."
+    "subscribe_to_newsletter_desc": "Cele mai recente noutăți, articole și resurse trimise la adresa ta de email.",
+    "email": "info@ariseforchrist.com",
+    "phone1": "+40 (773) 307 292",
+    "phone2": "+40 (721) 804 560",
+    "phone3": "+40 (356) 175 148"
   },
   "form": {
     "address": "adresă",

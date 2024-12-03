@@ -248,18 +248,18 @@ const About = () => {
                 </h3>
                 <div className="md:flex">
                   <div className="flex flex-col md:gap-4 w-full">
-                    <Link
-                      href={
-                        'https://static.anaf.ro/static/10/Anaf/Declaratii_R/230.html'
-                      }
-                      className="text-base line-height-7 md:text-lg md:hover:underline no-underline"
+                    <div
+                      // href={
+                      //   'https://static.anaf.ro/static/10/Anaf/Declaratii_R/230.html'
+                      // }
+                      className="text-base line-height-7 md:text-lg no-underline"
                     >
                       <b className="text-gray-900">1.</b>
                       {t('donate.forms_p_3')}
                       <p className="text-gray-500 text-sm">
                         {t('donate.forms_p_4')}
                       </p>
-                    </Link>
+                    </div>
 
                     <ul className="text-base line-height-7 md:text-lg pl-0">
                       <b className="text-gray-900">2.</b>
