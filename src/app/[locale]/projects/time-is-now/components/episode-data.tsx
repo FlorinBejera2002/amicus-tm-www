@@ -17,7 +17,7 @@ import imageEpisod14 from '../../../../../../public/Ep14.png'
 import imageEpisod15 from '../../../../../../public/Ep15.png'
 
 type IEpisode = {
-  episodImage: StaticImageData
+  episodeImage: StaticImageData
   id: number
   title: string
   url: string
@@ -25,94 +25,94 @@ type IEpisode = {
 
 const episode: IEpisode[] = [
   {
-    episodImage: imageEpisod1,
+    episodeImage: imageEpisod1,
     id: 0,
     title: 'EPISODUL 1',
-    url: 'https://www.youtube.com/watch?v=PoZW1wUO0mg&t=467s'
+    url: 'https://www.youtube.com/watch?v=PoZW1wUO0mg'
   },
   {
-    episodImage: imageEpisod2,
+    episodeImage: imageEpisod2,
     id: 1,
     title: 'EPISODUL 2',
-    url: 'https://www.youtube.com/watch?v=PoZW1wUO0mg&t=467s'
+    url: 'https://www.youtube.com/watch?v=iPCdT-8E3KM'
   },
   {
-    episodImage: imageEpisod3,
+    episodeImage: imageEpisod3,
     id: 2,
     title: 'EPISODUL 3',
-    url: 'https://www.youtube.com/watch?v=PoZW1wUO0mg&t=467s'
+    url: 'https://www.youtube.com/watch?v=9S83G69yoMA'
   },
   {
-    episodImage: imageEpisod4,
+    episodeImage: imageEpisod4,
     id: 3,
     title: 'EPISODUL 4',
-    url: 'https://www.youtube.com/watch?v=PoZW1wUO0mg&t=467s'
+    url: 'https://www.youtube.com/watch?v=Vcrl3G1ctW4'
   },
   {
-    episodImage: imageEpisod5,
+    episodeImage: imageEpisod5,
     id: 4,
     title: 'EPISODUL 5',
-    url: 'https://www.youtube.com/watch?v=PoZW1wUO0mg&t=467s'
+    url: 'https://www.youtube.com/watch?v=jcS7egdnh0g'
   },
   {
-    episodImage: imageEpisod6,
+    episodeImage: imageEpisod6,
     id: 5,
     title: 'EPISODUL 6',
-    url: 'https://www.youtube.com/watch?v=PoZW1wUO0mg&t=467s'
+    url: 'https://www.youtube.com/watch?v=e3LmucqbxlA'
   },
   {
-    episodImage: imageEpisod7,
+    episodeImage: imageEpisod7,
     id: 6,
     title: 'EPISODUL 7',
-    url: 'https://www.youtube.com/watch?v=PoZW1wUO0mg&t=467s'
+    url: 'https://www.youtube.com/watch?v=73B1xbOd534'
   },
   {
-    episodImage: imageEpisod8,
+    episodeImage: imageEpisod8,
     id: 7,
     title: 'EPISODUL 8',
-    url: 'https://www.youtube.com/watch?v=PoZW1wUO0mg&t=467s'
+    url: 'https://www.youtube.com/watch?v=BFgVOWQpnHI'
   },
   {
-    episodImage: imageEpisod9,
+    episodeImage: imageEpisod9,
     id: 8,
     title: 'EPISODUL 9',
-    url: 'https://www.youtube.com/watch?v=PoZW1wUO0mg&t=467s'
+    url: 'https://www.youtube.com/watch?v=Y3VsDbi0SgQ'
   },
   {
-    episodImage: imageEpisod10,
+    episodeImage: imageEpisod10,
     id: 9,
     title: 'EPISODUL 10',
-    url: 'https://www.youtube.com/watch?v=PoZW1wUO0mg&t=467s'
+    url: 'https://www.youtube.com/watch?v=anuOtbRJqIo'
   },
   {
-    episodImage: imageEpisod11,
+    episodeImage: imageEpisod11,
     id: 10,
     title: 'EPISODUL 11',
-    url: 'https://www.youtube.com/watch?v=PoZW1wUO0mg&t=467s'
+    url: 'https://www.youtube.com/watch?v=jed0bn8vg98'
   },
   {
-    episodImage: imageEpisod12,
+    episodeImage: imageEpisod12,
     id: 11,
     title: 'EPISODUL 12',
-    url: 'https://www.youtube.com/watch?v=PoZW1wUO0mg&t=467s'
+    url: 'https://www.youtube.com/watch?v=GFep6KRPrco'
   },
   {
-    episodImage: imageEpisod13,
+    episodeImage: imageEpisod13,
     id: 12,
     title: 'EPISODUL 13',
-    url: 'https://www.youtube.com/watch?v=PoZW1wUO0mg&t=467s'
+    url: 'https://www.youtube.com/watch?v=JMUEX0afxiM'
   },
   {
-    episodImage: imageEpisod14,
+    episodeImage: imageEpisod14,
     id: 13,
     title: 'EPISODUL 14',
-    url: 'https://www.youtube.com/watch?v=PoZW1wUO0mg&t=467s'
+    url: 'https://www.youtube.com/watch?v=l-4izkZxPik'
   },
   {
-    episodImage: imageEpisod15,
+    episodeImage: imageEpisod15,
     id: 14,
     title: 'EPISODUL 15',
-    url: 'https://www.youtube.com/watch?v=PoZW1wUO0mg&t=467s'
+    url: 'https://www.youtube.com/watch?v=hwhXipb6iQ8'
   }
 ]
 

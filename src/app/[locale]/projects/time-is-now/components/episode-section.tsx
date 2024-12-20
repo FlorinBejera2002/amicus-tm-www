@@ -25,7 +25,7 @@ const EpisodeSection = () => {
                     <Image
                       alt="arise for christ logo"
                       className="hover:-translate-1 w-full rounded-md object-contain "
-                      src={item.episodImage}
+                      src={item.episodeImage}
                     />
                   </Link>
                   <h4 className="absolute bottom-0 left-8 text-white">
