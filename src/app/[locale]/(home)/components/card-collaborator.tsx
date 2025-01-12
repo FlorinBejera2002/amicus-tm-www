@@ -11,7 +11,7 @@ export const CardCollaborator = () => {
   const language = pathname.split('/')[1]
 
   return (
-    <div className='flex flex-col gap-3'>
+    <div className="flex flex-col gap-3">
       <Link
         href={`${language}/collaborator`}
         className="flex flex-col w-fit items-center gap-4 rounded-md bg-accent px-3 py-2.5 text-xs font-semibold text-black no-underline hover:!no-underline"

@@ -176,14 +176,14 @@ export default function Nav() {
             </Link>
           </div>
 
-          <Link href="/" className='lg:hidden'>
-              <Image
-                alt="arise for christ logo"
-                className="mr-8 object-contain"
-                src={horizontalLogo}
-                width={100}
-              />
-            </Link>
+          <Link href="/" className="lg:hidden">
+            <Image
+              alt="arise for christ logo"
+              className="mr-8 object-contain"
+              src={horizontalLogo}
+              width={100}
+            />
+          </Link>
 
           <MenuButton
             className={cn(
