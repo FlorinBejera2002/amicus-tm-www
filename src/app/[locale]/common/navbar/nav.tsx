@@ -176,13 +176,14 @@ export default function Nav() {
             </Link>
           </div>
 
-          <Link
-            className=" mr-auto flex min-w-fit rounded-md bg-accent px-3 py-2.5 text-xs font-semibold text-black no-underline hover:!no-underline lg:hidden"
-            href={`/${language}/evangelism-request`}
-            type="button"
-          >
-            {t('form.title')}
-          </Link>
+          <Link href="/" className='lg:hidden'>
+              <Image
+                alt="arise for christ logo"
+                className="mr-8 object-contain"
+                src={horizontalLogo}
+                width={100}
+              />
+            </Link>
 
           <MenuButton
             className={cn(
