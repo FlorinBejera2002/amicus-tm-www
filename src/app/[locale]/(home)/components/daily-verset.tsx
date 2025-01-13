@@ -1,10 +1,10 @@
 'use client'
 
+import InViewTransition from '@/app/[locale]/common/in-view-transition'
+import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import roJson from '../../../../../messages/ro.json'
-import InViewTransition from '@/app/[locale]/common/in-view-transition'
 import Logo from '../../../../../public/logo_horizontal_white.webp'
-import Image from 'next/image'
 
 type DailyData = {
   verset: string
