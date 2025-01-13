@@ -10,11 +10,13 @@ type DailyData = {
   verset: string
   reference: string
 }
+
 type RoJsonType = {
   'text-book': {
     [key: string]: DailyData
   }
 }
+
 export const DailyVerset = () => {
   const [data, setData] = useState<DailyData | null>(null)
 
