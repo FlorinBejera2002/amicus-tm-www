@@ -5,6 +5,7 @@ import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import roJson from '../../../../../messages/ro.json'
 import Logo from '../../../../../public/logo_horizontal_white.webp'
+import { useTranslations } from 'next-intl'
 
 type DailyData = {
   verset: string
@@ -19,16 +20,16 @@ type RoJsonType = {
 
 export const DailyVerset = () => {
   const [data, setData] = useState<DailyData | null>(null)
+  const t = useTranslations()
 
-  const getCurrentDayOfYear = (): number => {
-    const now = new Date()
-    const startOfYear = new Date(now.getFullYear(), 0, 1)
-    const diff = now.getTime() - startOfYear.getTime()
-    return Math.ceil(diff / (1000 * 60 * 60 * 24))
-  }
-
-  // biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
   useEffect(() => {
+    const getCurrentDayOfYear = (): number => {
+      const now = new Date()
+      const startOfYear = new Date(now.getFullYear(), 0, 1)
+      const diff = now.getTime() - startOfYear.getTime()
+      return Math.ceil(diff / (1000 * 60 * 60 * 24))
+    }
+
     const dayOfYear = getCurrentDayOfYear()
     const key = `day_${dayOfYear}`
 
@@ -38,14 +39,18 @@ export const DailyVerset = () => {
       setData({ verset, reference })
     } else {
       setData({
-        verset: 'Verset indisponibil',
-        reference: 'Referință indisponibilă'
+        verset: t('daily_verset.versetUnavailable'),
+        reference: t('daily_verset.referenceUnavailable')
       })
     }
-  }, [])
+  }, [t])
 
   if (!data) {
-    return <p>Încărcare...</p>
+    return (
+      <div className="flex items-center justify-center min-h-screen">
+        <div className="loader"></div>
+      </div>
+    )
   }
 
   return (

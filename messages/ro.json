@@ -282,6 +282,10 @@
     "title-hero": "Eternitate",
     "title-question": "Ți-ai pus vreodată întrebarea:"
   },
+  "daily_verset": {
+    "versetUnavailable": "Verset indisponibil",
+    "referenceUnavailable": "Referință indisponibilă"
+  },
 
   "language": {
     "en": "EN",
