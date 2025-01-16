@@ -56,9 +56,8 @@ const DevotionalPage = () => {
         </div>
         <Animation />
       </section>
-
-      <div className="custom-page-content z-index-2 max-w-6xl py-4">
-        <div className="rounded-md bg-white p-8 shadow-lg gap-8 flex flex-col">
+      <div className="custom-page-content p-relative z-index-2 text-base flex w-full justify-center ">
+        <div className="mx-w-7xl rounded-md shadow-xl shadow-black">
           <DailyDevotional />
         </div>
       </div>

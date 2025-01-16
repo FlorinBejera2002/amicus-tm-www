@@ -1,10 +1,12 @@
 'use client'
 
-import axios from 'axios'
+import InViewTransition from '@/app/[locale]/common/in-view-transition'
 import { useEffect, useState } from 'react'
+import roJson from '../../../../../messages/ro.json'
 
-interface Devotional {
+type DailyDevotionalData = {
   title: string
+  date: string
   verset: string
   reference: string
   paragraf_1: string
@@ -18,100 +20,154 @@ interface Devotional {
   conclusion: string
 }
 
+type RoJsonType = {
+  'text-book': {
+    [key: string]: DailyDevotionalData
+  }
+}
+
 export const DailyDevotional = () => {
-  const [devotional, setDevotional] = useState<Devotional | null>(null)
+  const [data, setData] = useState<DailyDevotionalData | null>(null)
   const [bgImage, setBgImage] = useState<string>('')
 
-  const getToday = () => {
-    const date = new Date()
-    return {
-      day: date.getDay(),
-      formatted: date.toLocaleDateString('ro-RO', { weekday: 'long' })
-    }
+  const landscapeImages = [
+    'https://picsum.photos/id/1015/1920/1080?grayscale', // Munți
+    'https://picsum.photos/id/1020/1920/1080?grayscale', // Râu
+    'https://picsum.photos/id/1035/1920/1080?grayscale', // Pădure
+    'https://picsum.photos/id/1040/1920/1080?grayscale', // Mare
+    'https://picsum.photos/id/1050/1920/1080?grayscale' // Apus
+  ]
+
+  const getCurrentDayOfYear = (): number => {
+    const now = new Date()
+    const startOfYear = new Date(now.getFullYear(), 0, 1)
+    const diff = now.getTime() - startOfYear.getTime()
+    return Math.ceil(diff / (1000 * 60 * 60 * 24))
   }
 
-  const fetchDevotional = async () => {
-    try {
-      const response = await axios.get('/path_to/ro.json')
-      const devotions = response.data
-      const { day } = getToday()
-      const selectedDay = day === 0 || day === 6 ? 'day_5' : `day_${day}`
-      setDevotional(devotions[selectedDay])
-    } catch (error) {
-      console.error('Eroare la obținerea devotionalului:', error)
-    }
-  }
-
-  const fetchBackgroundImage = async () => {
-    try {
-      const response = await axios.get(
-        'https://source.unsplash.com/1920x1080/?landscape'
-      )
-      setBgImage(response.request.responseURL)
-    } catch (error) {
-      console.error('Eroare la obținerea imaginii:', error)
-    }
+  const fetchBackgroundImage = () => {
+    const dayOfYear = new Date().getDay()
+    const index = dayOfYear % landscapeImages.length // Rotire zilnică pe baza zilei săptămânii
+    setBgImage(landscapeImages[index])
   }
 
   // biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
   useEffect(() => {
-    fetchDevotional()
+    const dayOfYear = getCurrentDayOfYear()
+    const key = `day_${dayOfYear}`
+
+    const jsonData = roJson as RoJsonType
+    if (jsonData['text-book'] && jsonData['text-book'][key]) {
+      setData(jsonData['text-book'][key])
+    } else {
+      setData({
+        title: 'Devotional indisponibil',
+        date: '',
+        verset: 'Verset indisponibil',
+        reference: 'Referință indisponibilă',
+        paragraf_1: 'Paragraf indisponibil',
+        paragraf_2: 'Paragraf indisponibil',
+        guidelines: {
+          step_1: { title: '', description: '' },
+          step_2: { title: '', description: '' },
+          step_3: { title: '', description: '' }
+        },
+        reflection_questions: [],
+        conclusion: 'Concluzie indisponibilă'
+      })
+    }
+
     fetchBackgroundImage()
   }, [])
 
-  if (!devotional) {
-    return (
-      <div className="flex justify-center items-center h-screen">
-        Se încarcă...
-      </div>
-    )
+  if (!data) {
+    return <p>Încărcare...</p>
   }
 
   return (
-    <>
-      <div
-        className="min-h-screen bg-cover bg-center p-8"
-        style={{ backgroundImage: `url(${bgImage})` }}
-      >
-        <div className="bg-white bg-opacity-80 p-6 rounded-md shadow-lg max-w-4xl mx-auto">
-          <h1 className="text-2xl font-bold text-center mb-4">
-            {devotional.title}
-          </h1>
-          <p className="italic text-center mb-6">
-            {devotional.verset} - {devotional.reference}
-          </p>
-          <p className="mb-4">{devotional.paragraf_1}</p>
-          <p className="mb-4">{devotional.paragraf_2}</p>
-          <div className="mb-6">
+    <div
+      className="flex items-center justify-center min-h-screen bg-cover bg-center p-16 rounded-md"
+      style={{
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${bgImage})`
+      }}
+    >
+      <div className="flex flex-col items-center p-8 max-w-4xl gap-6 text-white">
+        <InViewTransition
+          delay={0.25}
+          customClassname="flex justify-center items-center"
+        >
+          <div className="text-left flex flex-col gap-4">
+            <h1 className="text-4xl font-bold">{data.title}</h1>
+            {/* <p className="text-sm italic text-gray-400 mb-4">{data.date}</p> */}
+            <p className="text-lg italic mb-2">"{data.verset}"</p>
+            <span className="text-accent ml-2">{data.reference}</span>
+          </div>
+        </InViewTransition>
+
+        <InViewTransition
+          damping={25}
+          xOut={-100}
+          yOut={0}
+          customClassname="w-full"
+        >
+          <p className="text-md mb-4">{data.paragraf_1}</p>
+          <p className="text-md mb-4">{data.paragraf_2}</p>
+        </InViewTransition>
+
+        <InViewTransition
+          damping={25}
+          xOut={100}
+          yOut={0}
+          customClassname="w-full"
+        >
+          <div className="text-left">
             <h2 className="text-lg font-semibold mb-2">Ghiduri:</h2>
-            <ul className="list-disc pl-5 space-y-2">
+            <ul className="list-disc ml-5 space-y-2">
               <li>
-                <strong>{devotional.guidelines.step_1.title}:</strong>{' '}
-                {devotional.guidelines.step_1.description}
+                <strong>{data.guidelines.step_1.title}:</strong>{' '}
+                {data.guidelines.step_1.description}
               </li>
               <li>
-                <strong>{devotional.guidelines.step_2.title}:</strong>{' '}
-                {devotional.guidelines.step_2.description}
+                <strong>{data.guidelines.step_2.title}:</strong>{' '}
+                {data.guidelines.step_2.description}
               </li>
               <li>
-                <strong>{devotional.guidelines.step_3.title}:</strong>{' '}
-                {devotional.guidelines.step_3.description}
+                <strong>{data.guidelines.step_3.title}:</strong>{' '}
+                {data.guidelines.step_3.description}
               </li>
             </ul>
           </div>
-          <div className="mb-6">
-            <h2 className="text-lg font-semibold mb-2">
+        </InViewTransition>
+
+        <InViewTransition
+          damping={25}
+          xOut={-100}
+          yOut={0}
+          customClassname="w-full"
+        >
+          <div className="text-left">
+            <h2 className="text-lg font-semibold mb-2 text-white">
               Întrebări de reflecție:
             </h2>
-            <ul className="list-disc pl-5 space-y-2">
-              {devotional.reflection_questions.map((question, index) => (
+            <ul className="list-disc ml-5 space-y-2">
+              {data.reflection_questions.map((question, index) => (
                 <li key={index}>{question}</li>
               ))}
             </ul>
           </div>
-          <p className="font-semibold">Concluzie: {devotional.conclusion}</p>
-        </div>
+        </InViewTransition>
+
+        <InViewTransition
+          damping={25}
+          xOut={-100}
+          yOut={0}
+          customClassname="w-full"
+        >
+          <p className="font-semibold">Concluzie: {data.conclusion}</p>
+        </InViewTransition>
       </div>
-    </>
+    </div>
   )
 }
+
+export default DailyDevotional
