@@ -269,6 +269,9 @@
     "paragraphUnavailable": "Unavailable paragraph",
     "conclusionUnavailable": "Unavailable conclusion",
     "question": "Întrebări de reflecție:"
+  "daily_verset": {
+    "versetUnavailable": "Verse unavailable",
+    "referenceUnavailable": "Reference unavailable"
   },
   "header": {
     "about_us": "About Us",
