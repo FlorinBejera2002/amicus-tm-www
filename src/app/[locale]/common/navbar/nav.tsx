@@ -73,6 +73,11 @@ export default function Nav() {
     },
     { href: `/${language}/vision`, label: t('header.vision'), route: 'vision' },
     {
+      href: `/${language}/devotional`,
+      label: t('header.devotional'),
+      route: 'devotion'
+    },
+    {
       href: `/${language}/collaborator`,
       label: t('header.collaborator'),
       route: 'collaborator'

@@ -115,6 +115,15 @@
     "tooltip_costs_show_editing": "Editarea video",
     "tooltip_costs_travel": "Transport"
   },
+  "devotional": {
+    "titleUnavailable": "Devotional indisponibil",
+    "dateUnavailable": "Dată indisponibilă",
+    "verseUnavailable": "Verset indisponibil",
+    "referenceUnavailable": "Referință indisponibilă",
+    "paragraphUnavailable": "Paragraf indisponibil",
+    "conclusionUnavailable": "Concluzie indisponibilă",
+    "question": "Întrebări de reflecție:"
+  },
   "collaborator": {
     "involve": "Implică-te acum!",
     "send": "Trimite-ne un email",
@@ -263,6 +272,7 @@
     "about_us": "Despre Noi",
     "actone": "Act One",
     "collaborator": "Implică-te",
+    "devotional": "Devotional",
     "blog": "Blog",
     "company": "Pagini",
     "contact": "Contact",
@@ -688,7 +698,7 @@
     "day_15": {
       "title": "Copilul și sabia",
       "date": "Săptămâna 3 | Luni",
-      "verset": "Aduceți-mi o sabie. Tăiați în două copilul cel viu și dați o jumătate uneia și o jumătate celeilalte.",
+      "verset": "Apoi a adăugat: „Aduceți-mi o sabie.” Au adus o sabie înaintea împăratului. Și împăratul a zis: „Tăiați în două copilul cel viu și dați o jumătate uneia și o jumătate celeilalte.” Atunci, femeia al cărei copil era viu a simțit că i se rupe inima pentru copil și a zis împăratului: „Ah, domnul meu, dă-i mai bine ei copilul cel viu și nu-l omorî!” Dar cealaltă a zis: „Să nu fie nici al meu, nici al tău; tăiați-l!” Și împăratul, luând cuvântul, a zis: „Dați celei dintâi copilul cel viu și nu-l omorâți. Ea este mama lui.”",
       "reference": "1 Împărați 3:24-27",
       "paragraf_1": "Regele Solomon a cerut înțelepciune de la Dumnezeu și a primit discernământ pentru a judeca cu dreptate.",
       "paragraf_2": "Cu un al șaselea simț dezvoltat, poți înțelege și conduce o situație, folosind sincronizarea, intuiția și emoția.",
