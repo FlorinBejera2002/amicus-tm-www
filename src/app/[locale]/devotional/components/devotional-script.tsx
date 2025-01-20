@@ -104,21 +104,18 @@ export const DailyDevotional = () => {
 
   return (
     <div
-      className="flex items-center justify-center min-h-screen bg-cover bg-center p-16 rounded-md"
+      className="flex items-center justify-center min-h-screen bg-cover bg-center md:p-16 rounded-md"
       style={{
         backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${bgImage})`
       }}
     >
-      <div className="flex flex-col items-center p-8 max-w-4xl gap-6 text-white">
-        <InViewTransition
-          delay={0.25}
-          customClassname="flex justify-center items-center"
-        >
+      <div className="flex flex-col p-4 md:p-8 max-w-4xl gap-6 text-white">
+        <InViewTransition delay={0.25} customClassname="flex">
           <div className="text-left flex flex-col gap-4">
             <h1 className="text-4xl font-bold">{data.title}</h1>
             <p className="text-sm italic text-gray-400 mb-4">{data.date}</p>
-            <p className="text-lg italic mb-2">"{data.verset}"</p>
-            <span className="text-accent ml-2">{data.reference}</span>
+            <p className="text-lg italic ">"{data.verset}"</p>
+            <span className="text-accent">{data.reference}</span>
           </div>
         </InViewTransition>
 
@@ -164,7 +161,7 @@ export const DailyDevotional = () => {
             <h2 className="text-lg font-semibold mb-2 text-white">
               Întrebări de reflecție:
             </h2>
-            <ul className="list-disc ml-5 space-y-2">
+            <ul className="list-disc md:ml-5 space-y-2">
               {data.reflection_questions.map((question, index) => (
                 <li key={index}>{question}</li>
               ))}
