@@ -109,13 +109,15 @@ export const DailyDevotional = () => {
         backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${bgImage})`
       }}
     >
-      <div className="flex flex-col p-4 md:p-8 max-w-4xl gap-6 text-white">
+      <div className="flex flex-col p-4 max-w-4xl gap-6 text-white">
         <InViewTransition delay={0.25} customClassname="flex">
-          <div className="text-left flex flex-col gap-4">
+          <div className="text-left flex flex-col gap-3">
             <h1 className="text-4xl font-bold">{data.title}</h1>
             <p className="text-sm italic text-gray-400 mb-4">{data.date}</p>
-            <p className="text-lg italic ">"{data.verset}"</p>
-            <span className="text-accent">{data.reference}</span>
+            <div>
+              <p className="text-lg italic">"{data.verset}"</p>
+              <span className="text-accent">{data.reference}</span>
+            </div>
           </div>
         </InViewTransition>
 
