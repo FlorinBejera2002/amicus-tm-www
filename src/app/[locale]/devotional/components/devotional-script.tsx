@@ -1,9 +1,9 @@
 'use client'
 
 import InViewTransition from '@/app/[locale]/common/in-view-transition'
+import { useTranslations } from 'next-intl'
 import { useEffect, useState } from 'react'
 import roJson from '../../../../../messages/ro.json'
-import { useTranslations } from 'next-intl'
 
 type DailyDevotionalData = {
   title: string
