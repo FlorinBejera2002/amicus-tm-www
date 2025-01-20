@@ -261,6 +261,15 @@
     "agree": "I Agree",
     "explanation": "This website does not store any cookies with your personal information. It will, however, store the data that you explicitly submit using the form inside this website. By accepting this form, you hereby consent that ariseforchrist can process your personal data for the purpose of contact. You may withdraw your consent and data at any time by contacting "
   },
+  "devotional": {
+    "titleUnavailable": "Unavailable devotional",
+    "dateUnavailable": "Unavailable date",
+    "verseUnavailable": "Unavailable verse",
+    "referenceUnavailable": "Unavailable reference",
+    "paragraphUnavailable": "Unavailable paragraph",
+    "conclusionUnavailable": "Unavailable conclusion",
+    "question": "Întrebări de reflecție:"
+  },
   "header": {
     "about_us": "About Us",
     "actone": "Act One",

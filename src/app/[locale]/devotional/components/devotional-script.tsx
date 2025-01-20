@@ -3,6 +3,7 @@
 import InViewTransition from '@/app/[locale]/common/in-view-transition'
 import { useEffect, useState } from 'react'
 import roJson from '../../../../../messages/ro.json'
+import { useTranslations } from 'next-intl'
 
 type DailyDevotionalData = {
   title: string
@@ -29,7 +30,7 @@ type RoJsonType = {
 export const DailyDevotional = () => {
   const [data, setData] = useState<DailyDevotionalData | null>(null)
   const [bgImage, setBgImage] = useState<string>('')
-
+  const t = useTranslations()
   const landscapeImages = [
     'https://picsum.photos/id/1015/1920/1080?grayscale',
     'https://picsum.photos/id/1020/1920/1080?grayscale',
@@ -38,36 +39,34 @@ export const DailyDevotional = () => {
     'https://picsum.photos/id/1050/1920/1080?grayscale'
   ]
 
-  const fetchBackgroundImage = () => {
-    const dayOfWeek = new Date().getDay()
-    const index = dayOfWeek % landscapeImages.length
-    setBgImage(landscapeImages[index])
-  }
+  useEffect(() => {
+    const getDevotionalKey = (): string => {
+      const now = new Date()
+      const weekNumber = Math.ceil(now.getDate() / 7) + 1
+      const daysOfWeek = [
+        'Duminică',
+        'Luni',
+        'Marți',
+        'Miercuri',
+        'Joi',
+        'Vineri',
+        'Sâmbătă'
+      ]
 
-  const getDevotionalKey = (): string => {
-    const now = new Date()
-    const weekNumber = Math.ceil(now.getDate() / 7) + 1
-    const daysOfWeek = [
-      'Duminică',
-      'Luni',
-      'Marți',
-      'Miercuri',
-      'Joi',
-      'Vineri',
-      'Sâmbătă'
-    ]
+      let dayName = daysOfWeek[now.getDay()]
+      if (dayName === 'Sâmbătă' || dayName === 'Duminică') {
+        dayName = 'Vineri'
+      }
 
-    let dayName = daysOfWeek[now.getDay()]
-    // Dacă este sâmbătă sau duminică, folosim ziua de vineri
-    if (dayName === 'Sâmbătă' || dayName === 'Duminică') {
-      dayName = 'Vineri'
+      return `Săptămâna ${weekNumber} | ${dayName}`
     }
 
-    return `Săptămâna ${weekNumber} | ${dayName}`
-  }
+    const fetchBackgroundImage = () => {
+      const dayOfWeek = new Date().getDay()
+      const index = dayOfWeek % landscapeImages.length
+      setBgImage(landscapeImages[index])
+    }
 
-  // Fetch devotional data based on the calculated key
-  useEffect(() => {
     const key = getDevotionalKey()
 
     const jsonData = roJson as RoJsonType
@@ -79,27 +78,31 @@ export const DailyDevotional = () => {
       setData(devotionalEntry)
     } else {
       setData({
-        title: 'Devotional indisponibil',
-        date: '',
-        verset: 'Verset indisponibil',
-        reference: 'Referință indisponibilă',
-        paragraf_1: 'Paragraf indisponibil',
-        paragraf_2: 'Paragraf indisponibil',
+        title: t('devotional.titleUnavailable'),
+        date: t('devotional.dateUnavailable'),
+        verset: t('devotional.verseUnavailable'),
+        reference: t('devotional.referenceUnavailable'),
+        paragraf_1: t('devotional.paragraphUnavailable'),
+        paragraf_2: t('devotional.paragraphUnavailable'),
         guidelines: {
           step_1: { title: '', description: '' },
           step_2: { title: '', description: '' },
           step_3: { title: '', description: '' }
         },
         reflection_questions: [],
-        conclusion: 'Concluzie indisponibilă'
+        conclusion: t('devotional.conclusionUnavailable')
       })
     }
 
     fetchBackgroundImage()
-  }, [])
+  }, [t])
 
   if (!data) {
-    return <p>Încărcare...</p>
+    return (
+      <div className="flex items-center justify-center min-h-screen">
+        <div className="loader"></div>
+      </div>
+    )
   }
 
   return (
@@ -161,7 +164,7 @@ export const DailyDevotional = () => {
         >
           <div className="text-left">
             <h2 className="text-lg font-semibold mb-2 text-white">
-              Întrebări de reflecție:
+              {t('devotional.question')}
             </h2>
             <ul className="list-disc md:ml-5 space-y-2">
               {data.reflection_questions.map((question, index) => (

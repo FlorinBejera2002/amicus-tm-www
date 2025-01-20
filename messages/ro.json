@@ -115,6 +115,15 @@
     "tooltip_costs_show_editing": "Editarea video",
     "tooltip_costs_travel": "Transport"
   },
+  "devotional": {
+    "titleUnavailable": "Devotional indisponibil",
+    "dateUnavailable": "Dată indisponibilă",
+    "verseUnavailable": "Verset indisponibil",
+    "referenceUnavailable": "Referință indisponibilă",
+    "paragraphUnavailable": "Paragraf indisponibil",
+    "conclusionUnavailable": "Concluzie indisponibilă",
+    "question": "Întrebări de reflecție:"
+  },
   "collaborator": {
     "involve": "Implică-te acum!",
     "send": "Trimite-ne un email",
