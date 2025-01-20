@@ -10,6 +10,7 @@ import Logo from '../../../../../public/logo_horizontal_white.webp'
 type DailyData = {
   verset: string
   reference: string
+  date: string
 }
 
 type RoJsonType = {
@@ -23,25 +24,41 @@ export const DailyVerset = () => {
   const t = useTranslations()
 
   useEffect(() => {
-    const getCurrentDayOfYear = (): number => {
+    const getVersetKey = (): string => {
       const now = new Date()
-      const startOfYear = new Date(now.getFullYear(), 0, 1)
-      const diff = now.getTime() - startOfYear.getTime()
-      return Math.ceil(diff / (1000 * 60 * 60 * 24))
+      const weekNumber = Math.ceil(now.getDate() / 7 + 1)
+      const daysOfWeek = [
+        'Duminică',
+        'Luni',
+        'Marți',
+        'Miercuri',
+        'Joi',
+        'Vineri',
+        'Sâmbătă'
+      ]
+
+      let dayName = daysOfWeek[now.getDay()]
+      if (dayName === 'Sâmbătă' || dayName === 'Duminică') {
+        dayName = 'Vineri'
+      }
+
+      return `Săptămâna ${weekNumber} | ${dayName}`
     }
 
-    const dayOfYear = getCurrentDayOfYear()
-    const key = `day_${dayOfYear}`
+    const key = getVersetKey()
 
     const jsonData = roJson as RoJsonType
-    if (jsonData['text-book'] && jsonData['text-book'][key]) {
-      const { verset, reference } = jsonData['text-book'][key]
-      setData({ verset, reference })
+    const versetEntry = Object.values(jsonData['text-book']).find(
+      (entry) => entry.date === key
+    )
+
+    if (versetEntry) {
+      setData(versetEntry)
     } else {
       setData({
         verset: t('daily_verset.versetUnavailable'),
         reference: t('daily_verset.referenceUnavailable')
-      })
+      } as DailyData)
     }
   }, [t])
 
