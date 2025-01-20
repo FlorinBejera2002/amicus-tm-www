@@ -113,7 +113,7 @@ const MobileNavbar = ({
       }}
       className={cn(
         'absolute left-0 top-0 z-50 mx-auto h-[100dvh] w-screen bg-[#121212] p-4',
-        width! < 1024 ? 'flex' : 'hidden'
+        width! < 1300 ? 'flex' : 'hidden'
       )}
       exit={{ opacity: 0, transform: 'translateX(-100%)' }}
       initial={{ opacity: 0, transform: 'translateX(-100%)' }}
@@ -123,7 +123,7 @@ const MobileNavbar = ({
       <MenuButton
         className={cn(
           'absolute right-[32px] top-[40px] -mr-2 scale-50 cursor-pointer text-white',
-          width! < 1024 ? 'flex' : 'hidden'
+          width! < 1300 ? 'flex' : 'hidden'
         )}
         color="white"
         height="24"

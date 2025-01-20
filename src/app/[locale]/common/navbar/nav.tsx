@@ -131,12 +131,13 @@ export default function Nav() {
                 width={150}
               />
             </Link>
+            
             <div className="hidden lg:flex">
               <ChangeLanguage />
             </div>
           </div>
 
-          <div className={cn('hidden items-center gap-8 lg:flex')}>
+            <div className={cn('hidden items-center gap-8 xl:flex')}>
             {navLinks.map((link) => (
               <ActiveLink
                 customClassname="text-nowrap"
@@ -192,7 +193,7 @@ export default function Nav() {
 
           <MenuButton
             className={cn(
-              '-mr-4 flex scale-50 cursor-pointer text-white lg:hidden'
+              '-mr-4 flex scale-50 cursor-pointer text-white xl:hidden'
             )}
             color="white"
             height="24"
