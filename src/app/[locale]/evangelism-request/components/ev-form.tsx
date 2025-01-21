@@ -87,7 +87,8 @@ const ContentEvangelizationForm = () => {
                 category: 'evangelism',
                 id: evReqId,
                 person_requesting_id: personRequestingId,
-                status: 'received'
+                status: 'received',
+                who_create_ev_req: 'website'
               })
 
             if (reqError) {
