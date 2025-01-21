@@ -3,6 +3,8 @@
 import InViewTransition from '@/app/[locale]/common/in-view-transition'
 import { useTranslations } from 'next-intl'
 import Image from 'next/image'
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import roJson from '../../../../../messages/ro.json'
 import Logo from '../../../../../public/logo_horizontal_white.webp'
@@ -19,9 +21,11 @@ type RoJsonType = {
   }
 }
 
-export const DailyVerset = () => {
+export const DailyVerse = () => {
   const [data, setData] = useState<DailyData | null>(null)
   const t = useTranslations()
+  const pathname = usePathname()
+  const language = pathname.split('/')[1]
 
   useEffect(() => {
     const getVersetKey = (): string => {
@@ -71,6 +75,7 @@ export const DailyVerset = () => {
   }
 
   return (
+    <Link href={`/${language}/devotional`} className="text-decoration-none">
     <div className="flex items-center justify-center md:-mt-16 bg-[#121212] text-white">
       <div className="flex flex-col items-center  p-8 md:p-28  xl:gap-4 max-w-6xl">
         <InViewTransition
@@ -95,7 +100,8 @@ export const DailyVerset = () => {
         </InViewTransition>
       </div>
     </div>
+    </Link>
   )
 }
 
-export default DailyVerset
+export default DailyVerse

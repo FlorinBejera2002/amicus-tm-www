@@ -5,7 +5,7 @@ import resurseCrestineLogo from '../../../../../public/resurse-crestine-image.pn
 import { useTranslations } from 'next-intl'
 import Link from 'next/link'
 
-export default function AboutResusrseCrestine() {
+export default function AboutResurseCrestine() {
   const t = useTranslations('')
 
   return (

@@ -56,13 +56,13 @@ export default function Nav() {
   const [mobileNavbarOpen, setMobileNavbarOpen] = useState(false)
 
   const pathname = usePathname()
+  const language = pathname.split('/')[1]
 
   const t = useTranslations()
   const [{ y }] = useWindowScroll()
 
   const dropdownRef = useRef(null)
 
-  const language = pathname.split('/')[1]
 
   const navLinks = [
     { href: `/${language}`, label: t('header.home'), route: 'home' },

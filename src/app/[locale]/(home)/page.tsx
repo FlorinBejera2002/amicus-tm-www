@@ -1,10 +1,10 @@
 import Animation from '../common/animation'
 import CustomHeroBg from '../common/custom-hero-bg'
 import InViewTransition from '../common/in-view-transition'
-import AboutResusrseCrestine from './components/about-resurse-crestine'
+import AboutResurseCrestine from './components/about-resurse-crestine'
 import Book from './components/book'
 import { CardCollaborator } from './components/card-collaborator'
-import { DailyVerset } from './components/daily-verset'
+import { DailyVerse } from './components/daily-verse'
 import EvangelismSteps from './components/evangelism-steps/evangelism-steps'
 import PersonalEvangelism from './components/personal-evangelism/personal-evangelism'
 import { QuestionCarousel } from './components/question-carousel'
@@ -83,10 +83,10 @@ export default function Home() {
 
       <Team />
       <PersonalEvangelism />
-      <Spotify />
+      <DailyVerse />
       <Book />
-      <DailyVerset />
-      <AboutResusrseCrestine />
+      <Spotify />
+      <AboutResurseCrestine />
     </div>
   )
 }

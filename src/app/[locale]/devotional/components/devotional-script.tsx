@@ -99,7 +99,7 @@ export const DailyDevotional = () => {
 
   if (!data) {
     return (
-      <div className="flex items-center justify-center min-h-screen">
+      <div className="flex items-center justify-center">
         <div className="loader"></div>
       </div>
     )
@@ -107,7 +107,7 @@ export const DailyDevotional = () => {
 
   return (
     <div
-      className="flex items-center justify-center min-h-screen bg-cover bg-center md:p-16 rounded-md"
+      className="flex items-center justify-center bg-cover bg-center md:p-16 rounded-md"
       style={{
         backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${bgImage})`
       }}
