@@ -3,7 +3,7 @@ import { useTranslations } from 'next-intl'
 import Animation from '../common/animation'
 import CustomHeroBg from '../common/custom-hero-bg'
 import InViewTransition from '../common/in-view-transition'
-import { DailyDevotional } from './components/devotional-script'
+import DevotionalFetcher from './components/get-devotional'
 
 // Generare metadate pentru SEO
 export const metadata: Metadata = {
@@ -56,10 +56,10 @@ const DevotionalPage = () => {
         </div>
         <Animation />
       </section>
-      
+
       <div className="custom-page-content p-relative z-index-2 text-base flex w-full justify-center ">
         <div className="mx-w-7xl rounded-md shadow-xl shadow-black">
-          <DailyDevotional />
+          <DevotionalFetcher />
         </div>
       </div>
     </div>
