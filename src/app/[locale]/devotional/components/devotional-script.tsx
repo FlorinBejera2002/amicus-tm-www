@@ -1,8 +1,10 @@
 'use client'
 
 import InViewTransition from '@/app/[locale]/common/in-view-transition'
+import { toPng } from 'html-to-image'
 import { useTranslations } from 'next-intl'
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
+import { FaDownload } from 'react-icons/fa6'
 import roJson from '../../../../../messages/ro.json'
 
 type DailyDevotionalData = {
@@ -97,6 +99,25 @@ export const DailyDevotional = () => {
     fetchBackgroundImage()
   }, [t])
 
+  const ref = useRef(null)
+
+  const handleDownloadImage = () => {
+    if (ref.current === null) {
+      return
+    }
+
+    toPng(ref.current, { cacheBust: true })
+      .then((dataUrl) => {
+        const link = document.createElement('a')
+        link.download = 'devotional.png'
+        link.href = dataUrl
+        link.click()
+      })
+      .catch((err) => {
+        console.error('oops, something went wrong!', err)
+      })
+  }
+
   if (!data) {
     return (
       <div className="flex items-center justify-center">
@@ -106,83 +127,94 @@ export const DailyDevotional = () => {
   }
 
   return (
-    <div
-      className="flex items-center justify-center bg-cover bg-center md:p-16 rounded-md"
-      style={{
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${bgImage})`
-      }}
-    >
-      <div className="flex flex-col p-4 max-w-4xl gap-6 text-white">
-        <InViewTransition delay={0.25} customClassname="flex">
-          <div className="text-left flex flex-col gap-3">
-            <h1 className="text-4xl font-bold">{data.title}</h1>
-            <p className="text-sm italic text-gray-400 mb-4">{data.date}</p>
-            <div>
-              <p className="text-lg italic">"{data.verset}"</p>
-              <span className="text-accent">{data.reference}</span>
+    <div className="relative">
+      <div
+        ref={ref}
+        className="flex items-center justify-center bg-cover bg-center md:p-16 rounded-md"
+        style={{
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${bgImage})`
+        }}
+      >
+        <div className="flex flex-col p-4 max-w-4xl gap-6 text-white">
+          <InViewTransition delay={0.25} customClassname="flex">
+            <div className="text-left flex flex-col gap-3">
+              <h1 className="text-4xl font-bold">{data.title}</h1>
+              <p className="text-sm italic text-gray-400 mb-4">{data.date}</p>
+              <div>
+                <p className="text-lg italic">"{data.verset}"</p>
+                <span className="text-accent">{data.reference}</span>
+              </div>
             </div>
-          </div>
-        </InViewTransition>
+          </InViewTransition>
 
-        <InViewTransition
-          damping={25}
-          xOut={-100}
-          yOut={0}
-          customClassname="w-full"
-        >
-          <p className="text-md mb-4">{data.paragraf_1}</p>
-          <p className="text-md mb-4">{data.paragraf_2}</p>
-        </InViewTransition>
+          <InViewTransition
+            damping={25}
+            xOut={-100}
+            yOut={0}
+            customClassname="w-full"
+          >
+            <p className="text-md mb-4">{data.paragraf_1}</p>
+            <p className="text-md mb-4">{data.paragraf_2}</p>
+          </InViewTransition>
 
-        <InViewTransition
-          damping={25}
-          xOut={100}
-          yOut={0}
-          customClassname="w-full"
-        >
-          <div className="text-left space-y-2">
-            <p>
-              <strong>{data.guidelines.step_1.title}:</strong>{' '}
-              {data.guidelines.step_1.description}
-            </p>
-            <p>
-              <strong>{data.guidelines.step_2.title}:</strong>{' '}
-              {data.guidelines.step_2.description}
-            </p>
-            <p>
-              <strong>{data.guidelines.step_3.title}:</strong>{' '}
-              {data.guidelines.step_3.description}
-            </p>
-          </div>
-        </InViewTransition>
+          <InViewTransition
+            damping={25}
+            xOut={100}
+            yOut={0}
+            customClassname="w-full"
+          >
+            <div className="text-left space-y-2">
+              <p>
+                <strong>{data.guidelines.step_1.title}:</strong>{' '}
+                {data.guidelines.step_1.description}
+              </p>
+              <p>
+                <strong>{data.guidelines.step_2.title}:</strong>{' '}
+                {data.guidelines.step_2.description}
+              </p>
+              <p>
+                <strong>{data.guidelines.step_3.title}:</strong>{' '}
+                {data.guidelines.step_3.description}
+              </p>
+            </div>
+          </InViewTransition>
 
-        <InViewTransition
-          damping={25}
-          xOut={-100}
-          yOut={0}
-          customClassname="w-full"
-        >
-          <div className="text-left">
-            <h2 className="text-lg font-semibold mb-2 text-white">
-              {t('devotional.question')}
-            </h2>
-            <ul className="list-disc md:ml-5 space-y-2">
-              {data.reflection_questions.map((question, index) => (
-                <li key={index}>{question}</li>
-              ))}
-            </ul>
-          </div>
-        </InViewTransition>
+          <InViewTransition
+            damping={25}
+            xOut={-100}
+            yOut={0}
+            customClassname="w-full"
+          >
+            <div className="text-left">
+              <h2 className="text-lg font-semibold mb-2 text-white">
+                {t('devotional.question')}
+              </h2>
+              <ul className="list-disc md:ml-5 space-y-2">
+                {data.reflection_questions.map((question, index) => (
+                  <li key={index}>{question}</li>
+                ))}
+              </ul>
+            </div>
+          </InViewTransition>
 
-        <InViewTransition
-          damping={25}
-          xOut={-100}
-          yOut={0}
-          customClassname="w-full"
-        >
-          <p className="font-semibold">{data.conclusion}</p>
-        </InViewTransition>
+          <InViewTransition
+            damping={25}
+            xOut={-100}
+            yOut={0}
+            customClassname="w-full"
+          >
+            <p className="font-semibold">{data.conclusion}</p>
+          </InViewTransition>
+        </div>
       </div>
+
+      <button
+        onClick={handleDownloadImage}
+        className="absolute right-0 mt-3 text-black rounded bg-accent px-3 py-2 text-xs font-semibold flex items-center gap-2"
+      >
+        {t('button.download')}
+        <FaDownload />
+      </button>
     </div>
   )
 }
