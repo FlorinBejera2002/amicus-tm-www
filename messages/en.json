@@ -155,10 +155,11 @@
     "vezi_mai_multe": "Vezi mai multe"
   },
   "button": {
-    "agree": "Sunt de acord",
-    "contact_us": "Contactează-ne",
-    "er_request": "Cerere Evanghelizare",
-    "subscribe": "Abonează-te"
+    "agree": "I Agree",
+    "contact_us": "Contact Us",
+    "er_request": "Evangelism Request",
+    "subscribe": "Subscribe",
+    "download": "Download"
   },
   "contact": {
     "blog": {
