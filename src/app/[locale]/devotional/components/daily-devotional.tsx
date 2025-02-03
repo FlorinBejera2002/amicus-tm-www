@@ -151,7 +151,7 @@ export default function DailyDevotional({
         <InViewTransition delay={1.5}>
           <button
             onClick={handleDownloadImage}
-            className="absolute right-0 mt-20 text-black rounded bg-accent px-3 py-2 text-xs font-semibold flex items-center gap-2"
+            className="absolute -right-16 mt-20 text-black rounded-md bg-accent px-3 py-2 text-xs font-semibold flex items-center gap-2"
           >
             {t('button.download')}
             <FaDownload />
