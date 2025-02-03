@@ -32,15 +32,29 @@ const daysOfWeek = [
   'SÂMBĂTĂ'
 ]
 
+function getCurrentWeekNumber(): number {
+  const startDate = new Date(new Date().getFullYear(), 0, 1) // 1 ianuarie
+  const today = new Date()
+  const diff = today.getTime() - startDate.getTime()
+  const dayOfYear = Math.floor(diff / (1000 * 60 * 60 * 24)) + 1
+  return Math.ceil(dayOfYear / 7 + 1) // Săptămâna curentă
+}
+
 async function getDevotional(): Promise<Devotional | null> {
   const filePath = path.join(process.cwd(), 'messages', 'ro-book.json')
   const fileData = fs.readFileSync(filePath, 'utf-8')
   const devotionals: Devotional[] = JSON.parse(fileData)
 
   const today = new Date()
-  const dayIndex = today.getDay()
+  let dayIndex = today.getDay() // 0 = Duminică, 1 = Luni, ..., 6 = Sâmbătă
+
+  // Dacă este sâmbătă (6) sau duminică (0), ia devotionalul de vineri (5)
+  if (dayIndex === 0 || dayIndex === 6) {
+    dayIndex = 5
+  }
+
   const currentDay = daysOfWeek[dayIndex]
-  const currentWeekNumber = Math.ceil(today.getDate() / 7)
+  const currentWeekNumber = getCurrentWeekNumber()
   const currentWeek = `SĂPTĂMÂNA ${currentWeekNumber}`
 
   return (
@@ -53,6 +67,5 @@ async function getDevotional(): Promise<Devotional | null> {
 
 export default async function DevotionalFetcher() {
   const devotional = await getDevotional()
-
   return <DailyDevotional devotional={devotional} />
 }

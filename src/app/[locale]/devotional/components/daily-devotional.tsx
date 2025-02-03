@@ -57,23 +57,26 @@ export default function DailyDevotional({
         backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${bgImage})`
       }}
     >
-      <h3 className="text-4xl font-bold text-white">{devotional.title}</h3>
-      <p className="text-gray-400">
+      <h3 className="text-4xl font-bold text-accent text-center">
+        {devotional.title}
+      </h3>
+      <p className="text-gray-400 text-center ">
         {devotional.week} - {devotional.day}
       </p>
-
-      <div className="mt-4 border-1 border-gray-500 p-2 rounded-md">
-        <p className="text-lg font-semibold text-white">
-          "{devotional.verse.text}"
-        </p>
-        <p className="text-right text-gray-300">{devotional.verse.reference}</p>
+      <div className="w-full justify-center flex">
+        <div className="mt-4 border-1 border-gray-500 p-2 rounded-md italic w-fit">
+          <p className="font-semibold text-white">"{devotional.verse.text}"</p>
+          <p className="text-right text-gray-300">
+            {devotional.verse.reference}
+          </p>
+        </div>
       </div>
 
       <div className="mt-6 space-y-6">
         {devotional.content.map((item, index) => (
-          <div key={index} className="text-gray-700 first:pl-3">
+          <div key={index} className="text-white">
             {item.section_title && (
-              <h4 className="text-lg font-semibold text-gray-900">
+              <h4 className="text-lg font-semibold text-white">
                 {item.section_title}
               </h4>
             )}
@@ -82,7 +85,8 @@ export default function DailyDevotional({
               <ul className="list-disc pl-6 space-y-2">
                 {item.list.map((listItem, i) => (
                   <li key={i}>
-                    <strong>{listItem.title}:</strong> {listItem.description}
+                    <strong className="text-accent">{listItem.title}: </strong>{' '}
+                    {listItem.description}
                   </li>
                 ))}
               </ul>
@@ -92,19 +96,19 @@ export default function DailyDevotional({
       </div>
 
       <div className="mt-6">
-        <h4 className="text-lg font-semibold text-gray-900">
+        <h4 className="text-lg font-semibold text-white">
           Întrebări de reflecție:
         </h4>
-        <ul className="list-disc pl-6 mt-2 text-gray-700 space-y-2">
+        <ul className="list-disc pl-6 mt-2 text-white space-y-2">
           {devotional.reflection_questions.map((question, index) => (
             <li key={index}>{question}</li>
           ))}
         </ul>
       </div>
 
-      <div className="mt-6 bg-gray-50 p-4 rounded-lg">
-        <p className="text-gray-800 font-semibold">{devotional.conclusion}</p>
-      </div>
+      <p className="text-accent text-xl font-semibold mt-10 text-center mb-0">
+        {devotional.conclusion}
+      </p>
     </div>
   )
 }
