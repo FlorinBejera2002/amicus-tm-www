@@ -33,11 +33,11 @@ const daysOfWeek = [
 ]
 
 function getCurrentWeekNumber(): number {
-  const startDate = new Date(new Date().getFullYear(), 0, 1) // 1 ianuarie
+  const startDate = new Date(new Date().getFullYear(), 0, 1)
   const today = new Date()
   const diff = today.getTime() - startDate.getTime()
   const dayOfYear = Math.floor(diff / (1000 * 60 * 60 * 24)) + 1
-  return Math.ceil(dayOfYear / 7 + 1) // Săptămâna curentă
+  return Math.ceil(dayOfYear / 7 + 1)
 }
 
 async function getDevotional(): Promise<Devotional | null> {
@@ -46,9 +46,8 @@ async function getDevotional(): Promise<Devotional | null> {
   const devotionals: Devotional[] = JSON.parse(fileData)
 
   const today = new Date()
-  let dayIndex = today.getDay() // 0 = Duminică, 1 = Luni, ..., 6 = Sâmbătă
+  let dayIndex = today.getDay()
 
-  // Dacă este sâmbătă (6) sau duminică (0), ia devotionalul de vineri (5)
   if (dayIndex === 0 || dayIndex === 6) {
     dayIndex = 5
   }
