@@ -117,7 +117,7 @@ export default function DailyDevotional({
                     {item.list.map((listItem, i) => (
                       <li key={i}>
                         <strong className="text-accent">
-                          {listItem.title}:{' '}
+                          {listItem.title}{' '}
                         </strong>{' '}
                         {listItem.description}
                       </li>
