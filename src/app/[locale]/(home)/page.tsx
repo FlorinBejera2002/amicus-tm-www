@@ -5,11 +5,11 @@ import AboutResurseCrestine from './components/about-resurse-crestine'
 import Book from './components/book'
 import { CardCollaborator } from './components/card-collaborator'
 import EvangelismSteps from './components/evangelism-steps/evangelism-steps'
-import VerseFetcher from './components/verse/get-verse'
 import PersonalEvangelism from './components/personal-evangelism/personal-evangelism'
 import { QuestionCarousel } from './components/question-carousel'
 import Spotify from './components/spotify'
 import Team from './components/team'
+import DailyVerse from './components/verse/get-verse'
 import YoutubeMiniFeed from './components/youtube-mini-feed'
 
 import type { Metadata } from 'next'
@@ -83,7 +83,7 @@ export default function Home() {
 
       <Team />
       <PersonalEvangelism />
-      <VerseFetcher />
+      <DailyVerse />
       <Book />
       <Spotify />
       <AboutResurseCrestine />

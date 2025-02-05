@@ -3,6 +3,8 @@
 import InViewTransition from '../../../common/in-view-transition'
 import Logo from '../../../../../../public/logo_horizontal_white.webp'
 import Image from 'next/image'
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 
 interface Verse {
   text: string
@@ -28,6 +30,9 @@ interface Devotional {
 export default function DailyVerse({
   devotional
 }: { devotional: Devotional | null }) {
+  const pathname = usePathname()
+  const language = pathname?.split('/')[1]
+
   if (!devotional) {
     return (
       <p className="text-center text-gray-500">
@@ -37,7 +42,7 @@ export default function DailyVerse({
   }
 
   return (
-    <div>
+    <Link href={`/${language}/devotional`} className="text-decoration-none">
       <div className="flex items-center justify-center md:-mt-16 bg-[#121212] text-white">
         <div className="flex flex-col items-center  p-8 md:p-28  xl:gap-4 max-w-6xl">
           <InViewTransition
@@ -64,6 +69,6 @@ export default function DailyVerse({
           </InViewTransition>
         </div>
       </div>
-    </div>
+    </Link>
   )
 }

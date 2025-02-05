@@ -70,7 +70,7 @@ async function getDevotional(): Promise<Devotional | null> {
   )
 }
 
-export default async function VerseFetcher() {
+export default async function DailyVerse() {
   const devotional = await getDevotional()
   return <DailyDevotional devotional={devotional} />
 }
