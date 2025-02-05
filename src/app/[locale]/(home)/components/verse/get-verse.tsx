@@ -23,13 +23,13 @@ interface Devotional {
   conclusion: string
 }
 const daysOfWeekEN = [
+  'SUNDAY',
   'MONDAY',
   'TUESDAY',
   'WEDNESDAY',
   'THURSDAY',
   'FRIDAY',
-  'SATURDAY',
-  'SUNDAY'
+  'SATURDAY'
 ]
 
 const daysOfWeekRO = [
@@ -90,7 +90,6 @@ export default async function DailyVerse() {
       ) || null
     )
   }
-
 
   const devotional = await getDevotional()
   return <DailyDevotional devotional={devotional} />

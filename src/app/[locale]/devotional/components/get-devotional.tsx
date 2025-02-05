@@ -23,13 +23,13 @@ interface Devotional {
   conclusion: string
 }
 const daysOfWeekEN = [
+  'SUNDAY',
   'MONDAY',
   'TUESDAY',
   'WEDNESDAY',
   'THURSDAY',
   'FRIDAY',
-  'SATURDAY',
-  'SUNDAY'
+  'SATURDAY'
 ]
 const daysOfWeekRO = [
   'DUMINICĂ',

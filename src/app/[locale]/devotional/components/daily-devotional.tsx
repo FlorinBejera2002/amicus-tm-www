@@ -77,7 +77,7 @@ export default function DailyDevotional({
       ref={ref}
       className="max-w-6xl mx-auto p-8 md:p-20 shadow-md bg-cover bg-center rounded-md"
       style={{
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6)), url(${bgImage})`
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)), url(${bgImage})`
       }}
     >
       <InViewTransition delay={0.25}>
