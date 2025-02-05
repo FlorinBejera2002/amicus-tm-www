@@ -41,12 +41,20 @@ const daysOfWeekRO = [
   'SÂMBĂTĂ'
 ]
 
-export default async function DevotionalFetcher() {
-  const t = useTranslations()
 
-  function getCurrentWeekNumber(): number {
-    const startDate = new Date(new Date().getFullYear(), 0, 1)
-    const today = new Date()
+function getCurrentWeekNumber(): number {
+  const startDate = new Date(new Date().getFullYear(), 0, 1)
+  const today = new Date()
+
+  const firstMonday = new Date(
+    startDate.setDate(startDate.getDate() - startDate.getDay() + 1)
+  )
+
+  const diffInTime = today.getTime() - firstMonday.getTime()
+  const dayOfYear = Math.floor(diffInTime / (1000 * 60 * 60 * 24))
+
+  return Math.ceil((dayOfYear + 1) / 7)
+}
 
     const firstMonday = new Date(
       startDate.setDate(startDate.getDate() - startDate.getDay() + 1)

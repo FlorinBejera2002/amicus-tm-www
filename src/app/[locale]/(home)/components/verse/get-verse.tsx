@@ -91,6 +91,7 @@ export default async function DailyVerse() {
     )
   }
 
+
   const devotional = await getDevotional()
   return <DailyDevotional devotional={devotional} />
 }
