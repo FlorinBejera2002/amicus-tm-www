@@ -295,7 +295,8 @@
   },
   "daily_verset": {
     "versetUnavailable": "Verset indisponibil",
-    "referenceUnavailable": "Referință indisponibilă"
+    "referenceUnavailable": "Referință indisponibilă",
+    "language": "ro"
   },
 
   "language": {
