@@ -35,9 +35,15 @@ const daysOfWeek = [
 function getCurrentWeekNumber(): number {
   const startDate = new Date(new Date().getFullYear(), 0, 1)
   const today = new Date()
-  const diff = today.getTime() - startDate.getTime()
-  const dayOfYear = Math.floor(diff / (1000 * 60 * 60 * 24)) + 1
-  return Math.ceil(dayOfYear / 7 + 1)
+
+  const firstMonday = new Date(
+    startDate.setDate(startDate.getDate() - startDate.getDay() + 1)
+  )
+
+  const diffInTime = today.getTime() - firstMonday.getTime()
+  const dayOfYear = Math.floor(diffInTime / (1000 * 60 * 60 * 24))
+
+  return Math.ceil((dayOfYear + 1) / 7)
 }
 
 async function getDevotional(): Promise<Devotional | null> {
