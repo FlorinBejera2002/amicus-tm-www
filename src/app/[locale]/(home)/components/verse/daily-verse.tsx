@@ -1,8 +1,6 @@
 'use client'
 
 import InViewTransition from '../../../common/in-view-transition'
-import Logo from '../../../../../../public/logo_horizontal_white.webp'
-import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
@@ -43,29 +41,20 @@ export default function DailyVerse({
 
   return (
     <Link href={`/${language}/devotional`} className="text-decoration-none">
-      <div className="flex items-center justify-center md:-mt-16 bg-[#121212] text-white">
-        <div className="flex flex-col items-center  p-8 md:p-28  xl:gap-4 max-w-6xl">
+      <div className="bg-opacity-30 p-5 shadow-xl bg-accent rounded-md text-slate-200 text-center">
+        <div className="flex flex-col items-center p-3  xl:gap-4 ">
           <InViewTransition
             delay={0.25}
             customClassname="flex justify-center items-center"
           >
-            <div className="text-left">
+            <div className="text-left flex flex-col w-full">
               <p className="text-lg pb-0 font-semibold italic md:pb-1 md:text-xl">
                 "{devotional.verse.text}"
               </p>
-              <span className="text-gray-300 ml-2">
+              <span className="text-gray-300 flex justify-end">
                 "{devotional.verse.reference}"
               </span>
             </div>
-          </InViewTransition>
-
-          <InViewTransition
-            damping={25}
-            xOut={-100}
-            yOut={0}
-            customClassname="flex flex-col items-end w-full"
-          >
-            <Image alt="Logo Resurse Creștine" src={Logo} className="w-40" />
           </InViewTransition>
         </div>
       </div>

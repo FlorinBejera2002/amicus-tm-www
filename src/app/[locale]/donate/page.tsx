@@ -1,5 +1,3 @@
-import Animation from '../common/animation'
-import CustomHeroBg from '../common/custom-hero-bg'
 import InViewTransition from '../common/in-view-transition'
 
 import { useTranslations } from 'next-intl'
@@ -9,7 +7,6 @@ import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { FaDonate } from 'react-icons/fa'
-import { FaAngleRight } from 'react-icons/fa'
 
 import CECLogo from '../../../../public/CEC Bank.svg'
 import PayPal from '../../../../public/PayPal.png'
@@ -28,45 +25,6 @@ const About = () => {
 
   return (
     <div className="main" role="main">
-      <section className="page-header p-relative bg-quaternary m-0 overflow-hidden border-0 p-0 ">
-        <InViewTransition
-          damping={100}
-          delay={0.25}
-          duration={0.5}
-          yIn={0}
-          yOut={0}
-        >
-          <CustomHeroBg />
-        </InViewTransition>
-        <div className="row align-items-center !my-[31px] pb-4 pt-5">
-          <div className="col my-5 pb-5 text-center">
-            <InViewTransition delay={0.25}>
-              <div className="py-4">
-                <ul className="breadcrumb justify-content-center text-4-5 font-weight-medium mb-2 flex gap-2">
-                  <li className="z-[1]">
-                    <Link
-                      className="text-color-primary text-decoration-none"
-                      href="/"
-                    >
-                      {t('header.home')}
-                    </Link>
-                  </li>
-                  <FaAngleRight className="text-color-primary z-[1] mt-0.5" />
-                  <li className="text-color-primary active z-[1]">
-                    {t('header.donate')}
-                  </li>
-                </ul>
-                <h1 className="text-color-light font-weight-bold text-4xl md:text-5xl">
-                  {t('header.donate')}
-                </h1>
-              </div>
-            </InViewTransition>
-          </div>
-        </div>
-
-        <Animation />
-      </section>
-
       <div className="custom-page-content p-relative z-index-2 text-base flex w-full justify-center ">
         <div className="max-w-6xl flex flex-col content-center rounded-md bg-white p-8 shadow-lg md:p-12 gap-10">
           <div className="max-w-full">

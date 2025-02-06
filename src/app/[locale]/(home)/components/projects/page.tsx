@@ -9,7 +9,7 @@ import Image from 'next/image'
 export default function Projects() {
   return (
     <section className="bg-white py-12" id="projects">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 bg-white">
+      <div className="container mx-auto px-6 lg:px-12 bg-white">
         <div className="text-start mb-5">
           <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider">
             Our Projects
@@ -20,7 +20,7 @@ export default function Projects() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-3">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-2">
           <InViewTransition delay={0.5}>
             <div className="bg-blue-50 p-3 rounded-md h-60 shadow-md flex flex-col items-center text-center">
               <Image

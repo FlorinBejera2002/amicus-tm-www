@@ -2,10 +2,8 @@
 
 import { type Dispatch, type SetStateAction, useEffect, useState } from 'react'
 
-import Animation from '../../animation'
 import ChangeLanguage from './change-language'
 import { MenuButton } from './hamburger'
-import SubMenu from './sub-menu'
 
 import { cn } from '@/utils'
 import { useWindowSize } from '@uidotdev/usehooks'
@@ -51,10 +49,7 @@ const MobileNavbar = ({
       href: `/${language}/devotional`,
       label: t('header.devotional')
     },
-    {
-      href: `/${language}/collaborator`,
-      label: t('header.collaborator')
-    },
+
     {
       href: `/${language}/donate`,
       label: t('header.donate')
@@ -74,10 +69,6 @@ const MobileNavbar = ({
       onClick: () => setSubMenu(!subMenu)
     }
   ]
-
-  const handleSubMenuItemClick = () => {
-    setMobileNavbarOpen((prev) => !prev)
-  }
 
   useEffect(() => {
     const htmlElement = document.documentElement
@@ -153,15 +144,6 @@ const MobileNavbar = ({
             {link.icon}
           </Link>
         ))}
-
-        <SubMenu
-          handleSubMenuItemClick={handleSubMenuItemClick}
-          isDesktop={false}
-          language={language}
-          subMenu={subMenu}
-        />
-
-        <Animation />
       </div>
     </motion.div>
   )

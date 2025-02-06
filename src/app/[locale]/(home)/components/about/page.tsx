@@ -30,7 +30,12 @@ const About = () => {
           </InViewTransition>
 
           <InViewTransition delay={0.5}>
-            <Link href={`/${language}/about`}></Link>
+            <Link
+              className="w-fit px-3 py-2.5 bg-accent rounded-md text-white text-sm"
+              href={`/${language}/about`}
+            >
+              Learn More
+            </Link>
           </InViewTransition>
         </div>
 

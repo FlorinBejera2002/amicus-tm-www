@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 
 import './globals.css'
 import CookieConsents from './common/cookie-consents'
-import Footer from './common/footer/footer'
+import { Footer } from './common/footer/footer'
 import Nav from './common/navbar/nav'
 import ScrollButton from './common/scroll-button'
 

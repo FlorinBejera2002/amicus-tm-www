@@ -1,11 +1,10 @@
 'use client'
-import { type ReactNode, useEffect, useRef, useState } from 'react'
+import { type ReactNode, useState } from 'react'
 
 import InViewTransition from '../in-view-transition'
 import ChangeLanguage from './components/change-language'
 import { MenuButton } from './components/hamburger'
 import MobileNavbar from './components/mobile-navbar'
-import SubMenu from './components/sub-menu'
 
 import { cn } from '@/utils'
 import { useWindowScroll } from '@uidotdev/usehooks'
@@ -14,7 +13,6 @@ import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { FaChevronDown } from 'react-icons/fa'
 
 import horizontalLogo from '../../../../../public/logo_horizontal_white.webp'
 
@@ -61,9 +59,6 @@ export default function Nav() {
   const t = useTranslations()
   const [{ y }] = useWindowScroll()
 
-  const dropdownRef = useRef(null)
-
-
   const navLinks = [
     { href: `/${language}`, label: t('header.home'), route: 'home' },
     {
@@ -77,33 +72,9 @@ export default function Nav() {
       label: t('header.devotional'),
       route: 'devotion'
     },
-    {
-      href: `/${language}/collaborator`,
-      label: t('header.collaborator'),
-      route: 'collaborator'
-    },
+
     { href: `/${language}/donate`, label: t('header.donate'), route: 'donate' }
   ]
-
-  const [isOpen, setIsOpen] = useState(false)
-  const toggleDropdown = () => setIsOpen(!isOpen)
-
-  useEffect(() => {
-    const handleOutsideClick = (event: MouseEvent) => {
-      if (
-        dropdownRef.current! &&
-        !(dropdownRef.current as HTMLElement)!.contains(event.target as Node)
-      ) {
-        setIsOpen(false)
-      }
-    }
-
-    document.addEventListener('mousedown', handleOutsideClick)
-
-    return () => {
-      document.removeEventListener('mousedown', handleOutsideClick)
-    }
-  }, [])
 
   return (
     <InViewTransition
@@ -131,13 +102,13 @@ export default function Nav() {
                 width={150}
               />
             </Link>
-            
+
             <div className="hidden lg:flex">
               <ChangeLanguage />
             </div>
           </div>
 
-            <div className={cn('hidden items-center gap-8 xl:flex')}>
+          <div className={cn('hidden items-center gap-8 xl:flex')}>
             {navLinks.map((link) => (
               <ActiveLink
                 customClassname="text-nowrap"
@@ -147,34 +118,8 @@ export default function Nav() {
               />
             ))}
 
-            <div className="relative" ref={dropdownRef}>
-              <button
-                className={cn(
-                  'flex items-center gap-2 text-white transition-all duration-300',
-                  pathname?.includes('projects')
-                    ? 'text-accent md:scale-125'
-                    : ''
-                )}
-                onClick={toggleDropdown}
-              >
-                {t('header.project')}
-                <FaChevronDown
-                  className={cn(
-                    'transition-all duration-300',
-                    isOpen ? 'rotate-180' : ''
-                  )}
-                />
-              </button>
-
-              <SubMenu
-                handleSubMenuItemClick={toggleDropdown}
-                language={language}
-                subMenu={isOpen}
-              />
-            </div>
-
             <Link
-              className=" font-weight-semibold text-md min-w-fit rounded-md bg-accent p-3 text-black no-underline hover:!no-underline"
+              className=" font-weight-semibold text-md min-w-fit rounded-md bg-accent p-3 text-white no-underline hover:!no-underline"
               href={`/${language}/evangelism-request`}
               type="button"
             >
