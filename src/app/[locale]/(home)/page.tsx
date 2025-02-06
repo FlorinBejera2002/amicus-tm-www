@@ -1,8 +1,3 @@
-import Book from './components/book'
-import EvangelismSteps from './components/evangelism-steps/evangelism-steps'
-import PersonalEvangelism from './components/personal-evangelism/personal-evangelism'
-import DailyVerse from './components/verse/get-verse'
-
 import type { Metadata } from 'next'
 import { getTranslations } from 'next-intl/server'
 import { QuestionList } from './components/question-list'
@@ -11,6 +6,7 @@ import CardHero from './components/card-hero'
 import About from './components/about/page'
 import Vision from './components/vision/page'
 import Projects from './components/projects/page'
+import background from '../../../../public/background-image.jpg'
 
 export async function generateMetadata({
   params: { locale }
@@ -41,7 +37,7 @@ export default function Home() {
         <div
           className="h-[800px] w-full bg-fixed flex items-center justify-center bg-opacity-70 "
           style={{
-            backgroundImage: "url('/background-image.jpg')",
+            backgroundImage: `url(${background})`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             backgroundColor: 'rgba(0, 0, 0, 0.2)',
@@ -58,16 +54,11 @@ export default function Home() {
             </div>
           </div>
         </div>
+        {/* <DailyVerse /> */}
         <About />
         <Vision />
         <Projects />
       </section>
-
-      <EvangelismSteps />
-
-      <PersonalEvangelism />
-      <DailyVerse />
-      <Book />
     </div>
   )
 }
