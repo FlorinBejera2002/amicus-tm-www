@@ -1,6 +1,5 @@
 'use client'
 
-import { Newsletter } from '../../(home)/components/newsletter'
 import FooterOverview from './components/footer-overview'
 
 import Image from 'next/image'
@@ -73,7 +72,6 @@ export default function Footer() {
           <FooterOverview links={companyLinks} titleKey="header.company" />
         </div>
       </div>
-      <Newsletter />
       <div className="footer-copyright mx-auto max-w-[1480px] bg-transparent py-4 flex flex-col md:flex-row w-full gap-4">
         <p className="w-full flex items-center text-white text-3-5 font-bold">
           handcrafted by
