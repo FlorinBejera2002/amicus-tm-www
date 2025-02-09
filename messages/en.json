@@ -213,7 +213,16 @@
     "ron": "RON Românesc",
     "title": "Ajută-ne să reconstruim credința!",
     "title_2": "Donează prin cont bancar",
-    "title_3": "Doneză 3,5% din impozitul pe venit"
+    "title_3": "Doneză 3,5% din impozitul pe venit",
+    "reasons": {
+      "title1": "Expanding God's Kingdom",
+      "description1": "Join us in spreading the Gospel and helping to expand God's Kingdom through concrete actions and testimonies of faith.",
+      "title2": "Helping Those in Need",
+      "description2": "Through your donations and involvement, we can support our projects dedicated to helping those in need – spiritually and materially.",
+      "linkText2": "Discover our projects",
+      "title3": "Global Spiritual Impact",
+      "description3": "Be part of a global movement that connects Christians to make a real difference in the world, starting from Romania."
+    }
   },
   "evangelismForm": {
     "title": "Cerere de Evanghelizare"
@@ -268,6 +277,49 @@
   "gdpr": {
     "agree": "Sunt de acord",
     "explanation": "Acest website nu stochează cookie-uri care conțin informații personale. Cu toate acestea, dacă submiteți explicit formularul prezent în acest website, acele date vor fi stocate pe serverle ariseforchrist. Acceptând acest formular, sunteți de acord ca ariseforchrist să proceseze eventualele date personale pe care dumneavoastră le veți depune explicit prin formularul de pe acest website. Vă puteți retrage consințământul și datele în orice moment prin contactarea prin email la adresa "
+  },
+  "about": {
+    "section_title": "About Us",
+    "heading": "Helping",
+    "heading1": "communities grow",
+    "heading3": " through the power of faith.",
+    "description": "We empower believers to act, connect, and create lasting impact. Our mission is to build a strong faith-driven community, united in helping and uplifting each other through meaningful actions and outreach programs.",
+    "button": "Learn More"
+  },
+  "projects": {
+    "section_title": "Our Projects",
+    "heading": "Spreading the Gospel and",
+    "highlight": "Empowering Communities",
+    "items": [
+      {
+        "title": "Personal Evangelism",
+        "description": "Connecting with unchurched individuals within the families of believers. Every believer has someone unchurched to reach."
+      },
+      {
+        "title": "Recovery of the Fallen",
+        "description": "Helping those who have fallen away from faith, guiding them towards spiritual healing and restoration."
+      },
+      {
+        "title": "Biblical Counseling",
+        "description": "Providing spiritual guidance for those facing difficulties, helping them find faith-based solutions."
+      },
+      {
+        "title": "Intercessory Prayer",
+        "description": "Each person we work with is supported through prayer, a key element in all of our efforts."
+      },
+      {
+        "title": "Multimedia Projects",
+        "description": "Spreading the Word of God through digital media, podcasts, and biblical video content."
+      }
+    ]
+  },
+  "vision_hero": {
+    "section_title": "Our Vision",
+    "heading": "Arise for Christ ",
+    "highlight": "Association",
+    "description_1": "Our name is inspired from Isaiah 60:1: \"Arise, shine! For your light has come! And the glory of the Lord is risen upon you.\" Also from Romans 11:36: \"For of Him and through Him and to Him are all things, to whom be glory forever. Amen.\"",
+    "description_2": "Arise for Christ is a Christian mission that operates for the Kingdom of God. Our goal is to mobilize Christians for personal evangelization and the restoration of those who have fallen away from faith.",
+    "button": "Learn More"
   },
   "header": {
     "about_us": "Despre Noi",

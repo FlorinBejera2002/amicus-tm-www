@@ -269,6 +269,49 @@
     "agree": "Sunt de acord",
     "explanation": "Acest website nu stochează cookie-uri care conțin informații personale. Cu toate acestea, dacă submiteți explicit formularul prezent în acest website, acele date vor fi stocate pe serverle ariseforchrist. Acceptând acest formular, sunteți de acord ca ariseforchrist să proceseze eventualele date personale pe care dumneavoastră le veți depune explicit prin formularul de pe acest website. Vă puteți retrage consințământul și datele în orice moment prin contactarea prin email la adresa "
   },
+  "about": {
+    "section_title": "Despre Noi",
+    "heading": "Ajutăm",
+    "heading1": "comunitățile să creeze",
+    "heading3": "prin puterea credinței.",
+    "description": "Împuternicim credincioșii să acționeze, să se conecteze și să creeze un impact de durată. Misiunea noastră este să construim o comunitate puternică bazată pe credință, unită în ajutorarea și ridicarea reciprocă prin acțiuni semnificative și programe de implicare.",
+    "button": "Află Mai Multe"
+  },
+  "vision_hero": {
+    "section_title": "Viziunea Noastră",
+    "heading": "Arise for Christ ",
+    "highlight": "Asociație",
+    "description_1": "Numele nostru este inspirat din Isaia 60:1: \"Scoală-te, luminează-te! Căci lumina ta vine, și slava Domnului răsare peste tine.\" De asemenea, din Romani 11:36: \"Căci din El, prin El și pentru El sunt toate lucrurile. A Lui să fie slava în veci! Amin.\"",
+    "description_2": "Arise for Christ este o misiune creștină care slujește pentru Împărăția lui Dumnezeu. Scopul nostru este să mobilizăm credincioșii pentru evanghelizare personală și restaurarea celor care s-au îndepărtat de credință.",
+    "button": "Află Mai Multe"
+  },
+  "projects": {
+    "section_title": "Proiectele Noastre",
+    "heading": "Răspândim Evanghelia și",
+    "highlight": "Împuternicim Comunitățile",
+    "items": [
+      {
+        "title": "Evanghelizare Personală",
+        "description": "Conectarea cu persoanele necredincioase din familiile credincioșilor. Fiecare credincios are pe cineva necredincios de atins."
+      },
+      {
+        "title": "Recuperarea Celor Căzuți",
+        "description": "Ajutăm pe cei care s-au îndepărtat de credință, ghidându-i către vindecare spirituală și restaurare."
+      },
+      {
+        "title": "Consiliere Biblică",
+        "description": "Oferim îndrumare spirituală celor care se confruntă cu dificultăți, ajutându-i să găsească soluții bazate pe credință."
+      },
+      {
+        "title": "Rugăciune de Mijlocire",
+        "description": "Fiecare persoană cu care lucrăm este susținută prin rugăciune, un element esențial în toate eforturile noastre."
+      },
+      {
+        "title": "Proiecte Multimedia",
+        "description": "Răspândim Cuvântul lui Dumnezeu prin media digitală, podcasturi și conținut video biblic."
+      }
+    ]
+  },
   "header": {
     "about_us": "Despre Noi",
     "actone": "Act One",

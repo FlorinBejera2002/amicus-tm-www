@@ -10,7 +10,6 @@ import { cn } from '@/utils'
 import { Analytics } from '@vercel/analytics/react'
 import { NextIntlClientProvider, useMessages } from 'next-intl'
 import { Poppins } from 'next/font/google'
-import Script from 'next/script'
 import { ReactNode } from 'react'
 import FloatingSocials from './common/floating-socials'
 
@@ -49,9 +48,6 @@ export default function RootLayout({
         <FloatingSocials />
         {/* analytics */}
         <Analytics />
-
-        {/* Splitbee */}
-        <Script async={true} src="https://cdn.splitbee.io/sb.js"></Script>
       </body>
     </html>
   )

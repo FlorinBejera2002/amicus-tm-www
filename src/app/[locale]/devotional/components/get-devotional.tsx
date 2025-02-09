@@ -1,7 +1,6 @@
 import fs from 'fs'
 import path from 'path'
 import DailyDevotional from './daily-devotional'
-import { useTranslations } from 'next-intl'
 
 interface Verse {
   text: string
@@ -31,18 +30,8 @@ const daysOfWeekEN = [
   'FRIDAY',
   'SATURDAY'
 ]
-const daysOfWeekRO = [
-  'DUMINICĂ',
-  'LUNI',
-  'MARȚI',
-  'MIERCURI',
-  'JOI',
-  'VINERI',
-  'SÂMBĂTĂ'
-]
 
 export default async function DevotionalFetcher() {
-  const t = useTranslations()
   function getCurrentWeekNumber(): number {
     const startDate = new Date(new Date().getFullYear(), 0, 1)
     const today = new Date()
@@ -58,10 +47,7 @@ export default async function DevotionalFetcher() {
   }
 
   async function getDevotional(): Promise<Devotional | null> {
-    const filePath =
-      t('daily_verset.language') === 'ro'
-        ? path.join(process.cwd(), 'messages', 'ro-book.json')
-        : path.join(process.cwd(), 'messages', 'en-book.json')
+    const filePath = path.join(process.cwd(), 'messages', 'en-book.json')
     const fileData = fs.readFileSync(filePath, 'utf-8')
     const devotionals: Devotional[] = JSON.parse(fileData)
 
@@ -72,15 +58,9 @@ export default async function DevotionalFetcher() {
       dayIndex = 5
     }
 
-    const currentDay =
-      t('daily_verset.language') === 'ro'
-        ? daysOfWeekRO[dayIndex]
-        : daysOfWeekEN[dayIndex]
+    const currentDay = daysOfWeekEN[dayIndex]
     const currentWeekNumber = getCurrentWeekNumber()
-    const currentWeek =
-      t('daily_verset.language') === 'ro'
-        ? `SĂPTĂMÂNA ${currentWeekNumber}`
-        : `WEEK ${currentWeekNumber}`
+    const currentWeek = `WEEK ${currentWeekNumber}`
 
     return (
       devotionals.find(

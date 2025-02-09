@@ -28,7 +28,7 @@ const About = () => {
         </p>
       </div>
 
-      <div className="bg-gray-100 w-full">
+      <div className="bg-gray-100 w-full p-8">
         <div className=" mx-auto max-w-6xl py-8 md:py-12 ">
           <InViewTransition delay={0}>
             <p className="text-lg text-gray-700">

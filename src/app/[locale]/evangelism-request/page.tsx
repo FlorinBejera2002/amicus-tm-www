@@ -27,15 +27,7 @@ export async function generateMetadata({
 }
 
 const EvangelismRequest = () => {
-  return (
-    <div className="main flex flex-col items-center">
-      <div className="custom-page-content z-index-2 max-w-6xl py-4">
-        <div className="my-4 rounded-md bg-white !p-8 shadow-lg md:!p-12">
-          <ContentEvangelizationForm />
-        </div>
-      </div>
-    </div>
-  )
+  return <ContentEvangelizationForm />
 }
 
 export default EvangelismRequest
