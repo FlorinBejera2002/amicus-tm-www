@@ -54,7 +54,7 @@ const ContentEvangelizationForm = () => {
         created_by: 'website'
       })
 
-      setMessage({ content: t('successful_submission'), type: 'success' })
+      setMessage({ content: t('form.successful_submission'), type: 'success' })
       setTimeout(() => {
         event.currentTarget.reset()
         setMessage(undefined)
@@ -123,7 +123,7 @@ const ContentEvangelizationForm = () => {
                     htmlFor="name"
                     className="absolute top-3 -z-10 origin-[0]  -translate-y-6 scale-75 transform text-sm text-black duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:start-0 peer-focus:-translate-y-6 peer-focus:scale-75  peer-focus:font-medium peer-focus:text-accent rtl:peer-focus:left-auto rtl:peer-focus:translate-x-1/4"
                   >
-                    {t('name')}
+                    {t('form.name')}
                   </label>
                 </div>
 
@@ -139,7 +139,7 @@ const ContentEvangelizationForm = () => {
                     htmlFor="email"
                     className="absolute top-3 -z-10 origin-[0]  -translate-y-6 scale-75 transform text-sm text-black duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:start-0 peer-focus:-translate-y-6 peer-focus:scale-75  peer-focus:font-medium peer-focus:text-accent rtl:peer-focus:left-auto rtl:peer-focus:translate-x-1/4"
                   >
-                    {t('email')}
+                    {t('form.email')}
                   </label>
                 </div>
 
@@ -154,7 +154,7 @@ const ContentEvangelizationForm = () => {
                     htmlFor="phone"
                     className="absolute top-3 -z-10 origin-[0]  -translate-y-6 scale-75 transform text-sm text-black duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:start-0 peer-focus:-translate-y-6 peer-focus:scale-75  peer-focus:font-medium peer-focus:text-accent rtl:peer-focus:left-auto rtl:peer-focus:translate-x-1/4"
                   >
-                    {t('mobile')}
+                    {t('form.mobile')}
                   </label>
                 </div>
               </div>
@@ -170,7 +170,7 @@ const ContentEvangelizationForm = () => {
                   htmlFor="details"
                   className="absolute top-3 -z-10 origin-[0]  -translate-y-6 scale-75 transform text-sm text-black duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:start-0 peer-focus:-translate-y-6 peer-focus:scale-75  peer-focus:font-medium peer-focus:text-accent rtl:peer-focus:left-auto rtl:peer-focus:translate-x-1/4"
                 >
-                  {t('details')}
+                  {t('form.details')}
                 </label>
               </div>
 
@@ -190,7 +190,7 @@ const ContentEvangelizationForm = () => {
                 type="submit"
                 className="mt-4 px-6 py-2 rounded-md bg-accent text-white font-semibold disabled:opacity-50"
               >
-                {t('send')}
+                {t('form.send')}
               </button>
             </form>
           </InViewTransition>
