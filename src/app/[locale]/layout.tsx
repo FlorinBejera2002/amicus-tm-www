@@ -1,8 +1,13 @@
 import type { Metadata } from 'next'
 
 import './globals.css'
+// css
+import './css/theme.css'
+import './css/skin-creative-agency-2.css'
+import './css/demo-creative-agency-2.css'
+import './css/bootstrap.min.css'
 import CookieConsents from './common/cookie-consents'
-import { Footer } from './common/footer/footer'
+import Footer from './common/footer/footer'
 import Nav from './common/navbar/nav'
 import ScrollButton from './common/scroll-button'
 
@@ -10,6 +15,7 @@ import { cn } from '@/utils'
 import { Analytics } from '@vercel/analytics/react'
 import { NextIntlClientProvider, useMessages } from 'next-intl'
 import { Poppins } from 'next/font/google'
+import Script from 'next/script'
 import { ReactNode } from 'react'
 import FloatingSocials from './common/floating-socials'
 
@@ -48,6 +54,9 @@ export default function RootLayout({
         <FloatingSocials />
         {/* analytics */}
         <Analytics />
+
+        {/* Splitbee */}
+        <Script async={true} src="https://cdn.splitbee.io/sb.js"></Script>
       </body>
     </html>
   )

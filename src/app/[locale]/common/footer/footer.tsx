@@ -1,49 +1,98 @@
 'use client'
 
+import { Newsletter } from '../../(home)/components/newsletter'
+import FooterOverview from './components/footer-overview'
+
 import Image from 'next/image'
 import Link from 'next/link'
-import logo from '../../../../../public/logo_horizontal_white.webp'
-import newarklogo from '../../../../../public/new-ark_logo.webp'
+import { usePathname } from 'next/navigation'
+
+import horizontalLogo from '../../../../../public/img/logo/logo_horizontal_white.webp'
+import newarklogo from '../../../../../public/img/logo/new-ark_logo.webp'
 import Socials from './components/socials'
-import LinkPages from './components/link-pages'
 
-export const Footer = () => {
+export default function Footer() {
+  const pathname = usePathname()
+  const language = pathname.split('/')[1]
+
+  const companyLinks = [
+    { href: '/', titleKey: 'header.home' },
+    { href: `/${language}/about`, titleKey: 'header.about_us' },
+    { href: `/${language}/vision`, titleKey: 'header.vision' },
+    { href: `/${language}/collaborator`, titleKey: 'header.collaborator' }
+  ]
+
+  const projectLinks = [
+    { href: `/${language}/donate`, titleKey: 'header.donate' },
+    {
+      href: `/${language}/projects/time-is-now`,
+      titleKey: 'header.project_subProject'
+    },
+    {
+      href: `/${language}/projects/podcast`,
+      titleKey: 'header.project_subPodcast'
+    },
+    { href: `/${language}/book`, titleKey: 'book.book' }
+  ]
+  const contactLinks = [
+    {
+      href: `mailto:info@ariseforchrist.com`,
+      titleKey: 'footer.email'
+    },
+    {
+      href: `tel:+40 (773) 307 292`,
+      titleKey: 'footer.phone1'
+    },
+    {
+      href: `tel:+40 (721) 804 560`,
+      titleKey: 'footer.phone2'
+    },
+    {
+      href: `tel:+40 (356) 175 148`,
+      titleKey: 'footer.phone3'
+    }
+  ]
+
   return (
-    <footer className="bg-gray-900 text-gray-400 py-10">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-          <div className="flex flex-col items-center md:items-start">
-            <Image src={logo} alt="Logo" className="w-40" />
-          </div>
-
-          <LinkPages />
-
-          <div className="flex justify-center md:justify-end">
-            <Socials />
-          </div>
+    <footer className="border-top-0 font-poppins !px-8" id="footer">
+      <div className="md:border-b border-[#313632] mx-auto max-w-[1480px] flex w-full flex-col md:flex-row pb-10 pt-44">
+        <div className="flex flex-col w-full justify-between gap-10">
+          <Link className="flex  w-full" href="/">
+            <Image
+              alt="arise for christ logo"
+              className="w-24 object-contain pb-6 md:w-40"
+              height={40}
+              src={horizontalLogo}
+            />
+          </Link>
+          <Socials />
         </div>
-
-        <hr className="border-gray-700 my-6" />
-
-        <div className="flex flex-col md:flex-row items-center justify-between text-sm gap-4">
-          <p>© 2025 Arise for Christ. All rights reserved.</p>
-
-          <div className="flex items-center text-white text-sm font-bold">
-            <p>Handcrafted by</p>
-            <Link
-              href="https://new-ark.cloud/"
-              target="_blank"
-              className="ml-2 !text-accent no-underline"
-            >
-              <Image
-                src={newarklogo}
-                alt="New Ark Logo"
-                className="object-contain"
-                height={30}
-              />
-            </Link>
-          </div>
+        <div className="md:flex-row w-full justify-end flex flex-col md:gap-52 pr-20 ">
+          <FooterOverview links={contactLinks} titleKey="header.contact" />
+          <FooterOverview links={projectLinks} titleKey="header.project" />
+          <FooterOverview links={companyLinks} titleKey="header.company" />
         </div>
+      </div>
+      <Newsletter />
+      <div className="footer-copyright mx-auto max-w-[1480px] bg-transparent py-4 flex flex-col md:flex-row w-full gap-4">
+        <p className="w-full flex items-center text-white text-3-5 font-bold">
+          handcrafted by
+          <Link
+            className="ml-2 !text-accent no-underline"
+            href="https://new-ark.cloud/"
+            target="_blank"
+          >
+            <Image
+              alt="new ark logo"
+              className="object-contain"
+              height={30}
+              src={newarklogo}
+            />
+          </Link>
+        </p>
+        <p className="text-3-5 font-bold  mb-0 flex w-full items-center md:justify-end">
+          © Copyright AriseForChrist
+        </p>
       </div>
     </footer>
   )

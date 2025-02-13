@@ -294,7 +294,11 @@
     "referenceUnavailable": "Unavailable reference",
     "paragraphUnavailable": "Unavailable paragraph",
     "conclusionUnavailable": "Unavailable conclusion",
-    "question": "Frequent questions:"
+    "button_download": "Download Image"
+  },
+  "daily_verse": {
+    "verseUnavailable": "Verse unavailable",
+    "referenceUnavailable": "Reference unavailable"
   },
   "header": {
     "about_us": "About Us",
@@ -340,49 +344,6 @@
       "keywords": "Arise for Christ, Christian mission, evangelism, biblical counseling, prayer, multimedia projects, spiritual recovery, gospel, fallen away, Arise for Christ | Vision, arise for christ vision",
       "title": "Arise for Christ | Vision"
     }
-  },
-  "about": {
-    "section_title": "About Us",
-    "heading": "Helping",
-    "heading1": "communities grow",
-    "heading3": " through the power of faith.",
-    "description": "We empower believers to act, connect, and create lasting impact. Our mission is to build a strong faith-driven community, united in helping and uplifting each other through meaningful actions and outreach programs.",
-    "button": "Learn More"
-  },
-  "projects": {
-    "section_title": "Our Projects",
-    "heading": "Spreading the Gospel and",
-    "highlight": "Empowering Communities",
-    "items": [
-      {
-        "title": "Personal Evangelism",
-        "description": "Connecting with unchurched individuals within the families of believers. Every believer has someone unchurched to reach."
-      },
-      {
-        "title": "Recovery of the Fallen",
-        "description": "Helping those who have fallen away from faith, guiding them towards spiritual healing and restoration."
-      },
-      {
-        "title": "Biblical Counseling",
-        "description": "Providing spiritual guidance for those facing difficulties, helping them find faith-based solutions."
-      },
-      {
-        "title": "Intercessory Prayer",
-        "description": "Each person we work with is supported through prayer, a key element in all of our efforts."
-      },
-      {
-        "title": "Multimedia Projects",
-        "description": "Spreading the Word of God through digital media, podcasts, and biblical video content."
-      }
-    ]
-  },
-  "vision_hero": {
-    "section_title": "Our Vision",
-    "heading": "Arise for Christ ",
-    "highlight": "Association",
-    "description_1": "Our name is inspired from Isaiah 60:1: \"Arise, shine! For your light has come! And the glory of the Lord is risen upon you.\" Also from Romans 11:36: \"For of Him and through Him and to Him are all things, to whom be glory forever. Amen.\"",
-    "description_2": "Arise for Christ is a Christian mission that operates for the Kingdom of God. Our goal is to mobilize Christians for personal evangelization and the restoration of those who have fallen away from faith.",
-    "button": "Learn More"
   },
   "podcast": {
     "bottom-paragraf": "You can also find all the episodes of our Podcast on",

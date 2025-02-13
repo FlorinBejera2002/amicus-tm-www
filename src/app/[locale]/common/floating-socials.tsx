@@ -47,13 +47,13 @@ const FloatingSocials = () => {
 
   return (
     <InViewTransition
-      customClassname="fixed md:right-[20px] md:bottom-[90px] flex md:flex-col gap-1 text-base lg:justify-start z-[999] p-2 rounded-lg bg-accent/[.75] h-fit"
+      customClassname="fixed md:right-[20px] md:bottom-[90px] flex md:flex-col gap-1 text-base lg:justify-start z-[999] p-2 rounded-lg bg-[#e3ae04]/[.75] h-fit"
       delay={2}
     >
       {socialMediaLinks.map((link, idx) => (
         <Link
           className={cn(
-            'pointer flex items-center gap-2 no-underline transition-all duration-300 hover:!no-underline p-2 rounded-lg text-white',
+            'pointer flex items-center gap-2 no-underline transition-all duration-300 hover:!no-underline p-2 rounded-lg text-gray-900',
             `hover:${link.hoverBgColor} hover:text-gray-100`
           )}
           href={link.href}
