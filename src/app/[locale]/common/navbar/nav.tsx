@@ -16,7 +16,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { FaChevronDown } from 'react-icons/fa'
 
-import horizontalLogo from '../../../../../public/img/logo/logo_horizontal_white.webp'
+import horizontalLogo from '../../../../../public/img/logo/Logo-AMiCUS-TM.png'
 
 type Link = {
   href: string
@@ -149,7 +149,7 @@ export default function Nav() {
             <div className="relative" ref={dropdownRef}>
               <button
                 className={cn(
-                  'flex items-center gap-2 text-white transition-all duration-300',
+                  'flex items-center gap-2 text-colorText transition-all duration-300',
                   pathname?.includes('projects')
                     ? 'text-accent md:scale-125'
                     : ''
@@ -173,7 +173,7 @@ export default function Nav() {
             </div>
 
             <Link
-              className=" font-weight-semibold text-md min-w-fit rounded-md bg-accent p-3 text-black no-underline hover:!no-underline"
+              className=" font-weight-semibold text-md min-w-fit rounded-md bg-accent p-3 text-colorText no-underline hover:!no-underline"
               href={`/${language}/evangelism-request`}
               type="button"
             >
@@ -192,7 +192,7 @@ export default function Nav() {
 
           <MenuButton
             className={cn(
-              '-mr-4 flex scale-50 cursor-pointer text-white xl:hidden'
+              '-mr-4 flex scale-50 cursor-pointer text-colorText xl:hidden'
             )}
             color="white"
             height="24"

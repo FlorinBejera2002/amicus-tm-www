@@ -3,7 +3,7 @@
 import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 import Link from 'next/link'
-import Logo from '../../../../../../public/img/logo/logo_horizontal_white.webp'
+import Logo from '../../../../../../public/img/logo/Logo-AMiCUS-TM.png'
 import InViewTransition from '../../../common/in-view-transition'
 
 interface IProps {

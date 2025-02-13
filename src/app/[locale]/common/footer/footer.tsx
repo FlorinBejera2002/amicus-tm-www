@@ -7,8 +7,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
-import horizontalLogo from '../../../../../public/img/logo/logo_horizontal_white.webp'
-import newarklogo from '../../../../../public/img/logo/new-ark_logo.webp'
+import horizontalLogo from '../../../../../public/img/logo/Logo-AMiCUS-TM.png'
+import newarklogo from '../../../../../public/img/logo/Logo-AMiCUS-TM.png'
 import Socials from './components/socials'
 
 export default function Footer() {

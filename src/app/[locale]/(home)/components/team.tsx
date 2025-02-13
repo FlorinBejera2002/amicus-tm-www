@@ -96,7 +96,7 @@ export default function Team() {
     <div className="bg-color-dark relative lazyload mx-auto bg-cover bg-center flex justify-center">
       <div className="md:p-28 p-8 md:px-44 max-w-7xl">
         <InViewTransition>
-          <h2 className="mb-0 text-center text-2xl font-semibold text-gray-50 lg:text-4xl">
+          <h2 className="mb-0 text-center text-2xl font-semibold text-red-600 lg:text-4xl">
             {t('title-a4c')}
           </h2>
         </InViewTransition>
