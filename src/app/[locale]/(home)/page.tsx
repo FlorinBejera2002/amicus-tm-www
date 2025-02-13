@@ -52,8 +52,8 @@ export default function Home({
           <div className="absolute inset-0 bg-[#0A0A1B]/80" />
         </div>
 
-        <div className="relative container mx-auto px-4 pt-20">
-          <div className="max-w-4xl mx-auto">
+        <div className="relative container px-4 pt-20">
+          <div className="max-w-4xl">
             <h1 className="text-5xl md:text-7xl font-bold text-white tracking-tight">
               Creștem împreună în credință și comunitate
             </h1>
@@ -66,10 +66,10 @@ export default function Home({
 
             {/* CTA Buttons */}
             <div className="mt-10 flex flex-col sm:flex-row gap-4">
-              <Button className="bg-red-600 hover:bg-red-700 text-white rounded-full px-5 py-2.5 font-semibold">
+              <Button className="bg-accent hover:bg-accent/80 text-white rounded-full px-4 py-2.5 font-semibold">
                 Devino Membru
               </Button>
-              <Button className="text-white hover:bg-white/10 flex items-center gap-2">
+              <Button className="text-white hover:bg-white/10 flex items-center gap-2 px-4 py-2.5 rounded-full">
                 Descoperă Proiectele <FaArrowRight />
               </Button>
             </div>
