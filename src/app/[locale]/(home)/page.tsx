@@ -1,20 +1,16 @@
-import Animation from '../common/animation'
-import CustomHeroBg from '../common/custom-hero-bg'
-import InViewTransition from '../common/in-view-transition'
+import { Button } from '@headlessui/react'
 import AboutResurseCrestine from './components/about-resurse-crestine'
 import Book from './components/book'
-import { CardCollaborator } from './components/card-collaborator'
 import EvangelismSteps from './components/evangelism-steps/evangelism-steps'
 import PersonalEvangelism from './components/personal-evangelism/personal-evangelism'
-import { QuestionCarousel } from './components/question-carousel'
 import Spotify from './components/spotify'
 import Team from './components/team'
 import DailyVerse from './components/verse/daily-verse'
-import YoutubeMiniFeed from './components/youtube-mini-feed'
-
 import type { Metadata } from 'next'
-import { NextIntlClientProvider, useTranslations } from 'next-intl'
 import { getTranslations } from 'next-intl/server'
+import backgroundImage from '../../../../public/img/home/bg-image.png'
+import Image from 'next/image'
+import { FaArrowRight } from 'react-icons/fa'
 
 export async function generateMetadata({
   params: { locale }
@@ -32,9 +28,9 @@ export async function generateMetadata({
     keywords: t('keywords'),
     og: {
       description: t('description'),
-      title: t('title')
+      title: 'AMiCUS TM'
     },
-    title: t('title')
+    title: 'AMiCUS TM'
   } as Metadata
 }
 
@@ -43,46 +39,44 @@ export default function Home({
 }: {
   params: { locale: string }
 }) {
-  const t = useTranslations('hero')
-
   return (
     <div className="main" role="main">
-      <section
-        className="p-relative bg-quaternary m-0 overflow-hidden border-0"
-        id="home"
-      >
-        <div className="custom-hero-heading font-bold text-white">
-          <InViewTransition delay={0.25} duration={0.5}>
-            {t('title-hero')}
-          </InViewTransition>
+      <section className="relative min-h-screen flex items-center">
+        {/* Background Image with Overlay */}
+        <div className="absolute inset-0">
+          <Image
+            src={backgroundImage}
+            alt="Office Background"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-[#0A0A1B]/80" />
         </div>
-        <InViewTransition
-          damping={100}
-          delay={0.25}
-          duration={0.5}
-          yIn={0}
-          yOut={0}
-        >
-          <Animation />
-          <CustomHeroBg />
-        </InViewTransition>
 
-        <InViewTransition>
-          <div className="z-index-3 container !px-8">
-            <div className="row min-vh-100 align-items-center">
-              <div className="flex flex-col items-center justify-center lg:items-start">
-                <div className=" md:ml-0">
-                  <QuestionCarousel />
+        <div className="relative container mx-auto px-4 pt-20">
+          <div className="max-w-4xl mx-auto">
+            <h1 className="text-5xl md:text-7xl font-bold text-white tracking-tight">
+              Creștem împreună în credință și comunitate
+            </h1>
+            <p className="mt-6 text-xl text-white/60 max-w-3xl">
+              AMiCUS Timișoara este locul unde studenții își dezvoltă
+              potențialul spiritual și profesional, construind legături
+              puternice și contribuind la binele comunității prin proiecte de
+              impact.
+            </p>
 
-                  <CardCollaborator />
-                </div>
-              </div>
+            {/* CTA Buttons */}
+            <div className="mt-10 flex flex-col sm:flex-row gap-4">
+              <Button className="bg-red-600 hover:bg-red-700 text-white rounded-full px-5 py-2.5 font-semibold">
+                Devino Membru
+              </Button>
+              <Button className="text-white hover:bg-white/10 flex items-center gap-2">
+                Descoperă Proiectele <FaArrowRight />
+              </Button>
             </div>
           </div>
-        </InViewTransition>
+        </div>
       </section>
 
-      <YoutubeMiniFeed />
       <EvangelismSteps />
 
       <Team />

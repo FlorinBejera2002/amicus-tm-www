@@ -49,7 +49,7 @@ export default function EvangelismSteps() {
   ]
 
   return (
-    <div className="!relative !z-10 mx-auto p-8 md:-mb-16 -mt-20 grid max-w-6xl rounded-md bg-white md:shadow-lg md:-mt-52 md:pt-24">
+    <div className="!relative !z-10 mx-auto p-8  grid max-w-6xl rounded-md bg-white md:shadow-lg ">
       <div className="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-2">
         <div className="flex flex-col gap-4 md:gap-12 xl:gap-16 md:justify-center">
           <InViewTransition damping={25} delay={0.5}>
